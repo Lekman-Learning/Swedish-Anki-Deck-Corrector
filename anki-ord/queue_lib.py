@@ -42,15 +42,29 @@ def fetch_cards_prioritized(query, limit):
 
 def to_queue_entry(card_info, tags_by_note, flag_label):
     fields = {name: v["value"] for name, v in card_info["fields"].items()}
-    parsed = baksida.parse(fields.get(config.FIELD_BAKSIDA, ""))
+    raw = fields.get(config.FIELD_BAKSIDA, "")
+
+    # De flesta kort är ännu inte migrerade till v2 (se CLAUDE.md,
+    # "Kortformat v2 — pågående migrering") — baksida.parse() matchar bara
+    # v2-formatet och returnerar en tom struktur på gamla kort. Utan denna
+    # fallback skulle "current" se tomt ut för alla ~1242 ogranskade kort,
+    # och granskaren (Fas 2) skulle inte se det befintliga innehållet som
+    # referens. Upptäckt 2026-08-04 innan nästa granskningsomgång startade.
+    parsed = baksida.parse(raw)
+    is_v2 = bool(parsed["huvudbetydelse"] or parsed["synonymer"] or parsed["exempelmening"])
+    if not is_v2:
+        parsed = baksida.parse_legacy(raw)
+
     note_id = card_info["note"]
     return {
         "noteId": note_id,
         "flagLabel": flag_label,
         "ord": fields.get(config.FIELD_ORD, ""),
-        "current": parsed,  # synonymer / definitioner / exempelmening / bild_html
+        "current": parsed,  # v2: huvudbetydelse/register/synonymer/exempelmening/bild_html.
+                             # legacy (de flesta kort ännu): synonymer/definitioner/exempelmening/bild_html.
+        "current_format": "v2" if is_v2 else "legacy",
         "tags": tags_by_note.get(note_id, []),
-        "proposed": None,  # fylls i under granskningen i Fas 2: samma form som "current"
+        "proposed": None,  # fylls i under granskningen i Fas 2: v2-formen (se baksida.build)
         "approved": False,
     }
 

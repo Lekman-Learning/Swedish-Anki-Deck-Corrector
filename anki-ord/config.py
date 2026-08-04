@@ -8,12 +8,28 @@ MODEL_NAME = "Grundläggande-adc63"
 FIELD_ORD = "Framsida"
 FIELD_BAKSIDA = "Baksida"
 
-# Baksida är EN HTML-blob per kort, inte separata fält:
-#   <font color="#3498db">synonym1, synonym2, synonym3</font><br><br>
-#   <ol><li>definition 1</li><li>definition 2</li></ol>
-#   <i>exempelmening med <font color="#3498db">ordet</font> ibland markerat</i>
+# Baksida är EN HTML-blob per kort, format beslutat 2026-08-04, korrigerat
+# 2026-08-04 (inga fältetiketter, bara huvudbetydelsens värde fet, register
+# i temats standardfärg) — se style_guide.md, "Kortformat v2":
+#   <b>fras 1 / fras 2</b><br>
+#   (register)<br>   [obligatorisk, minst en tagg]
+#   <br>
+#   <font color="#3498db">synonym1, synonym2</font><br>
+#   <br>
+#   <i>mening med <font color="#3498db">ordet</font> markerat</i>
 #   [valfri <br><br><img src="..." ...> sist, kort med bild]
 SYNONYM_COLOR = "#3498db"
+
+# Register-tagg: STÄNGD vokabulär, en tagg per axel max (se style_guide.md).
+# Fritext gled isär över 10k kort/flera pass tidigare (t.ex. fabricerade
+# synonymer) — samma risk gäller register om det inte låses.
+REGISTER_FORMALITY = [
+    "arkaisk", "litterär", "formell", "vardaglig", "dialektal", "slang", "vulgär",
+]  # omärkt = neutral
+REGISTER_VALENS = [
+    "positiv", "lätt negativ", "negativ", "nedsättande", "skämtsam", "ironisk",
+    "eufemistisk",
+]  # omärkt = neutral
 
 # Flagg-nummer bekräftade via cardsInfo mot riktiga kort (2026-08-03):
 #   flag:1 (849 kort)  = Röd  = stämmer inte alls -> hög prioritet
@@ -26,6 +42,7 @@ FLAG_GRON = 3
 FLAG_BLA = 4
 
 REVIEWED_TAG_PREFIX = "granskad"  # tagg blir granskad::YYYY-MM-DD
+FORMAT_TAG_V2 = "kortformat::v2"  # sätts på alla kort som skrivs i v2-formatet
 # Befintliga taggar (ai_optimized, ai_uncertain, ai_failed, granska_först)
 # rörs ALDRIG - de är Adams egen historik. Nya taggar läggs bara till.
 

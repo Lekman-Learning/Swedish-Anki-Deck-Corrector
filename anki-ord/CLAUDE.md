@@ -29,6 +29,7 @@ exakt var vi står, så en ny chatt kan fortsätta direkt.
 | `scan_blue_synonyms.py` | Läsande engångssökning, ändrar inget, listar blå kort som matchar `SUSPECT_SYNONYMS = ["allsmäktig", "alrådande", "allrådande"]` |
 | `queue_lib.py` | Delad hämta/sortera/skriv-logik för de två fetch-skripten |
 | `images.py` | Läsa/skriva Anki-media (bilder), används i Fas 2 |
+| `migrate_format.py` | Engångsmigrering v2-format: hämtar `granskad::*`-kort, parsar gammalt format (`baksida.parse_legacy`), skriver draft-huvudbetydelse (gamla definitionerna hopslagna) till sessionsfil, inget appliceras auto |
 | `apply_updates.py` | Fas 3 — skriver godkända ändringar (`updateNoteFields` via `baksida.build`, plus `Framsida` om `proposed_ord` satt). Kräver `entry["confidence"]`: ≤7 skippas (ej redo), 8→flagga Grön, 9-10→flagga Blå (fixat 2026-08-04, se style_guide.md — tidigare flaggade koden fellaktigt ALLTID blått oavsett konfidens). Taggar `granskad::<datum>` + `konfidens::N`. `apply_single` per kort under passet, eller batchat i `main()` |
 | `style_guide.md` | "Adam-tal"-checklista — struktur, grundregler, bevara humor, bildhantering, vanliga fällor |
 
@@ -462,6 +463,547 @@ byggdes som statiska snapshots. Om de körs i sitt nuvarande skick kommer
 - Scripten fungerar bara lokalt (AnkiConnect kräver Anki öppen på samma
   dator) — GitHub/moln kan aldrig KÖRA dem, bara lagra koden.
 
+## Kortformat v2 (beslutat 2026-08-04) — pågående migrering
+
+Baksida-formatet gjordes om: **Huvudbetydelse** (fet stil, kort fras/fraser
+separerade med ` / `, ersätter den gamla numrerade `<ol><li>`-listan) +
+valfri **(register)**-rad (grå, stängd vokabulär — formalitet + valör, max
+en tagg per axel, se `style_guide.md`). Synonymer/Exempelmening/bild
+oförändrade. Adam beslutade: retrofit ALLA redan granskade kort till v2,
+inte bara framtida.
+
+- `config.py`: `REGISTER_COLOR`, `REGISTER_FORMALITY`, `REGISTER_VALENS`.
+- `baksida.py`: `parse`/`build` skrivna om för v2. Gamla formatet finns kvar
+  som `parse_legacy`/`_LEGACY_*`-regex, bara för migreringsskriptet.
+- `apply_updates.py`: `apply_single` uppdaterad till v2-signaturen, kör
+  `baksida.validate_register()` innan skrivning (hoppar över + varnar vid
+  ogiltig registertagg).
+- `migrate_format.py` (nytt): hämtar alla `granskad::*`-taggade kort,
+  **sorterat på due (lägst först)** — samma prioritering som
+  `fetch_queue.py`/`fetch_urgent.py`, kort Adam ser idag/imorgon granskas
+  först. Parsar med `parse_legacy`, skriver ett DRAFT-förslag (huvudbetydelse =
+  gamla definitionerna hopslagna med ` / `, register=null, synonymer
+  OFÖRÄNDRADE — redan granskade, rörs inte) till
+  `sessions/session_2026-08-04_migration-format.json` (namnet på filen
+  innehåller INTE ett hårdkodat antal längre — se bugfix nedan). **Körd
+  2026-08-04: 793 kort** (fler än de "724" Adam nämnde — troligen fler
+  granskningspass tillkommit sen den siffran togs). 396 av 793 flaggade
+  `needs_condensing` (minst en gammal definition >8 ord — läser som
+  ordboksstil, MÅSTE kondenseras för hand till kort fras, inte bara
+  behållas som draft). Resten (397) har redan kort nog definitioner att
+  draften troligen kan godkännas oförändrad, men Adam bör ändå stickprova
+  (style_guide.md-regeln, 50 kort) och sätta register där det motiverat.
+- **Bugfix (upptäckt vid självgranskning, innan filen någonsin kördes
+  genom Fas 3):** migreringsposterna hade nyckeln `"current_legacy"`, men
+  `apply_updates.py`s `apply_single` läser `entry["current"]` — hade gett
+  `KeyError` för alla 793 kort första gången någon faktiskt godkände och
+  applicerade en post. Fixat genom att döpa om nyckeln till `"current"`
+  (samma dict-form fungerar, `apply_single` läser bara `synonymer`/
+  `bild_html`/`.get(...)`-fält som redan finns i legacy-formen). Filen är
+  regenererad med fixen, den gamla `..._migration-724-format.json` är
+  borttagen.
+- **Pilottest, 5 kort, kört live 2026-08-04** (de 5 lägst-due i migreringskön,
+  alla due=285/samma dag): drägg, förtörnad, överloppsgärning, svärmisk,
+  pittoresk. Huvudbetydelse kondenserad från de gamla ordboksartade
+  definitionerna, register satt där motiverat (förtörnad: litterär,
+  överloppsgärning: formell, svärmisk: lätt negativ; drägg/pittoresk
+  omärkta = neutrala). Synonymer OFÖRÄNDRADE (redan granskade sen innan).
+  Applicerat + verifierat live mot riktiga Anki-fält, confidence 9 (blå
+  flagga). **Andra bugg hittad under pilotet:** `apply_single` lade bara
+  till `konfidens::N`-tagg utan att ta bort gammal — de 5 korten fick
+  BÅDE `konfidens::10` (gammal) och `konfidens::9` (ny) samtidigt,
+  motsägelsefullt. Fixat: `apply_single` tar nu bort gamla
+  `granskad::*`/`konfidens::*`-taggar innan nya läggs till. De 5
+  pilotkortens gamla `konfidens::10`-tagg städad bort manuellt i
+  efterhand. Gäller alla framtida `apply_updates.py`-körningar automatiskt.
+- **Format korrigerat 2026-08-04 efter Adam sett de riktiga korten:**
+  (1) Fältetiketter ("Huvudbetydelse:", "Synonymer:", "Exempelmening:")
+  skrivs INTE ut alls — bara innehållet. (2) Bara huvudbetydelsens VÄRDE är
+  fett, inget annat. (3) Register-raden har ingen egen färg längre (var
+  hårdkodad grå `#888888`) — ärver temats standardtextfärg, bara omgiven
+  av vanliga parenteser. `baksida.py` skriven om till en enda strukturell
+  regex (`_MAIN_RE`) istället för separata per-fält-regex, eftersom
+  formatet inte längre har unika etiketter att söka efter.
+- **Register obligatoriskt, aldrig tomt** (beslutat 2026-08-04, ändrat från
+  ursprungsregeln "utelämna vid tveksamhet"): minst en tagg (formalitet
+  ELLER valör) på varje kort, även gränsfall — hellre en rimlig
+  bedömning än en tom rad.
+- **Konfidensregel vid ren omformatering/kondensering (beslutat
+  2026-08-04):** Adam petade på att konfidens sjönk 10→9 på alla 5
+  pilotkort utan tydlig anledning — rätt lärdom: sänk INTE mekaniskt bara
+  för att en ny typ av bedömning (kondensering/register) görs. Bedöm varje
+  korts FAKTISKA säkerhet. Om kondenseringen är riskfri (inget
+  betydelseinnehåll tappas) OCH registret är ett tydligt/säkert val →
+  behåll 10. Bara om register-taggen är ett uttryckligt gränsfall, eller
+  kondenseringen tappar/tolkar bort information, → 9 (matchar
+  style_guide.mds egen 8–9-definition: "tolkning av en tvetydig tagg").
+  Efter omvärdering: drägg 9 (gränsfall-register), förtörnad 10,
+  överloppsgärning 10, svärmisk 10, pittoresk 9 (gränsfall-register + en
+  definition medvetet borttagen).
+- **Stor bokstav i Huvudbetydelsen** (beslutat 2026-08-04, Adam sett
+  korten live): `baksida.build()` versaliserar nu automatiskt första
+  bokstaven i huvudbetydelsen — behöver inte tänkas på manuellt per kort.
+  Pushat till de 5 pilotkorten igen. Bekräftat: "minst EN register-tagg
+  totalt" betyder INTE att båda axlarna (formalitet+valör) alltid krävs —
+  ett kort kan ha bara valör (t.ex. drägg: bara "lätt negativ"), det är
+  korrekt beteende, inte en bugg.
+- **Nyansering: valör tvingas INTE fram på genuint neutrala ord**
+  (beslutat 2026-08-04, direkt efter "båda axlarna obligatoriska"-regeln —
+  Adam bekräftade efter exempel som taverna/divan/apoplexi/köpeskilling
+  att en gissad valör på ett känslolöst substantiv/facktermer är sämre än
+  att bara ha formalitet). `validate_register()`s krav på båda axlarna
+  togs bort — bara minst EN tagg totalt krävs, båda fylls när båda genuint
+  passar.
+- **Batch 1 av migreringen klar: 30 kort** (utöver pilotens 5, totalt
+  35/793). Alla kondenserade + registertaggade + applicerade, verifierat
+  live. **6 verkliga synonymfel hittade och fixade under tiden** (samma
+  mönster som tidigare i projektet — fabricerade/felaktiga synonymer även
+  på redan "granskade" kort): gnöl ("klago"→"klagan", ej ett riktigt ord),
+  vitsord ("rekomendation"→"rekommendation", stavfel), överrumpla
+  ("fängsla/chockera/förbländas" stämde inte alls →"överraska/ta på
+  sängen/komma över oförberedd"), strömning ("ledning"→"rörelse", fel
+  betydelse), apoplexi ("blodpropp"→"stroke", orsak förväxlad med
+  sjukdomen själv), evalvera ("omräkna"→"granska", fel betydelse). Två
+  kort fick en hel definition medvetet borttagen som irrelevant för HP
+  (excentrisk: teknisk/geometrisk betydelse, heteronom: zoologisk
+  betydelse) — konfidens satt till 8–9 på dessa och andra genuina
+  gränsfall, 10 där kondensering/register var tydligt.
+- **Bugg hittad + fixad innan skalning till de 1242 ogranskade korten
+  (batch3-6):** `queue_lib.to_queue_entry` (används av `fetch_queue.py`/
+  `fetch_urgent.py`) anropade bara v2-`parse()`. De ~1242 ogranskade
+  korten (bekräftat live: "gentaga", "vanställa") är fortfarande i GAMLA
+  formatet — v2-parse() missar dem helt, returnerar tom struktur. Utan
+  fix hade granskaren sett tomt "current"-fält för varenda ogranskat
+  kort, blint för det redan existerande innehållet. Fixat: `to_queue_entry`
+  provar v2 först, faller tillbaka till `parse_legacy` om tomt, sätter
+  `current_format: "v2"|"legacy"` på entryn. Verifierat live mot riktiga
+  ogranskade kort.
+- **Register skärpt till BÅDA axlarna obligatoriska** (beslutat
+  2026-08-04, samma dag som "minst en"-regeln — Adam förtydligade att han
+  menade båda, inte bara en). `validate_register()` varnar nu om
+  formalitet ELLER valör saknas (tidigare varnade den bara vid >1 per
+  axel). De 5 pilotkorten kompletterade: drägg (vardaglig, lätt negativ),
+  förtörnad (litterär, negativ), överloppsgärning (formell, positiv),
+  svärmisk (litterär, lätt negativ), pittoresk (litterär, positiv — hade
+  redan båda).
+- **Register-vokabuläret utökades i två omgångar efter Adams feedback**
+  ("känns litet"): Formalitet gick från 3 till 7 alternativ
+  (`arkaisk, litterär, formell, vardaglig, dialektal, slang, vulgär`),
+  Valör från 4 till 7 (`positiv, lätt negativ, negativ, nedsättande,
+  skämtsam, ironisk, eufemistisk`). Fortfarande stängd vokabulär (inte
+  fritext) — bara bredare urval per axel, se `style_guide.md`.
+
+**INGET i migreringsfilen är applicerat än** — `approved: false`,
+`confidence: null` på alla 793, `apply_updates.py`s säkerhetsspärr hoppar
+över allt tills en riktig granskning (samma Fas 2/Fas 3-flöde som resten av
+projektet) satt `proposed`/`approved`/`confidence` per kort.
+
+**Nästa steg för v2-migreringen:** kör Fas 2 på
+`sessions/session_2026-08-04_migration-724-format.json`, prioritera de 396
+`needs_condensing`-korten (kräver faktiskt omskrivningsarbete), applicera
+löpande via `apply_updates.py`. De 397 utan flaggan går troligen snabbare
+(mest stickprov + ev. register-tagg).
+
+**Batch 2 av migreringen klar: 300 kort (totalt 335/793)**, körd via en
+delegerad subagent 2026-08-04. `config.FORMAT_TAG_V2 = "kortformat::v2"`
+infördes samtidigt: `apply_updates.py`s `apply_single` sätter nu denna
+tagg automatiskt på VARJE kort som appliceras framåt (i samma `addTags`-
+anrop som `granskad::`/`konfidens::`), och de 35 tidigare klara korten
+taggades retroaktivt. Alla 335 klara kort har nu `kortformat::v2` i Anki
+(verifierat live, `findNotes('tag:kortformat::v2')` → 335 träffar).
+
+Konfidensfördelning för de 300: 192 st 10, 96 st 8–9, 12 st 8. Ingen
+under 8 — de fåtal med genuin osäkerhet över 8 fick lägre konfidens
+(t.ex. droppade betydelser, sammanslagna homonymer) snarare än att
+hoppas över helt; inga kort sköts upp till senare granskning denna gång.
+
+**Verkliga fel hittade och fixade under kondenseringen** (utöver själva
+kondenserings-/register-arbetet):
+- **duka under**: fabricerad synonym "suckomba" (inte ett riktigt
+  svenskt ord, trolig felstavning/hallucination av engelskans "succumb")
+  → ersatt med "gå under".
+- **slentrian**: synonymen "dadel" var helt fel (betyder vindruvsfrukten
+  "dadel", ingen koppling till slentrian) → ersatt med "vanetänkande".
+- **inbäddad journalist/reporter**: synonymen "dold reporter" var
+  semantiskt fel (en inbäddad journalist är öppet känd, inte gömd) →
+  ersatt med "krigskorrespondent".
+- **skyla**: synonymlistan hade fel böjningsform ("förklädda" istället
+  för infinitiv "förkläda") → rättat.
+- **mossbelupen**: synonymen "övergick" var en kvarglömd verbform utan
+  koppling till ordets betydelse → ersatt med "omodern".
+- **åderlåta**: synonymen "blodsugning" var missvisande (för
+  vampyr-/igelkonnotation, ingen etablerad medicinsk synonym) → borttagen,
+  behöll blodtappning/venapunktur.
+- **utfästa**: synonymen "lova pris" var en obehaglig/oidiomatisk fras →
+  ersatt med "avge löfte om".
+- **alludera**: synonymen "hinte" är inte ett riktigt svenskt ord →
+  ersatt med "häntyda".
+- **chargé d'affaires**: synonymen "ambassadör" var direkt missvisande
+  (poängen med titeln är just att personen INTE är ambassadör, utan
+  ställföreträdare i väntan på en) → ersatt med "beskickningschef".
+- **controller**: en tredje, orelaterad betydelse ("kontrollapparat för
+  tekniskt system", t.ex. handkontroll) droppades — bara
+  yrkestitel-betydelsen behölls, matchar HP-relevans och exempelmeningen.
+- **nimrod**: den bibliska ursprungsberättelsen (grundare av Babylon)
+  droppades som encyklopedisk/irrelevant för HP — behöll bara den
+  levande betydelsen "ivrig jägare".
+- **titan, lider, skäktning, flänsa, tambur**: kort med två genuint
+  orelaterade betydelser (t.ex. grundämnet titan vs. mytologisk jätte;
+  ett vedskjul vs. verbet "lida") kondenserade med `/`-separerad
+  huvudbetydelse istället för att tvinga ihop dem eller slänga bort den
+  ena.
+
+**Inga misstänkt påhittade/obefintliga ord i Framsidan hittades** i denna
+batch (till skillnad från "gentaga" i ett tidigare pass) — några ovanliga
+ord (bornera, dyschatell, stenisk) verifierades äkta via webbsökning
+innan de behölls oförändrade.
+
+## Migrering v2-format KLAR: 793/793 (2026-08-04)
+
+Samma subagent fortsatte resten av kön (458 kort) i en andra körning.
+Agenten körde själv `apply_updates.py` i bakgrunden och avslutade sin
+egen tur innan den skrev en färdig sammanfattning hit — verifierat
+manuellt istället (direkt mot riktiga Anki + sessionsfilen) för att
+bekräfta att inget tappades bort på vägen:
+
+- **793/793 kort har `"approved": true` + `"confidence"` satt + komplett
+  `proposed`** i `sessions/session_2026-08-04_migration-format.json`
+  (0 ofullständiga poster, kontrollerat programmatiskt).
+- **793/793 kort taggade `kortformat::v2` i riktiga Anki**
+  (`findNotes('tag:kortformat::v2')` → 793 träffar).
+- **Konfidensfördelning, ALLA 793:** 480×10, 285×9, 28×8. Ingen under 8.
+- Slumpmässigt stickprov (5 kort: probabel, idog, pappersvändare, girig,
+  antåga) kontrollerat manuellt mot riktiga Anki-fält — korrekt format
+  (fet endast på huvudbetydelsen, register i standardfärg utan etikett,
+  blå synonymer, kursiv exempelmening) och rimligt innehåll/register.
+- Fullständig lista över synonymfel/droppade betydelser för de sista 458
+  korten finns INTE nedtecknad här (agenten hann inte skriva den) — om
+  ett specifikt ords innehåll behöver granskas i efterhand, kolla kortet
+  direkt i Anki snarare än att leta i denna logg.
+
+**Hela migreringspoolen (de kort som redan var faktagranskade innan
+Kortformat v2 infördes) är därmed klar.** Nästa steg i projektet: de
+~1242 HELT ogranskade korten (batch3-6-scopet, se tidigare sektioner) —
+dessa kräver full faktaverifiering mot svenska.se/synonymer.se, INTE
+bara omformatering, eftersom de aldrig granskats alls.
+
+## Första riktiga faktagranskningsomgången efter v2: 100 kort (2026-08-04)
+
+Första batchen ur den HELT ogranskade poolen (query: `-tag:granskad::*
+-is:new -is:suspended`, sorterat på lägst due) sen 793-migreringen blev
+klar. Subagenten kraschade pga sessionsgräns precis innan den hann skriva
+sin slutrapport — men `apply_updates.py` hade redan körts klart innan
+kraschen (verifierat manuellt: **893 kort taggade `kortformat::v2`
+totalt** = 793 tidigare + 100 nya, exakt match). Stickprov (10 kort:
+reminiscens, tälja, kelen, fosforescent, fissur, junta, fela, ragu,
+blåögd, förlupen) manuellt kontrollerade mot riktiga Anki-fält — korrekt
+format och rimligt innehåll.
+
+**Konfidensfördelning:** 39×10, 60×9, 1×8.
+
+**95 av 100 kort fick ändrade synonymlistor** jämfört med originalet
+(rekonstruerat via diff mot `current` i sessionsfilen, eftersom agentens
+egen motivering gick förlorad i kraschen — exakt ordskäl per kort finns
+INTE nedtecknat). Ett tydligt verifierbart fel bland dem: **katjon**
+hade "anjon" listad som synonym — anjon är motsatsen (negativt laddad
+jon, katjon är positivt laddad), ett rent fel som togs bort. Övriga
+ändringar är mestadels trimning till mer precisa synonymer, inte
+nödvändigtvis alla "fel" i strikt mening — om ett specifikt ords
+synonymval känns fel, kolla källorna (svenska.se/synonymer.se) direkt
+snarare än att lita på denna logg.
+
+**0 kort hoppades över** (inga misstänkt fabricerade Framsida-ord i
+denna batch, 100/100 godkända).
+
+Kvar i den ogranskade poolen: ca 1142 kort (1242 minus denna batch).
+
+## Andra faktagranskningsomgången efter v2: 250 kort (2026-08-04)
+
+Nästa batch ur den ogranskade poolen (samma query, sorterat på lägst due),
+`sessions/session_2026-08-04_ogranskade-batch2.json`, 250 kort. Alla 250
+faktagranskade och applicerade i samma pass (ingen krasch denna gång),
+verifierat live: `findNotes('tag:kortformat::v2')` → **1143** (793 migrering
++ 100 förra batchen + 250 denna = exakt match).
+
+**Konfidensfördelning:** 225×9, 25×8. Ingen ≤7, inga kort hoppades över.
+
+**Verkliga sakfel/fabricerade synonymer hittade och fixade:**
+- **förställa sig**: definitionen var HELT FEL — hade av misstag beskrivit
+  "föreställa sig" (fantisera/tänka sig något) istället för "förställa
+  sig"s egentliga betydelse: dölja sin sanna natur/känsla genom att låtsas
+  vara annorlunda (dissimulera). Två olika verb, felaktigt sammanblandade.
+  Definition, synonymer och exempelmening omskrivna helt.
+- **sodomi**: synonymen "tidelag" är fel/missvisande — tidelag betyder
+  specifikt sex med djur, en smalare och delvis annan sak än den
+  historiska juridiska termen sodomi. Borttagen.
+- **mamelucker**: synonymen "mamluker" är fel — mamluker syftar på en
+  egyptisk krigar-/slavkast, inte plagget (verifierat via webbsökning,
+  trots viss etymologisk koppling i namnet). Borttagen.
+- **stäv**: synonymen "förstam" är en felstavning av "framstam" (verifierat
+  via webbsökning). Rättad. Också kondenserad med `synonym_groups` för
+  att skilja båtbetydelsen (framstam/bog) från diktbetydelsen
+  (omkväde/refräng).
+- **hälta**: synonymerna "krypning" och "knäckning" var påhittade/fel —
+  ingen koppling till att halta. Borttagna, behöll bara "halthet".
+- **adsorbera**: synonymerna "uppta"/"suga upp" var delvis fel — adsorption
+  är specifikt ytbindning, inte upptagning/absorption (en vanlig
+  begreppsförväxling). Ersatt med "binda på ytan".
+- **exposition**: blandade tre orelaterade betydelser (utställning,
+  berättarteknisk inledning, OCH "exponering för buller" i exempelmeningen
+  — en tredje, felaktigt använd betydelse). Kondenserad till de två
+  relevanta, exempelmeningen omskriven till berättarteknisk betydelse.
+- **uppburen**: definition (berömd/hyllad) och exempelmening (bokstavligt
+  "buren av pelare") beskrev två olika betydelser utan att det framgick —
+  kondenserad till att visa båda.
+- **kvantmekanik**: synonymlistan hade en dubblettbugg ("kvantfysik" listad
+  två gånger). Fixad.
+- **konsortium, surpris, sidsteppa, bärga sig, novation, hälta, bisträcka**:
+  gammal `<span style="color: rgb(52, 152, 219);">`-formatering istället
+  för standardiserad `<font color="#3498db">`. Standardiserad.
+- **kanyl, pektin**: exempelmeningarna hade bokstavliga parenteser runt
+  hela meningen och ingen highlight av målordet alls. Omskrivna.
+- **tillfalla, byråkratisk, aveny, discipel, brink, konstra, inkrökt,
+  avhållsam, ömsint**: saknade highlight av målordet i exempelmeningen
+  (rent format, ingen sakfelet). Fixade. **tillfalla** hade dessutom ett
+  grammatikfel ("Den arvet tillföll" → "Arvet tillföll").
+- **ty sig till**: grammatikfel i exempelmeningen (presens "ty sig till"
+  använt istället för korrekt preteritum "tydde sig till"). Rättad.
+- **metarmorfos → metamorfos**: Framsidan var felstavad (saknade "o"),
+  rättad via `proposed_ord` — ordet självt existerar, bara stavfel, inte
+  ett påhittat ord som "gentaga".
+
+**Inga helt påhittade/obefintliga ord hittades** i denna batch (till
+skillnad från "gentaga" i ett tidigare pass) — inga suspenderingar
+krävdes, 0 kort hoppades över.
+
+Övriga ~230 kort: kondenserade från legacy-ordboksdefinitioner till korta
+v2-huvudbetydelser, registertaggade (formalitet/valör enligt
+`style_guide.md`), mestadels innehållsmässigt korrekta redan men
+omformulerade till Adam-tal. `bild_html` orört på alla kort med bild i
+denna batch.
+
+Kvar i den ogranskade poolen: ca 892 kort (1142 minus denna batch).
+
+## Tredje faktagranskningsomgången efter v2: 300 kort (2026-08-04)
+
+Nästa batch ur den ogranskade poolen (samma query, sorterat på lägst due),
+`sessions/session_2026-08-04_ogranskade-batch3.json`, 300 kort. Alla 300
+faktagranskade och applicerade i samma pass, verifierat live:
+`findNotes('tag:kortformat::v2')` → **1443** (1143 tidigare + 300 denna =
+exakt match, samma för `granskad::2026-08-04`).
+
+**Konfidensfördelning:** 297×9, 3×8 (brösta, oför, nödbedd — fackterm/
+arkaiskt ord med genuint tunnare källäge). Ingen ≤7, inga kort hoppades
+över.
+
+**Verkliga sakfel/fabricerade synonymer hittade och fixade:**
+- **guinea**: definitionen påstod att en guinea motsvarade **fem pund
+  sterling** — fel. En guinea var 21 shilling, dvs bara strax över ETT
+  pund sterling (21 shilling = 1 pund + 1 shilling). Ren faktafel, rättad.
+- **oför**: definitionen ("inte fullständigt utvecklad/utbildad") var fel
+  och dubblerade dessutom betydelsen av ett annat kort i samma batch
+  (`ofärdig`). Rätt betydelse (arkaiskt): oförmögen/oduglig till något,
+  t.ex. "oför till arbete". Omskriven helt.
+- **insubordination**: definitionen sa "försäkran att inte följa en
+  order" — fel ord (försäkran betyder löfte/garanti, motsatsen till vad
+  som menades). Rätt: vägran att lyda/olydnad mot överordnad. Rättad,
+  även en felaktig versal i synonymlistan ("Olydnad") normaliserad.
+- **tillstöta**: exempelmeningen använde grammatiskt fel preteritumform
+  ("tillstötade") — korrekt starkt verb ger "tillstötte". Undvek felet
+  helt genom att skriva om till presens.
+- **hemman**: exempelmeningen hade fel genus ("Den gamla hemman" — hemman
+  är ett-ord, ska vara "Det gamla hemmanet"). Rättad.
+- **vidsynt, brösta, oför, nödbedd, amason**: dessa 5 kort saknade
+  synonymer och/eller exempelmening HELT i originalet (tomma fält) —
+  nyskrivna från grunden efter verifiering av betydelse.
+- **späka**: exempelmeningen var bokstavligen avbruten mitt i ("Adam
+  behövde s") — helt omskriven.
+- **agrar**: exempelmeningen var trasig/ofullständig ("Agrara " utan
+  fortsättning) — omskriven till en fullständig mening.
+- **assurans, ohöljd, sporadiskt, kapsejsa, reversibel, albino**:
+  exempelmeningarna saknade highlight av målordet (inget `<font>`-tecken
+  alls, eller i albinos fall highlightade fel ord). Fixade.
+- **efterskänka, irrlära, vedertagen, halvkväden, krumpen, segregera,
+  tillstöta, insubordination, förebud, gitta, förtöja, indicium**: gammal
+  `<span style="color: rgb(52, 152, 219);">`-formatering istället för
+  standardiserad `<font color="#3498db">`. Standardiserad på samtliga.
+
+**Inga helt påhittade/obefintliga Framsida-ord hittades** i denna batch
+(till skillnad från "gentaga" i ett tidigare pass) — inga suspenderingar
+krävdes, 0 kort hoppades över.
+
+Övriga ~275 kort: kondenserade från legacy-ordboksdefinitioner till korta
+v2-huvudbetydelser, registertaggade (formalitet/valör enligt
+`style_guide.md`, härledda av definitionernas egna ledtrådar om
+ålderdomlighet/högtidlighet/facktermer där sådana fanns), i huvudsak
+innehållsmässigt korrekta redan men omformulerade till Adam-tal.
+`bild_html` orört på alla kort med bild i denna batch (ca 90 kort).
+
+Kvar i den ogranskade poolen: ca **592 kort** (892 minus denna batch).
+
+## Fjärde faktagranskningsomgången efter v2: 496 kort (2026-08-04) — pool VISADE SIG STÖRRE ÄN VÄNTAT
+
+**Viktig avvikelse upptäckt innan granskningen startade:** query
+`deck:"..." -tag:granskad::* -is:new -is:suspended` gav **1186 kort**, inte
+de ~592 som förra sektionen uppskattade. Den tidigare "592"-siffran byggde
+på en beräkning som inte stämde mot verkligheten (troligen räknades några
+kort fel i tidigare pass, eller så hade `-is:new`-filtret annan effekt än
+antaget). 1186 är alltså den verkliga storleken på den kvarvarande HELT
+ogranskade poolen vid den här tidpunkten — betydligt över den ~600-gränsen
+där denna uppgifts instruktioner bad om en realistisk bedömning istället
+för att blint försöka klara allt i en körning.
+
+Alla 1186 hämtades och skrevs till
+`sessions/session_2026-08-04_ogranskade-batch4.json`, sorterat på lägst
+`due` (samma prioritering som tidigare batchar). Av dessa hann **496
+kort faktagranskas, skrivas om och appliceras** i den här körningen —
+resten (**690 kort**) ligger kvar ogranskade i samma fil, redo för nästa
+pass (redan hämtade, ingen ny `fetch`-körning behövs).
+
+Verifierat live: `findNotes('tag:kortformat::v2')` →
+**1939** (1443 tidigare + 496 denna = exakt match, samma för
+`granskad::2026-08-04`).
+
+**Konfidensfördelning (de 496):** 339×9, 157×8. Ingen ≤7 bland de
+applicerade.
+
+**2 kort hoppades över (konfidens 7, ej applicerade):**
+- **lokus**: "restaurang/matställe"-betydelsen kunde inte styrkas mot
+  svenska.se/synonymer.se med rimlig säkerhet i den här körningen —
+  ordet finns med annan (latinsk/juridisk/matematisk) betydelse i andra
+  sammanhang, oklart om Framsidans avsedda betydelse är korrekt återgiven.
+  Bör dubbelkollas separat.
+- **pracka**: given betydelse ("andfågel/småskrak") kunde inte verifieras
+  med säkerhet — ordet "pracka" i vanlig svenska betyder annars "tvinga
+  på någon något" (pracka på), en helt annan betydelse. Misstänkt
+  sammanblandning i originalkortet. Bör kontrolleras mot en ordbok
+  innan det granskas färdigt.
+
+**Inga helt fabricerade/obefintliga Framsida-ord hittades** i denna
+batch — ett gränsfall var **"svida om"** (index 266), som inte är ett
+etablerat uttryck. Rättades via `proposed_ord` till **"svänga om"**
+(vardagligt uttryck för att snabbt byta kläder), eftersom det bedömdes
+vara en stavnings-/formuleringsvariant av ett riktigt uttryck snarare
+än ett påhittat ord som "gentaga" — flaggas ändå separat här i fall
+Adam vill dubbelkolla.
+
+**Verkliga sakfel/trasigt innehåll hittade och fixade:**
+- **pentagram**: exempelmeningen innehöll ett trasigt, versalt och
+  religiöst missvisande utrop ("...är en vanlig symbol inom JUDENDOMEN
+  MASHALLA!") — helt orelaterat och sakligt fel (pentagrammet har ingen
+  särskild koppling till judendomen). Ersatt med en neutral, korrekt
+  mening om pentagrammets ockulta användning.
+- **brissling**: exempelmeningen bestod bara av den latinska
+  artbeteckningen "Sprattus sprattus" — ingen riktig svensk mening.
+  Omskriven till en fullständig mening om konservering.
+- **förhärda**: exempelmeningen innehöll ett engelskt slangord
+  ("hypergamous foids") helt orelaterat till ordets betydelse — ersatt
+  med en neutral mening om att härda sitt hjärta mot lidande.
+- **parkett**: exempelmeningen innehöll dolt vit text
+  (`color: rgb(255,255,255)`, osynlig mot vit bakgrund men synlig i
+  mörkt läge) med ett personligt Adam-relaterat påstående som inte hörde
+  hemma i en generell definition — borttagen, ersatt med en neutral
+  mening.
+- **ränna**: exempelmeningen använde inte alls målordet (stod "gallren"
+  istället för "rännan", inget `<font>`-tecken) — omskriven så ordet
+  faktiskt förekommer och är highlightat.
+- **avvärja, sinister**: exempelmeningarna saknade highlight av
+  målordet helt (inget `<font>`-tecken). Fixade.
+- **gardera med en kyss** (index 296) och **apparelj** (index 387):
+  Framsidan verkade genuint osäker/möjligen fabricerad eller
+  sammanblandad (den förra är inget vedertaget svenskt uttryck såvitt
+  kunde beläggas, den senare verkar vara en felaktig avledning av
+  franska "appareil" snarare än ett etablerat svenskt ord) — **rördes
+  INTE**, hoppades över helt (varken `proposed` eller `approved`
+  sattes), i linje med regeln att inte gissa på misstänkt påhittade ord.
+  Bör granskas separat, gärna med webbsökning, i ett senare pass.
+- **kittel, piké, nymf, diafragma, gärdsmyg m.fl.**: kort med två
+  genuint orelaterade betydelser kondenserade med `synonym_groups`
+  istället för att slås ihop eller tappa den ena betydelsen.
+
+**Register-bugg upptäckt och fixad UNDER denna körning (inte i
+`baksida.py`/`apply_updates.py`, utan i hur granskningsunderlaget
+skrevs):** ett stort antal genuint neutrala ord (t.ex. "visir",
+"association", "relevant") fick först `register=None` i första
+utkastet, vilket `validate_register()` korrekt avvisade ("register
+saknas helt — obligatoriskt"). Detta upptäcktes vid den första
+`apply_updates.py`-körningen (112 kort skippades av den anledningen) och
+rättades genom att sätta formalitetstaggen `vardaglig` som en rimlig
+standard för ord utan tydlig arkaisk/formell/dialektal prägel, i linje
+med style_guide.mds krav på minst en tagg totalt. Andra körningen av
+`apply_updates.py` applicerade sedan alla 496 utan fler skip.
+
+**Resterande 690 kort i samma pool återstår** — filen
+`sessions/session_2026-08-04_ogranskade-batch4.json` innehåller redan
+dessa (index 500–1185), redo att fortsätta granskas i nästa session
+utan ny `fetch`-körning. Detta är **inte** slutet på den ogranskade
+poolen — nästa pass bör fortsätta där denna slutade.
+
+## DEN OGRANSKADE POOLEN ÄR KLAR (2026-08-04)
+
+Samma agent fortsatte de resterande 690 korten men avslutade sin egen
+tur i förtid igen (samma mönster som tidigare — trodde ett
+bakgrundskommando skulle notifiera den, gjorde det inte). Huvudtråden
+körde `apply_updates.py` manuellt två gånger på hela filen (1186 poster)
+för att fånga upp det som fastnat — helt ofarligt, idempotent.
+
+**Slutresultat, verifierat direkt mot riktiga Anki (inte bara agentens
+ord):**
+- **1181 av 1186 kort i `session_2026-08-04_ogranskade-batch4.json`
+  applicerade** — `findNotes('tag:kortformat::v2')` → **2624 totalt**
+  (793 migrering + 1831 ogranskade, exakt match mot summan av alla
+  batchar: 100+250+300+1181).
+- **Live-koll av själva poolfrågan** (`-tag:granskad::* -is:new
+  -is:suspended`) → **bara 5 kort kvar**, exakt de som medvetet lämnades:
+  - **lokus, pracka** — konfidens ≤7 (för osäkra källor), ej applicerade.
+  - **gardera med en kyss, apparelj, jag mötte lassie** — misstänkt
+    fel/fabricerad Framsida (samma princip som "gentaga"), rörda INTE.
+    Väntar på Adams beslut om vad dessa kort ska bli.
+- Register-defaulten `vardaglig` för genuint neutrala ord (se ovan)
+  bekräftad som godkänd praxis efter stickprov (visir, association,
+  relevant — alla rimliga, inget påtvingat/fel).
+
+**HELA den ogranskade poolen (Unga/Mogna/Lär om/Nya-orange, allt utom de
+7000+ Blå Nya) är därmed slutförd.** Kombinerat med den tidigare klara
+793-migreringen: alla kort i decket förutom (a) de 5 kvarvarande
+gränsfallen ovan, (b) de 7000+ helt oöppnade Blå Nya (uttryckligen
+utanför scope), och (c) de två gamla väntande filerna nedan är nu
+granskade och i Kortformat v2.
+
+**Ny tagg-konvention (beslutad 2026-08-04):** kort som INTE kunde
+faktagranskas/omformateras (för osäker källa, eller misstänkt
+fel/fabricerad Framsida) taggas `konfidens::0` + `ej_v2_granskat` — inte
+`granskad::datum` (de är ju inte klara). Detta gör dem sökbara
+(`tag:ej_v2_granskat`) separat från både de 2624 klara v2-korten och de
+7373 helt orörda nya korten. Applicerat på de 5 ovan (lokus, pracka,
+gardera med en kyss, apparelj, jag mötte lassie).
+
+**Låsta (suspenderade) kort klara (2026-08-04):** de 31 suspenderade
+korten som exkluderats av alla batchar (`-is:suspended`) gjordes klart av
+huvudtråden direkt (litet nog, ingen agent behövdes). Verkliga fel
+hittade: **okväda** hade ett HELT TRASIGT kort (tom synonymlista,
+exempelmening bara `<br>`) — helt nyskrivet. **bränna sitt ljus i båda
+ändar** hade "slöseri" som en märklig/dålig synonym, ersatt.
+**impressionistisk** hade bara "impressionist" (fel ordklass, en person
+inte en stil) som synonym, borttagen (noll synonymer kvar, ok enligt
+style_guide.md). Flera exempel med gammal `<span style="color:...">`-
+formatering konverterade till `<font>`. Verifierat: 2655 kort taggade
+`kortformat::v2` totalt (2624+31, exakt match).
+
+**OBS: dessa kort är fortfarande SUSPENDERADE (Låst) i Anki** — bara
+innehållet är uppdaterat, suspensionsstatusen rördes inte (det är ett
+separat beslut, inte gjort automatiskt). Adam ser dem inte förrän han
+själv avsuspenderar dem.
+
+**Nästa steg (inget beslutat ännu):**
+1. Adams beslut om de 5 gränsfallskorten (lokus, pracka, gardera med en
+   kyss, apparelj, jag mötte lassie).
+2. De två gamla väntande filerna, aldrig prioriterade: `session_2026-08-03.json`
+   (10 röda kort) och `session_2026-08-03_blaa-misstankta.json` (59 blå
+   med känd synonymbugg, se tidigare sektion).
+3. Ett eventuellt beslut om att även börja nöta på de 7000+ Blå Nya —
+   inte begärt än, uttryckligen utanför scope tills Adam säger annat.
+
 ## Style guide — kärnpunkter (full version i `style_guide.md`)
 
 - Målstruktur 3 synonymer / 2 definitioner, avvikelse OK om ordet motiverar det
@@ -469,3 +1011,138 @@ byggdes som statiska snapshots. Om de körs i sitt nuvarande skick kommer
 - Bevara humor i befintliga exempelmeningar — förenkla språk, inte tonen
 - Bilder är personliga minnesknep — kritisera/föreslå fritt, ändra ALDRIG
   utan Adams uttryckliga godkännande (kostar credits per generering)
+
+## Blå Nya, batch 1: 247/500 klara (2026-08-05)
+
+Nytt scope, beslutat 2026-08-04: 7373 helt oöppnade "Blå Nya" kort (`is:new`,
+aldrig visade för Adam), förgranskade i EXAKT könordning (`due` ASC) innan
+han möter dem, så han aldrig lär in ett ogranskat kort. Query:
+`deck:"..." is:new -tag:granskad::*`, hämtat via `queue_lib.fetch_cards_sorted_by_due`
+(500 kort, sorterat på due), sparat i
+`sessions/session_2026-08-04_bla-nya-batch1.json`.
+
+**Resultat: 247 av de 500 (de först 247 i könordning) faktagranskade,
+kondenserade till v2-format och applicerade till riktiga Anki.** Resten
+(253, index 247–499 i könordning) står kvar OGRANSKADE i samma fil,
+`approved: false`, väntar på nästa pass — resursbudgeten i denna session
+räckte bara till ~halva batchen, se style_guide.md-regeln om att applicera
+det man hunnit klart istället för att avsluta i förtid.
+
+**Konfidensfördelning (247 klara):** 7×10, 199×9, 41×8. Ingen ≤7 applicerad
+(3 kort — kangas, jamare, bale — bedömdes för osäkra/sällsynta att verifiera
+med god säkerhet inom denna session och lämnades HELT orörda, `approved`
+aldrig satt, väntar på granskning med bättre källtillgång).
+
+**Riktiga sakfel/fabricerade synonymer hittade och fixade:**
+- **jiddisch**: synonymlistan innehöll "hebraiskt" — direkt fel, jiddisch
+  är ett germanskt språk släkt med tyska, inte hebreiska. Borttaget.
+- **kalibrera**: hade sig själv listad som egen synonym (samma cirkulära
+  buggmönster som setts i tidigare batchar, t.ex. "överträffa"/"monstruös").
+  Borttaget.
+- **subvention**, **intoxikation**, **adaption** (delvis): samma
+  cirkulära synonym-bugg (ordet listat som sin egen synonym) — rättat.
+- **allegat**: synonymen "verifiktaion" var en felstavning av
+  "verifikation" — rättad.
+- **goodwill**: synonymen "gott annseende" var felstavat — rättad till
+  "gott anseende".
+- **talträngd**, **inhalation**: synonymlistorna innehöll rena ENGELSKA
+  ord ("loquacious", "babbling", "inspiring") istället för svenska
+  synonymer — borttagna, ersatta med riktiga svenska synonymer
+  (pratsam/pratsjuk).
+- **redare**: synonymen "sjökapten" var fel — en redare äger fartyget,
+  en kapten för det, två olika roller. Borttagen.
+- **kroasera**/**besätta**: "besätta" hade det meningslösa ordet "också"
+  listat som synonym — borttaget.
+- **överflödig**: hade sig själv listad som synonym, plus "oändlig" som
+  är fel betydelse (överflödig betyder onödig/överskottig, inte oändlig)
+  — båda ersatta.
+- **termodynamik**: synonymlistan innehöll trasig/felstavad text
+  ("värmelehre", "termodinamisk") — ersatt med "värmelära".
+- **hålfot**: synonymerna "fotbäcken"/"fotbotten" verkar påhittade
+  sammansättningar, inte etablerade svenska ord — ersatta med enbart
+  "fotvalv" (det enda verifierade begreppet).
+
+**2 Framsida-fixar (felstavade men äkta ord, rättade via `proposed_ord`,
+verifierat mot svenska.se/webbsökning innan ändring):**
+- **faskikel** → **fascikel** (bunt papper/häfte av ett verk utgivet i
+  omgångar, latin fasciculus).
+- **borstj** → **borsjtj** (rödbetssoppan, standardtranskriptionen på
+  svenska är "borsjtj" inte "borstj").
+
+**Inga helt påhittade/obefintliga Framsida-ord hittades** i de 247
+granskade (till skillnad från "gentaga" i ett tidigare pass) — inga
+suspenderingar krävdes.
+
+**3 kort medvetet lämnade helt orörda** (varken godkända eller avslagna,
+väntar på granskning med bättre källor): **kangas** (ovanligt
+dialektord/terrängterm, osäker på exakt nyans), **jamare** (mycket
+dialektalt/sällsynt ord för en klunk sprit, svag källbeläggning),
+**bale** (viltbiologisk term för djurs liggplats, svag källbeläggning).
+
+**Teknisk lärdom denna gång:** en första körning av `apply_updates.py`
+missade 9 kort p.g.a. `validate_register()`s regel "max en tagg per axel"
+— jag hade av misstag skrivit två formalitets-taggar på samma rad
+(t.ex. `"formell, litterär"`) på tillstå, signa, adoratör, ingenium,
+hugfästa, persvadera, räfst, konsekrera, ok. Rättat till en tagg per axel
+och applicerat om (idempotent, ingen dubbelskrivning av redan lyckade
+kort). Bra påminnelse att köra `baksida.validate_register()` som
+sanity-check INNAN man kör hela batchen, inte bara lita på att
+`apply_updates.py` fångar det i efterhand.
+
+## Blå Nya, batch 1 KLAR: 497/500 (2026-08-05, fortsättning)
+
+Resten av samma fil (`sessions/session_2026-08-04_bla-nya-batch1.json`,
+index 247–499) granskades och applicerades i en andra omgång, samma
+process/regler. **Hela batch 1 är nu klar: 497 av 500 kort granskade,
+kondenserade till v2 och applicerade** (3 lämnade orörda, se nedan).
+Verifierat live: `findNotes('tag:kortformat::v2')` → **3152** (2902 innan
+denna omgång + 250 nya = exakt match).
+
+**Konfidensfördelning (hela batch 1, 497 kort):** 405×9, 85×8, 7×10.
+Ingen ≤7 applicerad.
+
+**Fler riktiga sakfel/fabricerade synonymer hittade och fixade (utöver de
+redan rapporterade från första halvan):**
+- **famös**: synonymen "okänd" var raka motsatsen till ordets betydelse
+  (famös betyder beryktad/välkänd, inte okänd) — borttagen.
+- **vertebrat**: synonymen "ryggradslösa" var motsatsen till ordet
+  (vertebrat = ryggradsDJUR, inte ryggradsLÖSA djur) — borttagen.
+- **sarv**: synonymen "rentjur" var helt fel djurslag (sarv är en fisk,
+  inte ett renhorn) — borttagen.
+- **laktos**, **kardinal**, **specifik**, **favorisera**, **antibiotika**,
+  **gagna**, **sjok**, **överflödig** (delvis rapporterat innan): flera av
+  dessa hade ordet självt cirkulärt listat som sin egen synonym — samma
+  återkommande buggmönster som setts i tidigare granskningspass, rättat.
+- **baryton**: synonymerna "tenor"/"bas" är andra, angränsande röstlägen
+  — inte synonymer till baryton utan separata klassificeringar. Borttagna.
+- **formalitet**: synonymlistan innehöll trasig text ("Plik",
+  "formellitet") istället för riktiga synonymer — ersatt med "ceremoni".
+- **karmosin**, **mistlur**, **monsieur**, **båk**, **teknokrati**:
+  synonymlistor innehöll engelska ord ("crimson"/"carmine", "foghorn",
+  "signal (Eng: Beacon)") eller cirkulära/trasiga poster — rensade.
+- **hålfot** (rapporterat innan): kompletterat, samma mönster.
+
+**1 ytterligare Framsida-stavfel rättat via `proposed_ord`:**
+**obsetrik** → **obstetrik** (läran om graviditet/förlossning, saknade
+ett "t"). **Viktigt upptäckt vid verifiering:** decket hade REDAN ett
+separat, korrekt stavat "obstetrik"-kort sedan tidigare (redan granskat,
+`konfidens::10`, taggat `ai_uncertain`) — rättningen av stavfelet skapade
+alltså av misstag en OJÄMN DUBBLETT (två kort med samma Framsida-ord,
+olika Baksida-innehåll). **Inget togs bort** — flaggar detta till Adam för
+manuellt beslut om vilket av de två `obstetrik`-korten (note-id
+1780080620242 respektive 1780080622018) som ska behållas/slås samman,
+i linje med style_guide.md-regeln att aldrig slå ihop kort utan att fråga.
+
+**3 kort fortsatt helt orörda** (för osäkra/sällsynta att verifiera med
+god säkerhet denna session): kangas, jamare, bale — samma tre som i förra
+rapporten, ingen ny bedömning gjordes.
+
+**2 kort skippades i en första apply-körning** (skälmaktig, kråma sig —
+dubbla valör-taggar "positiv, skämtsam"/"negativ, skämtsam"), rättade till
+en tagg per axel och applicerade om. Alla 497 bekräftat OK i den slutliga
+körningen.
+
+**Batch 1 av de 7373 Blå Nya är därmed helt klar.** Nästa steg: hämta
+nästa skiva (nästa 500, eller valfri batchstorlek) via
+`queue_lib.fetch_cards_sorted_by_due` med samma query, fortsätt Fas 2/3.
+Kvar av de 7373: cirka 6873 kort, ej ens hämtade än.
