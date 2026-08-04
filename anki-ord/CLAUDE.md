@@ -8,9 +8,10 @@ exakt var vi står, så en ny chatt kan fortsätta direkt.
 - Deck: `Humanities::Languages::Svenska 10 000`
 - Note type: `Grundläggande-adc63`
 - Fält: `Framsida` (ordet), `Baksida` (EN HTML-blob, se `baksida.py`)
-- Flaggor: flag:1 = **Röd** (849 kort, fel) · flag:2 = **Gul** (1328, osäker)
-  · flag:4 = **Blå** (7772, stämmer) · flag:3 = 84 kort, utanför scope, ej
-  nämnt av Adam, rör inte
+- Flaggor: flag:1 = **Röd** (fel) · flag:2 = **Gul** (osäker) · flag:4 =
+  **Blå** (stämmer, konfidens 9-10) · flag:3 = **Grön** (dels 84 gamla kort
+  utanför scope, dels nya konfidens-≤8-granskade kort sen 2026-08-04 — skilj
+  dem åt via tagg `konfidens::N`, se style_guide.md)
 - Befintliga taggar (`ai_optimized`, `ai_uncertain`, `ai_failed`,
   `granska_först`) är historik, INTE fakta — flaggan vinner alltid vid
   konflikt (t.ex. blå + `ai_uncertain` = Adam har redan rättat, är korrekt)
@@ -28,36 +29,45 @@ exakt var vi står, så en ny chatt kan fortsätta direkt.
 | `scan_blue_synonyms.py` | Läsande engångssökning, ändrar inget, listar blå kort som matchar `SUSPECT_SYNONYMS = ["allsmäktig", "alrådande", "allrådande"]` |
 | `queue_lib.py` | Delad hämta/sortera/skriv-logik för de två fetch-skripten |
 | `images.py` | Läsa/skriva Anki-media (bilder), används i Fas 2 |
-| `apply_updates.py` | Fas 3 — skriver godkända ändringar (`updateNoteFields` via `baksida.build`), flyttar flagga till blå, taggar `granskad::<datum>`. `apply_single` per kort under passet, eller batchat i `main()` |
+| `apply_updates.py` | Fas 3 — skriver godkända ändringar (`updateNoteFields` via `baksida.build`, plus `Framsida` om `proposed_ord` satt). Kräver `entry["confidence"]`: ≤7 skippas (ej redo), 8→flagga Grön, 9-10→flagga Blå (fixat 2026-08-04, se style_guide.md — tidigare flaggade koden fellaktigt ALLTID blått oavsett konfidens). Taggar `granskad::<datum>` + `konfidens::N`. `apply_single` per kort under passet, eller batchat i `main()` |
 | `style_guide.md` | "Adam-tal"-checklista — struktur, grundregler, bevara humor, bildhantering, vanliga fällor |
 
 ## Öppna sessionsfiler
 
 **`sessions/session_2026-08-04.json`** — AKTIV KÖ, 106 kort totalt:
-- 21 `"approved": true` (redan granskade/godkända, orörda, ligger överst)
-- 85 `"approved": false, "proposed": null` (väntar på Fas 2)
+- **28 `"approved": true`, redan APPLICERADE till riktiga Anki via
+  `apply_updates.py`** (kört 2026-08-04, `[OK]` för alla 28, se historik för
+  fullständig lista). Dessa kort är nu taggade `granskad::2026-08-04` +
+  `konfidens::N` i Anki och flaggade Blå (konfidens 9-10 på samtliga 28).
+- 78 `"approved": false, "proposed": null` (väntar på Fas 2), oförändrad
+  inbördes ordning från förra passet.
 
-De 85 väntande är i denna ordning:
-1. **6 prioriterade** — röda kort Adam redan pluggar (`-is:new`), hittade
-   2026-08-04 via live AnkiConnect-sökning och manuellt inklistrade allra
-   först i kön, eftersom Adam vill rätta det han redan lär sig innan nytt
-   material (se regel nedan). Ordning: "spel för galleriet", "bolare",
-   "påbel", "vara i svang", "kanalje", "bottna i".
-2. **79 övriga** — samtliga är `is:new` (aldrig visade i Anki), ursprungligt
-   `fetch_queue.py`-resultat. Första i denna grupp: **"vina"** — OBS,
-   innehållet är trasigt (beskriver vinbär, inte ordets faktiska betydelse;
-   platshållar-exempelmening), måste researchas från grunden mot
-   svenska.se/synonymer.se innan godkännande.
+De 7 senast tillagda/applicerade (utöver de ursprungliga 21): "spel för
+galleriet", "bolare", "pöbel" (Framsida var redan korrekt stavad — "påbel"
+i tidigare anteckning var en egen felläsning pga terminal-encodingbugg, se
+Errors-sektion i sessionshistorik), "vara i svang", "kanalje", "bottna i",
+"vina". Alla dessa hade helt eller delvis fel innehåll (t.ex. "vina"
+beskrev vinbär i stället för ljudet av något som susar/viner förbi;
+"bottna i"/"vara i svang" hade återanvänd skräp-synonymlista
+"allsmäktig/allhärskande" från en helt annan kortbugg) — verifierat mot
+svenska.se/synonymer.se/SAOB och omskrivet innan applicering.
+
+Nästa kort i kön (första av de 78 obehandlade): **"förråda sig"**.
 
 **Prioriteringsregel (beslutad 2026-08-04):** Adam vill granska kort han
 redan håller på att lära sig FÖRE kort han aldrig sett, så han inte lär in
 fel version av ett ord han redan pluggar. `fetch_queue.py`/`queue_lib.py`
 (`fetch_cards_prioritized`) implementerar detta permanent för alla framtida
-körningar — se script-tabellen ovan. Denna omgörning av session-04 var en
-engångs-retroaktiv fix eftersom filen redan fanns när regeln beslutades.
+körningar.
 
-**`sessions/session_2026-08-03.json`** — 10 röda kort, HELT ogranskad
-(oberörd av 08-04-arbetet). Ord: kautschuk, eternell, driven, + 7 till.
+**Konfidens/flagg-koppling (beslutad 2026-08-04, se style_guide.md):** varje
+applicerat kort MÅSTE ha `entry["confidence"]` (0-10) i session-JSON innan
+`apply_updates.py` kör det — annars skippas det automatiskt (säkerhetsspärr
+tillagd 2026-08-04 efter att en bugg upptäcktes: koden flaggade tidigare
+ALLTID blått oavsett faktisk säkerhet).
+
+**`sessions/session_2026-08-03.json`** — 10 röda kort, HELT ogranskad.
+Ord: kautschuk, eternell, driven, + 7 till.
 
 **`sessions/session_2026-08-03_blaa-misstankta.json`** — 59 blå kort från
 `scan_blue_synonyms.py`/`fetch_blue_suspects.py`, alla ogranskade. Exempel:
@@ -69,13 +79,27 @@ bara synonymen.
 
 ## Nästa steg
 
-Fortsätt Fas 2 i `session_2026-08-04.json`, börja med **"spel för
-galleriet"** (första prioriterade kortet). Kör kort för kort genom de 6
-prioriterade, sen "vina" (kräver research från grunden) och resten av de
-79. Applicera godkända kort via `apply_updates.py`.
+Fortsätt Fas 2 i `session_2026-08-04.json`, börja med **"förråda sig"**
+(första obehandlade av de 78). Kör kort för kort, verifiera mot
+svenska.se/synonymer.se, skriv `proposed`+`confidence`, sätt
+`approved: true`, applicera löpande eller batchat via `apply_updates.py`.
 
 De två 08-03-filerna (10 röda + 59 blå-misstänkta) väntar fortfarande,
 Adam har inte valt att prioritera dem än.
+
+## Backup-status (2026-08-04, inför powerwash)
+
+- **Kod**: pushad till GitHub, `github.com/Lekman-Learning/Swedish-Anki-Deck-Corrector`
+  (repo omdöpt/återanvänt, gammalt innehåll finns kvar bara som git-historik
+  bakom en merge-commit, arbetsträdet är rent hp-coach). Klona ner igen med
+  `git clone https://github.com/Lekman-Learning/Swedish-Anki-Deck-Corrector.git`
+  efter powerwash, öppna i VS Code, Claude Code läser denna fil automatiskt.
+- **Anki-collection (själva korten)**: säkrad via `invoke('sync')` mot
+  AnkiWeb 2026-08-04, lyckades (SYNC OK). Efter powerwash: installera Anki,
+  logga in på AnkiWeb-kontot, synka ner — collection återställs oavsett
+  lokal disk.
+- Scripten fungerar bara lokalt (AnkiConnect kräver Anki öppen på samma
+  dator) — GitHub/moln kan aldrig KÖRA dem, bara lagra koden.
 
 ## Style guide — kärnpunkter (full version i `style_guide.md`)
 

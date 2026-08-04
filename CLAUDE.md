@@ -16,11 +16,17 @@ högst prioritet). Granskningsordning: röd → gul → (blå, bara vid misstän
 synonym, se nedan).
 
 **Just nu — aktiv kö:**
-`anki-ord/sessions/session_2026-08-04.json`, 106 kort: 21 godkända, 85
-väntar. Fas 2 pågår, nästa kort = "spel för galleriet". Adam har beslutat
-(2026-08-04) att kort han redan pluggar (sedd i Anki, `-is:new`) ska
-granskas FÖRE aldrig visade kort — 6 sådana röda kort hittades och ligger
-först i kön. Se `anki-ord/CLAUDE.md` för full ordning och detaljer.
+`anki-ord/sessions/session_2026-08-04.json`, 106 kort: **28 godkända OCH
+redan applicerade till riktiga Anki** (kört 2026-08-04), 78 väntar. Fas 2
+pågår, nästa kort = "förråda sig". Adam har beslutat (2026-08-04) att kort
+han redan pluggar (sedd i Anki, `-is:new`) ska granskas FÖRE aldrig visade
+kort — implementerat permanent i `fetch_queue.py`. Se `anki-ord/CLAUDE.md`
+för full status, inkl. en kodbugg som fixades samma dag (flagg/konfidens-
+koppling i `apply_updates.py`).
+
+**Backup inför powerwash (2026-08-04):** kod pushad till GitHub
+(`Lekman-Learning/Swedish-Anki-Deck-Corrector`), Anki-collection synkad
+till AnkiWeb. Se "Backup-status" i `anki-ord/CLAUDE.md` för återställning.
 
 Två filer väntar fortfarande, ej påbörjade:
 1. `anki-ord/sessions/session_2026-08-03.json` — 10 röda kort

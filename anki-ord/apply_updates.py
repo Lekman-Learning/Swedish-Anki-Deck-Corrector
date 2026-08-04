@@ -24,6 +24,10 @@ def apply_single(entry):
     if not entry.get("approved") or not proposed:
         return False, "hoppade över (ej godkänt)"
 
+    confidence = entry.get("confidence")
+    if confidence is None or confidence <= 7:
+        return False, "hoppade över (konfidens saknas eller <=7 — inte redo, se style_guide.md)"
+
     current = entry["current"]
     new_baksida = baksida.build(
         synonymer=proposed.get("synonymer", current["synonymer"]),
@@ -34,13 +38,26 @@ def apply_single(entry):
         bild_html=proposed.get("bild_html", current["bild_html"]),
         synonym_groups=proposed.get("synonym_groups"),
     )
-    invoke(
-        "updateNoteFields",
-        note={"id": note_id, "fields": {config.FIELD_BAKSIDA: new_baksida}},
-    )
+
+    fields = {config.FIELD_BAKSIDA: new_baksida}
+    proposed_ord = entry.get("proposed_ord")
+    if proposed_ord and proposed_ord != entry["ord"]:
+        # Framsidan kan också vara fel (felstavning, saknat "sig" osv), se
+        # style_guide.md "Framsidan kan också vara fel" — rättas bara om
+        # proposed_ord explicit satts under granskningen.
+        fields[config.FIELD_ORD] = proposed_ord
+
+    invoke("updateNoteFields", note={"id": note_id, "fields": fields})
 
     today = datetime.date.today().isoformat()
-    invoke("addTags", notes=[note_id], tags=f"{config.REVIEWED_TAG_PREFIX}::{today}")
+    # Flaggkoppling beslutad 2026-08-04 (style_guide.md): 9-10 -> Blå,
+    # <=8 -> Grön. <=7 hanteras redan ovan (skippas helt, inte redo).
+    flag = config.FLAG_BLA if confidence >= 9 else config.FLAG_GRON
+    invoke(
+        "addTags",
+        notes=[note_id],
+        tags=f"{config.REVIEWED_TAG_PREFIX}::{today} konfidens::{confidence}",
+    )
 
     try:
         card_ids = invoke("findCards", query=f"nid:{note_id}")
@@ -49,11 +66,11 @@ def apply_single(entry):
                 "setSpecificValueOfCard",
                 card=card_id,
                 keys=["flags"],
-                newValues=[config.FLAG_BLA],
+                newValues=[flag],
                 warning_check=True,
             )
     except AnkiConnectError as exc:
-        return True, f"fält+tagg uppdaterat, men flaggan kunde INTE sättas automatiskt ({exc}) — sätt till blå manuellt"
+        return True, f"fält+tagg uppdaterat, men flaggan kunde INTE sättas automatiskt ({exc}) — sätt manuellt"
 
     return True, "klart"
 

@@ -22,6 +22,7 @@ SYNONYM_COLOR = "#3498db"
 #   flag:3 (84 kort)   = utanför scope (litet, separat historiskt bucket, ej nämnt av Adam)
 FLAG_ROD = 1
 FLAG_GUL = 2
+FLAG_GRON = 3
 FLAG_BLA = 4
 
 REVIEWED_TAG_PREFIX = "granskad"  # tagg blir granskad::YYYY-MM-DD
