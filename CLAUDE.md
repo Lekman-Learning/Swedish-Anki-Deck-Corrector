@@ -15,14 +15,30 @@ Blå = stämmer 100% (rör ej) · Gul = osäker (granska) · Röd = fel (granska
 högst prioritet). Granskningsordning: röd → gul → (blå, bara vid misstänkt
 synonym, se nedan).
 
-**Just nu — aktiv kö:**
-`anki-ord/sessions/session_2026-08-04.json`, 106 kort: **28 godkända OCH
-redan applicerade till riktiga Anki** (kört 2026-08-04), 78 väntar. Fas 2
-pågår, nästa kort = "förråda sig". Adam har beslutat (2026-08-04) att kort
-han redan pluggar (sedd i Anki, `-is:new`) ska granskas FÖRE aldrig visade
-kort — implementerat permanent i `fetch_queue.py`. Se `anki-ord/CLAUDE.md`
-för full status, inkl. en kodbugg som fixades samma dag (flagg/konfidens-
-koppling i `apply_updates.py`).
+**Just nu — aktiv kö:** Den ursprungliga `session_2026-08-04.json`-kön (106
+kort) samt hela "Lär om"/"Mogna"-genomgången (55+34+380 kort) är klara och
+applicerade. Adam beslutade därefter att utöka scope till alla kort som
+INTE är "Nya" (Nya-orange + Unga + Låst = 2042 kort), batchat i 6 filer:
+`sessions/session_2026-08-04_resten-batch1.json` t.o.m. `...batch6.json`.
+**Batch 1 och batch 2 (800 kort) är klara** (381 fixade kort totalt: 180 i
+batch 1, 201 i batch 2, applicerade till riktiga Anki). Batch 1 hittade ett
+helt påhittat/obefintligt ord ("gentaga") som suspenderades och väntar på
+Adams beslut — batch 2 hittade inga påhittade ord. Den ordinarie batch
+3-6-sekvensen (1242 kort) står fortfarande på paus.
+
+**Urgent-pass 2026-08-04 (körd utanför batch-sekvensen):** Adam bad om att
+istället prioritera kort han faktiskt läser inom en dag eller två.
+`sessions/session_2026-08-04_resten-batch3-urgent.json` (300 kort: 200
+redan sedda + 100 helt nya, sorterade på när de dyker upp) granskades och
+**102 kort fixades och applicerades**. Detta inkluderar ett **nytt
+permanent scope-beslut**: de närmast förestående nya korten (som Adam
+aldrig sett än, tidigare uttryckligen utanför scope) förgranskas nu innan
+han introduceras för dem, som stående policy framåt — inte bara en
+engångsavvikelse. Inga påhittade ord hittades denna gång. Se
+`anki-ord/CLAUDE.md` ("Urgent-pass"-avsnittet) för fullständig lista över
+sakfel, en kyrillisk-bokstavsbugg som hittades, och en liten bugg i
+`apply_updates.py`-flödet (kort med enbart Framsida-fix kunde hoppas över
+tyst) som nu är dokumenterad och undviks.
 
 **Backup inför powerwash (2026-08-04):** kod pushad till GitHub
 (`Lekman-Learning/Swedish-Anki-Deck-Corrector`), Anki-collection synkad
