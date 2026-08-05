@@ -1183,6 +1183,26 @@ dagligen/vid behov tills hela poolen (6876 kort, minus de 3 olösta
 gränsfallen kangas/jamare/bale som förblir suspenderade tills de
 granskas separat) är igenom.
 
+**Flerbetydelse-snabbkoll KLAR (2026-08-05):** alla 894 återstående kandidater
+(994 totalt minus 100 redan gjorda) snabbkollade via tre parallella
+subagenter, `sessions/session_2026-08-05_flerbetydelser-snabbkoll-batch{1,2,3}.json`.
+**10 kort hade en dold andra betydelse och fixades**: utgå, tambur (batch1),
+nod, dille, utanverk, solid, paria (batch2), konglomerat, optik, kromatisk
+(batch3). 875 kort bekräftat redan korrekta (taggade oförändrade). **9 kort
+lämnades helt orörda** (äkta synonymfel, inte dold betydelse, väntar på
+vanlig granskning): modus vivendi, preja, på eget bevåg, agorafobi,
+framliden, samt och synnerligen, albino, blottställd, lovlig. 985/994
+kandidater nu taggade `flerbetydelse_granskad`+`flerbetydelse_snabbkoll`.
+**Sidofynd:** ~20 kort har gammal `eller`/`/`-separator istället för `;` i
+flerbetydelseord (batch3) — ej fixat, separat problem för senare pass.
+**Säkerhetsfix samtidigt:** `apply_updates.py` avsuspenderar nu bara kort
+som var icke-v2 FÖRE denna körning (dvs. faktiska Blå Nya-släpp) — kort som
+redan var v2 rörs aldrig, oavsett suspend-status (skyddar Adams egna
+manuella suspenderingar + de gamla Låst-korten från omgranskningspass).
+**Nästa steg:** `_sokverifierad`-omgång på de 875 redan godkända (billig
+`_snabbkoll` gjord, dyrare källkoll återstår), plus de 9+~20 kända
+avvikelserna ovan.
+
 **Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
 kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
 kort i den aktiva kön som är dåligt (trots `kortformat::v2`-taggen)

@@ -24,6 +24,14 @@ def apply_single(entry):
     if not entry.get("approved") or not proposed:
         return False, "hoppade över (ej godkänt)"
 
+    # Bara kort som INTE redan var v2 (dvs. kommer från den suspenderade Blå
+    # Nya-poolen, se suspend_unreviewed_new.py) ska avsuspenderas nedan. Ett
+    # kort som redan var kortformat::v2 kan vara suspenderat av en helt
+    # annan, avsiktlig anledning (Adams egen "det här kortet är skit"-vana,
+    # eller de gamla "Låst"-korten) — omgranskning (t.ex.
+    # flerbetydelse-snabbkollen) ska ALDRIG rubba den statusen.
+    was_already_v2 = config.FORMAT_TAG_V2 in entry.get("tags", [])
+
     confidence = entry.get("confidence")
     if confidence is None or confidence <= 7:
         return False, "hoppade över (konfidens saknas eller <=7 — inte redo, se style_guide.md)"
@@ -90,13 +98,14 @@ def apply_single(entry):
     except AnkiConnectError as exc:
         return True, f"fält+tagg uppdaterat, men flaggan kunde INTE sättas automatiskt ({exc}) — sätt manuellt"
 
-    # Avsuspenderar automatiskt kortet om det var suspenderat (t.ex. Blå
-    # Nya-kort hålls suspenderade tills de är v2-granskade, se
-    # suspend_unreviewed_new.py). No-op för kort som aldrig var suspenderade.
-    try:
-        invoke("unsuspend", cards=card_ids)
-    except AnkiConnectError as exc:
-        return True, f"klart, men avsuspendering misslyckades ({exc}) — avsuspendera manuellt"
+    # Avsuspenderar BARA kort som gick från icke-v2 -> v2 i denna körning
+    # (dvs. släpps in från den suspenderade Blå Nya-poolen för första
+    # gången). Kort som redan var v2 lämnas orörda oavsett suspend-status.
+    if not was_already_v2:
+        try:
+            invoke("unsuspend", cards=card_ids)
+        except AnkiConnectError as exc:
+            return True, f"klart, men avsuspendering misslyckades ({exc}) — avsuspendera manuellt"
 
     return True, "klart"
 
