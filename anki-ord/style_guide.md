@@ -18,10 +18,19 @@ Adam förstår direkt, utan att behöva slå upp fler ord.
   är bara namnen på koncepten i denna guide, inte text på kortet):**
   - **Huvudbetydelse** — ENDAST detta värde är fett stilat (`<b>`), inget
     annat på kortet är det. Stor bokstav först (`baksida.build()` gör
-    detta automatiskt, beslutat 2026-08-04). En eller flera korta fraser
-    separerade med ` / ` om ordet har flera vanliga betydelser. Så koncist
-    som möjligt, vardagligt språk, ingen ordboksstil. Detta ersätter den
-    gamla numrerade `<ol><li>`-definitionslistan helt.
+    detta automatiskt, beslutat 2026-08-04). Så koncist som möjligt,
+    vardagligt språk, ingen ordboksstil. Detta ersätter den gamla numrerade
+    `<ol><li>`-definitionslistan helt.
+    - **Separatorer (ändrat 2026-08-05):** ` ; ` mellan FAKTISKT SKILDA
+      betydelser av ordet (t.ex. "gummi ; radergummi" för kautschuk — två
+      olika saker ordet kan syfta på). ` / ` mellan olika sätt att UTTRYCKA
+      SAMMA betydelse (omformuleringar/synonyma fraser, inte skilda
+      betydelser). Semikolonet ska ha SAMMA färg/font som resten av
+      Huvudbetydelsen (fet, ingen egen font-tagg). **Tidigare (fram till
+      2026-08-04) var detta tvärtom** (`/` = skilda betydelser) — redan
+      migrerade kort (793+) kan ha fel tecken enligt den gamla konventionen
+      och behöver en genomgång/rättning, ren dokumentändring gör det inte
+      automatiskt.
   - **(register)** — OBLIGATORISK rad direkt under Huvudbetydelse, INGEN
     egen färg — ärver temats standardtextfärg (vit i nattläge, svart i
     dagläge), bara inramat i vanliga parenteser för att synas som en egen
@@ -142,14 +151,74 @@ Föredra i denna ordning: **svenska.se** och **synonymer.se** (Adams
 godkända källor, alltid först). Bara om ordet/betydelsen inte täcks där,
 sök korrekt fakta på annat håll.
 
+## Flerbetydelse-genomgång (beslutat 2026-08-05, efter "konglomerat"-fallet)
+
+Alla redan granskade kort (3152 st, `granskad::*`) körs igenom en extra
+kontroll: saknas en vanlig andra betydelse (se "Dold andra betydelse" ovan)?
+`scan_multiple_meanings.py` hittade 994 kandidater (Huvudbetydelse utan ` ; `
+men ≥3 synonymer) — körs i omgångar om 333 kort.
+
+- **Ny tagg**: `flerbetydelse_granskad::<datum>` — sätts UTÖVER
+  `granskad::<datum>` (uppdateras till dagens datum om kortet ändras) på
+  varje kort som gått igenom denna specifika kontroll, oavsett om något
+  ändrades. Skiljer "genomgången för denna kontroll" från vanlig
+  `granskad::*`, eftersom kortet kan ha granskats en gång innan kontrollen
+  fanns. Sätts via `entry["extra_tags"]` i sessionsfilen, plockas upp av
+  `apply_updates.py` automatiskt.
+- **Två tillitsnivåer (beslutat 2026-08-05, efter tokenkostnadsjämförelse
+  — sökverifiering kostar ~10-20x fler tokens per kort än en
+  minnesbaserad snabpkoll):** sätt ALLTID EN av dessa två UTÖVER
+  `flerbetydelse_granskad::<datum>`, för att spåra hur pålitlig
+  "en betydelse räcker"-bedömningen är:
+  - `flerbetydelse_snabbkoll::<datum>` — bedömning gjord från egen
+    språkkunskap, ingen källa faktiskt slagen upp. Billigt, kan missa
+    ovanliga fall — se "divan"-exemplet (källbelagd men nischad andra
+    betydelse, upptäcktes bara vid sökverifiering, inte vid snabbkoll).
+  - `flerbetydelse_sokverifierad::<datum>` — faktiskt kollat mot
+    svenska.se/synonymer.se (eller annan källa om de inte täcker ordet/
+    betydelsen, tillåtet fritt — se "Källor för faktakoll"). Kort med
+    denna tagg kan litas på utan omkoll; kort med bara `_snabbkoll` bör
+    källverifieras senare innan de anses helt klara.
+  - **Praktiskt arbetsflöde**: kör `_snabbkoll` billigt över hela poolen
+    först, prioritera sen `_sokverifierad`-omgången bara på de kort som
+    snabbkollen redan godkände (inte blint om på allt igen).
+- **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
+  tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
+  `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa
+  oavsett hur många betydelser de har. Inte en hård regel om en betydelse
+  genuint saknar en andra utbytbar synonym (hellre `1 ; 1` än en påtvingad
+  extra) — men sikta symmetriskt som standard.
+- **Register per bibetydelse (ändrat 2026-08-05 v2, ersätter både
+  inline-i-fetstil-varianten och den kortlivade två-radersvarianten):**
+  registerraden under Huvudbetydelse gäller fortfarande FÖRSTA/vanligaste
+  betydelsen (oförändrad regel). Om en TILLAGD andra (eller tredje)
+  betydelse har ett ANNAT register än den första: skriv BÅDA registren på
+  SAMMA rad, andra registret indraget med `&nbsp;` till ungefär under sin
+  betydelses startpunkt i Huvudbetydelse-raden ovanför — inte en ny rad:
+  ```
+  <b>En våg eller krökning i hår eller ull ; att fjäska och smickra någon underdånigt</b><br>
+  (dialektal)                              (vardaglig, negativ)<br>
+  <br>
+  ...
+  ```
+  `baksida.build(register=...)` tar en ` ; `-separerad sträng, en del per
+  betydelse (`"dialektal ; vardaglig, negativ"`), och räknar ut
+  indentering automatiskt (tecken-baserad approximation utifrån
+  huvudbetydelsens textlängd — fetstil är inte monospace, blir aldrig
+  pixelperfekt, men tillräckligt för att visuellt koppla rätt register
+  till rätt betydelse). Om bibetydelsen delar samma register som den
+  första: ingen extra registerdel behövs, bara huvudregisterraden gäller
+  (se ackreditera: båda betydelserna var `formell`, ingen extra del
+  lades till).
+
 ## Synonymer kopplade till olika betydelser
 
-Om ett ord har flera betydelser i Huvudbetydelse (separerade med ` / `) och
+Om ett ord har flera betydelser i Huvudbetydelse (separerade med ` ; `) och
 synonymerna hör till olika betydelser: gruppera synonymerna i samma
 ordning som betydelserna, separera grupperna med mellanslag-semikolon-
 mellanslag ` ; ` — inte bara `,`. Semikolonet ska ha SAMMA färg/font som
 synonymerna (`#3498db`), inte vanlig text. Exempel (kautschuk, Huvudbetydelse
-`naturgummi / (äldre) radergummi`): `gummi, naturgummi ; radergummi` —
+`naturgummi ; (äldre) radergummi`): `gummi, naturgummi ; radergummi` —
 gummi/naturgummi hör till första betydelsen (råämnet), radergummi till
 andra (den äldre betydelsen).
 
@@ -234,6 +303,18 @@ uppnåddes, inte en ursäkt för att flagga blått vid osäkerhet.
 
 ## Under granskning, kontrollera även
 
+- **Dold andra betydelse (VÄSENTLIGT, beslutat 2026-08-05):** om synonymerna
+  inte alla hör till SAMMA betydelse som Huvudbetydelsen beskriver — det är
+  ett tecken på att ordet har en till betydelse som saknas på kortet.
+  Exempel: "konglomerat" hade bara företagsbetydelsen i Huvudbetydelse
+  ("koncern...") men synonymerna ("hopgyttring, sammangyttring, massa") hör
+  till den ANDRA, allmänna betydelsen (brokig hopgyttring av olika saker) —
+  den betydelsen saknades helt. Ett kort med flera betydelser MÅSTE visa
+  ALLA relevanta betydelser, annars är kortet ofullständigt/missvisande.
+  Fix: dela upp Huvudbetydelse med ` ; ` per betydelse, gruppera
+  synonymerna i samma ordning med `synonym_groups` (samma ` ; `-separator).
+  Kolla detta på VARJE kort, inte bara vid uppenbar `/`- eller `;`-notation
+  redan i utkastet.
 - **Synonymer**: är de faktiskt utbytbara i de flesta sammanhang, eller bara
   besläktade? Ta bort/byt ut perifera synonymer.
 - **Exempelmening**: används ordet grammatiskt korrekt och med rätt

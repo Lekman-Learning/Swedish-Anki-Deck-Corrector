@@ -8,7 +8,8 @@ och att avgöra register kräver samma typ av manuellt omdöme som resten av
 granskningsprojektet — bara mekanisk HTML-omstrukturering kan automatiseras
 säkert. Detta skript gör bara det mekaniska: hämtar de granskade korten,
 parsar det gamla formatet, och skriver ett DRAFT-förslag (huvudbetydelse =
-definitionerna hopslagna med " / ", oförändrat annars) till en sessionsfil
+definitionerna hopslagna med " ; " — det är skilda ordboksbetydelser, se
+style_guide.md "Separatorer", ändrat 2026-08-05, oförändrat annars) till en sessionsfil
 för samma Fas 2/Fas 3-granskningsflöde som redan används
 (apply_updates.py). Kort vars definitioner är långa/ordboksartade flaggas
 `needs_condensing` — dessa MÅSTE skrivas om för hand till en kort fras,
@@ -52,7 +53,7 @@ def to_migration_entry(card_info, tags_by_note):
     legacy = baksida.parse_legacy(fields.get(config.FIELD_BAKSIDA, ""))
 
     definitioner = legacy["definitioner"]
-    draft_huvudbetydelse = " / ".join(definitioner)
+    draft_huvudbetydelse = " ; ".join(definitioner)
     needs_condensing = any(len(d.split()) > CONDENSE_WORD_THRESHOLD for d in definitioner)
 
     return {

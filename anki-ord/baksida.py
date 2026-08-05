@@ -13,6 +13,19 @@ Exempel på ett fält:
   <i>Han var helt <font color="#3498db">slut</font> efter passet.</i>
   <br><br><img src="bild.jpg" style="max-width:400px; border-radius:4px;">   (valfritt, sist)
 
+Flera betydelser (beslutat 2026-08-05, se style_guide.md "Register per
+bibetydelse"): om betydelse 2+ har ETT ANNAT register än betydelse 1,
+skrivs BÅDA registren på SAMMA rad, andra registret indraget med &nbsp;
+till ungefär under sin betydelses startpunkt i Huvudbetydelse-raden ovanför:
+  <b>En våg eller krökning i hår eller ull ; att fjäska och smickra någon underdånigt</b><br>
+  (dialektal)                              (vardaglig, negativ)<br>
+  <br>
+  ...
+register-parametern till build() är då " ; "-separerad, en del per
+betydelse — build() räknar ut indraget automatiskt utifrån
+huvudbetydelsens textlängd (tecken-baserad approximation, inte
+pixelperfekt eftersom fetstil inte är monospace).
+
 parse()/build() nedan hanterar detta v2-format. parse_legacy()/build_legacy()
 hanterar det gamla formatet (blå synonymrad + <ol><li>-definitioner) och
 finns kvar bara för att migrera redan skrivna kort — skriv aldrig nytt
@@ -25,14 +38,21 @@ import config
 
 _MAIN_RE = re.compile(
     r"<b>(?P<huvud>.*?)</b>\s*<br>"
-    r"(?:\((?P<register>[^)]*)\)\s*<br>)?"
+    r"(?P<register_block>(?:(?:&nbsp;)*\([^)]*\))*\s*<br>\s*)?"
     r"\s*<br>\s*"
     rf'<font color="{re.escape(config.SYNONYM_COLOR)}">(?P<syn>.*?)</font>\s*<br>'
     r"\s*<br>\s*"
     r"<i>(?P<ex>.*?)</i>",
     re.DOTALL,
 )
+_REGISTER_LINE_RE = re.compile(r"\(([^)]*)\)")
 _IMG_TAIL_RE = re.compile(r"(<br>\s*<br>\s*<img.*)$", re.DOTALL)
+# Fet bokstav är bredare än ett &nbsp;-mellanslag, så en ren teckenräkning
+# hamnar för långt till vänster (upptäckt 2026-08-05, Adam: registret för
+# betydelse 2 landade mitt i ; -gränsen istället för till höger om den).
+# Skala upp offseten för att kompensera — justera denna konstant om
+# indraget fortfarande sitter fel.
+_REGISTER_INDENT_SCALE = 1.5
 
 
 def parse(baksida_html):
@@ -48,7 +68,8 @@ def parse(baksida_html):
         }
 
     huvudbetydelse = match.group("huvud").strip()
-    register = match.group("register").strip() if match.group("register") else None
+    register_lines = [r.strip() for r in _REGISTER_LINE_RE.findall(match.group("register_block") or "")]
+    register = " ; ".join(register_lines) if register_lines else None
 
     raw = match.group("syn")
     synonym_groups = None
@@ -76,12 +97,45 @@ def parse(baksida_html):
 def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_html=None, synonym_groups=None):
     """register: sträng typ "formell" / "lätt negativ" / "formell, lätt negativ".
     Obligatoriskt i praktiken (style_guide.md, beslutat 2026-08-04) — minst en
-    tagg på varje kort, None bara accepteras här på kodnivå för flexibilitet."""
+    tagg på varje kort, None bara accepteras här på kodnivå för flexibilitet.
+
+    huvudbetydelse-separatorer (ändrat 2026-08-05, se style_guide.md):
+    ` ; ` = faktiskt skilda betydelser, ` / ` = omformuleringar av samma
+    betydelse. Fritext, kollas inte av denna funktion."""
     if huvudbetydelse:
         huvudbetydelse = huvudbetydelse[0].upper() + huvudbetydelse[1:]
     huvud_html = f"<b>{huvudbetydelse}</b><br>"
 
-    register_html = f"({register})<br>" if register else ""
+    if register:
+        reg_parts = [r.strip() for r in register.split(";")]
+        if len(reg_parts) > 1:
+            # Flera betydelser med olika register (beslutat 2026-08-05, se
+            # style_guide.md "Register per bibetydelse"): en rad, varje
+            # register indraget till ungefär under SIN betydelses startpunkt
+            # i Huvudbetydelse-raden ovanför. Tecken-baserad approximation
+            # (fetstil är inte monospace, blir aldrig pixelperfekt) — bra
+            # nog för att visuellt koppla ihop rätt register med rätt
+            # betydelse.
+            meanings = huvudbetydelse.split(" ; ")
+            offsets = []
+            pos = 0
+            for m in meanings:
+                offsets.append(pos)
+                pos += len(m) + len(" ; ")
+            pieces = []
+            cursor = 0
+            for i, part in enumerate(reg_parts):
+                raw_offset = offsets[i] if i < len(offsets) else cursor
+                offset = round(raw_offset * _REGISTER_INDENT_SCALE)
+                pad = max(1, offset - cursor) if i > 0 else 0
+                piece = f"{'&nbsp;' * pad}({part})"
+                pieces.append(piece)
+                cursor += pad + len(f"({part})")
+            register_html = "".join(pieces) + "<br>"
+        else:
+            register_html = f"({reg_parts[0]})<br>"
+    else:
+        register_html = ""
 
     if synonym_groups:
         synonym_text = " ; ".join(", ".join(g) for g in synonym_groups)
@@ -101,25 +155,35 @@ def validate_register(register):
     """Returnerar lista med varningssträngar (tom = ok). Kollar mot den låsta
     vokabulären i config.py — kraschar inte, bara ett granskningshjälpmedel.
     Register är obligatoriskt och båda axlarna (formalitet+valör) krävs,
-    beslutat 2026-08-04 (skärpt från "minst en av dem")."""
+    beslutat 2026-08-04 (skärpt från "minst en av dem").
+
+    Stöder flera betydelser (beslutat 2026-08-05): register kan innehålla
+    ` ; `-separerade delar, en per betydelse som har ETT EGET register
+    (bara betydelser 2+ vars register skiljer sig behöver anges, se
+    style_guide.md "Register per bibetydelse") — varje del valideras var
+    för sig mot samma vokabulär/max-en-per-axel-regel."""
     if not register:
         return ['register saknas helt — obligatoriskt, se style_guide.md']
-    tags = [t.strip() for t in register.split(",")]
-    warnings = [
-        f'okänd register-tagg "{tag}", inte i config.REGISTER_FORMALITY/REGISTER_VALENS'
-        for tag in tags
-        if tag not in config.REGISTER_FORMALITY and tag not in config.REGISTER_VALENS
-    ]
-    formality_count = sum(1 for t in tags if t in config.REGISTER_FORMALITY)
-    valens_count = sum(1 for t in tags if t in config.REGISTER_VALENS)
-    # Minst en axel krävs totalt (kollas ovan via "if not register"). Båda
-    # axlarna fylls bara när båda GENUINT passar (beslutat 2026-08-04,
-    # nyanserat samma dag) — tvinga aldrig fram en gissad valör på ett
-    # neutralt substantiv/facktermer bara för att nå två taggar.
-    if formality_count > 1:
-        warnings.append(f'flera formalitets-taggar i "{register}", max en per axel')
-    if valens_count > 1:
-        warnings.append(f'flera valör-taggar i "{register}", max en per axel')
+
+    warnings = []
+    for part in register.split(";"):
+        part = part.strip()
+        tags = [t.strip() for t in part.split(",")]
+        warnings += [
+            f'okänd register-tagg "{tag}", inte i config.REGISTER_FORMALITY/REGISTER_VALENS'
+            for tag in tags
+            if tag not in config.REGISTER_FORMALITY and tag not in config.REGISTER_VALENS
+        ]
+        formality_count = sum(1 for t in tags if t in config.REGISTER_FORMALITY)
+        valens_count = sum(1 for t in tags if t in config.REGISTER_VALENS)
+        # Minst en axel krävs totalt (kollas ovan via "if not register"). Båda
+        # axlarna fylls bara när båda GENUINT passar (beslutat 2026-08-04,
+        # nyanserat samma dag) — tvinga aldrig fram en gissad valör på ett
+        # neutralt substantiv/facktermer bara för att nå två taggar.
+        if formality_count > 1:
+            warnings.append(f'flera formalitets-taggar i "{part}", max en per axel')
+        if valens_count > 1:
+            warnings.append(f'flera valör-taggar i "{part}", max en per axel')
     return warnings
 
 

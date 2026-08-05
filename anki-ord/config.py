@@ -43,6 +43,17 @@ FLAG_BLA = 4
 
 REVIEWED_TAG_PREFIX = "granskad"  # tagg blir granskad::YYYY-MM-DD
 FORMAT_TAG_V2 = "kortformat::v2"  # sätts på alla kort som skrivs i v2-formatet
+FLERBETYDELSE_TAG_PREFIX = "flerbetydelse_granskad"  # tagg blir flerbetydelse_granskad::YYYY-MM-DD,
+# sätts på kort som gått igenom "dold andra betydelse"-kollen (style_guide.md,
+# beslutat 2026-08-05, se scan_multiple_meanings.py) — skild från granskad::
+# eftersom kortet redan kan ha granskats en gång innan denna kontroll fanns.
+
+# Två tillitsnivåer för flerbetydelse-kollen (beslutat 2026-08-05, efter
+# tokenkostnadsjämförelse: sökverifiering ~10-20x dyrare per kort än
+# minnesbaserad snabbkoll). Använd EN av dessa två (utöver/oavsett
+# FLERBETYDELSE_TAG_PREFIX ovan, som fortfarande sätts alltid):
+FLERBETYDELSE_SNABBKOLL_TAG_PREFIX = "flerbetydelse_snabbkoll"  # minnesbaserad bedömning, ingen källa slagen upp
+FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX = "flerbetydelse_sokverifierad"  # faktiskt källkollad (svenska.se/synonymer.se/annat)
 # Befintliga taggar (ai_optimized, ai_uncertain, ai_failed, granska_först)
 # rörs ALDRIG - de är Adams egen historik. Nya taggar läggs bara till.
 

@@ -71,11 +71,11 @@ def apply_single(entry):
     # Flaggkoppling beslutad 2026-08-04 (style_guide.md): 9-10 -> Blå,
     # <=8 -> Grön. <=7 hanteras redan ovan (skippas helt, inte redo).
     flag = config.FLAG_BLA if confidence >= 9 else config.FLAG_GRON
-    invoke(
-        "addTags",
-        notes=[note_id],
-        tags=f"{config.REVIEWED_TAG_PREFIX}::{today} konfidens::{confidence} {config.FORMAT_TAG_V2}",
-    )
+    tags_to_add = f"{config.REVIEWED_TAG_PREFIX}::{today} konfidens::{confidence} {config.FORMAT_TAG_V2}"
+    extra_tags = entry.get("extra_tags")
+    if extra_tags:
+        tags_to_add += " " + " ".join(extra_tags)
+    invoke("addTags", notes=[note_id], tags=tags_to_add)
 
     try:
         card_ids = invoke("findCards", query=f"nid:{note_id}")
