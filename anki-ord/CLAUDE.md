@@ -1214,6 +1214,22 @@ suspenderade, så ALLA icke-suspenderade kort i decket nu är v2 och
 flerbetydelse-kollade (utom de ~2155 som aldrig matchade
 kandidat-heuristiken, se ovan).
 
+**Gammal `/`-separator fixad (2026-08-05, upptäckt via "tillgå"-kortet):**
+`find_old_slash_separator.py` hittade 71 v2-kort med ` / ` i Huvudbetydelse
+(fler än de ~20 som gissades tidigare). 47 hade redan `synonym_groups`
+uppdelade från tidigare pass (bara fel separatortecken, mekanisk fix). 24
+saknade det — 20 var genuint skilda betydelser (fick nya `synonym_groups`,
+ibland en ny synonym för den tidigare otäckta betydelsen), **4 lämnades
+orörda**: `överloppsgärning` (samma betydelse, bara olika precisionsnivå,
+`/` är korrekt där), `förtörnad`+`ärevördig` (oklart/gränsfall, ej ändrat),
+och **`anrika`** (misstänkt ordförväxling med adjektivet "anrik" —
+institutionsbetydelsen hör troligen INTE till verbet "anrika" alls, flaggas
+för Adams uppmärksamhet, inte bara en separator-bugg). **67 kort fixade och
+applicerade**, verifierat: 0 kvarvarande v2-kort med ` / ` förutom de 4
+avsiktligt orörda. Bifynd: `skäktning` hade en trasig trippel-duplicerad
+bild-tagg (kvarglömd `</i>`-rest) i både exempelmening och bild_html,
+städat i samma körning.
+
 **Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
 kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
 kort i den aktiva kön som är dåligt (trots `kortformat::v2`-taggen)
