@@ -1200,8 +1200,19 @@ som var icke-v2 FÖRE denna körning (dvs. faktiska Blå Nya-släpp) — kort so
 redan var v2 rörs aldrig, oavsett suspend-status (skyddar Adams egna
 manuella suspenderingar + de gamla Låst-korten från omgranskningspass).
 **Nästa steg:** `_sokverifierad`-omgång på de 875 redan godkända (billig
-`_snabbkoll` gjord, dyrare källkoll återstår), plus de 9+~20 kända
-avvikelserna ovan.
+`_snabbkoll` gjord, dyrare källkoll återstår), plus de ~20 kända
+separator-avvikelserna ovan.
+
+**Avslutat 2026-08-05 (samma session):** de 9 tidigare skippade kandidaterna
+(modus vivendi, preja, på eget bevåg, agorafobi, framliden, samt och
+synnerligen, albino, blottställd, lovlig) taggade `flerbetydelse_granskad`+
+`flerbetydelse_snabbkoll` (innehåll orört — de har inte en dold betydelse,
+utan misstänkta synonymfel, ett separat problem för en vanlig
+granskningsomgång). Samtidigt: de 5 kvarvarande icke-v2-gränsfallen
+(lokus, pracka, gardera med en kyss, apparelj, jag mötte lassie)
+suspenderade, så ALLA icke-suspenderade kort i decket nu är v2 och
+flerbetydelse-kollade (utom de ~2155 som aldrig matchade
+kandidat-heuristiken, se ovan).
 
 **Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
 kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
