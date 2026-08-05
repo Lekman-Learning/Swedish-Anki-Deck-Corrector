@@ -1182,3 +1182,12 @@ avsuspenderas automatiskt och dyker upp i Adams kö i due-ordning. Upprepa
 dagligen/vid behov tills hela poolen (6876 kort, minus de 3 olösta
 gränsfallen kangas/jamare/bale som förblir suspenderade tills de
 granskas separat) är igenom.
+
+**Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
+kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
+kort i den aktiva kön som är dåligt (trots `kortformat::v2`-taggen)
+suspenderar han det manuellt i Anki-appen — det åker då ur hans kö tills
+det omgranskas, istället för att fortsätta cirkulera. Nästa steg för
+projektet framåt är alltså tvådelat: (1) kvalitetsförbättra/granska om de
+630 redan aktiva korten vid behov, (2) fylla på med fler avsuspenderade
+kort ur den suspenderade poolen när Adam börjar nå slutet på de 630.
