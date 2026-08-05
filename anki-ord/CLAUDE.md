@@ -1238,3 +1238,27 @@ det omgranskas, istället för att fortsätta cirkulera. Nästa steg för
 projektet framåt är alltså tvådelat: (1) kvalitetsförbättra/granska om de
 630 redan aktiva korten vid behov, (2) fylla på med fler avsuspenderade
 kort ur den suspenderade poolen när Adam börjar nå slutet på de 630.
+
+**Bilder återgivna från OLD-decket (2026-08-05, Adam rapporterade saknad
+bild på "viadukt"):** utredning visade att INGA bilder tagits bort av
+tidigare pass denna session — 644 icke-suspenderade kort med `<img>` hade
+alla sina 640 unika mediefiler intakta i mediebiblioteket. `viadukt`
+(och 2499 andra v2-kort utan suspendering) saknade helt enkelt `bild_html`
+— ett gap som fanns redan innan dagens session (`granskad::2026-08-04`).
+Adam bad om att använda `Humanities::Languages::Svenska OLD` (9759 noter,
+modeller `Grundläggande-adc63` + `Basic`) som bildfacit: för varje ord utan
+bild i nya decket, om OLD-kortet för samma ord (case-insensitive
+Framsida-match) har en `<img>`, kopiera över den. Nytt script
+`restore_images_from_old_deck.py`: matchade 113 av 2500 bildlösa v2-kort
+mot en bild i OLD (de flesta OLD-kort saknar bild helt, så resten hade
+inget att hämta). Bilder skalas ned till max 250px på längsta sidan (Adams
+krav "inte betydligt större än 250x") via Pillow, sparas under ett NYTT
+filnamn (`restored_<original>`) så OLD-kortets egen visning inte påverkas,
+och läggs in som `bild_html` via `baksida.parse`/`build`. 2 kantfall
+krävde manuell fix (`curare`: HTML-entity i filnamnet, `inlaga`: 403 från
+extern hotlänk, löstes med Referer-header) — **113/113 lyckades till slut**,
+verifierat live (`viadukt` har nu sin bild, alla taggade
+`bild_atergiven::2026-08-05`). Kvarvarande 2387 bildlösa v2-kort saknar
+bild även i OLD — inget mer att hämta därifrån. Bifynd:
+`ankiconnect.py`s hårdkodade 10s-timeout höjdes till 60s (bulk-`notesInfo`
+över tusentals kort tajmade ut annars).

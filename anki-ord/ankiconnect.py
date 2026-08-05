@@ -14,7 +14,7 @@ def invoke(action, **params):
     payload = json.dumps({"action": action, "version": 6, "params": params}).encode("utf-8")
     request = urllib.request.Request(ANKICONNECT_URL, payload)
     try:
-        response = urllib.request.urlopen(request, timeout=10)
+        response = urllib.request.urlopen(request, timeout=60)
     except Exception as exc:
         raise AnkiConnectError(
             f"Kunde inte nå AnkiConnect på {ANKICONNECT_URL}. Är Anki öppen med AnkiConnect-pluginet installerat?"
