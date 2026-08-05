@@ -1146,3 +1146,39 @@ körningen.
 nästa skiva (nästa 500, eller valfri batchstorlek) via
 `queue_lib.fetch_cards_sorted_by_due` med samma query, fortsätt Fas 2/3.
 Kvar av de 7373: cirka 6873 kort, ej ens hämtade än.
+
+## Sållningsfilter för Blå Nya (beslutat + implementerat 2026-08-05)
+
+Adams idé: istället för att lita på att granskningen hinner före Adams
+egen takt (ett race), suspendera HELA den ogranskade Blå Nya-poolen så
+den är fysiskt oåtkomlig, och avsuspendera kort styckvis i takt med att
+de granskas färdigt. Så bara `kortformat::v2`-taggade kort någonsin syns
+i Adams nya-kort-kö.
+
+**Teknisk korrigering under designen:** Ankis "bury" är dagligt och
+återställs varje dygn automatiskt — håller INTE kvar kort permanent.
+`suspend`/`unsuspend` (samma mekanism som redan användes på de 31
+"Låst"-korten) är persistent och rätt verktyg här.
+
+**Implementerat:**
+- `suspend_unreviewed_new.py` — engångssvep (men säkert att köra om,
+  idempotent): suspenderar alla `is:new -tag:kortformat::v2`-kort. Kört
+  2026-08-05: **6876 kort suspenderade**. Verifierat efteråt:
+  630 v2-taggade kort osuspenderade/synliga, 6876 suspenderade,
+  summa 7506 = hela "Nya Blå"-poolen (type0/queue0), exakt match.
+- `apply_updates.py` (`apply_single`) — avsuspenderar nu automatiskt
+  kortets card_ids efter att flagg+tagg satts. No-op för kort som aldrig
+  var suspenderade (påverkar alltså inte andra flöden i projektet,
+  t.ex. Unga/Mogna-granskning). Detta ÄR "släppet" — inget separat
+  unsuspend-steg behövs, bara vanlig Fas 2/3-granskning.
+- `fetch_bla_nya.py` — daglig/återkommande hämtning, samma query
+  (`is:new -tag:kortformat::v2`), due-sorterat, `--batch-size` (default
+  `config.DEFAULT_BATCH_SIZE=100`, Adam nämnde 110-200/dag som riktvärde).
+  Skriver `sessions/session_<datum>_bla-nya-nasta.json`.
+
+**Nästa steg:** kör `fetch_bla_nya.py` för nästa skiva, granska (Fas 2),
+applicera via `apply_updates.py` (Fas 3) — de granskade korten
+avsuspenderas automatiskt och dyker upp i Adams kö i due-ordning. Upprepa
+dagligen/vid behov tills hela poolen (6876 kort, minus de 3 olösta
+gränsfallen kangas/jamare/bale som förblir suspenderade tills de
+granskas separat) är igenom.

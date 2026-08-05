@@ -40,6 +40,13 @@ sakfel, en kyrillisk-bokstavsbugg som hittades, och en liten bugg i
 `apply_updates.py`-flödet (kort med enbart Framsida-fix kunde hoppas över
 tyst) som nu är dokumenterad och undviks.
 
+**Sållningsfilter, Blå Nya (2026-08-05):** de ~6876 ogranskade "Blå Nya"-
+korten (aldrig sedda av Adam) är nu suspenderade i riktiga Anki — bara
+`kortformat::v2`-granskade kort (630 st) syns i hans nya-kort-kö. Kort
+avsuspenderas automatiskt av `apply_updates.py` när de granskats färdigt.
+Se "Sållningsfilter för Blå Nya" i `anki-ord/CLAUDE.md` för detaljer och
+nästa steg (`fetch_bla_nya.py`).
+
 **Backup inför powerwash (2026-08-04):** kod pushad till GitHub
 (`Lekman-Learning/Swedish-Anki-Deck-Corrector`), Anki-collection synkad
 till AnkiWeb. Se "Backup-status" i `anki-ord/CLAUDE.md` för återställning.
