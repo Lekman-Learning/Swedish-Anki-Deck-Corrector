@@ -90,6 +90,14 @@ def apply_single(entry):
     except AnkiConnectError as exc:
         return True, f"fält+tagg uppdaterat, men flaggan kunde INTE sättas automatiskt ({exc}) — sätt manuellt"
 
+    # Avsuspenderar automatiskt kortet om det var suspenderat (t.ex. Blå
+    # Nya-kort hålls suspenderade tills de är v2-granskade, se
+    # suspend_unreviewed_new.py). No-op för kort som aldrig var suspenderade.
+    try:
+        invoke("unsuspend", cards=card_ids)
+    except AnkiConnectError as exc:
+        return True, f"klart, men avsuspendering misslyckades ({exc}) — avsuspendera manuellt"
+
     return True, "klart"
 
 
