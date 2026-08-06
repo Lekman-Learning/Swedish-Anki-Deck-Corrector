@@ -304,6 +304,46 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   eskalerade bekräftat korrekta, bl.a. skygga där OLD-facitet visade sig
   vara en sammanblandning med det snarlika ordet "skugga". ~758 kort kvar
   i poolen.
+
+  **Sjätte omgången, ny pool — Blå Nya, aldrig sedda kort (2026-08-06,
+  kväll):** skild pool från gamla-poolen ovan: blå (flag:4), v2-
+  formaterade kort som fortfarande är `is:new` (Adam har aldrig sett dem
+  i Anki) och saknar ALL flerbetydelse-koll, 311 kort totalt. Nytt script
+  `snabbkoll2_blanya.py`. Första halvan körd, 155 kort. OLD-täckning
+  155/155 (100%). 12 eskalerade (7,7%, högre än gamla-poolens 5-5,5% —
+  rimligt eftersom denna pool aldrig fått NÅGON tidigare kontroll, till
+  skillnad från gamla-poolen som redan haft en minnesbaserad koll). Alla
+  12 bekräftade fel/ofullständiga och rättade — "saknad hel betydelse"
+  dominerar för ÅTTONDE omgången i rad, flera med ett helt annat
+  fackområde eller helt annan ordklass saknad: koloni (saknade både den
+  biologiska betydelsen och "barnkoloni"), lumpen (saknade den mycket
+  vanliga vardagliga SUBSTANTIVbetydelsen "militärutbildning" — helt
+  annan ordklass än adjektivet "elak"), depression (saknade både den
+  ekonomiska och meteorologiska betydelsen), oratorium (saknade "litet
+  bönerum" inom katolska kyrkan), patriark (saknade den kyrkliga
+  hederstiteln), besätta (saknade "garnera/pryda"), semiologi (saknade
+  den medicinska "symtomlära"), benägen (saknade "välvillig"-nyansen).
+  Två kort korrigerades i grunden snarare än utökades: ocker hade en
+  verb-formad Huvudbetydelse trots att ordet är ett substantiv; formalitet
+  definierades för brett och matchade inte ens sin egen exempelmening.
+  damast saknade det utmärkande draget "vanligen enfärgat". 156 kort kvar
+  i Blå Nya-poolen (andra halvan).
+
+  **Nytt flagg-system för flerbetydelse-genomgången (beslutat 2026-08-06,
+  kväll, ersätter konfidensbaserad flaggning för DENNA kontroll):**
+  istället för att flagga efter en numerisk konfidenssiffra (se
+  "Konfidensmärkning" nedan, som fortfarande gäller för Fas 2/den
+  ursprungliga sakfels-granskningen) flaggas kort nu efter
+  VERIFIERINGSDJUP i flerbetydelse-kontrollen: kort som eskalerats till
+  och bekräftats/rättats via riktig sökkoll → **flag:4 Blå**
+  (`config.FLAG_BLA`). Kort som klarat snabbkoll 2.0 UTAN eskalering
+  (bara OLD-decket + egen kunskap) → **flag:3 Grön** (`config.FLAG_GRON`).
+  Satt via `setSpecificValueOfCard` (samma AnkiConnect-anrop som
+  `apply_updates.py` redan använder för den gamla konfidensflaggningen).
+  Applicerat på Blå Nya-omgången ovan (155 kort: 12 Blå, 143 Gröna).
+  **Retroaktiv tillämpning på redan klara omgångar (150-korts
+  produktionsomgången + 800 kort i gamla-poolen) inte gjord än** — väntar
+  på Adams beslut om det ska göras.
 - **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
   tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
   `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa

@@ -1690,3 +1690,55 @@ saknas trots OLD:s avvikande "konkurs"-facit).
 
 **Kvarstående kö:** ~758 kort i den gamla poolen väntar fortfarande på
 snabbkoll 2.0.
+
+## Snabbkoll 2.0 på Blå Nya-poolen: första halvan, 155 av 311 kort (2026-08-06, kväll)
+
+Ny pool, skild från "gamla poolen" ovan: blå (flag:4), v2-formaterade kort
+som fortfarande är `is:new` — Adam har alltså aldrig ens sett dem i Anki
+än — och som saknar ALL flerbetydelse-koll. 311 kort i poolen vid start
+(Adam frågade efter "552 blå nya kort i learning", men ingen AnkiConnect-
+fråga gav exakt det talet; efter avstämning med Adam användes 311-
+poolen — kort som är `is:new` och okollade — som den avsedda poolen).
+Nytt permanent script: `snabbkoll2_blanya.py` (samma bygglogik som
+`snabbkoll2.py`/`snabbkoll2_gamla.py`, frågan filtrerar på `flag:4 is:new`).
+
+Körd som `sessions/session_2026-08-06_snabbkoll2-blanya.json`, 155 kort
+(hälften av poolen, enligt Adams instruktion). OLD-täckning: 155/155
+(100%). Snabbkoll 2.0 flaggade **12 kort (7,7%)** — något högre än
+gamla-poolens 5-5,5%, rimligt eftersom dessa kort ALDRIG granskats för
+flerbetydelse förut (till skillnad från gamla poolen som redan fått en
+minnesbaserad koll en gång).
+
+**Alla 12 bekräftade fel/ofullständiga, rättade — "saknad hel betydelse"
+dominerar även här:** **koloni** (saknade både den biologiska betydelsen
+"grupp djur/växter" och vardagsbetydelsen "barnkoloni/sommarläger" — bara
+"landområde" fanns), **lumpen** (saknade den mycket vanliga vardagliga
+substantivbetydelsen "värnpliktig militärutbildning" — helt annan
+ordklass än adjektivet "lumpen"=elak), **depression** (saknade både den
+ekonomiska betydelsen "djup lågkonjunktur" och den meteorologiska
+"lågtrycksområde" — bara den psykiatriska diagnosen fanns), **oratorium**
+(saknade "litet bönerum" inom katolska kyrkan — bara det musikaliska
+verket fanns), **patriark** (saknade den kyrkliga hederstiteln inom
+ortodoxa kyrkan — bara släktöverhuvud-betydelsen fanns), **besätta**
+(saknade "garnera/pryda", t.ex. en klänning besatt med pärlor — bara
+"ockupera/tillsätta" fanns), **semiologi** (saknade den medicinska
+betydelsen "symtomlära" — bara teckenläran fanns), **benägen** (saknade
+"välvillig/positivt inställd till någon" — bara "har en tendens" fanns).
+Tre kort korrigerades snarare än utökades: **ocker** hade en verb-formad
+huvudbetydelse ("Utnyttja...") trots att ordet är ett substantiv —
+skrevs om till substantivform; **formalitet** definierades för brett
+("regelbunden, traditionell procedur/ceremoni") när kärnbetydelsen är en
+formell men ofta obetydlig åtgärd — skrevs om för att matcha både
+ordboken och kortets egen exempelmening ("bara en formalitet"); **damast**
+saknade det utmärkande draget "vanligen enfärgat" (mönstret framträder
+genom vävens yta, inte genom färgkontrast). Ett kort fick en nyanserad
+bibetydelse tillagd: **uppknäppt** hade "avslappnad och informell" där
+sökkoll visade att den etablerade bibetydelsen faktiskt är mer specifikt
+"glad, öppen och pratsam".
+
+**Taggning:** alla 155 kort taggade `flerbetydelse_granskad::2026-08-06`
++ `flerbetydelse_snabbkoll2::2026-08-06`. De 12 sökkollade korten fick
+också `flerbetydelse_sokverifierad::2026-08-06`.
+
+**Kvarstående kö:** 156 kort kvar i Blå Nya-poolen (andra halvan), väntar
+på nästa körning av `snabbkoll2_blanya.py`.
