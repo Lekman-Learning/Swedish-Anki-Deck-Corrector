@@ -48,15 +48,23 @@ FLERBETYDELSE_TAG_PREFIX = "flerbetydelse_granskad"  # tagg blir flerbetydelse_g
 # beslutat 2026-08-05, se scan_multiple_meanings.py) — skild från granskad::
 # eftersom kortet redan kan ha granskats en gång innan denna kontroll fanns.
 
-# Sökkoll är OBLIGATORISKT sedan 2026-08-06 (se style_guide.md
-# "Flerbetydelse-genomgång" — ett A/B-test visade att minnesbaserad
-# snabbkoll INTE mätbart minskar felfrekvensen, 8,75% dolda fel kvar även
-# efter "godkänd" snabbkoll). FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX ska
-# alltid sättas tillsammans med FLERBETYDELSE_TAG_PREFIX för nya/omgranskade
-# v2-kort. FLERBETYDELSE_SNABBKOLL_TAG_PREFIX finns kvar för historik/äldre
-# kort och som valfri billig prioriteringssignal, men ersätter aldrig sökkoll.
-FLERBETYDELSE_SNABBKOLL_TAG_PREFIX = "flerbetydelse_snabbkoll"  # minnesbaserad bedömning, ingen källa slagen upp (historisk/prioritering, ej tillräckligt ensamt)
-FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX = "flerbetydelse_sokverifierad"  # faktiskt källkollad (svenska.se/synonymer.se/SAOB/OLD-decket/annat) -- OBLIGATORISKT för nya v2-kort
+# Snabbkoll 2.0 + villkorlig sökkoll-eskalering, se style_guide.md
+# "Flerbetydelse-genomgång". Historik: den GAMLA minnesbaserade snabbkollen
+# (FLERBETYDELSE_SNABBKOLL_TAG_PREFIX) klarade inte ett A/B-test (8,75%
+# dolda fel kvar även efter "godkänd" snabbkoll) och ledde tillfälligt till
+# obligatorisk sökkoll på ALLA kort. Snabbkoll 2.0 (jämförelse mot
+# Svenska OLD-decket + egen kunskap, se snabbkoll2.py) validerades sedan
+# på 50 kort samma dag: 3 fel hittade av snabbkoll 2.0 själv, 0
+# ytterligare fel hittade av en efterföljande sökkoll av samma 50 kort.
+# Regel: FLERBETYDELSE_SNABBKOLL2_TAG_PREFIX sätts på ALLA kort som körts
+# igenom snabbkoll 2.0. FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX sätts BARA
+# på kort som eskalerats till riktig sökkoll (OLD/v2 stämmer inte överens,
+# ordet saknar OLD-matchning, eller granskaren själv är osäker) -- inte på
+# varje kort längre. FLERBETYDELSE_SNABBKOLL_TAG_PREFIX finns kvar som ren
+# historik för kort granskade innan 2.0 fanns.
+FLERBETYDELSE_SNABBKOLL_TAG_PREFIX = "flerbetydelse_snabbkoll"  # LEGACY: minnesbaserad bedömning, ingen källa slagen upp
+FLERBETYDELSE_SNABBKOLL2_TAG_PREFIX = "flerbetydelse_snabbkoll2"  # jämförd mot Svenska OLD-decket + egen kunskap -- sätts på alla kort som körs igenom snabbkoll2.py
+FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX = "flerbetydelse_sokverifierad"  # eskalerad till och bekräftad/rättad via riktig websökning -- bara på kort snabbkoll 2.0 flaggade
 # Befintliga taggar (ai_optimized, ai_uncertain, ai_failed, granska_först)
 # rörs ALDRIG - de är Adams egen historik. Nya taggar läggs bara till.
 

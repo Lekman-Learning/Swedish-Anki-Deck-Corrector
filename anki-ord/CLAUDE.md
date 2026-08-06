@@ -1345,3 +1345,55 @@ verifierat live (`viadukt` har nu sin bild, alla taggade
 bild även i OLD — inget mer att hämta därifrån. Bifynd:
 `ankiconnect.py`s hårdkodade 10s-timeout höjdes till 60s (bulk-`notesInfo`
 över tusentals kort tajmade ut annars).
+
+## Snabbkoll 2.0: OLD-decket som gratis källkoll, ersätter "sökkoll på allt" (2026-08-06)
+
+Samma dag som "sökkoll obligatoriskt för allt v2-arbete" beslutades (se
+ovan) föreslog Adam en förbättring: eftersom `Humanities::Languages::
+Svenska OLD` bedöms som nästan 100% korrekt, varför inte använda den som
+en riktig men GRATIS källkoll (lokalt AnkiConnect-uppslag, ingen
+websökning) istället för att alltid gå direkt till dyr sökkoll?
+
+**Nytt script `snabbkoll2.py`:** hämtar ogranskade v2-kort
+(`-tag:flerbetydelse_granskad::*`), bygger en OLD-decks-lookup
+(Framsida/Front, case-insensitive), och skriver en sessionsfil med
+v2-kortets innehåll bredvid OLD-kortets Baksida/Back för granskning.
+Granskaren (Claude) jämför sedan mot BÅDE OLD-facit och egen
+språkkunskap — samma djup som sökkoll, men utan websökningskostnad.
+
+**Validering, två omgångar samma dag:**
+
+| Omgång | Kort | OLD-täckning | Fel hittade av snabbkoll 2.0 | Extra fel hittade av efterföljande sökkoll |
+|---|---|---|---|---|
+| 1 | 30 | 100% (30/30) | 1 (ingäld — motsatt betydelse) | 0 |
+| 2 | 20 | 100% (20/20) | 2 (i långa banor, konvent) | 0 |
+| **Totalt** | **50** | **100%** | **3** | **0** |
+
+Till skillnad från den gamla minnesbaserade snabbkollen (8,75% dolda fel
+kvar efter "godkänd", se A/B-testet ovan) missade snabbkoll 2.0 INGENTING
+som en efterföljande fullständig sökkoll sedan hittade, på detta
+stickprov. Enda kända svaghet hittills: homografkrockar (t.ex. "delta" —
+OLD-kortet täckte substantivbetydelsen "flodmynning", v2-kortet
+verbbetydelsen "delta/medverka") ger en skenbar avvikelse som inte är ett
+verkligt fel, bara extra granskningsarbete.
+
+**Ny process (ersätter "sökkoll på allt" från tidigare samma dag):**
+snabbkoll 2.0 är förstahandskontroll på alla v2-kort. Sökkoll (riktig
+websökning) körs bara vid ESKALERING: OLD och v2 stämmer inte överens,
+ordet saknar OLD-matchning, eller granskaren själv är osäker trots
+matchning. Detta ger nästan samma tillförlitlighet som "sökkoll på allt"
+till en bråkdel av kostnaden — kan realistiskt skanna nästan hela
+~3143-kortspoolen istället för att vara begränsad av websökningsbudget.
+
+**Taggning (taggnamnen är oförändrade/konsekventa med tidigare, nya
+`FLERBETYDELSE_SNABBKOLL2_TAG_PREFIX`-konstanten tillagd i `config.py`):**
+`flerbetydelse_granskad::<datum>` på alla granskade kort,
+`flerbetydelse_snabbkoll2::<datum>` på alla kort som körts igenom
+OLD-jämförelsen, `flerbetydelse_sokverifierad::<datum>` ENDAST på kort
+som eskalerats till och bekräftats via riktig sökkoll (inte längre på
+varje kort automatiskt). Se style_guide.md "Flerbetydelse-genomgång" för
+fullständig regeltext.
+
+Nästa steg: köra snabbkoll 2.0 i större skala (t.ex. nästa 100-300
+ogranskade kort) för att se om eskaleringsfrekvensen (hur ofta ett kort
+faktiskt behöver sökkoll) håller sig låg när stickprovet växer.
