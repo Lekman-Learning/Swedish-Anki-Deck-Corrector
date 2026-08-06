@@ -288,7 +288,22 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   adjektivet "tam, foglig" fanns inte alls, bara substantivet "handtag").
   5 eskalerade visade sig redan korrekta (dentist, lämpa, skäktning, bulk,
   diskonto) — ytterligare bevis på att eskaleringslogiken fångar fel åt
-  båda hållen. ~1158 kort kvar i poolen till nästa omgång.
+  båda hållen.
+
+  **Femte omgången, samma pool (2026-08-06, kväll):** ännu 400 kort. 22
+  eskalerade (5,5%). 19 bekräftade fel rättade — "saknad hel betydelse"
+  dominerar för SJUNDE omgången i rad (17 av 19), flera med en HEL
+  ordklass saknad (vän saknade adjektivbetydelsen "skön, fager"; maka
+  saknade verbbetydelsen "flytta något lite grann") eller en betydelse
+  som sannolikt är VANLIGARE än den som redan fanns på kortet (motion
+  saknade "fysisk aktivitet" och hade bara riksdagstermen; nätt saknade
+  "liten och täck, söt" och hade bara "knappt tillräcklig"; stadga
+  saknade "stadgar" = föreningsföreskrifter). Ett kort ("gå med håven")
+  hade helt fel betydelse och korrigerades i grunden — uttrycket betyder
+  specifikt "tigga komplimanger", inte generellt "tigga om pengar". 3
+  eskalerade bekräftat korrekta, bl.a. skygga där OLD-facitet visade sig
+  vara en sammanblandning med det snarlika ordet "skugga". ~758 kort kvar
+  i poolen.
 - **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
   tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
   `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa

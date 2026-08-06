@@ -1641,3 +1641,52 @@ rättade + 5 bekräftat korrekta) fick också
 **Kvarstående kö:** ~1158 kort i den gamla poolen väntar fortfarande på
 snabbkoll 2.0 — kör `snabbkoll2_gamla.py --batch-size <N>` för nästa
 omgång.
+
+## Snabbkoll 2.0 på den gamla poolen, omgång 2: nästa 400 kort (2026-08-06, kväll)
+
+Fortsättning på ovanstående, körd via samma `snabbkoll2_gamla.py`
+(`sessions/session_2026-08-06_snabbkoll2-gamla-pool-batch2.json`).
+OLD-täckning: 399/400 (100%, ett kort utan träff). Snabbkoll 2.0 flaggade
+**22 kort** (5,5%, i linje med förra omgångens 5%).
+
+**19 av 22 bekräftade fel, alla rättade — "saknad hel betydelse" dominerar
+för sjunde omgången i rad** (17 av 19), bland annat flera fall där en HEL
+ordklass eller ett helt fackområde saknades: **vän** (saknade den
+ålderdomliga adjektivbetydelsen "skön, fager" — helt annan ordklass än
+substantivet "vän"=kompis), **motion** (saknade den vardagliga huvud-
+betydelsen "fysisk aktivitet/träning" — bara det formella riksdags-
+förslaget fanns, trots att träningsbetydelsen sannolikt är den vanligare
+i vardagsspråk), **maka** (saknade verbbetydelsen "flytta något lite
+grann" — bara substantiven "hustru" och "matchande" fanns),
+**stadga** (saknade "stadgar" = föreskrifter för en förening, en mycket
+vanlig betydelse), **nätt** (saknade grundbetydelsen "liten och täck,
+söt" — bara "knappt tillräcklig" fanns, trots att den täcka betydelsen
+sannolikt är vanligare), **imperativ** (saknade den filosofiska
+betydelsen "moralisk nödvändighet" — bara grammatiktermen fanns),
+**angelägen** (saknade "brådskande, om en sak" — bara den personliga
+attityden fanns), **kurator** (saknade konstutställnings-betydelsen),
+**svale** (saknade "svalgång", en täckt yttergång), **preja**, **lod**
+(lödmetall), **sinkadus** (örfil), **härda** (om person), **turnera**
+(ge ett yttrande en språklig vändning), **blottställd** (utfattig),
+**ofärdig** (ålderdomligt "vanför"), **belägga** (ålägga/påföra t.ex.
+skatt). Ett kort korrigerades snarare än utökades: **gå med håven**
+hade fel betydelse helt — kortet sa "tigga om pengar" men uttrycket
+betyder specifikt "tigga komplimanger/fiska efter beröm"; både
+huvudbetydelse och exempelmening skrevs om. Ett kort fick en bildlig
+bibetydelse tillagd: **bita i gräset** (försvagat: "lida nederlag",
+inte bara bokstavligt dö).
+
+**3 av 22 eskalerade, bekräftat REDAN KORREKTA:** skygga (OLD-facitet
+"ge skugga" var uppenbarligen en sammanblandning med det snarlika ordet
+"skugga" — kortets "dra sig undan, bli skrämd" är korrekt), gå på ett
+ut (inget OLD-facit, sökkoll bekräftade att kortet redan stämde),
+cession (sökkoll gav inget tydligt stöd för att en extra betydelse
+saknas trots OLD:s avvikande "konkurs"-facit).
+
+**Taggning:** alla 400 kort taggade `flerbetydelse_granskad::2026-08-06`
++ `flerbetydelse_snabbkoll2::2026-08-06`. Bara de 22 sökkollade korten
+(19 rättade + 3 bekräftat korrekta) fick också
+`flerbetydelse_sokverifierad::2026-08-06`.
+
+**Kvarstående kö:** ~758 kort i den gamla poolen väntar fortfarande på
+snabbkoll 2.0.
