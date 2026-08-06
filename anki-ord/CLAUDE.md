@@ -1562,3 +1562,82 @@ vanligaste felmönstret** (7 av 16 fel hittade hela dagen), vanligare än
 ren faktafel eller "eller/;"-formateringsbuggen — värt att aktivt leta
 efter framöver, särskilt på ord med `synonym_groups` som inte matchar
 antalet betydelser i huvudbetydelsen.
+
+## Snabbkoll 2.0 på den gamla poolen: 400 av 1558 kort (2026-08-06, kväll)
+
+Adam identifierade ett nytt scope-hål: **1880 kort** är granskade med den
+GAMLA, rent minnesbaserade snabbkollen (`flerbetydelse_snabbkoll::*`,
+innan snabbkoll 2.0 fanns) men har ALDRIG jämförts mot OLD-decket. 322 av
+dessa har ändå fått en riktig sökkoll sedan tidigare (`flerbetydelse_
+sokverifierad::*`) och behöver inte köras om — kvar står **1558 kort**
+som varken har snabbkoll2- eller sökverifierad-taggen, alltså bara
+granskade med metoden som A/B-testet visade missade 8,75% av felen.
+
+**Nytt permanent script:** `snabbkoll2_gamla.py` — samma logik som
+`snabbkoll2.py` (OLD-facit + egen kunskap, sökkoll bara vid eskalering)
+men riktad mot just denna pool
+(`tag:flerbetydelse_snabbkoll::* -tag:flerbetydelse_snabbkoll2::*
+-tag:flerbetydelse_sokverifierad::* -is:suspended`, due-sorterat).
+Återanvänds för resterande ~1158 kort i kommande omgångar.
+
+**Första omgången: 400 kort** (`sessions/session_2026-08-06_snabbkoll2-gamla-pool.json`).
+OLD-täckning: 400/400 (100%). Snabbkoll 2.0 flaggade **20 kort** (5%) för
+eskalering — en märkbart lägre andel än de tre föregående rundorna
+(6-10%), rimligt eftersom denna pool redan passerat en (svagare) mänsklig
+granskning tidigare, till skillnad från helt ogranskade kort.
+
+**15 av 20 bekräftade fel, alla rättade:**
+- **Sjätte rundan i rad där "saknad hel betydelse" dominerar** (13 av 15):
+  lagg (saknade "kant/övergångszon vid en högmosse" — ett tredje, helt
+  orelaterat fackord), beskickning (saknade den metallurgiska betydelsen
+  "blandning av råmaterial i en masugn"), rya (saknade den dialektala
+  verbbetydelsen "skrika och väsnas" — helt orelaterad till mattan),
+  respondera (saknade den akademiska termen "försvara sin avhandling som
+  respondent"), mas (saknade den historiska betydelsen "skatteindrivare"),
+  menisk (saknade fysik/kemi-betydelsen "krökt vätskeyta i ett rör" —
+  vanlig i skolkemi), konsol (saknade "spelkonsol/kontrollpanel", en av
+  ordets vanligaste betydelser i modernt språk), likgiltig (saknade "om
+  sak: utan betydelse, oväsentlig" — skilt från den personliga attityden),
+  utgå (saknade idrottsbetydelsen "dra sig ur/uteslutas ur en tävling"),
+  sätta sig (saknade "sjunka, om husgrund/mark" — bara den bokstavliga
+  "sätta sig ner" fanns), abandon (saknade grundbetydelsen "otvungenhet,
+  hängivet obehärskat sätt" — bara den sjörättsliga betydelsen fanns,
+  trots att den själv redan var korrekt), spak (saknade HELA adjektiv-
+  betydelsen "tam och foglig" — bara handtags-substantivet fanns, en
+  annan ordklass helt), charad (saknade ursprungsbetydelsen "ordgåta" —
+  bara den moderna gissningsleken fanns).
+- **1 korrigerat sakfel snarare än tillagd betydelse:** mista sansen —
+  kortet sa bara "tappa fattningen, bli överväldigad" (bildligt), men
+  ordets mest direkta betydelse är att SVIMMA (förlora medvetandet
+  bokstavligen) — bekräftat av flera källor. Huvudbetydelsen skrevs om
+  för att leda med den bokstavliga betydelsen, med den bildliga kvar som
+  andra betydelse.
+- **1 rent felaktigt påstående, borttaget:** influens — kortet påstod att
+  ordet vardagligt kan betyda "person med stort inflytande i sociala
+  medier", vilket INTE stämmer (det är ordet "influencer", inte
+  "influens", som betyder det). Ersatt med den riktiga fackspråks-
+  betydelsen inom fysik: "elektrostatisk induktion" (växelverkan mellan
+  laddade partiklar på avstånd). Ny exempelmening skrevs eftersom den
+  gamla demonstrerade det felaktiga påståendet.
+
+**5 av 20 eskalerade, bekräftat REDAN KORREKTA (ingen fix):**
+- **dentist**: OLD-facitet sa "tandtekniker" (fel yrke — någon som
+  tillverkar tandproteser, inte behandlar patienter), men SAOB bekräftar
+  att "dentist" är en ålderdomlig synonym till "tandläkare", precis som
+  kortet redan sa.
+- **lämpa, skäktning, bulk, diskonto**: sökkoll bekräftade att kortens
+  egna definitioner redan var rimliga/korrekta trots avvikande eller
+  saknat OLD-facit.
+
+Ytterligare två exempel på metodens styrka åt "OLD har fel"-hållet
+(dentist, plus spetsfundig från föregående runda) — mönstret upprepar
+sig konsekvent över rundorna.
+
+**Taggning:** alla 400 kort taggade `flerbetydelse_granskad::2026-08-06` +
+`flerbetydelse_snabbkoll2::2026-08-06`. Bara de 20 sökkollade korten (15
+rättade + 5 bekräftat korrekta) fick också
+`flerbetydelse_sokverifierad::2026-08-06`.
+
+**Kvarstående kö:** ~1158 kort i den gamla poolen väntar fortfarande på
+snabbkoll 2.0 — kör `snabbkoll2_gamla.py --batch-size <N>` för nästa
+omgång.

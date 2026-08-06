@@ -275,6 +275,20 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   vilket visar att eskaleringslogiken fångar avvikelser åt båda hållen
   utan att anta att OLD alltid har rätt. Ingen sökkoll gjordes på de 141
   icke-eskalerade korten. Se `anki-ord/CLAUDE.md` för fullständig lista.
+
+  **Fjärde omgången, den GAMLA snabbkoll-poolen (2026-08-06, kväll):**
+  1558 kort granskade med den gamla minnesbaserade snabbkollen (innan
+  snabbkoll 2.0 fanns) hade aldrig fått en OLD-jämförelse eller sökkoll.
+  Nytt script `snabbkoll2_gamla.py` riktar snabbkoll 2.0 mot just denna
+  pool. Första 400-korts omgången: 20 eskalerade (5%, lägre än tidigare
+  rundors 6-10%, rimligt eftersom poolen redan sett en svagare mänsklig
+  granskning). 15 bekräftade fel rättade — "saknad hel betydelse" är nu
+  bekräftat i SEX rundor i rad som det dominerande felmönstret (13 av 15
+  denna gång, bl.a. spak som saknade en HEL ordklass/betydelse:
+  adjektivet "tam, foglig" fanns inte alls, bara substantivet "handtag").
+  5 eskalerade visade sig redan korrekta (dentist, lämpa, skäktning, bulk,
+  diskonto) — ytterligare bevis på att eskaleringslogiken fångar fel åt
+  båda hållen. ~1158 kort kvar i poolen till nästa omgång.
 - **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
   tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
   `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa
