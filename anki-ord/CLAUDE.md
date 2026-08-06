@@ -1793,3 +1793,66 @@ Grön.
 **Hela Blå Nya-poolen är nu klar: 311/311 kort genomgångna** (155 + 156).
 Totalt 24 bekräftade fel/ofullständigheter fixade över båda halvorna
 (7,7% i båda), plus 4 extra format-/grammatikfixar i andra halvan.
+
+## Snabbkoll 2.0 på gamla-poolen, omgång 3: 350 kort (2026-08-06, kväll)
+
+Tillbaka till den gamla snabbkoll-poolen (kort granskade med det GAMLA
+minnesbaserade läget innan snabbkoll 2.0 fanns). 350 kort körda via
+`snabbkoll2_gamla.py` (`sessions/session_2026-08-06_snabbkoll2-gamla-
+pool-batch3.json`). OLD-täckning 350/350 (100%). **24 av 350 (6,9%)**
+eskalerade till riktig sökkoll, alla bekräftade och rättade — "saknad
+hel betydelse" dominerar för TIONDE omgången i rad, ovanligt många
+kort med tydliga HOMONYMER (helt orelaterade betydelser, inte bara
+nyanser av samma ord) denna omgång:
+
+**Homonymer/helt skilda betydelser:** **lake** (saknade fisken — bara
+saltlagen fanns), **singel** (saknade "grovt grus som byggmaterial" —
+bara civilståndet fanns), **näva** (saknade den MYCKET vanligare
+betydelsen "knuten hand/handfull" — kortet hade bara den ovanliga
+växten Geranium, ombytt ordning så handbetydelsen nu står först),
+**kurra** (saknade verbbetydelsen "bullra svagt", t.ex. om en tom mage
+— bara substantivet "finka" fanns), **komposition** (saknade
+"musikstycke" — bara konstverks-uppbyggnaden fanns), **piccolo**
+(saknade HELA två betydelser: piccolaflöjten och en kvartsflaska
+champagne — bara hotellpojken fanns), **grand** (saknade den spanska
+adelstiteln — sällsynt men bekräftad), **såt** (saknade en jaktterm för
+avgränsat jaktområde bredvid vänskapsbetydelsen).
+
+**Bildliga/utvidgade betydelser som saknades:** **raster** (saknade
+den mycket vanligare vardagsbetydelsen "rast, arbetspaus" — bara
+tryckteknikbetydelsen fanns), **anda** (saknade "andetag" — bara
+stämning/atmosfär fanns), **dager** (saknade den vanliga idiom-
+betydelsen "perspektiv", som i "sätta något i en ny dager" — bara
+bokstavligt dagsljus fanns), **kaliber** (saknade den bildliga "en
+persons kvalitet/status", som i "en man av hans kaliber"), **episk**
+(saknade den moderna slangbetydelsen "fantastisk, grym" — bara den
+litterära betydelsen fanns), **inramning** (saknade den bildliga
+"omgivande sammanhang/stämning", som i "skandalens politiska
+inramning" — dessutom omskriven från verb- till substantivformulering,
+eftersom ordet är ett substantiv), **förlägenhet** (saknade "knipa,
+svår situation" t.ex. penningförlägenhet), **offensiv** (saknade
+substantivbetydelsen "en anfallshandling/satsning").
+
+**Övriga saknade betydelser:** **förlägga** (saknade HELA två
+betydelser: "publicera en bok" och kopplingen till förlag), **vanmakt**
+(saknade den ålderdomliga "medvetslöshet, svimning"), **syndikat**
+(saknade den kriminella nätverksbetydelsen, skild från företags-
+sammanslutningen), **hjon** (saknade den historiska tjänare-betydelsen),
+**sockel** (saknade "golvlist" bredvid piedestal-betydelsen),
+**fortifikation** (saknade "befästningskonst" som egen disciplin,
+bredvid själva anläggningen). Ett kort fick sin definition preciserad
+snarare än utökad: **förljugen** hade en för bred/generisk definition
+("falsk") — sökkoll visade att ordet mer specifikt betyder falskt
+romantiserad/idylliserad, vilket nu är tillagt.
+
+**Utöver sökkoll-eskaleringarna: 1 rent innehållsfel utan sökkoll-
+behov:** **jour** hade en direkt missvisande synonym ("vikariat" —
+förväxlar jourtjänst med ett vikariat, två olika anställningsbegrepp),
+bytt mot "beredskap, jourtjänst".
+
+**Taggning:** alla 350 kort taggade `flerbetydelse_granskad::2026-08-06`
++ `flerbetydelse_snabbkoll2::2026-08-06`. De 24 sökkollade fick också
+`flerbetydelse_sokverifierad::2026-08-06` (jour-fixen räknas inte som
+sökkollad). **Flaggning:** 24 kort → Blå, 326 kort → Grön.
+
+**Kvarstående kö:** 758 − 350 = 408 kort kvar i gamla-poolen.

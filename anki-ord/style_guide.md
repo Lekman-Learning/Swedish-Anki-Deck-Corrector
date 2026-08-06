@@ -347,6 +347,25 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   sökkoll-bekräftade fel/ofullständigheter (7,7%) + 4 extra formatfixar,
   av 311 kort.
 
+  **Sjunde omgången, tillbaka till gamla-poolen: 350 kort (2026-08-06,
+  kväll):** 24 av 350 (6,9%) eskalerade, alla bekräftade och rättade.
+  Ovanligt många rena HOMONYMER denna omgång (helt orelaterade
+  betydelser, inte bara nyanser): lake (fisken saknades, bara saltlagen
+  fanns), singel (grus saknades), näva (den vanliga betydelsen "knuten
+  hand" saknades helt — kortet hade bara den sällsynta växten Geranium,
+  ordningen byttes så handbetydelsen kommer först), kurra (verb-
+  betydelsen "bullra om magen" saknades), piccolo (både flöjten och
+  champagneflaskan saknades). Flera bildliga/idiomatiska betydelser
+  saknades också: raster (den vanliga "rast, arbetspaus" saknades helt),
+  dager ("i en ny dager" = perspektiv), kaliber ("en man av hans
+  kaliber" = kvalitet), episk (modern slangbetydelse "grym"),
+  inramning ("politisk inramning" = sammanhang, dessutom omskriven från
+  verb- till substantivform). Se `anki-ord/CLAUDE.md` för fullständig
+  lista (18 kort till). Ett rent synonymfel utan sökkoll-behov: jour
+  hade den missvisande synonymen "vikariat" (förväxlar två olika
+  anställningsbegrepp). Flaggning: 24 Blå, 326 Gröna. 408 kort kvar i
+  gamla-poolen.
+
   **Nytt flagg-system för flerbetydelse-genomgången (beslutat 2026-08-06,
   kväll, ersätter konfidensbaserad flaggning för DENNA kontroll):**
   istället för att flagga efter en numerisk konfidenssiffra (se
