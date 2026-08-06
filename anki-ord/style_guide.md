@@ -144,6 +144,18 @@ aldrig utan att fråga.
 - Bilden sparas i Anki-media och bäddas in i Baksida FÖRST efter att Adam
   uttryckligen godkänt den specifika bilden (kostar riktiga credits per
   generering — generera inte i blindo).
+- **BUGG hittad 2026-08-06 (kväll), rättad samma dag**: tre fix-script
+  (`fix_blanya.py`, `fix_blanya2.py`, `fix_gamla3.py`) hardkodade
+  `"bild_html": None` för varje rättat kort utan att kolla om
+  originalkortet faktiskt hade en bild — raderade av misstag bilder på
+  15 kort (damast, injektera, finstilt, deus ex machina, kaki, raster,
+  komposition, förlägga, lake, singel, inramning, kaliber, sockel, näva,
+  piccolo), återställda samma kväll. Tidigare fix-script (`fix_batch7.py`,
+  `fix_gamla_pool.py`, `fix_gamla_pool_batch2.py`) gjorde rätt genom att
+  läsa `bild_html` från sessionsfilens `current`-fält per kort. **Regel
+  framåt: varje fix-script MÅSTE läsa `entry["current"]["bild_html"]`
+  från sessionsfilen per rättat kort och skicka med det till
+  `baksida.build()` — aldrig hardkoda `None`.**
 
 ## Källor för faktakoll
 
@@ -430,6 +442,22 @@ synonymerna (`#3498db`), inte vanlig text. Exempel (kautschuk, Huvudbetydelse
 `naturgummi ; (äldre) radergummi`): `gummi, naturgummi ; radergummi` —
 gummi/naturgummi hör till första betydelsen (råämnet), radergummi till
 andra (den äldre betydelsen).
+
+- **Undvik cirkulära synonymer (bugg hittad av Adam 2026-08-06, kväll,
+  rättad samma kväll):** en synonym som bara är huvudordet plus ett
+  prefix/suffix (t.ex. "piccolaflöjt" som synonym för "piccolo",
+  "berginjektera" för "injektera", "foderpellets" för "pellets",
+  "brottssyndikat" för "syndikat", "tjänstehjon"/"fattighjon" för
+  "hjon", "barnkoloni" för "koloni", "lagstifta" för "stifta")
+  avslöjar svaret direkt istället för att vara en oberoende ledtråd —
+  9 kort hade detta fel efter dagens flerbetydelse-fixar, rättade
+  samma kväll. Kolla alltid: innehåller den föreslagna synonymen
+  huvudordet (eller en tydlig böjning av det) som substräng? Om ja,
+  hitta ett genuint annat ord istället, eller — om inget bra alternativ
+  finns — lämna den bibetydelsens synonymgrupp med ETT befintligt ord
+  snarare än att tvinga fram ett cirkulärt tillägg (en TOM synonymgrupp
+  ger ett formateringsartefakt, `; ` utan text efter — testat och
+  bekräftat i `baksida.build()`, så gruppen ska aldrig vara helt tom).
 
 ## Highlight av ordet i exempelmeningen
 
