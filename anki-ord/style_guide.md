@@ -261,6 +261,20 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   Konfidens 10 (se "Konfidensmärkning" nedan) kräver fortfarande en
   faktisk källkoll — OLD-decket räknas som en sådan källa, ren
   minneskänsla gör det fortfarande inte.
+
+  **Tredje rundan, 150 kort, metoden körd SOM AVSETT (2026-08-06, kväll):**
+  till skillnad från de två valideringsrundorna ovan (som medvetet
+  sökkollade ALLA kort) kördes denna gång bara sökkoll på de kort
+  snabbkoll 2.0 själv flaggade — den faktiska produktionsprocessen.
+  9 av 150 (6%) eskalerades. 6 var genuina fel (plakat, kreditera,
+  nickedocka, association, flottilj, spjälka — femte omgången i rad där
+  "saknad hel betydelse" är den vanligaste felkällan; spjälka hittades
+  för att exempelmeningen motsade den egna Huvudbetydelsen). 2 visade sig
+  redan vara korrekta (spetsfundig, "nu går skam på torra land") — i
+  spetsfundigs fall var det OLD-facitet som var missvisande, inte kortet,
+  vilket visar att eskaleringslogiken fångar avvikelser åt båda hållen
+  utan att anta att OLD alltid har rätt. Ingen sökkoll gjordes på de 141
+  icke-eskalerade korten. Se `anki-ord/CLAUDE.md` för fullständig lista.
 - **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
   tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
   `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa

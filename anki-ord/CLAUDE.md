@@ -1483,6 +1483,65 @@ mot svenska.se/SAOB/SAOL/webbkällor ord för ord.
 `flerbetydelse_snabbkoll2::2026-08-06` + `flerbetydelse_sokverifierad::2026-08-06`
 (alla fick faktiskt riktig sökkoll denna runda, inte bara de eskalerade).
 
+## Snabbkoll 2.0 som avsett: 150 kort, sökkoll bara på eskalerade (2026-08-06, kväll)
+
+Efter de två valideringsrundorna (som medvetet körde full sökkoll på ALLA
+kort för att testa metoden) körde Adam snabbkoll 2.0 **som den faktiskt är
+tänkt att användas i produktion**: 150 nya, tidigare ogranskade v2-kort
+(`sessions/session_2026-08-06_snabbkoll2-test-batch7.json`, due-sorterat —
+i praktiken de kort som ligger närmast att släppas till Adam), sökkoll
+bara på de kort snabbkoll 2.0 själv flaggade.
+
+**OLD-täckning: 149/150 (99%).** Snabbkoll 2.0 flaggade **9 kort** för
+eskalering (6%, i linje med förra rundornas 6-10%). Sökkoll av dessa 9:
+
+- **6 bekräftade fel, rättade:**
+  - **plakat**: saknade en HEL betydelse — "plakat" som adjektiv betyder
+    (vardagligt) "redlöst berusad" ("gå till plakat"), helt orelaterat till
+    anslag/affisch-betydelsen. OLD-facitet hade båda ("anslag, affisch;
+    mycket berusad") men bara den första fanns med i kortet.
+  - **kreditera**: saknade grundbetydelsen "sätta in pengar på ett konto"
+    (bokföringsterm) — bara den bildliga "ge någon äran"-betydelsen fanns
+    med, trots att OLD-facitet ("tillgodoräkna; berömma") pekade på båda.
+  - **nickedocka**: saknade den bildliga betydelsen "person som okritiskt
+    instämmer med andra" (jasägare) — bara den bokstavliga dockan (leksak
+    med nickande huvud) fanns med. OLD-facitet hade bara den bildliga
+    betydelsen ("lydig person"), vilket avslöjade obalansen.
+  - **association**: saknade organisations-betydelsen ("sammanslutning,
+    förening") — bara den mentala kopplings-betydelsen fanns med, trots
+    att OLD-facitet ("förknippning; sammanslutning") hade båda.
+  - **flottilj**: saknade sjöstridsbetydelsen ("sjöstyrka", ett mindre
+    örlogsförband) — bara flygflottilj-betydelsen fanns med, trots att
+    OLD-facitet ("flygförband; sjöstyrka") hade båda.
+  - **spjälka**: huvudbetydelsen ("dela upp i mindre delar") stämde INTE
+    med den egna exempelmeningen ("Läkaren fick spjälka benet för att
+    stabilisera det") — spjälka har två skilda betydelser (klyva virke i
+    tunna stycken / sätta i skena för att stödja en skadad kroppsdel),
+    exempelmeningen visade uteslutande den andra. Samma "missing
+    meaning"-mönster som föregående runda, femte gången i rad att en
+    saknad betydelse är den vanligaste felkällan.
+- **2 eskalerade, bekräftat REDAN KORREKTA (ingen fix behövdes):**
+  - **spetsfundig**: OLD-facitet ("listig och kvicktänkt") avvek från
+    kortet ("onödigt hårklyvande"), men sökkoll bekräftade att kortets
+    egen definition är den korrekta (SAOB: "mycken färdighet i att
+    utfinna små, oväsentliga åtskillnader") — OLD-facitet var här den
+    missvisande källan, inte kortet.
+  - **"nu går skam på torra land!"**: inget OLD-facit alls (null), men
+    sökkoll bekräftade att kortets definition ("utrop av bestörtning över
+    ett skandalöst beteende") redan stämmer.
+
+Detta bekräftar att snabbkoll 2.0:s eskaleringslogik fungerar åt BÅDA
+hållen — den fångar inte bara fel i v2-kortet, utan flaggar också korrekt
+när avvikelsen egentligen ligger i det billiga OLD-facitet (spetsfundig)
+eller när ingen avvikelse alls finns (skam-uttrycket). Ingen sökkoll gjordes
+på de 141 icke-eskalerade korten denna runda (till skillnad från de två
+föregående testrundorna) — detta är alltså det första "på riktigt"-körningen
+av metoden i produktionsläge.
+
+**Taggning:** alla 150 kort taggade `flerbetydelse_granskad::2026-08-06` +
+`flerbetydelse_snabbkoll2::2026-08-06`. Bara de 8 sökkollade korten (6
+rättade + 2 bekräftat korrekta) fick också `flerbetydelse_sokverifierad::2026-08-06`.
+
 **Uppdaterad statistisk sammanställning (cirka 200 kort testade totalt
 under 2026-08-06, båda valideringsrundorna kombinerat):**
 
