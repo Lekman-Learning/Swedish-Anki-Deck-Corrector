@@ -94,6 +94,10 @@ def main():
     sessions_dir = os.path.join(os.path.dirname(__file__), "sessions")
     os.makedirs(sessions_dir, exist_ok=True)
     out_path = os.path.join(sessions_dir, f"session_{today}_snabbkoll2-test.json")
+    n = 2
+    while os.path.exists(out_path):
+        out_path = os.path.join(sessions_dir, f"session_{today}_snabbkoll2-test-batch{n}.json")
+        n += 1
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(entries, f, ensure_ascii=False, indent=2)
 
