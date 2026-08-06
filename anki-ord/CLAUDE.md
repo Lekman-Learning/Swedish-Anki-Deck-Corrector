@@ -1259,6 +1259,34 @@ taggade `flerbetydelse_sokverifierad::2026-08-06`. Slutsats: 20% > 4,6%
 visar att sökkoll hittar saker även den breddade snabbkollen missar —
 värt att fortsätta med riktade sökkoll-stickprov, inte bara snabbkoll.
 
+**A/B-test: snabbkoll vs. sökkoll, är snabbkoll tillräckligt? (2026-08-06,
+slutfört):** Adam misstänkte att det första 20-korts-stickprovet (4/20
+fel) kunde vara en fluke. Körde fyra ytterligare stickprovsomgångar,
+totalt jämförande "snabbkollade" (konfidens 10) mot "helt okollade" kort,
+alla verifierade mot riktiga källor (SAOL/SO/SAOB/Wikipedia) innan fix:
+
+| Grupp | Kort | Fel | Frekvens |
+|---|---|---|---|
+| A — snabbkollade | 160 | 14 | 8,75% |
+| B — helt okollade | 60 | 4 | 6,7% |
+
+**Slutsats: skillnaden ryms inom felmarginalen — statistiskt går
+grupperna INTE att särskilja.** Snabbkollens "konfidens 10"-stämpel ger
+ingen mätbar garanti mot dolda fel. Vanligaste felmönstret genomgående:
+en hel betydelse saknas helt (samma mönster som "vråk", t.ex. reserverad
+saknade "bokad plats"-betydelsen, sekant saknade den trigonometriska,
+realisera saknade den ekonomiska) — annars fel/ihopblandade synonymer,
+sakfel i exempelmeningar, eller `;`-separatorn ersatt med "eller" mellan
+två riktiga betydelser. Alla 17 fel över dessa omgångar fixade direkt och
+applicerade, taggade `flerbetydelse_sokverifierad::2026-08-06`.
+
+**Praktisk konsekvens:** det ursprungliga tvånivåsystemet (sökkoll bara
+på kort snabbkollen själv flaggar som osäkra) missar en stadig ström av
+dolda fel i det snabbkollen kallar "klart". Verklig kvalitetssäkring på
+hela decket kräver sökkoll på alla ~3143 kort förr eller senare — snabbkoll
+fångar fortfarande en del fel billigt (~4,6% av alla kort vid första
+passet) och är värt att köra, men ersätter inte sökkoll.
+
 **Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
 kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
 kort i den aktiva kön som är dåligt (trots `kortformat::v2`-taggen)
