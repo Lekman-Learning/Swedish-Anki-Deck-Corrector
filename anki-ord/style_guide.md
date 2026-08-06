@@ -329,6 +329,24 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   damast saknade det utmärkande draget "vanligen enfärgat". 156 kort kvar
   i Blå Nya-poolen (andra halvan).
 
+  **Andra halvan, 156 kort — hela Blå Nya-poolen (311 kort) nu KLAR
+  (2026-08-06, kväll):** 12 av 156 (7,7%, identiskt med första halvans
+  andel) eskalerade, alla bekräftade och rättade. Samma mönster: hiva
+  (saknade "kasta/slänga"), förmäla (saknade ålderdomliga "gifta bort"),
+  injektera (saknade bygg-/bergtekniska "täta/förstärka"), bräcka
+  (saknade HELA två betydelser: "steka lätt" och "gry" — fyra betydelser
+  i OLD mot två på kortet), stifta (saknade "stifta lagar"), finstilt
+  (saknade bildliga "finstämd, raffinerad"), pellets (saknade
+  foderbetydelsen), kaki (saknade frukten), botanisera (saknade bildliga
+  "utforska bland"), forcera (saknade tekniska "knäcka en kod").
+  formidabel och betuttad fick en ovanlig men sökkoll-bekräftad
+  ålderdomlig/dialektal bibetydelse tillagd. Utöver detta: 4 rena
+  format-/grammatikfel hittade och fixade utan sökkoll (saknad highlight,
+  missvisande synonym, dubbelt hjälpverb, fel V2-ordföljd) — se
+  `anki-ord/CLAUDE.md` för alla detaljer. Totalt över hela poolen: 24
+  sökkoll-bekräftade fel/ofullständigheter (7,7%) + 4 extra formatfixar,
+  av 311 kort.
+
   **Nytt flagg-system för flerbetydelse-genomgången (beslutat 2026-08-06,
   kväll, ersätter konfidensbaserad flaggning för DENNA kontroll):**
   istället för att flagga efter en numerisk konfidenssiffra (se

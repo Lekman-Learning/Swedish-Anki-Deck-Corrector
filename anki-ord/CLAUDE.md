@@ -1742,3 +1742,54 @@ också `flerbetydelse_sokverifierad::2026-08-06`.
 
 **Kvarstående kö:** 156 kort kvar i Blå Nya-poolen (andra halvan), väntar
 på nästa körning av `snabbkoll2_blanya.py`.
+
+## Snabbkoll 2.0 på Blå Nya-poolen: andra halvan KLAR, hela poolen genomgången (2026-08-06, kväll)
+
+Sista 156 korten i poolen körda (`sessions/session_2026-08-06_snabbkoll2-
+blanya-batch2.json`). OLD-täckning 156/156 (100%). 12 av 156 (7,7%,
+identiskt med första halvans andel) eskalerade till riktig sökkoll — alla
+bekräftade fel/ofullständigheter, "saknad hel betydelse" dominerar för
+NIONDE omgången i rad: **hiva** (saknade vardagsbetydelsen "kasta/slänga"
+— bara den nautiska "hissa" fanns), **förmäla** (saknade den
+ålderdomliga betydelsen "gifta bort", särskilt om furstliga personer —
+bara "berätta" fanns), **injektera** (saknade den bygg-/bergtekniska
+betydelsen "pumpa in material för att täta/förstärka" — bara den
+medicinska sprutbetydelsen fanns), **bräcka** (saknade HELA två
+betydelser: köksbetydelsen "steka lätt", t.ex. bräckt fläsk, och den
+litterära "gry" om dagen — bara "brista/överträffa" fanns, fyra
+betydelser totalt i OLD-facitet mot två på kortet), **stifta** (saknade
+"stifta lagar" — bara "grunda en institution" fanns), **finstilt**
+(saknade den bildliga betydelsen "finstämd, raffinerad"), **pellets**
+(saknade foderbetydelsen — bara biobränslebetydelsen fanns, HELT skilda
+användningsområden), **kaki** (saknade frukten kaki/persimon — bara
+färgen/tyget fanns), **botanisera** (saknade den bildliga betydelsen
+"strosa/utforska bland något", t.ex. bland böcker eller nyheter),
+**forcera** (saknade en tredje, mer teknisk betydelse "knäcka/avslöja en
+kod"). Två kort fick en ålderdomlig/dialektal bibetydelse tillagd som
+sökkollen bekräftade var äkta trots att den kändes ovanlig:
+**formidabel** (ålderdomligt "fruktansvärd, skräckinjagande" — motsatt
+valör mot den vanliga "imponerande") och **betuttad** (dialektalt
+"förlägen, rådvill" bredvid den vanliga "förtjust i").
+
+**Utöver sökkoll-eskaleringarna: 4 kort med rena format-/grammatikfel
+som hittades vid genomläsningen, ingen sökkoll behövdes:**
+**fantomsmärta** hade en exempelmening där ordet inte var highlightat
+alls (bröt mot standardformatet); **deus ex machina** hade en missvisande
+synonym ("maskin" — en bokstavlig delöversättning av frasen, inte ett
+faktiskt synonymt begrepp — bytt mot "räddande ängel, oväntad räddning");
+**ha satt sin sista potatis** hade ett dubbelt hjälpverb i
+exempelmeningen ("hade han <b>ha</b> satt...", grammatiskt fel — "ha"
+togs bort); **det går sin gilla gång** bröt mot svenskans V2-ordföljd
+efter en framflyttad bisats ("Trots krisen det går..." istället för
+"Trots krisen går det...").
+
+**Taggning:** alla 156 kort taggade `flerbetydelse_granskad::2026-08-06`
++ `flerbetydelse_snabbkoll2::2026-08-06`. De 12 sökkollade fick också
+`flerbetydelse_sokverifierad::2026-08-06` (de 4 rena format-/
+grammatikfixarna räknas INTE som sökkollade, fick ingen sökverifierad-
+tagg). **Flaggning enligt det nya systemet:** 12 kort → Blå, 144 kort →
+Grön.
+
+**Hela Blå Nya-poolen är nu klar: 311/311 kort genomgångna** (155 + 156).
+Totalt 24 bekräftade fel/ofullständigheter fixade över båda halvorna
+(7,7% i båda), plus 4 extra format-/grammatikfixar i andra halvan.
