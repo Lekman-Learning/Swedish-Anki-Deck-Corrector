@@ -1230,6 +1230,35 @@ avsiktligt orörda. Bifynd: `skäktning` hade en trasig trippel-duplicerad
 bild-tagg (kvarglömd `</i>`-rest) i både exempelmening och bild_html,
 städat i samma körning.
 
+**Bred flerbetydelse-snabbkoll v2 (2026-08-06, ersätter det smala passet):**
+upptäckt via "vråk" (bird+isbetydelse, missades av BÅDE vanlig granskning
+OCH gårdagens smala flerbetydelse-koll — bara en riktig sökkoll mot
+Hellquists etymologiska ordbok hittade felet). Nya kriterier: (1)
+huvudbetydelse korrekt/tydlig, (2) synonymer passar, (3) exempelmening
+passar, (4) ingen betydelse saknas, (5) register+valör stämmer — plus
+jämförelse mot `Humanities::Languages::Svenska OLD` som andra facit.
+Kön byggs av `build_all_v2_snabbkoll_queue.py` (HELA 3142-korts v2-poolen,
+inte bara ogranskade — tidigare smala kriterier ansågs otillräckliga).
+7 batchar á ~450 kort. **Batch 1, 4, 6 klara och applicerade** (1350 kort,
+62 fixade ≈ 4,6%, se `sessions/session_2026-08-06_alla-v2-snabbkoll-batch{1,4,6}.json`).
+Batch 5 granskad klar men EJ applicerad (kraschade innan `apply_updates.py`
+hann köras — kör den filen separat innan nästa runda). Batch 2, 3, 7
+väntar helt. Kraschorsak: kontots API-sessionsgräns nåddes när flera av 7
+parallella agenter spawnade egna underagenter (mångdubblade resursbehovet)
+— lösning som fungerade: instruera uttryckligen "spawna aldrig
+underagenter" + större batchar (450 ist. för 300) för att hålla nere
+antal toppnivå-agenter.
+
+**Sökkoll-stickprov (2026-08-06):** 20 slumpmässiga "rena" kort (konfidens
+10) från batch 1/4/6 verifierades mot riktiga källor (SAOL/SO/Wikipedia).
+**4/20 (20%) hade ändå fel** som snabbkollen missat: patetisk (exempel
+blandade ihop Beethoven/Tjajkovskij, fel highlight-tagg), lira (fel
+synonym "kasta"), flott (saknade betydelsen "djurfett"), astronomisk
+(saknade den bokstavliga astronomi-betydelsen). Alla fyra fixade direkt,
+taggade `flerbetydelse_sokverifierad::2026-08-06`. Slutsats: 20% > 4,6%
+visar att sökkoll hittar saker även den breddade snabbkollen missar —
+värt att fortsätta med riktade sökkoll-stickprov, inte bara snabbkoll.
+
 **Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
 kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
 kort i den aktiva kön som är dåligt (trots `kortformat::v2`-taggen)
