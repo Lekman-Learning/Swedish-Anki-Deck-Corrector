@@ -1422,3 +1422,84 @@ fullständig regeltext.
 Nästa steg: köra snabbkoll 2.0 i större skala (t.ex. nästa 100-300
 ogranskade kort) för att se om eskaleringsfrekvensen (hur ofta ett kort
 faktiskt behöver sökkoll) håller sig låg när stickprovet växer.
+
+## Snabbkoll 2.0, andra valideringsrundan: 100 NYA kort, full sökkoll på ALLA (2026-08-06, kväll)
+
+Adam bad om ett nytt, större test: snabbkoll 2.0 på 100 helt nya
+(tidigare ogranskade) kort, `sessions/session_2026-08-06_snabbkoll2-test-batch6.json`,
+följt av **riktig, individuell sökkoll på samtliga 100** — inte bara de
+kort snabbkoll 2.0 själv flaggade för eskalering, för att verkligen testa
+om 0-missfrekvensen håller när stickprovet är dubbelt så stort som förra
+rundan.
+
+**OLD-täckning: 100/100 (100%).** Snabbkoll 2.0 (jämförelse mot OLD-facit
++ egen kunskap) flaggade **10 kort** för eskalering — en märkbart högre
+andel (10%) än förra rundans 6/100 (6%). Sökkoll av samtliga 100 kort
+(inte bara de 10 flaggade) **bekräftade exakt dessa 10 fel och hittade 0
+ytterligare** bland de återstående 90 — samma mönster som förra rundan,
+nu på dubbelt så stort stickprov.
+
+**De 10 bekräftade felen, alla rättade och applicerade:**
+- **dat → dåd**: Framsidan var felaktigt "dat" (saknade å) trots att hela
+  Baksidan (definition, synonymer, exempelmening) uttryckligen handlade
+  om ordet "dåd". Rättad via `proposed_ord`, samma buggtyp som tidigare
+  Framsida-stavfel (t.ex. "metarmorfos"→"metamorfos").
+- **census**: "eller" band ihop två genuint skilda betydelser (modern
+  folkräkning vs. det romerska förmögenhetskravet för rösträtt) — samma
+  "eller/;"-buggmönster som vandal/atmosfär/parhäst tidigare idag.
+- **NYTT, dominant felmönster denna runda: en hel ordboksbetydelse saknades
+  helt i huvudbetydelsen**, trots att exempelmeningen eller `synonym_groups`
+  ibland redan antydde att en till betydelse fanns (7 av 10 fel):
+  - **mönstra**: saknade "ta värvning/skriva in sig (t.ex. på ett fartyg)".
+  - **page**: saknade "pagefrisyr" (kort frisyr) HELT — trots att
+    `synonym_groups` redan hade en egen grupp för det och att
+    exempelmeningen ("Kort page med snedlugg") uteslutande beskrev
+    frisyren, inte adelsmannen.
+  - **inbunden**: saknade den personliga betydelsen (tystlåten,
+    reserverad) — samma mönster, `synonym_groups` hade redan en egen
+    grupp för det som huvudbetydelsen inte täckte.
+  - **visir**: saknade den historiska betydelsen (rådgivare till furste i
+    islamiska länder, ursprung till "vesir/vizier") — bara
+    hjälmgaller-betydelsen fanns med.
+  - **bulvan**: saknade jaktbetydelsen (konstgjord lockfågel) — bara
+    "målvakt/strohman"-betydelsen fanns med.
+  - **parabel**: saknade den matematiska betydelsen (andragradskurvan,
+    en av de vanligaste betydelserna av ordet) — bara den litterära
+    liknelse-betydelsen fanns med.
+  - **ockult**: saknade grundbetydelsen "dold, hemlig" (t.ex. "ockult
+    blod" inom medicin) — bara "övernaturlig"-betydelsen fanns med.
+- **holma**: det allvarligaste fyndet — HELT FEL ordklass och betydelse.
+  Kortet påstod "liten ö" (substantiv), men "holma" är faktiskt ett
+  jaktdialektalt VERB som betyder att gå runt ett område (t.ex. vid
+  björnjakt) för att med hjälp av spår avgöra om villebråd finns kvar där
+  — helt obesläktat med "liten ö" (som stavas "holme"). Detta hade INTE
+  upptäckts av vanlig manuell granskning utan OLD-jämförelsen (OLD-kortet
+  sa "inringa", vilket triggade misstanken).
+
+**Övriga 90 kort: 0 fel hittade** av den individuella sökkollen, verifierat
+mot svenska.se/SAOB/SAOL/webbkällor ord för ord.
+
+**Taggning:** alla 100 kort taggade `flerbetydelse_granskad::2026-08-06` +
+`flerbetydelse_snabbkoll2::2026-08-06` + `flerbetydelse_sokverifierad::2026-08-06`
+(alla fick faktiskt riktig sökkoll denna runda, inte bara de eskalerade).
+
+**Uppdaterad statistisk sammanställning (cirka 200 kort testade totalt
+under 2026-08-06, båda valideringsrundorna kombinerat):**
+
+| Runda | Kort | Fel hittade av snabbkoll 2.0 | Extra fel hittade av full sökkoll |
+|---|---|---|---|
+| Förmiddag (5 delrundor) | 100 | 6 | 0 |
+| Kväll (denna runda) | 100 | 10 | 0 |
+| **Totalt** | **200** | **16** | **0** |
+
+Med 0 missade fel över 200 individuellt sökkollade kort (rule-of-three på
+kortnivå, inte felnivå) sjunker den övre 95%-gränsen för den sanna
+missfrekvensen till ungefär **3/200 ≈ 1,5%** — snävare än förmiddagens
+0-3%-uppskattning, men fortfarande INTE bevisat noll. Testdesignen är
+fortfarande INTE blind (samma granskare gjorde bägge passen i samma
+sittning) — se "Statistisk ärlighet"-avsnittet ovan, samma resonemang
+gäller. Den nya lärdomen denna runda: **"saknad betydelse" är det klart
+vanligaste felmönstret** (7 av 16 fel hittade hela dagen), vanligare än
+ren faktafel eller "eller/;"-formateringsbuggen — värt att aktivt leta
+efter framöver, särskilt på ord med `synonym_groups` som inte matchar
+antalet betydelser i huvudbetydelsen.

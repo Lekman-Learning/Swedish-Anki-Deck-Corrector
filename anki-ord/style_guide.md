@@ -207,15 +207,32 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   alltså ingenting sökkoll skulle ha hittat, på det stickprov som
   testats hittills.
 
+  **Andra valideringsrundan, 100 NYA kort (2026-08-06, kväll):** samma
+  metod, men denna gång fick ALLA 100 kort en riktig, individuell sökkoll
+  (inte bara de snabbkoll 2.0 flaggade), för att testa om 0-missfrekvensen
+  håller på ett dubbelt så stort stickprov. Snabbkoll 2.0 flaggade 10 kort
+  (10%, högre andel än förra rundans 6%) — sökkollen av samtliga 100
+  bekräftade exakt dessa 10 och hittade 0 nya bland de återstående 90.
+  **Nytt dominant felmönster upptäckt denna runda:** en hel ordboksbetydelse
+  helt frånvarande i Huvudbetydelsen (7 av 10 fel: mönstra, page, inbunden,
+  visir, bulvan, parabel, ockult) — ofta trots att `synonym_groups` redan
+  hade en egen grupp för den saknade betydelsen, en varningssignal värd
+  att aktivt leta efter. Allvarligaste enskilda fyndet: **holma**, där
+  kortet påstod fel ORDKLASS OCH betydelse helt (sa "liten ö" när ordet
+  faktiskt är ett jaktdialektalt verb för att spåra villebråd) — hittades
+  bara tack vare OLD-jämförelsen, inte av vanlig läsning.
+
   **Statistisk brasklapp — läs innan du litar blint på "0 missade fel":**
-  100 kort men bara 6 faktiska fel att missa — med 0 missade av 6 (regel
-  om tre-tumregeln) ligger den sanna missfrekvensen sannolikt i
-  intervallet 0–3%, inte bevisat noll. Testet var heller inte blint som
-  det ursprungliga A/B-testet (samma granskare gjorde snabbkoll 2.0 och
-  sökkoll på samma kort i samma sittning — viss risk för
-  bekräftelsebias). Gör periodiska BLINDA stickprov senare (kort
-  granskade dagar/veckor tidigare, omgranskade fristående) för att
-  verkligen validera detta över tid.
+  över båda rundorna, 200 kort testade totalt, 16 faktiska fel hittade av
+  snabbkoll 2.0 själv, 0 missade av den efterföljande fulla sökkollen.
+  Rule-of-three PÅ KORTNIVÅ (0 missar av 200 individuellt sökkollade kort,
+  inte 0 av 16 fel) ger en övre 95%-gräns på ungefär 3/200 ≈ 1,5% för den
+  sanna missfrekvensen — snävare än efter första rundan, men fortfarande
+  INTE bevisat noll. Testet är heller inte blint som det ursprungliga
+  A/B-testet (samma granskare gjorde snabbkoll 2.0 och sökkoll på samma
+  kort i samma sittning — viss risk för bekräftelsebias). Gör periodiska
+  BLINDA stickprov senare (kort granskade dagar/veckor tidigare,
+  omgranskade fristående) för att verkligen validera detta över tid.
 
   **Regel framåt:** kör snabbkoll 2.0 som förstahandskontroll på alla
   v2-kort (nya eller omgranskade). **Eskalera till riktig sökkoll
