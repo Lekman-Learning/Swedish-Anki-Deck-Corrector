@@ -334,16 +334,26 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   istället för att flagga efter en numerisk konfidenssiffra (se
   "Konfidensmärkning" nedan, som fortfarande gäller för Fas 2/den
   ursprungliga sakfels-granskningen) flaggas kort nu efter
-  VERIFIERINGSDJUP i flerbetydelse-kontrollen: kort som eskalerats till
-  och bekräftats/rättats via riktig sökkoll → **flag:4 Blå**
-  (`config.FLAG_BLA`). Kort som klarat snabbkoll 2.0 UTAN eskalering
-  (bara OLD-decket + egen kunskap) → **flag:3 Grön** (`config.FLAG_GRON`).
+  VERIFIERINGSDJUP i flerbetydelse-kontrollen:
+  - Eskalerad till och bekräftad/rättad via riktig sökkoll → **flag:4 Blå**
+    (`config.FLAG_BLA`).
+  - Klarat snabbkoll 2.0 UTAN eskalering, med en OLD-decket-matchning
+    → **flag:3 Grön** (`config.FLAG_GRON`).
+  - Specialfall: klarat snabbkoll 2.0 UTAN eskalering och UTAN
+    OLD-matchning (bara egen kunskap, inget facit alls) → **flag:2
+    Orange/Gul** (`config.FLAG_GUL`). Krockar medvetet inte med
+    flag:2:s ANDRA betydelse ("osäker, granska" från den ursprungliga
+    Fas 2) — Adam bekräftade 2026-08-06 att de gamla orange-korten är
+    suspenderade och snabbkollas innan de avsuspenderas, så de två
+    betydelserna möts aldrig i praktiken.
+
   Satt via `setSpecificValueOfCard` (samma AnkiConnect-anrop som
   `apply_updates.py` redan använder för den gamla konfidensflaggningen).
-  Applicerat på Blå Nya-omgången ovan (155 kort: 12 Blå, 143 Gröna).
-  **Retroaktiv tillämpning på redan klara omgångar (150-korts
-  produktionsomgången + 800 kort i gamla-poolen) inte gjord än** — väntar
-  på Adams beslut om det ska göras.
+  **Applicerat överallt 2026-08-06:** Blå Nya-omgången (155 kort: 12 Blå,
+  143 Gröna, 0 Orange — 100% OLD-täckning) OCH retroaktivt på de tre
+  tidigare klara omgångarna (950 kort: 150-korts produktionsomgången +
+  800 kort i gamla-poolen) — 50 Blå (sökkollade), 900 Gröna (OLD-matchade,
+  ingen eskalering), 0 Orange (samtliga 950 hade OLD-matchning).
 - **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
   tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
   `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa
