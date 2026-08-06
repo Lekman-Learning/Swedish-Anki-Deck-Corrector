@@ -1856,3 +1856,109 @@ bytt mot "beredskap, jourtjänst".
 sökkollad). **Flaggning:** 24 kort → Blå, 326 kort → Grön.
 
 **Kvarstående kö:** 758 − 350 = 408 kort kvar i gamla-poolen.
+
+## Snabbkoll 2.0 på gamla-poolen, omgång 4 (SISTA): 408 kort — hela gamla-poolen KLAR (2026-08-06, kväll)
+
+Sista omgången av gamla-poolen, körd via `snabbkoll2_gamla.py --batch-size 408`
+(`sessions/session_2026-08-06_snabbkoll2-gamla-pool-batch4.json`). OLD-täckning
+403/408 (99%). Till skillnad från tidigare omgångar granskades hela filen
+manuellt av huvudtråden (inte i mindre delrundor) genom en kondenserad
+text-dump (ord/huvudbetydelse/synonymer/exempel/OLD-facit per rad) — **24 av
+408 (5,9%) flaggade för eskalering**, i linje med tidigare omgångars 5-8%.
+
+**Viktig procesförbättring denna omgång:** samtliga 24 eskalerade kort
+verifierades faktiskt mot riktiga källor via WebSearch (SAOB/SO/synonymer.se/
+Wikipedia/fackkällor) INNAN någon fix skrevs — inte bara mot minnet. Detta
+bekräftade alla 24 misstankar som äkta (inga falska positiva denna gång).
+
+**"Saknad hel betydelse" dominerar för ELFTE omgången i rad (21 av 24),
+flera tydliga homonymer:** **ed** (saknade den ålderdomliga geografiska
+betydelsen "landtunga/näs mellan vatten", vanlig som ortnamnsled — helt
+obesläktad med det heliga löftet), **agn** (saknade fiskbete/lockmedel —
+helt obesläktat med sädesskalet), **traktat** (saknade "kort religiös/
+politisk propagandaskrift" — obesläktat med statsfördraget), **utvikning**
+(saknade "utvikningsbild", den kända tidningsbetydelsen med lättklädda
+personer — bara "avstickare från ämnet" fanns), **grädda** (saknade "gräddan"
+= samhällets elit/crème de la crème — bara baka-betydelsen fanns),
+**kommission** (saknade den mycket vanliga betydelsen "expertgrupp/kommitté
+för utredning", t.ex. EU-kommissionen — bara "sälja på kommission" fanns),
+**bipolär** (saknade den psykiatriska diagnosen "bipolär sjukdom" — bara
+den allmänna "två motsatta poler"-betydelsen fanns), **multipel** (saknade
+adjektivbetydelsen "flerfaldig", som i "multipel skleros" — bara
+substantivbetydelsen "en multipel av ett tal" fanns), **korpus** (saknade
+"kroppen/resonanslådan på ett stränginstrument" — bara språkvetenskaplig
+textsamling fanns), **ackord** (saknade "beting, prestationslön" — det
+mycket vanliga uttrycket "jobba på ackord" — bara den musikaliska och
+ekonomiska betydelsen fanns), **skovel** (saknade "turbin-/propellerblad" —
+bara spade-betydelsen fanns), **spin-off** (saknade den ekonomiska
+"sidoeffekt/bieffekt"-betydelsen — bara media-avknoppningen fanns),
+**marionett** (saknade den bildliga "viljelöst redskap/person som styrs av
+andra" — bara den bokstavliga dockan fanns), **identitet** (saknade den
+MYCKET vanligare personliga/psykologiska betydelsen "känsla av vem man är"
+— bara den logiska "fullständig överensstämmelse" fanns, en allvarlig
+prioriteringsmiss), **lurvig** (saknade slangbetydelsen "lätt berusad"),
+**kreatur** (saknade den bibliska/ålderdomliga betydelsen "skapad varelse"
+— bara boskap fanns), **belysning** (saknade den bildliga "förklaring,
+synsätt", som i "kasta ny belysning på frågan"), **tyfon** (saknade
+betydelsen "mistlur/tryckluftsdriven ljudsignal på fartyg" — **och
+huvudbetydelsen motsade dessutom kortets EGEN exempelmening**, som
+uteslutande beskrev ett fartygs ljudsignal, inte en storm — ett nytt,
+allvarligare undermönster: en huvudbetydelse i direkt konflikt med sin
+egen exempelmening, inte bara en extern källa), **dramatisera** (saknade
+grundbetydelsen "bearbeta till pjäsform" — bara den bildliga
+"överdriva"-betydelsen fanns), **"gå den breda vägen"** (den bibliska
+moraliska/kriminella konnotationen hade urvattnats bort till enbart
+"välja det bekväma").
+
+**3 kort korrigerade snarare än utökade (verifierad felaktig huvudbetydelse,
+inte bara saknad):** **väld** — allvarligaste fyndet denna omgång: kortet
+påstod "makt/herravälde", en sammanblandning med det snarlika ordet
+"välde". Det verkliga "väld" betyder "partiskhet, jäv" (SAOB, bekräftar
+OLD-facitets "partiskhet" som korrekt — kortets egen betydelse var alltså
+helt fel, ett av få fall i hela sessionen där OLD hade rätt och v2-kortet
+fel om huvudbetydelsen). **slå bakut** — kortet definierade ordet som
+"få motsatt effekt än avsett" (backfire), men etablerad betydelse (SAOB,
+bekräftar OLD-facitets "spjärna, göra motstånd") är att göra motstånd/
+vägra rätta sig efter något — omskrivet till den korrekta betydelsen.
+**changera** — kortet hade bara den klassiska "skifta i färg (om siden)"-
+betydelsen, men modern användning lutar starkt åt en andra, negativ
+betydelse "gradvis förlora i värde/kvalitet" (bekräftar OLD-facitets
+"bli sämre") — tillagd som andra betydelse. **krösus** kompletterades med
+den utelämnade kärnkomponenten "snål" (krösus betyder specifikt en rik
+person som ÄVEN är snål, inte bara vem som helst förmögen).
+
+**Taggning:** alla 408 kort taggade `flerbetydelse_granskad::2026-08-06` +
+`flerbetydelse_snabbkoll2::2026-08-06`. De 24 sökkollade/rättade fick också
+`flerbetydelse_sokverifierad::2026-08-06`. **Flaggning:** 24 kort → Blå,
+384 kort → Grön.
+
+**HELA GAMLA-POOLEN ÄR NU KLAR: 0 kort kvar** (1558 → 0 över fyra omgångar:
+400+400+350+408). Kombinerat med den redan klara Blå Nya-poolen (311/311)
+betyder det att BÅDA de stora identifierade snabbkoll-2.0-poolerna är
+slutförda. Nästa steg (påbörjat direkt efter, samma kväll, på Adams
+begäran): snabbkoll 2.0 på alla kort i Anki-statistikens "Lär om"-kö
+(`is:learn`), se nästa avsnitt.
+
+## Snabbkoll 2.0 på "Lär om"-kön (is:learn): 8 kort, hela kön KLAR (2026-08-06, sen kväll)
+
+Adam bad om snabbkoll 2.0 på alla `is:learning`-kort direkt efter att
+gamla-poolen blev klar. Anki-sökoperatorn heter `is:learn` (inte
+`is:learning`) — 38 kort totalt i den kön, varav 9 redan suspenderade
+(orörda separat sedan tidigare) och 30 redan `flerbetydelse_granskad`
+sedan innan. **Kvar att kolla: bara 8 kort**
+(`sessions/session_2026-08-06_snabbkoll2-islearning.json`): omhulda,
+gerundium, konsekrera, förebära, föregiva, blot, beveka, förklinga.
+
+OLD-täckning 8/8 (100%). **0 av 8 eskalerade** — alla huvudbetydelser
+matchade OLD-facit och egen kunskap utan avvikelse (bl.a. bekräftat att
+gerundium/infinit verbform, blot/fornnordisk offerrit, och beveka/
+övertala-blidka alla stämmer). Ett OLD-kort (konsekrera) hade av misstag
+en kvarglömd Google-bildsöknings-URL inklistrad i sitt Baksida-fält — ett
+skräpdataproblem i OLD-decket självt, inte i v2-kortet, ingen åtgärd
+behövdes på vår sida.
+
+**Taggning:** alla 8 kort taggade `flerbetydelse_granskad::2026-08-06` +
+`flerbetydelse_snabbkoll2::2026-08-06`, flaggade Gröna (inga sökkollade,
+inga fel hittade). **"Lär om"-kön är därmed också helt klar** — samtliga
+icke-suspenderade `is:learn`-kort i decket har nu gått igenom
+flerbetydelse-processen.

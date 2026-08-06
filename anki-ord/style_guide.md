@@ -473,6 +473,29 @@ andra (den äldre betydelsen).
   fanns på korten INNAN dagens fixar, "sig" i "slå sig ner" är bara
   ett kort, grammatiskt nödvändigt pronomen).
 
+  **Full historisk revision, alla 2601 flerbetydelse_granskad-kort
+  (2026-08-06, sent på kvällen, efter Adams fråga "hur långt behöver du
+  kolla"):** automatiserad substräng-kontroll körd mot ALLA kort som
+  någonsin gått igenom flerbetydelse-processen (inte bara dagens 2537 —
+  även 64 kort från 2026-08-05, innan snabbkoll 2.0 fanns). 122 råa
+  träffar. De allra flesta var false positives (korta grammatiska ord
+  som "sig"/"till"/"för" i flerordsuttryck, eller legitima
+  specificitets-tillägg som "kreatur"→"nötkreatur", "vråk"→"musvråk" —
+  äkta artnamn/specificering, inte cirkulära). **8 äkta svaga/cirkulära
+  synonymer hittade och rättade** (alla i vanliga synonymlistor, inte
+  synonym_groups — så bara EN svag synonym bland flera bra togs bort,
+  inget ersattes): slapstick (slapstick-humor borttagen), albino
+  (albinos borttagen — dessutom hittades "färgblindhet" vara sakligt
+  FEL, inte bara cirkulärt: albinism handlar om pigmentbrist, inte
+  färgblindhet, borttagen), ehuru (ehuruväl), frilans (frilansare),
+  furu (furuträ), väld (välde — nästan identisk stavning), onkologi
+  (onkologisk medicin), oför (oförmögen — bara en upprepning av ordets
+  egen huvudbetydelse). Resterande ~30 gränsfall (t.ex.
+  reservat→naturreservat, krypto→kryptovaluta, borst→borsthår) bedömdes
+  tillföra genuin specificering snarare än att avslöja svaret rakt av —
+  lämnade orörda, men flagga gärna om något av dem känns fel vid
+  granskning.
+
 ## Highlight av ordet i exempelmeningen
 
 Ordet (eller böjningen av det) i exempelmeningen ska ALLTID märkas med
