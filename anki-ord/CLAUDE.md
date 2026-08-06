@@ -1361,29 +1361,54 @@ v2-kortets innehåll bredvid OLD-kortets Baksida/Back för granskning.
 Granskaren (Claude) jämför sedan mot BÅDE OLD-facit och egen
 språkkunskap — samma djup som sökkoll, men utan websökningskostnad.
 
-**Validering, två omgångar samma dag:**
+**Validering, fem omgångar samma dag:**
 
 | Omgång | Kort | OLD-täckning | Fel hittade av snabbkoll 2.0 | Extra fel hittade av efterföljande sökkoll |
 |---|---|---|---|---|
 | 1 | 30 | 100% (30/30) | 1 (ingäld — motsatt betydelse) | 0 |
 | 2 | 20 | 100% (20/20) | 2 (i långa banor, konvent) | 0 |
-| **Totalt** | **50** | **100%** | **3** | **0** |
+| 3 | 20 | 100% (20/20) | 2 (vandal, atmosfär — "eller/;"-bugg) | 0 |
+| 4 | 15 | 100% (15/15) | 1 (parhäst — samma "eller/;"-bugg) | 0 |
+| 5 | 15 | 100% (15/15) | 0 (1 homografkrock: mol) | 0 |
+| **Totalt** | **100** | **100%** | **6** | **0** |
 
 Till skillnad från den gamla minnesbaserade snabbkollen (8,75% dolda fel
 kvar efter "godkänd", se A/B-testet ovan) missade snabbkoll 2.0 INGENTING
-som en efterföljande fullständig sökkoll sedan hittade, på detta
-stickprov. Enda kända svaghet hittills: homografkrockar (t.ex. "delta" —
-OLD-kortet täckte substantivbetydelsen "flodmynning", v2-kortet
-verbbetydelsen "delta/medverka") ger en skenbar avvikelse som inte är ett
-verkligt fel, bara extra granskningsarbete.
+som en efterföljande fullständig sökkoll sedan hittade, på 100 kort.
+Kända svagheter: (1) homografkrockar (t.ex. "delta" — OLD-kortet täckte
+substantivbetydelsen "flodmynning", v2-kortet verbbetydelsen "delta/
+medverka"; samma sak med "mol") ger en skenbar avvikelse som inte är ett
+verkligt fel, bara extra granskningsarbete. (2) Ett återkommande
+formateringsfel — "eller" felaktigt använt för att länka två GENUINT
+distinkta betydelser istället för " ; " — stod för 3 av de 6 hittade
+felen (vandal, atmosfär, parhäst); värt en enkel textkontroll som
+komplement om arbetet skalas upp.
+
+**Statistisk ärlighet om "0 missade fel på 100 kort" — läs innan du drar
+för starka slutsatser:** detta bevisar INTE en 0%-missfrekvens. Det fanns
+bara 6 faktiska fel att missa i stickprovet, och med 0 missade av 6 (regel
+om tre-tumregeln) ligger den sanna missfrekvensen sannolikt i intervallet
+0–3%, inte bevisat noll. Testet var dessutom INTE blint på samma sätt som
+det ursprungliga A/B-testet (där snabbkollade kort från en TIDIGARE,
+separat session granskades om oberoende) — här gjorde samma granskare
+(Claude) snabbkoll 2.0 och sökkoll på samma kort i samma sittning, vilket
+ger en viss risk för bekräftelsebias (omprövar sitt eget färska omdöme
+snarare än att upptäcka något genuint missat). Slutsats: starkt,
+uppmuntrande resultat — inte bevis på perfektion. Gör periodiska BLINDA
+stickprov senare (samma metod som A/B-testet: kort granskade dagar/veckor
+tidigare, omgranskade fristående) för att verkligen validera detta över
+tid, precis som den gamla snabbkollens brist bara upptäcktes för att
+någon till slut gick tillbaka och kollade.
 
 **Ny process (ersätter "sökkoll på allt" från tidigare samma dag):**
 snabbkoll 2.0 är förstahandskontroll på alla v2-kort. Sökkoll (riktig
 websökning) körs bara vid ESKALERING: OLD och v2 stämmer inte överens,
 ordet saknar OLD-matchning, eller granskaren själv är osäker trots
-matchning. Detta ger nästan samma tillförlitlighet som "sökkoll på allt"
-till en bråkdel av kostnaden — kan realistiskt skanna nästan hela
-~3143-kortspoolen istället för att vara begränsad av websökningsbudget.
+matchning. Given kostnadsbesparingen (gratis lokalt uppslag istället för
+websökning på ~94-97% av korten i detta stickprov) och avsaknaden av
+belägg för kvalitetsförsämring är detta värt det som standardprocess —
+men se den statistiska brasklappen ovan innan det behandlas som en
+slutgiltigt löst fråga.
 
 **Taggning (taggnamnen är oförändrade/konsekventa med tidigare, nya
 `FLERBETYDELSE_SNABBKOLL2_TAG_PREFIX`-konstanten tillagd i `config.py`):**

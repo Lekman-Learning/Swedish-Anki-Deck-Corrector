@@ -198,11 +198,24 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   hämtar OLD-matchningen automatiskt; granskaren (Claude) jämför sedan
   v2-kortets Huvudbetydelse/synonymer/exempelmening/register mot
   OLD-kortet OCH egen språkkunskap, exakt som vid sökkoll. **Validerat
-  2026-08-06 på 50 kort** (två omgångar, 30+20): snabbkoll 2.0 hittade
-  3 fel själv (ingäld, i långa banor, konvent) — den efterföljande
-  sökkollen av SAMMA 50 kort hittade 0 ytterligare fel. Till skillnad
-  från gamla snabbkollen missade den alltså ingenting sökkoll skulle ha
-  hittat, på det stickprov som testats hittills.
+  2026-08-06 på 100 kort** (fem omgångar, 30+20+20+15+15): snabbkoll 2.0
+  hittade 6 fel själv (3 sakfel: ingäld, i långa banor, konvent; 3
+  formateringsfel av samma sort — "eller" felaktigt använt för två
+  GENUINT distinkta betydelser istället för " ; ": vandal, atmosfär,
+  parhäst) — den efterföljande sökkollen av SAMMA 100 kort hittade 0
+  ytterligare fel. Till skillnad från gamla snabbkollen missade den
+  alltså ingenting sökkoll skulle ha hittat, på det stickprov som
+  testats hittills.
+
+  **Statistisk brasklapp — läs innan du litar blint på "0 missade fel":**
+  100 kort men bara 6 faktiska fel att missa — med 0 missade av 6 (regel
+  om tre-tumregeln) ligger den sanna missfrekvensen sannolikt i
+  intervallet 0–3%, inte bevisat noll. Testet var heller inte blint som
+  det ursprungliga A/B-testet (samma granskare gjorde snabbkoll 2.0 och
+  sökkoll på samma kort i samma sittning — viss risk för
+  bekräftelsebias). Gör periodiska BLINDA stickprov senare (kort
+  granskade dagar/veckor tidigare, omgranskade fristående) för att
+  verkligen validera detta över tid.
 
   **Regel framåt:** kör snabbkoll 2.0 som förstahandskontroll på alla
   v2-kort (nya eller omgranskade). **Eskalera till riktig sökkoll
