@@ -458,6 +458,20 @@ andra (den äldre betydelsen).
   snarare än att tvinga fram ett cirkulärt tillägg (en TOM synonymgrupp
   ger ett formateringsartefakt, `; ` utan text efter — testat och
   bekräftat i `baksida.build()`, så gruppen ska aldrig vara helt tom).
+  **Uppföljning samma kväll (efter Adams fråga "behöver jag oroa mig
+  över de andra korten?"):** en fullständig, automatiserad genomgång av
+  ALLA 93 kort som fixats under dagens sex snabbkoll 2.0-omgångar (inte
+  bara de sex senaste) — kollar både bild_html-bevarande och
+  substräng-match mellan huvudord och synonym — hittade 4 till: **mas**
+  (dalmas, skattmas — båda innehöll "mas"), **rya** (ryamatta → bytt mot
+  flossmatta), **konsol** (spelkonsol), **kurator** (curator — den
+  engelska kognaten är i praktiken samma ord, avslöjar svaret lika
+  mycket som en bokstavlig substräng). Alla rättade. Efter denna
+  genomgång: 0 bildproblem, 0 kvarvarande cirkulära synonymer (fyra
+  återstående substräng-träffar är false positives — kolonialområde,
+  skogsnäva och instifta är genuint fristående etablerade ord som
+  fanns på korten INNAN dagens fixar, "sig" i "slå sig ner" är bara
+  ett kort, grammatiskt nödvändigt pronomen).
 
 ## Highlight av ordet i exempelmeningen
 
