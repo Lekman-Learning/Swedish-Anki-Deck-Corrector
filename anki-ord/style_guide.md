@@ -147,9 +147,24 @@ aldrig utan att fråga.
 
 ## Källor för faktakoll
 
-Föredra i denna ordning: **svenska.se** och **synonymer.se** (Adams
-godkända källor, alltid först). Bara om ordet/betydelsen inte täcks där,
-sök korrekt fakta på annat håll.
+Föredra i denna ordning: **svenska.se** (SAOL/SO/SAOB) och **synonymer.se**
+(Adams godkända källor, alltid först). Om ordet/betydelsen inte täcks där
+(vanligt för ålderdomliga/dialektala ord): Hellquists **Svensk etymologisk
+ordbok** (runeberg.org/svetym) och **Svenskt dialektlexikon**
+(runeberg.org/dialektl) är bra sekundära källor för att hitta bortglömda/
+dialektala bibetydelser — se "vråk"-fallet nedan. Annars valfri korrekt
+källa.
+
+**Extra facit (tillagt 2026-08-06): `Humanities::Languages::Svenska OLD`**
+— det gamla decket (samma Anki-collection, sök
+`deck:"Humanities::Languages::Svenska OLD" Framsida:<ordet>` eller
+`Front:<ordet>`, modeller "Grundläggande-adc63"/"Basic"). Slå alltid upp
+ordet där och jämför mot v2-kortets Huvudbetydelse INNAN du litar på
+kortets nuvarande innehåll — flera riktiga fel (bl.a. "vråk", som saknade
+en hel isbetydelse trots att OLD-kortet hade den) hittades bara för att
+OLD-decket avslöjade en avvikelse. Stämmer OLD och v2 inte överens: räknas
+INTE automatiskt som att OLD har rätt — utred vidare mot en riktig
+ordbokskälla innan du ändrar något.
 
 ## Flerbetydelse-genomgång (beslutat 2026-08-05, efter "konglomerat"-fallet)
 
@@ -165,23 +180,32 @@ men ≥3 synonymer) — körs i omgångar om 333 kort.
   `granskad::*`, eftersom kortet kan ha granskats en gång innan kontrollen
   fanns. Sätts via `entry["extra_tags"]` i sessionsfilen, plockas upp av
   `apply_updates.py` automatiskt.
-- **Två tillitsnivåer (beslutat 2026-08-05, efter tokenkostnadsjämförelse
-  — sökverifiering kostar ~10-20x fler tokens per kort än en
-  minnesbaserad snabpkoll):** sätt ALLTID EN av dessa två UTÖVER
-  `flerbetydelse_granskad::<datum>`, för att spåra hur pålitlig
-  "en betydelse räcker"-bedömningen är:
-  - `flerbetydelse_snabbkoll::<datum>` — bedömning gjord från egen
-    språkkunskap, ingen källa faktiskt slagen upp. Billigt, kan missa
-    ovanliga fall — se "divan"-exemplet (källbelagd men nischad andra
-    betydelse, upptäcktes bara vid sökverifiering, inte vid snabbkoll).
-  - `flerbetydelse_sokverifierad::<datum>` — faktiskt kollat mot
-    svenska.se/synonymer.se (eller annan källa om de inte täcker ordet/
-    betydelsen, tillåtet fritt — se "Källor för faktakoll"). Kort med
-    denna tagg kan litas på utan omkoll; kort med bara `_snabbkoll` bör
-    källverifieras senare innan de anses helt klara.
-  - **Praktiskt arbetsflöde**: kör `_snabbkoll` billigt över hela poolen
-    först, prioritera sen `_sokverifierad`-omgången bara på de kort som
-    snabbkollen redan godkände (inte blint om på allt igen).
+- **Sökkoll är OBLIGATORISKT (ändrat 2026-08-06, ersätter det tidigare
+  "två tillitsnivåer"-upplägget nedan efter ett kontrollerat A/B-test).**
+  Ursprungstanken var att billig minnesbaserad `_snabbkoll` skulle räcka
+  för de flesta kort, och att dyr `_sokverifierad` bara behövdes på de
+  kort snabbkollen själv flaggade som osäkra. **Testet motbevisade detta:**
+  160 "snabbkollade och godkända" kort sökkollades i efterhand (fem
+  stickprovsomgångar, verifierat mot riktiga källor) — 14 av dem (8,75%)
+  hade ändå ett fel snabbkollen missat. Jämfört mot 60 helt okollade kort
+  (4 fel, 6,7%) går grupperna INTE att statistiskt särskilja. Slutsats:
+  en minnesbaserad bedömning, oavsett hur strukturerad, kan inte ersätta
+  en riktig källkoll — snabbkollens "konfidens 10" gav ingen mätbar
+  garanti. Vanligaste felmönstret: en hel betydelse saknas helt (samma
+  mönster som "vråk", "reserverad", "sekant", "flott", "kalfatra" m.fl.).
+
+  **Ny regel: varje kort som skapas eller redigeras som v2 (nytt ELLER
+  omgranskning av befintligt) ska sökkollas mot en riktig källa (se
+  "Källor för faktakoll") INNAN det taggas klart — inte bara bedömas från
+  minnet.** Tagga alltid BÅDA: `flerbetydelse_granskad::<datum>` OCH
+  `flerbetydelse_sokverifierad::<datum>` tillsammans med `kortformat::v2`
+  när kortet faktiskt källverifierats. `flerbetydelse_snabbkoll::<datum>`
+  finns kvar som historisk tagg på äldre kort (och som en billig
+  förhandssignal om man vill prioritera VILKA kort som ska sökkollas
+  först — men ersätter aldrig sökkollen, bara flyttar ordningen).
+  Konfidens 10 (se "Konfidensmärkning" nedan) ska ALDRIG sättas utan en
+  faktisk källkoll — en säker känsla från minnet räcker inte, se
+  konfidens-8/9-nivån istället för det.
 - **Symmetriska synonymgrupper**: om ett kort får en andra betydelse
   tillagd, sikta på samma ANTAL synonymer per betydelse — `1 ; 1` eller
   `2 ; 2`, inte `1 ; 3`. Håller korten balanserade/lika snabba att läsa
@@ -265,11 +289,16 @@ eller döper om utan att kolla först.
 Varje granskat/godkänt kort ska taggas `konfidens::N` (N = 0–10) utöver
 `granskad::<datum>`, som ett mått på hur säker rättningen är:
 
-- **10** = verifierat direkt mot ordbokskälla (svenska.se/synonymer.se/SAOB
-  eller likvärdigt), inget tolkningsutrymme.
+- **10** = FAKTISKT verifierat mot en riktig ordbokskälla (svenska.se/
+  synonymer.se/SAOB/Hellquist eller likvärdigt) i just DENNA granskning —
+  inget tolkningsutrymme. **En säker känsla från minnet räcker ALDRIG för
+  10, oavsett hur strukturerad bedömningen var** (se A/B-testet
+  2026-08-06 under "Flerbetydelse-genomgång" — minnesbaserade "konfidens
+  10"-bedömningar hade 8,75% dold felfrekvens). Om ingen källa faktiskt
+  slogs upp: max 9, oavsett hur säker granskningen kändes.
 - **8–9** = ordboksbelagd betydelse, men exempelmening/synonymval eller
   tolkning av en tvetydig tagg (t.ex. fackuttryck som "(geo)") involverar
-  eget omdöme.
+  eget omdöme — ELLER en minnesbaserad bedömning utan faktisk källkoll.
 - **≤7** = mer osäkert — källa svag/otydlig, eller betydelsen är delvis
   gissad. Ett kort på denna nivå ska helst granskas igen innan det anses
   klart, eftersom regeln nedan kräver 100% säkerhet för blå flagga.
@@ -302,6 +331,26 @@ uppnåddes, inte en ursäkt för att flagga blått vid osäkerhet.
   granskning höjer säkerheten.
 
 ## Under granskning, kontrollera även
+
+**Obligatorisk 5-punktschecklista (tillagt 2026-08-06, se A/B-testet
+under "Flerbetydelse-genomgång"):** kontrollera ALLTID alla fem mot en
+riktig källa (se "Källor för faktakoll"), inte bara punkt 1:
+
+1. **Är Huvudbetydelsen korrekt och tydlig?** Inte bara "har ordet fler
+   betydelser" — är själva formuleringen rätt (se "subversiv"-fallet:
+   definitionen beskrev "verksamhet" istället för att definiera
+   adjektivet självt).
+2. **Passar synonymerna verkligen den angivna betydelsen?** (se "hunsa":
+   "misshandla" antydde fysiskt våld, ordet handlar om nedlåtande
+   behandling; "lira": "kasta" hörde inte ihop alls).
+3. **Illustrerar Exempelmeningen tydligt och korrekt just den betydelsen?**
+   Kolla även sakfel i själva exemplet, inte bara språket (se
+   "patetisk": exemplet blandade ihop Beethoven med Tjajkovskij).
+4. **Saknas en betydelse helt?** (den ursprungliga "dold andra
+   betydelse"-kontrollen, se nedan — men kolla ALLTID mot en källa, inte
+   bara om synonymerna råkar avslöja det).
+5. **Stämmer register OCH valör?** Båda axlarna, inte bara att en tagg
+   är satt.
 
 - **Dold andra betydelse (VÄSENTLIGT, beslutat 2026-08-05):** om synonymerna
   inte alla hör till SAMMA betydelse som Huvudbetydelsen beskriver — det är

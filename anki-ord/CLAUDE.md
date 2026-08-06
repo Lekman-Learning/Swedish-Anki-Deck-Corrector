@@ -1287,6 +1287,32 @@ hela decket kräver sökkoll på alla ~3143 kort förr eller senare — snabbkol
 fångar fortfarande en del fel billigt (~4,6% av alla kort vid första
 passet) och är värt att köra, men ersätter inte sökkoll.
 
+**Processändring (2026-08-06): sökkoll är nu obligatoriskt för allt
+framtida v2-arbete, inte bara ett separat kvalitetspass.** Adam bad om att
+koda in dagens lärdomar direkt i arbetssättet istället för att bara jaga
+befintliga kort i efterhand — annars hamnar vi i samma läge igen nästa
+gång 3000+ nya/omgranskade kort ska göras. Uppdaterat:
+
+- `style_guide.md`: "Flerbetydelse-genomgång" — det gamla
+  "två tillitsnivåer, sökkoll bara på osäkra kort"-upplägget är ersatt.
+  Varje nytt/omgranskat v2-kort ska sökkollas mot en riktig källa (se
+  "Källor för faktakoll", nu inkl. Hellquist, Svenskt dialektlexikon och
+  `Humanities::Languages::Svenska OLD` som jämförelsefacit) INNAN det
+  taggas klart. `flerbetydelse_snabbkoll::<datum>` finns kvar historiskt/
+  som billig prioriteringssignal men ersätter aldrig sökkollen.
+  "Konfidensmärkning": konfidens 10 kräver nu uttryckligen en FAKTISK
+  källkoll, inte bara en säker känsla från minnet (det var precis det
+  som gjorde snabbkollens "konfidens 10" opålitlig). Ny obligatorisk
+  5-punktschecklista under "Under granskning, kontrollera även".
+- `config.py`: kommentarerna vid `FLERBETYDELSE_SNABBKOLL_TAG_PREFIX`/
+  `FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX` uppdaterade till att spegla
+  detta — **taggnamnen själva är OFÖRÄNDRADE** (Adam bad uttryckligen om
+  att behålla samma taggkonvention: `kortformat::v2` +
+  `flerbetydelse_sokverifierad::<datum>` tillsammans för allt nytt arbete).
+- Ingen kodfunktionalitet ändrad (`baksida.py`/`apply_updates.py` format
+  och taggmekanism var redan kompatibla, bara dokumentationen/processen
+  var föråldrad).
+
 **Adams egen del av loopen (beslutat 2026-08-05):** 630 aktiva v2-kort i
 kön räcker som arbetsstorlek. Om Adam under vanlig plugg själv hittar ett
 kort i den aktiva kön som är dåligt (trots `kortformat::v2`-taggen)

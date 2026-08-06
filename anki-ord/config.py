@@ -48,12 +48,15 @@ FLERBETYDELSE_TAG_PREFIX = "flerbetydelse_granskad"  # tagg blir flerbetydelse_g
 # beslutat 2026-08-05, se scan_multiple_meanings.py) — skild från granskad::
 # eftersom kortet redan kan ha granskats en gång innan denna kontroll fanns.
 
-# Två tillitsnivåer för flerbetydelse-kollen (beslutat 2026-08-05, efter
-# tokenkostnadsjämförelse: sökverifiering ~10-20x dyrare per kort än
-# minnesbaserad snabbkoll). Använd EN av dessa två (utöver/oavsett
-# FLERBETYDELSE_TAG_PREFIX ovan, som fortfarande sätts alltid):
-FLERBETYDELSE_SNABBKOLL_TAG_PREFIX = "flerbetydelse_snabbkoll"  # minnesbaserad bedömning, ingen källa slagen upp
-FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX = "flerbetydelse_sokverifierad"  # faktiskt källkollad (svenska.se/synonymer.se/annat)
+# Sökkoll är OBLIGATORISKT sedan 2026-08-06 (se style_guide.md
+# "Flerbetydelse-genomgång" — ett A/B-test visade att minnesbaserad
+# snabbkoll INTE mätbart minskar felfrekvensen, 8,75% dolda fel kvar även
+# efter "godkänd" snabbkoll). FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX ska
+# alltid sättas tillsammans med FLERBETYDELSE_TAG_PREFIX för nya/omgranskade
+# v2-kort. FLERBETYDELSE_SNABBKOLL_TAG_PREFIX finns kvar för historik/äldre
+# kort och som valfri billig prioriteringssignal, men ersätter aldrig sökkoll.
+FLERBETYDELSE_SNABBKOLL_TAG_PREFIX = "flerbetydelse_snabbkoll"  # minnesbaserad bedömning, ingen källa slagen upp (historisk/prioritering, ej tillräckligt ensamt)
+FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX = "flerbetydelse_sokverifierad"  # faktiskt källkollad (svenska.se/synonymer.se/SAOB/OLD-decket/annat) -- OBLIGATORISKT för nya v2-kort
 # Befintliga taggar (ai_optimized, ai_uncertain, ai_failed, granska_först)
 # rörs ALDRIG - de är Adams egen historik. Nya taggar läggs bara till.
 
