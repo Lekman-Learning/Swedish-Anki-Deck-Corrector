@@ -42,37 +42,66 @@ from snabbkoll2 import build_old_lookup
 
 ALLVAR_ORDNING = {"hog": 0, "medel": 1, "lag": 2, None: 3}
 
-GRANSKARINSTRUKTION = (
-    "V3 -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: "
-    "(1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll mot svenska.se/"
-    "synonymer.se och skriv källa + slutsats i fältet 'sokkoll' -- ett tomt "
-    "sokkoll-fält betyder att kortet inte får släppas. (3) Skriv om i Adam-tal: "
-    "vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, "
-    "aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före "
-    "abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara "
-    "synonymer. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt "
-    "sannolikt saknar en HEL betydelse, det vanligaste felet i decket. "
-    "Alla betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning."
+_ADAMTAL = (
+    "Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, "
+    "aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt "
+    "med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i "
+    "blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras "
+    "med ' ; ' och synonymerna grupperas i samma ordning."
 )
 
+GRANSKARINSTRUKTION = {
+    "nya": (
+        "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA "
+        "FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll "
+        "och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs "
+        f"inte. (3) {_ADAMTAL} (4) Läs riskflaggorna -- 'hog' betyder att kortet "
+        "statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket."
+    ),
+    "omgranskning": (
+        "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). "
+        "Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. "
+        "Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. "
+        "(1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. "
+        "(3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, "
+        "kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i "
+        f"sokkoll-slutsatsen. Om det behöver ändras: {_ADAMTAL} "
+        "(4) BEVARA bild_html oförändrat om kortet har en bild. "
+        "(5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns "
+        "på 34 kort i just den här poolen så sent som 2026-08-07."
+    ),
+}
 
-def hamta_pool(antal):
-    """Suspenderade kort som ännu inte är v2. Due-sorterat = samma ordning
-    Adam möter dem i när de väl släpps."""
-    query = (
+POOL_FRAGA = {
+    # Spår A: suspenderade legacy-kort som ska skrivas om och släppas in.
+    "nya": (
         f'deck:"{config.DECK_NAME}" is:suspended -tag:{config.FORMAT_TAG_V2} '
         f'-tag:{config.DAGSBATCH_TAG_PREFIX}::*'
-    )
-    return fetch_cards_sorted_by_due(query, antal)
+    ),
+    # Spår B: v2-kort som REDAN är släppta men aldrig blindverifierats.
+    # De ligger i Adams aktiva kö -- ett fel här kostar varje dag det får stå.
+    "omgranskning": (
+        f'deck:"{config.DECK_NAME}" -is:suspended tag:{config.FORMAT_TAG_V2} '
+        f'-tag:{config.OBEROENDE_TAG_PREFIX}::* -tag:{config.DAGSBATCH_TAG_PREFIX}::*'
+    ),
+}
 
 
-def bygg_post(card, old_lookup):
+def hamta_pool(antal, spar):
+    """Due-sorterat = samma ordning Adam möter korten i."""
+    return fetch_cards_sorted_by_due(POOL_FRAGA[spar], antal)
+
+
+def bygg_post(card, old_lookup, spar):
     falt = {n: v["value"] for n, v in card["fields"].items()}
     ord_ = falt.get(config.FIELD_ORD, "")
     raw = falt.get(config.FIELD_BAKSIDA, "")
 
     parsed = baksida.parse(raw)
     ar_v2 = bool(parsed["huvudbetydelse"])
+    # Nyckeln heter "legacy" i båda spåren: den håller kortets NUVARANDE
+    # innehåll före omskrivning, oavsett om det är gammalt <ol><li>-format
+    # (spår A) eller redan v2 (spår B). kortgranskare läser samma nyckel.
     legacy = parsed if ar_v2 else baksida.parse_legacy(raw)
     old = old_lookup.get(ord_.strip().lower())
     flaggor = riskflaggor.berakna(ord_, legacy, old)
@@ -80,6 +109,8 @@ def bygg_post(card, old_lookup):
     return {
         "noteId": card["note"],
         "ord": ord_,
+        "spar": spar,
+        "redan_i_kon": spar == "omgranskning",
         "nuvarande_format": "v2" if ar_v2 else "legacy",
         "legacy": legacy,
         "old_facit": old,
@@ -93,32 +124,44 @@ def bygg_post(card, old_lookup):
         "sokkoll": None,          # {"kalla": "...", "slutsats": "..."} -- OBLIGATORISKT
         "proposed": None,         # {"huvudbetydelse","register","synonymer","synonym_groups","exempelmening"}
         "approved": False,
-        "note_till_granskare": GRANSKARINSTRUKTION,
+        "note_till_granskare": GRANSKARINSTRUKTION[spar],
     }
 
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--antal", type=int, default=config.DAGSBATCH_STORLEK)
+    p.add_argument("--spar", choices=["nya", "omgranskning"], default="nya",
+                   help="nya = suspenderade legacy-kort (125/dag). "
+                        "omgranskning = v2-kort som redan ligger i Adams kö (25/dag).")
+    p.add_argument("--antal", type=int, default=None,
+                   help="default: 125 för 'nya', 25 för 'omgranskning'")
     p.add_argument("--dump", action="store_true", help="skriv även en läsbar .txt")
     args = p.parse_args()
 
-    cards = hamta_pool(args.antal)
+    antal = args.antal if args.antal is not None else (
+        config.DAGSBATCH_STORLEK if args.spar == "nya" else config.OMGRANSKNING_STORLEK)
+
+    cards = hamta_pool(antal, args.spar)
     if not cards:
-        print("Poolen är tom -- alla kort är omskrivna eller redan uttagna i en batch.")
+        print(f"Poolen för spår '{args.spar}' är tom.")
         return
 
     old_lookup = build_old_lookup()
-    poster = [bygg_post(c, old_lookup) for c in cards]
+    poster = [bygg_post(c, old_lookup, args.spar) for c in cards]
+    # Riskprioriterat, inte slumpmässigt: syftet är att LAGA fel så fort som
+    # möjligt. Det gör urvalet snedvridet -- räkna aldrig felfrekvens på det,
+    # den blir för hög. Mätningen kommer från blint_stickprov.py, som drar
+    # slumpmässigt just därför.
     poster.sort(key=lambda e: (ALLVAR_ORDNING[e["hogsta_allvar"]], e["ord"]))
 
     idag = datetime.date.today().isoformat()
     katalog = os.path.join(os.path.dirname(__file__), "sessions")
     os.makedirs(katalog, exist_ok=True)
-    sokvag = os.path.join(katalog, f"session_{idag}_v3-batch.json")
+    stam = "v3-batch" if args.spar == "nya" else "v3-omgranskning"
+    sokvag = os.path.join(katalog, f"session_{idag}_{stam}.json")
     n = 2
     while os.path.exists(sokvag):
-        sokvag = os.path.join(katalog, f"session_{idag}_v3-batch{n}.json")
+        sokvag = os.path.join(katalog, f"session_{idag}_{stam}{n}.json")
         n += 1
     with open(sokvag, "w", encoding="utf-8") as f:
         json.dump(poster, f, ensure_ascii=False, indent=2)
@@ -147,11 +190,13 @@ def main():
 
     antal_hog = sum(1 for e in poster if e["hogsta_allvar"] == "hog")
     utan_old = sum(1 for e in poster if not e["har_old_facit"])
-    print(f"Skrev {len(poster)} kort till {sokvag}")
+    kvar = len(invoke("findNotes", query=POOL_FRAGA[args.spar]))
+    print(f"Skrev {len(poster)} kort ({args.spar}) till {sokvag}")
     print(f"  hög risk (läs dessa först) : {antal_hog}")
-    print(f"  utan OLD-facit (blir Gula)  : {utan_old}")
-    print(f"  kvar i poolen efter denna   : "
-          f"{len(invoke('findNotes', query=f'deck:\"{config.DECK_NAME}\" is:suspended -tag:{config.FORMAT_TAG_V2} -tag:{config.DAGSBATCH_TAG_PREFIX}::*'))}")
+    print(f"  utan OLD-facit             : {utan_old}")
+    print(f"  kvar i poolen efter denna  : {kvar}")
+    if args.spar == "omgranskning":
+        print("  OBS: dessa kort ligger REDAN i Adams kö -- de pluggas medan de granskas.")
 
 
 if __name__ == "__main__":

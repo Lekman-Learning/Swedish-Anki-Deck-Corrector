@@ -2606,6 +2606,38 @@ synonymen "tillnärmmelsevis" felstavad, `dandy` hade **"flåsig"** som
 synonym (sakligt fel — SAOB ger "sprätt, snobb, modelejon"), och
 `vara renons` hade två genuina betydelser hopslagna.
 
+### Två spår, 150 kort/dag (beslutat 2026-08-07)
+
+`kortbyggare.py --spar {nya,omgranskning}`
+
+| Spår | Pool | Takt | Vad det är |
+|---|---|---|---|
+| **A `nya`** | 6 802 suspenderade legacy-kort | 125/dag | Skrivs om till v2 och släpps in i kön |
+| **B `omgranskning`** | 3 227 v2-kort utan `oberoende_verifierad` | 25/dag | Kort Adam **pluggar just nu**, skrivna under den gamla processen |
+
+Hela decket (10 034 kort) blir v3-verifierat på **~67 dagar**.
+
+**Skillnaden mellan spåren är inte kosmetisk.** Spår A är suspenderat och
+gör noll skada medan det väntar. Spår B ligger i Adams aktiva kö — ett
+fel där kostar varje dag det får stå. Med ~1 % restfel är det ~30 kort
+som lärs in fel. 125/25 optimerar för volym; väg om mot HP-datumet om
+korrekthet i det aktiva materialet ska väga tyngre.
+
+För spår B gäller dessutom:
+- `slapp` avsuspenderar ingenting (korten är redan släppta) — den
+  markerar dem som blindverifierade och **varnar** för kort som inte
+  klarar kontrollen, eftersom de pluggas medan de är trasiga.
+- Riskflaggorna räknas på v2-innehållet (`huvudbetydelse`, inte
+  `definitioner`) — verifierat: `drägg` med två betydelser via ` ; ` ger
+  inget falsklarm, `förtörnad` med en betydelse och tre synonymer flaggas.
+
+**Urvalet är riskprioriterat, inte slumpmässigt** — syftet är att laga
+fel snabbast möjligt. Räkna därför ALDRIG felfrekvens på spår B:s
+träffar; urvalet är snedvridet och siffran blir för hög. Mätningen kommer
+från `blint_stickprov.py`, som drar slumpmässigt just av det skälet.
+Kort sagt: **25/dag riskprioriterat för att laga, 10/vecka slumpmässigt
+för att veta.**
+
 ### Vad v3 INTE garanterar
 
 Kedjan garanterar att inget kort når kön utan att ha passerat alla steg.

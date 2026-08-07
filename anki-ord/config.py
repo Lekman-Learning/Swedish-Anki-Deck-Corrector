@@ -86,7 +86,12 @@ DEFAULT_BATCH_SIZE = 100  # Adam: granska/rätta 100 kort i taget per 5h-session
 # sättas av en granskare som sett kortet UTAN att se hur det blev till.
 OBEROENDE_TAG_PREFIX = "oberoende_verifierad"  # blind andragranskning, ren kontext
 DAGSBATCH_TAG_PREFIX = "v3_dagsbatch"          # v3_dagsbatch::YYYY-MM-DD, spårar vilken batch kortet kom i
-DAGSBATCH_STORLEK = 125                        # Adam 2026-08-07
+DAGSBATCH_STORLEK = 125                        # spår A: legacy -> v2, per dag
+OMGRANSKNING_STORLEK = 25                      # spår B: redan släppta v2-kort, per dag
+# Spår B är kort Adam pluggar JUST NU och som skrevs under den gamla
+# processen (3 232 st vid start). Ett fel där kostar varje dag det får stå,
+# till skillnad från spår A som är suspenderat och gör noll skada medan det
+# väntar. 125/25 optimerar för volym; väg om mot HP-datumet vid behov.
 
 # Taggar ett kort MÅSTE ha för att få avsuspenderas av kortgranskare.slapp().
 # Register och Adam-tal kontrolleras dessutom mot LIVE-innehållet, inte mot

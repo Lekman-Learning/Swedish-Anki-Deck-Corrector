@@ -138,8 +138,12 @@ def paket(sokvag):
     # "_v3-batch" -- och paketet hade då skrivit över den granskade
     # sessionsfilen med all sökkoll i (hittat vid egengranskning 2026-08-07).
     stam = os.path.splitext(sokvag)[0]
-    mal = f"{stam.replace('_v3-batch', '_v3-paket')}.json"
-    if os.path.abspath(mal) == os.path.abspath(sokvag):
+    mal = None
+    for kalla in ("_v3-batch", "_v3-omgranskning"):
+        if kalla in stam:
+            mal = f"{stam.replace(kalla, '_v3-paket')}.json"
+            break
+    if mal is None:
         mal = f"{stam}_v3-paket.json"
     if os.path.abspath(mal) == os.path.abspath(sokvag):  # bältet och hängslena
         raise RuntimeError(f"vägrar skriva paketet över indatafilen {sokvag}")
@@ -205,21 +209,33 @@ def slapp(sokvag, torr=False):
     if not ids:
         print("Inga applicerade kort i filen.")
         return
+    # Spår B-kort ligger redan i Adams kö. Avsuspendering är då en no-op,
+    # men rapporten får inte påstå att de "släpptes in" -- det som händer
+    # är att de blir godkända, inte att de blir synliga.
+    omgranskning = any(e.get("redan_i_kon") for e in poster)
     redo, blockerade = kontrollera_slappbar(ids)
-    print(f"Redo att släppas : {len(redo)} av {len(ids)}")
+    etikett = "Godkända" if omgranskning else "Redo att släppas"
+    print(f"{etikett:<17}: {len(redo)} av {len(ids)}")
     print(f"Blockerade       : {len(blockerade)}")
     for o, _, skal in blockerade[:25]:
-        print(f"  HÅLLS KVAR {o}: {skal}")
+        print(f"  {'EJ GODKÄNT' if omgranskning else 'HÅLLS KVAR'} {o}: {skal}")
+    if omgranskning and blockerade:
+        print("\n  VARNING: dessa kort ligger REDAN i Adams kö och pluggas nu, "
+              "trots att de inte klarar kontrollen. Rätta dem, suspendera dem "
+              "manuellt, eller acceptera medvetet.")
     if torr:
-        print("\n(torrkörning -- inget avsuspenderades)")
+        print("\n(torrkörning -- ingenting ändrades)")
         return
-    if redo:
+    if redo and not omgranskning:
         kort = []
         for i in range(0, len(redo), af.NID_QUERY_CHUNK):
             bit = redo[i:i + af.NID_QUERY_CHUNK]
             kort.extend(invoke("findCards", query=" OR ".join(f"nid:{n}" for n in bit)))
         invoke("unsuspend", cards=kort)
-    print(f"\nAvsuspenderade {len(redo)} kort -- dessa är nu i Adams kö.")
+        print(f"\nAvsuspenderade {len(redo)} kort -- dessa är nu i Adams kö.")
+    elif omgranskning:
+        print(f"\n{len(redo)} omgranskade kort är nu blindverifierade "
+              f"(låg redan i kön, inget avsuspenderades).")
 
 
 # ------------------------------------------------------------------- status
