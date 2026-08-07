@@ -2134,3 +2134,41 @@ tredjedefinitioner, trasiga exempelmeningar) utöver de vanliga
 "saknad betydelse"-felen. Usage-kostnaden per kort är alltså sannolikt
 högre än för is:review (mer omfattande sökkoll + full omskrivning krävs
 för de flesta kort, inte bara en jämförelse).
+
+**Självrättning samma runda:** Adam upptäckte att jag hade lämnat korten
+suspenderade och bad mig själv utvärdera om de var redo att släppas in.
+Kontroll visade att 37 av 50 kort saknade register helt eller använde en
+otillåten tagg ("ålderdomlig" istället för den låsta vokabulärens
+"arkaisk") — registret är obligatoriskt enligt style_guide.md, aldrig
+valfritt. Rättat på alla 37, verifierat med `validate_register()` (0
+kvarvarande problem), och **därefter avsuspenderade alla 50**.
+
+## Testbatch 3: false-negative-test — 50 is:new-kort som klarat snabbkoll 2.0 UTAN eskalering (2026-08-07)
+
+Adam förtydligade det ursprungliga syftet: inte fler kort ur Blå Nya, utan
+50 `is:new`-kort som redan gått igenom snabbkoll 2.0 och bedömts INTE
+behöva sökkoll (gröna, `flerbetydelse_snabbkoll2`-taggade men INTE
+`flerbetydelse_sokverifierad`-taggade) — för att testa om den egna
+bedömningen i 2.0 (jämförelse mot OLD-facit + egen kunskap, utan
+websökning) är tillräckligt tillförlitlig, eller om en fullständig
+sökkoll hittar fel som ändå slank igenom.
+
+50 kort hämtade, redan i v2-format och redan granskade en gång. Full
+sökkoll (50 WebSearch-anrop) på alla, oavsett om de såg misstänkta ut.
+
+**Resultat: 49/50 höll — bara 1 fel hittat (2%).** "goodwill" hade bara
+den ursprungliga betydelsen (gott anseende/välvilja) men saknade den minst
+lika vanliga redovisningsbetydelsen (ett företags immateriella värde
+utöver bokfört värde) — tillagd. Inget annat av de 50 hade fel eller
+saknade betydelser.
+
+**Slutsats**: 2%-felfrekvensen på redan-godkända kort är lägre än den
+gamla minnesbaserade snabbkollens 8,75% (se A/B-testet i style_guide.md,
+"Flerbetydelse-genomgång"), vilket stöder att snabbkoll 2.0:s
+OLD-facit-jämförelse + egen kunskap är en väsentligt bättre bas än
+ren minnesbedömning — men den är inte perfekt (2% > 0%). Om Adam vill
+pressa felfrekvensen ännu lägre skulle full sökkoll på ALLA kort krävas,
+men det är den dyra vägen usage-testerna ovan visar kostnaden för.
+Alla 50 taggade `flerbetydelse_sokverifierad::2026-08-07` (oavsett om de
+hade fel eller ej, eftersom alla nu faktiskt sökkollats), "goodwill"
+uppgraderad till Blå flagga.
