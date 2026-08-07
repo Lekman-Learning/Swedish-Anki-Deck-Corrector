@@ -42,15 +42,38 @@ def apply_single(entry):
     if warnings:
         return False, f"hoppade över (ogiltig register-tagg: {'; '.join(warnings)})"
 
+    huvudbetydelse = proposed.get("huvudbetydelse", current.get("huvudbetydelse", ""))
+    synonymer = proposed.get("synonymer", current["synonymer"])
+    exempelmening = proposed.get("exempelmening", current["exempelmening"])
+    synonym_groups = proposed.get("synonym_groups")
+
+    # Samma Adam-tal-spärr som apply_flerbetydelse.apply_card() (tillagt
+    # 2026-08-07). Här SKIPPAS kortet istället för att kasta, eftersom
+    # main() kör en hel sessionsfil i taget och ett dåligt kort inte ska
+    # stoppa resten -- samma mönster som register-kontrollen ovan.
+    # entry["tillat"] i sessionsfilen tillåter ett motiverat undantag.
+    fel, mjuka = baksida.validate_adamtal(
+        huvudbetydelse=huvudbetydelse,
+        synonymer=synonymer,
+        synonym_groups=synonym_groups,
+        exempelmening=exempelmening,
+        register=register,
+        ord_=entry.get("proposed_ord") or entry.get("ord"),
+        tillat=entry.get("tillat", ()),
+    )
+    if fel:
+        return False, f"hoppade över (bryter mot Adam-tal: {'; '.join(fel)})"
+    entry["adamtal_varningar"] = mjuka
+
     new_baksida = baksida.build(
-        huvudbetydelse=proposed.get("huvudbetydelse", current.get("huvudbetydelse", "")),
-        synonymer=proposed.get("synonymer", current["synonymer"]),
-        exempelmening=proposed.get("exempelmening", current["exempelmening"]),
+        huvudbetydelse=huvudbetydelse,
+        synonymer=synonymer,
+        exempelmening=exempelmening,
         register=register,
         # bild_html sätts explicit i proposed (av images.py/Fas 2) om Adam
         # godkänt en ny/ändrad bild, annars rörs den befintliga bilden aldrig
         bild_html=proposed.get("bild_html", current["bild_html"]),
-        synonym_groups=proposed.get("synonym_groups"),
+        synonym_groups=synonym_groups,
     )
 
     fields = {config.FIELD_BAKSIDA: new_baksida}

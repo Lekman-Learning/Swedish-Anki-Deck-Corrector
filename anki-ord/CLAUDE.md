@@ -2435,3 +2435,50 @@ genomgången: vid <5 var i princip alla 101 träffar fullgoda meningar
 ("Prelaten välsignade menigheten."). Ordräkning är en dålig proxy för
 "fragment" — det verkliga felet (sats utan finit verb) kräver
 ordklasstaggning för att hittas säkert.
+
+## Adam-tal flyttat in i skrivvägen (2026-08-07)
+
+Linten ovan hittar fel i EFTERHAND. Ett kort som skrivs fel och upptäcks
+en vecka senare har Adam redan pluggat in — så reglerna flyttades dit de
+biter: `baksida.validate_adamtal()`, anropad som **hård spärr** i båda
+skrivvägarna.
+
+Detta är exakt samma åtgärd som registret fick, och av samma anledning.
+Register-reglerna stod i style_guide.md i två dagar och hamnade ändå fel
+på 37 av 50 kort, ända tills `apply_card()` började vägra skriva utan
+giltigt register. Adam-tal hade samma konstruktionsfel: prosa granskaren
+skulle minnas, plus en efterhandskontroll.
+
+| Var | Beteende vid brott mot hård regel |
+|---|---|
+| `apply_flerbetydelse.apply_card()` | `ValueError` — kortet skrivs inte |
+| `apply_flerbetydelse.apply_pass()` | `ValueError` — "använd apply_card() istället" |
+| `apply_updates.apply_single()` | hoppar över kortet (samma mönster som registret) |
+
+**Hård/mjuk-uppdelningen är mätt, inte gissad.** Hårda regler är de som
+gav 0 falsklarm på hela decket i lint-körningen ovan. Mjuka är de där
+genomgången visade legitima undantag — `flera_meningar` blockerar
+ingenting, eftersom **anafor** MÅSTE ha flera meningar för att kortet ska
+fungera. Undantag görs med `tillat=["regelnamn"]` (eller `"tillat"` i
+sessionsfilen), aldrig genom att mjuka upp regeln: då syns undantaget i
+sessionsfilen istället för att tyst försvinna.
+
+**`lint_adamtal.py` duplicerar inte längre regellogiken** — den anropar
+samma `validate_adamtal()`. Två definitioner som glider isär är precis
+den buggklass som gav upphov till hela den här genomgången (jfr
+`kortformat::v2`-taggen som bara sattes i den ena skrivvägen).
+Verifierat: linten ger IDENTISKT resultat före och efter refaktorn,
+3054/3229 rena.
+
+**`snabbkoll2_blanya_v2.py` (nya kort) bär nu Adam-tal per kort.** Varje
+post i sessionsfilen får `adamtal_blockerande` + `adamtal_varningar`
+(validatorn körd på nuvarande innehåll, så granskaren ser kravlistan
+medan kortet ändå skrivs om) plus `note_till_granskare` med de sex
+punkter som INTE går att kontrollera maskinellt: vardagliga ord, förklara
+inte svårt med svårt, konkret före abstrakt, bevara humorn, en
+exempelmening med highlight, bara utbytbara synonymer.
+
+Det sista är värt att understryka: **spärren fångar bara form.** Att
+skriva vardagligt, konkret och minnesvärt kan ingen regexkontroll avgöra
+— den delen är fortfarande granskarens jobb, och style_guide.md är
+fortfarande den viktigaste texten i projektet.

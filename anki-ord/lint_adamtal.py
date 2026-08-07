@@ -3,13 +3,19 @@
 Kompletterar snabbkoll 2.0/sökkoll, som båda kollar SAKINNEHÅLL (stämmer
 betydelsen? saknas någon?). Ingen av dem kollar FORM -- det var precis
 därför "pöbel" kunde passera båda samma dag den var trasig (se
-CLAUDE.md). Detta script kollar bara sådant som går att avgöra
-mekaniskt, och ändrar aldrig något.
+CLAUDE.md). Ändrar aldrig något.
 
-Varje kontroll pekar på en namngiven regel i style_guide.md. Kontroller
-markerade [SÄKER] är i praktiken utan falsklarm och kan åtgärdas rakt av;
-[BEDÖM] har kända legitima undantag och kräver mänskligt omdöme -- de
-rapporteras separat och ska aldrig massfixas.
+**Reglerna bor i `baksida.validate_adamtal()`, inte här.** Samma funktion
+kör som hård spärr i skrivvägen (`apply_flerbetydelse.apply_card()`,
+`apply_updates.apply_single()`), så ett kort som skulle underkännas av
+den här linten går inte att skriva från början. Detta script är den
+RETROAKTIVA vyn: kort som skrevs innan spärren fanns. Duplicera aldrig
+regellogik hit -- två definitioner som glider isär är precis den buggklass
+som gav upphov till hela genomgången 2026-08-07.
+
+Kontroller märkta [SÄKER] (= `baksida.ADAMTAL_HARDA`) blockerar skrivning
+och kan åtgärdas rakt av. [BEDÖM] (= `ADAMTAL_MJUKA`) har kända legitima
+undantag och ska aldrig massfixas.
 
 Körning:
     python lint_adamtal.py                 # sammanfattning
@@ -19,7 +25,6 @@ Körning:
 
 import argparse
 import json
-import re
 from collections import Counter, defaultdict
 
 import baksida
@@ -28,132 +33,38 @@ from ankiconnect import invoke
 
 NOTES_CHUNK = 2000
 
-# Förkortningar vars punkt inte avslutar en mening -- utan dessa skulle
-# "t.ex." räknas som tre meningsslut i kontrollen "flera_meningar".
-_ABBR = ["t.ex.", "bl.a.", "m.fl.", "d.v.s.", "dvs.", "osv.", "m.m.",
-         "fr.o.m.", "t.o.m.", "ca.", "kl.", "s.k.", "e.Kr.", "f.Kr."]
-
-# Regler där falsklarm är vanliga nog att massfix vore fel.
-# "flera_meningar" ligger här efter genomgången 2026-08-07: 3 av 4 träffar
-# var LEGITIMA. "anafor" illustrerar stilfiguren genom att upprepa
-# satsinledningen ("Jag kommer. Jag ser. Jag förstår.") -- en enda mening
-# hade förstört kortet. Två av de andra är repliksvar där frågan behövs för
-# att idiomet ska gå fram ("Hur står det till? - Jodå, det knallar och går").
-BEDOM = {"cirkular_synonym", "cirkular_definition", "osymmetriska_grupper",
-         "ordbokslangd_hb", "fragment_exempel", "flera_meningar"}
-
-
-def strip_html(s):
-    if not s:
-        return ""
-    return re.sub(r"<[^>]+>", "", s).replace("&nbsp;", " ").strip()
-
-
-def meanings(hb):
-    return [m.strip() for m in re.split(r"\s;\s", hb) if m.strip()]
-
-
-def count_sentences(text):
-    for a in _ABBR:
-        text = text.replace(a, "@" * len(a))
-    return len(re.findall(r"[.!?]+(?=\s|$)", text))
-
-
-def stem(word):
-    """Grov svensk stam: klipp vanliga böjnings-/avledningsändelser. Bara
-    till för substrängjämförelser, inte riktig morfologi."""
-    w = word.lower().strip()
-    for suf in ("ande", "ende", "arna", "erna", "orna", "aren", "ade", "are",
-                "ell", "en", "et", "er", "or", "ar", "an", "a", "s"):
-        if len(w) - len(suf) >= 4 and w.endswith(suf):
-            return w[: -len(suf)]
-    return w
-
 
 def lint_card(ord_, raw):
-    """Returnerar lista med (regel, detalj) för ett kort."""
+    """Returnerar lista med (regel, detalj) för ett kort.
+
+    Delegerar allt regelinnehåll till baksida.validate_adamtal(). Bara
+    kontroller som kräver den OPARSADE Baksidan görs här -- de kan inte
+    uttryckas i validatorn, som arbetar på färdiga fält.
+    """
     p = baksida.parse(raw)
-    hb = p["huvudbetydelse"]
-    if not hb:
+    if not p["huvudbetydelse"]:
         return [("ej_v2_format", "Baksida går inte att parsa som kortformat v2")]
 
-    out = []
-    ms = meanings(hb)
-    ex_raw = p["exempelmening"] or ""
-    ex = strip_html(ex_raw)
-    syns = p["synonymer"] or []
-    groups = p["synonym_groups"]
+    fel, varn = baksida.validate_adamtal(
+        huvudbetydelse=p["huvudbetydelse"],
+        synonymer=p["synonymer"],
+        synonym_groups=p["synonym_groups"],
+        exempelmening=p["exempelmening"],
+        register=p["register"],
+        ord_=ord_,
+    )
+    issues = [tuple(m.split(": ", 1)) for m in fel + varn]
 
-    # --- Exempelmening (style_guide.md "Highlight av ordet i exempelmeningen",
-    #     "Exempelmeningar - alltid bara en") ---
-    if not ex:
-        out.append(("tom_exempelmening", "exempelmening saknas helt"))
-    else:
-        if config.SYNONYM_COLOR not in ex_raw:
-            out.append(("saknar_highlight", ex[:70]))
-        n = count_sentences(ex)
-        if n > 1:
-            out.append(("flera_meningar", f"{n} meningar: {ex[:70]}"))
-        # Ordräkning är en DÅLIG proxy för "fragment" -- "Prelaten välsignade
-        # menigheten." är fyra ord och en fullgod mening. Tröskeln sänktes
-        # från 5 till 4 ord 2026-08-07 efter genomgång: av 101 träffar vid
-        # <5 var i princip alla fullständiga meningar. Det verkliga felet
-        # (sats utan finit verb, t.ex. "En grov skymf.") går inte att skilja
-        # ut mekaniskt utan ordklasstaggning -- behandla som svag signal.
-        if len(ex.split()) < 4:
-            out.append(("fragment_exempel", ex))
-
-    # --- Huvudbetydelse (style_guide.md "Vanliga fällor", "Grundregler") ---
-    if hb.rstrip().endswith((".", ",")):
-        out.append(("avslutande_skiljetecken_hb", hb[-45:]))
-    if "<b>" in hb or "<font" in hb:
-        out.append(("formatering_i_hb", hb[:70]))
-    for m in ms:
-        if len(m.split()) > 12:
-            out.append(("ordbokslangd_hb", f"{len(m.split())} ord: {m[:70]}"))
-    # ordet förklarat med sig självt
-    if " " not in ord_.strip():
-        st = stem(ord_)
-        if len(st) >= 4 and re.search(rf"\b\w*{re.escape(st)}\w*", hb.lower()):
-            out.append(("cirkular_definition", f"{ord_} -> {hb[:60]}"))
-
-    # --- Synonymer (style_guide.md "Undvik cirkulära synonymer",
-    #     "Symmetriska synonymgrupper") ---
-    for s in syns:
-        if not s.strip():
-            out.append(("tom_synonym", "tom synonym i listan"))
-            continue
-        st = stem(ord_)
-        if " " not in ord_.strip() and len(st) >= 4 and st in s.lower().replace(" ", ""):
-            out.append(("cirkular_synonym", f"{ord_} -> {s}"))
-    if groups:
-        if any(not [x for x in g if x.strip()] for g in groups):
-            out.append(("tom_synonymgrupp", "tom grupp ger '; '-artefakt"))
-        if len(groups) != len(ms):
-            out.append(("grupper_matchar_ej_betydelser",
-                        f"{len(groups)} synonymgrupper mot {len(ms)} betydelser"))
-        sizes = [len([x for x in g if x.strip()]) for g in groups]
-        if sizes and max(sizes) - min(sizes) >= 2:
-            out.append(("osymmetriska_grupper", f"gruppstorlekar {sizes}"))
-
-    # --- Register (style_guide.md "Register per bibetydelse") ---
-    regw = baksida.validate_register(p["register"])
-    if regw:
-        out.append(("register_ogiltigt", "; ".join(regw)))
+    # --- Bara det som kräver rå HTML ---
     if p["register"]:
-        nreg = len([r for r in p["register"].split(";") if r.strip()])
-        if nreg > len(ms):
-            out.append(("fler_register_an_betydelser",
-                        f"{nreg} register mot {len(ms)} betydelser"))
-
-    # --- Kvarglömd HTML (återkommande buggklass i CLAUDE.md) ---
-    for junk in ("<span", "<div", "<ol", "<li", "&amp;nbsp;", "&quot;"):
-        if junk in raw:
-            out.append(("html_skrap", junk))
+        issues += [("register_ogiltigt", w) for w in baksida.validate_register(p["register"])]
+    for junk in baksida._HTML_SKRAP:
+        if junk in raw and not any(r == "html_skrap" for r, _ in issues):
+            issues.append(("html_skrap", f"kvarglömd HTML i Baksida: {junk!r}"))
+            break
     if "<b>" in raw.split("</b>", 1)[-1]:
-        out.append(("fet_utanfor_hb", "fet stil förekommer efter Huvudbetydelse"))
-
-    return out
+        issues.append(("fet_utanfor_hb", "fet stil förekommer efter Huvudbetydelse"))
+    return issues
 
 
 def main():
@@ -184,9 +95,12 @@ def main():
     print(f"{'REGEL':<34} {'ANTAL':>6}  TYP")
     print("-" * 60)
     for rule, c in sorted(counts.items(), key=lambda kv: -kv[1]):
-        print(f"{rule:<34} {c:>6}  {'[BEDÖM]' if rule in BEDOM else '[SÄKER]'}")
+        typ = "[SÄKER]" if rule not in baksida.ADAMTAL_MJUKA else "[BEDÖM]"
+        print(f"{rule:<34} {c:>6}  {typ}")
     if not counts:
         print("(inga anmärkningar)")
+    print("\n[SÄKER] blockeras numera av spärren i apply_card()/apply_single() "
+          "— nya kort kan inte få dessa fel.")
 
     if args.visa:
         print(f"\n--- {args.visa} ({len(by_rule.get(args.visa, []))} träffar) ---")

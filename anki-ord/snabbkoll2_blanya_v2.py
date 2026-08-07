@@ -32,6 +32,23 @@ from queue_lib import build_tags_by_note, fetch_cards_sorted_by_due
 from snabbkoll2 import build_old_lookup
 
 
+# Följer med varje kort in i sessionsfilen. De mekaniska punkterna spärras
+# av baksida.validate_adamtal() vid skrivning; de som står här är de som
+# INTE går att kontrollera maskinellt och därför måste läsas av granskaren.
+ADAMTAL_PAMINNELSE = (
+    "ADAM-TAL (style_guide.md) -- skriv om kortet så här, inte bara rätta sakfel: "
+    "(1) Huvudbetydelse i vardagliga ord, kort nog att läsas högt och förstås "
+    "direkt, ALDRIG ordboksprosa och aldrig ordet självt i sin egen definition. "
+    "(2) Förklara inte ett svårt ord med ett annat lika svårt. "
+    "(3) Konkret före abstrakt -- en scen eller jämförelse om det gör betydelsen "
+    "tydligare. (4) Bevara befintlig humor; en namngiven, lite absurd karaktär "
+    "fastnar bättre än en torr mening. (5) EN exempelmening, med ordet markerat "
+    "i blått. (6) Bara synonymer som faktiskt är utbytbara -- noll är okej, "
+    "cirkulära (ordet + prefix/suffix) är det inte. "
+    "Fälten adamtal_blockerande/adamtal_varningar visar vad som redan är fel."
+)
+
+
 def find_bla_nya_cards(limit):
     query = (
         f'deck:"{config.DECK_NAME}" is:new is:suspended '
@@ -115,6 +132,23 @@ def main():
 
         hints = compute_format_bug_hints(ord_, current, current_format == "legacy")
 
+        # Kör Adam-tal-validatorn på NUVARANDE innehåll så granskaren ser
+        # exakt vad som måste rättas medan kortet ändå skrivs om -- samma
+        # funktion som sedan spärrar skrivningen i apply_card(), så det som
+        # står här ÄR kravlistan, inte ett förslag. Legacy-kort saknar
+        # huvudbetydelse och ska skrivas om från grunden i alla fall.
+        if current_format == "v2":
+            hard, mjuka = baksida.validate_adamtal(
+                huvudbetydelse=current.get("huvudbetydelse", ""),
+                synonymer=current.get("synonymer"),
+                synonym_groups=current.get("synonym_groups"),
+                exempelmening=current.get("exempelmening", ""),
+                register=current.get("register"),
+                ord_=ord_,
+            )
+        else:
+            hard, mjuka = ["legacy_format: skrivs om till v2 från grunden"], []
+
         entries.append({
             "noteId": c["note"],
             "ord": ord_,
@@ -123,8 +157,11 @@ def main():
             "old_facit": old_match,
             "tags": tags_by_note.get(c["note"], []),
             "format_bug_hints": hints,
+            "adamtal_blockerande": hard,
+            "adamtal_varningar": mjuka,
             "proposed": None,
             "approved": False,
+            "note_till_granskare": ADAMTAL_PAMINNELSE,
         })
 
     today = datetime.date.today().isoformat()

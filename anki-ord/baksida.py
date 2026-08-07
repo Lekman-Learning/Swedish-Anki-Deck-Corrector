@@ -157,6 +157,153 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
     return "".join(parts)
 
 
+# --- Adam-tal-validering (tillagt 2026-08-07) ---
+#
+# style_guide.md är prosa som granskaren ska minnas, och lint_adamtal.py
+# körs i EFTERHAND. Det är samma lucka som registret hade innan
+# apply_flerbetydelse.apply_card() gjorde det till en hård spärr -- och
+# registret hamnade fel på 37 av 50 kort just för att kontrollen fanns
+# men var frivillig. Reglerna nedan flyttas därför in i SKRIVVÄGEN.
+#
+# HÅRDA regler blockerar skrivning. De är valda för att de i praktiken
+# saknar falsklarm -- uppmätt på hela decket 2026-08-07, se CLAUDE.md
+# "Adam-tal-lint": varje kategori nedan gav 0 falsklarm på 3229 kort.
+#
+# MJUKA regler returneras som varningar och blockerar ALDRIG. De har
+# kända legitima undantag: "anafor" MÅSTE ha flera meningar (kortet
+# illustrerar stilfiguren genom att upprepa satsinledningen), och
+# ordräkning är en dålig proxy för både "fragment" och "ordbokslängd".
+# Att göra dem hårda hade tvingat fram sämre kort.
+
+ADAMTAL_HARDA = (
+    "tom_exempelmening", "saknar_highlight", "avslutande_skiljetecken_hb",
+    "semikolon_utan_mellanslag", "formatering_i_hb", "html_skrap",
+    "tom_synonym", "tom_synonymgrupp", "grupper_matchar_ej_betydelser",
+    "fler_register_an_betydelser",
+)
+ADAMTAL_MJUKA = (
+    "flera_meningar", "fragment_exempel", "ordbokslangd_hb",
+    "cirkular_definition", "cirkular_synonym", "osymmetriska_grupper",
+)
+
+_ABBR = ["t.ex.", "bl.a.", "m.fl.", "d.v.s.", "dvs.", "osv.", "m.m.",
+         "fr.o.m.", "t.o.m.", "ca.", "kl.", "s.k.", "e.Kr.", "f.Kr."]
+_HTML_SKRAP = ("<span", "<div", "<ol", "<li", "&amp;nbsp;", "&quot;", "rgb(52,")
+
+
+def _strip_html(s):
+    if not s:
+        return ""
+    return re.sub(r"<[^>]+>", "", s).replace("&nbsp;", " ").strip()
+
+
+def betydelser(huvudbetydelse):
+    """Delar Huvudbetydelse på den överenskomna ` ; `-separatorn."""
+    return [m.strip() for m in re.split(r"\s;\s", huvudbetydelse or "") if m.strip()]
+
+
+def _rakna_meningar(text):
+    for a in _ABBR:
+        text = text.replace(a, "@" * len(a))
+    return len(re.findall(r"[.!?]+(?=\s|$)", text))
+
+
+def _stam(word):
+    """Grov svensk stam, bara för substrängjämförelser -- inte morfologi."""
+    w = (word or "").lower().strip()
+    for suf in ("ande", "ende", "arna", "erna", "orna", "aren", "ade", "are",
+                "ell", "en", "et", "er", "or", "ar", "an", "a", "s"):
+        if len(w) - len(suf) >= 4 and w.endswith(suf):
+            return w[: -len(suf)]
+    return w
+
+
+def validate_adamtal(huvudbetydelse, synonymer=None, synonym_groups=None,
+                     exempelmening="", register=None, ord_=None, tillat=()):
+    """Kontrollerar det i style_guide.md som går att avgöra mekaniskt.
+
+    Returnerar (fel, varningar) -- två listor med "regel: förklaring".
+    `fel` ska blockera skrivning, `varningar` ska visas men aldrig blockera.
+
+    `tillat` är en lista med regelnamn som medvetet får brytas (t.ex.
+    `tillat=["flera_meningar"]` för anafor-kortet). Använd den hellre än
+    att göra en regel mjuk -- undantaget syns då i sessionsfilen.
+    """
+    fel, varn = [], []
+
+    def lagg(regel, text):
+        if regel in tillat:
+            return
+        (fel if regel in ADAMTAL_HARDA else varn).append(f"{regel}: {text}")
+
+    hb = (huvudbetydelse or "").strip()
+    ms = betydelser(hb)
+    ex_raw = exempelmening or ""
+    ex = _strip_html(ex_raw)
+    syns = synonymer or []
+
+    # --- Huvudbetydelse ---
+    if hb.rstrip().endswith((".", ",")) and not hb.rstrip().endswith("..."):
+        lagg("avslutande_skiljetecken_hb", f"Huvudbetydelse slutar med skiljetecken: ...{hb[-30:]!r}")
+    if "<b>" in hb or "<font" in hb or "<i>" in hb:
+        lagg("formatering_i_hb", "Huvudbetydelse ska vara ren text, ingen HTML")
+    if ";" in hb and not re.search(r"\s;\s", hb):
+        lagg("semikolon_utan_mellanslag",
+             "använd ' ; ' med mellanslag mellan skilda betydelser -- "
+             "ett bart ';' är osynligt för register-indragningen och alla svepningar")
+    for m in ms:
+        if len(m.split()) > 12:
+            lagg("ordbokslangd_hb", f"{len(m.split())} ord i en betydelse -- korta ner: {m[:50]!r}")
+    if ord_ and " " not in ord_.strip():
+        st = _stam(ord_)
+        if len(st) >= 4 and re.search(rf"\w*{re.escape(st)}\w*", hb.lower()):
+            lagg("cirkular_definition", f"{ord_!r} tycks förklaras med sig självt")
+
+    # --- Exempelmening ---
+    if not ex:
+        lagg("tom_exempelmening", "exempelmening saknas")
+    else:
+        if config.SYNONYM_COLOR not in ex_raw:
+            lagg("saknar_highlight",
+                 f'ordet måste märkas <font color="{config.SYNONYM_COLOR}">...</font> -- inte valfritt')
+        n = _rakna_meningar(ex)
+        if n > 1:
+            lagg("flera_meningar", f"{n} meningar -- en per kort (tillat=['flera_meningar'] om motiverat)")
+        if len(ex.split()) < 4:
+            lagg("fragment_exempel", f"mycket kort, kontrollera att det är en hel mening: {ex!r}")
+
+    # --- Synonymer ---
+    for s in syns:
+        if not (s or "").strip():
+            lagg("tom_synonym", "tom sträng i synonymlistan")
+        elif ord_ and " " not in ord_.strip():
+            st = _stam(ord_)
+            if len(st) >= 4 and st in s.lower().replace(" ", ""):
+                lagg("cirkular_synonym", f"{s!r} innehåller uppslagsordet -- avslöjar svaret")
+    if synonym_groups:
+        if any(not [x for x in g if (x or "").strip()] for g in synonym_groups):
+            lagg("tom_synonymgrupp", "tom grupp ger ett '; '-artefakt på kortet")
+        if len(synonym_groups) != len(ms):
+            lagg("grupper_matchar_ej_betydelser",
+                 f"{len(synonym_groups)} synonymgrupper mot {len(ms)} betydelser")
+        storlekar = [len([x for x in g if (x or "").strip()]) for g in synonym_groups]
+        if storlekar and max(storlekar) - min(storlekar) >= 2:
+            lagg("osymmetriska_grupper", f"gruppstorlekar {storlekar} -- sikta symmetriskt")
+
+    # --- Register ---
+    if register:
+        nreg = len([r for r in register.split(";") if r.strip()])
+        if nreg > len(ms):
+            lagg("fler_register_an_betydelser", f"{nreg} register mot {len(ms)} betydelser")
+
+    # --- Kvarglömd HTML var som helst ---
+    hittad = [j for j in _HTML_SKRAP if j in ex_raw or j in hb]
+    if hittad:
+        lagg("html_skrap", "kvarglömd HTML: " + ", ".join(repr(j) for j in hittad))
+
+    return fel, varn
+
+
 def validate_register(register):
     """Returnerar lista med varningssträngar (tom = ok). Kollar mot den låsta
     vokabulären i config.py — kraschar inte, bara ett granskningshjälpmedel.

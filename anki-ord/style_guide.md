@@ -3,6 +3,45 @@
 Detta dokument växer i takt med granskningspassen. Målet är definitioner som
 Adam förstår direkt, utan att behöva slå upp fler ord.
 
+## Adam-tal är numera en SPÄRR, inte bara en checklista (2026-08-07)
+
+De regler nedan som går att avgöra mekaniskt ligger i
+`baksida.validate_adamtal()` och **blockerar skrivning** i båda
+skrivvägarna — `apply_flerbetydelse.apply_card()`/`apply_pass()` (kastar
+`ValueError`) och `apply_updates.apply_single()` (hoppar över kortet).
+Ett kort som bryter mot dem går alltså inte att skriva längre.
+
+Bakgrunden är registret: reglerna för det stod i den här filen i två
+dagar och hamnade ändå fel på 37 av 50 kort, ända tills kontrollen blev
+en hård spärr i skrivvägen. Adam-tal hade exakt samma lucka — prosa som
+granskaren skulle minnas, plus `lint_adamtal.py` som körs i efterhand.
+Ett kort som skrivs fel och upptäcks en vecka senare har Adam redan
+pluggat in.
+
+- **Hårda regler** (`baksida.ADAMTAL_HARDA`) — blockerar. Valda för att
+  de mätt 0 falsklarm på hela decket: saknad highlight, tom
+  exempelmening, avslutande skiljetecken i Huvudbetydelse, `;` utan
+  mellanslag, HTML i Huvudbetydelse, kvarglömd HTML, tom synonym/
+  synonymgrupp, synonymgrupper som inte matchar antalet betydelser,
+  fler register än betydelser.
+- **Mjuka regler** (`baksida.ADAMTAL_MJUKA`) — varnar, blockerar aldrig:
+  flera meningar, fragment-exempel, ordbokslängd, cirkulär definition,
+  cirkulär synonym, osymmetriska grupper. De har kända legitima undantag
+  och att göra dem hårda hade tvingat fram sämre kort.
+- **Undantag** görs med `tillat=["regelnamn"]` (eller `"tillat"` i
+  sessionsfilen), inte genom att mjuka upp regeln. Då syns undantaget i
+  sessionsfilen istället för att försvinna. Kanoniskt exempel: **anafor**,
+  vars exempelmening MÅSTE ha flera meningar eftersom kortet illustrerar
+  stilfiguren genom att upprepa satsinledningen ("Jag kommer. Jag ser.
+  Jag förstår.").
+
+**Resten av den här filen är fortfarande det som betyder mest.** Spärren
+fångar bara form. Att skriva vardagligt, konkret och minnesvärt — och att
+inte förklara ett svårt ord med ett annat lika svårt — kan ingen
+regexkontroll avgöra. `lint_adamtal.py` är den retroaktiva vyn för kort
+som skrevs innan spärren fanns; regellogiken bor i `baksida.py`, aldrig
+duplicerad.
+
 ## Struktur — icke förhandlingsbart
 
 - **Flaggan är den enda sanningskällan.** Taggar (ai_uncertain, ai_optimized,

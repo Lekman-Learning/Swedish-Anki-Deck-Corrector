@@ -66,16 +66,50 @@ def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None):
 def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
                 exempelmening="", register=None, bild_html=None,
                 mode="snabbkoll2", escalated=False, today=None,
-                has_old_match=None):
-    """Bygger v2-baksida och skriver den. Vägrar (ValueError) om
-    registret är ogiltigt enligt baksida.validate_register() -- se
-    style_guide.md, registret är obligatoriskt, aldrig valfritt.
+                has_old_match=None, ord_=None, tillat=()):
+    """Bygger v2-baksida och skriver den.
+
+    Vägrar (ValueError) skriva ett kort som bryter mot
+      * baksida.validate_register()  -- registret är obligatoriskt
+      * baksida.validate_adamtal()   -- de HÅRDA Adam-tal-reglerna
+
+    Adam-tal-spärren tillkom 2026-08-07 av samma skäl som register-
+    spärren: reglerna fanns i style_guide.md men bara som prosa granskaren
+    skulle minnas, och kontrollerades i efterhand av lint_adamtal.py. Ett
+    kort som skrivs FEL och upptäcks en vecka senare har Adam redan
+    pluggat in. Mjuka anmärkningar returneras istället för att blockera.
 
     has_old_match: krävs för icke-eskalerade kort, styr Grön/Gul-flaggan.
+    ord_:          uppslagsordet, för cirkularitetskontrollerna. Hämtas
+                   från Anki om det inte skickas med.
+    tillat:        regelnamn som medvetet får brytas, t.ex.
+                   tillat=["flera_meningar"] för anafor-kortet.
+
+    Returnerar listan med mjuka anmärkningar (tom = kortet är rent).
     """
     warnings = baksida.validate_register(register)
     if warnings:
         raise ValueError(f"{note_id} ({huvudbetydelse!r}): registret ogiltigt - {warnings}")
+
+    if ord_ is None:
+        info = invoke("notesInfo", notes=[note_id])
+        ord_ = info[0]["fields"][config.FIELD_ORD]["value"] if info else None
+
+    fel, mjuka = baksida.validate_adamtal(
+        huvudbetydelse=huvudbetydelse,
+        synonymer=synonymer,
+        synonym_groups=synonym_groups,
+        exempelmening=exempelmening,
+        register=register,
+        ord_=ord_,
+        tillat=tillat,
+    )
+    if fel:
+        raise ValueError(
+            f"{note_id} ({ord_!r}): bryter mot Adam-tal (style_guide.md) - "
+            + "; ".join(fel)
+            + ". Rätta kortet, eller skicka tillat=[...] om undantaget är motiverat."
+        )
 
     new_baksida = baksida.build(
         huvudbetydelse=huvudbetydelse,
@@ -95,10 +129,11 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
     # inte i någon uppföljande kontroll.
     invoke("addTags", notes=[note_id], tags=config.FORMAT_TAG_V2)
     _tag_and_flag(note_id, mode, escalated, today, has_old_match)
+    return mjuka
 
 
 def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
-               has_old_match=None):
+               has_old_match=None, tillat=()):
     """Taggar/flaggar ett kort UTAN att skriva om Baksida (kortet är
     redan korrekt v2-format och behöver inget innehållsbyte). Läser
     kortets NUVARANDE register direkt från Anki och vägrar (ValueError)
@@ -108,6 +143,7 @@ def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
     if not note_info:
         raise ValueError(f"hittade inget kort för noteId {note_id}")
     raw = note_info[0]["fields"][config.FIELD_BAKSIDA]["value"]
+    ord_ = note_info[0]["fields"][config.FIELD_ORD]["value"]
     parsed = baksida.parse(raw)
     warnings = baksida.validate_register(parsed["register"])
     if warnings:
@@ -115,7 +151,25 @@ def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
             f"{note_id}: nuvarande register ogiltigt - {warnings}. "
             "Kortet är inte redo för apply_pass(), använd apply_card() för att rätta det först."
         )
+    # apply_pass() betyder "kortet är redan rätt och behöver ingen
+    # innehållsändring" -- då måste det också klara Adam-tal, annars är
+    # påståendet falskt och kortet godkänns med ett formfel kvar.
+    fel, mjuka = baksida.validate_adamtal(
+        huvudbetydelse=parsed["huvudbetydelse"],
+        synonymer=parsed["synonymer"],
+        synonym_groups=parsed["synonym_groups"],
+        exempelmening=parsed["exempelmening"],
+        register=parsed["register"],
+        ord_=ord_,
+        tillat=tillat,
+    )
+    if fel:
+        raise ValueError(
+            f"{note_id} ({ord_!r}): kortet bryter mot Adam-tal - " + "; ".join(fel)
+            + ". Använd apply_card() för att rätta det istället för apply_pass()."
+        )
     _tag_and_flag(note_id, mode, escalated, today, has_old_match)
+    return mjuka
 
 
 def apply_batch_unsuspend(note_ids):
