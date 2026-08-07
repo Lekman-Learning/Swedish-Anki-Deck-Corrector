@@ -46,7 +46,13 @@ _MAIN_RE = re.compile(
     re.DOTALL,
 )
 _REGISTER_LINE_RE = re.compile(r"\(([^)]*)\)")
-_IMG_TAIL_RE = re.compile(r"(<br>\s*<br>\s*<img.*)$", re.DOTALL)
+# Ett eller flera <br> före <img>, inte exakt två: build() skriver alltid
+# <br><br>, men äldre/handredigerade kort kan ha ett enda <br> (hittat
+# 2026-08-07 på "faun"). Med det gamla, strikta mönstret returnerade
+# parse() bild_html=None för sådana kort, och nästa parse->build RADERADE
+# bilden tyst -- t.ex. i restore_images_from_old_deck.py eller vilken
+# innehållsfix som helst som bygger om kortet.
+_IMG_TAIL_RE = re.compile(r"((?:<br>\s*)+<img.*)$", re.DOTALL)
 # Fet bokstav är bredare än ett &nbsp;-mellanslag, så en ren teckenräkning
 # hamnar för långt till vänster (upptäckt 2026-08-05, Adam: registret för
 # betydelse 2 landade mitt i ; -gränsen istället för till höger om den).

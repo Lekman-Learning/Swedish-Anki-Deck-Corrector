@@ -2238,15 +2238,96 @@ eftersom betydelsen redan var sökverifierad samma dag): huvudbetydelse
 → `"En okontrollerad folkmassa ; människor från samhällets lägsta
 skikt"`, flagga Röd → Blå, ny tagg `eller_separator_fixad::2026-08-07`.
 
-**Kvarstår, ej gjort:** ingen systematisk sökning efter fler kort med
-`", eller"`/`" eller "`-mönstret i huvudbetydelsen (motsvarande
-`find_old_slash_separator.py`, men för komma/"eller" istället för `/`).
-De ~20 tidigare kända (batch3, rad ~1196) och de ad-hoc hittade
-(vandal, atmosfär, parhäst, census) är sannolikt inte hela listan —
-snabbkoll2/sökverifiering har nu visat sig missa mönstret även på kort
-som "klarat" båda kontrollerna. **Beslutat: nästa sökning efter detta
-mönster ska köras med Opus** (inte snabbkoll2/Sonnet-passet) och
-verifiera varje träff mot OLD-decket/källa innan fix, inte bara byta
-separatortecken blint — eftersom skilj-tecknet i sig inte avslöjar OM
-de två sidorna om kommatecknet verkligen är skilda betydelser (kan
-också vara en genuin uppräkning som råkar innehålla ordet "eller").
+## "eller"-separatorn: full svepning klar, 70 kort fixade (2026-08-07, Opus)
+
+Uppföljningen av pöbel-fyndet ovan, körd med Opus enligt beslutet.
+Nytt permanent script: **`find_eller_separator.py`** (systerscript till
+`find_old_slash_separator.py`). Ändrar inget själv — "eller" är ett
+normalt svenskt ord inuti EN betydelse ("kunglig eller kejserlig titel",
+"inte kan läsa eller skriva"), så en blind ersättning skulle förstöra
+fler kort än den lagar. Scriptet rankar istället kandidater i tre nivåer
+och lämnar bedömningen till granskaren:
+
+| Nivå | Signal | Träffar | Utfall |
+|---|---|---|---|
+| `hog` | `synonym_groups` har 2+ grupper men Huvudbetydelse saknar ` ; ` | 2 | båda buggar |
+| `medel` | `", eller"` (komma + eller) utan ` ; ` | 68 | alla åtgärdade |
+| `lag` | något `" eller "` alls, utan ` ; ` | 484 | **0 buggar** — genomlästa, "eller" står inuti en betydelse |
+
+**Kommatecknet var den avgörande signalen.** `lag`-nivån (484 kort) var
+helt ren; hela felmassan låg i `", eller"`. Det är den kontroll som ska
+återanvändas, inte "letar efter ordet eller".
+
+**70 kort rättade och applicerade**, alla verifierade mot OLD-facit/
+ordkunskap ett och ett (inte regex):
+- **61 fick ` ; `** — genuint skilda betydelser. Flera bekräftades av att
+  OLD-facit självt använde `;` (anhålla "begära; beröva misstänkt", dåna
+  "mullra; svimma", skarv "där två delar sitter ihop; sjöfågel", gehör,
+  eldfängd, kvadrant, moderera, spekulera, anvisa). Grövsta fallen var
+  rena homonymer: **legat** (arv / påvligt sändebud), **skarv** (fog /
+  sjöfågel), **försträcka** (låna ut pengar / skada en muskel).
+  **beslå** hade TRE betydelser hopbuntade och fick två `;`.
+- **9 fick ` / `** istället — leden var omformuleringar av SAMMA
+  betydelse, där ` ; ` hade varit lika fel som "eller" (det påstår två
+  betydelser som inte finns): agglomerera, antåga, bjäbba, furste,
+  huttla med någon, karitativ, knivig, moratorium, vetta.
+- **överlastad** fick också andra ledet omskrivet — det definierade
+  uppslagsordet med sig självt ("överlastad med för mycket dekor").
+
+Beslutsunderlaget per kort ligger kvar i
+`sessions/session_2026-08-07_eller-separator.json` (`proposed` +
+`note_till_granskare` på alla 554), med före-läget i
+`..._backup.json`. Alla 70 taggade `eller_separator_fixad::2026-08-07`.
+Flaggorna rördes INTE — det här var en formatfix, inte en omgranskning.
+Omkörning efter fix: `hog: 0, medel: 0`.
+
+**Lärdomen om kontrollerna, inte om orden:** pöbel hade passerat både
+`flerbetydelse_snabbkoll2` och `flerbetydelse_sokverifierad` samma dag.
+Båda kollar SAKINNEHÅLL (stämmer betydelsen? saknas någon?), ingen av dem
+kollar FORM. De 70 korten var alltså inte sakligt fel — betydelserna
+fanns där, de var bara hopbuntade så att kortet läser som en betydelse
+istället för två. Mekaniska formkontroller (som denna och
+`find_old_slash_separator.py`) hittar en klass av fel som ingen mängd
+innehållsgranskning fångar, och är i stort sett gratis att köra om.
+
+## Kodgenomgång: hela kodbasen verifierad mot live-decket (2026-08-07)
+
+Alla 27 script lästa och kontrollerade, plus en körning av hela
+v2-poolen (3202 kort) genom `baksida.py`. Resultat:
+
+| Kontroll | Utfall |
+|---|---|
+| Alla moduler importerar rent | 27/27 |
+| `parse()` klarar varje v2-kort | 3202/3202 |
+| `parse()` → `build()` identisk med originalet | 3202/3202 (efter fix nedan) |
+| Register saknas / ogiltigt | 0 / 0 |
+
+Registerkontrollen är alltså helt ren — den hårda spärren i
+`apply_flerbetydelse.apply_card()` har gjort sitt jobb; de 37/50 utan
+giltigt register som motiverade spärren har ingen motsvarighet kvar.
+
+**Två riktiga buggar hittade och fixade:**
+
+1. **`baksida.py`: `parse()` tappade bilden på kort med ett enda `<br>`
+   före `<img>`** (`_IMG_TAIL_RE` krävde exakt två). För sådana kort
+   returnerade `parse()` `bild_html=None`, och nästa `parse()`→`build()`
+   **raderade bilden tyst** — alltså vilken innehållsfix som helst, eller
+   `restore_images_from_old_deck.py`. Träffade 1 av 766 bildkort
+   (**faun**), som därmed låg en godtycklig framtida omskrivning från att
+   förlora sin bild. Regexen tar nu ett-eller-flera `<br>`; faun-kortets
+   `<img>` normaliserades samtidigt till standardformatet med `style=`.
+   Testat att `<br>` inuti en exempelmening fortfarande inte förväxlas
+   med en bild.
+
+2. **`queue_lib.write_session()` skrev tyst över en befintlig
+   sessionsfil.** Eftersom granskningen (`approved`/`proposed`) lagras I
+   sessionsfilen raderade en andra körning av t.ex. `fetch_queue.py`
+   samma dag hela det första passets arbete. `snabbkoll2*.py` hade redan
+   en `while os.path.exists`-dedup lokalt — den flyttades till
+   `write_session()` så att alla `fetch_*`/`scan_*`-script skyddas
+   likadant (andra körningen får `-batch2`).
+
+**Iakttagelse, inte åtgärdad:** `avkastning` har OLD-facit "vinst; skörd"
+men kortet saknar skörde-betydelsen. Det är "saknad betydelse"-mönstret
+(det vanligaste felet enligt sökkollarna ovan), inte en separatorbugg —
+noterat här för nästa innehållspass, inte fixat i denna omgång.

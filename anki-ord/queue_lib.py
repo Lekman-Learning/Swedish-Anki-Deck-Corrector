@@ -78,12 +78,25 @@ def build_tags_by_note(cards_info):
 
 
 def write_session(queue, name_suffix=""):
+    """Skriver en ny sessionsfil. Skriver ALDRIG över en befintlig fil --
+    en andra körning samma dag får suffixet -batch2, -batch3, osv.
+
+    Granskningen (godkänt/förkastat, proposed-texter) lagras I sessionsfilen,
+    så en tyst överskrivning raderade tidigare ett helt granskningspass om
+    t.ex. fetch_queue.py kördes två gånger samma dag. snabbkoll2*.py hade
+    redan denna dedup-loop lokalt; den flyttades hit 2026-08-07 så att alla
+    fetch_*/scan_*-skript skyddas likadant.
+    """
     if not queue:
         return None
     today = datetime.date.today().isoformat()
     sessions_dir = os.path.join(os.path.dirname(__file__), "sessions")
     os.makedirs(sessions_dir, exist_ok=True)
     out_path = os.path.join(sessions_dir, f"session_{today}{name_suffix}.json")
+    n = 2
+    while os.path.exists(out_path):
+        out_path = os.path.join(sessions_dir, f"session_{today}{name_suffix}-batch{n}.json")
+        n += 1
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(queue, f, ensure_ascii=False, indent=2)
     return out_path
