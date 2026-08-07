@@ -124,9 +124,11 @@ def main():
         json.dump(poster, f, ensure_ascii=False, indent=2)
 
     # Markera korten som uttagna så nästa körning inte tar samma igen.
-    for e in poster:
-        invoke("addTags", notes=[e["noteId"]],
-               tags=f"{config.DAGSBATCH_TAG_PREFIX}::{idag}")
+    # ETT anrop för hela batchen, inte 125 stycken: ett avbrott mitt i en
+    # kort-för-kort-loop hade lämnat halva batchen otaggad, och nästa
+    # körning hade då plockat upp samma kort igen och dubblerat arbetet.
+    invoke("addTags", notes=[e["noteId"] for e in poster],
+           tags=f"{config.DAGSBATCH_TAG_PREFIX}::{idag}")
 
     if args.dump:
         rader = []

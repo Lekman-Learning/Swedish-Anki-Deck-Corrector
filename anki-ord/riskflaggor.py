@@ -22,6 +22,7 @@ sökverifierade). Det är den felklassen de flesta signalerna nedan siktar
 på.
 """
 
+import html
 import re
 
 import baksida
@@ -44,10 +45,15 @@ def _innehallsord(text):
 def _old_delar(old_facit):
     """OLD-facit skiljer betydelser med ';'. Delar upp och rensar bort
     inbakade exempelmeningar (vanligt i OLD-decket -- 'randas: börja**en
-    ny dag randas**; ...' är EN betydelse plus ett exempel, inte två)."""
+    ny dag randas**; ...' är EN betydelse plus ett exempel, inte två).
+
+    HTML-entiteter avkodas FÖRE delningen: '&amp;' och '&nbsp;' slutar
+    båda på semikolon, så en rå split gav "Adam &amp" + en rest som föll
+    bort på ordlängdsfiltret -- granskaren fick då se fel text i flaggan
+    (hittat vid egengranskning 2026-08-07)."""
     if not old_facit:
         return []
-    txt = re.sub(r"<[^>]+>", " ", old_facit).replace("&nbsp;", " ")
+    txt = html.unescape(re.sub(r"<[^>]+>", " ", old_facit))
     delar = [d.strip(" .,") for d in txt.split(";")]
     return [d for d in delar if d and len(d.split()) <= 6]
 
@@ -59,7 +65,15 @@ def berakna(ord_, legacy, old_facit):
     definitioner/synonymer/exempelmening, INTE ett v2-kort.
     """
     flaggor = []
-    defs = [d for d in (legacy.get("definitioner") or []) if d and d.strip()]
+    # Poolen ska bara innehålla legacy-kort, men ett kort kan vara v2 till
+    # INNEHÅLLET utan att bära kortformat::v2 -- exakt den buggen fanns på
+    # 26 kort 2026-08-07. Då ligger betydelserna i huvudbetydelse, inte i
+    # definitioner, och utan den här grenen räknades de som noll betydelser
+    # och kortet fick falsklarm om "saknad betydelse".
+    if legacy.get("huvudbetydelse"):
+        defs = baksida.betydelser(legacy["huvudbetydelse"])
+    else:
+        defs = [d for d in (legacy.get("definitioner") or []) if d and d.strip()]
     syns = [s for s in (legacy.get("synonymer") or []) if s and s.strip()]
     old_delar = _old_delar(old_facit)
 

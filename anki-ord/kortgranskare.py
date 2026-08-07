@@ -92,7 +92,7 @@ def applicera(sokvag):
                 synonym_groups=p.get("synonym_groups"),
                 exempelmening=p.get("exempelmening", ""),
                 register=p.get("register"),
-                bild_html=p.get("bild_html", e["legacy"].get("bild_html")),
+                bild_html=p.get("bild_html", (e.get("legacy") or {}).get("bild_html")),
                 mode="sokkoll", escalated=True,
                 ord_=e["ord"], tillat=e.get("tillat", ()),
             )
@@ -133,7 +133,16 @@ def paket(sokvag):
             "verdikt": None,
             "anmarkning": None,
         })
-    mal = f"{os.path.splitext(sokvag)[0].replace('_v3-batch', '_v3-paket')}.json"
+    # Målnamnet MÅSTE skilja sig från indatafilen. Utan den här kontrollen
+    # blev målet identiskt med källan för varje fil som inte råkade heta
+    # "_v3-batch" -- och paketet hade då skrivit över den granskade
+    # sessionsfilen med all sökkoll i (hittat vid egengranskning 2026-08-07).
+    stam = os.path.splitext(sokvag)[0]
+    mal = f"{stam.replace('_v3-batch', '_v3-paket')}.json"
+    if os.path.abspath(mal) == os.path.abspath(sokvag):
+        mal = f"{stam}_v3-paket.json"
+    if os.path.abspath(mal) == os.path.abspath(sokvag):  # bältet och hängslena
+        raise RuntimeError(f"vägrar skriva paketet över indatafilen {sokvag}")
     _skriv(mal, {"instruktion": VERIFIERARINSTRUKTION, "poster": ut})
     print(f"Skrev {len(ut)} blinda verifieringsposter till {mal}")
     print("Låt en FRISTÅENDE granskare fylla i verdikt/anmarkning, kör sedan 'verdikt'.")
