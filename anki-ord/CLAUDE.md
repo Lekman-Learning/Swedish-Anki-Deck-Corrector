@@ -2080,3 +2080,57 @@ suspenderat, av skäl utanför flerbetydelse-processen).
 Adams egen mätning: ca 2 % av veckokvoten och 5 % av 5-timmarsfönstret för
 denna 22-korts full-sökkoll-runda — ett användbart riktmärke för att skala
 upp mot Blå Nya-poolen.
+
+## Testbatch 2: full sökkoll på 50 kort ur den suspenderade Blå Nya-poolen (2026-08-07)
+
+Adam menade egentligen `is:new` (inte `is:learn`) för 50-korts-testet. 50
+kort hämtade ur den ~6 900 kort stora suspenderade "Blå Nya"-poolen
+(`is:new -tag:flerbetydelse_granskad::*`), full sökkoll (50 WebSearch-anrop,
+ett per ord).
+
+**Viktig skillnad mot is:review/is:learn-poolerna**: dessa 50 kort var INTE
+i v2-format — de låg kvar i ett äldre mellanformat
+(`<font>synonymer</font><br><br><ol><li>definition</li></ol>`), aldrig
+migrerade. Sökkollen blev därför en full v2-migrering av alla 50, inte bara
+en jämförelse. Detta avslöjade buggtyper som inte synts i de redan
+v2-migrerade poolerna:
+
+- **Engelska läckor**: "lägra sig" hade två definitioner skrivna på
+  ENGELSKA istället för svenska. "degel" hade exempelmeningen "melting pot"
+  (bara det, på engelska). "knussel" hade hela synonymraden på engelska
+  (stinginess, parsimony, miserliness).
+- **Fabricerade/felaktiga tredjedefinitioner**: "manschett" hade en tredje
+  "definition" som beskrev vitkragebrottslighet ("brott begånget av en
+  ansedd person...") — inte en verklig betydelse av ordet i sig, borttagen.
+  "göt" hade en påhittad andra definition ("del av en större
+  metallkonstruktion") som inte stämmer med vad ett göt faktiskt är.
+  "tillskyndare" hade en andra "definition" som bara löd "Synonymt med
+  initiativtagare" — ett läckt metakommentar, inte en definition.
+- **Genuin missad betydelse**: "kangas" är en äkta homonym — dialektal
+  hedmark (meänkieli) OCH tyg/väv (finskt lånord, vilket också förklarar
+  varför OLD-decket hade "höftskynke" som facit) — kortet hade bara
+  hedmarksbetydelsen, plus en helt påhittad tredje "definition" om att
+  Kangas är ett vanligt finskt efternamn (borttagen, inte en ordbetydelse).
+- **Trasiga exempelmeningar**: flera kort hade tomma, ofullständiga eller
+  helt orelaterade exempelmeningar (t.ex. "jamare" hade en mening som inte
+  ens nämnde ordet).
+- **Nästan-dubblettdefinitioner**: de flesta korten hade två `<li>`-
+  definitioner som bara var omformuleringar av samma betydelse (inte
+  genuint skilda betydelser) — slogs ihop till en betydelse vid
+  migreringen, i linje med style_guide.mds " ; " (skilda betydelser) vs.
+  ingen separator (omformulering)-konvention.
+
+Alla 50 migrerade till v2, taggade `flerbetydelse_granskad::2026-08-07` +
+`flerbetydelse_snabbkoll2::2026-08-07` + `flerbetydelse_sokverifierad::2026-08-07`
++ `kortformat::v2`, flaggade Blå. **Fortfarande suspenderade** — de förblir
+dolda i sållningsfiltret tills Adam väljer att släppa in dem, i linje med
+"Sållningsfilter för Blå Nya"-policyn.
+
+**Slutsats för skalning**: Blå Nya-poolen är alltså inte bara en
+"jämför-mot-facit"-uppgift som is:review var, utan kräver en fullständig
+v2-migrering av mestadels aldrig-formaterat innehåll, med ett tydligt
+mönster av AI-genererade skräpdata (engelska läckor, fabricerade
+tredjedefinitioner, trasiga exempelmeningar) utöver de vanliga
+"saknad betydelse"-felen. Usage-kostnaden per kort är alltså sannolikt
+högre än för is:review (mer omfattande sökkoll + full omskrivning krävs
+för de flesta kort, inte bara en jämförelse).
