@@ -2008,3 +2008,53 @@ Alla 7 taggade `flerbetydelse_granskad::2026-08-07` +
 (alla krävde riktig sökkoll), flaggade Blå, och **avsuspenderade**. Detta var
 de sista kvarvarande suspenderade `is:review`-korten — inga suspenderade
 kort återstår i den poolen.
+
+## Snabbkoll 2.0 på is:review, omgång 2 (SISTA): 282 kort — is:review HELT KLART (2026-08-07)
+
+Adam bad om att göra alla resterande 282 icke-suspenderade `is:review`-kort i
+en enda omgång. OLD-täckning 280/282. **19 kort eskalerade** till riktig
+sökkoll (WebSearch mot SAOB/SAOL/synonymer.se/facksajter) — alla utom två
+var det dominerande mönstret från tidigare rundor: en **saknad andra
+betydelse**, oftast bildlig, som fanns i OLD-facit men inte på v2-kortet:
+
+- **tillskriva**: saknade den ålderdomliga "skriva formellt brev till någon"-
+  betydelsen (bara "anse bero på" fanns).
+- **bördig**: saknade helt den extremt vanliga "ha sitt ursprung/härstamma
+  från en plats"-betydelsen (bara "fruktbar om jord" fanns).
+- **långskott**: kortet hade redan ett tomt " ; " i huvudbetydelsen (ett
+  påbörjat men aldrig avslutat försök till bibetydelse) — bildliga
+  "vild gissning/vågspel med liten chans att lyckas" tillagd.
+- **löslig, ljum, grace, referera, raffinerad, legislatur, mångfaldiga,
+  infinit, färga, ränna in, skifte**: samma mönster, en bildlig eller
+  ålderdomlig bibetydelse tillagd (bl.a. ljum: bokstavligt "halvvarm" +
+  bildligt "oengagerad", raffinerad: bokstavligt "renad" + bildligt
+  "listig/utstuderad", infinit: grammatisk term "icke-finit verbform" +
+  allmänspråkligt "oändlig").
+- **hamn** och **bankett**: två **genuina homonymer**, samma mönster som
+  "ok"/"sarv"/"konstruktivism" i tidigare rundor. "Hamn" har förutom
+  "skyddad plats för fartyg" en helt orelaterad ålderdomlig/mytologisk
+  betydelse: "skepnad/gestalt, vålnad" (fornnordiska "hamr", jfr
+  "hamnskifte" = skepnadsskifte). "Bankett" betyder förutom "festmåltid"
+  även, inom vägteknik, "vägren" (den grusade remsan utanför körbanan).
+- **uniform**: kortet blandade ihop substantiv- och adjektivbetydelsen —
+  huvudbetydelsen beskrev bara substantivet (klädsel) men synonymen
+  ("likformig") hörde till adjektivet. Delat upp i två tydliga betydelser.
+- **eminens**: kortet hade bara den snäva "titel för katolsk kardinal"-
+  betydelsen, saknade den bredare grundbetydelsen "upphöjdhet, förnämlighet,
+  värdighet".
+- **honnörsord**: ingen saknad betydelse, men synonymen "hedersord" var fel
+  (betyder "hedersord/löfte", inte "honnörsord") — rättad till "värdeladdat
+  ord".
+
+Kandidater som undersöktes men INTE ändrades (för svag evidens eller
+bekräftades redan korrekta): resonera, låta påskina (bekräftades sakna den
+misstänkta "falskt"-nyansen — nuvarande text stämmer), fason, konnässans,
+skorra, varva, träda, karat, kneippkur.
+
+Alla 282 taggade `flerbetydelse_granskad::2026-08-07` +
+`flerbetydelse_snabbkoll2::2026-08-07`; de 19 rättade dessutom
+`flerbetydelse_sokverifierad::2026-08-07` och flaggade Blå, resten Gröna.
+**`is:review`-poolen är därmed helt klar** — 0 icke-granskade kort kvar i
+den kön. Enda kvarvarande arbete i projektet är den stora suspenderade
+"Blå Nya"-poolen (~6 900 kort, medvetet dold tills den släpps in i Adams
+nya-kort-kö).
