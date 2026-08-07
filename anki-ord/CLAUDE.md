@@ -2172,3 +2172,45 @@ men det är den dyra vägen usage-testerna ovan visar kostnaden för.
 Alla 50 taggade `flerbetydelse_sokverifierad::2026-08-07` (oavsett om de
 hade fel eller ej, eftersom alla nu faktiskt sökkollats), "goodwill"
 uppgraderad till Blå flagga.
+
+## Nytt verktyg: generaliserad v2-ombyggnad för Blå Nya, två lägen (2026-08-07)
+
+Testbatcharna ovan visade att `snabbkoll2_blanya.py` (som bara matchade
+redan v2-formaterade flag:4-kort) inte täcker den kvarvarande
+suspenderade poolen (~6 850 kort) — stora delar ligger fortfarande i det
+gamla `<ol><li>`-formatet. Tre nya, permanenta script byggdes (se
+`.claude/plans/elegant-singing-mochi.md` för fullständig design):
+
+- **`snabbkoll2_blanya_v2.py`** — breddad poolbyggare
+  (`is:new is:suspended -tag:flerbetydelse_granskad::*`, ingen flagg-
+  eller formatbegränsning). Parsar legacy-kort automatiskt via
+  `baksida.parse_legacy()` och beräknar `format_bug_hints` per kort
+  (`legacy_format`, `tom_exempelmening`, `exempel_saknar_ordet`,
+  `mojlig_dubblett`) — mjuka pekare för granskaren, inga auto-fixar.
+- **`condense_session.py`** — generisk kondenserad-dump-generator,
+  ersätter de ad-hoc scratchpad-scripten som skrevs om för hand i varje
+  omgång denna session. Fungerar på både v2- och legacy-`current`.
+- **`apply_flerbetydelse.py`** — delad apply-/tagg-/flagg-/
+  avsuspenderingslogik för båda lägena (`--mode snabbkoll2` eller
+  `--mode sokkoll`). `apply_card()` **vägrar** (ValueError) skriva ett
+  kort med ogiltigt/saknat register — direkt svar på att 37 av 50 kort
+  i en tidigare testbatch saknade giltigt register trots att
+  `baksida.validate_register()` redan fanns. `--mode sokkoll` kräver
+  dessutom `escalated=True` för varje kort (AssertionError annars).
+  `apply_batch_unsuspend()` dubbelkontrollerar register direkt mot Anki
+  innan avsuspendering, istället för att lita på vad som skickades in.
+
+**Verifieringskörning** (20 legacy-kort, `--mode snabbkoll2`, hela
+kedjan bygg→kondensera→granska→applicera→avsuspendera): 18/20 kort
+matchade OLD-facit/egen kunskap utan eskalering (merparten hade
+"nästan-dubblettdefinitioner" som slogs ihop till en betydelse, exakt
+det mönster verktyget flaggar). **2 eskalerade**: "agna" fick en
+bekräftad andra betydelse tillagd (agnar = sädesskal, saknades i
+OLD-facit). "kuliss" hade en påstådd tredje betydelse om skogsvård
+(bälte av kvarlämnade träd vid avverkning) som **inte gick att
+bekräfta via sökning och slopades** — ett konkret exempel på den
+fabricerade-legacy-text-buggen som motiverade hela verktygsbygget.
+Alla 20 v2-migrerade, taggade, flaggade och avsuspenderade.
+
+Nästa steg: köra verktyget i större batchar (`--batch-size 100+`) mot
+resten av den suspenderade poolen, i `snabbkoll2`-läge som standard.
