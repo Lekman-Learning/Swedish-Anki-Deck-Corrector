@@ -2541,3 +2541,74 @@ så de 82 inte behöver bedömas om. Före-läget för de 34 ligger i
 
 **Svepningen är billig och bör köras om** när OLD-decket eller
 kortmassan ändras — den är nu en engångskostnad i tid, inte i tokens.
+
+## v3.0 — kortbyggare + kortgranskare (2026-08-07, i drift från 2026-08-08)
+
+Från 2026-08-08 skrivs **125 kort/dag** om från legacy till v2 och släpps
+in i Adams kö. 6 805 kort kvar, **6 780 (100 %) har OLD-facit**, ~54
+dagar. Adams krav: varje släppt kort ska vara rätt, med sökkoll +
+OLD-facit + oberoende verifiering.
+
+### Fem script
+
+| Fil | Roll |
+|---|---|
+| `kortbyggare.py` | Bygger dagsbatchen. Samlar legacy-innehåll, OLD-facit, riskflaggor och Adam-tal-kraven per kort. Skriver aldrig till Anki. |
+| `riskflaggor.py` | Mekaniska risksignaler FÖRE skrivning. Styr var uppmärksamheten läggs. |
+| `kortgranskare.py` | `applicera` → `paket` → `verdikt` → `slapp`. Varje steg kontrollerar att det föregående faktiskt gjordes. |
+| `blint_stickprov.py` | Mäter felfrekvensen i redan släppta kort. Den enda delen som mäter om resten fungerar. |
+| `lint_adamtal.py` | Retroaktiv formkontroll (oförändrad). |
+
+### Det som gör v3 annorlunda: blind andragranskning
+
+`paket` skriver en fil med **enbart** uppslagsordet, OLD-facit och det
+färdiga kortet. Den innehåller medvetet INTE riskflaggorna,
+sökkollsanteckningarna, det gamla innehållet eller något annat som
+avslöjar hur kortet blev till.
+
+Skälet är mätt, inte principiellt: style_guide.md noterade risken redan
+om snabbkoll 2.0 (*"samma granskare ... i samma sittning"*), och
+2026-08-07 visade sig den befogad — 34 kort med saknad betydelse i
+material som passerat BÅDE snabbkoll OCH sökverifiering. **En granskare
+som kontrollerar sitt eget arbete bekräftar sig själv.** Verdikt-steget
+måste därför köras i en FRISTÅENDE kontext (ny session eller separat
+agent) som bara läser paketfilen.
+
+### Släppspärren — "granskat" är inte längre ett påstående
+
+`slapp` avsuspenderar bara kort som har alla taggar i
+`config.SLAPP_KRAVER_TAGGAR` (`kortformat::v2` +
+`flerbetydelse_granskad` + `flerbetydelse_sokverifierad` +
+`oberoende_verifierad`) OCH klarar register + hårda Adam-tal-reglerna
+kontrollerat mot **live-innehållet i Anki**, inte mot vad som en gång
+skickades in. Saknas något stannar kortet suspenderat.
+
+Dessutom vägrar `applicera` skriva ett kort vars `sokkoll`-fält är tomt
+— det är så kravet "sökkoll på varje kort" blir kontrollerbart i stället
+för en ambition.
+
+### Verifierat end-to-end 2026-08-07 (3 kort, inget släppt)
+
+- Släpp före verifiering: **0 av 3 släpptes**, alla blockerade på
+  `saknar oberoende_verifierad`.
+- Paketet läcker ingenting: kontrollerat mot `riskflaggor`, `sokkoll`,
+  `legacy`, `proposed`, `note_till_granskare`, `slutsats` — 0 träffar.
+- Verdiktvägen: 2 godkända släppbara, 1 underkänd hålls kvar.
+- Sökkollspärren: kort med tomt `sokkoll` skrevs inte.
+- Adam-tal-spärren: kort med exempelmening utan highlight skrevs inte.
+
+Testtaggarna togs bort efteråt — de tre korten är applicerade men
+**suspenderade och oberoende_verifierad saknas**, eftersom ingen
+fristående granskning faktiskt gjorts på dem. De ligger först i kön.
+
+De tre var i sig ett bevis på att flödet behövs: `approximativ` hade
+synonymen "tillnärmmelsevis" felstavad, `dandy` hade **"flåsig"** som
+synonym (sakligt fel — SAOB ger "sprätt, snobb, modelejon"), och
+`vara renons` hade två genuina betydelser hopslagna.
+
+### Vad v3 INTE garanterar
+
+Kedjan garanterar att inget kort når kön utan att ha passerat alla steg.
+Den garanterar **inte** att bedömningarna i stegen är riktiga. Det som
+gör kvaliteten mätbar är `blint_stickprov.py` — kör det varje vecka.
+Utan mätning är "verifierat" fortfarande bara ett ord.

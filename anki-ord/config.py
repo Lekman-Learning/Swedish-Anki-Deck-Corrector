@@ -69,3 +69,31 @@ FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX = "flerbetydelse_sokverifierad"  # eskale
 # rörs ALDRIG - de är Adams egen historik. Nya taggar läggs bara till.
 
 DEFAULT_BATCH_SIZE = 100  # Adam: granska/rätta 100 kort i taget per 5h-session
+
+# --- v3.0: kortbyggare + kortgranskare (beslutat 2026-08-07) ---
+#
+# Från 2026-08-08 skrivs 125 kort/dag om från legacy till v2 och släpps in
+# i Adams kö. Kravet: ett kort får INTE avsuspenderas förrän det passerat
+# hela kedjan. Tidigare var "granskat" ett påstående i en logg; nu är det
+# ett villkor maskinen kontrollerar före släpp (se kortgranskare.py).
+#
+# Den avgörande lärdomen bakom v3 (2026-08-07): en granskare som verifierar
+# sitt EGET arbete i samma sittning bekräftar sig själv. style_guide.md
+# noterade risken redan om snabbkoll 2.0 ("samma granskare ... i samma
+# sittning"), och den visade sig befogad -- 34 kort med saknad betydelse
+# hittades i material som passerat både snabbkoll OCH sökverifiering.
+# Därför är OBEROENDE_TAG_PREFIX skild från SOKVERIFIERAD: den får bara
+# sättas av en granskare som sett kortet UTAN att se hur det blev till.
+OBEROENDE_TAG_PREFIX = "oberoende_verifierad"  # blind andragranskning, ren kontext
+DAGSBATCH_TAG_PREFIX = "v3_dagsbatch"          # v3_dagsbatch::YYYY-MM-DD, spårar vilken batch kortet kom i
+DAGSBATCH_STORLEK = 125                        # Adam 2026-08-07
+
+# Taggar ett kort MÅSTE ha för att få avsuspenderas av kortgranskare.slapp().
+# Register och Adam-tal kontrolleras dessutom mot LIVE-innehållet, inte mot
+# vad som en gång skickades in -- se kortgranskare.kontrollera_slappbar().
+SLAPP_KRAVER_TAGGAR = (
+    FORMAT_TAG_V2,                          # kortet är faktiskt v2
+    FLERBETYDELSE_TAG_PREFIX,                # flerbetydelse-kollen körd
+    FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX,  # riktig sökkoll gjord
+    OBEROENDE_TAG_PREFIX,                    # blind andragranskning godkänd
+)
