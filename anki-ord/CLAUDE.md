@@ -1962,3 +1962,49 @@ behövdes på vår sida.
 inga fel hittade). **"Lär om"-kön är därmed också helt klar** — samtliga
 icke-suspenderade `is:learn`-kort i decket har nu gått igenom
 flerbetydelse-processen.
+
+## Snabbkoll 2.0 på de 7 suspenderade is:review-korten, alla avsuspenderade (2026-08-07)
+
+De sista 7 suspenderade `is:review`-korten (gentaga, lokus, pracka, gardera
+med en kyss, apparelj, jag mötte lassie, bjugg) — alla i legacy-format utom
+bjugg, alla märkta `ej_v2_granskat`/`konfidens::0`/`granska_först`/
+`granska_fabricerat` sedan tidigare — gicks igenom och avsuspenderades.
+
+Eftersom inget av korten hade riktigt v2-innehåll att jämföra mot OLD-facit
+krävde alla sju en full sökkoll (inte bara OLD-jämförelse), med några
+konkreta fynd:
+
+- **gentaga**: taggad `granska_fabricerat` sedan tidigare (misstänkt
+  påhittat ord) — **INTE fabricerat**. SAOB bekräftar ordet, betyder
+  "upprepa" (särskilt om ord/framställning/motiv/melodi). Legacy-
+  innehållet var korrekt, migrerat oförändrat till v2, register "arkaisk".
+  `granska_fabricerat`-taggen rörs inte (Adams egen historik) men
+  misstanken är alltså vederlagd.
+- **gardera med en kyss** → **Framsidan ändrad till "gardera med kryss"**:
+  uttrycket med "kyss" (puss) verkar ha varit en felskrivning/fabrikation —
+  det etablerade uttrycket är "gardera med kryss" (stryktipset: täcka både
+  1:an och kryss/oavgjort när man är osäker), och OLD-facit ("säga ngt med
+  reservation för att resultatet kan bli annorlunda") matchar kryss-
+  betydelsen exakt, inte kyss-betydelsen. Adam bekräftade ändringen innan
+  den applicerades (jfr `style_guide.md`, gentaga-precedenten om att aldrig
+  byta ett ords identitet utan godkännande).
+- **jag mötte lassie**: legacy-definitionen ("möta en kändis") var för
+  bokstavlig — uttrycket myntades av Petter Karlsson på Expressen och
+  betyder specifikt att skryta om en flyktig/avlägsen kändiskontakt (ofta
+  en långsökt koppling på en vardaglig plats). Nyanserad till att fånga
+  den skämtsamma/skrytsamma vinkeln, matchar OLD-facit ("avlägsen relation
+  till en känd person") bättre.
+- **apparelj, lokus, pracka, bjugg**: legacy/v2-innehållet stämde med
+  OLD-facit och egen kunskap, migrerade/lämnade oförändrade i sak.
+  **Uppföljning att göra**: "pracka" kan ha en andra, mycket vanligare
+  betydelse (verbet i "pracka på" = tvinga/lura på någon något) utöver den
+  nuvarande enda betydelsen (dialektalt/äldre namn på sjöfågeln småskrake)
+  — hittades men hann inte bekräftas fullt ut innan WebSearch-
+  sessionsgränsen tog slut. Inte tillagt än, flaggas för nästa
+  granskningsrunda.
+
+Alla 7 taggade `flerbetydelse_granskad::2026-08-07` +
+`flerbetydelse_snabbkoll2::2026-08-07` + `flerbetydelse_sokverifierad::2026-08-07`
+(alla krävde riktig sökkoll), flaggade Blå, och **avsuspenderade**. Detta var
+de sista kvarvarande suspenderade `is:review`-korten — inga suspenderade
+kort återstår i den poolen.
