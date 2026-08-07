@@ -2058,3 +2058,25 @@ Alla 282 taggade `flerbetydelse_granskad::2026-08-07` +
 den kön. Enda kvarvarande arbete i projektet är den stora suspenderade
 "Blå Nya"-poolen (~6 900 kort, medvetet dold tills den släpps in i Adams
 nya-kort-kö).
+
+## Testbatch: full sökkoll på alla 22 icke-sökkollade is:learn-kort (2026-08-07)
+
+Adam ville mäta hur mycket "usage" (Claude-sessionskvot) en full sökkollrunda
+(WebSearch på VARJE kort, inte bara eskalerade) drar, som underlag för att
+uppskatta vad en hel Blå Nya-runda (~6 900 kort) skulle kosta. is:learn hade
+bara 22 icke-sökkollade kort kvar (15 redan snabbkoll2-godkända + 7 helt
+osedda, suspenderade) — för få för en 50-kortsbatch, så hela poolen kördes.
+
+22 WebSearch-anrop, ett per ord. **21/22 bekräftades korrekta som de var.**
+Ett fel hittades: **brokad** saknade den definierande "guldtråd"-detaljen
+(brokad är historiskt specifikt vävt med guld-/silvertråd, inte bara
+"mönstrat sidentyg" i allmänhet) — rättat.
+
+Alla 22 taggade `flerbetydelse_sokverifierad::2026-08-07` (utöver
+granskad/snabbkoll2), flaggade Blå. De 7 suspenderade av dem avsuspenderade.
+`is:learn` har nu 0 icke-sökverifierade kort kvar (bara ett kort förblir
+suspenderat, av skäl utanför flerbetydelse-processen).
+
+Adams egen mätning: ca 2 % av veckokvoten och 5 % av 5-timmarsfönstret för
+denna 22-korts full-sökkoll-runda — ett användbart riktmärke för att skala
+upp mot Blå Nya-poolen.
