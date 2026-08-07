@@ -2214,3 +2214,39 @@ Alla 20 v2-migrerade, taggade, flaggade och avsuspenderade.
 
 Nästa steg: köra verktyget i större batchar (`--batch-size 100+`) mot
 resten av den suspenderade poolen, i `snabbkoll2`-läge som standard.
+
+## "eller"-separatorbugg upptäckt igen på "pöbel", trots sökverifiering samma dag (2026-08-07)
+
+Adam hittade manuellt (Röd-flaggade) att **pöbel** hade
+`"en okontrollerad folkmassa, eller människor från samhällets lägsta
+skikt"` som huvudbetydelse — samma `"eller/;"`-buggmönster som
+vandal/atmosfär/parhäst/census tidigare (se ovan), fast här med ett
+extra kommatecken (`", eller"`) framför. Två genuint skilda betydelser
+(arg folkmassa vs. person från lägsta samhällsskiktet) skrivna som om
+de vore löst utbytbara, istället för den överenskomna `" ; "`-
+separatorn. Buggen introducerades i `session_2026-08-04_migration-
+format.json` under Fas 2-kondenseringen och applicerades sedan.
+
+**Anmärkningsvärt:** kortet gick igenom BÅDE `flerbetydelse_snabbkoll2`
+OCH `flerbetydelse_sokverifierad` tidigare samma dag (2026-08-07,
+"Nytt verktyg"-passet ovan) utan att separatorbuggen fångades — varken
+snabbkoll 2.0 eller den riktiga sökkollen är skriven för att leta efter
+just detta formateringsmönster, bara sakfel i själva betydelsen.
+
+**Fixat mekaniskt** (direkt via AnkiConnect, ingen ny innehållsgranskning
+eftersom betydelsen redan var sökverifierad samma dag): huvudbetydelse
+→ `"En okontrollerad folkmassa ; människor från samhällets lägsta
+skikt"`, flagga Röd → Blå, ny tagg `eller_separator_fixad::2026-08-07`.
+
+**Kvarstår, ej gjort:** ingen systematisk sökning efter fler kort med
+`", eller"`/`" eller "`-mönstret i huvudbetydelsen (motsvarande
+`find_old_slash_separator.py`, men för komma/"eller" istället för `/`).
+De ~20 tidigare kända (batch3, rad ~1196) och de ad-hoc hittade
+(vandal, atmosfär, parhäst, census) är sannolikt inte hela listan —
+snabbkoll2/sökverifiering har nu visat sig missa mönstret även på kort
+som "klarat" båda kontrollerna. **Beslutat: nästa sökning efter detta
+mönster ska köras med Opus** (inte snabbkoll2/Sonnet-passet) och
+verifiera varje träff mot OLD-decket/källa innan fix, inte bara byta
+separatortecken blint — eftersom skilj-tecknet i sig inte avslöjar OM
+de två sidorna om kommatecknet verkligen är skilda betydelser (kan
+också vara en genuin uppräkning som råkar innehålla ordet "eller").
