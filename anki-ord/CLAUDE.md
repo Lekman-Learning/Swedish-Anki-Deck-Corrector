@@ -2331,3 +2331,107 @@ giltigt register som motiverade spärren har ingen motsvarighet kvar.
 men kortet saknar skörde-betydelsen. Det är "saknad betydelse"-mönstret
 (det vanligaste felet enligt sökkollarna ovan), inte en separatorbugg —
 noterat här för nästa innehållspass, inte fixat i denna omgång.
+
+## Granskning av v2-ombyggnaden för Blå Nya — tre buggar (2026-08-07)
+
+Riktad genomgång av `snabbkoll2_blanya_v2.py` → `apply_flerbetydelse.py`
+(verktyget som bygger om nya kort till v2, se avsnittet ovan). Alla tre
+buggarna satt i den DELADE apply-logiken, alltså i det steg varje kort
+passerar — inte i något kantfall.
+
+1. **`apply_card()` satte aldrig `kortformat::v2`.** Kortet skrevs om till
+   v2-format men taggades bara med flerbetydelse-taggarna. Följd: kortet
+   blev **osynligt för varje `tag:kortformat::v2`-fråga i projektet** —
+   `snabbkoll2.py`, `build_all_v2_snabbkoll_queue.py`,
+   `build_full_flerbetydelse_queue.py`, `find_old_slash_separator.py`,
+   `restore_images_from_old_deck.py` och `find_eller_separator.py`.
+   **26 kort låg i det hålet**: v2 till innehållet, avsuspenderade, i
+   Adams kö — men utanför räckhåll för alla uppföljande kontroller.
+   Åtgärdat i koden + de 26 efterhandstaggade. Eller-svepningen kördes om
+   efteråt (3229 kort istället för 3202): inga nya separatorfel.
+
+2. **Gul-flaggan var inte implementerad.** style_guide.md beskriver TRE
+   utfall (eskalerad→Blå, OLD-matchning→Grön, **ingen OLD-matchning→Gul**),
+   men `_tag_and_flag()` kände bara till Blå/Grön. Kort utan OLD-matchning
+   flaggades alltså Gröna, dvs "jämförd mot facit" — när facit aldrig
+   fanns. 9 kort berörda (bl.a. `kontrastera`, `legymer`, `i hast`), nu
+   satta till Gul. `has_old_match` är numera ett OBLIGATORISKT argument för
+   icke-eskalerade kort (AssertionError annars), samma spärr-princip som
+   registret redan hade — en default hade bara återskapat buggen.
+
+3. **`apply_batch_unsuspend()` kraschar på stora batchar.** Den bygger en
+   `nid:X OR nid:Y ...`-kedja över hela batchen; Anki/SQLite spränger
+   uttrycksträdet vid ~1000 led (`Expression tree is too large (maximum
+   depth 1000)`). Reproducerat med 2356 kort. Detta hade slagit till exakt
+   när verktyget används som CLAUDE.md föreskriver ("nästa steg:
+   `--batch-size 100+`"). Frågan chunkas nu om 500.
+
+**Bonus i samma pass:** `compute_format_bug_hints()` kollade om ordet fanns
+i exempelmeningen, men INTE om det var highlightat — vilket är den regel
+style_guide.md faktiskt kallar "inte valfritt". Nytt tips `saknar_highlight`.
+Den gamla substrängkollen står kvar men ger falsklarm på böjda former
+(`beslå` → "beslogs"); den är ett tips, inte en spärr.
+
+**Datafynd på köpet:** 11 kort hade bokstavligt `&nbsp;` i **Framsida**
+(samma buggklass som `blindskrift&nbsp;` tidigare), 7 hade dubbla
+mellanslag. Ett kort var helt inverterat: **Framsida innehöll hela den
+gamla Baksidan** (`<ol><li>`-definitioner, tom exempelmening) och
+**Baksida innehöll strängen `"ai_failed"`** — ett taggnamn skrivet i ett
+innehållsfält. Ordet var `HTML`. Återställt från sitt eget innehåll,
+flaggat Gul (ingen OLD-matchning), fortfarande suspenderat — släpp det
+manuellt om det ska ingå. Före-läget i
+`sessions/session_2026-08-07_html-kort-backup.json`.
+
+## Adam-tal-lint: `lint_adamtal.py` (2026-08-07)
+
+Nytt permanent script som mekaniskt kontrollerar det style_guide.md
+faktiskt går att kontrollera mekaniskt. Ändrar aldrig något. Varje
+kontroll är märkt `[SÄKER]` (i praktiken utan falsklarm, kan åtgärdas
+rakt av) eller `[BEDÖM]` (kända legitima undantag — massfixa aldrig).
+
+**Utfall: 3054 av 3229 kort (94,6%) helt rena.**
+
+Alla `[SÄKER]`-kategorier är nu nollade. Åtgärdat i denna omgång:
+
+| Fynd | Antal | Åtgärd |
+|---|---|---|
+| Avslutande punkt i Huvudbetydelse | 54 | borttagen (inget annat kort har det) |
+| Semikolon utan mellanslag (`;` ej ` ; `) | 6 | bedömt ett och ett: 3 `` ; ``, 2 ` / `, 1 parentes |
+| Gammal `<span style="rgb(52,152,219)">` | 2 | → `<font color="#3498db">` |
+| Exempelmening helt utan highlight | 3 | highlight tillagd |
+| Exempelmening med flera meningar | 1 | `magnat` skriven till en mening |
+| HTML-skräp i bild-tagg | 1 | `ginkgo` hade en Amazon-produkttitel i `alt=` |
+| Cirkulär + ordboksartad Huvudbetydelse | 1 | `andakt` definierade sig själv på 23 ord |
+| Synonymgrupper utan motsvarande betydelser | 1 | `blickfång` plattad till en grupp |
+
+`;`-fyndet är värt att notera: de 6 korten hade GENUINT två betydelser,
+bara skrivna med `;` istället för ` ; `. Eller-svepningen missade dem
+(den letade efter "eller"), och `baksida.build()`s indragning av
+bibetydelsers register hade inte heller fungerat, eftersom den splittar
+på ` ; `. En separator som är *nästan* rätt är osynlig för alla verktyg.
+
+**Kvar, medvetet inte åtgärdat (`[BEDÖM]`, 175 kort):**
+
+- **`fragment_exempel` (57)** — den enda kvarvarande posten med verklig
+  Adam-tal-substans. Exempelmeningar som är substantivfraser utan finit
+  verb: "Ett ekonomiskt debacle.", "Sjunga legato.", "En solid kropp.",
+  "Manuell färdighet." Precis mönstret style_guide.md klagar på ("En grov
+  skymf."). Kräver en omskrivning per kort — lämpligt eget pass.
+- **`cirkular_synonym` (53)** — samma mängd som style_guide.md redan
+  adjudicerat en gång (reservat→naturreservat, krypto→kryptovaluta m.fl.
+  bedömda som genuin specificering, inte avslöjande). Rör inte utan att
+  läsa den historiken först.
+- **`cirkular_definition` (28)** och **`ordbokslangd_hb` (39)** — nästan
+  uteslutande falsklarm från grov stamklippning respektive ordräkning
+  (`signa`→"välsigna", `fiken`→"nyfiken" är olika ord; långa
+  huvudbetydelser är ofta befogade på facktermer som `grisaille`).
+- **`flera_meningar` (3)** — alla tre legitima. `anafor` illustrerar
+  stilfiguren genom att upprepa satsinledningen ("Jag kommer. Jag ser.
+  Jag förstår.") — en enda mening hade förstört kortet. Flyttad till
+  `[BEDÖM]` just därför.
+
+Tröskeln för `fragment_exempel` sänktes från <5 till <4 ord under
+genomgången: vid <5 var i princip alla 101 träffar fullgoda meningar
+("Prelaten välsignade menigheten."). Ordräkning är en dålig proxy för
+"fragment" — det verkliga felet (sats utan finit verb) kräver
+ordklasstaggning för att hittas säkert.

@@ -51,11 +51,22 @@ def compute_format_bug_hints(ord_, current, is_legacy):
     if is_legacy:
         hints.append("legacy_format")
 
-    ex = _strip_html(current.get("exempelmening"))
+    raw_ex = current.get("exempelmening") or ""
+    ex = _strip_html(raw_ex)
     if not ex:
         hints.append("tom_exempelmening")
-    elif ord_ and ord_.strip().lower() not in ex.lower():
-        hints.append("exempel_saknar_ordet")
+    else:
+        # Substrängkollen missar böjda former ("beslå" -> "beslogs"), så den
+        # ger falsklarm snarare än falsknegativ -- den är ett tips, inte en
+        # spärr, och får stå kvar som sådan.
+        if ord_ and ord_.strip().lower() not in ex.lower():
+            hints.append("exempel_saknar_ordet")
+        # Den EGENTLIGA regeln (style_guide.md, "Highlight av ordet i
+        # exempelmeningen": "Inte valfritt") kontrollerades inte alls
+        # tidigare -- ett kort kunde ha ordet i meningen men omarkerat och
+        # ändå se rent ut. Se "fantomsmärta", som hittades manuellt.
+        if config.SYNONYM_COLOR not in raw_ex:
+            hints.append("saknar_highlight")
 
     if is_legacy:
         defs = current.get("definitioner") or []
