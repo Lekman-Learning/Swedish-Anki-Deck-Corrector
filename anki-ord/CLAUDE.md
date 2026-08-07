@@ -2482,3 +2482,62 @@ Det sista är värt att understryka: **spärren fångar bara form.** Att
 skriva vardagligt, konkret och minnesvärt kan ingen regexkontroll avgöra
 — den delen är fortfarande granskarens jobb, och style_guide.md är
 fortfarande den viktigaste texten i projektet.
+
+## Blint stickprov på "saknad betydelse" — 34 kort rättade (2026-08-07)
+
+style_guide.md efterlyste uttryckligen ett BLINT stickprov: *"testet är
+heller inte blint... gör periodiska BLINDA stickprov senare för att
+verkligen validera detta över tid."* Detta är det testet.
+
+**Metoden**, tio rader och helt mekanisk: OLD-facit signalerar flera
+betydelser med `;` — leta kort där OLD har `;` men v2-huvudbetydelsen
+bara har EN betydelse. Ingen bedömning i urvalssteget, alltså ingen
+bekräftelsebias.
+
+**Utfall: 116 kandidater — samtliga redan `flerbetydelse_granskad`, 25
+till och med `flerbetydelse_sokverifierad`** (den dyraste nivån).
+
+Efter genomgång ett kort i taget: **34 genuint ofullständiga, 82
+falsklarm.** Falsklarmen fördelar sig på två mönster som är värda att
+känna igen inför nästa körning:
+- OLD:s `;` skiljer ofta SYNONYMER, inte betydelser ("memento:
+  påminnelse; varning" — kortet hade redan båda).
+- Många OLD-poster är förorenade med exempelmeningar eller etymologi
+  ("randas: börja**en ny dag randas**; Ragnarök stundar...").
+
+**De 34 rättade** fick andra betydelsen tillagd med ` ; `, synonymerna
+grupperade i `synonym_groups`, och register per bibetydelse där det
+skiljer (koj: `formell ; vardaglig`, lakej: `arkaisk ; nedsättande`).
+Fyra källkollades utöver OLD (evalvera, njugg, vidtaga, stigbygel).
+
+Grövsta fynden var kort där en HEL betydelse saknades:
+- **stigbygel** — bara sadelbygeln, inte hörselbenet i mellanörat.
+- **göt** — bara metallblocket, inte folkstammen i Götaland.
+- **stranda** och **flaggskepp** — hade bara den BILDLIGA betydelsen,
+  den bokstavliga (gå på grund / amiralsskeppet) saknades helt.
+- **kultur** — saknade den biologiska odlingsbetydelsen.
+- **evalvera** — saknade "räkna om från ett myntslag till ett annat"
+  (bekräftat mot ordbok, kortet hade bara "värdera").
+
+**Det starkaste mönstret: synonymerna avslöjade betydelsen som saknades
+i huvudbetydelsen.** `flaggskepp` hade redan synonymen "amiralsskepp",
+`lovlig` hade "tillåten, laglig", `menig` hade "allmän, vanlig",
+`vidtaga` hade "börja" — alla pekade på en betydelse huvudbetydelsen
+inte nämnde. Det är precis "dold andra betydelse"-signalen style_guide
+beskriver, och den är mekaniskt sökbar.
+
+**Vad detta säger om processen.** ~34 av 3202 OLD-matchade kort ≈ 1,1 %
+— vilket ligger *precis inom* den 1,5 %-gräns rule-of-three-räkningen i
+style_guide.md själv angav. Statistiken i dokumentet var alltså ärlig;
+det som var för optimistiskt var läsningen av den som "0 missade fel".
+Snabbkoll 2.0 är fortfarande klart bättre än den gamla minnesbaserade
+kollen (8,75 %), men "sökverifierad" är inte samma sak som "fullständig"
+— 25 av kandidaterna bar den taggen.
+
+Alla 116 har nu ett `utfall`-fält (`atgardad`/`falsklarm`) med
+motivering i `sessions/session_2026-08-07_saknad-betydelse-kandidater.json`,
+så de 82 inte behöver bedömas om. Före-läget för de 34 ligger i
+`..._saknad-betydelse-backup.json`.
+
+**Svepningen är billig och bör köras om** när OLD-decket eller
+kortmassan ändras — den är nu en engångskostnad i tid, inte i tokens.
