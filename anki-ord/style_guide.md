@@ -746,3 +746,10 @@ riktig källa (se "Källor för faktakoll"), inte bara punkt 1:
 
 (Fyll på med fler specifika exempel/mönster här i takt med att de dyker upp
 under granskningspassen.)
+
+## GÄLLANDE REGEL: v3 är enda metoden (beslutat 2026-08-08)
+
+Alla kort — nya som befintliga — byggs och granskas med full v3: sökkoll,
+OLD-facit, intern kunskap, blindgranskning. Inga andra vägar används.
+Målvolym 125 kort/dag (minimum för att kön inte ska ta slut), 300/dag när
+de befintliga korten rättas parallellt. Skär i takten, aldrig i djupet.

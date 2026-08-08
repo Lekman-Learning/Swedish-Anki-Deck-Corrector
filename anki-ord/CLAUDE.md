@@ -2786,3 +2786,26 @@ Blindgranskningen fångar klassen "granskaren bekräftar sig själv". Den
 fångar inte att två granskare gör samma fel. `blint_stickprov.py` är
 fortfarande den enda mätningen av om kedjan håller — och den kan först nu
 ge data, eftersom den väljer på `tag:oberoende_verifierad::*` som varit 0.
+
+## Beslut 2026-08-08 (kväll): v3 är enda metoden
+
+Adam: v3 i sin fullständiga form bygger **och** granskar alla kort. Ingen
+snabbkoll-väg kvar, ingen villkorlig eskalering. Sökkoll + OLD-facit +
+blindgranskning på varje kort — det som pply_card() redan kräver som
+standard (`mode="sokkoll", escalated=True`).
+
+**Den bindande resursen är tokens, inte kvalitet.** Volymen är given
+utifrån:
+
+| Behov | Kort/dag |
+|---|---|
+| Håll nya-kön levande (annars tar korten slut) | 125 |
+| + rätta befintliga kort i samma takt | ~300 |
+
+300/dag med full v3 per kort är det som ska rymmas i budgeten. Om något
+måste skäras är det takten på omgranskningen (spår B) — aldrig djupet per
+kort, eftersom hela poängen med v3 är att slippa gå tillbaka.
+
+**Senare, separat program:** hämta bilder ur OLD-facit och fyll i de kort
+som saknar bild. Frikopplat från v3-kedjan — bild är inte en betydelse och
+ska inte konkurrera om samma tokens.
