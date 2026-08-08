@@ -17,7 +17,14 @@ FIELD_BAKSIDA = "Baksida"
 #   <font color="#3498db">synonym1, synonym2</font><br>
 #   <br>
 #   <i>mening med <font color="#3498db">ordet</font> markerat</i>
+#   [valfri <br><br>etymologi -- ren text, se nedan]
 #   [valfri <br><br><img src="..." ...> sist, kort med bild]
+#
+# Etymologiraden (tillagd 2026-08-08 på Adams begäran): samma <br><br>-lucka
+# som mellan de övriga blocken, alltid efter exempelmeningen och före bilden.
+# Ren text -- ingen fet stil, ingen egen färg, samma regel som registerraden.
+# Tas BARA med när ursprunget gör betydelsen lättare att förstå eller minnas,
+# aldrig som språkhistorisk trivia. De flesta kort ska sakna den.
 SYNONYM_COLOR = "#3498db"
 
 # Register-tagg: STÄNGD vokabulär, en tagg per axel max (se style_guide.md).
@@ -86,6 +93,18 @@ DEFAULT_BATCH_SIZE = 100  # Adam: granska/rätta 100 kort i taget per 5h-session
 # sättas av en granskare som sett kortet UTAN att se hur det blev till.
 OBEROENDE_TAG_PREFIX = "oberoende_verifierad"  # blind andragranskning, ren kontext
 DAGSBATCH_TAG_PREFIX = "v3_dagsbatch"          # v3_dagsbatch::YYYY-MM-DD, spårar vilken batch kortet kom i
+
+# v3-märkning (beslutat 2026-08-08, Adam: "för alla framtida kort som
+# använde 3.0-metoden så taggas det alltid med 3.0"). De gamla
+# snabbkoll2-taggarna rörs INTE -- de är historik och beskriver den metod
+# som faktiskt användes då.
+#
+# Taggen sätts BARA när den strikta vägen faktiskt gick igenom: riktig
+# sökkoll med loggad källa. Ett kort som körts på den billiga vägen får
+# ingen v3-tagg, hur v3-lik processen än kändes. Det är hela poängen --
+# 2026-08-08 sattes `sokverifierad` på 177 kort som aldrig sökkollats, och
+# en tagg som sätts på granskarens ord är inte värd något.
+V3_TAG_PREFIX = "v3_granskad"                  # v3_granskad::YYYY-MM-DD
 DAGSBATCH_STORLEK = 125                        # spår A: legacy -> v2, per dag
 OMGRANSKNING_STORLEK = 25                      # spår B: redan släppta v2-kort, per dag
 # Spår B är kort Adam pluggar JUST NU och som skrevs under den gamla
@@ -100,5 +119,6 @@ SLAPP_KRAVER_TAGGAR = (
     FORMAT_TAG_V2,                          # kortet är faktiskt v2
     FLERBETYDELSE_TAG_PREFIX,                # flerbetydelse-kollen körd
     FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX,  # riktig sökkoll gjord
+    V3_TAG_PREFIX,                           # skrivet med v3-metoden
     OBEROENDE_TAG_PREFIX,                    # blind andragranskning godkänd
 )

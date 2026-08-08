@@ -47,7 +47,12 @@ _ADAMTAL = (
     "aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt "
     "med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i "
     "blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras "
-    "med ' ; ' och synonymerna grupperas i samma ordning."
+    "med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från "
+    "2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen "
+    "lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det "
+    "('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, "
+    "aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad "
+    "än utfyllnad. De flesta kort ska INTE ha någon."
 )
 
 GRANSKARINSTRUKTION = {
@@ -122,7 +127,7 @@ def bygg_post(card, old_lookup, spar):
         "adamtal_krav": list(baksida.ADAMTAL_HARDA),
         # --- fylls av granskaren ---
         "sokkoll": None,          # {"kalla": "...", "slutsats": "..."} -- OBLIGATORISKT
-        "proposed": None,         # {"huvudbetydelse","register","synonymer","synonym_groups","exempelmening"}
+        "proposed": None,         # {"huvudbetydelse","register","synonymer","synonym_groups","exempelmening","etymologi"?}
         "approved": False,
         "note_till_granskare": GRANSKARINSTRUKTION[spar],
     }

@@ -82,6 +82,12 @@ def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None,
     invoke("addTags", notes=[note_id], tags=f"{config.FLERBETYDELSE_SNABBKOLL2_TAG_PREFIX}::{today}")
     if escalate:
         invoke("addTags", notes=[note_id], tags=f"{config.FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX}::{today}")
+        # v3-märkning: sätts BARA här, alltså bara när den strikta vägen
+        # (riktig sökkoll + loggad källa) faktiskt gick igenom. Kort som
+        # körts på den billiga snabbkoll2-vägen behåller sina gamla taggar
+        # och får ingen v3-tagg -- taggen ska beskriva vad som gjordes,
+        # inte vilken process vi tänkte oss.
+        invoke("addTags", notes=[note_id], tags=f"{config.V3_TAG_PREFIX}::{today}")
         _logga_kalla(note_id, ord_, kalla, today)
 
     card_ids = invoke("findCards", query=f"nid:{note_id}")
@@ -95,8 +101,9 @@ def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None,
 
 def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
                 exempelmening="", register=None, bild_html=None,
-                mode="snabbkoll2", escalated=False, today=None,
-                has_old_match=None, ord_=None, tillat=(), kalla=None):
+                mode="sokkoll", escalated=True, today=None,
+                has_old_match=None, ord_=None, tillat=(), kalla=None,
+                etymologi=None):
     """Bygger v2-baksida och skriver den.
 
     Vägrar (ValueError) skriva ett kort som bryter mot
@@ -114,6 +121,16 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
                    från Anki om det inte skickas med.
     tillat:        regelnamn som medvetet får brytas, t.ex.
                    tillat=["flera_meningar"] för anafor-kortet.
+    etymologi:     valfri rad efter exempelmeningen. Ta bara med den när
+                   ursprunget gör betydelsen lättare att förstå.
+
+    **mode/escalated defaultar till sökkoll sedan 2026-08-08.** Adam
+    beslutade att varje kort ska sökkollas -- OLD-facit och egen kunskap
+    är komplement, inte ersättning. Den billiga vägen finns kvar men
+    måste nu väljas UTTRYCKLIGEN (mode="snabbkoll2", escalated=False,
+    has_old_match=...). Defaulten pekar därför mot det dyra och rätta:
+    en anropare som glömmer sätta läget får en AssertionError om källa,
+    inte en tyst nedgradering till en kontroll som aldrig gjordes.
 
     Returnerar listan med mjuka anmärkningar (tom = kortet är rent).
     """
@@ -133,6 +150,7 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
         register=register,
         ord_=ord_,
         tillat=tillat,
+        etymologi=etymologi,
     )
     if fel:
         raise ValueError(
@@ -148,6 +166,7 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
         register=register,
         bild_html=bild_html,
         synonym_groups=synonym_groups,
+        etymologi=etymologi,
     )
     invoke("updateNoteFields", note={"id": note_id, "fields": {config.FIELD_BAKSIDA: new_baksida}})
     # Kortet ÄR nu v2 -- utan denna tagg blir det osynligt för varje
@@ -162,7 +181,7 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
     return mjuka
 
 
-def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
+def apply_pass(note_id, mode="sokkoll", escalated=True, today=None,
                has_old_match=None, tillat=(), kalla=None):
     """Taggar/flaggar ett kort UTAN att skriva om Baksida (kortet är
     redan korrekt v2-format och behöver inget innehållsbyte). Läser
@@ -192,6 +211,7 @@ def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
         register=parsed["register"],
         ord_=ord_,
         tillat=tillat,
+        etymologi=parsed["etymologi"],
     )
     if fel:
         raise ValueError(

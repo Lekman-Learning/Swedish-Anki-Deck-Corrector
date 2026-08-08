@@ -84,7 +84,40 @@ duplicerad.
   - **Exempelmening** — oförändrat: `<i>`, INTE fet stil, målordet
     highlightat i blå font, EN mening per kort (se "Exempelmeningar —
     alltid bara en" nedan).
+  - **Etymologi** — VALFRI rad efter exempelmeningen, se "Etymologi" nedan.
   - Bild sist om den finns, oförändrat.
+
+## Etymologi (tillagd 2026-08-08, Adams begäran)
+
+En valfri rad EFTER exempelmeningen, med samma `<br><br>`-lucka som mellan
+de andra blocken, och alltid FÖRE bilden. Ren text — ingen fet stil (bara
+huvudbetydelsen är fet), ingen egen färg (samma regel som registerraden).
+Sätts via `baksida.build(etymologi=...)` / `apply_card(etymologi=...)`,
+aldrig som fritext i fältet.
+
+**Villkoret är inte "vet vi ursprunget?" utan "hjälper ursprunget?"**
+Etymologin är en till sak att läsa på varje repetition. Den tjänar bara
+in den kostnaden när den gör ordet självförklarande — när Adam efteråt
+kan härleda betydelsen istället för att minnas den.
+
+- **Ta med** när ursprunget bär betydelsen: *rangera* av ty. *rangieren*
+  "ordna i rad"; *eldprov* av gudsdomen där den anklagade bar glödande
+  järn; *duffel* efter staden Duffel i Belgien där tyget vävdes.
+- **Utelämna** när ursprunget bara är ett faktum: att ett ord kommer från
+  latin utan att latinet säger något om betydelsen, eller när kedjan är
+  så lång att förklaringen behöver en egen förklaring — det bryter mot
+  grundregeln om att aldrig förklara svårt med svårt.
+- **Max ~18 ord** (`baksida.ETYMOLOGI_MAX_ORD`). Över det varnar
+  `validate_adamtal()` med `etymologi_langd` — en MJUK regel, den
+  blockerar inte, eftersom enstaka ord genuint kräver mer. Men behandla
+  varningen som att den nästan alltid har rätt.
+- **De flesta kort ska sakna etymologi.** Ett kort utan den är aldrig ett
+  fel, och den blinda andragranskningen underkänner aldrig på den grunden
+  — bara på att en befintlig etymologi är osann eller inte hjälper.
+- Etymologin är en påstådd FAKTAUPPGIFT och lyder under samma källkrav
+  som resten av kortet: den ska stå i den källa sökkollen loggar, inte
+  komma ur minnet. Hellquists *Svensk etymologisk ordbok*
+  (runeberg.org/svetym) är förstahandskällan, se "Källor för faktakoll".
 - **Inget fast antal synonymer.** Målet är snabb inlärning av 10 000 ord —
   varje extra synonym är en sak till att minnas, så ta bara med det som
   faktiskt hjälper. En synonym räcker om ordet bara har en riktigt utbytbar.
@@ -216,6 +249,55 @@ en hel isbetydelse trots att OLD-kortet hade den) hittades bara för att
 OLD-decket avslöjade en avvikelse. Stämmer OLD och v2 inte överens: räknas
 INTE automatiskt som att OLD har rätt — utred vidare mot en riktig
 ordbokskälla innan du ändrar något.
+
+## GÄLLANDE REGEL: sökkoll på varje kort (beslutat 2026-08-08)
+
+Adam: *"jag vill verkligen sökkolla för att garantera att korten med alla
+verktyg vi har blir så nära rätt som möjligt. Alltså Opus 5 sökkoll v3 med
+old facit och intern kunskap. På detta sättet behöver vi inte gå tillbaka
+hela tiden."*
+
+**Detta ersätter eskaleringsregeln nedan.** Allt som skrivs eller
+omgranskas från och med nu får en RIKTIG uppslagning — OLD-facit och egen
+språkkunskap är komplement till den, aldrig ersättning för den.
+
+- `apply_flerbetydelse.apply_card()`/`apply_pass()` **defaultar till
+  `mode="sokkoll", escalated=True`** sedan 2026-08-08. Den billiga vägen
+  finns kvar men måste väljas uttryckligen. En anropare som glömmer sätta
+  läget får en AssertionError om saknad källa — inte en tyst nedgradering
+  till en kontroll som aldrig gjordes.
+- `kalla=` är obligatoriskt och loggas per kort i `sokkoll_kallor.jsonl`.
+  Taggen `flerbetydelse_sokverifierad` säger bara ATT en sökkoll gjorts;
+  filen säger VAD som slogs upp och är det enda som går att granska i
+  efterhand. Bakgrunden är dyrköpt: 2026-08-08 sattes taggen på 177 kort
+  som bara jämförts mot OLD-decket och granskarens minne. Alla 177
+  rullades tillbaka.
+- **Namnet:** metoden som jämför mot OLD-facit utan uppslagning heter
+  `snabbkoll2` i taggar och kod (taggnamnen ändras aldrig, Adams beslut
+  2026-08-06). I löpande text heter den **v3-snabbkoll** — den är ett STEG
+  i v3-kedjan, inte en egen version. Skriv inte "snabbkoll 2.0" om det
+  arbete som görs i v3.
+- **v3-märkning (Adams beslut 2026-08-08):** de gamla 2.0-taggarna lämnas
+  exakt som de är — de är historik och beskriver den metod som faktiskt
+  användes då. Allt som körs med v3-metoden framåt får dessutom
+  `v3_granskad::<datum>` (`config.V3_TAG_PREFIX`). Taggen sätts i
+  `_tag_and_flag()` **bara på den eskalerade vägen**, alltså bara när en
+  riktig sökkoll med loggad källa faktiskt gick igenom. Ett kort som körts
+  på den billiga vägen får ingen v3-tagg, hur v3-lik processen än kändes.
+  `v3_granskad` ingår också i `config.SLAPP_KRAVER_TAGGAR`, så inget kort
+  kan släppas in i kön utan den.
+
+Motiveringen bakom eskaleringsregeln nedan var kostnad, och mätningarna
+som stödde den står kvar för att de fortfarande är sanna om metoden. Det
+Adam väger annorlunda är vad ett fel kostar: ett kort som lärs in fel
+måste läras om, och den kostnaden betalas varje dag felet får stå.
+
+Det senast mätta (2026-08-08, 30 kort snabbkollade, 16 av dem därefter
+sökkollade) stöder valet: bland kort v3-snabbkollen GODKÄNDE hittade
+sökkollen ett fel på 1 av 10 — och det missas TYST, ett godkänt kort ser
+likadant ut oavsett om det saknar en hel betydelse. Dess egna flaggor var
+däremot pålitliga, 5 av 6 rätt. Snabbkollen duger alltså till att styra
+uppmärksamhet, inte till att garantera ett kort.
 
 ## Flerbetydelse-genomgång (beslutat 2026-08-05, efter "konglomerat"-fallet)
 

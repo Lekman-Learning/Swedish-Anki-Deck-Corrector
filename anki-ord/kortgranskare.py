@@ -52,6 +52,9 @@ VERIFIERARINSTRUKTION = (
     "kolla särskilt om någon synonym hör till en betydelse som inte nämns. (3) Passar "
     "synonymerna den angivna betydelsen, och är någon cirkulär? (4) Illustrerar "
     "exempelmeningen rätt betydelse, och är den sakligt riktig? (5) Stämmer registret? "
+    "(6) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att "
+    "förstå? Ren språkhistorisk trivia som inte hjälper minnet ska bort -- etymologin "
+    "är valfri, så ett kort utan den är aldrig ett fel. "
     "Att facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. "
     "Underkänn bara vid ett verkligt sakfel eller en verklig lucka."
 )
@@ -92,8 +95,15 @@ def applicera(sokvag):
                 synonym_groups=p.get("synonym_groups"),
                 exempelmening=p.get("exempelmening", ""),
                 register=p.get("register"),
+                etymologi=p.get("etymologi"),
                 bild_html=p.get("bild_html", (e.get("legacy") or {}).get("bild_html")),
                 mode="sokkoll", escalated=True,
+                # kalla= är OBLIGATORISK sedan källspärren 2026-08-08. Utan
+                # den kastar apply_card() AssertionError för VARJE kort, och
+                # hela dagsbatchen hade tyst hamnat i "hoppade" (hittat
+                # 2026-08-08 -- spärren skrevs utan att den här anroparen
+                # uppdaterades). Fältet är redan kontrollerat som ifyllt ovan.
+                kalla=sok["kalla"],
                 ord_=e["ord"], tillat=e.get("tillat", ()),
             )
             e["adamtal_varningar"] = mjuka
@@ -129,6 +139,7 @@ def paket(sokvag):
                 "synonymer": p["synonymer"],
                 "synonym_groups": p["synonym_groups"],
                 "exempelmening": p["exempelmening"],
+                "etymologi": p["etymologi"],
             },
             "verdikt": None,
             "anmarkning": None,
@@ -195,7 +206,7 @@ def kontrollera_slappbar(note_ids):
             fel, _ = baksida.validate_adamtal(
                 huvudbetydelse=p["huvudbetydelse"], synonymer=p["synonymer"],
                 synonym_groups=p["synonym_groups"], exempelmening=p["exempelmening"],
-                register=p["register"], ord_=ord_)
+                register=p["register"], ord_=ord_, etymologi=p["etymologi"])
             skal += fel
         (redo if not skal else blockerade).append(
             n["noteId"] if not skal else (ord_, n["noteId"], "; ".join(skal))

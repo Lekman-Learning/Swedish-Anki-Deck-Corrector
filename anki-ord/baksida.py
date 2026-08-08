@@ -11,7 +11,15 @@ Exempel på ett fält:
   <font color="#3498db">utmattad, dödstrött</font><br>
   <br>
   <i>Han var helt <font color="#3498db">slut</font> efter passet.</i>
+  <br><br>Av grekiskans aisthesis, "sinnesintryck".                          (valfri etymologi)
   <br><br><img src="bild.jpg" style="max-width:400px; border-radius:4px;">   (valfritt, sist)
+
+Etymologi (tillagt 2026-08-08 på Adams begäran): valfri rad EFTER
+exempelmeningen, med samma `<br><br>`-lucka som mellan de andra blocken,
+och FÖRE bilden. Ren text -- ingen fet stil (bara huvudbetydelsen är fet),
+ingen egen färg (samma regel som registerraden). Tas bara med när
+ursprunget faktiskt gör betydelsen lättare att förstå eller minnas, aldrig
+som trivia: kortet ska bli tydligare, inte längre.
 
 Flera betydelser (beslutat 2026-08-05, se style_guide.md "Register per
 bibetydelse"): om betydelse 2+ har ETT ANNAT register än betydelse 1,
@@ -69,6 +77,7 @@ def parse(baksida_html):
             "register": None,
             "synonymer": [],
             "exempelmening": "",
+            "etymologi": None,
             "bild_html": None,
             "synonym_groups": None,
         }
@@ -90,17 +99,28 @@ def parse(baksida_html):
     img_match = _IMG_TAIL_RE.search(baksida_html)
     bild_html = img_match.group(1).strip() if img_match else None
 
+    # Allt mellan exempelmeningen och bilden (eller slutet) är etymologin.
+    # Den läses ur SVANSEN istället för via _MAIN_RE, så att kort utan
+    # etymologi -- alltså varje kort skrivet före 2026-08-08 -- parsas
+    # exakt som förut och en parse->build-runda inte ändrar dem.
+    svans = baksida_html[match.end():]
+    img_i_svans = _IMG_TAIL_RE.search(svans)
+    if img_i_svans:
+        svans = svans[:img_i_svans.start()]
+    etymologi = re.sub(r"^(?:\s*<br>\s*)+", "", svans).strip() or None
+
     return {
         "huvudbetydelse": huvudbetydelse,
         "register": register,
         "synonymer": synonymer,
         "exempelmening": exempelmening,
+        "etymologi": etymologi,
         "bild_html": bild_html,
         "synonym_groups": synonym_groups,
     }
 
 
-def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_html=None, synonym_groups=None):
+def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_html=None, synonym_groups=None, etymologi=None):
     """register: sträng typ "formell" / "lätt negativ" / "formell, lätt negativ".
     Obligatoriskt i praktiken (style_guide.md, beslutat 2026-08-04) — minst en
     tagg på varje kort, None bara accepteras här på kodnivå för flexibilitet.
@@ -152,6 +172,10 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
     example_html = f"<i>{exempelmening}</i>"
 
     parts = [huvud_html, register_html, "<br>", synonym_html, "<br>", example_html]
+    # Samma <br><br>-lucka som mellan de övriga blocken, och alltid FÖRE
+    # bilden (Adams krav 2026-08-08). bild_html bär redan sina egna <br>.
+    if etymologi:
+        parts.append(f"<br><br>{etymologi.strip()}")
     if bild_html:
         parts.append(bild_html)
     return "".join(parts)
@@ -184,7 +208,15 @@ ADAMTAL_HARDA = (
 ADAMTAL_MJUKA = (
     "flera_meningar", "fragment_exempel", "ordbokslangd_hb",
     "cirkular_definition", "cirkular_synonym", "osymmetriska_grupper",
+    "etymologi_langd",
 )
+
+# Etymologin är valfri och ska bara finnas när ursprunget gör betydelsen
+# lättare att FÖRSTÅ. Längd är den enda delen som går att mäta -- om den
+# ordet spräcker taket har den nästan alltid glidit över i språkhistorisk
+# trivia, vilket är precis vad Adam-tal säger nej till. Mjuk regel: den
+# blockerar inte, för enstaka ord kräver en längre förklaring.
+ETYMOLOGI_MAX_ORD = 18
 
 _ABBR = ["t.ex.", "bl.a.", "m.fl.", "d.v.s.", "dvs.", "osv.", "m.m.",
          "fr.o.m.", "t.o.m.", "ca.", "kl.", "s.k.", "e.Kr.", "f.Kr."]
@@ -219,7 +251,8 @@ def _stam(word):
 
 
 def validate_adamtal(huvudbetydelse, synonymer=None, synonym_groups=None,
-                     exempelmening="", register=None, ord_=None, tillat=()):
+                     exempelmening="", register=None, ord_=None, tillat=(),
+                     etymologi=None):
     """Kontrollerar det i style_guide.md som går att avgöra mekaniskt.
 
     Returnerar (fel, varningar) -- två listor med "regel: förklaring".
@@ -296,8 +329,16 @@ def validate_adamtal(huvudbetydelse, synonymer=None, synonym_groups=None,
         if nreg > len(ms):
             lagg("fler_register_an_betydelser", f"{nreg} register mot {len(ms)} betydelser")
 
+    # --- Etymologi (valfri, tillagd 2026-08-08) ---
+    ety_raw = etymologi or ""
+    ety = _strip_html(ety_raw)
+    if ety and len(ety.split()) > ETYMOLOGI_MAX_ORD:
+        lagg("etymologi_langd",
+             f"{len(ety.split())} ord -- etymologin ska förklara betydelsen, "
+             f"inte berätta ordets historia: {ety[:60]!r}")
+
     # --- Kvarglömd HTML var som helst ---
-    hittad = [j for j in _HTML_SKRAP if j in ex_raw or j in hb]
+    hittad = [j for j in _HTML_SKRAP if j in ex_raw or j in hb or j in ety_raw]
     if hittad:
         lagg("html_skrap", "kvarglömd HTML: " + ", ".join(repr(j) for j in hittad))
 
@@ -377,6 +418,7 @@ def parse_legacy(baksida_html):
         "synonymer": synonymer,
         "definitioner": definitioner,
         "exempelmening": exempelmening,
+        "etymologi": None,  # finns aldrig i legacy-formatet, men håller formen lika
         "bild_html": bild_html,
         "synonym_groups": synonym_groups,
     }
