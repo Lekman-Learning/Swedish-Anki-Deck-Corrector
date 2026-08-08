@@ -2644,3 +2644,84 @@ Kedjan garanterar att inget kort når kön utan att ha passerat alla steg.
 Den garanterar **inte** att bedömningarna i stegen är riktiga. Det som
 gör kvaliteten mätbar är `blint_stickprov.py` — kör det varje vecka.
 Utan mätning är "verifierat" fortfarande bara ett ord.
+
+## v3 skärpt: sökkoll på allt, v3-tagg, etymologirad, prio-kö (2026-08-08)
+
+Fyra beslut av Adam samma dag, plus en bugg som hittades under bygget.
+
+### Sökkoll på varje kort — eskaleringsregeln är avskaffad
+
+Adam: *"jag vill verkligen sökkolla för att garantera att korten med alla
+verktyg vi har blir så nära rätt som möjligt. Alltså Opus 5 sökkoll v3 med
+old facit och intern kunskap."* OLD-facit och egen språkkunskap är
+komplement till uppslagningen, aldrig ersättning för den.
+
+`apply_flerbetydelse.apply_card()`/`apply_pass()` **defaultar nu till
+`mode="sokkoll", escalated=True`**. Den billiga vägen finns kvar men måste
+väljas uttryckligen. En anropare som glömmer sätta läget får en
+AssertionError om saknad källa — inte en tyst nedgradering till en
+kontroll som aldrig gjordes. Se style_guide.md, "GÄLLANDE REGEL".
+
+### `v3_granskad::<datum>` (`config.V3_TAG_PREFIX`)
+
+De gamla 2.0-taggarna lämnas exakt som de är (historik). Allt som körs med
+v3-metoden framåt taggas dessutom `v3_granskad`. Taggen sätts i
+`_tag_and_flag()` **bara på den eskalerade vägen**, alltså bara när en
+riktig sökkoll med loggad källa faktiskt gick igenom, och ingår i
+`config.SLAPP_KRAVER_TAGGAR` — inget kort kan släppas in i kön utan den.
+
+### Etymologirad i Kortformat v2
+
+Valfri rad efter exempelmeningen, före bilden, med samma `<br><br>`-lucka
+som mellan de övriga blocken. Ren text, ingen fet stil, ingen egen färg.
+`baksida.build(etymologi=...)` / `parse()` / `apply_card(etymologi=...)`,
+och den följer med in i det blinda paketet.
+
+**Villkoret är "hjälper ursprunget?", inte "vet vi ursprunget?"** — se
+style_guide.md, "Etymologi". Mjuk längdgräns 18 ord
+(`baksida.ETYMOLOGI_MAX_ORD`), blockerar aldrig.
+
+Etymologin läses ur SVANSEN i `parse()`, inte via `_MAIN_RE`, så kort utan
+etymologi parsas exakt som förut. Verifierat med `test_etymologi.py`:
+**3 232 kort, 0 avvikande** i en parse→build-runda över hela decket. Det är
+samma buggklass som kostade `faun` sin bild 2026-08-07 (parse tappar ett
+fält → nästa build raderar det tyst).
+
+### Prio-kö: `v3_prio::hog` (`config.PRIO_TAG_HOG`)
+
+`kortbyggare.hamta_pool()` hämtar prio-märkta kort FÖRE den vanliga
+due-ordningen, i båda spåren, och `poster.sort()` lägger dem först.
+**Förturen måste ligga i urvalet, inte bara i sorteringen** — med 3 000+
+kort i spår B hade ett prio-kort längre bak i due-ordningen aldrig kommit
+med i dagens 25, hur högt det än var märkt.
+
+Första användningen: de **46** kort som skrevs om 2026-08-08 utan riktig
+sökkoll (`v3_markera_prio_botchade.py`). Verifierat med
+`test_prio_urval.py`: spår B hämtar nu 25 prio-kort först.
+
+### Buggen: källspärren slog ut v3:s huvudväg
+
+Källspärren (`kalla=` obligatoriskt för sökverifierad-taggen, byggd efter
+de 177 falskt taggade korten) skrevs in i `apply_card()` utan att
+`kortgranskare.applicera()` uppdaterades — och den är v3:s ENDA skrivväg
+för dagsbatchen. Varje kort hade kastat AssertionError, fångats av
+anroparens `try/except` och tyst landat i "hoppade över". Hela
+125-kortsflödet hade rapporterat noll skrivna kort utan synlig orsak.
+Hann aldrig göra skada; v3 hade inte startat.
+
+**Andra gången samma mönster:** `kortformat::v2` sattes 2026-08-07 bara i
+den ena skrivvägen och gjorde 26 kort osynliga för alla uppföljande
+kontroller. En spärr som läggs i en delad funktion måste följas till varje
+anropare i samma ändring.
+
+### Rättning: "177 falskt taggade kort" är 46 spårbara
+
+Rollbacken tog bort taggen från 177 kort, men bara **73** hade skrivits via
+`apply_card()` och därmed fått ett `::2026-08-08`-spår (27 med äkta
+sökkoll, **46 utan**). De övriga ~131 taggades av ad-hoc-script som
+anropade `addTags` direkt och lämnade inget spår i Anki — de går bara att
+återskapa ur ordlistorna i `v3_omskrivning_*.py`. Samma lärdom igen:
+spårbarhet måste sitta i skrivvägen, inte i ett script som råkar köras.
+
+Frågan som hittar de 46: `tag:flerbetydelse_granskad::2026-08-08
+-tag:flerbetydelse_sokverifierad::*`

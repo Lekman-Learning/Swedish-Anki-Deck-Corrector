@@ -93,11 +93,21 @@ POOL_FRAGA = {
 
 
 def hamta_pool(antal, spar):
-    """Due-sorterat = samma ordning Adam möter korten i."""
-    return fetch_cards_sorted_by_due(POOL_FRAGA[spar], antal)
+    """Prio-märkta kort först, därefter due-ordning (= Adams egen ordning).
+
+    Förturen måste ligga i URVALET, inte bara i sorteringen av det som
+    råkade hämtas: med 3 000+ kort i spår B hade ett prio-kort längre bak i
+    due-ordningen aldrig kommit med i dagens 25, hur högt det än var märkt.
+    """
+    bas = POOL_FRAGA[spar]
+    prio = fetch_cards_sorted_by_due(f"{bas} tag:{config.PRIO_TAG_HOG}", antal)
+    kvar = antal - len(prio)
+    if kvar <= 0:
+        return prio
+    return prio + fetch_cards_sorted_by_due(f"{bas} -tag:{config.PRIO_TAG_HOG}", kvar)
 
 
-def bygg_post(card, old_lookup, spar):
+def bygg_post(card, old_lookup, spar, prio_nids=frozenset()):
     falt = {n: v["value"] for n, v in card["fields"].items()}
     ord_ = falt.get(config.FIELD_ORD, "")
     raw = falt.get(config.FIELD_BAKSIDA, "")
@@ -115,6 +125,7 @@ def bygg_post(card, old_lookup, spar):
         "noteId": card["note"],
         "ord": ord_,
         "spar": spar,
+        "prio": card["note"] in prio_nids,
         "redan_i_kon": spar == "omgranskning",
         "nuvarande_format": "v2" if ar_v2 else "legacy",
         "legacy": legacy,
@@ -152,12 +163,16 @@ def main():
         return
 
     old_lookup = build_old_lookup()
-    poster = [bygg_post(c, old_lookup, args.spar) for c in cards]
-    # Riskprioriterat, inte slumpmässigt: syftet är att LAGA fel så fort som
-    # möjligt. Det gör urvalet snedvridet -- räkna aldrig felfrekvens på det,
-    # den blir för hög. Mätningen kommer från blint_stickprov.py, som drar
-    # slumpmässigt just därför.
-    poster.sort(key=lambda e: (ALLVAR_ORDNING[e["hogsta_allvar"]], e["ord"]))
+    prio_nids = frozenset(invoke("findNotes",
+                                 query=f'deck:"{config.DECK_NAME}" tag:{config.PRIO_TAG_HOG}'))
+    poster = [bygg_post(c, old_lookup, args.spar, prio_nids) for c in cards]
+    # Prio före risk: ett prio-märkt kort är märkt för att NÅGON vet något om
+    # det som riskflaggorna inte kan se (t.ex. "detta kort skrevs om utan
+    # sökkoll"). Riskprioriterat, inte slumpmässigt, i övrigt: syftet är att
+    # LAGA fel så fort som möjligt. Det gör urvalet snedvridet -- räkna aldrig
+    # felfrekvens på det, den blir för hög. Mätningen kommer från
+    # blint_stickprov.py, som drar slumpmässigt just därför.
+    poster.sort(key=lambda e: (not e["prio"], ALLVAR_ORDNING[e["hogsta_allvar"]], e["ord"]))
 
     idag = datetime.date.today().isoformat()
     katalog = os.path.join(os.path.dirname(__file__), "sessions")
@@ -194,9 +209,13 @@ def main():
             f.write("\n".join(rader))
 
     antal_hog = sum(1 for e in poster if e["hogsta_allvar"] == "hog")
+    antal_prio = sum(1 for e in poster if e["prio"])
     utan_old = sum(1 for e in poster if not e["har_old_facit"])
     kvar = len(invoke("findNotes", query=POOL_FRAGA[args.spar]))
+    prio_kvar = len(invoke("findNotes",
+                           query=f"{POOL_FRAGA[args.spar]} tag:{config.PRIO_TAG_HOG}"))
     print(f"Skrev {len(poster)} kort ({args.spar}) till {sokvag}")
+    print(f"  prio (ligger först)        : {antal_prio}   (kvar i poolen: {prio_kvar})")
     print(f"  hög risk (läs dessa först) : {antal_hog}")
     print(f"  utan OLD-facit             : {utan_old}")
     print(f"  kvar i poolen efter denna  : {kvar}")

@@ -105,6 +105,15 @@ DAGSBATCH_TAG_PREFIX = "v3_dagsbatch"          # v3_dagsbatch::YYYY-MM-DD, spår
 # 2026-08-08 sattes `sokverifierad` på 177 kort som aldrig sökkollats, och
 # en tagg som sätts på granskarens ord är inte värd något.
 V3_TAG_PREFIX = "v3_granskad"                  # v3_granskad::YYYY-MM-DD
+
+# Förtur i v3-kön (2026-08-08). Kort med den här taggen plockas FÖRE
+# den vanliga due-ordningen av kortbyggare.py, i båda spåren.
+#
+# En prio-tagg som bara syns i browsern är dekoration -- den måste ändra
+# URVALET, annars ligger korten kvar bakom 3 000 andra oavsett hur de är
+# märkta. Därför hämtar hamta_pool() prio-korten först och fyller bara på
+# med den vanliga poolen om det finns plats kvar.
+PRIO_TAG_HOG = "v3_prio::hog"
 DAGSBATCH_STORLEK = 125                        # spår A: legacy -> v2, per dag
 OMGRANSKNING_STORLEK = 25                      # spår B: redan släppta v2-kort, per dag
 # Spår B är kort Adam pluggar JUST NU och som skrevs under den gamla
