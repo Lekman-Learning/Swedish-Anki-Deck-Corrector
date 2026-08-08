@@ -2809,3 +2809,32 @@ kort, eftersom hela poängen med v3 är att slippa gå tillbaka.
 **Senare, separat program:** hämta bilder ur OLD-facit och fyll i de kort
 som saknar bild. Frikopplat från v3-kedjan — bild är inte en betydelse och
 ska inte konkurrera om samma tokens.
+
+## deck_snapshot.py — läget, inte bara händelserna (2026-08-08)
+
+Projektet loggade händelser (`kallor.jsonl`, `oberoende_granskningar.jsonl`)
+men aldrig **läget**. Utan mätpunkter går det inte att visa att v3 fungerar
+över 67 dagar — bara att hävda det. Baslinjen på 10 % fel är meningslös utan
+något att jämföra mot.
+
+`python deck_snapshot.py` skriver en rad om dagen till `deck_historik.jsonl`.
+Kör om samma dag **skriver över** dagens rad: en snapshot är ett läge, inte en
+händelse, och två rader med samma datum vore två sanningar om samma dag.
+
+Första mätpunkten, 2026-08-08:
+
+| | |
+|---|---|
+| totalt | 10 034 |
+| v2-format / flerbetydelse | 3 233 |
+| sökverifierad | 931 |
+| v3_granskad | 1 |
+| oberoende_verifierad | **0** |
+| prio_hog | 46 |
+| flaggor R/G/Grön/Blå | 810 / 1 273 / 2 292 / 5 659 |
+| nya aktiva | 567 |
+| suspenderade | 6 810 |
+
+Siffran att hålla ögonen på är `nya_aktiva = 567`. Vid 125 nya kort om dagen
+räcker den kön i drygt fyra dagar — det är den som sätter takten, inte
+antalet kort i decket.
