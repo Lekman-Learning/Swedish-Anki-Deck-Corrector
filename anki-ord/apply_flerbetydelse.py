@@ -12,6 +12,8 @@ missades i samma testbatch.
 """
 
 import datetime
+import json
+import os
 
 import baksida
 import config
@@ -27,7 +29,21 @@ def _today(today):
     return today or datetime.date.today().isoformat()
 
 
-def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None):
+def _logga_kalla(note_id, ord_, kalla, today):
+    """Skriver ner vilken källa som faktiskt slogs upp, en rad per kort.
+
+    Taggen `flerbetydelse_sokverifierad` säger BARA att en sökkoll gjorts.
+    Den säger inte vad som slogs upp, och går därför inte att granska i
+    efterhand. Den här filen gör den granskningsbar."""
+    rad = {"datum": today, "noteId": note_id, "ord": ord_, "kalla": kalla}
+    sokvag = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "sokkoll_kallor.jsonl")
+    with open(sokvag, "a", encoding="utf-8") as f:
+        f.write(json.dumps(rad, ensure_ascii=False) + "\n")
+
+
+def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None,
+                  kalla=None, ord_=None):
     if mode not in VALID_MODES:
         raise ValueError(f"okänt läge {mode!r}, förväntade ett av {VALID_MODES}")
     if mode == "sokkoll" and not escalated:
@@ -47,12 +63,26 @@ def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None):
             f"{note_id}: has_old_match måste anges för icke-eskalerade kort — "
             "OLD-matchning ger Grön, avsaknad av OLD-matchning ger Gul."
         )
+    # Spärr tillkommen 2026-08-08. Bakgrund: 177 kort taggades
+    # `flerbetydelse_sokverifierad` efter att bara ha jämförts mot OLD-decket
+    # och granskarens egen kunskap. Ingen uppslagning gjordes. Taggen tog
+    # granskarens ord för att en sökkoll skett -- samma sorts oskyddat
+    # påstående som Adam-tal var innan validate_adamtal() flyttades in i
+    # skrivvägen. Kräv därför ett bevis, inte ett intyg.
+    if escalate and not kalla:
+        raise AssertionError(
+            f"{note_id}: sökkoll kräver kalla=... — en URL eller källhänvisning "
+            "för det som faktiskt slogs upp. Utan källa sätts ingen "
+            "sokverifierad-tagg. Gjordes ingen uppslagning är läget snabbkoll2: "
+            "kör med mode='snabbkoll2', escalated=False och has_old_match=True/False."
+        )
 
     today = _today(today)
     invoke("addTags", notes=[note_id], tags=f"{config.FLERBETYDELSE_TAG_PREFIX}::{today}")
     invoke("addTags", notes=[note_id], tags=f"{config.FLERBETYDELSE_SNABBKOLL2_TAG_PREFIX}::{today}")
     if escalate:
         invoke("addTags", notes=[note_id], tags=f"{config.FLERBETYDELSE_SOKVERIFIERAD_TAG_PREFIX}::{today}")
+        _logga_kalla(note_id, ord_, kalla, today)
 
     card_ids = invoke("findCards", query=f"nid:{note_id}")
     if escalate:
@@ -66,7 +96,7 @@ def _tag_and_flag(note_id, mode, escalated, today, has_old_match=None):
 def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
                 exempelmening="", register=None, bild_html=None,
                 mode="snabbkoll2", escalated=False, today=None,
-                has_old_match=None, ord_=None, tillat=()):
+                has_old_match=None, ord_=None, tillat=(), kalla=None):
     """Bygger v2-baksida och skriver den.
 
     Vägrar (ValueError) skriva ett kort som bryter mot
@@ -128,12 +158,12 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
     # de var v2 till innehållet, avsuspenderade och i Adams kö, men syntes
     # inte i någon uppföljande kontroll.
     invoke("addTags", notes=[note_id], tags=config.FORMAT_TAG_V2)
-    _tag_and_flag(note_id, mode, escalated, today, has_old_match)
+    _tag_and_flag(note_id, mode, escalated, today, has_old_match, kalla, ord_)
     return mjuka
 
 
 def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
-               has_old_match=None, tillat=()):
+               has_old_match=None, tillat=(), kalla=None):
     """Taggar/flaggar ett kort UTAN att skriva om Baksida (kortet är
     redan korrekt v2-format och behöver inget innehållsbyte). Läser
     kortets NUVARANDE register direkt från Anki och vägrar (ValueError)
@@ -168,7 +198,7 @@ def apply_pass(note_id, mode="snabbkoll2", escalated=False, today=None,
             f"{note_id} ({ord_!r}): kortet bryter mot Adam-tal - " + "; ".join(fel)
             + ". Använd apply_card() för att rätta det istället för apply_pass()."
         )
-    _tag_and_flag(note_id, mode, escalated, today, has_old_match)
+    _tag_and_flag(note_id, mode, escalated, today, has_old_match, kalla, ord_)
     return mjuka
 
 
