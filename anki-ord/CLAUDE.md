@@ -2725,3 +2725,64 @@ spårbarhet måste sitta i skrivvägen, inte i ett script som råkar köras.
 
 Frågan som hittar de 46: `tag:flerbetydelse_granskad::2026-08-08
 -tag:flerbetydelse_sokverifierad::*`
+
+## Blindgranskningen inbyggd i v3 — och beviset för den (2026-08-08)
+
+Adam: *"granskningen ska ju kolla allting, att betydelserna stämmer och att
+inget saknas."* `oberoende_verifierad` fanns redan i
+`config.SLAPP_KRAVER_TAGGAR` men hade **aldrig körts** — 0 kort i hela
+decket. Steget var beskrivet, inte genomfört.
+
+### Det verkliga problemet var inte att steget saknades
+
+Taggen `oberoende_verifierad` vilade på granskarens ord. Det är exakt vad
+`sokverifierad` gjorde innan källspärren — och den satt på 177 kort som
+aldrig sökkollats. Att bara "komma ihåg" att köra blindgranskningen i en
+ny session hade återskapat samma fel. Så steget byggdes med sitt bevis:
+
+| Spärr i `verdikt()` | Vägrar när |
+|---|---|
+| granskare saknas | ingen har uppgett vem som granskade |
+| självgranskning | `granskare` == `skriven_av` (skiftlägesokänsligt, trimmat) |
+| tom anmärkning | ett kort underkänns utan att det står VAD som är fel |
+| saknat verdikt | någon post är obedömd |
+
+`applicera --granskare <namn>` stämplar `skriven_av` på varje post;
+`paket` bär den vidare utanför `poster` (granskaren ska döma korten, inte
+författaren); `verdikt --granskare <namn>` jämför. Utfallet loggas per kort
+till `oberoende_granskningar.jsonl`, samma princip som
+`sokkoll_kallor.jsonl`: taggen säger ATT något gjorts, loggen säger VAD och
+AV VEM, och är det enda som går att granska i efterhand.
+
+Verifierat med `test_oberoende_sparr.py`: alla fyra fallen avbryter, loggen
+växer 0 byte, ingenting taggas.
+
+### `facit_signal` — den mekaniska luckdetektorn i paketet
+
+`paket` räknar nu betydelser i OLD-facit (`;`-separerade) mot betydelser i
+kortet (` ; `-separerade) och skriver en signal när facit antyder fler.
+Härledd enbart ur facit + färdigt kort, alltså ur sådant granskaren ändå
+ser — den läcker ingenting om hur kortet blev till.
+
+Signalen är en **fråga, inte ett konstaterat fel**: OLD skiljer ofta bara
+synonymer med `;`, vilket gav 82 falsklarm på 116 kandidater 2026-08-07.
+Men samma svepning hittade också 34 äkta luckor. Stickprov vid bygget:
+signalen fångar `avkastning` (facit "vinst; skörd", kortet saknar skörden)
+— den lucka som stått onoterad i den här filen sedan 2026-08-07.
+
+### Checklistan granskaren får
+
+`VERIFIERARINSTRUKTION` utökad från 6 till 8 punkter, i prioritetsordning
+med "saknas en hel betydelse" först (dominerande felmönster i elva
+omgångar i rad). Nytt sedan tidigare: krav på att granskaren **slår upp
+ordet själv** (facit är en andra källa, inte den enda), separatorkontroll
+(` ; ` vs ` / ` vs "eller"), cirkulära synonymer, grammatik i
+exempelmeningen, båda registeraxlarna, etymologins sanning och nytta, och
+till sist läsbarheten högt.
+
+### Vad det fortfarande INTE garanterar
+
+Blindgranskningen fångar klassen "granskaren bekräftar sig själv". Den
+fångar inte att två granskare gör samma fel. `blint_stickprov.py` är
+fortfarande den enda mätningen av om kedjan håller — och den kan först nu
+ge data, eftersom den väljer på `tag:oberoende_verifierad::*` som varit 0.

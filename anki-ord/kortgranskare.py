@@ -36,6 +36,7 @@ nu är det ett villkor maskinen vägrar släppa igenom utan.
 import argparse
 import json
 import os
+import re
 import sys
 
 import apply_flerbetydelse as af
@@ -45,19 +46,42 @@ from ankiconnect import invoke
 
 VERIFIERARINSTRUKTION = (
     "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det "
-    "färdiga kortet -- avsiktligt INTE hur kortet skrevs. Döm det på dess egna meriter. "
-    "Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post. Kontrollera: "
-    "(1) Är huvudbetydelsen sakligt korrekt? (2) SAKNAS EN HEL BETYDELSE? -- det är det "
-    "vanligaste felet i det här decket, dominerande i åtta granskningsomgångar i rad; "
-    "kolla särskilt om någon synonym hör till en betydelse som inte nämns. (3) Passar "
-    "synonymerna den angivna betydelsen, och är någon cirkulär? (4) Illustrerar "
-    "exempelmeningen rätt betydelse, och är den sakligt riktig? (5) Stämmer registret? "
-    "(6) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att "
-    "förstå? Ren språkhistorisk trivia som inte hjälper minnet ska bort -- etymologin "
-    "är valfri, så ett kort utan den är aldrig ett fel. "
+    "färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp "
+    "eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en "
+    "riktig ordbok innan du dömer; facit är en andra källa, inte den enda. "
+    "Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\n"
+    "KONTROLLERA ALLT, i denna ordning:\n"
+    "(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, "
+    "dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en "
+    "och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör "
+    "till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet "
+    "(se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: "
+    "facit skiljer ofta synonymer med ';', inte betydelser).\n"
+    "(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n"
+    "(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, "
+    "' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda "
+    "betydelser är alltid fel.\n"
+    "(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller "
+    "uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n"
+    "(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och "
+    "grammatiskt korrekt, och är ordet highlightat?\n"
+    "(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n"
+    "(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att "
+    "förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort "
+    "utan den är aldrig ett fel.\n"
+    "(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\n"
     "Att facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. "
-    "Underkänn bara vid ett verkligt sakfel eller en verklig lucka."
+    "Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel."
 )
+
+# Loggen som gör oberoendet granskningsbart i efterhand.
+#
+# Taggen `oberoende_verifierad` säger bara ATT en blind granskning gjorts.
+# Den säger inte VEM som gjorde den -- och en tagg som vilar på granskarens
+# ord är precis vad `sokverifierad` var innan källspärren: 177 kort bar den
+# utan att någon uppslagning skett. Samma medicin här: verdikt() kräver ett
+# granskarnamn, vägrar om det är samma som skrev korten, och loggar utfallet.
+OBEROENDE_LOGG = "oberoende_granskningar.jsonl"
 
 
 def _las(sokvag):
@@ -70,8 +94,29 @@ def _skriv(sokvag, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def _logga_oberoende(rad):
+    sokvag = os.path.join(os.path.dirname(os.path.abspath(__file__)), OBEROENDE_LOGG)
+    with open(sokvag, "a", encoding="utf-8") as f:
+        f.write(json.dumps(rad, ensure_ascii=False) + "\n")
+
+
+def _betydelser(text):
+    """Antal betydelser i en huvudbetydelse (' ; '-separerad)."""
+    return len(baksida.betydelser(text)) or 1
+
+
+def _facit_betydelser(facit):
+    """Grov räkning av betydelser i OLD-facit. OLD skiljer betydelser med ';'
+    -- men skiljer OCKSÅ ofta bara synonymer med samma tecken, vilket gav 82
+    falsklarm på 116 kandidater 2026-08-07. Siffran är därför en FRÅGA till
+    granskaren, aldrig ett konstaterat fel."""
+    ren = re.sub(r"<[^>]+>", " ", facit or "")
+    delar = [d.strip() for d in ren.split(";") if d.strip()]
+    return len(delar)
+
+
 # --------------------------------------------------------------- applicera
-def applicera(sokvag):
+def applicera(sokvag, granskare=None):
     poster = _las(sokvag)
     skrivna, hoppade = [], []
     for e in poster:
@@ -108,6 +153,9 @@ def applicera(sokvag):
             )
             e["adamtal_varningar"] = mjuka
             e["applicerad"] = True
+            # Vem som SKREV kortet. verdikt() vägrar godkänna av samma namn --
+            # det är så "oberoende" blir kontrollerbart i stället för påstått.
+            e["skriven_av"] = granskare
             skrivna.append(e["ord"])
         except Exception as exc:
             hoppade.append((e["ord"], str(exc)[:120]))
@@ -129,10 +177,20 @@ def paket(sokvag):
     for e in poster:
         n = invoke("notesInfo", notes=[e["noteId"]])[0]
         p = baksida.parse(n["fields"][config.FIELD_BAKSIDA]["value"])
+        facit = e.get("old_facit")
+        n_kort, n_facit = _betydelser(p["huvudbetydelse"]), _facit_betydelser(facit)
         ut.append({
             "noteId": e["noteId"],
             "ord": n["fields"][config.FIELD_ORD]["value"],
-            "facit": e.get("old_facit"),
+            "facit": facit,
+            # Mekanisk signal, härledd ur facit + färdigt kort -- alltså ur
+            # sådant granskaren ändå ser. Läcker ingenting om hur kortet blev
+            # till. Samma svepning hittade 34 äkta luckor 2026-08-07.
+            "facit_signal": (
+                f"facit antyder {n_facit} betydelse(r), kortet har {n_kort} "
+                "-- avgör om någon saknas"
+                if facit and n_facit > n_kort else None
+            ),
             "kort": {
                 "huvudbetydelse": p["huvudbetydelse"],
                 "register": p["register"],
@@ -158,30 +216,85 @@ def paket(sokvag):
         mal = f"{stam}_v3-paket.json"
     if os.path.abspath(mal) == os.path.abspath(sokvag):  # bältet och hängslena
         raise RuntimeError(f"vägrar skriva paketet över indatafilen {sokvag}")
-    _skriv(mal, {"instruktion": VERIFIERARINSTRUKTION, "poster": ut})
+    # skriven_av ligger UTANFÖR "poster": verdikt() behöver den för att kunna
+    # vägra självgranskning, men granskaren ska döma korten, inte författaren.
+    _skriv(mal, {
+        "instruktion": VERIFIERARINSTRUKTION,
+        "skriven_av": next((e.get("skriven_av") for e in poster if e.get("skriven_av")), None),
+        "granskare": None,   # fylls av den blinda granskaren, obligatoriskt
+        "poster": ut,
+    })
+    med_signal = sum(1 for u in ut if u["facit_signal"])
     print(f"Skrev {len(ut)} blinda verifieringsposter till {mal}")
-    print("Låt en FRISTÅENDE granskare fylla i verdikt/anmarkning, kör sedan 'verdikt'.")
+    print(f"  varav {med_signal} där facit antyder fler betydelser än kortet har")
+    print("Låt en FRISTÅENDE granskare (ny session/agent, som INTE skrev korten)")
+    print("fylla i 'granskare' överst plus verdikt/anmarkning per post.")
+    print(f"Kör sedan: python kortgranskare.py verdikt {mal}")
     return mal
 
 
 # ------------------------------------------------------------------ verdikt
-def verdikt(paketsokvag):
+def verdikt(paketsokvag, granskare=None):
     data = _las(paketsokvag)
     poster = data["poster"] if isinstance(data, dict) else data
+    meta = data if isinstance(data, dict) else {}
+
+    # --- Oberoendespärren ---------------------------------------------
+    # Utan den vilar `oberoende_verifierad` på granskarens ord, precis som
+    # `sokverifierad` gjorde innan källspärren -- och den taggen satt på 177
+    # kort som aldrig sökkollats. En spärr som bara gäller när man råkar
+    # tänka på den är ingen spärr.
+    gr = granskare or meta.get("granskare")
+    if not gr:
+        print("AVBRYTER: granskare saknas. Ange vem som gjorde den blinda "
+              "granskningen -- fältet 'granskare' i paketfilen eller --granskare. "
+              "Taggen oberoende_verifierad får inte sättas anonymt.")
+        return
+    skrivare = meta.get("skriven_av")
+    if skrivare and gr.strip().lower() == skrivare.strip().lower():
+        print(f"AVBRYTER: {gr!r} skrev korten och kan inte blindgranska dem.\n"
+              "  Hela poängen med steget är att en granskare som kontrollerar sitt\n"
+              "  EGET arbete bekräftar sig själv (34 kort med saknad betydelse hittades\n"
+              "  2026-08-07 i material som passerat både snabbkoll OCH sökverifiering).\n"
+              "  Kör steget i en ny session eller med en separat agent.")
+        return
+
     saknar = [p["ord"] for p in poster if p.get("verdikt") not in ("godkand", "underkand")]
     if saknar:
         print(f"AVBRYTER: {len(saknar)} poster saknar verdikt ({', '.join(saknar[:8])} ...)")
         return
+    # Ett underkännande utan motivering går inte att åtgärda, och ett godkännande
+    # av ett kort där facit_signal aldrig besvarades är inte en genomförd kontroll.
+    obesvarade = [p["ord"] for p in poster
+                  if p["verdikt"] == "underkand" and not (p.get("anmarkning") or "").strip()]
+    if obesvarade:
+        print(f"AVBRYTER: {len(obesvarade)} underkända saknar anmärkning "
+              f"({', '.join(obesvarade[:8])}) -- skriv VAD som är fel.")
+        return
+
     godkanda = [p for p in poster if p["verdikt"] == "godkand"]
     underkanda = [p for p in poster if p["verdikt"] == "underkand"]
     idag = __import__("datetime").date.today().isoformat()
     for p in godkanda:
         invoke("addTags", notes=[p["noteId"]],
                tags=f"{config.OBEROENDE_TAG_PREFIX}::{idag}")
+        _logga_oberoende({
+            "datum": idag, "noteId": p["noteId"], "ord": p["ord"],
+            "granskare": gr, "skriven_av": skrivare,
+            "verdikt": "godkand", "anmarkning": p.get("anmarkning"),
+        })
+    for p in underkanda:
+        _logga_oberoende({
+            "datum": idag, "noteId": p["noteId"], "ord": p["ord"],
+            "granskare": gr, "skriven_av": skrivare,
+            "verdikt": "underkand", "anmarkning": p.get("anmarkning"),
+        })
+    print(f"Blind granskare        : {gr}   (kortskrivare: {skrivare or 'okänd'})")
     print(f"Godkända (taggade {config.OBEROENDE_TAG_PREFIX}::{idag}): {len(godkanda)}")
     print(f"UNDERKÄNDA -- rättas och köres om, släpps inte: {len(underkanda)}")
     for p in underkanda:
         print(f"  {p['ord']}: {p.get('anmarkning')}")
+    print(f"\nLoggat till {OBEROENDE_LOGG} -- utfallet går att granska i efterhand.")
 
 
 # -------------------------------------------------------------------- slapp
@@ -254,12 +367,18 @@ def status(sokvag):
     poster = _las(sokvag)
     ids = [e["noteId"] for e in poster if e.get("applicerad")]
     redo, blockerade = kontrollera_slappbar(ids) if ids else ([], [])
+    blind = len(invoke("findNotes",
+                       query=f'deck:"{config.DECK_NAME}" tag:{config.OBEROENDE_TAG_PREFIX}::*')) if ids else 0
     print(f"Kort i batchen        : {len(poster)}")
     print(f"  granskade+godkända  : {sum(1 for e in poster if e.get('approved'))}")
     print(f"  med sökkoll ifylld  : {sum(1 for e in poster if (e.get('sokkoll') or {}).get('kalla'))}")
     print(f"  applicerade         : {len(ids)}")
     print(f"  släppbara nu        : {len(redo)}")
     print(f"  blockerade          : {len(blockerade)}")
+    print(f"blindverifierade i hela decket: {blind}")
+    if not blind:
+        print("  OBS: 0 -- den blinda andragranskningen har aldrig körts. Inget kort")
+        print("  kan släppas förrän den gör det (config.SLAPP_KRAVER_TAGGAR).")
 
 
 def main():
@@ -268,11 +387,14 @@ def main():
     p.add_argument("steg", choices=["applicera", "paket", "verdikt", "slapp", "status"])
     p.add_argument("fil")
     p.add_argument("--torr", action="store_true", help="slapp: visa utan att avsuspendera")
+    p.add_argument("--granskare", default=None,
+                   help="applicera: vem som SKREV korten. verdikt: vem som "
+                        "blindgranskade dem. Måste skilja sig åt.")
     a = p.parse_args()
     if not os.path.exists(a.fil):
         sys.exit(f"Hittar inte {a.fil}")
-    {"applicera": lambda: applicera(a.fil), "paket": lambda: paket(a.fil),
-     "verdikt": lambda: verdikt(a.fil), "slapp": lambda: slapp(a.fil, a.torr),
+    {"applicera": lambda: applicera(a.fil, a.granskare), "paket": lambda: paket(a.fil),
+     "verdikt": lambda: verdikt(a.fil, a.granskare), "slapp": lambda: slapp(a.fil, a.torr),
      "status": lambda: status(a.fil)}[a.steg]()
 
 
