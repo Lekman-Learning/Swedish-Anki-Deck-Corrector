@@ -2976,3 +2976,27 @@ korten är rätt eller fel."*
 Högst risk: åtta påståenden om att ett ord *inte finns*, gjorda utan uppslagning —
 `hävdaforskare`, `boköppning`, `bortskämmande`, `habegärlig`, `initialera`, `brunton`,
 `öppningsvisning`, `misskastningar`.
+
+### svenska.se löst — SAOB är ordadresserbar (2026-08-09, sent)
+
+`https://www.saob.se/artikel/?seek=<ord>` är serverrenderad och tar ordet direkt.
+Verifierat med två skilda ord (gedigen, trolsk) — rätt artikel per ord, full text,
+numrerade betydelser, etymologi och belägg.
+
+svenska.se självt förblir blockerat: både `/tre/?sok=` och den äldre
+`/tri/f_saol.php?sok=` ger ett tomt skal. SAOB är samma akademi och djupare, så
+ingenting går förlorat.
+
+**Adams beslut 2026-08-09: SAOB ska alltid användas.** Sökkollen per kort blir därmed:
+
+1. `saob.se/artikel/?seek=<ord>` — betydelser, auktoritativt
+2. `sv.wiktionary.org/wiki/<ord>` — modernt bruk, numrerade betydelser
+3. `synonymer.se/sv-syn/<ord>` — synonymer
+
+**Tre hämtningar per kort.** Vid 125 kort/dag = 375 hämtningar/dag. Räkna om takten
+mot den siffran innan nästa batch startas — se varningen om volym kontra kvalitet ovan.
+
+**Beviset att flera källor behövs:** av fyra testhämtningar avslöjade två att en
+rättelse skriven samma kväll UR EGET HUVUD var ofullständig. `tabernakel` fick två
+betydelser, Wiktionary listar fyra. `trolsk` fick en, SAOB listar två. Båda korten var
+redan skrivna till Anki när det upptäcktes.

@@ -29,13 +29,32 @@ import json
 import os
 import re
 
-# Kanaler som duger som källa. svenska.se är medvetet INTE med: sidan är
-# JS-renderad och WebFetch får tillbaka ett tomt skal (verifierat 2026-08-09).
-# Att tillåta den hade gjort det möjligt att "belägga" ett ord med en tom sida.
+# Kanaler som duger som källa, alla testade med WebFetch 2026-08-09.
+#
+# DE TRE SOM SKA ANVÄNDAS, i denna ordning per kort:
+#
+#   1. https://www.saob.se/artikel/?seek=<ord>
+#      SAOB — Svenska Akademiens ordbok, den auktoritativa. Ordadresserbar
+#      och serverrenderad. Ger numrerade betydelser, etymologi och belägg.
+#      OBS: `?seek=` är ingången som fungerar. `?unik=<id>` fungerar också
+#      men id:t går inte att konstruera ur ordet.
+#
+#   2. https://sv.wiktionary.org/wiki/<ord>
+#      Modernt språkbruk, numrerade betydelser, ordklass, etymologi.
+#      Kompletterar SAOB, som är historisk och ibland tung att läsa.
+#
+#   3. https://www.synonymer.se/sv-syn/<ord>
+#      Synonymlistor. Svag på betydelseuppräkning — använd den till
+#      synonymkontroll, inte till att avgöra hur många betydelser ett ord har.
+#
+# Att det behövs mer än en källa är inte teori: 2026-08-09 rättades `tabernakel`
+# ur eget huvud till två betydelser (Wiktionary listar fyra) och `trolsk` till
+# en (SAOB listar två). Två av fyra testhämtningar avslöjade en ofullständig
+# rättelse som redan var skriven till Anki.
 GODKANDA_VARDAR = (
-    "synonymer.se",
     "saob.se",
     "wiktionary.org",
+    "synonymer.se",
     "ne.se",
     "isof.se",
     "sprakochfolkminnen.se",
@@ -43,8 +62,12 @@ GODKANDA_VARDAR = (
     "tyda.se",
 )
 
+# svenska.se (SO/SAOL) är JS-renderad: både /tre/?sok= och det äldre
+# /tri/f_saol.php?sok= ger ett tomt skal med enbart navigering (verifierat
+# 2026-08-09). Att tillåta värden hade gjort det möjligt att "belägga" ett ord
+# med en tom sida. Använd saob.se i stället — samma akademi, djupare artiklar.
 BLOCKERADE_VARDAR = (
-    "svenska.se",   # JS-renderad, WebFetch ger tomt skal
+    "svenska.se",
 )
 
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
