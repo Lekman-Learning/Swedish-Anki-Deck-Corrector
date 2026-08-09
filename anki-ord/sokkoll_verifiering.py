@@ -62,12 +62,31 @@ GODKANDA_VARDAR = (
     "tyda.se",
 )
 
-# svenska.se (SO/SAOL) är JS-renderad: både /tre/?sok= och det äldre
-# /tri/f_saol.php?sok= ger ett tomt skal med enbart navigering (verifierat
-# 2026-08-09). Att tillåta värden hade gjort det möjligt att "belägga" ett ord
-# med en tom sida. Använd saob.se i stället — samma akademi, djupare artiklar.
-BLOCKERADE_VARDAR = (
+# svenska.se (SAOL/SO/SAOB i ett) är JS-renderad. Med WebFetch ger både
+# /tre/?sok= och det äldre /tri/f_saol.php?sok= ett tomt skal med enbart
+# navigering — att tillåta det hade gjort det möjligt att "belägga" ett ord med
+# en tom sida.
+#
+# MEN med en riktig webbläsare renderar den (bevisat 2026-08-09 med Playwright).
+# Därför är svenska.se inte blockerad rakt av, utan **kanalberoende**: giltig
+# bara om beviset kommer från en browser-navigering, aldrig från WebFetch.
+# Det är en skarpare regel än ett förbud, och den kan kontrolleras maskinellt
+# eftersom transkriptet skiljer på verktygen.
+#
+# Varför det är värt besväret: svenska.se ger SAOL + SO + SAOB på EN sida, och
+# SO är den bästa enskilda källan för korten — numrerade betydelser,
+# exempelmeningar, etymologi och JFR-hänvisningar som är färdiga synonymuppslag.
+# Ett anrop ersätter tre, och ger mer.
+KANALBEROENDE_VARDAR = (
     "svenska.se",
+)
+
+BLOCKERADE_VARDAR = ()
+
+# Verktygsnamn som räknas som "renderande webbläsare" i transkriptet.
+BROWSERVERKTYG = (
+    "mcp__playwright__browser_navigate",
+    "browser_navigate",
 )
 
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
@@ -77,19 +96,20 @@ def _transkriptkatalog():
     return os.path.join(os.path.expanduser("~"), ".claude", "projects")
 
 
-def _tool_use_urler(nod, ut):
-    """Plockar url-PARAMETERN ur WebFetch-anrop. Rekursivt, eftersom
-    transkriptets struktur varierar mellan versioner."""
+def _tool_use_urler(nod, ut, verktyg, kanal):
+    """Plockar url-PARAMETERN ur anrop till `verktyg`. Rekursivt, eftersom
+    transkriptets struktur varierar mellan versioner. Skriver in kanalen så att
+    granska_kalla kan skilja WebFetch från renderande webbläsare."""
     if isinstance(nod, dict):
-        if nod.get("type") == "tool_use" and nod.get("name") in ("WebFetch", "web_fetch"):
+        if nod.get("type") == "tool_use" and nod.get("name") in verktyg:
             url = (nod.get("input") or {}).get("url")
             if isinstance(url, str):
-                ut.add(url)
+                ut[url] = kanal
         for v in nod.values():
-            _tool_use_urler(v, ut)
+            _tool_use_urler(v, ut, verktyg, kanal)
     elif isinstance(nod, list):
         for v in nod:
-            _tool_use_urler(v, ut)
+            _tool_use_urler(v, ut, verktyg, kanal)
 
 
 def _urler_ur_transkript():
@@ -105,26 +125,33 @@ def _urler_ur_transkript():
     hämtning, vilket upphäver hela modulens syfte. Upptäckt av det egna
     testet 2026-08-09, samma dag modulen skrevs.
     """
-    urler = set()
+    urler = {}
+    kanaler = ((("WebFetch", "web_fetch"), "webfetch"),
+               (BROWSERVERKTYG, "browser"))
     monster = os.path.join(_transkriptkatalog(), "*", "*.jsonl")
     for sokvag in glob.glob(monster):
         try:
             with open(sokvag, encoding="utf-8", errors="ignore") as f:
                 for rad in f:
-                    if '"WebFetch"' not in rad and '"web_fetch"' not in rad:
-                        continue
-                    try:
-                        _tool_use_urler(json.loads(rad), urler)
-                    except ValueError:
-                        continue
+                    for verktyg, kanal in kanaler:
+                        if not any(f'"{v}"' in rad for v in verktyg):
+                            continue
+                        try:
+                            _tool_use_urler(json.loads(rad), urler, verktyg, kanal)
+                        except ValueError:
+                            continue
         except OSError:
             continue
     return urler
 
 
 def _urler_ur_valvloggen(valvsokvag):
-    """Reserv: raw-websearch/ i valvet. Används för äldre datum."""
-    urler = set()
+    """Reserv: raw-websearch/ i valvet. Används för äldre datum.
+
+    Loggen skiljer inte på verktyg, så allt härifrån räknas som `webfetch` --
+    den svagare kanalen. En kanalberoende värd kan alltså aldrig beläggas ur
+    valvloggen ensam, vilket är rätt: vi vet inte hur sidan hämtades."""
+    urler = {}
     if not valvsokvag:
         return urler
     for sokvag in glob.glob(os.path.join(valvsokvag, "raw-websearch", "*.md")):
@@ -132,15 +159,21 @@ def _urler_ur_valvloggen(valvsokvag):
             with open(sokvag, encoding="utf-8", errors="ignore") as f:
                 for rad in f:
                     if rad.startswith("**URL:**"):
-                        urler.update(_URL_RE.findall(rad))
+                        for u in _URL_RE.findall(rad):
+                            urler.setdefault(u, "webfetch")
         except OSError:
             continue
     return urler
 
 
 def samla_bevis(valvsokvag=None):
-    """Returnerar mängden URL:er som bevisligen hämtats."""
-    return _urler_ur_transkript() | _urler_ur_valvloggen(valvsokvag)
+    """{url: kanal} för varje URL som bevisligen hämtats.
+
+    Kanal är 'browser' (renderande webbläsare) eller 'webfetch'. Transkriptet
+    vinner över valvloggen, eftersom det är det starkare vittnet."""
+    bevis = _urler_ur_valvloggen(valvsokvag)
+    bevis.update(_urler_ur_transkript())
+    return bevis
 
 
 def _normalisera(url):
@@ -165,15 +198,21 @@ def granska_kalla(kalla, bevis):
         return False, ("kalla saknar URL — fri text duger inte längre, "
                        "se sokkoll_verifiering.py")
 
+    normaliserat = {_normalisera(b): kanal for b, kanal in bevis.items()}
     for url in urler:
         n = _normalisera(url)
         if any(v in n for v in BLOCKERADE_VARDAR):
-            return False, (f"{url} är blockerad: JS-renderad sida som ger tomt "
-                           "innehåll via WebFetch")
-        if not any(v in n for v in GODKANDA_VARDAR):
+            return False, f"{url} är blockerad"
+        kanalberoende = any(v in n for v in KANALBEROENDE_VARDAR)
+        if not kanalberoende and not any(v in n for v in GODKANDA_VARDAR):
             continue
-        if any(_normalisera(b) == n for b in bevis):
-            return True, url
+        kanal = normaliserat.get(n)
+        if kanal is None:
+            continue
+        if kanalberoende and kanal != "browser":
+            return False, (f"{url} kräver renderande webbläsare — sidan är "
+                           "JS-byggd och ger tomt skal via WebFetch")
+        return True, f"{url} [{kanal}]"
     return False, (f"ingen av URL:erna i kalla finns i transkript/raw-websearch "
                    f"({', '.join(urler[:3])}) — hämtningen gjordes aldrig")
 
