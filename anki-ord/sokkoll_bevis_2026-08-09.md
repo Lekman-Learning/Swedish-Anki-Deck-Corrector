@@ -3,9 +3,25 @@
 Varje rad är en faktisk hämtning. URL:erna ligger i Claude Codes transkript och är
 därmed maskinellt kontrollerbara av `sokkoll_verifiering.py`.
 
-**Metod:** `saob.se/artikel/?seek=<ord>` + `synonymer.se/sv-syn/<ord>` på varje ord.
-Wiktionary som avgörare när de två går isär, eller när ordet är för modernt för SAOB
-(SAOB:s yngsta artiklar är från 1900-talets början för många bokstäver).
+**Metod (skärpt av Adam 2026-08-09, efter att första omgången mätts):**
+
+1. **Tre källor är ett MINIMUM, inte ett tak.** SAOB + synonymer.se + Wiktionary på
+   varje ord. Räcker de inte för att avgöra frågan — sök vidare, fri webbsökning
+   inkluderad. Första omgången körde två källor som kostnadsbeslut; `bonitet` visade
+   varför det inte duger, betydelsen "kreditvärdighet" fanns bara i tredje källan.
+2. **Uppslagningen ska gälla ORDET SJÄLVT.** Sju kort i första omgången hade bara den
+   *borttagna synonymen* uppslagen — kortets eget innehåll stod fortfarande utan
+   källa. Att slå upp ett ord man tänker radera är inte en sökkoll av kortet.
+3. **SAOB och svenska.se tar bara enstaka uppslagsord.** Idiom och flerordsuttryck går
+   inte att slå upp där — de ska sökas på synonymer.se, Wiktionary och fri webb.
+   `lägga sordin på` är fallet som visade det; grundordet `sordin` bär beläggen.
+4. **Går ordet inte att belägga: rödflagga kortet och gå vidare.** Ett kort utan källa
+   ska märkas ut och tas upp senare, inte skrivas på förtroende. Rätta först det som
+   går att rätta väl.
+
+Ett antagande som sprack: jag hade struntat i att söka `slapstick` i SAOB för att
+ordet "är för modernt". **SAOB har det.** Antaganden om vad en källa innehåller är
+samma sorts påstående som antaganden om vad ett ord betyder — de ska mätas.
 
 ## Två begränsningar i SAOB:s `?seek=`, upptäckta under körningen
 
