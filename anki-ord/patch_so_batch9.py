@@ -158,9 +158,14 @@ def main():
         e["approved"] = True
         e["applicerad"] = False
         e.pop("skriven_av", None)
+        # INDENTERINGSBUGG 2026-08-09: tilldelningen låg en gång UTANFÖR loopen,
+        # så bara sista nyckeln i `andr` applicerades. Eftersom `synonymer` råkade
+        # stå sist i varje anrop skrevs synonymerna men aldrig huvudbetydelsen
+        # eller registret -- korten såg uppdaterade ut och var det till hälften.
+        # Hittat genom att läsa tillbaka live-innehållet ur Anki, inte genom att
+        # lita på att `applicerad: True` betydde att allt skrivits.
         for f_, v in andr.items():
-            e.setdefault("proposed", json.loads(json.dumps(e.get("legacy") or {})))
-        e["proposed"][f_] = v
+            e["proposed"][f_] = v
         if "huvudbetydelse" in andr:
             e["proposed"]["synonym_groups"] = None
         e["oforandrad"] = not andr
