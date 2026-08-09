@@ -111,7 +111,11 @@ BROWSERVERKTYG = (
 # Varför kanalen behövdes: webbläsarvägen kostade två anrop per ord, och deras
 # svar låg kvar i kontextfönstret. Tjugo kort tog slut på utrymme långt före
 # kvoten. Skriptvägen gör tjugo ord till ett anrop.
-SKRIPTMARKOR = re.compile(r"SVENSKA_SE_HAMTAD\s+(\S+)\s+HTTP\s+200\s")
+# (.+?) och inte (\S+): flerordsuppslag som "bekväma sig" innehåller
+# mellanslag, och \S+ fångade bara första ordet. Kalla sa "?ord=bekväma sig"
+# men beviset registrerades som "bekväma" -- kortet stoppades trots att
+# hämtningen gjorts. Hittat 2026-08-09 av spärren själv, på batch 7.
+SKRIPTMARKOR = re.compile(r"SVENSKA_SE_HAMTAD\s+(.+?)\s+HTTP\s+200\s")
 SKRIPT_KALLA = re.compile(r"svenska\.se/api/msearch\?ord=(.+)$")
 
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
