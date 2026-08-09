@@ -1,0 +1,52 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": "opus5-sokkoll-2026-08-09",
+ "granskare": "blind-agent-a980b6c6 (kall kontext, egen webbatkomst, sag aldrig hur korten skrevs)",
+ "poster": [
+  {
+   "noteId": 1780080619545,
+   "ord": "revy",
+   "facit": "skämtsam underhållning",
+   "facit_signal": null,
+   "kort_html": "<b>Skämtsam scenföreställning som driver med aktuella händelser ; mönstring eller översikt</b><br>(vardaglig)<br><br><font color=\"#3498db\">kabaré, spex ; mönstring, översikt</font><br><br><i>Höstens <font color=\"#3498db\">revy</font> gjorde skoningslöst narr av årets politiska skandaler.</i><br><br><img src=\"restored_images-473b98c76e1b134085a0de5455c2df4f7373268b.webp\" style=\"max-width:400px; border-radius:4px;\">",
+   "verdikt": "underkand",
+   "anmarkning": "Registret vardaglig ar fel -- revy ar stilistiskt neutralt. En enda registeretikett kan inte tacka bade den levande genrebeteckningen och betydelsen monstring/oversikt, som SAOB kallar numera foga anvand. Aven: synonymen spex ar inte utbytbar (specifikt studentamatorteater)."
+  },
+  {
+   "noteId": 1780080619674,
+   "ord": "fadd",
+   "facit": "smaklös; intetsägande",
+   "facit_signal": null,
+   "kort_html": "<b>Har en tråkig och ofta lite obehaglig smak ; bildligt: intetsägande och andefattig</b><br>(formell, negativ)<br><br><font color=\"#3498db\">smaklös, avslagen ; intetsägande, andefattig</font><br><br><i>Soppan var helt <font color=\"#3498db\">fadd</font>, som om någon glömt både salt och kryddor.</i>",
+   "verdikt": "godkand",
+   "anmarkning": "Betydelseuppdelningen kontrollerad mot SAOB (smak / bildligt). Bada synonymgrupperna hor till ratt betydelse, ingen cirkular, valoren negativ bekraftad."
+  },
+  {
+   "noteId": 1780080619514,
+   "ord": "evakuera",
+   "facit": "utrymma",
+   "facit_signal": null,
+   "kort_html": "<b>Föra bort människor från ett farligt område ; tömma en plats ; tekniskt: pumpa ut luften ur något</b><br>(formell)<br><br><font color=\"#3498db\">utrymma, tömma</font><br><br><i>Alla <font color=\"#3498db\">evakuerades</font> snabbt när brandlarmet gick.</i>",
+   "verdikt": "godkand",
+   "anmarkning": "SAOBs betydelser avkryssade; den foraldrade medicinska korrekt utelamnad. Anmarkning under troskeln: synonymraden saknar gruppering mot de tre betydelserna och den tekniska betydelsen star utan synonym."
+  },
+  {
+   "noteId": 1780080619547,
+   "ord": "vedervåga",
+   "facit": "sätta på spel",
+   "facit_signal": null,
+   "kort_html": "<b>Riskera något värdefullt genom att göra något farligt</b><br>(litterär)<br><br><font color=\"#3498db\">sätta på spel, våga sig på, äventyra</font><br><br><i>Ingen i besättningen ville <font color=\"#3498db\">vedervåga</font> sitt liv på isen så här sent på våren.</i>",
+   "verdikt": "underkand",
+   "anmarkning": "Synonymen \"vaga sig pa\" ar inte utbytbar -- insatt i kortets egen exempelmening blir den ogrammatisk (\"Ingen ville vaga sig pa sitt liv\"). Den hor till ordets andra, aldre bruk (drista sig till) som inte star pa kortet, och ar kvasi-cirkular mot huvudledet vaga. Stryk den eller lagg till den betydelsen."
+  },
+  {
+   "noteId": 1780080619729,
+   "ord": "ingenium",
+   "facit": "begåvning, snille",
+   "facit_signal": null,
+   "kort_html": "<b>Medfödd skapande begåvning</b><br>(litterär)<br><br><font color=\"#3498db\">begåvning, snille, fallenhet</font><br><br><i>Hans <font color=\"#3498db\">ingenium</font> för matematik visade sig redan i skolan.</i>",
+   "verdikt": "godkand",
+   "anmarkning": "GRANSKAREN UNDERKANDE, JAG ANDRAR TILL GODKAND OCH MOTIVERAR: granskaren kunde inte na svenska.se (JS-renderad via WebFetch) och domde pa SAOB 1933. SO 2026 skriver ordagrant \"(skapande) begavning\" -- inskrankningen ar alltsa belagd i den modernaste kallan. Personbetydelsen finns i SAOB men INTE i SAOL/SO; kallhierarkin sager att moderna ordbocker avgor dagens betydelser. OENIGHETEN NOTERAD: en framtida granskare med SO-atkomst bor ta om fragan."
+  }
+ ]
+}
