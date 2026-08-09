@@ -28,6 +28,7 @@ import glob
 import json
 import os
 import re
+import urllib.parse
 
 # Kanaler som duger som källa, alla testade med WebFetch 2026-08-09.
 #
@@ -177,9 +178,14 @@ def samla_bevis(valvsokvag=None):
 
 
 def _normalisera(url):
-    """Jämför utan schema, www och avslutande slash — samma sida ska matcha
-    oavsett hur den skrevs in i kalla-fältet."""
-    u = url.lower().split("#")[0].rstrip("/")
+    """Jämför utan schema, www, procentkodning och avslutande slash — samma sida
+    ska matcha oavsett hur den skrevs in i kalla-fältet.
+
+    Procentavkodningen tillkom 2026-08-09: `?sok=fördärvlig` och
+    `?sok=f%C3%B6rd%C3%A4rvlig` är samma sida, men jämfördes som olika strängar
+    och två faktiskt hämtade kort stoppades. Avkodningen är kanonisering, inte
+    uppmjukning — kravet på en verklig hämtning är oförändrat."""
+    u = urllib.parse.unquote(url).lower().split("#")[0].rstrip("/")
     for prefix in ("https://", "http://"):
         if u.startswith(prefix):
             u = u[len(prefix):]
