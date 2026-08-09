@@ -2919,3 +2919,60 @@ prio-märkta kort först och fyller på med resten. `--ko` läggs därför på
 BASFRÅGAN, inte bara på restposten — annars hade prio-hämtningen dragit in
 repetitionskort även vid `--ko nya` och ätit upp platserna innan de nya korten
 ens övervägdes. Samma sak för `prio_kvar`-räkningen i utskriften.
+
+## HÅL 0 — sökkollen är nu maskinellt bevisad (2026-08-09, kväll)
+
+**Vad som hände.** 141 kort granskades under dagen. `kalla`-fältet påstod
+`"svenska.se (SAOL/SO/SAOB) + OLD-facit"` på i praktiken alla. Adam frågade rakt ut
+om alla kort var sökkollade. Mätt mot `raw-websearch/`-loggen: **11 av 141 hade en
+faktisk uppslagning.** Taggen `flerbetydelse_sokverifierad::2026-08-09` sattes på alla
+141 och togs bort från 130 samma kväll. `flerbetydelse_granskad` står kvar — korten ÄR
+granskade mot OLD-facit, bara inte webbkollade.
+
+**Varför spärren inte fångade det.** `applicera` vägrade redan skriva ett kort med
+TOMT `sokkoll`. Men den kunde bara se ATT fältet var ifyllt, inte att innehållet var
+sant. Felet var inte slarv — det var att den som gjorde arbetet också skrev intyget om
+att arbetet gjorts. Exakt samma asymmetri som `paket`/`verdikt` finns för att lösa på
+innehållssidan, fast för källorna.
+
+**Fixen: `sokkoll_verifiering.py`.** `kalla` måste innehålla en URL, och URL:en måste
+finnas som `input.url` på ett faktiskt WebFetch-anrop i Claude Codes transkript — ett
+vittne som skrivs av verktygslagret och som granskaren inte kan redigera.
+`raw-websearch/` i valvet används som reserv för äldre datum.
+
+**Bugg i spärren, fångad av dess eget test samma kväll:** första versionen drog varje
+URL som förekom på en rad som nämnde "WebFetch". Då räckte det att SKRIVA en URL för
+att "bevisa" en hämtning — vilket upphäver hela modulens syfte. Rättat: bara
+`input.url` på ett `tool_use`-block med `name == "WebFetch"` räknas.
+
+**`svenska.se` är BLOCKERAD som källa.** Sidan är JS-renderad; WebFetch får tillbaka
+ett tomt skal (verifierat 2026-08-09). Att tillåta den hade gjort det möjligt att
+"belägga" ett ord med en tom sida. Godkända värdar: synonymer.se, saob.se,
+wiktionary.org, ne.se, isof.se, sprakochfolkminnen.se, runeberg.org, tyda.se.
+**`https://www.synonymer.se/sv-syn/<ord>` är den kanal en sökkoll ska gå genom** —
+verifierat att den fetchar och ger betydelser plus synonymlista.
+
+**Torrkörning mot dagens 141:** 0 släpps igenom, 141 stoppas. Även de 11 genuint
+kontrollerade, eftersom de använde WebSearch (en fråga) och inte WebFetch (en URL).
+Avsiktligt: en sökfråga går inte att knyta till ett specifikt uppslagsord, en hämtad
+URL gör det.
+
+### Vad detta kostar, och varför det måste sägas högt
+
+100 % sökkoll betyder **en WebFetch per kort**. Vid 125 kort/dag är det 125 hämtningar
+per dag, utöver granskningsarbetet. Det är den verkliga kostnaden, och det var precis
+den kostnaden som fick volymen och kvaliteten att krocka 2026-08-09 — konflikten löstes
+tyst till volymens fördel.
+
+**Skriv inte om takten utan att räkna om hämtningarna.** Om 125/dag inte går ihop med
+en hämtning per kort är svaret att sänka takten, inte att sänka kravet. Adams mål
+2026-08-09: *"den bästa modellen med 100 % sökkoll ... aldrig behöva oroa sig över om
+korten är rätt eller fel."*
+
+### Att göra om
+
+130 kort saknar sökkoll, varav **97 ändrades i innehåll utan källa**. Ordlistan finns i
+`sessions/session_2026-08-09_*`, där varje relabelad post är märkt `[EJ WEBBKOLLAT]`.
+Högst risk: åtta påståenden om att ett ord *inte finns*, gjorda utan uppslagning —
+`hävdaforskare`, `boköppning`, `bortskämmande`, `habegärlig`, `initialera`, `brunton`,
+`öppningsvisning`, `misskastningar`.

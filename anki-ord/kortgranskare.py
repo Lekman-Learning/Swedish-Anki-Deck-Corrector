@@ -42,7 +42,12 @@ import sys
 import apply_flerbetydelse as af
 import baksida
 import config
+import sokkoll_verifiering as sv
 from ankiconnect import invoke
+
+# Valvet, för raw-websearch/-reserven i sokkoll_verifiering. Transkriptet är
+# primärkällan och hittas automatiskt; det här är bara fallback för äldre datum.
+VALV_SOKVAG = os.environ.get("STUDY_COACH_VALV", r"c:\Obsidian\Study Coach Ai")
 
 VERIFIERARINSTRUKTION = (
     "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det "
@@ -119,6 +124,14 @@ def _facit_betydelser(facit):
 def applicera(sokvag, granskare=None):
     poster = _las(sokvag)
     skrivna, hoppade = [], []
+    # HÅL 0, tillagt 2026-08-09. Tidigare räckte det att sokkoll-fältet var
+    # IFYLLT. Den dagen granskades 141 kort där fältet påstod "svenska.se
+    # (SAOL/SO/SAOB) + OLD-facit" på i praktiken alla -- mätt mot loggen hade
+    # 11 av 141 en faktisk uppslagning, och spärren släppte igenom allihop.
+    # Felet var inte slarv: den som gjorde arbetet skrev också intyget om att
+    # arbetet gjorts. Nu måste kalla peka på en hämtning som finns i Claude
+    # Codes transkript -- ett vittne granskaren inte kan skriva i.
+    bevis = sv.samla_bevis(VALV_SOKVAG)
     for e in poster:
         if not e.get("approved") or not e.get("proposed"):
             hoppade.append((e["ord"], "ej granskad/godkänd än"))
@@ -128,6 +141,10 @@ def applicera(sokvag, granskare=None):
         sok = e.get("sokkoll") or {}
         if not (sok.get("kalla") and sok.get("slutsats")):
             hoppade.append((e["ord"], "sokkoll saknas (kalla+slutsats krävs)"))
+            continue
+        giltig, motiv = sv.granska_kalla(sok.get("kalla"), bevis)
+        if not giltig:
+            hoppade.append((e["ord"], f"SÖKKOLL EJ BEVISAD: {motiv}"))
             continue
         p = e["proposed"]
         try:
