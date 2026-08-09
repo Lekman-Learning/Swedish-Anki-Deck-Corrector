@@ -90,6 +90,30 @@ BROWSERVERKTYG = (
     "browser_navigate",
 )
 
+# Tredje kanalen, tillagd 2026-08-09: `slaupp.py` slår upp många ord i en process
+# och skriver en bevisrad per ord i sin UTSKRIFT:
+#
+#     SVENSKA_SE_HAMTAD <ord> HTTP 200 <byte>
+#
+# Raden produceras av processen och fångas av verktygslagret. Agenten kan
+# formulera kommandot men inte hitta på dess utdata — samma egenskap som gör
+# transkriptets `input.url` till ett giltigt vittne. Kalla-formen som matchar är
+#
+#     https://svenska.se/api/msearch?ord=<ord>
+#
+# OBS: frågeparameter, INTE fragment. Ett fragment (#ord) klipps bort av
+# _normalisera och gjorde alla msearch-URL:er identiska -- spärren släppte då
+# igenom ord som aldrig hämtats. Hittat av modulens eget test 2026-08-09,
+# samma dag kanalen skrevs. Andra gången exakt det felet uppstår i den här
+# filen: att jämföra på något som råkar vara lika för alla är samma bugg som
+# att bara kontrollera att fältet är ifyllt.
+#
+# Varför kanalen behövdes: webbläsarvägen kostade två anrop per ord, och deras
+# svar låg kvar i kontextfönstret. Tjugo kort tog slut på utrymme långt före
+# kvoten. Skriptvägen gör tjugo ord till ett anrop.
+SKRIPTMARKOR = re.compile(r"SVENSKA_SE_HAMTAD\s+(\S+)\s+HTTP\s+200\s")
+SKRIPT_KALLA = re.compile(r"svenska\.se/api/msearch\?ord=(.+)$")
+
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
 
 
@@ -167,13 +191,39 @@ def _urler_ur_valvloggen(valvsokvag):
     return urler
 
 
+def _ord_ur_skriptutskrift():
+    """Ord som `slaupp.py` bevisligen hämtat, lästa ur verktygsutskrifter.
+
+    Bara rader med HTTP 200 räknas — en 404 eller ett nätverksfel skriver en
+    annan statuskod och ger därför inget belägg. Det är avsiktligt: ett
+    misslyckat uppslag ska aldrig kunna passera som ett lyckat."""
+    ut = set()
+    monster = os.path.join(_transkriptkatalog(), "*", "*.jsonl")
+    for sokvag in glob.glob(monster):
+        try:
+            with open(sokvag, encoding="utf-8", errors="ignore") as f:
+                for rad in f:
+                    if "SVENSKA_SE_HAMTAD" not in rad:
+                        continue
+                    # Raden är JSON-kodad i transkriptet; \n blir \\n. Sök i
+                    # råsträngen efter avkodning av de vanligaste escaperna.
+                    for m in SKRIPTMARKOR.finditer(rad.replace("\\n", "\n")):
+                        ut.add(m.group(1))
+        except OSError:
+            continue
+    return ut
+
+
 def samla_bevis(valvsokvag=None):
     """{url: kanal} för varje URL som bevisligen hämtats.
 
-    Kanal är 'browser' (renderande webbläsare) eller 'webfetch'. Transkriptet
-    vinner över valvloggen, eftersom det är det starkare vittnet."""
+    Kanaler: 'browser' (renderande webbläsare), 'skript' (slaupp.py:s utskrift)
+    och 'webfetch'. Transkriptet vinner över valvloggen — det är det starkare
+    vittnet."""
     bevis = _urler_ur_valvloggen(valvsokvag)
     bevis.update(_urler_ur_transkript())
+    for o in _ord_ur_skriptutskrift():
+        bevis[f"https://svenska.se/api/msearch?ord={o}"] = "skript"
     return bevis
 
 
@@ -215,7 +265,9 @@ def granska_kalla(kalla, bevis):
         kanal = normaliserat.get(n)
         if kanal is None:
             continue
-        if kanalberoende and kanal != "browser":
+        # Skriptkanalen hämtar via API:t, inte via den JS-byggda sidan, och är
+        # därför lika giltig som webbläsaren för svenska.se.
+        if kanalberoende and kanal not in ("browser", "skript"):
             return False, (f"{url} kräver renderande webbläsare — sidan är "
                            "JS-byggd och ger tomt skal via WebFetch")
         return True, f"{url} [{kanal}]"
