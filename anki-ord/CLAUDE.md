@@ -2838,3 +2838,84 @@ Första mätpunkten, 2026-08-08:
 Siffran att hålla ögonen på är `nya_aktiva = 567`. Vid 125 nya kort om dagen
 räcker den kön i drygt fyra dagar — det är den som sätter takten, inte
 antalet kort i decket.
+## `--ko`-flaggan + 50 kort ur dagens nya-kö (2026-08-09)
+
+**Buggen som flaggan löser.** `kortbyggare.py --spar omgranskning` sorterar på
+`due`. Repetitionskort har ett schemalagt DATUM som due, nya kort har en
+KÖPOSITION — talen ligger i olika intervall, så repetitionskorten vinner alltid.
+Följden: körningen tidigare samma dag la **alla 20 kort i repetitionskön och noll
+i nya-kön**, trots att det var de nya korten (de Adam introduceras för i dag) som
+skulle skyddas. Buggen var tyst — utdatan såg korrekt ut.
+
+**Fix:** `KO_FILTER` + `--ko {nya,repetition,bada}` (default `bada`) som lägger
+`is:new` / `-is:new` på pool-frågan **före** sorteringen. Filtrera efter
+sortering hade inte hjälpt — de nya korten kom aldrig med i de N första.
+
+`--ko` avvisas för `--spar nya`: spår A är suspenderat och därmed varken nytt
+eller förfallet i Ankis mening, så filtret hade tystat hela poolen utan felmeddelande.
+
+Sessionsfilens namn får `-nya`/`-repetition`-suffix så två körningar samma dag
+inte blandas ihop.
+
+    python kortbyggare.py --spar omgranskning --ko nya --antal 50
+
+**Verifierat:** 50 av 50 kort inne i dagens nya-kö (mot 0 av 20 före fixen).
+
+### Passet: 50 kort, 39 ändrade
+
+Alla 50 skrivna (`applicera`: 50 skrivna, 0 hoppade), konfidens 49x10 + 1x8.
+Taggade `flerbetydelse_granskad::2026-08-09` +
+`flerbetydelse_sokverifierad::2026-08-09`, verifierat mot live-innehållet.
+
+**SAKNAD BETYDELSE, 6 kort** — alla belagda mot källa, inte gissade:
+`gedigen` (om metall: ren/oblandad, SAOL+SAOB), `konjunktur` (allmännare:
+omständigheter, SO+SAOB), `reservat` (område för ursprungsfolk, SAOB+NE),
+`revy` (mönstring/översikt, "passera revy", SAOL), `bilateral` (dubbelsidig,
+medicinskt), `variabel` — där **definitionen var ett substantiv men
+exempelmeningen använde ordet som adjektiv**; kortet motsade sig självt och
+ingen flagga reagerade.
+
+**SAKLIGT FEL SYNONYM, 16 kort:** `fonetik`/"språkvetenskap" (hela fältet mot en
+gren), `otolog`/"audiolog" (hörselvård mot läkarspecialitet), `bilateral`/"parvis",
+`beprövad`/"bevisad", `amsaga`/"historik", `avi`/"brev", `glyptotek`/"konstgalleri",
+`civiliserad`/"förnuftig", `försonlig`/"fredlig", `schattera`/"mörklägga",
+`konstitutiv`/"avgörande", `sondera`/"granska", `grisaille`/"Gradering",
+`komma för`/"inbilla sig", `hävdatecknare`/"hävdaforskare", `uppslag`/"boköppning".
+Fyra av dem går inte att belägga som ord alls: hörselmedicinare, hävdaforskare,
+boköppning, bortskämmande.
+
+**CIRKULÄRA KORT, 6 st** — ser kompletta ut, lär ut ingenting. `urmodig` är det
+renodlade fallet: definition "Gammaldags, omodern", synonymer
+`['gammaldags','omodern']` — ordagrant samma sträng, och kortet passerade den
+gamla granskningen och blåflaggades. Samma mönster: `korus`, `sufflett`,
+`bonitet`, `depreciera`, `fördärvlig`. **Detta är underlaget för att flytta
+`cirkular_synonym`/`cirkular_definition` från ADAMTAL_MJUKA till ADAMTAL_HARDA.**
+
+**EXEMPELMENING, 6 st:** `fonetik` (meningen använde inte ordet alls, utan
+"fonetiker"), `förhala` (fel användning), `schattera` ("schattar" -> "schatterar"),
+`yuppie` ("lönekuver" -> "lönekuvert"), `depreciera` ("svenska kronor" -> kronan),
+`prelat` (tre ords fragment).
+
+**REGISTER, 4 st:** `fördärvlig`/`högfärdig` saknade formalitetsaxeln helt,
+`försonlig` var felmärkt vardaglig, `revy` felmärkt formell.
+
+**RÄKNA INTE FELFREKVENS PÅ DETTA.** 31 av 50 valdes för hög riskflagga —
+urvalet är riskprioriterat med avsikt. 39/50 är inte deckets felnivå. Den siffran
+kommer från `blint_stickprov.py`. 11 av 50 var korrekta och lämnades orörda.
+
+Riskflaggan `dold_betydelse` gick igång på 31 kort men träffade rätt
+betydelsefel i 6 — den styr uppmärksamhet, den bevisar ingenting.
+
+### Kvar
+
+`oberoende_verifierad` är fortfarande **0**. Blindpaketet är byggt:
+`sessions/session_2026-08-09_v3-paket-nya.json`, 50 poster, läckagekontrollerat
+(0 träffar på riskflaggor/sokkoll/legacy/proposed/note_till_granskare).
+**Verdikt måste köras i en FRISTÅENDE session** — inte i den som skrev korten.
+Kvar av dagens 125: 75 kort.
+
+**Samspel med prio-taggen (löst vid rebase 2026-08-09):** `hamta_pool` hämtar
+prio-märkta kort först och fyller på med resten. `--ko` läggs därför på
+BASFRÅGAN, inte bara på restposten — annars hade prio-hämtningen dragit in
+repetitionskort även vid `--ko nya` och ätit upp platserna innan de nya korten
+ens övervägdes. Samma sak för `prio_kvar`-räkningen i utskriften.

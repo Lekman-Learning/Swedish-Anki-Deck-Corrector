@@ -25,6 +25,7 @@ Körning:
     python kortbyggare.py                    # 125 kort (config.DAGSBATCH_STORLEK)
     python kortbyggare.py --antal 25         # mindre sats
     python kortbyggare.py --dump             # skriv även en läsbar .txt
+    python kortbyggare.py --spar omgranskning --ko nya --antal 50
 """
 
 import argparse
@@ -92,14 +93,31 @@ POOL_FRAGA = {
 }
 
 
-def hamta_pool(antal, spar):
+# Kösegment. Due-sortering ensam räcker inte: repetitionskort har ett
+# schemalagt datum som due, nya kort har en köposition, och de talen ligger
+# i helt olika intervall. I praktiken sorterar repetitionskorten alltid
+# först, vilket 2026-08-09 gav en batch på 20 kort där ALLA var repetition
+# och noll var nya -- trots att det var de nya korten som skulle skyddas.
+# Filtret måste därför läggas på FÖRE sorteringen, inte efter.
+KO_FILTER = {
+    "nya": " is:new",
+    "repetition": " -is:new",
+    "bada": "",
+}
+
+
+def hamta_pool(antal, spar, ko="bada"):
     """Prio-märkta kort först, därefter due-ordning (= Adams egen ordning).
 
     Förturen måste ligga i URVALET, inte bara i sorteringen av det som
     råkade hämtas: med 3 000+ kort i spår B hade ett prio-kort längre bak i
     due-ordningen aldrig kommit med i dagens 25, hur högt det än var märkt.
+
+    `ko` läggs på BASFRÅGAN, inte bara på restposten -- annars hade
+    prio-hämtningen dragit in repetitionskort även vid `--ko nya` och ätit
+    upp platserna innan de nya korten ens övervägdes.
     """
-    bas = POOL_FRAGA[spar]
+    bas = POOL_FRAGA[spar] + KO_FILTER[ko]
     prio = fetch_cards_sorted_by_due(f"{bas} tag:{config.PRIO_TAG_HOG}", antal)
     kvar = antal - len(prio)
     if kvar <= 0:
@@ -151,15 +169,25 @@ def main():
                         "omgranskning = v2-kort som redan ligger i Adams kö (25/dag).")
     p.add_argument("--antal", type=int, default=None,
                    help="default: 125 för 'nya', 25 för 'omgranskning'")
+    p.add_argument("--ko", choices=["nya", "repetition", "bada"], default="bada",
+                   help="kösegment INOM spåret. 'nya' = kort Adam introduceras "
+                        "för (is:new), 'repetition' = kort han redan sett. "
+                        "Utan detta sorterar repetitionskorten alltid först och "
+                        "de nya korten kommer aldrig med.")
     p.add_argument("--dump", action="store_true", help="skriv även en läsbar .txt")
     args = p.parse_args()
 
     antal = args.antal if args.antal is not None else (
         config.DAGSBATCH_STORLEK if args.spar == "nya" else config.OMGRANSKNING_STORLEK)
 
-    cards = hamta_pool(antal, args.spar)
+    if args.spar == "nya" and args.ko != "bada":
+        # Spår A är per definition suspenderat och därmed varken nytt eller
+        # förfallet i Ankis mening -- filtret skulle tysta bort hela poolen.
+        p.error("--ko gäller bara --spar omgranskning (spår A är suspenderat)")
+
+    cards = hamta_pool(antal, args.spar, args.ko)
     if not cards:
-        print(f"Poolen för spår '{args.spar}' är tom.")
+        print(f"Poolen för spår '{args.spar}' (kö: {args.ko}) är tom.")
         return
 
     old_lookup = build_old_lookup()
@@ -178,6 +206,8 @@ def main():
     katalog = os.path.join(os.path.dirname(__file__), "sessions")
     os.makedirs(katalog, exist_ok=True)
     stam = "v3-batch" if args.spar == "nya" else "v3-omgranskning"
+    if args.ko != "bada":
+        stam += f"-{args.ko}"
     sokvag = os.path.join(katalog, f"session_{idag}_{stam}.json")
     n = 2
     while os.path.exists(sokvag):
@@ -211,10 +241,11 @@ def main():
     antal_hog = sum(1 for e in poster if e["hogsta_allvar"] == "hog")
     antal_prio = sum(1 for e in poster if e["prio"])
     utan_old = sum(1 for e in poster if not e["har_old_facit"])
-    kvar = len(invoke("findNotes", query=POOL_FRAGA[args.spar]))
+    bas_kvar = POOL_FRAGA[args.spar] + KO_FILTER[args.ko]
+    kvar = len(invoke("findNotes", query=bas_kvar))
     prio_kvar = len(invoke("findNotes",
-                           query=f"{POOL_FRAGA[args.spar]} tag:{config.PRIO_TAG_HOG}"))
-    print(f"Skrev {len(poster)} kort ({args.spar}) till {sokvag}")
+                           query=f"{bas_kvar} tag:{config.PRIO_TAG_HOG}"))
+    print(f"Skrev {len(poster)} kort ({args.spar}, kö: {args.ko}) till {sokvag}")
     print(f"  prio (ligger först)        : {antal_prio}   (kvar i poolen: {prio_kvar})")
     print(f"  hög risk (läs dessa först) : {antal_hog}")
     print(f"  utan OLD-facit             : {utan_old}")

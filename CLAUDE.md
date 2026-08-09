@@ -1,7 +1,7 @@
-# HP Verbal-coachsystem — Adam
+# HP-coachsystem — Adam
 
-Två separata, relaterade delsystem för HP-verbal-plugg (5-timmarspass).
-Kvantitativ HP hanteras INTE här — separat spår, annan konversation.
+Tre separata, relaterade delsystem för HP-plugg (5-timmarspass): två verbala
+(System A, B) och ett kvantitativt (System C, 2026-08-07).
 
 ## System A — `anki-ord/` — Anki ORD-kortsgranskning
 
@@ -66,13 +66,47 @@ Nästa steg: fortsätt Fas 2 på session-04, kort för kort, applicera via
 `apply_updates.py` per godkänt kort. De två 08-03-filerna väntar tills
 Adam väljer att prioritera dem.
 
+## Mål — Hösten 2026
+
+Satt av Adam 2026-08-07. **Kvantitativt: mål 2.0, lägsta godtagbart 1.8.**
+**Verbalt: mål 1.5, lägsta godtagbart 1.3.** Detaljerat läge mot dessa mål i
+respektive System B/C-fils "Mål"-avsnitt — kort sagt: kvant ligger ~0.3–0.5
+under, verbalt ~0.2–0.4 under och med färre sessioner. Om något ska
+prioriteras i pluggtiden pekar datan mot verbalt, LÄS-delmomentet specifikt.
+
+**Uppdatering 2026-08-07, samma dag:** Adam beslutade att riva gränsen mot sin
+Obsidian-wiki ("Study Coach AI", `c:\Obsidian\Study Coach Ai`) — den täcker nu
+studier/jobb/liv i en enda domänmodell istället för att hålla HP-provet
+separat. Målen, delmoment-träffsäkerheten och mönstren ovan är sedan dess
+**kompilerade in i wikin** som `wiki/ämnen/hp-provet.md` plus åtta
+begreppssidor (en per delmoment). **Wikin är nu den aktuella, lästa
+framställningen** — den här filen och `sessions/`-mapparna i System B/C är
+kvar som den detaljerade bakomliggande datan (fråga-för-fråga, provkalender)
+som wikin kompilerades från, men uppdateras inte längre parallellt vid varje
+nytt provpass. Nya HP-provet-genomgångar bör i första hand loggas i wikin;
+uppdatera dessa filer bara om den råa fråga-nivån behövs igen.
+
 ## System B — `verbal-misstag/` — misstagsanalys ORD/LÄS/MEK/ELF
 
 Levande minne över Adams återkommande misstagsmönster i riktiga HP-prov
 (laddas ner från HP-guiden, blandar alla fyra delmoment). Se
 [verbal-misstag/CLAUDE.md](verbal-misstag/CLAUDE.md) — auto-laddas när en
-session körs i den mappen. Status: strukturen finns, inga prov genomgångna
-än, inga mönster identifierade än.
+session körs i den mappen. Status (2026-08-07): 3 provpass genomgångna
+(Hösten 2015 pp1, Våren 2015 pp3+pp5). LÄS klart svagast (40 % rätt) av alla
+åtta delmoment i hela HP-underlaget. 0/3 når lägstanivån 1.3.
 
 Helt separat från System A — rör inte Anki-kortens innehåll, bara Adams
 provresultat/resonemang.
+
+## System C — `kvantitativ-misstag/` — misstagsanalys XYZ/KVA/NOG/DTK
+
+Samma metod som System B, tillämpad på HP:s kvantitativa del istället för
+verbala. Se [kvantitativ-misstag/CLAUDE.md](kvantitativ-misstag/CLAUDE.md) —
+auto-laddas när en session körs i den mappen. Status (2026-08-07): 12
+provpass genomgångna (Våren 2022 Första, Hösten 2020, Hösten 2015, Våren
+2015 ×4, Våren 2012). DTK och KVA svagast (~72 %), XYZ starkast (81 %). En
+tidigare "gissar D"-hypotes testades mot 119 feltillfällen och avskrevs.
+Bara 1/12 provpass når lägstanivån 1.8 (och det var det första, bästa).
+
+Helt separat från System A och B — egen mapp, egen misstagshistorik, delar
+bara arbetsflödet i grunden.
