@@ -1,0 +1,610 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080619627,
+      "ord": "avbörda sig",
+      "facit": "lämna ifrån sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lämna ifrån sig en börda ; berätta om något tungt för att slippa bära det ensam",
+        "register": "litterär",
+        "synonymer": [
+          "lämna ifrån sig",
+          "göra sig av med",
+          "lätta sitt hjärta",
+          "anförtro sig"
+        ],
+        "synonym_groups": [
+          [
+            "lämna ifrån sig",
+            "göra sig av med"
+          ],
+          [
+            "lätta sitt hjärta",
+            "anförtro sig"
+          ]
+        ],
+        "exempelmening": "Efter veckor av tystnad valde han att <font color=\"#3498db\">avbörda sig</font> alltihop för sin bror.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619720,
+      "ord": "borsjtj",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rödbetssoppa från Östeuropa, ofta serverad med gräddfil",
+        "register": "vardaglig",
+        "synonymer": [
+          "rödbetssoppa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Till middag serverades <font color=\"#3498db\">borsjtj</font> med en klick gräddfil.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619623,
+      "ord": "djäkne",
+      "facit": "skolyngling",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Elev vid gammal latinskola eller läroverk",
+        "register": "arkaisk",
+        "synonymer": [
+          "skolyngling",
+          "latinskoleelev",
+          "lärjunge"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Djäknarna</font> vandrade runt i bygden under loven och sjöng för att tjäna ihop till sina studier.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619621,
+      "ord": "eolisk",
+      "facit": "som har att göra med vinden",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Orsakad eller formad av vinden",
+        "register": "formell",
+        "synonymer": [
+          "vindburen",
+          "vindskapad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Lössjord är en <font color=\"#3498db\">eolisk</font> jordart som transporterats och avlagrats av vinden.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619656,
+      "ord": "exkludera",
+      "facit": "utesluta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utesluta eller hindra någon från att delta",
+        "register": "formell",
+        "synonymer": [
+          "utesluta",
+          "utestänga",
+          "bortse från"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">exkluderades</font> från festen efter att ha brutit mot reglerna.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619674,
+      "ord": "fadd",
+      "facit": "smaklös; intetsägande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utan smak ; intetsägande och andefattig",
+        "register": "formell, negativ",
+        "synonymer": [
+          "smaklös",
+          "avslagen",
+          "intetsägande",
+          "andefattig"
+        ],
+        "synonym_groups": [
+          [
+            "smaklös",
+            "avslagen"
+          ],
+          [
+            "intetsägande",
+            "andefattig"
+          ]
+        ],
+        "exempelmening": "Soppan var helt <font color=\"#3498db\">fadd</font>, som om någon glömt både salt och kryddor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619631,
+      "ord": "försigkommen",
+      "facit": "tidig för sin ålder, brådmogen, lillgammal<br><br>(eng) precocious -&nbsp;<i>typ<br><br><br>han var mycket försig­kommen – redan vid fyra års ålder kunde han läsa;<br><br>de mest försig­komna eleverna hade redan börjat röka</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Visar mognad långt tidigare än vad som är normalt för åldern",
+        "register": "litterär, positiv",
+        "synonymer": [
+          "tidig för sin ålder",
+          "brådmogen",
+          "lillgammal"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Pojken var mycket <font color=\"#3498db\">försigkommen</font> – redan vid fyra års ålder kunde han läsa.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619616,
+      "ord": "girig",
+      "facit": "snål",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vill hänsynslöst ha mer, särskilt pengar",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "snål",
+          "vinningslysten",
+          "sniken"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sagan handlar om en <font color=\"#3498db\">girig</font> kung som samlade guld på hög medan folket svalt.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619633,
+      "ord": "gourmand",
+      "facit": "matvrak",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som äter stora mängder mat",
+        "register": "formell, lätt negativ",
+        "synonymer": [
+          "storätare",
+          "matvrak",
+          "frossare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var en riktig <font color=\"#3498db\">gourmand</font> och tog för sig tre gånger av varje rätt.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619654,
+      "ord": "grossist",
+      "facit": "mellanledshandlare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Företag som köper stort och säljer vidare till butiker",
+        "register": "formell",
+        "synonymer": [
+          "partihandlare",
+          "mellanledshandlare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På Årsta partihallar handlade <font color=\"#3498db\">grossisterna</font> med frukt och grönt i palltal.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619652,
+      "ord": "imperialism",
+      "facit": "erövringspolitik",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Politiken att utöva makt och kontroll över andra länder",
+        "register": "formell, negativ",
+        "synonymer": [
+          "kolonialism",
+          "erövringspolitik",
+          "expansionism"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det brittiska imperiet var ett tydligt exempel på <font color=\"#3498db\">imperialism</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619649,
+      "ord": "medaljong",
+      "facit": "hängsmycke",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hängsmycke som öppnas och rymmer ett foto ; rund eller oval dekorativ infattning ; rund köttbit av filé",
+        "register": "formell",
+        "synonymer": [
+          "hängsmycke",
+          "amulett"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I <font color=\"#3498db\">medaljongen</font> runt halsen bar hon ett foto av sin mor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619607,
+      "ord": "ornera",
+      "facit": "utsmycka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förse något med utsmyckningar",
+        "register": "litterär",
+        "synonymer": [
+          "utsmycka",
+          "pryda",
+          "dekorera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">ornerade</font> lägenheten med blommor och konstverk inför festen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619624,
+      "ord": "salongsfähig",
+      "facit": "som passar förnäma kretsar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Passande att visa upp i finare kretsar utan att väcka anstöt",
+        "register": "formell",
+        "synonymer": [
+          "presentabel",
+          "rumsren",
+          "umgängesduglig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon kom i en <font color=\"#3498db\">salongsfähig</font> klänning som passade den exklusiva festen perfekt.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619615,
+      "ord": "signera",
+      "facit": "skriva under",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skriva under med sitt namn för att godkänna eller bekräfta något",
+        "register": "formell",
+        "synonymer": [
+          "skriva under",
+          "underteckna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Jag behöver <font color=\"#3498db\">signera</font> kontraktet innan jag kan börja arbetet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619646,
+      "ord": "skrymma",
+      "facit": "ta stor plats",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ta upp oproportionerligt mycket plats i förhållande till sin vikt",
+        "register": "vardaglig",
+        "synonymer": [
+          "ta stor plats"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den nya soffan <font color=\"#3498db\">skrymde</font> så att halva vardagsrummet försvann.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619657,
+      "ord": "uttrycklig",
+      "facit": "bestämd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Klart och tydligt uttalad",
+        "register": "formell",
+        "synonymer": [
+          "uttalad",
+          "tydlig",
+          "bestämd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon gav sitt <font color=\"#3498db\">uttryckliga</font> tillstånd innan vi rörde något i lägenheten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619619,
+      "ord": "överreklamerad",
+      "facit": "överskattad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Har fått mer uppmärksamhet än den förtjänar",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "överskattad",
+          "överhypad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Produkten kändes <font color=\"#3498db\">överreklamerad</font> — den levererade inte på ett enda löfte.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619748,
+      "ord": "affektiv",
+      "facit": "känsloladdad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som rör känslolivet",
+        "register": "formell",
+        "synonymer": [
+          "känslomässig",
+          "känsloladdad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick diagnosen <font color=\"#3498db\">affektiv</font> störning efter flera år av kraftiga humörsvängningar.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619710,
+      "ord": "anblick",
+      "facit": "skymt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det man ser vid första ögonkastet",
+        "register": "formell",
+        "synonymer": [
+          "åsyn",
+          "syn",
+          "skymt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid första <font color=\"#3498db\">anblicken</font> verkade huset övergivet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619608,
+      "ord": "brutto",
+      "facit": "belopp innan skatt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Totalt, före avdrag",
+        "register": "formell",
+        "synonymer": [
+          "totalt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Lönen var 30 000 kronor <font color=\"#3498db\">brutto</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619730,
+      "ord": "bödel",
+      "facit": "exekutionsbetjänt<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fkulturmiljonorrbotten.com%2Ftag%2Fbodeln%2F&amp;psig=AOvVaw2aS2b74_Udj3yjpo_9WRuR&amp;ust=1756941158368000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBUQjRxqFwoTCOjd-_6Zu48DFQAAAAAdAAAAABAE\"><img alt=\"Bödeln | Kulturmiljö vid Norrbottens museum\" src=\"7bc3b6del.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som utför avrättningar",
+        "register": "formell",
+        "synonymer": [
+          "avrättningsman"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Bödeln</font> höjde yxan över den dömde.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619677,
+      "ord": "degression",
+      "facit": "tillbakagång",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gradvis minskning, t.ex. en sjunkande skattesats",
+        "register": "formell",
+        "synonymer": [
+          "avtagande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Skattesystemet byggde på <font color=\"#3498db\">degression</font> för låga inkomster.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619741,
+      "ord": "dispasch",
+      "facit": "haveriutredning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Officiell utredning av sjöskador och kostnadsfördelning",
+        "register": "formell",
+        "synonymer": [
+          "sjöskadeutredning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Dispaschören upprättade en <font color=\"#3498db\">dispasch</font> efter haveriet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619671,
+      "ord": "effeminerad",
+      "facit": "förkvinnligad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som uppfattas som omanlig eller kvinnlig i sätt",
+        "register": "litterär, nedsättande",
+        "synonymer": [
+          "kvinnaktig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han beskrevs föraktfullt som <font color=\"#3498db\">effeminerad</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619727,
+      "ord": "goodwill",
+      "facit": "bra rykte",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gott anseende, välvilja ; ett företags immateriella värde utöver dess bokförda tillgångar",
+        "register": "formell",
+        "synonymer": [
+          "gott anseende",
+          "välvilja",
+          "immateriellt värde"
+        ],
+        "synonym_groups": [
+          [
+            "gott anseende",
+            "välvilja"
+          ],
+          [
+            "immateriellt värde"
+          ]
+        ],
+        "exempelmening": "Företaget hade byggt upp stor <font color=\"#3498db\">goodwill</font> hos kunderna.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619691,
+      "ord": "huldra",
+      "facit": "förförisk skogskvinna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kvinnligt skogsväsen i nordisk folktro",
+        "register": "litterär",
+        "synonymer": [
+          "skogsrå"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Enligt sägnen lockade <font color=\"#3498db\">huldran</font> vilsna vandrare djupt in i skogen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619665,
+      "ord": "imperium",
+      "facit": "stormaktsvälde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stort rike med flera folk under en makt",
+        "register": "formell",
+        "synonymer": [
+          "välde",
+          "rike"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Romerska <font color=\"#3498db\">imperiet</font> sträckte sig över hela Medelhavet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619717,
+      "ord": "ism",
+      "facit": "konstriktning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lära eller ideologisk åskådning ; konstriktning",
+        "register": "formell",
+        "synonymer": [
+          "lära",
+          "ideologi",
+          "riktning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var trött på alla <font color=\"#3498db\">ismer</font> i den politiska debatten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619732,
+      "ord": "katakomb",
+      "facit": "underjordiskt gravutrymme",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Underjordisk gravgång",
+        "register": "formell",
+        "synonymer": [
+          "gravgång"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Turisterna vandrade genom Roms mörka <font color=\"#3498db\">katakomber</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}
