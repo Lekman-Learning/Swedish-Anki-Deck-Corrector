@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619630,
@@ -19,8 +19,8 @@
         "exempelmening": "Romanen gavs ut i <font color=\"#3498db\">fascikler</font>, en varje månad.",
         "etymologi": "Av latinets fasciculus, 'litet knippe' — samma ord som gav oss fascism (knippet var Roms maktsymbol)."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL bekräftar 'bunt skrifter/häfte' resp. 'samling lösa pappersark'. Kortets huvudbetydelse och synonymerna (pappersbunt, häfte) stämmer väl överens, och exemplet om romanen utgiven i fascikler är korrekt (en fascikel = ett numrerat häfte/parti av en verksutgåva). Register formell stämmer. Etymologin (latinets fasciculus, kopplingen till fascism) är sann enligt SO och hjälper minnet."
     },
     {
       "noteId": 1780080619828,
@@ -39,8 +39,8 @@
         "exempelmening": "Laget led ett <font color=\"#3498db\">nesligt</font> nederlag med tio bollar.",
         "etymologi": "Byggt på det gamla ordet nesa, som betyder vanära."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO har egentligen två betydelseskikt: (1) något som drar vanära över DEN DRABBADE (t.ex. 'ett nesligt nederlag') och (2) en handling som drar vanära över DEN SOM UTFÖR den, specifikt använt om våldtäkt/sexuellt våld ('han övade nesligt våld mot henne'). Kortet tar bara med betydelse (1) och utelämnar helt den andra, distinkta och rätt centrala användningen. Borde utökas, t.ex. '...över någon ; äv. om en handling som skämmer utövaren, särsk. om sexuellt våld'."
     },
     {
       "noteId": 1780080619928,
@@ -60,8 +60,8 @@
         "exempelmening": "Det blev ett fasligt <font color=\"#3498db\">rabalder</font> när laget förlorade.",
         "etymologi": "Från danskans baldre, 'bullra' — ordet låter som det betyder."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL/SO: 'oväsen, bråk, uppståndelse' matchar kortets 'Högljutt bråk eller upprörd debatt som väcker uppmärksamhet'. Synonymerna (oväsen, bråk, uppståndelse, ståhej) är utbytbara och exemplet liknar nästan ordagrant ordbokens eget exempel. Etymologin är en förenkling (hoppar över mellansteget rabald) men själva sakuppgiften att 'baldre' betyder bullra stämmer, så den vilseleder inte."
     },
     {
       "noteId": 1780080619990,
@@ -80,8 +80,8 @@
         "exempelmening": "Att ta ut sådan ränta på ett nödlån är ren <font color=\"#3498db\">ocker</font>.",
         "etymologi": "Besläktat med växa — ocker är pengar som växer på någon annans trångmål."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'inriktning på att göra oskälig vinst vid försäljning el. utlåning, genom utnyttjande av någons svaghet' matchar kortets 'ta ut orimligt höga räntor eller priser av någon som är i knipa'. Synonymerna procenteri/utsugning/utpressning återfinns även i etablerade synonymlexikon för ordet. Register formell/negativ och etymologin (besläktat med 'växa', pengar som växer på någons trångmål) är korrekta enligt SO."
     },
     {
       "noteId": 1780080620014,
@@ -101,8 +101,8 @@
         "exempelmening": "Enligt sägnen bodde <font color=\"#3498db\">oknytt</font> under golvet i den gamla stugan.",
         "etymologi": "Av dialektens oknytt, 'farlighet, spökeri' — o- som i otyg."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'samlingsnamn för smått övernaturliga väsen i folktron' matchar kortets definition väl. Synonymerna (trolltyg, småväsen, vättar, spökerier) ligger nära den dialektala betydelseomfattningen ('farlighet; spökeri; löss' enligt SAOL:s etymologi). Etymologin är en något förenklad tolkning av 'o-' + 'knytt' jämfört med SAOL:s mer utförliga (onomatopoetiskt ursprung), men påstår inget osant."
     },
     {
       "noteId": 1780080620067,
@@ -120,8 +120,8 @@
         "exempelmening": "Bordet var dukat med en fin duk i <font color=\"#3498db\">damast</font>.",
         "etymologi": "Uppkallat efter Damaskus i Syrien, där tyget vävdes."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO/SAOL definierar damast som 'enfärgad vävnad med rik reliefmönstring' - det är VÄVTEKNIKEN (jacquardväv) som definierar damast, inte fibermaterialet. Damast vävs i silke, bomull, lin m.fl. material. Synonymen 'linnetyg' är därför sakligt fel och inte utbytbar mot damast (en damastduk behöver inte vara av lin, och lintyg är oftast inte damast). Ta bort 'linnetyg', ersätt ev. med 'jacquardvävt tyg' eller liknande."
     },
     {
       "noteId": 1780080620154,
@@ -140,8 +140,8 @@
         "exempelmening": "Stämningen på festen var lite <font color=\"#3498db\">flau</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Ordet gav 0 träffar i både SO och SAOL via svenska.se (misslyckad uppslagning i dessa två källor). Kompletterande sökning visar att ordet finns i SAOB med betydelsen 'kraftlös; om marknad: matt, trög, utan efterfrågan', vilket stämmer väl med kortets 'Matt och livlös ; om handel: trög, utan efterfrågan' samt synonymerna matt/trög/svag och exemplet. Döms godkänt, men med reservationen att ordet är ovanligt och inte finns i moderna SO/SAOL."
     },
     {
       "noteId": 1780080620251,
@@ -160,8 +160,8 @@
         "exempelmening": "Båten fick en spricka i <font color=\"#3498db\">kölen</font> efter grundstötningen.",
         "etymologi": "Fornsvenska kiol, ursprungligen 'något krökt' — besläktat med kälke."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'längsgående, stabiliserande mittparti av fartygs botten', och SO ger uttrycket 'komma på rät köl' för att ordna upp sitt liv - båda finns korrekt med på kortet. Synonymerna (bottenstomme, fartygsbotten, fena) återfinns i etablerade synonymlexikon för köl. Etymologin (fornsvenska kiol, 'något krökt', besläktat med kälke) stämmer med SO."
     },
     {
       "noteId": 1780080620279,
@@ -181,8 +181,8 @@
         "exempelmening": "Han var en <font color=\"#3498db\">käck</font> ung man som alltid hade ett leende på läpparna.",
         "etymologi": "Av tyskans keck — nära släkt med kvick."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som handlar oförskräckt och med glatt humör' plus en underbetydelse om saker/uttryck ('piggt och flott gjort', t.ex. 'en käck keps') - kortet fångar båda korrekt separerade. Synonymerna frimodig/hurtig/kavat anges direkt i SO, och piffig passar sakbetydelsen. Etymologin (tyskans keck, besläktat med kvick) är korrekt."
     },
     {
       "noteId": 1780080620322,
@@ -202,8 +202,8 @@
         "exempelmening": "På söndagar hölls en <font color=\"#3498db\">andakt</font> i kyrkan med bibelläsning och bön.",
         "etymologi": "Av tyskans Andacht, till denken 'tänka' — samlad tanke."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: (1) bönestund/enkel gudstjänst och (2) fridfull, högtidlig sinnesstämning med eller utan religiösa inslag - kortet återger båda, korrekt separerade med ';'. Synonymerna täcker båda betydelserna (bönestund/gudstjänst resp. vördnad/stillhet). Etymologin (tyskans Andacht, till denken 'tänka') är korrekt och gör betydelsen lättare att minnas."
     }
   ]
 }
