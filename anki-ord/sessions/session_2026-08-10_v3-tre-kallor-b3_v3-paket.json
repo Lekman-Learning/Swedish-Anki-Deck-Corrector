@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619509,
@@ -18,8 +18,8 @@
         "exempelmening": "Efter månader av lock i örat fick han äntligen tid hos en <font color=\"#3498db\">otolog</font>.",
         "etymologi": "Grekiska ous 'öra' + logos 'lära' — samma ous som i otit."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO listar utöver läkarbetydelsen en andra, formellt angiven underbetydelse: 'någon gång äv. om motsvarande institution' (t.ex. 'hon arbetar på otologen' = öronkliniken/avdelningen). Kortet nämner bara läkarbetydelsen och saknar därmed en hel (om än ovanlig) betydelse. Övrigt -- definition, synonym öronläkare, exempel och etymologi (ous+logos) -- stämmer väl med SO."
     },
     {
       "noteId": 1780080619510,
@@ -38,8 +38,8 @@
         "exempelmening": "Den gamle <font color=\"#3498db\">hävdatecknaren</font> hade ägnat trettio år åt landskapets historia.",
         "etymologi": "hävd = det man länge haft (till hava) — den som tecknar ned det som varit."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Stämmer med SO/SAOL: 'historieskrivare'. Synonymerna krönikör/historiker ligger nära, etymologin (hävd till hava) är rimlig och hjälper minnet, exempelmeningen illustrerar ordet korrekt, och registret 'arkaisk' är rimligt för ett ord belagt sedan 1756 med mycket låg användningsfrekvens (popularitet 85 i SO)."
     },
     {
       "noteId": 1780080619513,
@@ -57,8 +57,8 @@
         "exempelmening": "Takets <font color=\"#3498db\">grisaille</font> är målad så skickligt att stuckaturen ser verklig ut.",
         "etymologi": "Av franskans gris, 'grå'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'målning i olika valörer av samma gråa färgton'. Tillägget om att härma stenrelief är ett vedertaget konsthistoriskt faktum om tekniken, inte en felaktig utvidgning, och stärker snarare exempelmeningen. Etymologi (franska gris 'grå') stämmer."
     },
     {
       "noteId": 1780080619514,
@@ -76,8 +76,8 @@
         "exempelmening": "Alla <font color=\"#3498db\">evakuerades</font> snabbt när brandlarmet gick.",
         "etymologi": "Latin evacuare, 'göra tom' — samma rot som vakuum."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO ('få (större grupp av) människor att lämna ett område') och SAOL ('utrymma, tömma') behandlar detta som EN betydelse. Kortet skiljer med ' ; ' mellan 'föra bort människor från ett farligt område' och 'tömma en plats' som om det vore två skilda betydelser, fast det är samma sak sedd ur två vinklar (personerna resp. platsen som blir tom) -- borde slås ihop eller skiljas med '/', inte ';'. Den tekniska betydelsen (pumpa ut luft) är däremot en riktig, vedertagen fackbetydelse."
     },
     {
       "noteId": 1780080619515,
@@ -97,8 +97,8 @@
         "exempelmening": "Det tog lång tid innan styrelsen kunde <font color=\"#3498db\">bekväma sig</font> till att fatta det nödvändiga beslutet.",
         "etymologi": "Till bekväm, av latinets commodus 'lämplig' — att motvilligt finna något lämpligt nog."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition '(motvilligt) göra ansträngningar för att utföra viss handling' matchar kortets huvudbetydelse väl. Synonymerna förmå sig till och gitta bekräftas av synonymordbok specifikt för 'bekväma sig'; idas och nedlåta sig till ligger tillräckligt nära i betydelse. Exempel och etymologi stämmer."
     },
     {
       "noteId": 1780080619517,
@@ -117,8 +117,8 @@
         "exempelmening": "Att sätta riktningen är en <font color=\"#3498db\">konstitutiv</font> del av ledarrollen, inte en extrauppgift.",
         "etymologi": "Till konstituera, 'utgöra' — det som något är gjort av."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'grundläggande', bruklighet 'något formellt'. Synonymer, etymologi (till konstituera) och exempelmeningen ('...en konstitutiv del av ledarrollen') stämmer väl med ordbokens egen exempeltyp."
     },
     {
       "noteId": 1780080619522,
@@ -138,8 +138,8 @@
         "exempelmening": "Den <font color=\"#3498db\">putslustige</font> morbrorn drog samma gamla vitsar vid varje julbord.",
         "etymologi": "Till puts i betydelsen 'spratt' — som i 'spela någon ett puts'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Både SO ('smårolig t.ex. genom lustiga infall') och SAOL ('smårolig, skojig') ger en mild, gullig betydelse utan negativ underton. Kortets huvudbetydelse 'lustig på ett lite löjligt, narraktigt sätt' lägger till en nedsättande nyans (löjlig, narraktig/dåraktig) som varken ordböckerna stöder eller kortets egen synonymlista (smårolig, skojig, skämtsam, lustig) speglar -- ingen av synonymerna antyder löjlighet. Ska vara nedtonat till 'lite lustig/rolig på ett gulligt sätt', inte 'löjlig, narraktig'."
     },
     {
       "noteId": 1780080619524,
@@ -158,8 +158,8 @@
         "exempelmening": "Den ekonomiska krisen fick den svenska kronan att <font color=\"#3498db\">depreciera</font> kraftigt mot euron.",
         "etymologi": "Latin pretium 'värde' — samma rot som pris. de- = nedåt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen 'sjunka i värde -- motsatsen till appreciera' stämmer med SO (som anger appreciera som uttrycklig antonym). Men SO anger 'devalvera' som en JFR-hänvisning (jämförbar men skild term/cohyponym), INTE som synonym till depreciera. Ekonomiskt är devalvera en medveten åtgärd vid fast växelkurs, medan depreciera avser en marknadsdriven värdeminskning -- att lista devalvera som en utbytbar synonym är sakligt missvisande."
     },
     {
       "noteId": 1780080619528,
@@ -177,8 +177,8 @@
         "exempelmening": "Simningen hade en <font color=\"#3498db\">terapeutisk</font> effekt på hans värkande rygg.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt: huvudbetydelse 'som har att göra med terapi' + den specialiserade underbetydelsen 'som har botande eller lindrande verkan', korrekt skilda med ';'. Exempelmeningen illustrerar just underbetydelsen (jfr SO:s eget exempel 'samtalet verkade terapeutiskt')."
     },
     {
       "noteId": 1780080619530,
@@ -196,8 +196,8 @@
         "exempelmening": "På <font color=\"#3498db\">glyptoteket</font> stod hundratals antika byster på rad.",
         "etymologi": "Grekiska glyptos 'skulpterad' + theke 'förvaringsrum' — samma -tek som i bibliotek."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'museum med skulpturer'. Etymologi (glyptos+theke, jfr bibliotek), synonymer och exempelmening stämmer väl och hjälper minnet."
     },
     {
       "noteId": 1780080619533,
@@ -217,8 +217,8 @@
         "exempelmening": "Efter tre timmars möte var <font color=\"#3498db\">kontentan</font> att vi behövde byta strategi helt och hållet.",
         "etymologi": "Latin contentus, 'sammanfattad' — det som ryms i något."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO ger bara EN betydelse: 'huvudinnehåll (i något) i korta drag', utan underbetydelser. Kortet skiljer med ';' mellan 'det viktigaste i korthet' och 'det som något till slut ledde till' som om det vore två skilda betydelser -- det är samma kärnbetydelse (sammanfattningen/slutsatsen av något) uttryckt på två sätt och borde skrivas ihop eller skiljas med '/', inte ';'."
     },
     {
       "noteId": 1780080619535,
@@ -237,8 +237,8 @@
         "exempelmening": "Efter grälet blev hon plötsligt <font color=\"#3498db\">försonlig</font> och räckte fram handen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt, inklusive underbetydelsen om handlingar ('en försonlig gest'), korrekt skild med ';'. Synonymer (förlåtande, medgörlig, kompromissvillig) och exempelmening stämmer väl."
     },
     {
       "noteId": 1780080619536,
@@ -257,8 +257,8 @@
         "exempelmening": "Vid en olycka <font color=\"#3498db\">presumeras</font> föraren ha handlat oaktsamt om hen kört mot rött ljus.",
         "etymologi": "Latin prae- 'före' + sumere 'ta' — att ta något i förväg. Samma sumere som i konsumera."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'förmoda', bruklighet 'formellt'. Synonymer, etymologi (samma sumere som konsumera) och det juridiskt klingande exemplet stämmer väl överens med SO:s eget exempel om myndighetsutövning."
     },
     {
       "noteId": 1780080619543,
@@ -276,8 +276,8 @@
         "exempelmening": "<font color=\"#3498db\">Oktetten</font> spelade ett stycke av Schubert för en halvfull salong.",
         "etymologi": "Italienska otto 'åtta' — samma rot som oktav och oktober."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Fångar alla tre SO-betydelser (musikstycke för åtta, musik-/sånggrupp om åtta, allmän grupp om åtta) på ett korrekt och kompakt sätt. Etymologi (italienska otto, jfr oktav/oktober) och exempel stämmer."
     },
     {
       "noteId": 1780080619548,
@@ -296,8 +296,8 @@
         "exempelmening": "Stockholm var fullt av <font color=\"#3498db\">yuppies</font> på 80-talet, med tjocka lönekuvert och alldeles för dyra bilar.",
         "etymologi": "Engelsk förkortning av young urban professional."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'ung person i karriären, ofta välavlönad, högutbildad'. Synonymerna finanslejon, nyrik och uppkomling bekräftas av synonymordbok specifikt för 'yuppie'. Etymologi (young urban professional) och exempel (80-talet) stämmer, liksom bruklighetskommentaren om äldre förhållanden."
     },
     {
       "noteId": 1780080619556,
@@ -316,8 +316,8 @@
         "exempelmening": "Frisyren såg lika <font color=\"#3498db\">urmodig</font> ut som på ett skolfoto från 1978.",
         "etymologi": "ur (modet) + -modig — jämför gammalmodig och nymodig."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'fullständigt omodern'. Synonymer (föråldrad, förlegad, gammalmodig), etymologi (jfr gammalmodig/nymodig) och exempelmening stämmer väl."
     },
     {
       "noteId": 1780080619560,
@@ -336,8 +336,8 @@
         "exempelmening": "Den <font color=\"#3498db\">monstruösa</font> skuggfiguren skrämde barnen.",
         "etymologi": "Latin monstrum 'järtecken', till monstrare 'visa' — samma ord som i demonstrera."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt: huvudbetydelse 'oformlig och skrämmande' + den försvagade underbetydelsen 'orimlig' (om ngt omfattande), korrekt skilda med ';'. Etymologi (till monster/demonstrera) och exempel stämmer."
     },
     {
       "noteId": 1780080619561,
@@ -355,8 +355,8 @@
         "exempelmening": "Landet svarade med ekonomiska <font color=\"#3498db\">repressalier</font> mot grannstaten.",
         "etymologi": "Till latinets reprendere 'återta' — samma rot som repris."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO väl: 'hämndaktion', nästan alltid i plural. Kortets nyansering till 'oftast militär' (i stället för strikt militär) är korrekt eftersom exempelmeningen själv visar en icke-militär (ekonomisk) repressalie. Etymologi och koppling till repris är rimlig."
     },
     {
       "noteId": 1780080619562,
@@ -375,8 +375,8 @@
         "exempelmening": "Han fick en <font color=\"#3498db\">avi</font> om att paketet låg och väntade på posten.",
         "etymologi": "Franska avis, av latin ad 'till' + videre 'se' — något man ges att se."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Fångar SO:s båda betydelser (avhämtningsavi och den utvidgade betalnings-/meddelandeavin, t.ex. hyresavi/inbetalningsavi) naturligt i en och samma formulering. Etymologi (franska avis, till ad+videre) och exempel stämmer."
     },
     {
       "noteId": 1780080619564,
@@ -393,8 +393,8 @@
         "exempelmening": "Drönaren använde en <font color=\"#3498db\">gyro</font> för att hålla sig stabil i luften.",
         "etymologi": "Grekiska gyros 'ring, snurra' — samma ord som i maträtten gyros, där köttet roterar."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'gyroskop'. Den etymologiska kopplingen till maträtten gyros är korrekt (samma grekiska rot gyros 'snurra') och presenteras bara som kuriosa, inte som en betydelse av ordet. Exempelmeningen (drönare) illustrerar ordet korrekt."
     }
   ]
 }
