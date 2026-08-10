@@ -377,6 +377,37 @@ def verdikt(paketsokvag, granskare=None):
             "granskare": gr, "skriven_av": skrivare,
             "verdikt": "godkand", "anmarkning": p.get("anmarkning"),
         })
+    # UNDERKÄNDA MÅSTE SYNAS I ANKI, inte bara i en loggfil (Adams beslut
+    # 2026-08-10). Fram till dess gjorde det här steget ENBART en loggrad: ingen
+    # tagg, ingen flagga, ingen suspendering. Följden var att 23 kort låg kvar
+    # live i den aktiva kön med fel som en oberoende granskare just identifierat,
+    # och ingenting i Anki visade vilka. Adam hade pluggat in `bära sig` som
+    # "gå med vinst" utan att veta att kortet redan var underkänt.
+    #
+    # Det är samma felklass som resten av projektet: informationen FANNS, men i
+    # ett lager ingen läser. Ett fynd som inte når fram till där arbetet sker är
+    # inte ett fynd, det är en anteckning.
+    #
+    # Tre åtgärder, medvetet valda:
+    #   röd flagga  -- syns direkt i kortlistan, projektets etablerade "fel"-färg
+    #   suspendera  -- stoppar inlärning av ett kort vi VET är fel. Ett suspenderat
+    #                  kort gör noll skada medan det väntar; ett felaktigt kort i
+    #                  kön lärs in varje dag det får stå.
+    #   tagg        -- gör arbetslistan mekaniskt hämtbar (`tag:v3_underkand*`)
+    #                  i stället för att kräva att någon läser en JSONL.
+    if underkanda:
+        nids = [p["noteId"] for p in underkanda]
+        invoke("addTags", notes=nids, tags=f"v3_underkand::{idag}")
+        kort_ids = []
+        for i in range(0, len(nids), 50):
+            bit = nids[i:i + 50]
+            kort_ids.extend(invoke("findCards",
+                                   query=" OR ".join(f"nid:{n}" for n in bit)))
+        for c in kort_ids:
+            invoke("setSpecificValueOfCard", card=c, keys=["flags"],
+                   newValues=[config.FLAG_ROD], warning_check=True)
+        invoke("suspend", cards=kort_ids)
+
     for p in underkanda:
         _logga_oberoende({
             "datum": idag, "noteId": p["noteId"], "ord": p["ord"],
