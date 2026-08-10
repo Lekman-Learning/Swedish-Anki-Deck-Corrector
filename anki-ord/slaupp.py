@@ -42,6 +42,25 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+# Windows-konsolen kor cp1252 och kan inte skriva a/a/o. Utan raden nedan
+# skrevs bevisraden "SVENSKA_SE_HAMTAD bekantgora HTTP 200" med ett
+# ERSATTNINGSTECKEN (U+FFFD) i stallet for o -- redan innan Claude Codes
+# transkript sag den.
+#
+# Foljden var inte en synlig krasch utan en TYST sparr: Hal 0-kontrollen letar
+# efter ordet i bevisraden, hittade "bekantg<FFFD>ra", och kunde darfor aldrig
+# belagga ett enda ord med a, a eller o. Atta kort stoppades 2026-08-10 med
+# beskedet "hamtningen gjordes aldrig" -- fast den var gjord, tre ganger om.
+# En sparr som avvisar en tredjedel av svenskan ser exakt likadan ut som en
+# sparr som gor sitt jobb.
+#
+# TREDJE forekomsten av samma buggklass samma dag (verktyg/lint.py i valvet och
+# kortgranskare.py fick samma rad). Monstret ar alltid detsamma: svensk text +
+# Windows-konsol + ett script som ingen kor interaktivt och darfor ingen ser
+# fela.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 API = "https://svenska.se/api/msearch"
 UTKAT = "uppslag"
 INDEX = {"saol": "sa-svenska-saol", "so": "sa-svenska-so", "saob": "sa-svenska-saob"}
