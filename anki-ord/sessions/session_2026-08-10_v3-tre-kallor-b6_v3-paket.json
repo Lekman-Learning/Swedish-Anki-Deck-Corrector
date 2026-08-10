@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619664,
@@ -19,8 +19,8 @@
         "exempelmening": "Handduken var vävd i mjuk <font color=\"#3498db\">frotté</font>.",
         "etymologi": "Till frottera, 'gnida' — tyget man gnuggar sig torr med."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: poröst bomullstyg med öglelugg som suger upp vatten bra — stämmer exakt. Etymologi (till frottera) och exempelmening korrekta, ordet highlightat."
     },
     {
       "noteId": 1780080619665,
@@ -38,8 +38,8 @@
         "exempelmening": "Romerska <font color=\"#3498db\">imperiet</font> sträckte sig över hela Medelhavet.",
         "etymologi": "Latin imperium 'befallning' — samma ord som imperativ."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL bekräftar båda betydelserna: geografiskt stormaktsvälde samt (numera vanlig, bildlig) användning om företagsvälde. Rätt avskilda med ';', etymologi (latin imperium 'befallning') stämmer."
     },
     {
       "noteId": 1780080619668,
@@ -57,8 +57,8 @@
         "exempelmening": "Bussen körde en ny <font color=\"#3498db\">rutt</font> genom stan.",
         "etymologi": "Latin via rupta, 'uppröjd väg' — samma ord som rutin, den upptrampade vägen."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL har bara en betydelse: fastlagd färdväg/resväg — matchar exakt. Etymologin (via rupta, samma rot som rutin) är korrekt."
     },
     {
       "noteId": 1780080619669,
@@ -76,8 +76,8 @@
         "exempelmening": "De hade en <font color=\"#3498db\">platonisk</font> vänskap i många år.",
         "etymologi": "Efter filosofen Platon, som beskrev en kärlek som lämnar det kroppsliga bakom sig."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL visar att 'platonisk' specifikt hör ihop med idiomet 'platonisk kärlek' (kärlek/vänskap utan sexuellt inslag), medan den filosofiska idévärlds-betydelsen ligger under stavningen 'platonsk'. Kortets parentes om stavningsskillnaden är sakligt korrekt, ingen betydelse saknas."
     },
     {
       "noteId": 1780080619670,
@@ -94,8 +94,8 @@
         "exempelmening": "<font color=\"#3498db\">Cypresserna</font> kantade den italienska allén.",
         "etymologi": "Grekiska kyparissos; ursprunget bortom det är okänt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt, inklusive SO:s egen anmärkning om att ordet i allmänspråket ofta felaktigt används om tuja. Etymologi (grekiska kyparissos, okänt ursprung) stämmer."
     },
     {
       "noteId": 1780080619671,
@@ -113,8 +113,8 @@
         "exempelmening": "Han beskrevs föraktfullt som <font color=\"#3498db\">effeminerad</font>.",
         "etymologi": "Latin femina 'kvinna' — samma ord som feminin."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Synonymerna 'förkvinnligad, förvekligad' matchar SAOL ordagrant. Betydelse, etymologi (latin femina) och exempel stämmer."
     },
     {
       "noteId": 1780080619673,
@@ -133,8 +133,8 @@
         "exempelmening": "Kaffet på tåget var alltid <font color=\"#3498db\">blaskigt</font>.",
         "etymologi": "Till blask, 'slask' — därav både den vattniga smaken och vädret."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO har två huvudbetydelser (smak; väderlek) plus en utvidgad delbetydelse om färger/intryck — kortet fångar alla tre och skiljer dem korrekt med ';'. Register 'vardaglig, negativ' stämmer."
     },
     {
       "noteId": 1780080619674,
@@ -163,8 +163,8 @@
         "exempelmening": "Soppan var helt <font color=\"#3498db\">fadd</font>, som om någon glömt både salt och kryddor.",
         "etymologi": "Latin fatuus 'smaklös' — samma ord betydde också 'dåraktig'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO/SAOL: smaklös/jolmig smak samt bildlig användning (intetsägande). Etymologin är korrekt och pedagogisk (latin fatuus betydde även 'dåraktig', jfr eng. fatuous)."
     },
     {
       "noteId": 1780080619682,
@@ -181,8 +181,8 @@
         "exempelmening": "Gamla tidningsårgångar fanns bara sparade på <font color=\"#3498db\">mikrofiche</font>.",
         "etymologi": "mikro- + franska fiche 'notislapp' — en pytteliten lapp."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt, synonymen 'mikrokort' är SO:s egen angivna synonym. Klargörandet 'ett ark, inte en rulle' motsägs inte av källorna. Etymologi stämmer (mikro- + franska fiche)."
     },
     {
       "noteId": 1780080619683,
@@ -199,8 +199,8 @@
         "exempelmening": "Forskarna mätte energiskillnaden med en <font color=\"#3498db\">kalorimeter</font>.",
         "etymologi": "kalori + -meter — mätaren för värmemängd."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO/SAOL exakt: apparat för mätning av värmemängder. Exemplet med reaktion är en rimlig, vanlig tillämpning, ingen sakfel. Etymologi korrekt."
     },
     {
       "noteId": 1780080619685,
@@ -218,8 +218,8 @@
         "exempelmening": "Han hade en bred <font color=\"#3498db\">vokabulär</font> för sin ålder.",
         "etymologi": "Franska vocabulaire, till vokabel — ett enskilt ord."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL anger uttryckligen dubbel betydelse 'ordförråd; ordlista' — kortet återger båda korrekt separerade med ';' och synonymerna matchar."
     },
     {
       "noteId": 1780080619689,
@@ -238,8 +238,8 @@
         "exempelmening": "Frankrike och Storbritannien bildade en <font color=\"#3498db\">entente</font> före första världskriget.",
         "etymologi": "Franska entendre 'förstå' — en entente är en förståelse, inte ett bindande förbund."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Synonymen 'statsförbund' är fel och motsäger både SO ('vänskapsförbindelse mellan stater UTAN eg. allians') och kortets egen etymologinot ('en entente är en förståelse, inte ett bindande förbund'). Ett förbund är just en bindande sammanslutning — motsatsen till vad en entente är. 'Statsförbund' bör tas bort ur synonymlistan."
     },
     {
       "noteId": 1780080619697,
@@ -258,8 +258,8 @@
         "exempelmening": "Beloppet var <font color=\"#3498db\">ekvivalent</font> med en månadslön.",
         "etymologi": "Latin aequus 'lika' + valere 'vara värd' — samma valere som i valör."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL har två homografer (adjektiv: likvärdig/jämngod/fullt motsvarande; substantiv: fullgod motsvarighet) som kortet slår ihop korrekt med ';'. Synonymer och exempel stämmer."
     },
     {
       "noteId": 1780080619702,
@@ -277,8 +277,8 @@
         "exempelmening": "Fakturan skickades med flera <font color=\"#3498db\">allegat</font>.",
         "etymologi": "Latin allegare 'åberopa' — det man åberopar som stöd."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Synonymerna 'bilaga, verifikation' matchar SAOL ordagrant. Betydelse, exempel ('flera allegat', korrekt oböjd pluralform) och etymologi (latin allegare) stämmer."
     },
     {
       "noteId": 1780080619704,
@@ -297,8 +297,8 @@
         "exempelmening": "Olyckan fick <font color=\"#3498db\">gruvliga</font> följder för hela byn.",
         "etymologi": "Till gruva sig — det man gruvar sig för."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt, inklusive den adverbiella särbetydelsen ('ta gruvligt miste') med samma exempel som SO ger. Etymologi och synonymer stämmer."
     },
     {
       "noteId": 1780080619707,
@@ -316,8 +316,8 @@
         "exempelmening": "Köttet <font color=\"#3498db\">marinerades</font> över natten i vitlök och olja.",
         "etymologi": "Till marin — marinaden var från början saltlake, havsvatten."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO/SAOL ('lägga i marinad'/'låta ligga i marinad') och etymologin (till marin, ursprungligen saltlake) stämmer. Registret 'formell' är tveksamt då SAOL taggar ordet som ett neutralt matlagningsord utan formell prägel, men det påverkar inte att betydelsen är rätt återgiven."
     },
     {
       "noteId": 1780080619708,
@@ -336,8 +336,8 @@
         "exempelmening": "Hans <font color=\"#3498db\">hybris</font> ledde till hans fall.",
         "etymologi": "Grekiska hybris, med samma betydelse — övermodet som utmanar gudarna."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Synonymerna 'övermod, förhävelse' matchar SAOL ordagrant, och SO:s definition och etymologi (grekiska hybris) stämmer med kortet."
     },
     {
       "noteId": 1780080619710,
@@ -355,8 +355,8 @@
         "exempelmening": "Vid första <font color=\"#3498db\">anblicken</font> verkade huset övergivet.",
         "etymologi": "Tyska Anblick, till blick."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse (synintryck vid betraktande) med delbetydelserna 'ögonkast' (vid första anblicken) och 'det sedda' täcks in av kortet, och SAOL:s synonym 'åsyn' återfinns i kortet. Etymologi (tyska Anblick) stämmer."
     },
     {
       "noteId": 1780080619714,
@@ -374,8 +374,8 @@
         "exempelmening": "Repet träddes fast genom <font color=\"#3498db\">märlan</font> på fördäck.",
         "etymologi": "Fornsvenska märla; verbet av nederländska marlen 'surra, förtöja'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "En hel betydelse saknas: SAOL listar 'märla' (substantiv) med två skilda huvudbetydelser — dels 'krampa...; snörring på sko' (metallhake/hyska, som kortet täcker), dels 'ett kräftdjur' (märla/tångmärla, en amfipod/kräftdjursart som är helt vanlig i svenska kust- och sötvatten, t.ex. som fiskbete). Kortet nämner bara hårdvaru-/hyskebetydelserna och verbet, men saknar helt djurbetydelsen."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619718,
@@ -20,8 +20,8 @@
         "exempelmening": "Sockret <font color=\"#3498db\">granulerades</font> innan förpackning.",
         "etymologi": "Latin granulum 'litet korn' — samma korn som i granulat."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser (göra kornform av ett ämne; bilda granulationsvävnad om sår) och båda finns med, korrekt separerade med ';'. Exempelmeningen illustrerar första betydelsen korrekt och ordet är highlightat. Etymologin (latin granulum, 'litet korn') stämmer med SO och hjälper minnet. Synonymerna finfördela/korna/söndersmula ligger nära kärnbetydelsen."
     },
     {
       "noteId": 1780080619719,
@@ -40,8 +40,8 @@
         "exempelmening": "Skådespelerskan omgavs alltid av sina <font color=\"#3498db\">adoratörer</font>.",
         "etymologi": "Latin adorare 'tillbe' — samma ord som engelskans adore."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger 'tillbedjare, beundrare' i något högtidligt/formellt register, vilket kortets 'litterär' fångar väl (ordet saknas i SO exact-match). Kortets 'svärmisk beundrare' samt synonymerna beundrare/tillbedjare/dyrkare stämmer med facit. Tillägget 'oftast av en kvinna' kunde inte bekräftas i SAOL men motsägs inte heller av något jag hittade. Etymologin (latin adorare 'tillbe') stämmer."
     },
     {
       "noteId": 1780080619720,
@@ -58,8 +58,8 @@
         "exempelmening": "Till middag serverades <font color=\"#3498db\">borsjtj</font> med en klick gräddfil.",
         "etymologi": "Ursprungligen 'skärpa', efter björnlokans taggiga blad som soppan förr kokades på. Släkt med borst."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en kraftig rödbetssoppa', serveras ofta med sur grädde -- matchar kortets 'rödbetssoppa från Östeuropa, ofta serverad med gräddfil'. Etymologin om björnlokans taggiga blad och släktskapet med 'borst' stämmer exakt med SO:s uppgift."
     },
     {
       "noteId": 1780080619722,
@@ -79,8 +79,8 @@
         "exempelmening": "Teknikern <font color=\"#3498db\">kalibrerade</font> vågen innan mätningen.",
         "etymologi": "Till kaliber — ordet kom från uppmätning av eldvapens kaliber."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO/SAOL definierar kalibrera som att ställa in ett instrument mot ett fastställt mått/referens, vilket huvudbetydelsen fångar korrekt. Men synonymen 'nollställa' är inte utbytbar mot kalibrera: nollställning innebär bara att sätta visaren/skalan till noll, inte att justera instrumentet så att det mäter rätt över hela skalan mot en referens -- ett nollställt men okalibrerat instrument kan fortfarande mäta fel. 'Nollställa' bör tas bort ur synonymlistan."
     },
     {
       "noteId": 1780080619723,
@@ -98,8 +98,8 @@
         "exempelmening": "Sommelieren <font color=\"#3498db\">dekanterade</font> vinet en timme före servering.",
         "etymologi": "Latin canthus, 'pip på en kanna' — att hälla av över pipen."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'försiktigt hälla av (vätska) för att skilja undan bottensats', exemplet 'dekantera vinet' -- matchar kortet exakt. Etymologin (canthus, 'pip på en kanna') stämmer med SO, om än något förenklad (SO har även prefixet de-)."
     },
     {
       "noteId": 1780080619724,
@@ -118,8 +118,8 @@
         "exempelmening": "Logotypen visade en kraftigt <font color=\"#3498db\">stiliserad</font> örn.",
         "etymologi": "Till stil, via italienskans stilizzare."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL ger bara EN betydelse för stilisera: 'förenkla (och framhäva det typiska) vid avbildning/beskrivning av något', utan någon separat klandrande betydelse om personer/text. Kortets andra led 'om personer och text ofta klandrande: göra schablonmässig' saknar belägg i båda källorna och presenteras felaktigt som en egen betydelse avskild med ';'. Ska nyansen vara kvar bör den vara en tillämpning av samma betydelse (med '/'), inte en ny betydelse."
     },
     {
       "noteId": 1780080619725,
@@ -138,8 +138,8 @@
         "exempelmening": "Segern gav honom en <font color=\"#3498db\">nimbus</font> av osårbarhet.",
         "etymologi": "Latin nimbus 'moln' — molnet kring guden blev glorian kring helgonet. Samma ord som i nimbostratus."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt de två betydelser kortet listar (glorieliknande ljuskrans; bildligt högt anseende), korrekt separerade med ';'. Etymologin (nimbus 'moln', koppling till nimbostratus) stämmer med SO. Exemplet illustrerar den bildliga betydelsen korrekt."
     },
     {
       "noteId": 1780080619726,
@@ -157,8 +157,8 @@
         "exempelmening": "Han slog till i ren <font color=\"#3498db\">affekt</font> och ångrade det direkt efteråt.",
         "etymologi": "Latin affectus 'sinnestillstånd', till afficere 'påverka'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stark sinnesrörelse med inslag av upphetsning, vrede e dyl.', med just exemplet 'handla i affekt' som kortet återger. Synonymer, register (formell, används bl.a. i juridiska sammanhang) och etymologi (latin affectus) stämmer."
     },
     {
       "noteId": 1780080619727,
@@ -185,8 +185,8 @@
         "exempelmening": "Företaget hade byggt upp stor <font color=\"#3498db\">goodwill</font> hos kunderna.",
         "etymologi": "Engelska goodwill, egentligen 'välvilja'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger huvudsakligen betydelsen 'gott anseende', vilket kortet leder med korrekt. Den andra betydelsen, 'immateriellt värde utöver bokförda tillgångar', är en väletablerad redovisningsterm för goodwill som allmänordböckerna inte fångar men som är sakligt korrekt. Synonymgrupperna är rätt kopplade till respektive betydelse."
     },
     {
       "noteId": 1780080619730,
@@ -204,8 +204,8 @@
         "exempelmening": "<font color=\"#3498db\">Bödeln</font> höjde yxan över den dömde.",
         "etymologi": "Lågtyska bödel, egentligen 'tjänare, bud' — släkt med bjuda."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt kortets två betydelser (yrkesmässig avrättare; bildligt om makthavare som kränker mänskliga rättigheter, med bl.a. Franco som SO:s eget exempel). Etymologin (lågtyska bödel, 'tjänare, bud', släkt med bjuda) stämmer exakt med SO."
     },
     {
       "noteId": 1780080619732,
@@ -224,8 +224,8 @@
         "exempelmening": "Turisterna vandrade genom Roms mörka <font color=\"#3498db\">katakomber</font>.",
         "etymologi": "Troligen grekiska kata 'ned' + latin tumba 'grav'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger den underjordiska begravningsplatsen som ordboksbelagd betydelse, vilket kortet fångar korrekt, liksom etymologin (grek. kata + lat. tumba). Den andra betydelsen ('i sportspråk: gångarna under en arena') saknar ordboksbeläggning men är en känd och korrekt svensk sportjournalistisk användning, och strider inte mot facit."
     },
     {
       "noteId": 1780080619733,
@@ -245,8 +245,8 @@
         "exempelmening": "Farbrorn på festen var väldigt <font color=\"#3498db\">talträngd</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO ger 'ivrig att tala', ofta med ironisk underton -- det fångar kortet exakt, inklusive ironinyansen. Men två av synonymerna är inte utbytbara mot talträngd: 'talför' betyder vältalig/skicklig att uttrycka sig (en förmåga), och 'mångordig' betyder att man använder för många ord (ett sätt att tala), medan talträngd handlar om suget/ivern att få prata. En person kan vara talträngd utan att vara talför eller mångordig, och tvärtom. Byt ut talför och mångordig, behåll pratsam/språksam."
     },
     {
       "noteId": 1780080619736,
@@ -265,8 +265,8 @@
         "exempelmening": "Priset på reparationen var rent <font color=\"#3498db\">hutlöst</font>.",
         "etymologi": "Den som inte vet hut — hut är gammalt för anständighet, som i 'lära någon hut'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som tyder på fullständig brist på skamkänsla', särskilt om priser -- kortets 'så orimlig att den är oförsvarlig, särskilt om priser' är en rimlig omskrivning, förstärkt av etymologin (den som inte vet 'hut' = anständighet) som direkt speglar skam-betydelsen. Synonymen 'skamlös' knyter an till ordbokens definition."
     },
     {
       "noteId": 1780080619739,
@@ -285,8 +285,8 @@
         "exempelmening": "Bedragaren <font color=\"#3498db\">duperade</font> hela styrelsen med falska papper.",
         "etymologi": "Franska dupe 'narr' — att dupera är att göra någon till narr."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'medvetet ge någon felaktigt intryck' (ofta genom skenbar saklighet) samt en försvagad betydelse 'lura' -- kortets 'vilseleda med falsk fasad' fångar kärnan väl, och exemplet med förfalskade papper illustrerar precis detta. Etymologin (fra. dupe, 'narr') stämmer."
     },
     {
       "noteId": 1780080619742,
@@ -305,8 +305,8 @@
         "exempelmening": "Tyget <font color=\"#3498db\">changerade</font> mellan grönt och blått i ljuset.",
         "etymologi": "Franska changer 'ändra', av latin cambire 'växla' — samma ord som engelskans change."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO/SAOL (två oberoende uppslagningar) ger changera betydelserna 'märkbart förändras till det sämre' och specifikt om färg 'blekas, förlora i utseende' (SO:s exempel: en blekt kostym, en tröja som blektes vid första tvätten). Huvudbetydelsen på kortet återger detta korrekt. Men exempelmeningen 'Tyget changerade mellan grönt och blått i ljuset' beskriver ett skimrande/skiftande tyg beroende på ljusvinkel, vilket varken är 'förändras till det sämre' eller 'blekna' -- exemplet illustrerar alltså fel betydelse. Byt t.ex. till 'Kostymen hade changerat och blivit blek av alla tvättar.'"
     },
     {
       "noteId": 1780080619745,
@@ -323,8 +323,8 @@
         "exempelmening": "Turisterna beundrade den gotiska <font color=\"#3498db\">katedralen</font>.",
         "etymologi": "Latin cathedra 'stol' — samma ord som kateder. Katedralen är kyrkan där biskopens stol står."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'domkyrka särsk. i katolska länder samt i England' -- kortets 'biskopens huvudkyrka i ett stift' är en korrekt kärnbeskrivning av domkyrka, och SO ger själv 'domkyrka' som synonym. Etymologin (cathedra, 'stol', kopplat till kateder) stämmer med SO."
     },
     {
       "noteId": 1780080619747,
@@ -343,8 +343,8 @@
         "exempelmening": "Konstnären bjöd på champagne vid <font color=\"#3498db\">vernissagen</font>.",
         "etymologi": "Franska vernir 'fernissa' — konstnärerna fernissade sina tavlor dagen före öppningen."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'öppnande av konstutställning ofta under festliga former' -- matchar kortet i sak. Etymologin om att konstnärerna fernissade sina tavlor dagen före öppning stämmer med SO:s uppgift om vernir."
     },
     {
       "noteId": 1780080619748,
@@ -362,8 +362,8 @@
         "exempelmening": "Han fick diagnosen <font color=\"#3498db\">affektiv</font> störning efter flera år av kraftiga humörsvängningar.",
         "etymologi": "Avledning till affekt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en allmän betydelse (som rör affekter/känslolivet) och en medicinsk användning (affektiv störning/sjukdom, som rör stämningsläget) -- kortet fångar båda och skiljer dem rimligt med ';'. Synonymerna känslomässig/känsloladdad matchar SO:s cohyponymer exakt."
     },
     {
       "noteId": 1780080619758,
@@ -382,8 +382,8 @@
         "exempelmening": "Minnesmärket skulle <font color=\"#3498db\">hugfästa</font> offrens namn för framtiden.",
         "etymologi": "håg 'sinne, minne' + fästa — samma håg som i hågkomst."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO ger definitionen 'säkra hågkomsten av något', vilket kortet fångar väl, och etymologin (håg + fästa) stämmer. Men SO markerar uttryckligen ordet med bruklighetskommentaren 'något ålderdomligt', vilket kortets register 'formell' inte förmedlar -- en inlärare kan tro ordet är neutralt formellt och missar att det känns gammalmodigt. Registret borde t.ex. vara 'formell, ålderdomlig'."
     },
     {
       "noteId": 1780080619761,
@@ -403,8 +403,8 @@
         "exempelmening": "Den gamla modellen <font color=\"#3498db\">utmönstrades</font> ur sortimentet.",
         "etymologi": "Betydde förr 'välja UT vid mönstring' — ordet har vänt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'skilja bort såsom föråldrad eller mindre värdefull' -- matchar kortet exakt, liksom cohyponymerna gallra/kassera/sovra/utrangera som SO själv anger och som kortet återger fullständigt. Etymologin ('ordet har vänt', från att välja UT vid mönstring till att sortera bort) stämmer med SO:s uppgift om ursprunglig betydelse och är en bra minnesregel."
     }
   ]
 }

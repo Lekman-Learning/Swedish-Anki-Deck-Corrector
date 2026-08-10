@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619661,
@@ -18,8 +18,8 @@
         "exempelmening": "<font color=\"#3498db\">Nota bene</font>: mötet är flyttat till fredag.",
         "etymologi": "Latin nota bene, 'märk väl' — samma notare som i notera. Förkortas nb."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar betydelsen 'märk väl, observera' och etymologin (latin nota bene, samma rot som notera, förkortas NB). Kort och exempel stämmer väl överens."
     },
     {
       "noteId": 1780080619619,
@@ -38,8 +38,8 @@
         "exempelmening": "Produkten kändes <font color=\"#3498db\">överreklamerad</font> — den levererade inte på ett enda löfte.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'framställd som bättre än den/det är' — matchar kortets huvudbetydelse exakt. Synonymer (hajpad, upphaussad, överskattad) och register (vardaglig, negativ) är rimliga, exemplet illustrerar bra."
     },
     {
       "noteId": 1780080619628,
@@ -58,8 +58,8 @@
         "exempelmening": "Scenen var ren <font color=\"#3498db\">slapstick</font> — tre personer, en tårta och en trappa.",
         "etymologi": "Engelska slap 'slag' + stick 'käpp' — en riktig rekvisita: två trälister som smällde högt utan att göra ont."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'komedi eller fars med snabbt tempo och avancerad situationskomik'. Kortets synonymer (fars, situationskomik) matchar direkt; etymologin om trärekvisitan är korrekt och hjälper minnet."
     },
     {
       "noteId": 1780080619729,
@@ -78,8 +78,8 @@
         "exempelmening": "Hans <font color=\"#3498db\">ingenium</font> för matematik visade sig redan i skolan.",
         "etymologi": "Latin ingenium 'medfödd begåvning' — samma ord som geni och ingenjör."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(skapande) begåvning', högtidligt register — matchar kortet väl. Etymologisk koppling till geni och ingenjör stämmer."
     },
     {
       "noteId": 1780080619741,
@@ -96,8 +96,8 @@
         "exempelmening": "Dispaschören upprättade en <font color=\"#3498db\">dispasch</font> efter haveriet.",
         "etymologi": "Italienska dispaccio 'avgörande' — dispaschen är själva avgörandet efter ett sjöhaveri."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'haveriutredning' i fackspråk. Kortets mer utförliga formulering (utredning + kostnadsfördelning) fångar begreppet korrekt. Etymologin (italienska dispaccio 'avgörande') stämmer."
     },
     {
       "noteId": 1780080619749,
@@ -115,8 +115,8 @@
         "exempelmening": "Kungen delade ut rika <font color=\"#3498db\">håvor</font> till sina gäster.",
         "etymologi": "Plural av gammalt hava, 'egendom' — samma ord som ha. Därför bara i plural."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'gåvor, ofta icke-materiella', ålderdomligt. Kortets 'värdefulla gåvor' och exemplet med en kung som delar ut håvor är en vedertagen, klassisk användning. Etymologin stämmer i sak."
     },
     {
       "noteId": 1780080619751,
@@ -134,8 +134,8 @@
         "exempelmening": "<font color=\"#3498db\">Deadline</font> för rapporten var på fredag.",
         "etymologi": "Engelska dead-line, 'dödslinje' — en linje i ett fängelse som fångar sköts för att korsa."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bestämd tidpunkt när något senast måste vara avslutat', med synonymen tidsgräns. Etymologin om fängelselinjen stämmer ordagrant med SO."
     },
     {
       "noteId": 1780080619752,
@@ -154,8 +154,8 @@
         "exempelmening": "Han hade ett <font color=\"#3498db\">besynnerligt</font> sätt att gå på.",
         "etymologi": "Släkt med sönder och synnerlig — grundbetydelsen är 'avskild från mängden'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger båda betydelserna (svår att förstå sig på; om person: något tokig) som kortet fångar korrekt och i rätt ordning. Etymologisk koppling till sönder (och synnerlig, samma germanska rot 'sunder-') är rimlig och hjälper minnet."
     },
     {
       "noteId": 1780080619756,
@@ -174,8 +174,8 @@
         "exempelmening": "Kontorets <font color=\"#3498db\">hurtbulle</font> sprang alltid en mil före frukost.",
         "etymologi": "hurtig + bulle, där bulle är en nedlåtande personbeteckning."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(överdrivet) hurtig och sportig person', vardagligt. Matchar kortet väl, synonymerna är rimliga."
     },
     {
       "noteId": 1780080619757,
@@ -193,8 +193,8 @@
         "exempelmening": "Hon utsågs till vd <font color=\"#3498db\">ad interim</font> tills en permanent lösning hittades.",
         "etymologi": "Latin ad interim, 'för mellantiden'. Förkortas a.i."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Uppslagning misslyckades: varken SO eller SAOL har en post för frasen 'ad interim' (SAOL:s uppslag 'interim' nämner den inte alls). Bedömning görs därför försiktigt utifrån allmän kännedom: frasen och dess betydelse ('tillfälligt, under en övergångsperiod', t.ex. 'VD ad interim') är korrekt använd, men kunde inte verifieras mot ordbok."
     },
     {
       "noteId": 1780080619762,
@@ -211,8 +211,8 @@
         "exempelmening": "Konceptet kändes för <font color=\"#3498db\">abstrakt</font> för att förstå direkt.",
         "etymologi": "Latin abstractus 'fråndragen' — man drar bort det konkreta tills bara begreppet är kvar."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO har TVÅ separata uppslag för 'abstrakt': adjektivet (kortets betydelse) och ett substantiv som betyder sammanfattning, t.ex. av en vetenskaplig artikel (SO:s exempel: 'abstrakterna till föredragen'). Kortet nämner bara adjektivbetydelsen och saknar helt substantivbetydelsen. Borde t.ex. lyda: 'Tänkt bort från det konkreta, teoretisk ; som substantiv: kort sammanfattning av t.ex. en vetenskaplig text'."
     },
     {
       "noteId": 1780080619763,
@@ -232,8 +232,8 @@
         "exempelmening": "Läraren <font color=\"#3498db\">anvisade</font> var eleverna skulle sitta.",
         "etymologi": "Efter tyska anweisen — samma visa som i att visa vägen."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt samma två betydelser (visa/peka på; i myndighetsspråk bevilja/tilldela medel) i samma ordning som kortet. Etymologin (tyska anweisen, samma visa som i visa vägen) stämmer."
     },
     {
       "noteId": 1780080619769,
@@ -250,8 +250,8 @@
         "exempelmening": "Familjen <font color=\"#3498db\">avhystes</font> när hyran inte betalades.",
         "etymologi": "av + hysa — fornsvenskans 'skilja från hus och gård'. Motsatsen till att hysa någon."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'tvinga att flytta från sin bostad med rättsligt stöd', synonym vräka. Etymologin (av + hysa, 'skilja från hus och gård') stämmer exakt."
     },
     {
       "noteId": 1780080619603,
@@ -270,8 +270,8 @@
         "exempelmening": "I ekvationen är x den okända <font color=\"#3498db\">variabeln</font> vi ska lösa ut.",
         "etymologi": "Till variera, av latin variare 'växla'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO har en substantiv- och en adjektivbetydelse som kortet fångar korrekt och i rätt ordning. 'Stjärna med föränderlig ljusstyrka' är enligt SO:s struktur bara en underbetydelse till huvudbetydelsen (ingen egen numrerad betydelse), så att utelämna den är inte ett fel."
     },
     {
       "noteId": 1780080619577,
@@ -289,8 +289,8 @@
         "exempelmening": "Vargarna i <font color=\"#3498db\">reservatet</font> får inte jagas, inte ens av markägaren.",
         "etymologi": "Latin reservare 'spara undan' — samma ord som reserv."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser (skyddat naturområde; område för etnisk minoritet) som kortet återger, något snävare formulerat ('ursprungsfolk' i stället för 'etnisk minoritet') men i linje med det vanligaste bruket (indianreservat o.dyl.). Etymologin stämmer."
     },
     {
       "noteId": 1780080619504,
@@ -309,8 +309,8 @@
         "exempelmening": "Läraren höll fast vid sin <font color=\"#3498db\">beprövade</font> metod, och resultaten kom varje år.",
         "etymologi": "Till pröva; jfr tyska erprobt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som har prövats med framgång under tillräcklig tid'. Kortet fångar även den ironiska användningen ('beprövad oduglighet') som SO själv exemplifierar med 'generaler av beprövad oduglighet'. Välgjort kort."
     },
     {
       "noteId": 1780080619507,
@@ -329,8 +329,8 @@
         "exempelmening": "Motparten försökte <font color=\"#3498db\">förhala</font> förhandlingarna tills tidsfristen gick ut.",
         "etymologi": "Samma ord i båda betydelserna — att hala, dra i något."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser (fördröja; sjöterm om att förflytta fartyg med linor) och anger uttryckligen att de har samma ursprung — matchar kortets etymologiuppgift ('samma ord i båda betydelserna') ordagrant."
     },
     {
       "noteId": 1780080619508,
@@ -348,8 +348,8 @@
         "exempelmening": "Skogsmarkens höga <font color=\"#3498db\">bonitet</font> lovade en god virkesproduktion.",
         "etymologi": "Latin bonus 'god' — samma ord som bonus. Bonitet är godhetsgrad."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'grad av avkastningsförmåga hos någon naturresurs'. Kortets avgränsning till mark ('markens grad av avkastningsförmåga') motsvarar det vanligaste bruket (jfr SO:s exempel om skogsmark). Synonymen 'godhetsgrad' är ovanlig i faktiskt bruk men bygger korrekt på ordets etymologi (latin bonus 'god')."
     },
     {
       "noteId": 1780080619525,
@@ -368,8 +368,8 @@
         "exempelmening": "Sverige har <font color=\"#3498db\">bilaterala</font> utvecklingssamarbeten med ett sjuttiotal länder.",
         "etymologi": "bi- 'två' + latin latus 'sida'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som innefattar två parter...', med just unilateral/multilateral som jämförelsebegrepp — matchar kortet exakt. Synonymen 'ömsesidig' är något löst (bilateral betyder tvåsidig, inte nödvändigtvis ömsesidig) men inte tydligt felaktig."
     },
     {
       "noteId": 1780080619526,
@@ -388,8 +388,8 @@
         "exempelmening": "Han hade ett par bruna <font color=\"#3498db\">loafers</font> utan strumpor.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO har inget uppslag för singularformen 'loafer' — det enda uppslaget är 'loafers' (pluralis tantum, jämför 'jeans'), definierat som 'typ av promenadskor utan snörning'. Kortets eget exempel använder också pluralformen 'loafers', inte kortets uppslagsord 'loafer' — en intern inkonsekvens som visar att uppslagsordet borde vara 'loafers'. Synonymen 'mockasin' är dessutom en annan, inte fullt utbytbar skotyp."
     },
     {
       "noteId": 1780080619537,
@@ -408,8 +408,8 @@
         "exempelmening": "Grannarnas klagomål <font color=\"#3498db\">lade sordin på</font> bandets kvällsrepetitioner.",
         "etymologi": "En sordin är dämparen man sätter på ett instrument — att lägga sordin på är att dämpa."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger frasen ordagrant under uppslaget 'sordin' med den bildliga betydelsen 'dämpning av (sinnes)stämning' och ett näraliggande exempel — matchar kortet mycket väl. Etymologiförklaringen om sordinen som dämpare hjälper förståelsen."
     },
     {
       "noteId": 1780080619545,
@@ -427,8 +427,8 @@
         "exempelmening": "Höstens <font color=\"#3498db\">revy</font> gjorde skoningslöst narr av årets politiska skandaler.",
         "etymologi": "Franska revue 'återblick', av latin revidere 'återse' — samma ord som revidera. Därav 'passera revy'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt tre betydelser (scenföreställning; översiktsartikel; militär förbimarsch) som kortet återger fullständigt och i rätt ordning, inklusive frasen 'passera revy'. Etymologin stämmer ordagrant. Mycket komplett kort."
     },
     {
       "noteId": 1780080619546,
@@ -447,8 +447,8 @@
         "exempelmening": "Trots grälet höll de en <font color=\"#3498db\">civiliserad</font> ton genom hela middagen.",
         "etymologi": "Till civil, av latin civis 'medborgare' — att civilisera är ordagrant att göra till stadsbo."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger båda betydelserna (om samhälle: kulturellt/tekniskt högtstående; om person: gott uppförande) som kortet fångar sakligt korrekt, men i omvänd ordning mot SO som leder med samhällsbetydelsen. Inget sakfel, men värt att notera. Etymologin (civis = medborgare/stadsbo) stämmer."
     },
     {
       "noteId": 1780080619547,
@@ -467,8 +467,8 @@
         "exempelmening": "Ingen i besättningen ville <font color=\"#3498db\">vedervåga</font> sitt liv på isen så här sent på våren.",
         "etymologi": "veder- betyder 'mot', som i vedergällning — att våga något mot en risk."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SAOL har EN enda huvudbetydelse: 'sätta på spel; våga sig på' (bekräftat i rådata: en enda post i huvudbetydelser-fältet) — semikolonet skiljer här två omformuleringar av SAMMA betydelse, inte två skilda betydelser. Kortet skriver dem ändå som två skilda betydelser separerade med ' ; ' ('Riskera något värdefullt ; våga sig på något farligt'), vilket bryter mot regeln att ' ; ' ska markera genuint skilda betydelser — det borde vara ' / ' eller en sammanslagen formulering. Registret 'litterär' är dessutom för milt; SAOL märker ordet 'åld.' (ålderdomligt)."
     },
     {
       "noteId": 1780080619691,
@@ -487,8 +487,8 @@
         "exempelmening": "Enligt sägnen lockade <font color=\"#3498db\">huldran</font> vilsna vandrare djupt in i skogen.",
         "etymologi": "Norska huldre, 'någon som döljer sig' — släkt med hölja."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'mytologiskt kvinnligt (skogs)väsen med förmåga att utöva farlig lockelse' — matchar kortet nära nog ordagrant. Etymologin (norska huldre, 'den som döljer sig') stämmer."
     }
   ]
 }

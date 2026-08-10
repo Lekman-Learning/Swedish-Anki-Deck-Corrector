@@ -214,6 +214,20 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
               % (len(utan_skal), ", ".join(utan_skal[:8])))
         return 1
 
+    # ALLA SPARRAR MASTE LIGGA FORE SKRIVNINGEN. Forsta versionen av
+    # uppslagsspärren nedan lag EFTER json.dump och skrev darfor ut
+    # "Inget har sparats" -- efter att ha sparat. Ett meddelande som beskriver
+    # nagot annat an vad koden gjorde ar samma felklass som resten av projektet
+    # jagar; upptackt 2026-08-10 direkt efter att spärren lagts in.
+    turer = svar.get("num_turns") or 0
+    if turer <= 1:
+        print("AVBRYTER: granskaren svarade utan att använda ett enda verktyg "
+              "(num_turns=%d).\n"
+              "  Verdikten vilar då på modellens minne, inte på SO/SAOL, och får\n"
+              "  inte skrivas in. Kontrollera att WebFetch är tillåten och att\n"
+              "  svenska.se svarar. Inget har sparats." % turer)
+        return 1
+
     for p in poster:
         d = domar.get(int(p["noteId"]))
         if d:
@@ -226,9 +240,9 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
     g = sum(1 for d in domar.values() if d["verdikt"] == "godkand")
     u = len(domar) - g
     kostnad = svar.get("total_cost_usd")
-    print("\n%d godkända, %d underkända (%.0f %% underkänt)%s"
-          % (g, u, 100.0 * u / len(domar),
-             "  --  %.2f USD" % kostnad if kostnad else ""))
+    print("\n%d godkända, %d underkända (%.0f %% underkänt)  --  %d turer%s"
+          % (g, u, 100.0 * u / len(domar), turer,
+             ", %.2f USD" % kostnad if kostnad else ""))
     for d in domar.values():
         if d["verdikt"] == "underkand":
             print("  UNDERKÄND %-16s %s" % (d["ord"], (d.get("anmarkning") or "")[:150]))

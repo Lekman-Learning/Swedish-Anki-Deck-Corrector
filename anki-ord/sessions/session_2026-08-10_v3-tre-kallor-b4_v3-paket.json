@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619567,
@@ -21,8 +21,8 @@
         "exempelmening": "Han hade ett <font color=\"#3498db\">aristokratiskt</font> sätt att tala.",
         "etymologi": "Grekiska aristos 'bäst' + kratos 'makt' — de bästas välde."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO:s huvudbetydelse är sättet/hållningen ('utmärker aristokrati, tonvikt på förnämt och förfinat'); tillhörighet till aristokratin är enligt SO bara en bibetydelse märkt 'äv. neutralt'. Kortet vänder på ordningen och leder med tillhörighetsbetydelsen ('hör till adeln') istället för huvudbetydelsen. Dessutom är 'nobel' fel synonym — enligt SO betyder det 'storsint, generös, ofta på ett förnämt sätt', inte 'aristokratisk'."
     },
     {
       "noteId": 1780080619570,
@@ -41,8 +41,8 @@
         "exempelmening": "Hon var för <font color=\"#3498db\">högfärdig</font> för att ens hälsa på oss i trappan.",
         "etymologi": "hög + färd, där färd betyder 'uppträdande' — som i välfärd."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Betydelsen matchar SO:s enda huvudbetydelse ('uppträder som förmer än andra, särskilt vad gäller social status') väl, synonymerna (högdragen, högmodig, uppblåst) och exemplet stämmer. Etymologin ('färd' = uppträdande, som i välfärd) är rimlig och hjälper minnet."
     },
     {
       "noteId": 1780080619571,
@@ -62,8 +62,8 @@
         "exempelmening": "Hantverkarens <font color=\"#3498db\">gedigna</font> arbete höll i femtio år utan en enda spricka.",
         "etymologi": "Tyska gedeihen 'frodas' — det som fått växa färdigt. Släkt med dejlig."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Alla tre delbetydelser i SO (ren metall, kraftig/stabil, grundligt arbete) finns med i rätt ordning. Exemplet illustrerar arbetsbetydelsen korrekt. Etymologin stämmer — SO bekräftar uttryckligen släktskapet med 'dejlig'."
     },
     {
       "noteId": 1780080619572,
@@ -81,8 +81,8 @@
         "exempelmening": "Det <font color=\"#3498db\">kom för</font> honom att han sett mannen förut, men han kunde inte placera ansiktet.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen och synonymerna stämmer mot SO. Men exempelmeningen är grammatiskt fel: 'att han sett mannen förut' saknar hjälpverbet — ska vara 'att han hade sett mannen förut'."
     },
     {
       "noteId": 1780080619574,
@@ -100,8 +100,8 @@
         "exempelmening": "Han fällde ner <font color=\"#3498db\">suffletten</font> och körde vidare i solskenet.",
         "etymologi": "Franska souffler 'blåsa upp' — samma ord som sufflé."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse väl, synonymer och exempel stämmer, etymologin (franska souffler/sufflé) är korrekt återgiven."
     },
     {
       "noteId": 1780080619575,
@@ -120,8 +120,8 @@
         "exempelmening": "När beskedet kom utbrast hela personalen i ett <font color=\"#3498db\">korus</font> av jubel.",
         "etymologi": "Latin chorus 'kör' — samma ord som kor i en kyrka."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Både grundbetydelsen och frasen 'i korus' från SO finns med. Synonymer och exempel stämmer, etymologin (latin chorus, släkt med kor) är korrekt."
     },
     {
       "noteId": 1780080619576,
@@ -141,8 +141,8 @@
         "exempelmening": "Hans välvårdade skägg vittnade om stor <font color=\"#3498db\">ans</font>.",
         "etymologi": "Hör till verbet ansa."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO:s definition nämner bara växter ('särskilt av växter') plus en allmännare användning — inte 'djur' som kortet lägger till som egen domän. Exempelmeningen handlar om skägg (personlig vård), vilket inte täcks av de angivna domänerna 'mark, djur eller växter' — betydelse och exempel stämmer alltså inte överens. Synonymen 'ansning' är dessutom cirkulär (innehåller uppslagsordets stam)."
     },
     {
       "noteId": 1780080619579,
@@ -159,8 +159,8 @@
         "exempelmening": "I <font color=\"#3498db\">fonetik</font> lär man sig varför svenskans sje-ljud är ett av världens ovanligaste språkljud.",
         "etymologi": "Grekiska phone 'ljud, röst' — samma ord som i telefon."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Definitionen fångar SO:s betydelse och kontrasten mot fonologi korrekt. Synonymen 'ljudlära' bekräftas av SO som jämförelseord. Exempel och etymologi stämmer."
     },
     {
       "noteId": 1780080619581,
@@ -178,8 +178,8 @@
         "exempelmening": "Läraren visade eleverna hur man läser <font color=\"#3498db\">blindskrift</font> med fingertopparna.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse, synonymerna (punktskrift, brailleskrift) är exakt de SO anger som jämförelseord. Exemplet är korrekt och tydligt."
     },
     {
       "noteId": 1780080619583,
@@ -198,8 +198,8 @@
         "exempelmening": "Vi ses imorgon klockan nio, <font color=\"#3498db\">såframt</font> tågen går som de ska.",
         "etymologi": "Fornsvenska sva framt, 'så långt' — så långt som det gäller att något stämmer."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen ('under förutsättning att') stämmer mot SO:s 'såvida'. Men registret anges bara som 'formell' — SO märker ordet uttryckligen 'något ålderdomligt', en nyans som saknas helt i kortet."
     },
     {
       "noteId": 1780080619585,
@@ -218,8 +218,8 @@
         "exempelmening": "Diplomaten skickades dit för att <font color=\"#3498db\">sondera</font> terrängen inför förhandlingarna.",
         "etymologi": "Av franska sonder, till sond — det bildliga bruket 'sondera terrängen' är lånat från läkarens sond."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Båda betydelserna (bildligt 'försiktigt undersöka' och bokstavligt 'undersöka med sond') finns med, och att kortet leder med den bildliga användningen är rimligt eftersom det är klart vanligast i modernt språk. Exempel och etymologi stämmer väl mot SO."
     },
     {
       "noteId": 1780080619586,
@@ -239,8 +239,8 @@
         "exempelmening": "Trots vittnets detaljerade beskrivning avfärdade polisen alltihop som en ren <font color=\"#3498db\">amsaga</font>.",
         "etymologi": "Ursprungligen ammsaga — en historia man berättar för små barn."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Kortet fångar bara SO:s huvudbetydelse ('historia som framställs som äkta men visar sig vara påhittad'). Bibetydelsen 'allmännare: osannolik historia' — en historia som bara verkar orimlig utan att nödvändigtvis vara medvetet spridd som sann — saknas helt på kortet."
     },
     {
       "noteId": 1780080619587,
@@ -258,8 +258,8 @@
         "exempelmening": "<font color=\"#3498db\">Prelaten</font> läste välsignelsen över den fullsatta katedralen.",
         "etymologi": "Latin praelatus 'framlyft', till praeferre 'föredra' — samma rot som preferera."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Båda SO:s betydelser (hederstitel för förtjänt katolsk präst; allmännare om präst med tonvikt på värdighet) finns med i rätt ordning. Exempel och etymologi stämmer."
     },
     {
       "noteId": 1780080619589,
@@ -278,8 +278,8 @@
         "exempelmening": "Lagledarens <font color=\"#3498db\">dalt</font> med stjärnspelaren gjorde resten av laget bittert.",
         "etymologi": "Hör till verbet dalta."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Motsvarar SO:s definition väl, synonymerna (bl.a. pjosk, som SO själv anger som jämförelseord) och exemplet stämmer, liksom den enkla etymologin till 'dalta'."
     },
     {
       "noteId": 1780080619599,
@@ -297,8 +297,8 @@
         "exempelmening": "Spelberoendet fick <font color=\"#3498db\">fördärvliga</font> följder för hela familjen.",
         "etymologi": "Till fördärv — det som leder någon i fördärvet."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse ('medför stor skada eller olycka'). Exemplet illustrerar betydelsen tydligt och etymologin till 'fördärv' är korrekt och hjälper minnet."
     },
     {
       "noteId": 1780080619604,
@@ -316,8 +316,8 @@
         "exempelmening": "Kartan visade områdets kuperade <font color=\"#3498db\">topografi</font>.",
         "etymologi": "Grekiska topos 'plats' + graphein 'skriva' — samma topos som i utopi, 'ingen plats'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Båda SO:s betydelser (jordytans former; ett områdes terrängförhållanden) finns med i rätt ordning, med matchande exempel och en korrekt, minnesstödjande etymologi (jfr utopi)."
     },
     {
       "noteId": 1780080619607,
@@ -335,8 +335,8 @@
         "exempelmening": "Dörrposten var rikt <font color=\"#3498db\">ornerad</font> med slingrande rankor.",
         "etymologi": "Latin ornare 'pryda' — samma ord som ornament."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s betydelse ('ornamentera'), inklusive notisen om att ordet oftast förekommer som particip ('ornerad'), vilket exemplet också visar. Etymologin stämmer."
     },
     {
       "noteId": 1780080619608,
@@ -354,8 +354,8 @@
         "exempelmening": "Lönen var 30 000 kronor <font color=\"#3498db\">brutto</font>.",
         "etymologi": "Italienska brutto 'rått, oputsat' — samma ord som brutal. Bruttovikt är varan i råskick."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Kortet täcker bara adverb-betydelsen (före avdrag, om pengar/vikt). SO har en andra, egen huvudbetydelse för substantivet 'brutto' ('behållning före avdrag', t.ex. 'ett brutto på 3000 kronor') som saknas helt på kortet. Uppdelningen med ' ; ' mellan 'motsatsen till netto' och 'om vikt' är dessutom tveksam eftersom SO behandlar pengar och vikt som samma betydelse, inte två skilda."
     },
     {
       "noteId": 1780080619613,
@@ -372,8 +372,8 @@
         "exempelmening": "<font color=\"#3498db\">Pistongerna</font> rörde sig upp och ner i motorn.",
         "etymologi": "Italienska pistare 'stampa' — kolven stampar. Släkt med pistill."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse ('kolv i maskin, särskilt ångmaskin') exakt; kontrollerat att ingen ytterligare betydelse (t.ex. för blåsinstrument) finns i SO. Exempel och etymologi stämmer."
     },
     {
       "noteId": 1780080619615,
@@ -392,8 +392,8 @@
         "exempelmening": "Jag behöver <font color=\"#3498db\">signera</font> kontraktet innan jag kan börja arbetet.",
         "etymologi": "Latin signum 'tecken' — samma rot som signal och insignier."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Motsvarar SO:s betydelse och det vanligaste bruket (underteckna handling/avtal) väl. Synonymerna och exemplet stämmer, liksom etymologin (latin signum, släkt med signal/insignier)."
     }
   ]
 }

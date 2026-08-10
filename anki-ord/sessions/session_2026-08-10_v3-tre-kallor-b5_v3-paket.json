@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619616,
@@ -20,8 +20,8 @@
         "exempelmening": "Sagan handlar om en <font color=\"#3498db\">girig</font> kung som samlade guld på hög medan folket svalt.",
         "etymologi": "Till giri 'begär' — besläktat med begära och gärna."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO:s fulla uppslag har bara EN huvudbetydelse: 'alltför starkt inriktad på att äga föremål, pengar etc.' (utvidgas till handlingar/blickar, t.ex. 'giriga blickar mot smörgåsbordet'). Den betydelse kortet listar som nummer två, 'som häftigt åtrår något för stunden' ('ivrig att få'), finns i SO uttryckligen bara 'i sammansättn.' (vetgirig, äregirig, hämndgirig) -- INTE för ordet 'girig' i sig. Kortet uppfinner alltså en självständig betydelse som ordboken reserverar för sammansättningar. Bör vara en betydelse: vinningslysten/snål, ev. med tillägget att det äv. gäller handlingar."
     },
     {
       "noteId": 1780080619620,
@@ -40,8 +40,8 @@
         "exempelmening": "Sluta <font color=\"#3498db\">åma</font> dig och stå stilla så att jag kan mäta din längd!",
         "etymologi": "Av ovisst ursprung — SO vet inte varifrån ordet kommer."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Register fel. SO märker 'åma sig' som vardagligt, inte dialektalt -- dialektalt ursprung gäller ordets etymologi ('av ovisst ursprung', dialektord), inte dagens stilvärde. Kortet blandar ihop etymologisk härkomst med register. Betydelsen själv ('göra sig till, ibland pga besvärlig situation') stämmer dock väl överens med SO."
     },
     {
       "noteId": 1780080619621,
@@ -59,8 +59,8 @@
         "exempelmening": "Lössjord är en <font color=\"#3498db\">eolisk</font> jordart som transporterats och avlagrats av vinden.",
         "etymologi": "Efter Aiolos, vindarnas gud i grekisk myt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'som har att göra med vinden', bruklighet 'i vetenskapliga sammanhang el. högtidligt' ≈ formell/fackord, exemplet 'eoliska avlagringar' är just geologiskt. Etymologin (Aiolos, vindarnas gud) är en rimlig förenkling av SO:s kedja via tyska äolisch till latinets Aeolus."
     },
     {
       "noteId": 1780080619623,
@@ -79,8 +79,8 @@
         "exempelmening": "<font color=\"#3498db\">Djäknarna</font> vandrade runt i bygden under loven och sjöng för att tjäna ihop till sina studier.",
         "etymologi": "Ur grekiskans diakonos 'tjänare' — samma ord som diakon. Skolorna var kyrkans."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: elev i äldre lärdomsskola, särskilt högre klasser, historisk/arkaisk användning. Etymologin (grekiska diakonos, samma ord som diakon) stämmer. 'Lärjunge' är en något vidare synonym men inte felaktig i sammanhanget."
     },
     {
       "noteId": 1780080619624,
@@ -99,8 +99,8 @@
         "exempelmening": "Hon kom i en <font color=\"#3498db\">salongsfähig</font> klänning som passade den exklusiva festen perfekt.",
         "etymologi": "Tyska salonfähig — fähig betyder 'i stånd till'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO exakt: huvudbetydelse 'som passar för finare salonger' plus underbetydelse 'ofta försvagat ... inte avviker från vad som är lämpligt' = kortets 'ofta svagare: inte ollämpligt'. Synonymen 'rumsren' är t.o.m. SO:s egen jämförelse. Etymologin stämmer ordagrant."
     },
     {
       "noteId": 1780080619627,
@@ -119,8 +119,8 @@
         "exempelmening": "Efter veckor av tystnad valde han att <font color=\"#3498db\">avbörda sig</font> alltihop för sin bror.",
         "etymologi": "av + börda — att lägga av sig en börda."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'göra fri från', ofta reflexivt och abstrakt (SO:s exempel: 'avbörda sig ansvaret'), vilket motsvarar kortets 'oftast ett ansvar'. Etymologin (av + börda) stämmer med SO:s lågtyska afbürden-härledning."
     },
     {
       "noteId": 1780080619631,
@@ -139,8 +139,8 @@
         "exempelmening": "Pojken var mycket <font color=\"#3498db\">försigkommen</font> – redan vid fyra års ålder kunde han läsa.",
         "etymologi": "Bildat till komma sig för, 'komma igång'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO både huvudbetydelse ('väl utvecklad för sin ålder') och underbetydelsens negativa nyans ('alltför avancerad', SO:s exempel om elever som börjat röka). Etymologin är ordagrant identisk med SO: 'bildat till komma sig för, komma igång'."
     },
     {
       "noteId": 1780080619632,
@@ -157,8 +157,8 @@
         "exempelmening": "Prästen öppnade <font color=\"#3498db\">tabernaklet</font> och tog fram nattvardsbrödet.",
         "etymologi": "Latin tabernaculum 'tält', till taberna 'bod' — samma ord som taverna."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Kortet fångar alla tre SO-betydelser korrekt: tälthelgedomen (huvudbet. 1), sakramentsskåpet (huvudbet. 2) och frikyrkokapellet (underbetydelse till huvudbet. 1). Etymologin (latin tabernaculum 'tält', till taberna, samma ord som taverna) stämmer ordagrant med SO."
     },
     {
       "noteId": 1780080619633,
@@ -177,8 +177,8 @@
         "exempelmening": "Han var en riktig <font color=\"#3498db\">gourmand</font> och tog för sig tre gånger av varje rätt.",
         "etymologi": "Franska gourmand, till gourmet."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'person som gärna äter mycket (och god) mat', med gourmet som cohyponym/kontrast. Etymologin 'franska gourmand, till gourmet' är ordagrant vad SO anger (även om orden lärdomshistoriskt sett ofta beskrivs som oberoende -- här följs SO:s egen uppgift)."
     },
     {
       "noteId": 1780080619646,
@@ -196,8 +196,8 @@
         "exempelmening": "Den nya soffan <font color=\"#3498db\">skrymde</font> så att halva vardagsrummet försvann.",
         "etymologi": "Från dialektalt skrymma; ursprunget är osäkert enligt SO."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'ta upp (onödigt) stort utrymme', används nästan bara som presens particip (skrymmande) vilket kortet noterar. Etymologin ('osäkert ursprung enligt SO') är en rimlig sammanfattning av SO:s 'ev. besläktat med...' -formulering."
     },
     {
       "noteId": 1780080619647,
@@ -215,8 +215,8 @@
         "exempelmening": "Företaget presenterade <font color=\"#3498db\">vidlyftiga</font> planer på en global expansion trots att de saknade kapital.",
         "etymologi": "Lågtyska witlüftich, 'som löper vida' — släkt med löpa."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: huvudbetydelse '(alltför) omfattande' (ofta klandrande) plus underbetydelse om ett fritt/utsvävande leverne, korrekt separerade med ';'. Etymologin (lågtyska witlüftich, släkt med löpa) är ordagrant SO:s egen."
     },
     {
       "noteId": 1780080619649,
@@ -234,8 +234,8 @@
         "exempelmening": "I <font color=\"#3498db\">medaljongen</font> runt halsen bar hon ett foto av sin mor.",
         "etymologi": "Franska médaillon, egentligen 'stor medalj' — inte en liten."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Täcker SO:s tre betydelser: hängsmycke med bild/foto, oval/rund målning/relief, samt köttbiten (kalvmedaljong). Etymologin 'stor medalj, inte en liten' är en pedagogisk och korrekt återspegling av SO:s 'eg. stor medalj'."
     },
     {
       "noteId": 1780080619651,
@@ -254,8 +254,8 @@
         "exempelmening": "Skogen kändes <font color=\"#3498db\">trolsk</font> i skymningen.",
         "etymologi": "Till troll — fornsvenskans trolsker betydde 'trollkunnig'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar 'som tycks overklig och förtrollande' (ej uttryckligen 'vacker'), men exemplen (trolsk stämning, trolska skymningsljuset) stödjer kortets tolkning som något förtrollande-vackert. Etymologin (till troll, fornsvenska trolsker 'trollkunnig') stämmer."
     },
     {
       "noteId": 1780080619652,
@@ -274,8 +274,8 @@
         "exempelmening": "Det brittiska imperiet var ett tydligt exempel på <font color=\"#3498db\">imperialism</font>.",
         "etymologi": "Till imperium, latin för 'befallning, välde'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: utrikespolitik inriktad på att behärska områden långt utanför egna gränser, med SO:s notering att moderna användningar ofta är ekonomiska/kulturella. Etymologin (till imperium) stämmer."
     },
     {
       "noteId": 1780080619654,
@@ -293,8 +293,8 @@
         "exempelmening": "På Årsta partihallar handlade <font color=\"#3498db\">grossisterna</font> med frukt och grönt i palltal.",
         "etymologi": "Till en gros, franska för 'i stort' — motsatsen till i detalj."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Etymologin är fel. SO anger uttryckligen att grossist kommer 'av tyska Grossist med samma betydelse' (jfr grosshandel) -- alltså tyskt lånord, inte direkt från franskans 'en gros'. Kortets påstående 'Till en gros, franska för i stort' hoppar över det tyska mellanledet och anger fel källspråk. Själva betydelsen (partihandlare, motsats till detaljhandlare) är däremot korrekt."
     },
     {
       "noteId": 1780080619656,
@@ -312,8 +312,8 @@
         "exempelmening": "Hon <font color=\"#3498db\">exkluderades</font> från festen efter att ha brutit mot reglerna.",
         "etymologi": "Latin excludere 'stänga ute', till claudere 'stänga' — samma rot som kloster."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: huvudbetydelsen 'tvångsmässigt avlägsna viss grupp' och underbetydelsen 'inte ta med (i beräkning)', korrekt separerade med ';'. Etymologin (latin excludere, till claudere 'stänga', samma rot som kloster) stämmer med SO."
     },
     {
       "noteId": 1780080619657,
@@ -332,8 +332,8 @@
         "exempelmening": "Hon gav sitt <font color=\"#3498db\">uttryckliga</font> tillstånd innan vi rörde något i lägenheten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'tydlig och bestämd och ofta språkligt uttryckt'. Synonymerna tydlig/bestämd är hämtade direkt ur SO:s egen definition och är inte cirkulära. Ingen etymologi anges, vilket är tillåtet."
     },
     {
       "noteId": 1780080619658,
@@ -352,8 +352,8 @@
         "exempelmening": "Hon gjorde en <font color=\"#3498db\">extraordinär</font> insats.",
         "etymologi": "Latin extra ordinem, 'utanför ordningen'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'som går mycket utöver det vanliga särsk. i fråga om omfattning'. Etymologin till latinets 'extra ordinem' är ordets yttersta ursprung (via franskans extraordinaire, som SO nämner) och är sann, om än en förenkling."
     },
     {
       "noteId": 1780080619659,
@@ -372,8 +372,8 @@
         "exempelmening": "Till slut fick han <font color=\"#3498db\">tillstå</font> att han hade haft fel hela tiden.",
         "etymologi": "Fornsvenska tilstanda, efter lågtyska tostan — att stå för något."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'erkänna riktigheten av något; ofta med antydan om motvillighet' = kortets 'motvilligt gå med på att något är sant'. Synonymerna (erkänna, medge, vidgå) överlappar SO:s egna (bekänna, medge, vidgå). Etymologin (fornsvenska tilstanda, lågtyska tostan, till stå) stämmer ordagrant."
     },
     {
       "noteId": 1780080619663,
@@ -392,8 +392,8 @@
         "exempelmening": "Hon var <font color=\"#3498db\">driftig</font> och startade eget redan som 20-åring.",
         "etymologi": "Till drift i betydelsen 'framåtanda'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'som har förmåga att uppnå resultat', SO:s eget exempel gäller en kvinna som startat eget vilket stödjer kortets 'får saker gjorda utan att bli tillsagd'. Synonymerna (företagsam, initiativrik, handlingskraftig) överlappar SO:s företagsam/verksam."
     }
   ]
 }
