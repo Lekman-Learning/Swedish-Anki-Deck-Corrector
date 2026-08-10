@@ -168,6 +168,37 @@ def apply_card(note_id, huvudbetydelse, synonymer=None, synonym_groups=None,
         synonym_groups=synonym_groups,
         etymologi=etymologi,
     )
+    # ---- BILDSPÄRR (Adams krav 2026-08-10) ----
+    # Det HÄR är den enda oåterkalleliga felklassen i projektet. Mätt samma
+    # dag: 1 071 av deckets 2 841 bilder finns INTE i Svenska OLD, alltså
+    # 38 % helt utan backup. Antagandet att OLD är ett facit man alltid kan
+    # återställa ifrån är falskt -- Adam påpekade det, och mätningen gav
+    # honom rätt.
+    #
+    # Tre kort (oknytt, damast, köl) förlorade sina bilder samma förmiddag,
+    # för att en saknad nyckel tolkades som "radera". De gick att rädda bara
+    # för att kön råkade ligga kvar på disk. Ett kort utan bild ser dessutom
+    # exakt ut som ett kort som aldrig hade någon, så förlusten är osynlig i
+    # efterhand -- ingen upptäcker den, den bara finns.
+    #
+    # Regeln: ett kort som HAR en bild får aldrig skrivas utan den. Ska en
+    # bild verkligen bort skickas tillat=["ta_bort_bild"] -- ett uttryckligt
+    # beslut, inte en utelämnad parameter.
+    if not bild_html and "ta_bort_bild" not in (tillat or ()):
+        nuvarande = invoke("notesInfo", notes=[note_id])
+        gammal_bild = baksida.parse(
+            nuvarande[0]["fields"][config.FIELD_BAKSIDA]["value"]
+        )["bild_html"] if nuvarande else None
+        if gammal_bild:
+            raise ValueError(
+                f"{note_id} ({ord_!r}): SKRIVNINGEN STOPPAD — kortet har en "
+                f"bild, men den nya versionen saknar den. "
+                f"38 % av deckets bilder finns inte i Svenska OLD och går "
+                f"INTE att återskapa (mätt 2026-08-10). "
+                f"Skicka med bild_html=..., eller tillat=['ta_bort_bild'] om "
+                f"borttagningen är avsiktlig. Bilden: {gammal_bild[:80]}"
+            )
+
     invoke("updateNoteFields", note={"id": note_id, "fields": {config.FIELD_BAKSIDA: new_baksida}})
     # Kortet ÄR nu v2 -- utan denna tagg blir det osynligt för varje
     # `tag:kortformat::v2`-fråga i projektet (snabbkoll2.py,
