@@ -351,8 +351,19 @@ def sammanfatta(data):
                                    "explanation", "grundbetydelse"})[:6],
             "exempel": _plocka(källa, {"exempel", "example", "idiom", "syntex"})[:4],
             "jfr": _plocka(källa, {"jfr", "se", "hänvisning", "synonym"})[:6],
-            "märkning": _plocka(källa, {"stilmarkering", "bruklighet", "markering",
-                                        "stil", "anvandning"})[:4],
+            # SO:s stilmarkering ligger i `bruklighetskommentar` -- "något
+            # ålderdomligt", "vardagligt", "nedsättande". Nyckeln stod tidigare
+            # som `bruklighet`, och _plocka matchar EXAKT nyckelnamn, så fältet
+            # plockades aldrig ut. Det skrevs inte heller ut i --kompakt.
+            # Följden, upptäckt 2026-08-10 när blindgranskaren fällde *lappri*:
+            # registret på korten sattes utifrån ett sammandrag som saknade
+            # precis den uppgift som avgör registret, och patchtexterna kom att
+            # påstå "SO markerar ingenting" om ord där SO markerar något.
+            # Det är sannolikt en huvudorsak till att 49 % av decket står som
+            # `formell` -- ett värde ingen kunde kontrollera.
+            "märkning": _plocka(källa, {"bruklighetskommentar", "stilmarkering",
+                                        "bruklighet", "markering", "stil",
+                                        "anvandning", "stilkommentar"})[:4],
             # SO:s etymologi ligger i `historiskaUppgifter.etymologi`, inte i
             # ett fält som heter "historik" -- det första försöket sökte på fel
             # namn och gav tomt på varje ord, vilket såg ut som att SO saknade
@@ -495,6 +506,12 @@ def main():
                 print("  SO+  :", " | ".join(so["underbetydelser"]))
             if saol.get("def"):
                 print("  SAOL :", " | ".join(saol["def"]))
+            # BRUK skrivs ut DIREKT efter definitionerna och före allt annat,
+            # eftersom det är fältet som avgör registret. Låg det längre ner
+            # skulle det drunkna i synonymlistorna.
+            bruk = (so.get("märkning") or []) + (saol.get("märkning") or [])
+            if bruk:
+                print("  BRUK :", " | ".join(dict.fromkeys(bruk)))
             if so.get("exempel"):
                 print("  EX   :", " | ".join(so["exempel"][:3]))
             if so.get("jfr"):

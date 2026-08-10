@@ -1,0 +1,441 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080619920,
+      "ord": "bale",
+      "facit": "fågelbo<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fsvensknatur.ifokus.se%2Fdiscussion%2F386890%2Ffagelbo-vilken-fagel&amp;psig=AOvVaw3A_1ZknvYN_TVJjsHIG7Vw&amp;ust=1740785672719000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCKiZ15WC5YsDFQAAAAAdAAAAABAK\"><img alt=\"Fågelbo vilken fågel? | Svensk natur iFokus\" src=\"showuserfile.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skålformat fågelbo, särskilt själva fördjupningen i boet",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [
+          "fågelbo",
+          "rede",
+          "fågelrede"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Storkens bo är vanligen en stor <font color=\"#3498db\">bale</font> av kvistar.",
+        "etymologi": "till fornsvenska badhul, troligen 'grävd grop som liggplats'; besläktat med bädd"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ('(fågel)rede') och SAOL ('skålformat fågelbo') ger en enda betydelse, som kortet fångar. Exempelmeningen är hämtad rakt ur SO och är korrekt highlightad. Etymologin (fsv. badhul, 'grävd grop') stämmer och hjälper minnet. Tillägget 'särskilt själva fördjupningen i boet' är inte explicit i SO/SAOL men är en rimlig tolkning av 'skålformat', inget sakfel."
+    },
+    {
+      "noteId": 1780080619876,
+      "ord": "diffus",
+      "facit": "oklar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Otydligt avgränsad, utan skarpa konturer ; bildligt: svag och obestämd, t.ex. om minnen eller aningar",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "otydlig",
+          "vag",
+          "suddig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon hade bara <font color=\"#3498db\">diffusa</font> minnen från barndomen.",
+        "etymologi": "av latin diffu´sus, particip av diffun´dere 'sprida ut'; jfr diffundera"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser (bokstavligt 'otydligt avgränsad om synintryck' och bildligt 'svag, otydlig'), båda täckta och rätt separerade med ';'. Exempelmeningen matchar SO:s eget exempel ('diffusa minnen från barndomen'). Etymologin (lat. diffundere 'sprida ut') är korrekt och relevant."
+    },
+    {
+      "noteId": 1780080619914,
+      "ord": "jamare",
+      "facit": "sup",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sup, en liten mängd starksprit",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [
+          "sup",
+          "hutt",
+          "nubbe"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En liten <font color=\"#3498db\">jamare</font> till sillen skulle sitta fint.",
+        "etymologi": "skämtsam ombildning av jamaikarom"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en betydelse ('sup', vardagligt/skämtsamt), matchar kortet exakt. Exempelmeningen är hämtad rakt ur SO. Etymologin (skämtsam ombildning av jamaikarom) stämmer med SO."
+    },
+    {
+      "noteId": 1780080619883,
+      "ord": "korrupt",
+      "facit": "moraliskt fördärvad;&nbsp; &nbsp;mutad",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som låter sig mutas eller missbrukar sin ställning ; om text: förvanskad, vanställd genom bristfällig avskrift",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "mutbar",
+          "korrumperad",
+          "förvanskad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Många länder styrs av <font color=\"#3498db\">korrupta</font> regeringar.",
+        "etymologi": "till korrumpera, av latin corrum´pere 'fördärva'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal antydde 4 betydelser, men SO ger bara 2 (mutbar/korrumperad; om text: vanställd) och SAOL slår ihop dem till en rad - facit-texten (';' mellan 'moraliskt fördärvad' och 'mutad') överdrev alltså inte till fyra separata betydelser vid närmare kontroll. Kortets två betydelser täcker båda SO-sinnena korrekt och är rätt separerade. Exempel och etymologi stämmer med SO."
+    },
+    {
+      "noteId": 1780080619886,
+      "ord": "likvid",
+      "facit": "som har betalningsmedel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om tillgångar: omedelbart tillgängliga för utbetalning ; som substantiv: betalning",
+        "register": "fackspråklig, neutral, ekonomi",
+        "synonymer": [
+          "betalningsmedel",
+          "kontanter",
+          "köpeskilling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bolagets <font color=\"#3498db\">likvida</font> medel räckte inte till löneutbetalningarna.",
+        "etymologi": "av latin liq´uidus 'flytande; klar'; jfr likvidera"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger exakt två betydelser (adjektiv: omedelbart tillgänglig för utbetalning; substantiv: betalning), båda korrekt återgivna och separerade. Exempelmeningen ('bolagets likvida medel...') är sakligt korrekt och highlightad. Etymologin (lat. liquidus) stämmer."
+    },
+    {
+      "noteId": 1780080619895,
+      "ord": "urholka",
+      "facit": "försvaga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Göra hål eller fördjupning i något ; bildligt: gradvis avlägsna det värdefulla ur något så att bara formen återstår",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "gröpa ur",
+          "holka ur",
+          "undergräva"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Lagen om anställningsskydd höll på att <font color=\"#3498db\">urholkas</font>.",
+        "etymologi": "till hål; jfr svensk dialekt holka (ur)"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser (bokstavligt göra hål/fördjupning; bildligt avlägsna det värdefulla), båda täckta och rätt separerade. Exempelmeningen matchar SO:s eget exempel om LAS. Synonymerna (gröpa ur/holka ur för bokstavlig, undergräva för bildlig) är korrekta och icke-cirkulära."
+    },
+    {
+      "noteId": 1780080619857,
+      "ord": "belysande",
+      "facit": "klarläggande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som gör något lättare att förstå ; äv. avslöjande, ofta ironiskt om något som röjer en brist",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "klargörande",
+          "illustrativ",
+          "avslöjande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det är <font color=\"#3498db\">belysande</font> att statsministern inte bemöter kritiken i sitt inlägg.",
+        "etymologi": "efter tyska beleuchten med samma betydelse"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger huvudbetydelsen plus en ofta ironisk nyans ('avslöjande'), båda fångade i kortet. Exempelmeningen om statsministern är hämtad rakt ur SO och illustrerar just den ironiska nyansen korrekt. Synonymerna mappar rätt mot respektive nyans."
+    },
+    {
+      "noteId": 1780080619930,
+      "ord": "boett",
+      "facit": "fodral<br><a href=\"https://www.google.com/imgres?q=boett&amp;imgurl=https%3A%2F%2Fgoteborgspantbank.se%2Fwp-content%2Fuploads%2F2023%2F05%2FA01004922.jpg&amp;imgrefurl=https%3A%2F%2Fgoteborgspantbank.se%2Fwebbutik%2Fsilver%2Faldre-fickur-dubbel-boett-silver-mekanisk-47mm-urverket-defekt-2-visare-saknas-boetten-ngt-bucklig-nyckel-saknas-boetten-stamplad-j-wyss-total-vikt-693g%2F&amp;docid=nUsifNF8BIdrzM&amp;tbnid=2RCKmU6jzFnQcM&amp;vet=12ahUKEwiElKfN9PuMAxVsJRAIHRHeO_IQM3oECBgQAA..i&amp;w=1994&amp;h=1333&amp;hcb=2&amp;ved=2ahUKEwiElKfN9PuMAxVsJRAIHRHeO_IQM3oECBgQAA\"><div><div><div><img src=\"paste-54b4d0216381133eef06d596b6aafc98b12379cc.webp\" alt=\"ÄLDRE FICKUR DUBBEL-BOETT SILVER ...\"></div></div></div></a><img src=\"paste-bb9699f6c8cbad394ecb82dc6ee74fdac1ca8858.webp\"><a href=\"https://www.google.com/imgres?q=boett&amp;imgurl=https%3A%2F%2Fgoteborgspantbank.se%2Fwp-content%2Fuploads%2F2023%2F05%2FA01004922.jpg&amp;imgrefurl=https%3A%2F%2Fgoteborgspantbank.se%2Fwebbutik%2Fsilver%2Faldre-fickur-dubbel-boett-silver-mekanisk-47mm-urverket-defekt-2-visare-saknas-boetten-ngt-bucklig-nyckel-saknas-boetten-stamplad-j-wyss-total-vikt-693g%2F&amp;docid=nUsifNF8BIdrzM&amp;tbnid=2RCKmU6jzFnQcM&amp;vet=12ahUKEwiElKfN9PuMAxVsJRAIHRHeO_IQM3oECBgQAA..i&amp;w=1994&amp;h=1333&amp;hcb=2&amp;ved=2ahUKEwiElKfN9PuMAxVsJRAIHRHeO_IQM3oECBgQAA\"><br></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fodral eller hölje kring urverket i ett ur — enligt SO särskilt i fickur",
+        "register": "fackspråklig, neutral, teknik",
+        "synonymer": [
+          "urfodral",
+          "klockhölje"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Urmakaren öppnade <font color=\"#3498db\">boetten</font> för att komma åt verket.",
+        "etymologi": "av franska boîte 'dosa'; av medeltidslatin bux´ida 'låda av buxbom'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en betydelse, uttryckligen knuten till fickur ('fodral till (verket i) fickur'). Kortet redovisar ärligt att generaliseringen till 'ett ur' är en utvidgning medan SO specifikt säger fickur - transparent källhantering. Exempel och etymologi (fra. boîte, medeltidslat. buxida) stämmer."
+    },
+    {
+      "noteId": 1780080619816,
+      "ord": "depression",
+      "facit": "förtvivlan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svår och långvarig nedstämdhet ; djup ekonomisk kris med produktionsminskning och stor arbetslöshet ; landområde som ligger under havsytans nivå",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "nedstämdhet",
+          "svårmod",
+          "lågkonjunktur",
+          "sänka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Döda havets <font color=\"#3498db\">depression</font> når 392 meter under havsytan.",
+        "etymologi": "av franska dépression; till latin depri´mere 'trycka ned'; jfr deprimerad"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "De tre betydelserna (nedstämdhet, lågkonjunktur, sänka under havsytan) stämmer perfekt mot SAOL:s tre betydelser och är korrekt separerade och synonymparade. MEN exempelmeningen är sakligt fel: 'Döda havets depression når 392 meter under havsytan' - aktuell nivå ligger på ca 420-430 meter under havsytan (och sjunker fortfarande, ca 1 m/år), 392 m är en föråldrad/felaktig siffra. Byt till en korrekt och aktuell siffra (t.ex. ca 430 meter)."
+    },
+    {
+      "noteId": 1780080619893,
+      "ord": "eau-de-vie",
+      "facit": "konjak<br><a href=\"https://en.wikipedia.org/wiki/File:Eaudeviebottles.jpg\"><img src=\"300px-eaudeviebottles.webp\"></a><a href=\"https://en.wikipedia.org/wiki/File:Nosing_glass_with_Eau_de_Vie.jpg\"><img src=\"220px-nosing_glass_with_eau_de_vie.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Destillat på druvor eller frukt ; i Sverige särskilt om ett druvdestillat med spritstillsats, s.k. folkkonjak",
+        "register": "neutral, neutral, matlagning",
+        "synonymer": [
+          "fruktbrännvin",
+          "akvavit"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De avslutade middagen med en liten <font color=\"#3498db\">eau-de-vie</font>.",
+        "etymologi": "av franska eau-de-vie, eg. 'livsvatten'; jfr akvavit"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO listar, förutom de två betydelser kortet har, även en tredje: 'flaska/portion med sådan dryck' (räknebart bruk, t.ex. 'en eau-de-vie'). Kortets exempelmening 'De avslutade middagen med en liten eau-de-vie' använder just den räknebara betydelsen, men den nämns aldrig i huvudbetydelsen - exemplet illustrerar alltså en betydelse som saknas på kortet. Lägg till 'äv. en portion/ett glas av drycken' som tredje betydelse."
+    },
+    {
+      "noteId": 1780080619830,
+      "ord": "forensisk",
+      "facit": "rättsvetenskaplig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som hör till rättsväsendet ; äv. mer specifikt: kriminalteknisk",
+        "register": "fackspråklig, neutral, juridik",
+        "synonymer": [
+          "rättslig",
+          "kriminalteknisk",
+          "rättsmedicinsk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon undervisar i <font color=\"#3498db\">forensisk</font> psykologi.",
+        "etymologi": "av latin fore´nsis 'från torget; offentlig', till for´um 'torg'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en kärnbetydelse ('som har att göra med rättsväsendet') med kriminalteknisk som specialiserad användning, vilket SAOL bekräftar ('rättslig...; kriminalteknisk'). Kortets formulering fångar detta väl. Exemplet ('forensisk psykologi') och etymologin (lat. forensis, till forum) stämmer med SO."
+    },
+    {
+      "noteId": 1780080619814,
+      "ord": "gratifikation",
+      "facit": "belöning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Penninggåva eller belöning utöver den vanliga lönen",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "penninggåva",
+          "belöning",
+          "bonus"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vissa anställda fick en <font color=\"#3498db\">gratifikation</font> till jul.",
+        "etymologi": "av latin gratifica´tio 'gunstbevis', till gra´tia 'gunst'; jfr grace, gratie"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en betydelse ('(penning)gåva ... som belöning för gott arbete'), matchar kortet exakt. Exempel och etymologi (lat. gratificatio, till gratia) stämmer."
+    },
+    {
+      "noteId": 1780080619911,
+      "ord": "hundväder",
+      "facit": "riktigt oväder",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket svårt oväder",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "ruskväder",
+          "busväder",
+          "oväder"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Storm och snöblandat regn — vilket <font color=\"#3498db\">hundväder</font>!",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en betydelse ('svårt oväder', vard.), matchar kortet. Exempelmeningen är hämtad rakt ur SO. Register 'vardaglig' bekräftas av SAOL:s 'vard.'-tagg."
+    },
+    {
+      "noteId": 1780080619842,
+      "ord": "in medias res",
+      "facit": "omedelbart in i ämnet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Berättargrepp där framställningen börjar mitt i handlingen, utan inledande bakgrund",
+        "register": "formell, neutral, litteraturvetenskap",
+        "synonymer": [
+          "mitt i handlingen"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Gösta Berlings saga inleds <font color=\"#3498db\">in medias res</font>: „Äntligen stod prästen i predikstolen.”",
+        "etymologi": "av latin in´ med´ias re´s, eg. 'in i sakernas mitt'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en betydelse som matchar kortet väl. Exempelmeningen om Gösta Berlings saga är hämtad nästan ordagrant ur SO:s eget exempel och är sakligt korrekt. Etymologin (lat. 'in i sakernas mitt') är korrekt."
+    },
+    {
+      "noteId": 1780080619880,
+      "ord": "jiddisch",
+      "facit": "judetyska",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Germanskt språk med starka inslag av hebreiska och slaviska språk, talat av askenasiska judar — ett av Sveriges fem nationella minoritetsspråk",
+        "register": "neutral, neutral, lingvistik",
+        "synonymer": [
+          "judetyska"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Jiddisch</font> är ett av Sveriges nationella minoritetsspråk.",
+        "etymologi": "av tyska jiddisch, eg. 'judetyska'; jfr engelska yiddish"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en betydelse som kortet fångar och till och med preciserar korrekt (askenasiska judar; ett av Sveriges fem nationella minoritetsspråk - faktamässigt riktigt). Synonym och etymologi matchar facit och SO."
+    },
+    {
+      "noteId": 1780080619823,
+      "ord": "kangas",
+      "facit": "höftskynke",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Typ av höftskynke — färgstarkt bomullstyg som bärs virat kring kroppen, särskilt i Östafrika",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "höftskynke",
+          "sarong"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kvinnorna på marknaden bar mönstrade <font color=\"#3498db\">kangas</font>.",
+        "etymologi": "av swahili khanga med samma betydelse"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en betydelse ('typ av höftskynke ... ursprungligen från Afrika'). Kortets precisering till Östafrika stämmer med ordets swahili-ursprung (etymologin bekräftar khanga) och är korrekt. Exempel och etymologi stämmer."
+    },
+    {
+      "noteId": 1780080619900,
+      "ord": "lappri",
+      "facit": "obetydliga småsaker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Obetydlig sak, struntsak",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "struntsak",
+          "bagatell",
+          "petitess"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi kan inte slösa tid på sådant <font color=\"#3498db\">lappri</font>!",
+        "etymologi": "av lågtyska lapperi 'lagning; fuskverk'; till lapp"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen ('obetydlig sak/struntsak') stämmer mot SO/SAOL. MEN SO taggar ordet uttryckligen som 'något ålderdomligt', vilket kortets register ('neutral, lätt negativ') inte alls speglar - en inlärare får intrycket att ordet är en helt vardaglig/aktuell term, vilket ger fel bild av hur och när det kan användas. Registret bör visa att ordet är ålderdomligt/litterärt."
+    },
+    {
+      "noteId": 1780080619884,
+      "ord": "markant",
+      "facit": "starkt framträdande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Starkt framträdande, påfallande ; äv. avsevärd, betydande",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "påfallande",
+          "framträdande",
+          "avsevärd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det blev en <font color=\"#3498db\">markant</font> nedgång i börsaktiviteten.",
+        "etymologi": "av franska marquant, till marquer 'märka'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger huvudbetydelsen plus en relaterad nyans ('avsevärd, betydande'), båda fångade och korrekt separerade. Exempelmeningen om börsnedgången är hämtad rakt ur SO. Etymologin (fra. marquant) stämmer."
+    },
+    {
+      "noteId": 1780080619924,
+      "ord": "sekret",
+      "facit": "avsöndringsvätska",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vätska som utsöndras från en körtel i en levande organism ; som adjektiv, ålderdomligt: hemlig",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "avsöndringsvätska",
+          "utsöndring",
+          "hemlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Saliv, magsaft och andra <font color=\"#3498db\">sekret</font>.",
+        "etymologi": "substantivet av nylatin secre´tum; adjektivet av latin secre´tus 'avskild; hemlig' — jfr diskret"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL bekräftar två homografer (substantiv: avsöndringsvätska; adjektiv, ålderdomligt: hemlig), båda korrekt återgivna med rätt registerkommentar ('ålderdomligt' för adjektivet, till skillnad från lappri-kortet som missar denna typ av markering). Exempel och etymologi stämmer."
+    },
+    {
+      "noteId": 1780080619938,
+      "ord": "sint",
+      "facit": "vred<br><br><i>en&nbsp;<u>sint</u>&nbsp;chef som reste sig ur stolen och skällde ut sina medarbetare.</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Arg, ilsken",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "arg",
+          "ilsken",
+          "förargad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon blev <font color=\"#3498db\">sint</font> över sakernas tillstånd.",
+        "etymologi": "fornsvenska -sinter; jfr svensk dialekt sint(er) 'hågad; förtretad'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet ger bara betydelsen 'arg, ilsken'. SAOL listar dock en andra huvudbetydelse för samma uppslagsord: 'sinnad' (använt i sammansättningar som hårdsint, lättsint, godsint). Kortets egen etymologi ('fsv. -sinter; jfr dialekt sint(er) 'hågad; förtretad'') pekar själv mot båda betydelserna ('hågad' = sinnad/disponerad, 'förtretad' = ilsken), men bara den senare tas med i huvudbetydelsen. En hel betydelse ('sinnad', t.ex. i sammansättningar) saknas - detta är precis vad facit_signal flaggade."
+    },
+    {
+      "noteId": 1780080619822,
+      "ord": "stålsätta sig",
+      "facit": "bli starkare, förhärda sig, stå emot<br><br><i>han försökte stål­sätta sig mot alla frestelser</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mobilisera sin själsliga motståndskraft inför något svårt",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "härda sig",
+          "göra sig stark",
+          "stå emot"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon måste <font color=\"#3498db\">stålsätta sig</font> för att inte gråta.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en betydelse ('mobilisera själslig motståndskraft'), matchar kortet nästan ordagrant. Exempelmeningen ('Hon måste stålsätta sig för att inte gråta') är hämtad rakt ur SO. Synonymerna är korrekta och icke-cirkulära."
+    },
+    {
+      "noteId": 1780080619912,
+      "ord": "vitmena",
+      "facit": "kalka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stryka vitt med kalk ; bildligt: göra eller bli mycket blek",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "vitkalka",
+          "kalka",
+          "vitlimma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon var <font color=\"#3498db\">vitmenad</font> i ansiktet av skräck.",
+        "etymologi": "fornsvenska hvitminadher; till vit och lågtyska minie 'mönja'; jfr miniatyr, mönja"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger två betydelser (bokstavligt vitkalka; bildligt bli mycket blek), båda fångade och rätt separerade. Exempelmeningen ('vitmenad i ansiktet av skräck') är hämtad nästan ordagrant ur SO och illustrerar rätt (bildlig) betydelse. Etymologin är rimlig och hjälper förståelsen."
+    }
+  ]
+}

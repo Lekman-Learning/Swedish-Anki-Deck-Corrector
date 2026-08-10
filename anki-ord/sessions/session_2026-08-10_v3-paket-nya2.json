@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080619806,
@@ -20,8 +20,8 @@
         "exempelmening": "Åtta stridsvagnar <font color=\"#3498db\">besatte</font> regeringsbyggnaden.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL bekräftar fyra betydelser (militärt ockupera, tillsätta tjänst, hålla plats upptagen, förse med tillskott/garnera) och kortet täcker samtliga trots att facit_signal flaggade risk för saknad betydelse. Synonymerna ockupera/tillsätta/garnera hör till rätt delbetydelser, och exempelmeningen illustrerar militärsensen korrekt och är highlightad."
     },
     {
       "noteId": 1780080619792,
@@ -40,8 +40,8 @@
         "exempelmening": "En valkampanj med socialistiska <font color=\"#3498db\">förtecken</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser (notskriftstecken samt bildligt 'prägel/särdrag'), båda finns med och är rätt separerade med ';'. Exempelmeningen matchar SO:s eget exempel och illustrerar den bildliga betydelsen korrekt highlightad."
     },
     {
       "noteId": 1780080619801,
@@ -60,8 +60,8 @@
         "exempelmening": "Ryktet hade sitt <font color=\"#3498db\">upphov</font> i en missuppfattning.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse ('det som förorsakar/utgör första steget') samt personanvändningen ('någons dagars upphov' = förälder) finns båda med. 'Upphovsrätt' m.fl. är sammansättningar, inte egna betydelser av grundordet, så ingen hel betydelse saknas. Synonym och exempel stämmer."
     },
     {
       "noteId": 1780080619790,
@@ -80,8 +80,8 @@
         "exempelmening": "Hennes kinder <font color=\"#3498db\">blossade</font> av upphetsning.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två huvudbetydelser (brinna med häftig låga, inkl. rodna starkt bildligt; samt dra in tobaksrök) finns med och är rimligt separerade. Exempelmeningen illustrerar den bildliga 'rodna'-betydelsen korrekt och är highlightad."
     },
     {
       "noteId": 1780080619811,
@@ -100,8 +100,8 @@
         "exempelmening": "Bolagets bokföring har skett med stor <font color=\"#3498db\">eftersläpning</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO anger en enda betydelse ('det att något är senare än det borde vara'), som kortet återger korrekt, med samma exempel som SO."
     },
     {
       "noteId": 1780080619778,
@@ -119,8 +119,8 @@
         "exempelmening": "<font color=\"#3498db\">Härken</font> spändes för ackjan.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO och SAOL ger endast betydelsen 'kastrerad rentjur' (zool.), vilket kortets huvudbetydelse korrekt anger. Men synonymen 'rentjur' är inte utbytbar mot 'härk' -- en rentjur är vilken hanren som helst, inte nödvändigtvis kastrerad, så synonymen tappar bort just den egenskap som definierar ordet och motsäger kortets egen definition. Facit nämner bara 'renoxe' (korrekt, eftersom 'oxe' betyder kastrerad). 'rentjur' bör tas bort ur synonymlistan eller ersättas med något som bevarar kastrerings-betydelsen."
     },
     {
       "noteId": 1780080619780,
@@ -140,8 +140,8 @@
         "exempelmening": "De franska <font color=\"#3498db\">kolonierna</font> i Afrika.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s fyra betydelser (politisk besittning, landsmannagrupp, kolonilott, barnkoloni/sommarläger) finns alla med, rätt separerade med ';' och med korrekt exempel för förstabetydelsen."
     },
     {
       "noteId": 1780080619791,
@@ -159,8 +159,8 @@
         "exempelmening": "Påsättningen av kapsyler skedde <font color=\"#3498db\">manuellt</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse ('utförs med händerna, ej maskinellt'). Exempel och synonymer stämmer väl överens."
     },
     {
       "noteId": 1780080619809,
@@ -179,8 +179,8 @@
         "exempelmening": "Många <font color=\"#3498db\">puritaner</font> utvandrade till Amerika.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse och den historiska underbetydelsen (sträng kalvinist i 1600-talets England) finns båda med. Register (lätt negativ) matchar SO:s exempel ('puritanens kärva sanningskrav')."
     },
     {
       "noteId": 1780080619788,
@@ -199,8 +199,8 @@
         "exempelmening": "Hans närmanden fyllde henne med <font color=\"#3498db\">avsmak</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast betydelsen 'stark motvilja', som kortet återger exakt, med negativ valör som stämmer."
     },
     {
       "noteId": 1780080619799,
@@ -217,8 +217,8 @@
         "exempelmening": "Sulan var uppbyggd i <font color=\"#3498db\">hålfoten</font> för att ge extra stabilitet.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse plus underbetydelsen om motsvarande del av sko/skoinlägg. Synonymen 'fotvalv' bekräftas av både SO och facit."
     },
     {
       "noteId": 1780080619804,
@@ -237,8 +237,8 @@
         "exempelmening": "Hon <font color=\"#3498db\">högaktade</font> och respekterade honom.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse ('hysa stor aktning för') med i det närmaste identiskt exempel."
     },
     {
       "noteId": 1780080619808,
@@ -255,8 +255,8 @@
         "exempelmening": "Han <font color=\"#3498db\">kroaserade</font> två rosensorter för att få en ny färg.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Ordet saknas helt i både SO och SAOL (uppslagning misslyckad där). Wiktionary/SAOB bekräftar betydelsen 'korsa' (om raser/sorter), vilket stämmer med kortets definition, men klassar ordet som ÅLDERDOMLIGT -- inte 'fackspråklig' som kortet anger. 'Fackspråklig' signalerar aktiv, modern facktermanvändning och ger fel bild av ordets status; registret borde vara ålderdomligt/föråldrat."
     },
     {
       "noteId": 1780080619802,
@@ -275,8 +275,8 @@
         "exempelmening": "Trots stormen kunde fartyget <font color=\"#3498db\">lotsas</font> i hamn.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelser (vägleda fartyg genom farled, bildligt vägleda mot mål och genom besvärliga/abstrakta förhållanden) finns med. Exempelmeningen matchar SO:s eget exempel ordagrant."
     },
     {
       "noteId": 1780080619812,
@@ -294,8 +294,8 @@
         "exempelmening": "Den svenska kulturdebatten har ibland varit rätt <font color=\"#3498db\">provinsiell</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (tillhör landsorten; bildligt inskränkt/ovillig mot yttre intryck) finns med, rätt separerade, och exempelmeningen matchar SO:s exempel om kulturdebatten."
     },
     {
       "noteId": 1780080619783,
@@ -313,8 +313,8 @@
         "exempelmening": "Hela staden samlades för att se <font color=\"#3498db\">regattan</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s betydelse (kappseglingsserie över flera dagar, även för kanotsport). Exempel och synonymer (kappsegling, båttävling) stämmer."
     },
     {
       "noteId": 1780080619795,
@@ -332,8 +332,8 @@
         "exempelmening": "En <font color=\"#3498db\">snuthäck</font> svängde runt hörnet med blåljusen på.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO anger att BÅDA betydelserna (polisbil och polisstation) är 'vardagligt; nedsättande'. Kortets register anger 'slang, neutral' -- valören är fel och borde vara negativ/nedsättande genomgående, inte neutral."
     },
     {
       "noteId": 1780080619803,
@@ -351,8 +351,8 @@
         "exempelmening": "<font color=\"#3498db\">Termometern</font> visade 30 grader i skuggan.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse exakt, liksom exempel ('30 grader i skuggan') och synonym."
     },
     {
       "noteId": 1780080619813,
@@ -371,8 +371,8 @@
         "exempelmening": "Sömnen hade <font color=\"#3498db\">vederkvickt</font> henne.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL/SO bekräftar 'vederkvickt' som perfekt particip/supinum av 'vederkvicka' ('ge nya krafter åt'), vilket kortets 'som fått nya krafter, upplivad och stärkt' korrekt återger. Exempelmeningen matchar SO:s eget exempel ('sömnen vederkvickte henne')."
     },
     {
       "noteId": 1780080619793,
@@ -391,8 +391,8 @@
         "exempelmening": "All <font color=\"#3498db\">ögonfägnaden</font> i parken på försommaren.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse ('något som är en glädje att se') och exempel nästan ordagrant; synonymen 'ögonfröjd' bekräftas av SO."
     }
   ]
 }
