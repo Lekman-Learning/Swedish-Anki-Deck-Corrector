@@ -42,6 +42,15 @@ import sys
 import apply_flerbetydelse as af
 import baksida
 import config
+
+# Windows-konsolen kor cp1252 och klarar inte tecken som granskarnas
+# anmarkningar innehaller ("≈", tankestreck, typografiska citattecken).
+# verdikt() kraschade 2026-08-10 pa exakt det -- EFTER att ha taggat korten,
+# alltsa mitt i utskriften av vad som underkants. Arbetet var gjort men
+# resultatet gick inte att lasa, vilket ar den varsta varianten: kommandot ser
+# misslyckat ut fast det lyckades, och frestar till en omkorning.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import sokkoll_verifiering as sv
 from ankiconnect import invoke
 
@@ -302,6 +311,46 @@ def verdikt(paketsokvag, granskare=None):
               "  EGET arbete bekräftar sig själv (34 kort med saknad betydelse hittades\n"
               "  2026-08-07 i material som passerat både snabbkoll OCH sökverifiering).\n"
               "  Kör steget i en ny session eller med en separat agent.")
+        return
+
+    # --- Färskhetsspärren ---------------------------------------------
+    # `paket` läser live-innehållet ur Anki, så paketet ÄR korrekt när det
+    # skrivs. Men det säger ingenting om hur länge det förblir korrekt: ett
+    # paket från i går granskas i dag, och emellan dess kan en batch ha skrivit
+    # om samma kort. Då dömer granskaren en version som inte längre finns.
+    #
+    # Mätt 2026-08-10 på session_2026-08-09_v3-so-batch9_v3-paket.json:
+    # 3 av 10 poster avvek från live. Två underkändes på synonymer ("gåvor",
+    # "rikedomar" -- överkopierade från håvor-kortet) som live-kortet inte
+    # längre bar. Farligast var den tredje: `hurtbulle` GODKÄNDES på en synonym
+    # som inte fanns i Anki, alltså hade oberoende_verifierad satts på ett kort
+    # ingen faktiskt granskat.
+    #
+    # Samma princip som slapp redan tillämpar ett steg senare -- kontrollera
+    # mot live, inte mot vad som en gång skickades in. Den saknades bara här.
+    ndata = {n["noteId"]: n for n in
+             invoke("notesInfo", notes=[p["noteId"] for p in poster])}
+    inaktuella = []
+    for p in poster:
+        n = ndata.get(p["noteId"])
+        if n is None:
+            inaktuella.append((p["ord"], "kortet finns inte kvar i Anki"))
+            continue
+        live = baksida.parse(n["fields"][config.FIELD_BAKSIDA]["value"])
+        for falt in ("huvudbetydelse", "register", "synonymer",
+                     "exempelmening", "etymologi"):
+            if p["kort"].get(falt) != live.get(falt):
+                inaktuella.append(
+                    (p["ord"], f"{falt} har ändrats sedan paketet byggdes"))
+                break
+    if inaktuella:
+        print(f"AVBRYTER: {len(inaktuella)} kort har ändrats sedan paketet "
+              "byggdes -- granskaren dömde en version som inte längre finns.")
+        for ord_, skal in inaktuella[:12]:
+            print(f"  {ord_}: {skal}")
+        print("\n  Bygg om paketet ('paket' på samma sessionsfil) och låt en\n"
+              "  fristående granskare döma det på nytt. Ett verdikt är knutet\n"
+              "  till det innehåll som granskades, inte till kortets id.")
         return
 
     saknar = [p["ord"] for p in poster if p.get("verdikt") not in ("godkand", "underkand")]

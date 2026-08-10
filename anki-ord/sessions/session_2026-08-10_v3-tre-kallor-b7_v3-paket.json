@@ -1,0 +1,410 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080619718,
+      "ord": "granulera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Göra om ett ämne till små korn ; om sår: bilda ny läkande vävnad",
+        "register": "formell",
+        "synonymer": [
+          "finfördela",
+          "korna",
+          "söndersmula"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sockret <font color=\"#3498db\">granulerades</font> innan förpackning.",
+        "etymologi": "Latin granulum 'litet korn' — samma korn som i granulat."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619719,
+      "ord": "adoratör",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svärmisk beundrare, oftast av en kvinna",
+        "register": "litterär",
+        "synonymer": [
+          "beundrare",
+          "tillbedjare",
+          "dyrkare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Skådespelerskan omgavs alltid av sina <font color=\"#3498db\">adoratörer</font>.",
+        "etymologi": "Latin adorare 'tillbe' — samma ord som engelskans adore."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619720,
+      "ord": "borsjtj",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rödbetssoppa från Östeuropa, ofta serverad med gräddfil",
+        "register": "formell",
+        "synonymer": [
+          "rödbetssoppa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Till middag serverades <font color=\"#3498db\">borsjtj</font> med en klick gräddfil.",
+        "etymologi": "Ursprungligen 'skärpa', efter björnlokans taggiga blad som soppan förr kokades på. Släkt med borst."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619722,
+      "ord": "kalibrera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ställa in ett instrument mot en känd referens så det mäter rätt",
+        "register": "formell",
+        "synonymer": [
+          "justera",
+          "finjustera",
+          "ställa in",
+          "nollställa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Teknikern <font color=\"#3498db\">kalibrerade</font> vågen innan mätningen.",
+        "etymologi": "Till kaliber — ordet kom från uppmätning av eldvapens kaliber."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619723,
+      "ord": "dekantera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Försiktigt hälla av en vätska så bottensatsen blir kvar — oftast om vin",
+        "register": "formell",
+        "synonymer": [
+          "hälla av",
+          "sila från bottensatsen"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sommelieren <font color=\"#3498db\">dekanterade</font> vinet en timme före servering.",
+        "etymologi": "Latin canthus, 'pip på en kanna' — att hälla av över pipen."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619724,
+      "ord": "stilisera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förenkla så att det typiska framhävs ; om personer och text ofta klandrande: göra schablonmässig",
+        "register": "formell",
+        "synonymer": [
+          "förenkla",
+          "schematisera",
+          "renodla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Logotypen visade en kraftigt <font color=\"#3498db\">stiliserad</font> örn.",
+        "etymologi": "Till stil, via italienskans stilizzare."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619725,
+      "ord": "nimbus",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Krans av ljus kring ett huvud, en gloria ; bildligt: det höga anseende som omger någon",
+        "register": "litterär",
+        "synonymer": [
+          "gloria",
+          "strålglans",
+          "anseende"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Segern gav honom en <font color=\"#3498db\">nimbus</font> av osårbarhet.",
+        "etymologi": "Latin nimbus 'moln' — molnet kring guden blev glorian kring helgonet. Samma ord som i nimbostratus."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619726,
+      "ord": "affekt",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stark sinnesrörelse — som i uttrycket 'handla i affekt'",
+        "register": "formell",
+        "synonymer": [
+          "sinnesrörelse",
+          "känsloutbrott"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han slog till i ren <font color=\"#3498db\">affekt</font> och ångrade det direkt efteråt.",
+        "etymologi": "Latin affectus 'sinnestillstånd', till afficere 'påverka'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619727,
+      "ord": "goodwill",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gott anseende, välvilja ; ett företags immateriella värde utöver dess bokförda tillgångar",
+        "register": "formell",
+        "synonymer": [
+          "gott anseende",
+          "välvilja",
+          "immateriellt värde"
+        ],
+        "synonym_groups": [
+          [
+            "gott anseende",
+            "välvilja"
+          ],
+          [
+            "immateriellt värde"
+          ]
+        ],
+        "exempelmening": "Företaget hade byggt upp stor <font color=\"#3498db\">goodwill</font> hos kunderna.",
+        "etymologi": "Engelska goodwill, egentligen 'välvilja'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619730,
+      "ord": "bödel",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som yrkesmässigt verkställer dödsdomar ; bildligt om en makthavare som grovt kränker mänskliga rättigheter",
+        "register": "formell",
+        "synonymer": [
+          "skarprättare",
+          "mästerman"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Bödeln</font> höjde yxan över den dömde.",
+        "etymologi": "Lågtyska bödel, egentligen 'tjänare, bud' — släkt med bjuda."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619732,
+      "ord": "katakomb",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Underjordisk begravningsplats med gångar och gravkammare i väggarna ; i sportspråk: gångarna under en arena",
+        "register": "formell",
+        "synonymer": [
+          "gravgång",
+          "gravvalv",
+          "krypta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Turisterna vandrade genom Roms mörka <font color=\"#3498db\">katakomber</font>.",
+        "etymologi": "Troligen grekiska kata 'ned' + latin tumba 'grav'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619733,
+      "ord": "talträngd",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ivrig att få tala — sägs oftast med en gnutta ironi",
+        "register": "formell, ironisk",
+        "synonymer": [
+          "pratsam",
+          "talför",
+          "språksam",
+          "mångordig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Farbrorn på festen var väldigt <font color=\"#3498db\">talträngd</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619736,
+      "ord": "hutlös",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så orimlig att den är oförsvarlig, särskilt om priser",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "oförskämd",
+          "fräck",
+          "skamlös"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Priset på reparationen var rent <font color=\"#3498db\">hutlöst</font>.",
+        "etymologi": "Den som inte vet hut — hut är gammalt för anständighet, som i 'lära någon hut'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619739,
+      "ord": "dupera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vilseleda någon med en falsk fasad",
+        "register": "formell, negativ",
+        "synonymer": [
+          "lura",
+          "föra bakom ljuset",
+          "blända"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bedragaren <font color=\"#3498db\">duperade</font> hela styrelsen med falska papper.",
+        "etymologi": "Franska dupe 'narr' — att dupera är att göra någon till narr."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619742,
+      "ord": "changera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Märkbart förändras till det sämre ; blekna och tappa färg",
+        "register": "formell",
+        "synonymer": [
+          "förfalla",
+          "blekna",
+          "deklinera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Tyget <font color=\"#3498db\">changerade</font> mellan grönt och blått i ljuset.",
+        "etymologi": "Franska changer 'ändra', av latin cambire 'växla' — samma ord som engelskans change."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619745,
+      "ord": "katedral",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Biskopens huvudkyrka i ett stift",
+        "register": "formell",
+        "synonymer": [
+          "domkyrka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Turisterna beundrade den gotiska <font color=\"#3498db\">katedralen</font>.",
+        "etymologi": "Latin cathedra 'stol' — samma ord som kateder. Katedralen är kyrkan där biskopens stol står."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619747,
+      "ord": "vernissage",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Festlig öppning av en konstutställning",
+        "register": "formell",
+        "synonymer": [
+          "utställningsöppnande",
+          "konstpremiär",
+          "premiärvisning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Konstnären bjöd på champagne vid <font color=\"#3498db\">vernissagen</font>.",
+        "etymologi": "Franska vernir 'fernissa' — konstnärerna fernissade sina tavlor dagen före öppningen."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619748,
+      "ord": "affektiv",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som rör känslolivet ; i medicin: som rör stämningsläget, som i 'affektiv störning'",
+        "register": "formell",
+        "synonymer": [
+          "känslomässig",
+          "känsloladdad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick diagnosen <font color=\"#3498db\">affektiv</font> störning efter flera år av kraftiga humörsvängningar.",
+        "etymologi": "Avledning till affekt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619758,
+      "ord": "hugfästa",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Göra så att något fastnar i minnet",
+        "register": "formell",
+        "synonymer": [
+          "bevara minnet av",
+          "föreviga",
+          "rädda undan glömskan"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Minnesmärket skulle <font color=\"#3498db\">hugfästa</font> offrens namn för framtiden.",
+        "etymologi": "håg 'sinne, minne' + fästa — samma håg som i hågkomst."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619761,
+      "ord": "utmönstra",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rensa bort något för att det blivit föråldrat eller oanvändbart",
+        "register": "formell",
+        "synonymer": [
+          "gallra ut",
+          "kassera",
+          "utrangera",
+          "sovra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den gamla modellen <font color=\"#3498db\">utmönstrades</font> ur sortimentet.",
+        "etymologi": "Betydde förr 'välja UT vid mönstring' — ordet har vänt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

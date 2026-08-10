@@ -1,0 +1,400 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080619509,
+      "ord": "otolog",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läkare som specialiserat sig på örats sjukdomar",
+        "register": "formell",
+        "synonymer": [
+          "öronläkare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter månader av lock i örat fick han äntligen tid hos en <font color=\"#3498db\">otolog</font>.",
+        "etymologi": "Grekiska ous 'öra' + logos 'lära' — samma ous som i otit."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619510,
+      "ord": "hävdatecknare",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som skriver ned historiska händelser",
+        "register": "arkaisk",
+        "synonymer": [
+          "historieskrivare",
+          "krönikör",
+          "historiker"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den gamle <font color=\"#3498db\">hävdatecknaren</font> hade ägnat trettio år åt landskapets historia.",
+        "etymologi": "hävd = det man länge haft (till hava) — den som tecknar ned det som varit."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619513,
+      "ord": "grisaille",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Måleri helt i gråtoner, ofta för att härma stenrelief",
+        "register": "formell",
+        "synonymer": [
+          "gråmåleri",
+          "monokromt måleri"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Takets <font color=\"#3498db\">grisaille</font> är målad så skickligt att stuckaturen ser verklig ut.",
+        "etymologi": "Av franskans gris, 'grå'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619514,
+      "ord": "evakuera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föra bort människor från ett farligt område ; tömma en plats ; tekniskt: pumpa ut luften ur något",
+        "register": "formell",
+        "synonymer": [
+          "utrymma",
+          "tömma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Alla <font color=\"#3498db\">evakuerades</font> snabbt när brandlarmet gick.",
+        "etymologi": "Latin evacuare, 'göra tom' — samma rot som vakuum."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619515,
+      "ord": "bekväma sig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Motvilligt förmå sig att göra något man tidigare undvikit",
+        "register": "litterär, lätt negativ",
+        "synonymer": [
+          "förmå sig till",
+          "nedlåta sig till",
+          "idas",
+          "gitta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det tog lång tid innan styrelsen kunde <font color=\"#3498db\">bekväma sig</font> till att fatta det nödvändiga beslutet.",
+        "etymologi": "Till bekväm, av latinets commodus 'lämplig' — att motvilligt finna något lämpligt nog."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619517,
+      "ord": "konstitutiv",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som utgör en nödvändig, grundläggande beståndsdel",
+        "register": "formell",
+        "synonymer": [
+          "grundläggande",
+          "väsentlig",
+          "bestämmande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att sätta riktningen är en <font color=\"#3498db\">konstitutiv</font> del av ledarrollen, inte en extrauppgift.",
+        "etymologi": "Till konstituera, 'utgöra' — det som något är gjort av."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619522,
+      "ord": "putslustig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lustig på ett lite löjligt, narraktigt sätt",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [
+          "smårolig",
+          "skojig",
+          "skämtsam",
+          "lustig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">putslustige</font> morbrorn drog samma gamla vitsar vid varje julbord.",
+        "etymologi": "Till puts i betydelsen 'spratt' — som i 'spela någon ett puts'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619524,
+      "ord": "depreciera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjunka i värde — motsatsen till appreciera",
+        "register": "formell",
+        "synonymer": [
+          "sjunka i värde",
+          "skriva ned",
+          "devalvera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den ekonomiska krisen fick den svenska kronan att <font color=\"#3498db\">depreciera</font> kraftigt mot euron.",
+        "etymologi": "Latin pretium 'värde' — samma rot som pris. de- = nedåt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619528,
+      "ord": "terapeutisk",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har att göra med terapi ; som har botande eller lindrande verkan",
+        "register": "formell",
+        "synonymer": [
+          "läkande",
+          "behandlande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Simningen hade en <font color=\"#3498db\">terapeutisk</font> effekt på hans värkande rygg.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619530,
+      "ord": "glyptotek",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Museum som samlar och visar skulpturer",
+        "register": "formell",
+        "synonymer": [
+          "skulpturmuseum",
+          "skulptursamling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På <font color=\"#3498db\">glyptoteket</font> stod hundratals antika byster på rad.",
+        "etymologi": "Grekiska glyptos 'skulpterad' + theke 'förvaringsrum' — samma -tek som i bibliotek."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619533,
+      "ord": "kontenta",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det viktigaste i korthet ; det som något till slut ledde till",
+        "register": "formell",
+        "synonymer": [
+          "kärna",
+          "sammanfattning",
+          "slutkläm",
+          "essens"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter tre timmars möte var <font color=\"#3498db\">kontentan</font> att vi behövde byta strategi helt och hållet.",
+        "etymologi": "Latin contentus, 'sammanfattad' — det som ryms i något."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619535,
+      "ord": "försonlig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Villig att förlåta och göra upp efter en konflikt ; även om handlingar: en försonlig gest",
+        "register": "formell, positiv",
+        "synonymer": [
+          "förlåtande",
+          "medgörlig",
+          "kompromissvillig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter grälet blev hon plötsligt <font color=\"#3498db\">försonlig</font> och räckte fram handen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619536,
+      "ord": "presumera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Anta att något förhåller sig på ett visst sätt, utan säkra bevis",
+        "register": "formell",
+        "synonymer": [
+          "anta",
+          "förutsätta",
+          "utgå från"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid en olycka <font color=\"#3498db\">presumeras</font> föraren ha handlat oaktsamt om hen kört mot rött ljus.",
+        "etymologi": "Latin prae- 'före' + sumere 'ta' — att ta något i förväg. Samma sumere som i konsumera."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619543,
+      "ord": "oktett",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Musikstycke för åtta stämmor ; grupp om åtta — oftast musiker, men kan vara vilken åttamannagrupp som helst",
+        "register": "formell",
+        "synonymer": [
+          "ensemble om åtta",
+          "åttamannagrupp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Oktetten</font> spelade ett stycke av Schubert för en halvfull salong.",
+        "etymologi": "Italienska otto 'åtta' — samma rot som oktav och oktober."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619548,
+      "ord": "yuppie",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ung, välbetald storstadsyrkesutövare med akademisk utbildning",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [
+          "finanslejon",
+          "nyrik",
+          "uppkomling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stockholm var fullt av <font color=\"#3498db\">yuppies</font> på 80-talet, med tjocka lönekuvert och alldeles för dyra bilar.",
+        "etymologi": "Engelsk förkortning av young urban professional."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619556,
+      "ord": "urmodig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fullständigt omodern, sedan länge ur bruk",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [
+          "föråldrad",
+          "förlegad",
+          "gammalmodig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Frisyren såg lika <font color=\"#3498db\">urmodig</font> ut som på ett skolfoto från 1978.",
+        "etymologi": "ur (modet) + -modig — jämför gammalmodig och nymodig."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619560,
+      "ord": "monstruös",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oformlig och skrämmande ; om något omfattande: orimlig",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "ohygglig",
+          "vidunderlig",
+          "avskyvärd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">monstruösa</font> skuggfiguren skrämde barnen.",
+        "etymologi": "Latin monstrum 'järtecken', till monstrare 'visa' — samma ord som i demonstrera."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619561,
+      "ord": "repressalie",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hämndaktion som svar på en oförrätt, oftast militär och nästan alltid i plural: repressalier",
+        "register": "formell",
+        "synonymer": [
+          "vedergällning",
+          "hämndaktion"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Landet svarade med ekonomiska <font color=\"#3498db\">repressalier</font> mot grannstaten.",
+        "etymologi": "Till latinets reprendere 'återta' — samma rot som repris."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619562,
+      "ord": "avi",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kort skriftligt besked om att något ska hämtas eller betalas",
+        "register": "formell",
+        "synonymer": [
+          "avisering",
+          "underrättelse",
+          "meddelande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick en <font color=\"#3498db\">avi</font> om att paketet låg och väntade på posten.",
+        "etymologi": "Franska avis, av latin ad 'till' + videre 'se' — något man ges att se."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619564,
+      "ord": "gyro",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Roterande instrument som håller balans eller riktning",
+        "register": "formell",
+        "synonymer": [
+          "gyroskop"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Drönaren använde en <font color=\"#3498db\">gyro</font> för att hålla sig stabil i luften.",
+        "etymologi": "Grekiska gyros 'ring, snurra' — samma ord som i maträtten gyros, där köttet roterar."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

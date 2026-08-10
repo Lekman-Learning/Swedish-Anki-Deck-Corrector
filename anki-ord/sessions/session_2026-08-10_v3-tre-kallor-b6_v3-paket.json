@@ -1,0 +1,381 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080619664,
+      "ord": "frotté",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Poröst bomullstyg med små öglor som suger upp vatten bra",
+        "register": "formell",
+        "synonymer": [
+          "handduksväv",
+          "poröst bomullstyg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Handduken var vävd i mjuk <font color=\"#3498db\">frotté</font>.",
+        "etymologi": "Till frottera, 'gnida' — tyget man gnuggar sig torr med."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619665,
+      "ord": "imperium",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stormaktsvälde som härskar över underkuvade stater ; bildligt om ett stort företagsvälde",
+        "register": "formell",
+        "synonymer": [
+          "välde",
+          "rike"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Romerska <font color=\"#3498db\">imperiet</font> sträckte sig över hela Medelhavet.",
+        "etymologi": "Latin imperium 'befallning' — samma ord som imperativ."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619668,
+      "ord": "rutt",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fastlagd färdväg som man planerat att följa",
+        "register": "formell",
+        "synonymer": [
+          "färdväg",
+          "resväg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bussen körde en ny <font color=\"#3498db\">rutt</font> genom stan.",
+        "etymologi": "Latin via rupta, 'uppröjd väg' — samma ord som rutin, den upptrampade vägen."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619669,
+      "ord": "platonisk",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om kärlek eller vänskap: andlig och utan sexuellt inslag (filosofibetydelsen stavas platonsk)",
+        "register": "formell",
+        "synonymer": [
+          "andlig",
+          "icke-sexuell"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De hade en <font color=\"#3498db\">platonisk</font> vänskap i många år.",
+        "etymologi": "Efter filosofen Platon, som beskrev en kärlek som lämnar det kroppsliga bakom sig."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619670,
+      "ord": "cypress",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ständigt grönt träd med fjällika barr, typiskt för Medelhavet — i Sverige kallas ofta tujan felaktigt så",
+        "register": "formell",
+        "synonymer": [
+          "medelhavscypress"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Cypresserna</font> kantade den italienska allén.",
+        "etymologi": "Grekiska kyparissos; ursprunget bortom det är okänt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619671,
+      "ord": "effeminerad",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som uppfattas som omanlig eller kvinnlig i sätt",
+        "register": "litterär, nedsättande",
+        "synonymer": [
+          "förkvinnligad",
+          "förvekligad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han beskrevs föraktfullt som <font color=\"#3498db\">effeminerad</font>.",
+        "etymologi": "Latin femina 'kvinna' — samma ord som feminin."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619673,
+      "ord": "blaskig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utspädd och smaklös ; om färger och intryck: intetsägande ; om väder: blött och slaskigt",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "vattnig",
+          "urvattnad",
+          "intetsägande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kaffet på tåget var alltid <font color=\"#3498db\">blaskigt</font>.",
+        "etymologi": "Till blask, 'slask' — därav både den vattniga smaken och vädret."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619674,
+      "ord": "fadd",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Har en tråkig och ofta lite obehaglig smak ; bildligt: intetsägande och andefattig",
+        "register": "formell, negativ",
+        "synonymer": [
+          "smaklös",
+          "avslagen",
+          "intetsägande",
+          "andefattig"
+        ],
+        "synonym_groups": [
+          [
+            "smaklös",
+            "avslagen"
+          ],
+          [
+            "intetsägande",
+            "andefattig"
+          ]
+        ],
+        "exempelmening": "Soppan var helt <font color=\"#3498db\">fadd</font>, som om någon glömt både salt och kryddor.",
+        "etymologi": "Latin fatuus 'smaklös' — samma ord betydde också 'dåraktig'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619682,
+      "ord": "mikrofiche",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Genomskinligt kort med kraftigt förminskad text — ett ark, inte en rulle",
+        "register": "formell",
+        "synonymer": [
+          "mikrokort"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Gamla tidningsårgångar fanns bara sparade på <font color=\"#3498db\">mikrofiche</font>.",
+        "etymologi": "mikro- + franska fiche 'notislapp' — en pytteliten lapp."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619683,
+      "ord": "kalorimeter",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Instrument som mäter hur mycket värme en reaktion avger eller tar upp",
+        "register": "formell",
+        "synonymer": [
+          "värmemätare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Forskarna mätte energiskillnaden med en <font color=\"#3498db\">kalorimeter</font>.",
+        "etymologi": "kalori + -meter — mätaren för värmemängd."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619685,
+      "ord": "vokabulär",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "De ord en person eller ett språk förfogar över ; en ordlista",
+        "register": "formell",
+        "synonymer": [
+          "ordförråd",
+          "ordlista"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade en bred <font color=\"#3498db\">vokabulär</font> för sin ålder.",
+        "etymologi": "Franska vocabulaire, till vokabel — ett enskilt ord."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619689,
+      "ord": "entente",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vänskapligt samförstånd mellan stater",
+        "register": "formell",
+        "synonymer": [
+          "samförstånd",
+          "överenskommelse",
+          "statsförbund"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Frankrike och Storbritannien bildade en <font color=\"#3498db\">entente</font> före första världskriget.",
+        "etymologi": "Franska entendre 'förstå' — en entente är en förståelse, inte ett bindande förbund."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619697,
+      "ord": "ekvivalent",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har samma värde eller verkan som något annat ; en fullgod ersättning eller motsvarighet",
+        "register": "formell",
+        "synonymer": [
+          "jämgod",
+          "jämförlig",
+          "likvärdig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Beloppet var <font color=\"#3498db\">ekvivalent</font> med en månadslön.",
+        "etymologi": "Latin aequus 'lika' + valere 'vara värd' — samma valere som i valör."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619702,
+      "ord": "allegat",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Handling som styrker en uppgift i bokföringen",
+        "register": "formell",
+        "synonymer": [
+          "bilaga",
+          "verifikation"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fakturan skickades med flera <font color=\"#3498db\">allegat</font>.",
+        "etymologi": "Latin allegare 'åberopa' — det man åberopar som stöd."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619704,
+      "ord": "gruvlig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så hemsk att den väcker fasa ; som adverb bara förstärkande: 'ta gruvligt miste' = ta grundligt miste",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "fruktansvärd",
+          "ryslig",
+          "fasansfull"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Olyckan fick <font color=\"#3498db\">gruvliga</font> följder för hela byn.",
+        "etymologi": "Till gruva sig — det man gruvar sig för."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619707,
+      "ord": "marinera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Låta mat dra smak i en kryddad vätska",
+        "register": "formell",
+        "synonymer": [
+          "lägga i lag",
+          "lägga in"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Köttet <font color=\"#3498db\">marinerades</font> över natten i vitlök och olja.",
+        "etymologi": "Till marin — marinaden var från början saltlake, havsvatten."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619708,
+      "ord": "hybris",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kraftig överskattning av sig själv och sin egen förmåga — straffar sig ofta, men behöver inte göra det",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "övermod",
+          "förhävelse",
+          "högmod"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">hybris</font> ledde till hans fall.",
+        "etymologi": "Grekiska hybris, med samma betydelse — övermodet som utmanar gudarna."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619710,
+      "ord": "anblick",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det man ser när man tittar på något ; i 'vid första anblicken': den snabba första blicken",
+        "register": "formell",
+        "synonymer": [
+          "åsyn",
+          "syn"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid första <font color=\"#3498db\">anblicken</font> verkade huset övergivet.",
+        "etymologi": "Tyska Anblick, till blick."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619714,
+      "ord": "märla",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "U-formad metallhake att fästa med ; hyska på plagg ; liten metallring som förstärker ett hål — även som verb: märla fast något",
+        "register": "formell",
+        "synonymer": [
+          "krampa",
+          "hyska"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Repet träddes fast genom <font color=\"#3498db\">märlan</font> på fördäck.",
+        "etymologi": "Fornsvenska märla; verbet av nederländska marlen 'surra, förtöja'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

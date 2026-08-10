@@ -1,0 +1,494 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080619661,
+      "ord": "nota bene",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Märk väl, observera",
+        "register": "formell",
+        "synonymer": [
+          "märk väl"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Nota bene</font>: mötet är flyttat till fredag.",
+        "etymologi": "Latin nota bene, 'märk väl' — samma notare som i notera. Förkortas nb."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619619,
+      "ord": "överreklamerad",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Beskriven som bättre än den faktiskt är",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "hajpad",
+          "upphaussad",
+          "överskattad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Produkten kändes <font color=\"#3498db\">överreklamerad</font> — den levererade inte på ett enda löfte.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619628,
+      "ord": "slapstick",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Komedi med överdrivna, fysiska och våldsamma skämt",
+        "register": "vardaglig",
+        "synonymer": [
+          "fars",
+          "buskis",
+          "situationskomik"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Scenen var ren <font color=\"#3498db\">slapstick</font> — tre personer, en tårta och en trappa.",
+        "etymologi": "Engelska slap 'slag' + stick 'käpp' — en riktig rekvisita: två trälister som smällde högt utan att göra ont."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619729,
+      "ord": "ingenium",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Medfödd skapande begåvning",
+        "register": "litterär",
+        "synonymer": [
+          "begåvning",
+          "snille",
+          "skaparkraft"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">ingenium</font> för matematik visade sig redan i skolan.",
+        "etymologi": "Latin ingenium 'medfödd begåvning' — samma ord som geni och ingenjör."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619741,
+      "ord": "dispasch",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Officiell utredning av sjöskador och kostnadsfördelning",
+        "register": "formell",
+        "synonymer": [
+          "haveriutredning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Dispaschören upprättade en <font color=\"#3498db\">dispasch</font> efter haveriet.",
+        "etymologi": "Italienska dispaccio 'avgörande' — dispaschen är själva avgörandet efter ett sjöhaveri."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619749,
+      "ord": "håvor",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Värdefulla gåvor",
+        "register": "litterär",
+        "synonymer": [
+          "gåvor",
+          "rikedomar"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kungen delade ut rika <font color=\"#3498db\">håvor</font> till sina gäster.",
+        "etymologi": "Plural av gammalt hava, 'egendom' — samma ord som ha. Därför bara i plural."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619751,
+      "ord": "deadline",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sista tidpunkt något ska vara klart",
+        "register": "vardaglig",
+        "synonymer": [
+          "tidsgräns",
+          "slutdatum"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Deadline</font> för rapporten var på fredag.",
+        "etymologi": "Engelska dead-line, 'dödslinje' — en linje i ett fängelse som fångar sköts för att korsa."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619752,
+      "ord": "besynnerlig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svår att förstå sig på och därför lite underlig ; om person: något tokig",
+        "register": "formell",
+        "synonymer": [
+          "egendomlig",
+          "kuriös",
+          "märkvärdig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade ett <font color=\"#3498db\">besynnerligt</font> sätt att gå på.",
+        "etymologi": "Släkt med sönder och synnerlig — grundbetydelsen är 'avskild från mängden'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619756,
+      "ord": "hurtbulle",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överdrivet pigg och sportig person",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [
+          "friskus",
+          "frisksportare",
+          "hurtfrisk person"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kontorets <font color=\"#3498db\">hurtbulle</font> sprang alltid en mil före frukost.",
+        "etymologi": "hurtig + bulle, där bulle är en nedlåtande personbeteckning."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619757,
+      "ord": "ad interim",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tillfälligt, under en övergångsperiod",
+        "register": "formell",
+        "synonymer": [
+          "tillfälligt",
+          "provisoriskt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon utsågs till vd <font color=\"#3498db\">ad interim</font> tills en permanent lösning hittades.",
+        "etymologi": "Latin ad interim, 'för mellantiden'. Förkortas a.i."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619762,
+      "ord": "abstrakt",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tänkt bort från det konkreta, teoretisk",
+        "register": "formell",
+        "synonymer": [
+          "teoretisk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Konceptet kändes för <font color=\"#3498db\">abstrakt</font> för att förstå direkt.",
+        "etymologi": "Latin abstractus 'fråndragen' — man drar bort det konkreta tills bara begreppet är kvar."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619763,
+      "ord": "anvisa",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Visa var något finns eller hur man ska gå till väga ; i myndighetsspråk: bevilja eller tilldela, som i 'anvisa medel'",
+        "register": "formell",
+        "synonymer": [
+          "hänvisa",
+          "tilldela",
+          "bevilja",
+          "anslå"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läraren <font color=\"#3498db\">anvisade</font> var eleverna skulle sitta.",
+        "etymologi": "Efter tyska anweisen — samma visa som i att visa vägen."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619769,
+      "ord": "avhysa",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vräka, tvinga bort från en bostad",
+        "register": "formell",
+        "synonymer": [
+          "vräka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Familjen <font color=\"#3498db\">avhystes</font> när hyran inte betalades.",
+        "etymologi": "av + hysa — fornsvenskans 'skilja från hus och gård'. Motsatsen till att hysa någon."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619603,
+      "ord": "variabel",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Storhet som kan anta olika värden — motsatsen till en konstant ; som adjektiv: föränderlig",
+        "register": "formell",
+        "synonymer": [
+          "föränderlig storhet",
+          "växlande",
+          "skiftande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I ekvationen är x den okända <font color=\"#3498db\">variabeln</font> vi ska lösa ut.",
+        "etymologi": "Till variera, av latin variare 'växla'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619577,
+      "ord": "reservat",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skyddat naturområde ; landområde avsatt för ett ursprungsfolk",
+        "register": "formell",
+        "synonymer": [
+          "skyddsområde",
+          "fredat område"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vargarna i <font color=\"#3498db\">reservatet</font> får inte jagas, inte ens av markägaren.",
+        "etymologi": "Latin reservare 'spara undan' — samma ord som reserv."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619504,
+      "ord": "beprövad",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Har prövats med framgång under lång tid — kan vändas ironiskt: 'av beprövad oduglighet'",
+        "register": "formell, positiv",
+        "synonymer": [
+          "tillförlitlig",
+          "pålitlig",
+          "härdad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läraren höll fast vid sin <font color=\"#3498db\">beprövade</font> metod, och resultaten kom varje år.",
+        "etymologi": "Till pröva; jfr tyska erprobt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619507,
+      "ord": "förhala",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Medvetet dra ut på tiden för att skjuta upp något ; sjöterm: förflytta ett fartyg korta sträckor med hjälp av linor",
+        "register": "formell",
+        "synonymer": [
+          "fördröja",
+          "dra ut på tiden",
+          "skjuta upp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Motparten försökte <font color=\"#3498db\">förhala</font> förhandlingarna tills tidsfristen gick ut.",
+        "etymologi": "Samma ord i båda betydelserna — att hala, dra i något."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619508,
+      "ord": "bonitet",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Markens grad av avkastningsförmåga",
+        "register": "formell",
+        "synonymer": [
+          "avkastningsförmåga",
+          "godhetsgrad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Skogsmarkens höga <font color=\"#3498db\">bonitet</font> lovade en god virkesproduktion.",
+        "etymologi": "Latin bonus 'god' — samma ord som bonus. Bonitet är godhetsgrad."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619525,
+      "ord": "bilateral",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som gäller två parter — jämför unilateral (en) och multilateral (flera)",
+        "register": "formell",
+        "synonymer": [
+          "tvåsidig",
+          "ömsesidig",
+          "dubbelsidig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sverige har <font color=\"#3498db\">bilaterala</font> utvecklingssamarbeten med ett sjuttiotal länder.",
+        "etymologi": "bi- 'två' + latin latus 'sida'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619526,
+      "ord": "loafer",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lätt sko utan snörning",
+        "register": "vardaglig",
+        "synonymer": [
+          "mockasin",
+          "lågsko utan snörning",
+          "promenadsko"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade ett par bruna <font color=\"#3498db\">loafers</font> utan strumpor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619537,
+      "ord": "lägga sordin på",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Göra något mindre intensivt, dämpa stämningen",
+        "register": "litterär",
+        "synonymer": [
+          "dämpa",
+          "tona ned",
+          "hämma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Grannarnas klagomål <font color=\"#3498db\">lade sordin på</font> bandets kvällsrepetitioner.",
+        "etymologi": "En sordin är dämparen man sätter på ett instrument — att lägga sordin på är att dämpa."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619545,
+      "ord": "revy",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Scenföreställning med blandad, aktuell underhållning ; översikt eller artikel ; militär förbimarsch — som i 'passera revy'",
+        "register": "formell",
+        "synonymer": [
+          "kabaré",
+          "varieté"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Höstens <font color=\"#3498db\">revy</font> gjorde skoningslöst narr av årets politiska skandaler.",
+        "etymologi": "Franska revue 'återblick', av latin revidere 'återse' — samma ord som revidera. Därav 'passera revy'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619546,
+      "ord": "civiliserad",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Har god uppfostran och följer sociala normer ; om ett samhälle: högt utvecklat kulturellt och tekniskt",
+        "register": "formell, positiv",
+        "synonymer": [
+          "väluppfostrad",
+          "kultiverad",
+          "hyfsad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots grälet höll de en <font color=\"#3498db\">civiliserad</font> ton genom hela middagen.",
+        "etymologi": "Till civil, av latin civis 'medborgare' — att civilisera är ordagrant att göra till stadsbo."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619547,
+      "ord": "vedervåga",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Riskera något värdefullt ; våga sig på något farligt",
+        "register": "litterär",
+        "synonymer": [
+          "sätta på spel",
+          "äventyra",
+          "våga sig på"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ingen i besättningen ville <font color=\"#3498db\">vedervåga</font> sitt liv på isen så här sent på våren.",
+        "etymologi": "veder- betyder 'mot', som i vedergällning — att våga något mot en risk."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619691,
+      "ord": "huldra",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kvinnligt skogsväsen i folktron som lockar till sig människor — lockelsen är farlig",
+        "register": "litterär",
+        "synonymer": [
+          "skogsrå",
+          "skogsfru",
+          "vittra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Enligt sägnen lockade <font color=\"#3498db\">huldran</font> vilsna vandrare djupt in i skogen.",
+        "etymologi": "Norska huldre, 'någon som döljer sig' — släkt med hölja."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}
