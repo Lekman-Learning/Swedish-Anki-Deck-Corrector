@@ -129,13 +129,24 @@ kan härleda betydelsen istället för att minnas den.
 
 Register-raden taggar HÖGST två oberoende axlar — mer blir övertaggning:
 
-- **Formalitet** (`config.REGISTER_FORMALITY`): `arkaisk` (ålderdomligt, UR
+- **Formalitet** (`config.REGISTER_FORMALITY`): `neutral` (vanlig
+  standardsvenska — **det normala fallet och det vanligaste rätta svaret**:
+  ordet är varken högtidligt eller vardagligt, t.ex. *marinera*, *katedral*,
+  *topografi*, *taverna*) / `arkaisk` (ålderdomligt, UR
   BRUK) / `litterär` (poetiskt/bokspråk, LEVANDE men skriftligt-högtidligt —
   skiljer sig från arkaisk genom att fortfarande användas, t.ex. i
   skönlitteratur) / `formell` (byråkratiskt/officiellt) / `vardaglig` /
   `dialektal` (regional variant, t.ex. "kalvdön") / `slang` (under
   vardaglig, gatuspråk) / `vulgär` (svordomar/tabuspråk, grövre än slang).
-  Omärkt = neutral standardsvenska.
+
+  > **`formell` betyder byråkratiskt/officiellt — inte "ovanligt" eller
+  > "fint".** Testet: skulle ordet se malplacerat ut i ett sms till en
+  > kompis *därför att det hör hemma i myndighetsspråk*? Bara då är det
+  > `formell`. Ett ord som bara är sällsynt (*taverna*, *divan*) är
+  > `neutral`. Före 2026-08-10 saknades `neutral`, och eftersom
+  > registerraden aldrig får vara tom hamnade halva decket (49,1 %) på
+  > `formell` — inte av slarv, utan för att inget sant alternativ fanns.
+  > Se kommentaren i `config.py`.
 - **Valör** (`config.REGISTER_VALENS`): `positiv` (genuint lovordande,
   utöver neutralt — t.ex. "hedervärd") / `lätt negativ` / `negativ` /
   `nedsättande` (starkare än negativ, används om PERSONER — t.ex. ett

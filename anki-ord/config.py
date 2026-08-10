@@ -43,9 +43,29 @@ ETYMOLOGI_PIL = "→"
 # Register-tagg: STÄNGD vokabulär, en tagg per axel max (se style_guide.md).
 # Fritext gled isär över 10k kort/flera pass tidigare (t.ex. fabricerade
 # synonymer) — samma risk gäller register om det inte låses.
+#
+# `neutral` tillagt 2026-08-10 efter en mätning som förklarade ett fel ingen
+# granskning hittat på elva omgångar: **1 587 av 3 233 kort (49,1 %) var märkta
+# `formell`** -- och de v3-granskade låg HÖGRE (56,4 %) än de ogranskade
+# (48,7 %), alltså gjorde granskningen fältet sämre.
+#
+# Orsaken var strukturell, inte slarv. Tre regler tillsammans gjorde felet
+# obligatoriskt:
+#   1. registerraden får aldrig vara tom -- minst en tagg krävs,
+#   2. valör får utelämnas på neutrala ord (style_guide tillåter det uttryckligen),
+#   3. => formalitetsaxeln måste alltid bära den obligatoriska taggen,
+#   4. men varje värde på den axeln var ett MARKERAT register.
+# Ett vanligt standardsvenskt ord (marinera, sepia, katedral) hade alltså
+# ingen sann tagg att välja, och `formell` var det minst fel-känsliga. Guiden
+# lärde till och med ut det genom sitt eget exempel (`formell` för *taverna*).
+#
+# Kommentaren "omärkt = neutral" fanns här hela tiden, men frånvaro var
+# förbjuden -- vokabulären och den obligatoriska regeln sa emot varandra.
+# Ett explicit värde löser båda: raden blir ifylld OCH sann.
 REGISTER_FORMALITY = [
+    "neutral",
     "arkaisk", "litterär", "formell", "vardaglig", "dialektal", "slang", "vulgär",
-]  # omärkt = neutral
+]  # `neutral` = vanlig standardsvenska, det normala fallet
 REGISTER_VALENS = [
     "positiv", "lätt negativ", "negativ", "nedsättande", "skämtsam", "ironisk",
     "eufemistisk",
