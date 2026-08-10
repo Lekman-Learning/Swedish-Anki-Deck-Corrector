@@ -115,7 +115,19 @@ BROWSERVERKTYG = (
 # mellanslag, och \S+ fångade bara första ordet. Kalla sa "?ord=bekväma sig"
 # men beviset registrerades som "bekväma" -- kortet stoppades trots att
 # hämtningen gjorts. Hittat 2026-08-09 av spärren själv, på batch 7.
-SKRIPTMARKOR = re.compile(r"SVENSKA_SE_HAMTAD\s+(.+?)\s+HTTP\s+200\s")
+#
+# UTÖKAT 2026-08-10 (Adams krav på tre källor per kort): samma skript hämtar nu
+# även synonymer.se och Wiktionary, och skriver en egen bevisrad för var och en.
+# Varje markör paras ihop med den URL-form som `kalla` måste ha för att räknas
+# som belagd av just den hämtningen — så att ett kort inte kan hänvisa till
+# synonymer.se med ett bevis som bara gäller svenska.se.
+SKRIPTKANALER = (
+    ("SVENSKA_SE_HAMTAD", "https://svenska.se/api/msearch?ord={}"),
+    ("SYNONYMER_SE_HAMTAD", "https://www.synonymer.se/sv-syn/{}"),
+    ("WIKTIONARY_HAMTAD", "https://sv.wiktionary.org/wiki/{}"),
+)
+SKRIPTMARKOR = re.compile(
+    r"(" + "|".join(m for m, _ in SKRIPTKANALER) + r")\s+(.+?)\s+HTTP\s+200\s")
 SKRIPT_KALLA = re.compile(r"svenska\.se/api/msearch\?ord=(.+)$")
 
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
@@ -200,19 +212,25 @@ def _ord_ur_skriptutskrift():
 
     Bara rader med HTTP 200 räknas — en 404 eller ett nätverksfel skriver en
     annan statuskod och ger därför inget belägg. Det är avsiktligt: ett
-    misslyckat uppslag ska aldrig kunna passera som ett lyckat."""
+    misslyckat uppslag ska aldrig kunna passera som ett lyckat.
+
+    Returnerar en mängd av (markör, ord) — inte bara ord — så att beviset för
+    en hämtning från synonymer.se inte av misstag kan belägga en hänvisning
+    till svenska.se. Tre källor per kort är bara meningsfullt om de tre går
+    att skilja åt i efterhand."""
     ut = set()
     monster = os.path.join(_transkriptkatalog(), "*", "*.jsonl")
+    markorer = tuple(m for m, _ in SKRIPTKANALER)
     for sokvag in glob.glob(monster):
         try:
             with open(sokvag, encoding="utf-8", errors="ignore") as f:
                 for rad in f:
-                    if "SVENSKA_SE_HAMTAD" not in rad:
+                    if not any(m in rad for m in markorer):
                         continue
                     # Raden är JSON-kodad i transkriptet; \n blir \\n. Sök i
                     # råsträngen efter avkodning av de vanligaste escaperna.
                     for m in SKRIPTMARKOR.finditer(rad.replace("\\n", "\n")):
-                        ut.add(m.group(1))
+                        ut.add((m.group(1), m.group(2)))
         except OSError:
             continue
     return ut
@@ -226,8 +244,9 @@ def samla_bevis(valvsokvag=None):
     vittnet."""
     bevis = _urler_ur_valvloggen(valvsokvag)
     bevis.update(_urler_ur_transkript())
-    for o in _ord_ur_skriptutskrift():
-        bevis[f"https://svenska.se/api/msearch?ord={o}"] = "skript"
+    mall = dict(SKRIPTKANALER)
+    for markor, o in _ord_ur_skriptutskrift():
+        bevis[mall[markor].format(o)] = "skript"
     return bevis
 
 

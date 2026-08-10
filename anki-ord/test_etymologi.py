@@ -20,6 +20,10 @@ from ankiconnect import invoke
 
 B = '<font color="#3498db">%s</font>'
 ETY = "Av grekiskans aisthesis, ”sinnesintryck”."
+# Etymologin LAGRAS som ren text men RENDERAS grå med pil (2026-08-10, Adams
+# val). Testet kontrollerar därför två saker som är lätta att blanda ihop:
+# att modellen bär ren text, och att HTML:en bär wrappern.
+ETY_HTML = f'<font color="{config.ETYMOLOGI_COLOR}">{config.ETYMOLOGI_PIL} {ETY}</font>'
 BILD = '<br><br><img src="x.jpg" style="max-width:400px; border-radius:4px;">'
 
 
@@ -41,7 +45,7 @@ def main():
     p = baksida.parse(html)
     if p["etymologi"] != ETY:
         fel.append(f"1. etymologi kom inte tillbaka: {p['etymologi']!r}")
-    if not re.search(r"</i><br><br>" + re.escape(ETY) + r"$", html):
+    if not re.search(r"</i><br><br>" + re.escape(ETY_HTML) + r"$", html):
         fel.append(f"2. fel placering/lucka: ...{html[-90:]!r}")
 
     # 1+2 -- etymologi MED bild: etymologin före bilden, båda intakta
@@ -81,7 +85,7 @@ def main():
     info = []
     for i in range(0, len(ids), 500):
         info.extend(invoke("notesInfo", notes=ids[i:i + 500]))
-    avvikande, ety_kort = [], 0
+    avvikande, migreras, ety_kort = [], [], 0
     for n in info:
         raw = n["fields"][config.FIELD_BAKSIDA]["value"]
         p = baksida.parse(raw)
@@ -89,10 +93,26 @@ def main():
             continue
         if p["etymologi"]:
             ety_kort += 1
-        if baksida.build(**{k: v for k, v in p.items() if k != "definitioner"}) != raw:
-            avvikande.append(n["fields"][config.FIELD_ORD]["value"])
+        om = baksida.build(**{k: v for k, v in p.items() if k != "definitioner"})
+        if om == raw:
+            continue
+        # Kort skrivna FÖRE 2026-08-10 har etymologin som omarkerad text. De
+        # SKA ändras av en omskrivning -- det är stilbytet, inte en bugg. Men
+        # skillnaden måste vara exakt den, och ingenting annat: om något mer
+        # skiljer är det den gamla farliga buggklassen (parse tappar ett fält,
+        # build raderar det tyst) och då ska testet falla.
+        ord_ = n["fields"][config.FIELD_ORD]["value"]
+        if p["etymologi"] and om.replace(
+                f'<font color="{config.ETYMOLOGI_COLOR}">'
+                f'{config.ETYMOLOGI_PIL} {p["etymologi"]}</font>',
+                p["etymologi"]) == raw:
+            migreras.append(ord_)
+        else:
+            avvikande.append(ord_)
     print(f"Deckkontroll: {len(info)} kort, {len(avvikande)} avvikande, "
-          f"{ety_kort} med etymologi")
+          f"{ety_kort} med etymologi, {len(migreras)} migreras till grå pilrad")
+    if migreras:
+        print(f"  migreras vid nästa omskrivning: {migreras[:10]}")
     if avvikande:
         fel.append(f"5. parse->build ändrade {len(avvikande)} kort: {avvikande[:10]}")
 

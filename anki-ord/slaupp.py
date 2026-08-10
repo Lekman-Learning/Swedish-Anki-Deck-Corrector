@@ -39,11 +39,27 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 API = "https://svenska.se/api/msearch"
 UTKAT = "uppslag"
 INDEX = {"saol": "sa-svenska-saol", "so": "sa-svenska-so", "saob": "sa-svenska-saob"}
+
+# TRE KÄLLOR PÅ VARJE KORT (Adams krav 2026-08-10): svenska.se (SO+SAOL+SAOB
+# räknas som EN källa), synonymer.se och Wiktionary. Kort där någon av dem inte
+# ger något ska rödflaggas och samlas i en egen lista att gå igenom senare --
+# de ska INTE tyst skrivas med två källor, för då blir ett halvbelagt kort
+# omöjligt att skilja från ett fullbelagt i efterhand.
+#
+# Alla tre hämtas i SAMMA process av samma skäl som svenska.se gjorde det:
+# annars kostar tre källor tre gånger så mycket kontextfönster, och det är
+# kontextfönstret -- inte kvoten -- som är taket (mätt 2026-08-09).
+SYN_URL = "https://www.synonymer.se/sv-syn/{}"
+WIKT_API = ("https://sv.wiktionary.org/w/api.php?action=query&prop=extracts"
+            "&explaintext=1&redirects=1&format=json&titles={}")
+WIKT_URL = "https://sv.wiktionary.org/wiki/{}"
+BRISTLISTA = "tre_kallor_saknas.json"
 
 
 def _kropp(ord_):
@@ -70,6 +86,172 @@ def hamta(ord_, forsok=3):
                 return None, 0, 0
             time.sleep(1.5 * (n + 1))
     return None, 0, 0
+
+
+# Wikimedia kräver en beskrivande User-Agent och strypte annars anropen till
+# HTTP 429 efter ett tiotal ord (uppmätt 2026-08-10). Det var farligare än det
+# lät: en 429 gav tom text, och tom text tolkades som "ordet finns inte i
+# Wiktionary" -- alltså hamnade fullt normala ord som `pöbel` och `förvärva` i
+# bristlistan över kort som saknar en källa. En strypning som ser ut som ett
+# saknat uppslag är precis den sortens tysta fel hela sökkollen finns för att
+# hindra, och den skulle ha fått mig att rödflagga rätt kort av fel skäl.
+ANVANDARAGENT = ("anki-ord/1.0 (svenskt ordkortsprojekt; kontakt via "
+                 "github.com/Lekman-Learning) python-urllib")
+
+
+def _hamta_ratt(url, forsok=4):
+    """Rå GET. Returnerar (text, status, byte). Kastar aldrig.
+
+    Status 429 backas av och görs om -- den betyder 'för snabbt', inte 'finns
+    inte'. Går det ändå inte returneras 429 som status, och anroparen skiljer
+    den från ett tomt men lyckat svar."""
+    hdr = {"User-Agent": ANVANDARAGENT}
+    for n in range(forsok):
+        try:
+            with urllib.request.urlopen(
+                    urllib.request.Request(url, headers=hdr), timeout=25) as r:
+                rå = r.read()
+                return rå.decode("utf-8", "replace"), r.status, len(rå)
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 503) and n < forsok - 1:
+                time.sleep(3.0 * (n + 1))
+                continue
+            return None, e.code, 0
+        except Exception:
+            if n == forsok - 1:
+                return None, 0, 0
+            time.sleep(1.5 * (n + 1))
+    return None, 0, 0
+
+
+# synonymer.se renderas av ett JS-ramverk (Qwik) men skickar ändå med färdig
+# HTML i svaret, så en vanlig GET räcker -- till skillnad från svenska.se, som
+# bara skickar ett tomt skal. Innehållet ligger i numrerade block med den här
+# klassen; varje block är en avdelning på sidan.
+_SYN_BLOCK = re.compile(
+    r'<div class="px-6 py-3 border-b[^"]*"[^>]*>(.*?)</div>', re.DOTALL)
+_SYN_H2 = re.compile(r"<h2[^>]*>(.*?)</h2>", re.DOTALL)
+_TAGGAR = re.compile(r"<[^>]+>")
+_KOMMENTARER = re.compile(r"<!--.*?-->", re.DOTALL)
+
+
+# Sidans reklam- och sidospaltsblock delar CSS-klass med synonymblocken, så
+# "Vad betyder girigbuk?", "Läs mer om dagens uttryck" och "FörklaringSe
+# inbillade faror" följde med in bland synonymerna till *estetik*. De går inte
+# att skilja på uppmärkningen -- däremot på formen: en synonym är kort och är
+# inte en fråga eller en uppmaning.
+_WIDGET_INLEDNING = ("vad betyder", "läs mer", "förklaring", "se även",
+                     "här hittar du", "dagens", "vill du föreslå")
+
+
+def _ar_synonym(t):
+    lag = t.lower()
+    if len(t) > 34 or "?" in t:
+        return False
+    return not any(lag.startswith(p) for p in _WIDGET_INLEDNING)
+
+
+def hamta_synonymer(ord_):
+    """synonymer.se. Returnerar (dict|None, status, byte).
+
+    VARNING som följer med i utdata: sidan blandar redaktionellt material med
+    'Användarnas bidrag'. Den andra sorten är crowdsourcad och håller inte
+    ordbokskvalitet -- 'estetik' får t.ex. 'grafiskt snyggt'. Avdelningarna
+    märks därför ut var för sig i stället för att slås ihop till en lista, så
+    att det syns VILKEN sorts belägg en synonym har. synonymer.se ska läsas,
+    inte kopieras (Adams regel).
+
+    Den tidigare versionen av den här funktionen plockade alla /sv-syn/-länkar
+    på sidan och fick därför med den alfabetiska grannlistan i sidfoten:
+    'reservat' gav 'reservant', 'reservare', 'reservationsfri'. Det är inte
+    synonymer, det är närliggande uppslagsord."""
+    # synonymer.se skriver flerordsuppslag med BINDESTRECK: /sv-syn/bekväma-sig,
+    # inte /sv-syn/bekv%C3%A4ma%20sig. Med mellanslag svarar sajten 200 men utan
+    # innehåll, vilket tolkades som "uttrycket finns inte" -- och därför saknade
+    # varje idiom (bära sig, bekväma sig, av hävd) sin andra källa. Hittat
+    # 2026-08-10 genom en allmän webbsökning, alltså precis den reservväg Adam
+    # bad om samma dag. Mellanslagsformen provas ändå först, eftersom den
+    # fungerar för enstaka ord och för uppslag som verkligen har mellanslag.
+    former = [urllib.parse.quote(ord_)]
+    if " " in ord_:
+        former.insert(0, urllib.parse.quote(ord_.replace(" ", "-")))
+    html = None
+    for form in former:
+        html, status, byte = _hamta_ratt(SYN_URL.format(form))
+        if html and "hittade tyvärr" not in html and _SYN_BLOCK.search(html):
+            break
+    if html is None:
+        return None, status, byte
+    avdelningar = {}
+    for block in _SYN_BLOCK.findall(html):
+        h2 = _SYN_H2.search(block)
+        rubrik = _TAGGAR.sub("", h2.group(1)).strip() if h2 else "synonymer"
+        kropp = _SYN_H2.sub("", block)
+        text = _TAGGAR.sub("", _KOMMENTARER.sub("", kropp))
+        ord_lista = [t.strip() for t in re.split(r"[,|]", text) if t.strip()]
+        ord_lista = [t for t in ord_lista
+                     if t.lower() != ord_.lower() and _ar_synonym(t)]
+        if ord_lista:
+            avdelningar.setdefault(rubrik, []).extend(ord_lista[:20])
+    saknas = "hittade tyvärr" in html or "inga synonymer" in html
+    return ({"finns": bool(avdelningar) and not saknas,
+             "avdelningar": avdelningar}, status, byte)
+
+
+_WIKT_RUBRIK = re.compile(r"^=+\s*(.+?)\s*=+\s*$", re.MULTILINE)
+_WIKT_MALL = re.compile(r"\{\{[^{}]*\}\}")
+_WIKT_LANK = re.compile(r"\[\[(?:[^\]|]*\|)?([^\]|]*)\]\]")
+
+
+def _wikitext_rent(s):
+    for _ in range(3):  # nästlade mallar kräver flera varv
+        s = _WIKT_MALL.sub(" ", s)
+    s = _WIKT_LANK.sub(r"\1", s).replace("'''", "").replace("''", "")
+    return " ".join(s.split())
+
+
+def hamta_wiktionary(ord_):
+    """sv.wiktionary.org via `action=parse&prop=wikitext`.
+
+    Först användes `prop=extracts&explaintext`, men det gav bara ~260 byte per
+    ord -- alltså intron, inte avsnitten -- och 'Etymologi' gick därför aldrig
+    att hitta. Wikitexten har rubrikerna kvar och går att dela på.
+
+    Realistisk förväntan, mätt 2026-08-10: svenska Wiktionary är TUNN. 'estetik'
+    och 'reservat' har definition, besläktade ord och översättningar men INGEN
+    etymologi. Etymologin kommer i praktiken från SO:s `historiskaUppgifter`.
+    Wiktionary är ändå en riktig tredje källa -- den bekräftar eller motsäger
+    betydelsen oberoende av Akademien."""
+    rå, status, byte = _hamta_ratt(
+        "https://sv.wiktionary.org/w/api.php?action=parse&prop=wikitext"
+        "&redirects=1&format=json&page=" + urllib.parse.quote(ord_))
+    if rå is None:
+        return None, status, byte
+    try:
+        w = json.loads(rå).get("parse", {}).get("wikitext", {}).get("*", "")
+    except ValueError:
+        return None, status, byte
+    if not w.strip():
+        return {"finns": False, "etymologi": None, "avsnitt": {}}, status, byte
+    delar = {}
+    rubriker = list(_WIKT_RUBRIK.finditer(w))
+    for i, m in enumerate(rubriker):
+        slut = rubriker[i + 1].start() if i + 1 < len(rubriker) else len(w)
+        delar[m.group(1).strip().lower()] = w[m.end():slut]
+    ety = None
+    for nyckel in ("etymologi", "ursprung", "härledning"):
+        if delar.get(nyckel):
+            ety = _wikitext_rent(delar[nyckel])[:400]
+            break
+    # Definitionsraderna ligger som "#..." under ordklassrubriken.
+    definitioner = [_wikitext_rent(r[1:]) for r in w.splitlines()
+                    if r.startswith("#") and not r.startswith("#:")]
+    return ({"finns": True, "etymologi": ety,
+             "definitioner": [d for d in definitioner if d][:6],
+             "avsnitt": {k: _wikitext_rent(v)[:300] for k, v in delar.items()
+                         if k in ("etymologi", "synonymer", "besläktade ord",
+                                  "antonymer")}},
+            status, byte)
 
 
 def _text(x):
@@ -116,6 +298,17 @@ def sammanfatta(data):
             "jfr": _plocka(källa, {"jfr", "se", "hänvisning", "synonym"})[:6],
             "märkning": _plocka(källa, {"stilmarkering", "bruklighet", "markering",
                                         "stil", "anvandning"})[:4],
+            # SO:s etymologi ligger i `historiskaUppgifter.etymologi`, inte i
+            # ett fält som heter "historik" -- det första försöket sökte på fel
+            # namn och gav tomt på varje ord, vilket såg ut som att SO saknade
+            # etymologi. Det gör den inte: 'estetik' ger "ur grekiska
+            # ai´sthesis 'förnimmelse; uppfattning'; jfr ursprung till
+            # anestesi". Det är BÄTTRE etymologi än svenska Wiktionary har.
+            "etymologi": _plocka(källa, {"etymologi"})[:3],
+            "första_belägg": _plocka(källa, {"förstaBeläggOchKälla"})[:2],
+            # Underbetydelser är SO:s "äv. om ..."-utvidgningar. De är ofta
+            # precis den andra betydelsen som saknats på korten.
+            "underbetydelser": _plocka(källa, {"typ"})[:6],
         }
     return s
 
@@ -126,6 +319,21 @@ def main():
     p.add_argument("--fil", help="JSON-lista eller {relearn:[],ovriga:[]}")
     p.add_argument("--antal", type=int, default=20)
     p.add_argument("--hoppa", type=int, default=0)
+    p.add_argument("--kompakt", action="store_true",
+                   help="kort textsammandrag i stället för full JSON")
+    # `--tyst` finns för att göra ETT bestämt misstag omöjligt att upprepa.
+    # Sammandraget är stort, så det är frestande att filtera utdata genom sed
+    # eller head för att spara kontext -- och då försvinner bevisraderna på
+    # vägen. Det hände 2026-08-09 (sex kort vägrades) och igen 2026-08-10 (elva
+    # kort vägrades), båda gångerna av samma orsak. Spärren hade rätt varje
+    # gång: bevis som inte syns i transkriptet är inget bevis.
+    #
+    # Rätt sätt att spara kontext är alltså att låta SKRIPTET tiga om
+    # innehållet, aldrig att filtrera bort dess utdata i efterhand. Med --tyst
+    # skrivs bevisraderna och trekällskontrollen, ingenting annat; innehållet
+    # ligger kvar i uppslag/<ord>.json.
+    p.add_argument("--tyst", action="store_true",
+                   help="skriv BARA bevisrader och trekällskontroll")
     a = p.parse_args()
 
     ord_ = list(a.ord)
@@ -139,23 +347,133 @@ def main():
         sys.exit("inga ord")
 
     os.makedirs(UTKAT, exist_ok=True)
-    sammandrag = {}
+    sammandrag, ofullstandiga = {}, {}
     for o in ord_:
+        post, kallor_med_innehall = {}, []
+
         data, status, byte = hamta(o)
-        # ---- BEVISRADEN. Skrivs av processen, inte av agenten. ----
+        # ---- BEVISRADERNA. Skrivs av processen, inte av agenten. ----
         print(f"SVENSKA_SE_HAMTAD {o} HTTP {status} {byte}")
         if data is None:
-            sammandrag[o] = {"FEL": f"HTTP {status}"}
-            continue
-        sh = hashlib.sha256(json.dumps(data, sort_keys=True).encode()).hexdigest()[:12]
-        json.dump({"ord": o, "url": API, "status": status, "sha": sh, "svar": data},
+            post["svenska_se"] = {"FEL": f"HTTP {status}"}
+        else:
+            post["svenska_se"] = sammanfatta(data)
+            if any(post["svenska_se"].get(b) for b in ("saol", "so")):
+                kallor_med_innehall.append("svenska.se")
+
+        syn, s_status, s_byte = hamta_synonymer(o)
+        print(f"SYNONYMER_SE_HAMTAD {o} HTTP {s_status} {s_byte}")
+        post["synonymer_se"] = syn if syn is not None else {"FEL": f"HTTP {s_status}"}
+        if syn and syn.get("finns"):
+            kallor_med_innehall.append("synonymer.se")
+
+        wik, w_status, w_byte = hamta_wiktionary(o)
+        print(f"WIKTIONARY_HAMTAD {o} HTTP {w_status} {w_byte}")
+        post["wiktionary"] = wik if wik is not None else {"FEL": f"HTTP {w_status}"}
+        if wik and wik.get("finns"):
+            kallor_med_innehall.append("wiktionary")
+
+        # Hela svaren sparas, inte bara sammandraget, så att en senare
+        # granskare kan läsa exakt vad källan sa i stället för min tolkning.
+        sh = hashlib.sha256(json.dumps(post, sort_keys=True, default=str)
+                            .encode()).hexdigest()[:12]
+        json.dump({"ord": o, "sha": sh,
+                   "urler": {"svenska.se": f"{API}?ord={o}",
+                             "synonymer.se": SYN_URL.format(o),
+                             "wiktionary": WIKT_URL.format(o)},
+                   "kallor_med_innehall": kallor_med_innehall,
+                   "svenska_se_ratt": data, "sammandrag": post},
                   open(os.path.join(UTKAT, f"{o}.json"), "w", encoding="utf-8"),
                   ensure_ascii=False)
-        sammandrag[o] = sammanfatta(data)
-        time.sleep(0.3)
+
+        post["_kallor"] = kallor_med_innehall
+        sammandrag[o] = post
+        if len(kallor_med_innehall) < 3:
+            # SKILJ på "källan saknar ordet" och "hämtningen misslyckades".
+            # Det första är ett besked om ordet och ska rödflagga kortet; det
+            # andra säger ingenting om ordet alls och ska göras om. Slås de
+            # ihop hamnar vanliga ord i bristlistan bara för att servern var
+            # trög, och listan blir värdelös som arbetsunderlag.
+            fel = [k for k, v in (("svenska.se", post["svenska_se"]),
+                                  ("synonymer.se", post["synonymer_se"]),
+                                  ("wiktionary", post["wiktionary"]))
+                   if isinstance(v, dict) and "FEL" in v]
+            ofullstandiga[o] = {"har": kallor_med_innehall,
+                                "hamtning_misslyckades": fel}
+        time.sleep(0.4)
 
     print("---SAMMANDRAG---")
-    print(json.dumps(sammandrag, ensure_ascii=False, indent=1))
+    if a.tyst:
+        print(f"(tyst läge — {len(ord_)} ord, innehållet ligger i {UTKAT}/)")
+    elif a.kompakt:
+        # Bara det som faktiskt behövs för att skriva ett kort. Fullständiga
+        # svar finns kvar i uppslag/<ord>.json och går att läsa när ett
+        # enskilt ord behöver granskas närmare.
+        #
+        # OBS: bevisraderna ovan skrivs ALLTID i sin helhet, även här. Att
+        # filtrera skriptets utdata genom något som råkade äta dem hände
+        # 2026-08-09 och fick spärren att (helt riktigt) vägra sex kort:
+        # bevis som inte syns är inget bevis.
+        for o, p in sammandrag.items():
+            sv_ = p.get("svenska_se") or {}
+            so = sv_.get("so") or {}
+            saol = sv_.get("saol") or {}
+            syn = (p.get("synonymer_se") or {}).get("avdelningar") or {}
+            wik = p.get("wiktionary") or {}
+            print(f"\n### {o}   [{', '.join(p.get('_kallor', [])) or 'INGEN KÄLLA'}]")
+            if so.get("def"):
+                print("  SO   :", " | ".join(so["def"]))
+            if so.get("underbetydelser"):
+                print("  SO+  :", " | ".join(so["underbetydelser"]))
+            if saol.get("def"):
+                print("  SAOL :", " | ".join(saol["def"]))
+            if so.get("exempel"):
+                print("  EX   :", " | ".join(so["exempel"][:3]))
+            if so.get("jfr"):
+                print("  JFR  :", ", ".join(so["jfr"]))
+            if so.get("etymologi"):
+                print("  ETYM :", " | ".join(so["etymologi"]))
+            elif wik.get("etymologi"):
+                print("  ETYM*:", wik["etymologi"][:200], "(Wiktionary)")
+            if so.get("första_belägg"):
+                print("  BELÄGG:", " | ".join(so["första_belägg"]))
+            for rubrik, lista in syn.items():
+                print(f"  SYN({rubrik}):", ", ".join(lista[:12]))
+            if wik.get("definitioner"):
+                print("  WIKT :", " | ".join(wik["definitioner"][:3]))
+    else:
+        print(json.dumps(sammandrag, ensure_ascii=False, indent=1))
+
+    # ---- TREKÄLLSKONTROLLEN (Adams krav 2026-08-10) ----
+    # Orden nedan saknar minst en av de tre källorna. De ska rödflaggas och
+    # gås igenom separat, inte skrivas som om de vore fullbelagda. Listan
+    # skrivs till fil också, eftersom en utskrift försvinner med sessionen.
+    print("---TREKALLSKONTROLL---")
+    print(json.dumps({"ofullstandiga": ofullstandiga,
+                      "antal_fullstandiga": len(ord_) - len(ofullstandiga),
+                      "antal_ord": len(ord_)}, ensure_ascii=False, indent=1))
+    bef = {}
+    if os.path.exists(BRISTLISTA):
+        bef = json.load(open(BRISTLISTA, encoding="utf-8"))
+    # Listan måste kunna STÄDA SIG SJÄLV. Nio ord (oknytt, damast, presumera,
+    # oktett, sondera, medaljong, trolsk, anblick, märla) hamnade i den när
+    # Wiktionary strypte anropen, och hade alla tre källorna vid omhämtning.
+    # Utan den här raden hade de legat kvar för alltid och fått nio helt
+    # normala kort rödflaggade. En bristlista som bara växer är en lista över
+    # historiska nätverksfel, inte över kort som behöver arbete.
+    lakta = [o for o in ord_ if o in bef and o not in ofullstandiga]
+    for o in lakta:
+        del bef[o]
+    bef.update({o: {**k, "sedd": time.strftime("%Y-%m-%d")}
+                for o, k in ofullstandiga.items()})
+    json.dump(bef, open(BRISTLISTA, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=1)
+    if lakta:
+        print(f"tog bort {len(lakta)} ord ur {BRISTLISTA} (har nu tre källor): "
+              f"{', '.join(lakta)}")
+    if ofullstandiga:
+        print(f"skrev {len(ofullstandiga)} ord till {BRISTLISTA} "
+              f"(totalt {len(bef)})")
 
 
 if __name__ == "__main__":

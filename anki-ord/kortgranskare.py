@@ -120,6 +120,34 @@ def _facit_betydelser(facit):
     return len(delar)
 
 
+def _bild(e, p):
+    """Bilden, hämtad i tur och ordning ur proposed, postens toppnivå, legacy
+    och SIST det kort som faktiskt ligger i Anki.
+
+    Sista ledet tillkom 2026-08-10, efter att tre kort (oknytt, damast, köl)
+    förlorat sina bilder i en enda batch. Uppslaget låg på postens toppnivå i
+    stället för i `proposed`, och den gamla raden
+
+        p.get("bild_html", (legacy or {}).get("bild_html"))
+
+    tolkade det som "ingen bild" -- alltså RADERA. Det är fel förval: en
+    saknad nyckel betyder att ingen uttalat sig om bilden, inte att den ska
+    bort. Samma buggklass kostade `faun` sin bild 2026-08-07 och är den enda
+    sorten som är osynlig i efterhand, eftersom ett kort utan bild ser precis
+    ut som ett kort som aldrig hade någon.
+
+    Vill man verkligen ta bort en bild: skriv `"bild_html": ""` uttryckligen.
+    Tom sträng är ett beslut, en saknad nyckel är det inte."""
+    for kalla in (p, e, e.get("legacy") or {}):
+        if "bild_html" in kalla:
+            return kalla["bild_html"]
+    try:
+        n = invoke("notesInfo", notes=[e["noteId"]])[0]
+        return baksida.parse(n["fields"][config.FIELD_BAKSIDA]["value"])["bild_html"]
+    except Exception:
+        return None
+
+
 # --------------------------------------------------------------- applicera
 def applicera(sokvag, granskare=None):
     poster = _las(sokvag)
@@ -158,7 +186,7 @@ def applicera(sokvag, granskare=None):
                 exempelmening=p.get("exempelmening", ""),
                 register=p.get("register"),
                 etymologi=p.get("etymologi"),
-                bild_html=p.get("bild_html", (e.get("legacy") or {}).get("bild_html")),
+                bild_html=_bild(e, p),
                 mode="sokkoll", escalated=True,
                 # kalla= är OBLIGATORISK sedan källspärren 2026-08-08. Utan
                 # den kastar apply_card() AssertionError för VARJE kort, och

@@ -17,15 +17,28 @@ FIELD_BAKSIDA = "Baksida"
 #   <font color="#3498db">synonym1, synonym2</font><br>
 #   <br>
 #   <i>mening med <font color="#3498db">ordet</font> markerat</i>
-#   [valfri <br><br>etymologi -- ren text, se nedan]
+#   [valfri <br><br><font color="#9e9e9e">→ etymologi</font>, se nedan]
 #   [valfri <br><br><img src="..." ...> sist, kort med bild]
 #
 # Etymologiraden (tillagd 2026-08-08 på Adams begäran): samma <br><br>-lucka
 # som mellan de övriga blocken, alltid efter exempelmeningen och före bilden.
-# Ren text -- ingen fet stil, ingen egen färg, samma regel som registerraden.
 # Tas BARA med när ursprunget gör betydelsen lättare att förstå eller minnas,
-# aldrig som språkhistorisk trivia. De flesta kort ska sakna den.
+# aldrig som språkhistorisk trivia.
+#
+# UTSEENDET ÄNDRAT 2026-08-10 (Adam valde mellan tre uppritade alternativ):
+# raden var förut ren text utan färg, vilket byggde på antagandet att
+# etymologin skulle vara sällsynt. Nu ska den finnas på varje kort där
+# ursprunget säger något -- och då blir en omarkerad textrad direkt efter en
+# KURSIV exempelmening svår att skilja från själva exemplet. Därför: egen grå
+# rad med inledande pil. Grå och inte fet, eftersom bara huvudbetydelsen får
+# vara fet (samma regel som registret) -- pilen bär igenkänningen i stället
+# för vikten, så raden går att hoppa över vid snabb repetition.
+#
+# Färgen är mellangrå med flit: den ska vara läsbar mot BÅDE Ankis ljusa och
+# mörka tema. En ljusare grå försvinner i dagläge, en mörkare i nattläge.
 SYNONYM_COLOR = "#3498db"
+ETYMOLOGI_COLOR = "#9e9e9e"
+ETYMOLOGI_PIL = "→"
 
 # Register-tagg: STÄNGD vokabulär, en tagg per axel max (se style_guide.md).
 # Fritext gled isär över 10k kort/flera pass tidigare (t.ex. fabricerade

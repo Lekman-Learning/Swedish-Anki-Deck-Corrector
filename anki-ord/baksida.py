@@ -67,6 +67,13 @@ _IMG_TAIL_RE = re.compile(r"((?:<br>\s*)+<img.*)$", re.DOTALL)
 # Skala upp offseten för att kompensera — justera denna konstant om
 # indraget fortfarande sitter fel.
 _REGISTER_INDENT_SCALE = 1.5
+# Etymologiraden lagras som ren text men RENDERAS grå med pil (2026-08-10).
+# De två mönstren tar av wrappern respektive pilen vid parse, så att
+# parse->build är idempotent. Färgen matchas löst (vilken hex som helst) för
+# att kort skrivna med en äldre färgkonstant fortfarande ska gå att läsa
+# tillbaka i stället för att tolkas som etymologitext med HTML i sig.
+_ETY_UNWRAP_RE = re.compile(r'^<font color="#[0-9a-fA-F]{3,6}">(.*)</font>$', re.DOTALL)
+_ETY_AVSKALNING_RE = re.compile(r"^\s*(?:→|->|&rarr;)\s*")
 
 
 def parse(baksida_html):
@@ -108,6 +115,14 @@ def parse(baksida_html):
     if img_i_svans:
         svans = svans[:img_i_svans.start()]
     etymologi = re.sub(r"^(?:\s*<br>\s*)+", "", svans).strip() or None
+    if etymologi:
+        # Skala av grå-wrappern och pilen så att modellen bär REN TEXT.
+        # Utan detta skulle nästa build() kapsla in en redan färgad rad i en
+        # ny <font> och skriva ut "→ → ..." -- samma tysta dubblering som
+        # bilden drabbades av 2026-08-07. Kort skrivna FÖRE 2026-08-10 saknar
+        # wrappern och passerar oförändrade, vilket är avsikten.
+        etymologi = _ETY_UNWRAP_RE.sub(r"\1", etymologi).strip()
+        etymologi = _ETY_AVSKALNING_RE.sub("", etymologi).strip() or None
 
     return {
         "huvudbetydelse": huvudbetydelse,
@@ -175,7 +190,13 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
     # Samma <br><br>-lucka som mellan de övriga blocken, och alltid FÖRE
     # bilden (Adams krav 2026-08-08). bild_html bär redan sina egna <br>.
     if etymologi:
-        parts.append(f"<br><br>{etymologi.strip()}")
+        # Grå rad med inledande pil (Adams val 2026-08-10, se config.py för
+        # varför). Etymologin LAGRAS som ren text -- pilen och färgen läggs på
+        # här och plockas av igen i parse(), så att en parse->build-runda ger
+        # exakt samma HTML tillbaka och inte kapslar in färgen två gånger.
+        ety = _ETY_AVSKALNING_RE.sub("", etymologi.strip()).strip()
+        parts.append(f'<br><br><font color="{config.ETYMOLOGI_COLOR}">'
+                     f'{config.ETYMOLOGI_PIL} {ety}</font>')
     if bild_html:
         parts.append(bild_html)
     return "".join(parts)
