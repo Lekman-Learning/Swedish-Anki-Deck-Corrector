@@ -384,21 +384,57 @@ def validate_register(register):
     for part in register.split(";"):
         part = part.strip()
         tags = [t.strip() for t in part.split(",")]
+
+        # Axeltilldelning kan INTE göras på medlemskap ensamt sedan 2026-08-10,
+        # eftersom `neutral` och `oklart` medvetet finns på flera axlar. Första
+        # versionen räknade dem mot varje axel de förekom i och larmade därför
+        # på `neutral, neutral` (marinera) -- det korrekta svaret för ett
+        # vanligt ord utan laddning. Regeln nedan är i stället:
+        #
+        #   entydig tagg  -> sin egen axel
+        #   tvetydig tagg -> första ÄNNU LEDIGA axeln, i ordningen
+        #                    stilnivå -> valör -> domän
+        #
+        # Det gör valideringen ordningstolerant: "neutral, starkt nedsättande"
+        # och "formell, neutral, juridik" tilldelas båda rätt utan att skribenten
+        # behöver minnas en fältordning.
+        AXLAR = [("stilnivå", config.REGISTER_FORMALITY),
+                 ("valör", config.REGISTER_VALENS),
+                 ("domän", config.REGISTER_DOMAN)]
+        kand = set().union(*(set(v) for _, v in AXLAR))
         warnings += [
-            f'okänd register-tagg "{tag}", inte i config.REGISTER_FORMALITY/REGISTER_VALENS'
-            for tag in tags
-            if tag not in config.REGISTER_FORMALITY and tag not in config.REGISTER_VALENS
+            f'okänd register-tagg "{tag}", inte i config.REGISTER_FORMALITY/'
+            f'REGISTER_VALENS/REGISTER_DOMAN'
+            for tag in tags if tag not in kand
         ]
-        formality_count = sum(1 for t in tags if t in config.REGISTER_FORMALITY)
-        valens_count = sum(1 for t in tags if t in config.REGISTER_VALENS)
-        # Minst en axel krävs totalt (kollas ovan via "if not register"). Båda
-        # axlarna fylls bara när båda GENUINT passar (beslutat 2026-08-04,
-        # nyanserat samma dag) — tvinga aldrig fram en gissad valör på ett
-        # neutralt substantiv/facktermer bara för att nå två taggar.
-        if formality_count > 1:
-            warnings.append(f'flera formalitets-taggar i "{part}", max en per axel')
-        if valens_count > 1:
-            warnings.append(f'flera valör-taggar i "{part}", max en per axel')
+
+        upptagen = {}
+        tvetydiga = []
+        for t in tags:
+            traffar = [namn for namn, v in AXLAR if t in v]
+            if len(traffar) == 1:
+                axel = traffar[0]
+                if axel in upptagen:
+                    warnings.append(
+                        f'flera {axel}-taggar i "{part}", max en per axel')
+                upptagen[axel] = t
+            elif len(traffar) > 1:
+                tvetydiga.append(t)
+        for t in tvetydiga:
+            ledig = next((namn for namn, _ in AXLAR if namn not in upptagen), None)
+            if ledig is None:
+                warnings.append(
+                    f'"{t}" i "{part}" får ingen ledig axel — alla tre är tagna')
+            else:
+                upptagen[ledig] = t
+
+        # Flykt-taggen är LAGLIG men aldrig tyst. Prefixet OKLART: gör den
+        # greppbar, så "hur ofta räckte inte vokabulären?" är en körbar fråga
+        # och inte en känsla. Se config.REGISTER_OKLART för resonemanget.
+        if config.REGISTER_OKLART in tags:
+            warnings.append(
+                f'OKLART: "{part}" använder flykt-taggen — lagligt, men räkna '
+                'dem: återkommer samma skäl behövs ett nytt värde i vokabulären')
     return warnings
 
 

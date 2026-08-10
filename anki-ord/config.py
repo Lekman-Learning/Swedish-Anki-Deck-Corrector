@@ -62,14 +62,70 @@ ETYMOLOGI_PIL = "→"
 # Kommentaren "omärkt = neutral" fanns här hela tiden, men frånvaro var
 # förbjuden -- vokabulären och den obligatoriska regeln sa emot varandra.
 # Ett explicit värde löser båda: raden blir ifylld OCH sann.
+# Flykt-taggen. Laglig på varje axel, men ALDRIG tyst: validate_register
+# rapporterar den särskilt, och `v3_taggkoll.py` kan räkna den.
+#
+# Varför den finns (Adams beslut 2026-08-10: "tillåt flexibilitet om den inte
+# hittar det"): en ÖPPEN vokabulär glider isär över 10 000 kort -- det är mätt,
+# och skälet till att listan låstes. Men en LÅST vokabulär som saknar rätt värde
+# tvingar fram en lögn, vilket är exakt hur 49 % av decket blev "formell".
+# Båda felen är verkliga, så valet står inte mellan dem.
+#
+# `oklart` är tredje vägen: den är sann (ingen påstår något falskt), den är
+# laglig (raden blir ifylld), och den är RÄKNAD. Använder 200 kort `oklart` av
+# samma skäl är det bevis för att ett nytt värde behövs -- och då växer
+# vokabulären på mätning i stället för gissning. En flykt-tagg som ingen räknar
+# är en lucka; en som räknas är ett mätinstrument.
+REGISTER_OKLART = "oklart"
+
+# Axel 1 -- STILNIVÅ. `neutral` är det normala fallet, inte ett misslyckande.
 REGISTER_FORMALITY = [
-    "neutral",
-    "arkaisk", "litterär", "formell", "vardaglig", "dialektal", "slang", "vulgär",
-]  # `neutral` = vanlig standardsvenska, det normala fallet
+    "neutral",          # vanlig standardsvenska -- VANLIGASTE RÄTTA SVARET
+    "vardaglig",
+    "slang",            # under vardaglig, gatuspråk
+    "vulgär",           # svordomar/tabuspråk, grövre än slang
+    "barnspråk",        # vovve, nalle
+    "dialektal",        # regional variant
+    "fackspråklig",     # teknisk stilnivå; VILKET fält anges i REGISTER_DOMAN
+    "formell",          # byråkratiskt/officiellt -- INTE "ovanligt" eller "fint"
+    "högtidlig",        # ceremoniellt/patetiskt: vigsel, hädanfärd
+    "litterär",         # poetiskt/bokspråk, LEVANDE men skriftligt
+    "ngt ålderdomlig",  # SAOL:s {ngt åld.} -- daterat men begripligt (pistong)
+    "arkaisk",          # UR BRUK
+    REGISTER_OKLART,
+]
+
+# Axel 2 -- VALÖR. `neutral` skrivs UT (Adams beslut 2026-08-10), inte utelämnas:
+# ett tomt fält och ett bedömt fält såg tidigare likadana ut.
 REGISTER_VALENS = [
-    "positiv", "lätt negativ", "negativ", "nedsättande", "skämtsam", "ironisk",
-    "eufemistisk",
-]  # omärkt = neutral
+    "neutral",             # ingen känsloladdning -- VANLIGASTE RÄTTA SVARET
+    "positiv",
+    "ömsint",              # kärleksfullt: älskling, raring
+    "skämtsam",
+    "ironisk",             # betyder motsatsen
+    "eufemistisk",         # mildrar hård verklighet: "gå bort"
+    "lätt negativ",
+    "negativ",
+    "nedsättande",         # om PERSONER
+    "starkt nedsättande",  # SO:s egen gradering, t.ex. pöbel
+    REGISTER_OKLART,
+]
+
+# Axel 3 -- FACKOMRÅDE. NY 2026-08-10. Valfri, oftast tom.
+#
+# style_guide.md har sedan 2026-08-04 sagt att ämnesdomän är "EN EGEN, separat
+# märkning -- blanda inte ihop dem", men den fanns aldrig i koden och användes
+# därför aldrig. Den blinda granskningen 2026-08-10 saknade den upprepade
+# gånger: `beskärm` är SO-märkt "särsk. bibliskt", `gensaga` "särsk. juridik",
+# `granulera` har en medicinsk betydelse, `bleke` en jordbruksbetydelse. Alla
+# fyra fick i stället en stilnivå-tagg som inte var sann.
+REGISTER_DOMAN = [
+    "juridik", "medicin", "biologi", "kemi", "fysik", "matematik", "teknik",
+    "IT", "ekonomi", "politik", "militär", "sjöfart", "jordbruk", "geologi",
+    "religion", "bibliskt", "filosofi", "psykologi", "lingvistik", "historia",
+    "musik", "konst", "litteraturvetenskap", "sport", "matlagning", "jakt",
+    REGISTER_OKLART,
+]
 
 # Flagg-nummer bekräftade via cardsInfo mot riktiga kort (2026-08-03):
 #   flag:1 (849 kort)  = Röd  = stämmer inte alls -> hög prioritet

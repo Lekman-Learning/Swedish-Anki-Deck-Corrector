@@ -147,16 +147,45 @@ Register-raden taggar HÖGST två oberoende axlar — mer blir övertaggning:
   > registerraden aldrig får vara tom hamnade halva decket (49,1 %) på
   > `formell` — inte av slarv, utan för att inget sant alternativ fanns.
   > Se kommentaren i `config.py`.
-- **Valör** (`config.REGISTER_VALENS`): `positiv` (genuint lovordande,
-  utöver neutralt — t.ex. "hedervärd") / `lätt negativ` / `negativ` /
-  `nedsättande` (starkare än negativ, används om PERSONER — t.ex. ett
-  öknamn) / `skämtsam` (lekfull/rolig ton) / `ironisk` (sarkastisk, ordet
+- **Valör** (`config.REGISTER_VALENS`): `neutral` (**ingen känsloladdning —
+  skrivs UT, utelämnas inte**) / `positiv` (genuint lovordande, utöver
+  neutralt — t.ex. "hedervärd") / `ömsint` (kärleksfullt: raring, älskling) /
+  `skämtsam` (lekfull/rolig ton) / `ironisk` (sarkastisk, ordet
   används för att mena motsatsen — t.ex. "det var ju succé" om ett
   misslyckande) / `eufemistisk` (mildrar en hård verklighet, t.ex. "gå
-  bort" för dö). Omärkt = neutral.
-- **Fackspråk/ämnesdomän** (t.ex. "(geo)" för geologiska termer) är EN
-  EGEN, separat märkning — inte del av register-axlarna ovan. Blanda inte
-  ihop dem.
+  bort" för dö) / `lätt negativ` / `negativ` /
+  `nedsättande` (starkare än negativ, används om PERSONER — t.ex. ett
+  öknamn) / `starkt nedsättande` (SO:s egen gradering, t.ex. *pöbel*).
+
+  > **`neutral` skrivs ut (Adams beslut 2026-08-10).** Tidigare betydde en
+  > tom valör "neutral", men ett fält som *aldrig bedömts* såg då exakt
+  > likadant ut som ett fält som bedömts till neutral. Samma sorts tysta
+  > tvetydighet som `formell`-problemet på den andra axeln.
+
+- **Fackområde** (`config.REGISTER_DOMAN`) — **NY axel 2026-08-10, valfri
+  och oftast tom.** Guiden har sedan 2026-08-04 sagt att ämnesdomän är "EN
+  EGEN, separat märkning", men den fanns aldrig i koden och användes därför
+  aldrig. Blindgranskningen 2026-08-10 saknade den fyra gånger: `beskärm`
+  är SO-märkt *"särsk. bibliskt"*, `gensaga` *"särsk. juridik"*, `granulera`
+  har en medicinsk betydelse, `bleke` en jordbruksbetydelse — alla fyra fick
+  i stället en stilnivå-tagg som inte var sann. Sätt den bara när ordet
+  faktiskt hör hemma i ett fackområde.
+
+### `oklart` — flykt-taggen (2026-08-10)
+
+Laglig på **varje** axel när vokabulären genuint inte räcker. Men den är
+aldrig tyst: `validate_register()` rapporterar den med prefixet `OKLART:`,
+så den går att räkna.
+
+**Poängen är att den är ett mätinstrument, inte en lucka.** En öppen
+vokabulär glider isär över 10 000 kort (mätt — det var därför listan låstes).
+En låst vokabulär som saknar rätt värde tvingar fram en lögn (mätt — det var
+så 49 % blev `formell`). `oklart` är tredje vägen: sann, laglig och räknad.
+Återkommer samma skäl på många kort är det **bevis** för att ett nytt värde
+behövs — och då växer vokabulären på mätning i stället för på gissning.
+
+Använd den inte av bekvämlighet. `neutral` är nästan alltid det rätta svaret
+för ett vanligt ord; `oklart` är för när du genuint inte kan avgöra.
 
 **Regler:**
 
