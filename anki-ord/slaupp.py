@@ -62,15 +62,25 @@ WIKT_URL = "https://sv.wiktionary.org/wiki/{}"
 BRISTLISTA = "tre_kallor_saknas.json"
 
 
-def _kropp(ord_):
+def _kropp(ord_, exakt=True):
     return {"debugDidYouMean": False,
-            **{k: {"index": v, "query": ord_, "exact_match": True,
+            **{k: {"index": v, "query": ord_, "exact_match": exakt,
                    "from": 0, "size": 30} for k, v in INDEX.items()}}
 
 
-def hamta(ord_, forsok=3):
-    """Returnerar (data, status, byte). Kastar aldrig — fel rapporteras."""
-    data = json.dumps(_kropp(ord_)).encode()
+def hamta(ord_, forsok=3, exakt=True):
+    """Returnerar (data, status, byte). Kastar aldrig — fel rapporteras.
+
+    `exakt=False` faller tillbaka på fritextsökning. Behövs eftersom
+    `exact_match` kräver att uppslagsordets EXAKTA form träffas: *loafer* gav
+    noll träffar därför att SAOL och SO har uppslaget under pluralformen
+    **loafers**. Ordet fanns hela tiden; frågan var för strikt. Upptäckt
+    2026-08-10 efter att Adam ifrågasatte att just det ordet skulle saknas i
+    ordböckerna -- han hade rätt.
+
+    Exakt sökning provas alltid först, eftersom fritext annars ger grannord
+    ('deg' för *degression*) som ser ut som träffar men inte är det."""
+    data = json.dumps(_kropp(ord_, exakt)).encode()
     hdr = {"Content-Type": "application/json", "User-Agent": "Mozilla/5.0",
            "Origin": "https://svenska.se", "Referer": "https://svenska.se/"}
     for n in range(forsok):
@@ -282,10 +292,36 @@ def _plocka(kalla, nycklar):
     return ut
 
 
+def _har_riktig_traff(data, ord_):
+    """Sant bara om nagon traff FAKTISKT galler uppslagsordet.
+
+    Fritextsokningen ar generos: 'degression' ger 'deg', 'flau' ger 'flad'.
+    Utan den har kontrollen hade fallbacken gjort saken varre an den strikta
+    sokningen -- den hade hittat grannord och rapporterat dem som belagg."""
+    mal = ord_.lower().replace(" ", "")
+    for bok in INDEX:
+        for t in (((data.get(bok) or {}).get("hits") or {}).get("hits") or []):
+            s = t.get("_source", {})
+            for nyckel in ("ortografi", "lemma", "grundform", "uppslagsord"):
+                v = _text(s.get(nyckel)).lower().replace(" ", "")
+                # bade exakt och bojd form godtas: loafer -> loafers
+                if v and (v == mal or v.startswith(mal) or mal.startswith(v)):
+                    return True
+    return False
+
+
 def sammanfatta(data):
     """Kompakt sammandrag — det agenten behöver läsa, inte hela svaret."""
+    # SAOB var med i HÄMTNINGEN men inte i sammanfattningen -- alltså hämtades
+    # den, betalades för, och kastades bort. Det gjorde att `flau` och
+    # `degression` rapporterades som "finns inte i någon ordbok" trots att SAOB
+    # har båda. Adam ifrågasatte just de orden 2026-08-10 och hade rätt.
+    #
+    # SAOB läses fortfarande som DJUP, inte som facit för dagens betydelser
+    # (den är från tidigt 1900-tal) -- men "ordet finns inte" och "ordet finns
+    # bara i den gamla ordboken" är två helt olika besked om ett kort.
     s = {}
-    for bok in ("saol", "so"):
+    for bok in ("saol", "so", "saob"):
         träffar = (((data or {}).get(bok) or {}).get("hits") or {}).get("hits") or []
         if not träffar:
             s[bok] = None
@@ -352,13 +388,26 @@ def main():
         post, kallor_med_innehall = {}, []
 
         data, status, byte = hamta(o)
+        # Gav den exakta sokningen ingenting alls? Prova fritext en gang.
+        # Traffarna maste kontrolleras mot uppslagsordet efterat -- fritext
+        # returnerar grannord ('deg' for degression) som inte ar traffar.
+        if data is not None and not any(
+                ((data.get(b) or {}).get("hits") or {}).get("hits")
+                for b in INDEX):
+            fri, f_status, f_byte = hamta(o, exakt=False)
+            if fri is not None and _har_riktig_traff(fri, o):
+                data, status, byte = fri, f_status, f_byte
         # ---- BEVISRADERNA. Skrivs av processen, inte av agenten. ----
         print(f"SVENSKA_SE_HAMTAD {o} HTTP {status} {byte}")
         if data is None:
             post["svenska_se"] = {"FEL": f"HTTP {status}"}
         else:
             post["svenska_se"] = sammanfatta(data)
-            if any(post["svenska_se"].get(b) for b in ("saol", "so")):
+            # SAOB raknas med. Den avgor inte dagens betydelser -- men "finns
+            # bara i SAOB" ar ett annat besked an "finns inte alls", och det
+            # var just den skillnaden som gick forlorad pa `flau` och
+            # `degression` fram till 2026-08-10.
+            if any(post["svenska_se"].get(b) for b in ("saol", "so", "saob")):
                 kallor_med_innehall.append("svenska.se")
 
         syn, s_status, s_byte = hamta_synonymer(o)

@@ -1,0 +1,202 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080619658,
+      "ord": "extraordinär",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ovanlig, utöver det vanliga",
+        "register": "formell",
+        "synonymer": [
+          "enastående",
+          "exceptionell",
+          "utomordentlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon gjorde en <font color=\"#3498db\">extraordinär</font> insats.",
+        "etymologi": "Latin extra ordinem, 'utanför ordningen'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080621311,
+      "ord": "förvissning",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fast inre säkerhet om att något förhåller sig på ett visst sätt",
+        "register": "formell",
+        "synonymer": [
+          "övertygelse",
+          "visshet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han körde om i den fasta <font color=\"#3498db\">förvissningen</font> att den mötande bilen skulle väja.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619671,
+      "ord": "effeminerad",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som uppfattas som omanlig eller kvinnlig i sätt",
+        "register": "litterär, nedsättande",
+        "synonymer": [
+          "förkvinnligad",
+          "förvekligad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han beskrevs föraktfullt som <font color=\"#3498db\">effeminerad</font>.",
+        "etymologi": "Latin femina 'kvinna' — samma ord som feminin."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619828,
+      "ord": "neslig",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så illa att det drar vanära över någon",
+        "register": "negativ",
+        "synonymer": [
+          "skamlig",
+          "förnedrande",
+          "vanhedrande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Laget led ett <font color=\"#3498db\">nesligt</font> nederlag med tio bollar.",
+        "etymologi": "Byggt på det gamla ordet nesa, som betyder vanära."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619748,
+      "ord": "affektiv",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som rör känslolivet ; i medicin: som rör stämningsläget, som i 'affektiv störning'",
+        "register": "formell",
+        "synonymer": [
+          "känslomässig",
+          "känsloladdad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick diagnosen <font color=\"#3498db\">affektiv</font> störning efter flera år av kraftiga humörsvängningar.",
+        "etymologi": "Avledning till affekt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080621337,
+      "ord": "pöbel",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föraktfullt om folk ur samhällets lägsta skikt ; en folkhop som ställer till upplopp",
+        "register": "nedsättande",
+        "synonymer": [
+          "mobb",
+          "slödder"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Pöbeln</font> vandaliserade och plundrade butikerna.",
+        "etymologi": "Av latinets populus, 'folk' — samma ord som populär."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619547,
+      "ord": "vedervåga",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Riskera något värdefullt ; våga sig på något farligt",
+        "register": "litterär",
+        "synonymer": [
+          "sätta på spel",
+          "äventyra",
+          "våga sig på"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ingen i besättningen ville <font color=\"#3498db\">vedervåga</font> sitt liv på isen så här sent på våren.",
+        "etymologi": "veder- betyder 'mot', som i vedergällning — att våga något mot en risk."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619722,
+      "ord": "kalibrera",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ställa in ett instrument mot en känd referens så det mäter rätt",
+        "register": "formell",
+        "synonymer": [
+          "justera",
+          "finjustera",
+          "ställa in",
+          "nollställa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Teknikern <font color=\"#3498db\">kalibrerade</font> vågen innan mätningen.",
+        "etymologi": "Till kaliber — ordet kom från uppmätning av eldvapens kaliber."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628826,
+      "ord": "ett kok stryk",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En rejäl omgång stryk",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "smörj",
+          "en omgång stryk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick <font color=\"#3498db\">ett kok stryk</font> för sitt dåliga beteende.",
+        "etymologi": "kok = en portion som kokas på en gång — alltså en portion stryk, som ett kok äppelmos."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619630,
+      "ord": "fascikel",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En bunt papper eller skrifter som hör ihop",
+        "register": "formell",
+        "synonymer": [
+          "häfte",
+          "pappersbunt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Romanen gavs ut i <font color=\"#3498db\">fascikler</font>, en varje månad.",
+        "etymologi": "Av latinets fasciculus, 'litet knippe' — samma ord som gav oss fascism (knippet var Roms maktsymbol)."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}
