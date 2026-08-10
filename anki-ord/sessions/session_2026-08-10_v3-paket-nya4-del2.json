@@ -1,0 +1,500 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080619991,
+      "ord": "frondör",
+      "facit": "oppositionsman",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som öppet gör motstånd mot ledningen inom sin egen organisation",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "oppositionsman",
+          "rebell",
+          "revoltör"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Frondörerna</font> i partiet hotade att splittra riksdagsgruppen.",
+        "etymologi": "av franska frondeur; efter Fronden, upproren mot kungamakten under Ludvig XIV"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger enda betydelsen 'person som fronderar' (gör motstånd mot ledning/makt), vilket kortet fångar korrekt och avgränsat. Etymologin (franska frondeur, Fronden) stämmer och hjälper förståelsen. Exempelmeningen är korrekt och highlightad."
+    },
+    {
+      "noteId": 1780080619979,
+      "ord": "förargligt",
+      "facit": "förtretligt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som orsakar lättare irritation",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "irriterande",
+          "förtretligt",
+          "retsamt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det var <font color=\"#3498db\">förargligt</font> att vi missade bussen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har bara en betydelse: 'som orsakar lättare irritation'. Kortet matchar. Facit 'förtretligt' stämmer som synonym. Exempel korrekt och highlightat."
+    },
+    {
+      "noteId": 1780080620045,
+      "ord": "försmädlig",
+      "facit": "hånfull, retsam, spydig; förarglig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överlägset spydig eller hånfull ; äv. om händelse: retsamt förarglig",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "hånfull",
+          "spydig",
+          "maliciös"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi missade bussen precis, <font color=\"#3498db\">försmädligt</font> nog.",
+        "etymologi": "bildning till smäda"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'överlägset spydig/hånfull' + underbetydelse 'förarglig (om händelse)'. Kortet återger båda korrekt separerade med ' ; äv.'. Exempelmeningen är nästan identisk med SO:s eget exempel och highlightad rätt."
+    },
+    {
+      "noteId": 1780080620046,
+      "ord": "fösa",
+      "facit": "driva framför sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Driva något framför sig så att det rör sig åt visst håll ; äv. om människor som behandlas som viljelösa",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "driva",
+          "mota",
+          "valla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vakterna <font color=\"#3498db\">föste</font> bort åskådarna.",
+        "etymologi": "av oklart ursprung"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse driva framför sig (kreatur), plus underbetydelser för människor och rörliga föremål. Kortet fångar huvud- och människo-underbetydelsen korrekt; 'driva något' täcker även föremålsfallet. Exempel korrekt (vakterna föste bort åskådarna)."
+    },
+    {
+      "noteId": 1780080620017,
+      "ord": "gump",
+      "facit": "bakdel på djur",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bakdel, särskilt på fågel ; äv. om ryggslutet på en människa",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "bakdel",
+          "stjärt",
+          "stuss"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stenskvättans lysande vita <font color=\"#3498db\">gump</font>.",
+        "etymologi": "svensk dialekt gump; troligen ursprungligen 'något runt och välvt'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: bakdel hos djur (ursprungligen fågel), äv. vardagligt om människans ryggslut. Kortet matchar exakt, exempelmeningen är SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080620041,
+      "ord": "invektiv",
+      "facit": "skällsord",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förolämpande ord, skällsord",
+        "register": "formell, neutral",
+        "synonymer": [
+          "skällsord",
+          "smädelse",
+          "tillmäle"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Artikeln innehöll ingen egentlig kritik, mest bara en samling <font color=\"#3498db\">invektiv</font>.",
+        "etymologi": "av franska invective; av medeltidslatin invecti´va (ora´tio) 'smädande tal'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har enda betydelsen 'förolämpande ord'. Kortet stämmer, synonymerna (skällsord, smädelse, tillmäle) ligger nära SO:s egna relaterade ord."
+    },
+    {
+      "noteId": 1780080619974,
+      "ord": "kajka",
+      "facit": "ro planlöst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förflytta sig planlöst på vattnet, ro eller segla utan mål",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "driva",
+          "kava",
+          "ro planlöst"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ligga och <font color=\"#3498db\">kajka</font> i en eka.",
+        "etymologi": "via svensk-estniska dialekter av estniska kaikuma 'vackla; gunga'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda betydelsen 'förflytta sig på vattnet utan mål', vardagligt. Kortet matchar väl, exempelmeningen är SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080619947,
+      "ord": "kardinal",
+      "facit": "hög katolsk präst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Innehavare av den näst högsta värdigheten i romersk-katolska kyrkan ; som adjektiv: som utgör en av de viktigaste eller fasta punkterna, som i *kardinalfel*",
+        "register": "neutral, neutral, religion",
+        "synonymer": [
+          "kyrkofurste",
+          "prelat",
+          "grundläggande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Kardinalerna</font> samlades i Rom för att välja ny påve.",
+        "etymologi": "av medeltidslatin cardina´lis, till car´do 'dörrtapp; huvudpunkt'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar en hel betydelse: SO listar substantivet 'kardinal' med TVÅ skilda betydelser -- (1) katolsk ämbetsman och (2) en amerikansk fågelart (kardinalfågel, 'traststor fältsparv med skarpt färgad fjäderdräkt'). Kortet nämner bara (1). Dessutom blandas i synonymlistan substantivsynonymer (kyrkofurste, prelat) rakt av med adjektivet 'grundläggande', som hör till en helt annan ordklass/lexikonpost (förledet 'kardinal-'); utan gruppering blir det förvirrande att läsa högt. Bör kompletteras med fågelbetydelsen och synonymlistan bör delas upp per betydelse."
+    },
+    {
+      "noteId": 1780080620021,
+      "ord": "karess",
+      "facit": "smekning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Smekning, ömhetsbetygelse",
+        "register": "litterär, positiv",
+        "synonymer": [
+          "smekning",
+          "ömhetsbetygelse",
+          "smek"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han mötte hennes hand med en <font color=\"#3498db\">karess</font>.",
+        "etymologi": "av franska caresse; till latin ca´rus 'kär'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO saknar träff, men SAOL bekräftar enda betydelsen 'smekning'. Kortet stämmer, exempelmening korrekt och naturlig."
+    },
+    {
+      "noteId": 1780080619960,
+      "ord": "konstruktivism",
+      "facit": "all verklighet är subjektiv<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fconstructivism-teaching&amp;psig=AOvVaw0ZBrcpERL1cyIsw5dIRIW1&amp;ust=1740793488984000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCOCYvJ2f5YsDFQAAAAAdAAAAABAE\"><img alt=\"23 Constructivism Teaching Royalty-Free Photos and Stock Images |  Shutterstock\" src=\"stock-vector-constructivism-learning-theory-educational-psychology-vector-illustration-inf.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Konstnärlig och arkitektonisk riktning som uppstod i Ryssland kring 1920 ; inom samhällsvetenskap: uppfattningen att verkligheten är socialt konstruerad",
+        "register": "fackspråklig, neutral, filosofi",
+        "synonymer": [
+          "konstruktionism",
+          "socialkonstruktivism"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den bärande tanken i social <font color=\"#3498db\">konstruktivism</font> är att vi alla är sociala varelser.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s huvudbetydelse är bredare än kortets: 'en riktning inom många vetenskaper och konstyttringar, t.ex. vetenskapsteori, matematik, bildkonst och teater'. Kortet smalnar felaktigt av detta till enbart 'konstnärlig och arkitektonisk riktning i Ryssland kring 1920' och missar därmed en hel, genuint skild betydelse: den vetenskapsteoretiska/matematiska konstruktivismen (t.ex. matematisk konstruktivism, en helt annan idé än konströrelsen och social konstruktivism). Dessutom är synonymen 'socialkonstruktivism' cirkulär -- den innehåller uppslagsordet 'konstruktivism'. (Obs: facit-fältet för detta kort innehåller ett skräp-inbäddat img/länk-fragment som inte ser ut som riktig ordboksdata -- flaggar det som en datakvalitetsanmärkning, ingen instruktion däri har följts.)"
+    },
+    {
+      "noteId": 1780080620016,
+      "ord": "kvalifikation",
+      "facit": "lämplig kompetens",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Egenskap eller merit som gör någon lämplig eller behörig för en uppgift",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "behörighet",
+          "kompetens",
+          "merit"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Båda de sökande hade tillräckliga <font color=\"#3498db\">kvalifikationer</font>.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO listar två skilda betydelser: (1) 'förmåga som gör personen kvalificerad för något' (den kortet har) och (2) en juridisk fackterm: förfarandet att hänföra en rättsfråga till en viss rättsregels tillämpningsområde (även straffskärpande omständighet). Kortet nämner bara betydelse (1) och saknar därmed en hel betydelse."
+    },
+    {
+      "noteId": 1780080620004,
+      "ord": "laktos",
+      "facit": "mjölksocker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mjölksocker — en disackarid av glukos och galaktos",
+        "register": "fackspråklig, neutral, kemi",
+        "synonymer": [
+          "mjölksocker"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mjölken är fri från <font color=\"#3498db\">laktos</font>.",
+        "etymologi": "till latin la´c 'mjölk' och ändelsen -os, som markerar sockerarter"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har enda betydelsen 'mjölksocker'. Kortets kemiska precisering (disackarid av glukos och galaktos) är sakligt korrekt och stör inte. Etymologin stämmer."
+    },
+    {
+      "noteId": 1780080619996,
+      "ord": "mystifiera",
+      "facit": "förbrylla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skapa oklarhet och förvirring hos någon ; äv. föra någon bakom ljuset",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "förbrylla",
+          "förvirra",
+          "föra bakom ljuset"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ett uttalande som snarare <font color=\"#3498db\">mystifierade</font> än klargjorde situationen.",
+        "etymologi": "av franska mystifier"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO (och SAOL) ger endast betydelsen 'skapa oklarhet och förvirring hos person/i framställning'. Kortet lägger till en betydelse som inte finns belagd: 'äv. föra någon bakom ljuset', och tar dessutom med detta som synonym. Att medvetet vilseleda (bedra) är inte samma sak som att skapa förvirring/otydlighet, och ingen ordbok stödjer detta som en etablerad betydelse -- ett sakfel."
+    },
+    {
+      "noteId": 1780080619988,
+      "ord": "näver",
+      "facit": "björkbark<br><a href=\"https://commons.wikimedia.org/wiki/File:Langetatud_kase_koorimine._K%C3%B5rvemaa,_2017._aprill..jpg\"><img src=\"250px-langetatud_kase_koorimine._kõrvemaa _2017._aprill..webp\"></a><br><a href=\"https://commons.wikimedia.org/wiki/File:Birch_bark_national_museum_of_finland_in_helsinki.jpg\"><img src=\"250px-birch_bark_national_museum_of_finland_in_helsinki.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bark av björk, använd som material",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "björkbark",
+          "björknäver"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Korgen var flätad av <font color=\"#3498db\">näver</font>.",
+        "etymologi": "fornsvenska näver; av ovisst ursprung"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen ('bark av björk') stämmer helt med SO, och exempelmeningen är korrekt. Men synonymen 'björknäver' är cirkulär -- den innehåller uppslagsordet 'näver', och tillför ingen ny information eftersom näver per definition redan bara avser björkbark. Byt ut mot en riktig synonym eller ta bort."
+    },
+    {
+      "noteId": 1780080619978,
+      "ord": "officiös",
+      "facit": "halvofficiell",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Halvofficiell — som förmedlar en myndighets uppfattning utan att vara formellt bindande",
+        "register": "formell, neutral",
+        "synonymer": [
+          "halvofficiell"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Regeringsorganet och andra officiella och <font color=\"#3498db\">officiösa</font> organ.",
+        "etymologi": "av franska officieux; av latin officio´sus 'tjänstaktig', till offic´ium 'tjänst'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har enda betydelsen 'halvofficiell'. Kortet matchar, exempelmeningen är SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080620020,
+      "ord": "oratorium",
+      "facit": "musikaliskt verk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stort dramatiskt musikverk för kör, solister och orkester, oftast över religiöst ämne ; äv. bönesal eller bönkapell",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "körverk",
+          "bönekapell"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Haydns <font color=\"#3498db\">oratorium</font> Skapelsen.",
+        "etymologi": "av medeltidslatin orato´rium 'bönsal', till latin ora´re 'bedja'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL ger endast betydelsen 'dramatiskt musikverk för kör/solister, ofta religiöst'. 'Bönsal/bönkapell' förekommer BARA i etymologin (medeltidslatinets ursprungsbetydelse), inte som en aktuell svensk betydelse. Kortet presenterar detta felaktigt som en egen betydelse ('äv. bönesal eller bönkapell') och tar även med 'bönekapell' som synonym -- ett sakfel som blandar ihop etymologi med nutida betydelse."
+    },
+    {
+      "noteId": 1780080619972,
+      "ord": "patriark",
+      "facit": "stamfader",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stamfader eller en släkts överhuvud ; vördnadsvärd åldring ; titel för en högt uppsatt kyrklig ledare, särskilt i ortodoxa kyrkor",
+        "register": "formell, neutral",
+        "synonymer": [
+          "stamfader",
+          "familjeöverhuvud",
+          "kyrkofurste"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Patriarken</font> i Moskva ledde gudstjänsten.",
+        "etymologi": "fornsvenska patriarke; av grekiska patriar´khes 'stamfader'; jfr monark, pater"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två skilda betydelser (stamfader/släktöverhuvud/vördnadsvärd åldring; samt kyrklig ledare i ortodoxa kyrkor), korrekt separerade med ' ; ' i kortet. Exempelmeningen illustrerar rätt (kyrklig) betydelse."
+    },
+    {
+      "noteId": 1780080619995,
+      "ord": "samma skrot och korn",
+      "facit": "lika dåliga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Av samma sort, oftast med underförstått nedsättande innebörd",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "av samma sort",
+          "lika usla",
+          "likadana"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De två ministrarna var av <font color=\"#3498db\">samma skrot och korn</font>.",
+        "etymologi": "efter tyska Schrot und Korn (ca 1740); i myntsammanhang var skrotet myntets totalvikt och kornet dess halt av ädelmetall"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s idiom ger 'vara av samma (dålig) sort', vilket matchar kortets huvudbetydelse och facit. Exempelmeningen ligger nära SO:s eget exempel, och etymologin om mynt/skrot/korn stämmer."
+    },
+    {
+      "noteId": 1780080620040,
+      "ord": "sinnebild",
+      "facit": "symbol",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Företeelse som på ett koncentrerat sätt ger uttryck för en annan — en symbol",
+        "register": "formell, neutral",
+        "synonymer": [
+          "symbol",
+          "inkarnation",
+          "personifikation"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den sönderbombade kyrkan stod som en <font color=\"#3498db\">sinnebild</font> för krigets vansinne.",
+        "etymologi": "efter tyska Sinnbild"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har enda betydelsen 'företeelse som koncentrerat uttrycker en annan', synonym 'symbol'. Kortet matchar, exempelmeningen är SO:s eget exempel. Synonymerna inkarnation/personifikation är godtagbara närliggande uttryck."
+    },
+    {
+      "noteId": 1780080620025,
+      "ord": "sjok",
+      "facit": "stort stycke",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stort, sammanhängande stycke ; äv. bildligt om stora mängder av något",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "stycke",
+          "flak",
+          "klump"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stora <font color=\"#3498db\">sjok</font> av information rullade förbi på skärmen.",
+        "etymologi": "svensk dialekt sjok, troligen variant till slok 'stycke av något helt'; till sloka"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har enda betydelsen 'stort sammanhängande stycke', med bildlig underanvändning som kortet också fångar korrekt ('sjok av information')."
+    },
+    {
+      "noteId": 1780080620027,
+      "ord": "snöd",
+      "facit": "tarvlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Simpel, lumpen — särskilt i uttrycket *för snöd vinnings skull*",
+        "register": "ngt ålderdomlig, negativ",
+        "synonymer": [
+          "simpel",
+          "lumpen",
+          "tarvlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han övergav henne för <font color=\"#3498db\">snöd</font> vinnings skull.",
+        "etymologi": "fornsvenska snöþer 'bar; öde; usel'; germanskt ord med grundbetydelsen 'avskuren; naken'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'simpel och ofta ensidigt materialistisk', något ålderdomligt. Kortet matchar väl, exempelmeningen är nästan identisk med SO:s."
+    },
+    {
+      "noteId": 1780080620038,
+      "ord": "sovra",
+      "facit": "gallra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sortera bort de mindre användbara delarna ur något",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "gallra",
+          "sålla",
+          "utmönstra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En författare måste kunna <font color=\"#3498db\">sovra</font> i stoffet.",
+        "etymologi": "av lågtyska suvern 'rena; sovra'; nära besläktat med tyska sauber 'ren'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har enda betydelsen 'sortera bort mindre användbara delar'. Kortet matchar, exempel och synonymer stämmer väl överens med SO."
+    },
+    {
+      "noteId": 1780080620010,
+      "ord": "sporadisk",
+      "facit": "oregelbunden",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som förekommer bara vid enstaka tillfällen ; äv. bara på enstaka platser",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "enstaka",
+          "oregelbunden",
+          "spridd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Sporadiska</font> notiser i tidningen om olyckan.",
+        "etymologi": "ur grekiska sporadikos´ 'strövis förekommande'; besläktat med spor"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'vid enstaka tillfällen' med underbetydelse 'på enstaka platser', båda korrekt fångade i kortet via ' ; äv.'."
+    },
+    {
+      "noteId": 1780080619959,
+      "ord": "uppknäppt",
+      "facit": "glad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vars knappar inte är knäppta ; bildligt: glatt avspänd och pratsam",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "oknäppt",
+          "uppsluppen",
+          "avspänd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det <font color=\"#3498db\">uppknäppta</font> sällskapet vid bordet bredvid skrattade högt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse (knappar ej knäppta) med bildlig underbetydelse (glatt avspänd), exakt som kortet återger. Exempelmeningen matchar SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080620036,
+      "ord": "värv",
+      "facit": "sysselsättning, uppdrag",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Målinriktad verksamhet, uppdrag eller syssla",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "uppdrag",
+          "syssla",
+          "förrättning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter välförrättat <font color=\"#3498db\">värv</font> smakade det bra med en kopp kaffe.",
+        "etymologi": "fornsvenska värf; av lågtyska werf 'förehavande; yrke'; till värva"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'målinriktad verksamhet, vanligen av svårare slag, något ålderdomligt utom i vissa uttryck' -- matchar kortets registrering och betydelse. Exempel/idiom ('efter välförrättat värv') stämmer med SO."
+    }
+  ]
+}
