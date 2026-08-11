@@ -1,0 +1,200 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080619696,
+      "ord": "oval",
+      "facit": "äggformad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har en sluten, långsträckt och rundad form ; figur med sådan form",
+        "register": "formell, neutral, matematik",
+        "synonymer": [
+          "äggrund",
+          "avlångt rund",
+          "ellips"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bordet i matsalen var <font color=\"#3498db\">ovalt</font>.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen stämmer mot SO (adjektiv + substantiv, korrekt separerade med ' ; '), men två fel: (1) registret 'formell, neutral, matematik' är fel — 'oval' är ett extremt vanligt vardagsord (SO popularitet 9673) utan facktermmärkning, borde vara 'vardaglig/neutral, allmän'; (2) synonymen 'ellips' är inte korrekt utbytbar — en ellips är en exakt symmetrisk matematisk kurva, medan oval (jfr etymologin, ägg) ofta är osymmetrisk. SO:s egen synonym är adjektivet 'elliptisk', inte substantivet 'ellips'."
+    },
+    {
+      "noteId": 1780080620228,
+      "ord": "utröna",
+      "facit": "ta reda på",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ta reda på något genom en noggrann undersökning",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "ta reda på",
+          "fastställa",
+          "konstatera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Polisen försökte <font color=\"#3498db\">utröna</font> vem som stod bakom det mystiska rånet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Stämmer mot SO: 'ta reda på okända fakta genom ingående undersökning'. Enda betydelsen, korrekt ledande. Synonymerna (ta reda på, fastställa, konstatera) ligger nära grannbetydelsen, ej cirkulära. Exempelmeningen är sakligt och grammatiskt korrekt och ordet highlightat. Register (formell) rimligt för ett skriftspråkligt ord."
+    },
+    {
+      "noteId": 1780080623428,
+      "ord": "struva",
+      "facit": "flottyrkokt bakverk<br><a href=\"https://www.google.com/imgres?q=struva&amp;imgurl=https%3A%2F%2Fmedia.martinservera.se%2Fw_1440%2Cq_auto%2Cf_auto%2Fprod%2Fmartinservera%2Fprodukt%2F3%2F266%2F516%2FDV02_07315360000533-7315360000007_03.png&amp;imgrefurl=https%3A%2F%2Fwww.martinservera.se%2Fprodukter%2F039081%2Fstruva-11g&amp;docid=9tJZb9QL2qSgEM&amp;tbnid=XSX7Sry0Kg4x1M&amp;vet=12ahUKEwjj7L_769OLAxWGGxAIHXBREdIQM3oECBoQAA..i&amp;w=1440&amp;h=1258&amp;hcb=2&amp;ved=2ahUKEwjj7L_769OLAxWGGxAIHXBREdIQM3oECBoQAA\"><div><div><div><img alt=\"Struva 11g - Kakor | Martin &amp; Servera\" src=\"paste-aa1ceb5669bd43a14c897c708a3691b6e9483df4.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Flottyrkokt sött bakverk ; (finlandssvenska) flottyrkokt bakverk som äts kring första maj",
+        "register": "vardaglig, neutral, matlagning",
+        "synonymer": [
+          "flottyrkokt bakverk",
+          "klenät"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Struvorna</font> serverades varma med kräm och sylt.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Den dubbla huvudbetydelsen (allmän / finlandssvensk kring första maj) matchar SAOL nästan ordagrant, så det är korrekt och inte en lucka. Men synonymen 'klenät' är fel: klenät är ett annat friterat bakverk (vridet/diamantformat, bakas enligt SO 'särsk. till jul'), medan struva formas med struvjärn och äts bl.a. kring första maj. De är släktbakverk men inte utbytbara ord — en inlärare skulle lära sig fel."
+    },
+    {
+      "noteId": 1780080620830,
+      "ord": "sandrevel",
+      "facit": "revel, sandrev<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Falvarsamt2.wordpress.com%2F2022%2F12%2F16%2Fsandreveln-nasta%2F&amp;psig=AOvVaw2kXIVAgQ_soFXSNAHxWaJS&amp;ust=1757114488559000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBUQjRxqFwoTCIj7hNmfwI8DFQAAAAAdAAAAABAJ\"><img alt=\"Sandreveln nästa! | alvarsamt2\" src=\"sandreveln.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Långsträckt sandbank i vatten",
+        "register": "formell, neutral, geologi",
+        "synonymer": [
+          "sandrev",
+          "revel",
+          "sandbank"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid lågvatten dök en lång <font color=\"#3498db\">sandrevel</font> upp mitt i sundet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'sandavlagring ute i vattnet längs kusten, synlig över vattenytan' — kortets 'långsträckt sandbank i vatten' är en rimlig, korrekt förenkling. Synonymerna sandrev/revel/sandbank stämmer (SO ger sandrev som cohyponym), inte cirkulära. Exempelmeningen illustrerar korrekt (lågvatten, sandrevel syns), highlightad."
+    },
+    {
+      "noteId": 1780080623134,
+      "ord": "bildlig",
+      "facit": "ej bokstavligt menad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Använd i överförd betydelse, inte bokstavlig",
+        "register": "formell, neutral, lingvistik",
+        "synonymer": [
+          "figurlig",
+          "metaforisk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En stor man, i både bokstavlig och <font color=\"#3498db\">bildlig</font> bemärkelse.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse: 'som uttolkas i form av en liknelse' / om språkligt uttryck. Synonymerna figurlig/metaforisk är korrekta och utbytbara. Exempelmeningen är hämtad rakt ur SO:s eget exempel och är sakligt/grammatiskt korrekt, ordet highlightat."
+    },
+    {
+      "noteId": 1780080622547,
+      "ord": "fnöske",
+      "facit": "lättantändligt svampmaterial<br><a href=\"https://commons.wikimedia.org/wiki/File:Fomes_fomentarius_2009_G2.jpg\"><img src=\"400px-fomes_fomentarius_2009_g2.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Torrt, lättantändligt material av fnöskticka, används för att tända eld",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "tändsvamp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Förr var <font color=\"#3498db\">fnöske</font> en viktig handelsvara.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'lättantändlig porös massa av fnöskticka, förr anv. i elddon'. Synonymen 'tändsvamp' bekräftad som verklig synonym (bl.a. synonymer.se). Exempelmeningen är SO:s eget syntex-exempel, highlightad korrekt."
+    },
+    {
+      "noteId": 1780080619958,
+      "ord": "kampanil",
+      "facit": "klocktorn",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fristående klocktorn vid en kyrka",
+        "register": "formell, neutral, konst",
+        "synonymer": [
+          "klocktorn"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Kampanilen</font> på torget syntes över hela staden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'fristående klocktorn, vanligen till kyrka'. Synonymen klocktorn rimlig (SO:s cohyponym kyrktorn). Exempelmeningen sakligt rimlig (kampaniler finns ofta vid kyrktorg), highlightad. Endast en betydelse i SO, ingen lucka."
+    },
+    {
+      "noteId": 1780080625622,
+      "ord": "nematod",
+      "facit": "rundmask<br><div><div><div><a href=\"https://www.google.com/imgres?q=nematode&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FCelegansGoldsteinLabUNC.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FNematode&amp;docid=3y3AL3fk0Uq4rM&amp;tbnid=Ab6tIy5i9jV1yM&amp;vet=12ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECB0QAA..i&amp;w=350&amp;h=297&amp;hcb=2&amp;ved=2ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECB0QAA\"><img alt=\"Nematode - Wikipedia\" src=\"paste-e2aa5f9fe13bd4634623bfc4bccc0815ddb5a439.webp\"></a></div><a href=\"https://www.google.com/imgres?q=nematode&amp;imgurl=https%3A%2F%2Fcdn.britannica.com%2F47%2F9847-004-9B39C5BB%2Fnematode-organism-Ascaris-lumbricoides.jpg&amp;imgrefurl=https%3A%2F%2Fwww.britannica.com%2Fanimal%2Fnematode&amp;docid=7oQ9Xb52PhlStM&amp;tbnid=BmRXVG8VjMmz7M&amp;vet=12ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECGgQAA..i&amp;w=550&amp;h=444&amp;hcb=2&amp;ved=2ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECGgQAA\"><div><div><div><img alt=\"Nematode | Definition, Description ...\" src=\"paste-ea1ab5691b7c8cac98d716c8761a81770949920b.webp\"></div></div></div></a></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten, ormlik mask som lever i mark, vatten eller som parasit",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "rundmask",
+          "trådmask"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Nematoder</font> är vanliga parasiter i människans tarm.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar nematod direkt som 'rundmask'; kortets utförligare beskrivning (liten, ormlik, lever i mark/vatten/som parasit) är sakligt korrekt och pedagogisk. Synonymerna rundmask/trådmask stämmer (trådmask finns även i SAOL, zool.). Exempelmeningen (tarmparasiter) är korrekt, highlightad."
+    },
+    {
+      "noteId": 1780080623633,
+      "ord": "dopfunt",
+      "facit": "dopskål<br><a href=\"https://commons.wikimedia.org/wiki/File:Tryde-Majestatis-1100-andra-h%C3%A4lft-sandsten.jpg\"><img src=\"250px-tryde-majestatis-1100-andra-hälft-sandsten.webp\"></a><a href=\"https://commons.wikimedia.org/wiki/File:Kr%C3%A5ksm%C3%A5la_church_Nybro_Sweden_007.JPG\"><img src=\"250px-kråksmåla_church_nybro_sweden_007.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kärl i kyrkan som används vid dop",
+        "register": "formell, neutral, religion",
+        "synonymer": [
+          "dopskål",
+          "dopfat"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kyrkan har en <font color=\"#3498db\">dopfunt</font> från medeltiden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO: 'större behållare för vatten som används vid dop'. Synonymerna dopskål/dopfat är etablerade närsynonymer i vedertaget språkbruk (bekräftat via synonymordböcker), inte cirkulära. Exempelmeningen är SO:s eget exempel, korrekt highlightad. Endast en betydelse, ingen lucka."
+    },
+    {
+      "noteId": 1780080629417,
+      "ord": "få sitt lystmäte",
+      "facit": "få tillräckligt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Få vad man längtar efter",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "tillfredsställas"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">fick sitt lystmäte</font> när drömmen äntligen gick i uppfyllelse.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen 'Få vad man längtar efter' tappar den centrala nyansen: SO definierar lystmäte som 'mängd som är (mer än) tillräcklig för att tillfredsställa någons begär' — dvs mättnad/nog, inte bara att önskan uppfylls. Exempelmeningen ('Han fick sitt lystmäte när drömmen gick i uppfyllelse') illustrerar fel sak: äkta bruk gäller mättnad genom kvantitet/upprepning (t.ex. 'fick sitt lystmäte på glass', 'av konst i Florens'), inte en engångshändelse som en dröms uppfyllelse. Både definition och exempel bör skrivas om kring 'få nog av något'."
+    }
+  ],
+  "granskning_turer": 31,
+  "granskning_kostnad_usd": 1.1107731999999997,
+  "granskning_turkrav": 5
+}

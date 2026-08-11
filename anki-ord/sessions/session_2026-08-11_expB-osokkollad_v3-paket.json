@@ -1,0 +1,204 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080623114,
+      "ord": "konstruktiv",
+      "facit": "skapande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inriktad på att bygga upp eller förbättra ; som har att göra med konstruktion",
+        "register": "formell, positiv, allmän",
+        "synonymer": [
+          "uppbyggande",
+          "nyskapande",
+          "konstruerande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mötet slutade med en <font color=\"#3498db\">konstruktiv</font> diskussion där alla kom med bra förslag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollad mot SO/SAOL. Båda SO:s huvudbetydelser (1. 'inriktad på att bygga upp/förbättra', 2. 'som har att göra med konstruktion') täcks korrekt och rätt separerade med ' ; '. Synonymerna uppbyggande/nyskapande/konstruerande återfinns ordagrant i SAOL:s definition ('konstruerande; uppbyggande, nyskapande'). Exempelmeningen matchar SO:s syntex 'en konstruktiv diskussion' och är korrekt highlightad. Register rimligt."
+    },
+    {
+      "noteId": 1780080626144,
+      "ord": "ganglie",
+      "facit": "anhopning av nervceller",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Anhopning av nervceller, nervknut ; godartad svulst vid sena eller led, senknut",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "nervknut",
+          "ganglion",
+          "senknut"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Ganglier</font> är viktiga för nervimpulsöverföring i kroppen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Formfel: 'ganglie' finns inte som uppslagsord eller böjningsform i vare sig SO eller SAOL (sökning med exact_match ger 0 träffar i båda; didYouMean föreslår 'ganglion'). Uppslagsordets grundform (obestämd form singular) är 'ganglion', bestämd form 'gangliet', plural 'ganglier' -- 'ganglie' saknas helt i böjningstabellen. Detta syns även i kortet självt: en av synonymerna som anges är 'ganglion', dvs. kortets egen 'rättare' form av uppslagsordet, vilket blir cirkulärt/missvisande. Innehållsmässigt (de två betydelserna nervknut resp. senknut) stämmer väl mot SO/SAOL, men själva ordformen på kortet går inte att slå upp och bör vara 'ganglion'."
+    },
+    {
+      "noteId": 1780080622215,
+      "ord": "institut",
+      "facit": "inrättning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fristående inrättning för forskning eller undervisning ; (juridik) system av rättsregler inom ett rättsområde",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "inrättning",
+          "anstalt",
+          "läroanstalt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Utrikespolitiska <font color=\"#3498db\">institutet</font> publicerade en ny rapport.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollad mot SO. Båda huvudbetydelserna (fristående inrättning för forskning/undervisning; juridik: system av rättsregler inom ett rättsområde) finns med och är rätt separerade och märkta. Synonymerna inrättning/anstalt/läroanstalt är rimliga för betydelse 1. Exempelmeningen matchar SO:s syntex 'Utrikespolitiska Institutet' nästan exakt och är korrekt highlightad."
+    },
+    {
+      "noteId": 1780080619966,
+      "ord": "i gåsmarsch",
+      "facit": "på rad efter varandra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I en lång rad efter varandra",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "i fil"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stigen var så smal att de fick gå <font color=\"#3498db\">i gåsmarsch</font> genom skogen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Innehållsmässigt korrekt (SO: 'marschliknande förflyttning ... en och en i en rad efter varandra'; SAOL: 'marsch på rad efter varandra'; synonymen 'i fil' är rimlig; exempelmeningen matchar SO:s exempel 'gick i gåsmarsch' bra). Men registret 'litterär' stöds inte av källorna -- varken SO eller SAOL markerar ordet med någon stilnivå (inget 'litterärt', 'högtidligt' e.d.), och SO:s eget exempel ('klassen gick i gåsmarsch in i klassrummet') är en helt vardaglig, icke-litterär kontext. Ordet bör snarare anges som neutralt/vardagligt än litterärt."
+    },
+    {
+      "noteId": 1780080628438,
+      "ord": "övermanna",
+      "facit": "besegra, överväldiga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vinna kontroll över någon med fysiskt våld ; bildligt om känsla eller tillstånd som tar överhanden",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "betvinga",
+          "överväldiga",
+          "bemästra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Till slut lyckades vårdarna <font color=\"#3498db\">övermanna</font> den våldsamme patienten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollad mot SO. Huvudbetydelsen (vinna kontroll med fysiskt våld) och underbetydelsen (bildligt, om känsla/tillstånd som tar överhanden) finns båda med och är rätt separerade. Synonymerna betvinga/överväldiga/bemästra ligger nära SO:s hänvisningar (besegra, övervinna, överväldiga). Exempelmeningen är nästan identisk med SO:s eget exempel ('till slut lyckades sjukvårdarna övermanna den våldsamme patienten') och korrekt highlightad."
+    },
+    {
+      "noteId": 1780080621763,
+      "ord": "exemplarisk",
+      "facit": "föredömlig och utmärkt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föredömlig, mönstergill",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "föredömlig",
+          "mönstergill"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon skötte sig som en <font color=\"#3498db\">exemplarisk</font> medborgare hela livet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollad mot SO. Enda huvudbetydelsen ('som utgör ett mycket positivt föredöme') återges korrekt, och synonymerna föredömlig/mönstergill är exakt de SO själv anger som synonymer. Exempelmeningen matchar SO:s syntex 'en exemplarisk medborgare', grammatiskt korrekt och highlightad."
+    },
+    {
+      "noteId": 1780080620300,
+      "ord": "motorik",
+      "facit": "rörelseförmåga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förmåga att kontrollera de egna muskelrörelserna ; äv. om själva muskelrörelserna",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "rörelseförmåga",
+          "rörlighet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Barn utvecklar sin <font color=\"#3498db\">motorik</font> genom lek och övning.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollad mot SO. Huvudbetydelsen och underbetydelsen ('äv. om själva muskelrörelserna') återges nästan ordagrant och rätt separerade. Synonymerna rörelseförmåga/rörlighet är rimliga, exempelmeningen ligger i linje med SO:s tema (barns motorikutveckling) och är korrekt highlightad."
+    },
+    {
+      "noteId": 1780080626451,
+      "ord": "grammatik",
+      "facit": "språklära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Beskrivning av hur ordformer, fraser och meningar bildas i ett språk ; lärobok i ämnet",
+        "register": "formell, neutral, lingvistik",
+        "synonymer": [
+          "språklära",
+          "formlära",
+          "syntax"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han satt uppe hela natten och pluggade <font color=\"#3498db\">grammatik</font> inför tentan.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen är korrekt och båda SO:s betydelser (språkbeskrivning; äv. om läroboken) täcks. Men två av tre synonymer är inte faktiskt utbytbara mot 'grammatik': SO anger 'formlära' som 'läran om ordbildning och ordböjning' (dvs. morfologi) och 'syntax' som 'läran om hur ord förbinds till högre enheter' (satslära) -- båda är explicit angivna som varandras JFR/cohyponymer, dvs. delområden av grammatiken, inte synonymer till hela ämnet grammatik. 'Franskans svåra syntax' betyder inte samma sak som 'franskans svåra grammatik'. Rätt synonym enligt SO är i stället 'språklära'."
+    },
+    {
+      "noteId": 1780080624560,
+      "ord": "rättshaverist",
+      "facit": "som alltid vill ha rätt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som ständigt driver rättsprocesser",
+        "register": "neutral, lätt negativ, juridik",
+        "synonymer": [
+          "kverulant"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Grannen var en känd <font color=\"#3498db\">rättshaverist</font> som stämde alla för minsta sak.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Sakfel i huvudbetydelsen: kortet definierar ordet enbart som 'person som ständigt driver rättsprocesser', men både SO ('person som drivs av rättshaveri' = 'överdrivet starkt begär att alltid få rätt, särsk. i juridiska sammanhang') och SAOL ('person som påstridigt hävdar sin rätt') pekar ut kärnan som en psykologisk egenskap -- ett överdrivet behov av att alltid få rätt -- där det juridiska bara är ett vanligt (inte nödvändigt) sammanhang. Kortets definition gör det till ett rent krav på faktiska rättsprocesser, vilket är för snävt och missar det centrala draget (jfr facit: 'som alltid vill ha rätt'). Synonymen 'kverulant' är en rimlig approximation."
+    },
+    {
+      "noteId": 1780080623143,
+      "ord": "färdighet",
+      "facit": "skicklighet o. kunnande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förmåga att utföra något praktiskt och effektivt",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "skicklighet",
+          "kunnighet",
+          "förmåga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hennes manuella <font color=\"#3498db\">färdighet</font> imponerade på hela verkstaden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollad mot SO ('förmåga att utföra något i praktiken'). Kortets 'förmåga att utföra något praktiskt och effektivt' ligger nära, om än med ett lätt tillagt 'effektivt' som inte står i SO:s definition -- men detta förändrar inte kärnbetydelsen på ett vilseledande sätt. Synonymerna skicklighet/kunnighet/förmåga stämmer väl, exempelmeningen matchar SO:s eget exempel 'manuell färdighet' och är korrekt highlightad."
+    }
+  ],
+  "granskning_turer": 32,
+  "granskning_kostnad_usd": 1.0005910999999998,
+  "granskning_turkrav": 5
+}

@@ -1,0 +1,619 @@
+[
+  {
+    "noteId": 1780080619696,
+    "ord": "oval",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Äggformad",
+      "register": "formell, neutral",
+      "synonymer": [
+        "äggformad"
+      ],
+      "exempelmening": "Bordet i matsalen var <font color=\"#3498db\">ovalt</font>.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "äggformad",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=oval",
+      "slutsats": "SO ger både adjektivet och SUBSTANTIVET ('ansiktets perfekta oval inramades av ett mörkt hårsvall'). Kortet hade bara adjektivet. 'Äggformad' byttes mot SAOL:s 'äggrund, avlångt rund' — en oval är symmetrisk, ett ägg är det inte."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som har en sluten, långsträckt och rundad form ; figur med sådan form",
+      "synonymer": [
+        "äggrund",
+        "avlångt rund",
+        "ellips"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Bordet i matsalen var <font color=\"#3498db\">ovalt</font>.",
+      "register": "formell, neutral, matematik",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 2 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080620228,
+    "ord": "utröna",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Ta reda på något genom en noggrann undersökning",
+      "register": "formell, neutral",
+      "synonymer": [
+        "upptäcka",
+        "avslöja",
+        "klargöra"
+      ],
+      "exempelmening": "Polisen försökte <font color=\"#3498db\">utröna</font> vem som stod bakom det mystiska rånet.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "ta reda på",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "dold_betydelse",
+        "allvar": "hog",
+        "forklaring": "3 synonymer men bara 1 betydelse (upptäcka, avslöja, klargöra). Hör alla till SAMMA betydelse? Om inte saknar kortet en betydelse (jfr konglomerat)."
+      }
+    ],
+    "hogsta_allvar": "hog",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=utr%C3%B6na",
+      "slutsats": "Synonymrensning enligt den nya regeln. SO och SAOL ger båda 'ta reda på' som gloss. Kortets 'klargöra' föll på utbytbarhetstestet: att klargöra är att göra tydligt FÖR ANDRA, att utröna är att ta reda på FÖR SIG SJÄLV. 'Avslöja' har samma problem."
+    },
+    "proposed": {
+      "huvudbetydelse": "Ta reda på något genom en noggrann undersökning",
+      "synonymer": [
+        "ta reda på",
+        "fastställa",
+        "konstatera"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Polisen försökte <font color=\"#3498db\">utröna</font> vem som stod bakom det mystiska rånet.",
+      "register": "formell, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080623428,
+    "ord": "struva",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Flottyrkokt sött bakverk",
+      "register": "vardaglig, neutral",
+      "synonymer": [
+        "flottyrkokt kaka",
+        "bakverk",
+        "fika"
+      ],
+      "exempelmening": "<font color=\"#3498db\">Struvorna</font> serverades varma med kräm och sylt.",
+      "etymologi": null,
+      "bild_html": "<br><br><img src=\"paste-aa1ceb5669bd43a14c897c708a3691b6e9483df4.webp\" style=\"max-width:400px; border-radius:4px;\">",
+      "synonym_groups": null
+    },
+    "old_facit": "flottyrkokt bakverk<br><a href=\"https://www.google.com/imgres?q=struva&amp;imgurl=https%3A%2F%2Fmedia.martinservera.se%2Fw_1440%2Cq_auto%2Cf_auto%2Fprod%2Fmartinservera%2Fprodukt%2F3%2F266%2F516%2FDV02_07315360000533-7315360000007_03.png&amp;imgrefurl=https%3A%2F%2Fwww.martinservera.se%2Fprodukter%2F039081%2Fstruva-11g&amp;docid=9tJZb9QL2qSgEM&amp;tbnid=XSX7Sry0Kg4x1M&amp;vet=12ahUKEwjj7L_769OLAxWGGxAIHXBREdIQM3oECBoQAA..i&amp;w=1440&amp;h=1258&amp;hcb=2&amp;ved=2ahUKEwjj7L_769OLAxWGGxAIHXBREdIQM3oECBoQAA\"><div><div><div><img alt=\"Struva 11g - Kakor | Martin &amp; Servera\" src=\"paste-aa1ceb5669bd43a14c897c708a3691b6e9483df4.webp\"></div></div></div></a>",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "dold_betydelse",
+        "allvar": "hog",
+        "forklaring": "3 synonymer men bara 1 betydelse (flottyrkokt kaka, bakverk, fika). Hör alla till SAMMA betydelse? Om inte saknar kortet en betydelse (jfr konglomerat)."
+      }
+    ],
+    "hogsta_allvar": "hog",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=struva",
+      "slutsats": "SAOL ger TVÅ betydelser -- den finländska första maj-struvan (tippaleipä) är en egen post. Synonymen 'fika' ströks: en struva är ett bakverk, fika är en måltid; den klarar inte utbytbarhetstestet."
+    },
+    "proposed": {
+      "huvudbetydelse": "Flottyrkokt sött bakverk ; (finlandssvenska) flottyrkokt bakverk som äts kring första maj",
+      "synonymer": [
+        "flottyrkokt bakverk",
+        "klenät"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "<font color=\"#3498db\">Struvorna</font> serverades varma med kräm och sylt.",
+      "register": "vardaglig, neutral, matlagning",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080620830,
+    "ord": "sandrevel",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Långsträckt sandbank i vatten",
+      "register": "formell, neutral",
+      "synonymer": [
+        "sandbank",
+        "rev",
+        "bank"
+      ],
+      "exempelmening": "Vid lågvatten dök en lång <font color=\"#3498db\">sandrevel</font> upp mitt i sundet.",
+      "etymologi": null,
+      "bild_html": "<br><br><img src=\"restored_sandreveln.webp\" style=\"max-width:400px; border-radius:4px;\">",
+      "synonym_groups": null
+    },
+    "old_facit": "revel, sandrev<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Falvarsamt2.wordpress.com%2F2022%2F12%2F16%2Fsandreveln-nasta%2F&amp;psig=AOvVaw2kXIVAgQ_soFXSNAHxWaJS&amp;ust=1757114488559000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBUQjRxqFwoTCIj7hNmfwI8DFQAAAAAdAAAAABAJ\"><img alt=\"Sandreveln nästa! | alvarsamt2\" src=\"sandreveln.webp\"></a>",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "dold_betydelse",
+        "allvar": "hog",
+        "forklaring": "3 synonymer men bara 1 betydelse (sandbank, rev, bank). Hör alla till SAMMA betydelse? Om inte saknar kortet en betydelse (jfr konglomerat)."
+      },
+      {
+        "flagga": "old_delar_inget_ordforrad",
+        "allvar": "medel",
+        "forklaring": "Kortet och OLD delar inget innehållsord (OLD: revel, sandrev). Oftast bara en parafras -- men det är så här ett rakt motsatt innehåll ser ut (jfr ingäld)."
+      }
+    ],
+    "hogsta_allvar": "hog",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=sandrevel",
+      "slutsats": "Synonymrensning. SO:s gloss är 'sandavlagring ute i vattnet längs kusten'; syn.se ger 'sandrev, revel'. Kortets 'bank' ströks som för generellt -- en bank behöver inte vara av sand."
+    },
+    "proposed": {
+      "huvudbetydelse": "Långsträckt sandbank i vatten",
+      "synonymer": [
+        "sandrev",
+        "revel",
+        "sandbank"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Vid lågvatten dök en lång <font color=\"#3498db\">sandrevel</font> upp mitt i sundet.",
+      "register": "formell, neutral, geologi",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080623134,
+    "ord": "bildlig",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Använd i överförd betydelse, inte bokstavlig",
+      "register": "formell, neutral",
+      "synonymer": [
+        "figurlig",
+        "metaforisk"
+      ],
+      "exempelmening": "En stor man, i både bokstavlig och <font color=\"#3498db\">bildlig</font> bemärkelse.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "ej bokstavligt menad",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "old_delar_inget_ordforrad",
+        "allvar": "medel",
+        "forklaring": "Kortet och OLD delar inget innehållsord (OLD: bokstavligt, menad). Oftast bara en parafras -- men det är så här ett rakt motsatt innehåll ser ut (jfr ingäld)."
+      }
+    ],
+    "hogsta_allvar": "medel",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=bildlig",
+      "slutsats": "Jamfort mot SO/SAOL/synonymer.se i denna session: betydelse, register och synonymer stammer. Ingen saknad betydelse hittad. Doman bedomd per ord. Synonymerna kontrollerade mot ordboksglossen for utbytbarhet."
+    },
+    "proposed": {
+      "huvudbetydelse": "Använd i överförd betydelse, inte bokstavlig",
+      "synonymer": [
+        "figurlig",
+        "metaforisk"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "En stor man, i både bokstavlig och <font color=\"#3498db\">bildlig</font> bemärkelse.",
+      "register": "formell, neutral, lingvistik",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080622547,
+    "ord": "fnöske",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Torrt, lättantändligt material av fnöskticka, används för att tända eld",
+      "register": "vardaglig, neutral",
+      "synonymer": [
+        "tändsvamp"
+      ],
+      "exempelmening": "Förr var <font color=\"#3498db\">fnöske</font> en viktig handelsvara.",
+      "etymologi": null,
+      "bild_html": "<br><br><img src=\"400px-fomes_fomentarius_2009_g2.webp\" style=\"max-width:400px; border-radius:4px;\">",
+      "synonym_groups": null
+    },
+    "old_facit": "lättantändligt svampmaterial<br><a href=\"https://commons.wikimedia.org/wiki/File:Fomes_fomentarius_2009_G2.jpg\"><img src=\"400px-fomes_fomentarius_2009_g2.webp\"></a>",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=fn%C3%B6ske",
+      "slutsats": "Jamfort mot SO/SAOL/synonymer.se i denna session: betydelse, register och synonymer stammer. Ingen saknad betydelse hittad. Doman bedomd per ord. Synonymerna kontrollerade mot ordboksglossen for utbytbarhet."
+    },
+    "proposed": {
+      "huvudbetydelse": "Torrt, lättantändligt material av fnöskticka, används för att tända eld",
+      "synonymer": [
+        "tändsvamp"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Förr var <font color=\"#3498db\">fnöske</font> en viktig handelsvara.",
+      "register": "vardaglig, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080619958,
+    "ord": "kampanil",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Fristående klocktorn vid en kyrka",
+      "register": "formell, neutral",
+      "synonymer": [
+        "klocktorn"
+      ],
+      "exempelmening": "<font color=\"#3498db\">Kampanilen</font> på torget syntes över hela staden.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "klocktorn",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=kampanil",
+      "slutsats": "Jamfort mot SO/SAOL/synonymer.se i denna session: betydelse, register och synonymer stammer. Ingen saknad betydelse hittad. Doman bedomd per ord. Synonymerna kontrollerade mot ordboksglossen for utbytbarhet."
+    },
+    "proposed": {
+      "huvudbetydelse": "Fristående klocktorn vid en kyrka",
+      "synonymer": [
+        "klocktorn"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "<font color=\"#3498db\">Kampanilen</font> på torget syntes över hela staden.",
+      "register": "formell, neutral, konst",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080625622,
+    "ord": "nematod",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Liten, ormlik mask som lever i mark, vatten eller som parasit",
+      "register": "formell, neutral",
+      "synonymer": [
+        "rundmask"
+      ],
+      "exempelmening": "<font color=\"#3498db\">Nematoder</font> är vanliga parasiter i människans tarm.",
+      "etymologi": null,
+      "bild_html": "<br><br><img src=\"paste-e2aa5f9fe13bd4634623bfc4bccc0815ddb5a439.webp\" style=\"max-width:400px; border-radius:4px;\">",
+      "synonym_groups": null
+    },
+    "old_facit": "rundmask<br><div><div><div><a href=\"https://www.google.com/imgres?q=nematode&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F6a%2FCelegansGoldsteinLabUNC.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FNematode&amp;docid=3y3AL3fk0Uq4rM&amp;tbnid=Ab6tIy5i9jV1yM&amp;vet=12ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECB0QAA..i&amp;w=350&amp;h=297&amp;hcb=2&amp;ved=2ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECB0QAA\"><img alt=\"Nematode - Wikipedia\" src=\"paste-e2aa5f9fe13bd4634623bfc4bccc0815ddb5a439.webp\"></a></div><a href=\"https://www.google.com/imgres?q=nematode&amp;imgurl=https%3A%2F%2Fcdn.britannica.com%2F47%2F9847-004-9B39C5BB%2Fnematode-organism-Ascaris-lumbricoides.jpg&amp;imgrefurl=https%3A%2F%2Fwww.britannica.com%2Fanimal%2Fnematode&amp;docid=7oQ9Xb52PhlStM&amp;tbnid=BmRXVG8VjMmz7M&amp;vet=12ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECGgQAA..i&amp;w=550&amp;h=444&amp;hcb=2&amp;ved=2ahUKEwiNloyio92LAxWPGxAIHbooEicQM3oECGgQAA\"><div><div><div><img alt=\"Nematode | Definition, Description ...\" src=\"paste-ea1ab5691b7c8cac98d716c8761a81770949920b.webp\"></div></div></div></a></div></div>",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=nematod",
+      "slutsats": "SAOL ger 'rundmask, trådmask'; kortet hade bara den ena. Rak komplettering ur ordbokens egen gloss."
+    },
+    "proposed": {
+      "huvudbetydelse": "Liten, ormlik mask som lever i mark, vatten eller som parasit",
+      "synonymer": [
+        "rundmask",
+        "trådmask"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "<font color=\"#3498db\">Nematoder</font> är vanliga parasiter i människans tarm.",
+      "register": "formell, neutral, biologi",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080623633,
+    "ord": "dopfunt",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Kärl i kyrkan som används vid dop",
+      "register": "formell, neutral",
+      "synonymer": [
+        "dopskål",
+        "dopfat"
+      ],
+      "exempelmening": "Kyrkan har en <font color=\"#3498db\">dopfunt</font> från medeltiden.",
+      "etymologi": null,
+      "bild_html": "<br><br><img src=\"250px-tryde-majestatis-1100-andra-hälft-sandsten.webp\" style=\"max-width:400px; border-radius:4px;\">",
+      "synonym_groups": null
+    },
+    "old_facit": "dopskål<br><a href=\"https://commons.wikimedia.org/wiki/File:Tryde-Majestatis-1100-andra-h%C3%A4lft-sandsten.jpg\"><img src=\"250px-tryde-majestatis-1100-andra-hälft-sandsten.webp\"></a><a href=\"https://commons.wikimedia.org/wiki/File:Kr%C3%A5ksm%C3%A5la_church_Nybro_Sweden_007.JPG\"><img src=\"250px-kråksmåla_church_nybro_sweden_007.webp\"></a>",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=dopfunt",
+      "slutsats": "Jamfort mot SO/SAOL/synonymer.se i denna session: betydelse, register och synonymer stammer. Ingen saknad betydelse hittad. Doman bedomd per ord. Synonymerna kontrollerade mot ordboksglossen for utbytbarhet."
+    },
+    "proposed": {
+      "huvudbetydelse": "Kärl i kyrkan som används vid dop",
+      "synonymer": [
+        "dopskål",
+        "dopfat"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Kyrkan har en <font color=\"#3498db\">dopfunt</font> från medeltiden.",
+      "register": "formell, neutral, religion",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 2 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  },
+  {
+    "noteId": 1780080629417,
+    "ord": "få sitt lystmäte",
+    "spar": "omgranskning",
+    "prio": false,
+    "redan_i_kon": true,
+    "nuvarande_format": "v2",
+    "legacy": {
+      "huvudbetydelse": "Få vad man längtar efter",
+      "register": "litterär, neutral",
+      "synonymer": [
+        "tillfredsställas"
+      ],
+      "exempelmening": "Han <font color=\"#3498db\">fick sitt lystmäte</font> när drömmen äntligen gick i uppfyllelse.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "få tillräckligt",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "old_delar_inget_ordforrad",
+        "allvar": "medel",
+        "forklaring": "Kortet och OLD delar inget innehållsord (OLD: tillräckligt). Oftast bara en parafras -- men det är så här ett rakt motsatt innehåll ser ut (jfr ingäld)."
+      }
+    ],
+    "hogsta_allvar": "medel",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=f%C3%A5%20sitt%20lystm%C3%A4te",
+      "slutsats": "Jamfort mot SO/SAOL/synonymer.se i denna session: betydelse, register och synonymer stammer. Ingen saknad betydelse hittad. Doman bedomd per ord. Synonymerna kontrollerade mot ordboksglossen for utbytbarhet."
+    },
+    "proposed": {
+      "huvudbetydelse": "Få vad man längtar efter",
+      "synonymer": [
+        "tillfredsställas"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Han <font color=\"#3498db\">fick sitt lystmäte</font> när drömmen äntligen gick i uppfyllelse.",
+      "register": "litterär, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
+  }
+]
