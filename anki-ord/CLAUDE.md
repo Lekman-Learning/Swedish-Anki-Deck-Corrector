@@ -3256,3 +3256,46 @@ Men OLD-facit sa *"livströtthet, likgiltighet"* och synonymer.se:s
 användarbidrag sa *"livströtthet"* — **båda fel.** Hade kortet rättats EFTER
 facit hade det försämrats. Det är det starkaste argumentet hittills för att
 blindgranskaren ska slå upp ordet själv i stället för att jämföra mot facit.
+
+### Invarianten: full v3 = blå + avsuspenderad (`v3_invariant.py`)
+
+**Adams regel 2026-08-11:** *"full v3 kort ska vara blue:flagged och
+unsuspended."*
+
+Taggarna och kortets läge sattes på olika ställen och kunde glida isär utan
+att något larmade. Mätt när regeln formulerades: av 412 full-v3-kort var 387
+blå, **22 röda**, 1 grön och 2 utan flagga — och 16 av de röda var AKTIVA.
+Adam pluggade alltså dagligen kort som bar flaggan "stämmer inte alls" medan
+taggarna påstod att de var verifierade (`gyro`, `cypress`, `frotté`,
+`kalorimeter`, `bekväma sig` m.fl.).
+
+Ingen av de två uppgifterna var fel när den sattes — röda flaggan kom från en
+äldre granskning, taggarna från v3. Det saknades någon som höll dem i takt.
+**En motsägelse som ingen kontrollerar ser ut som ordning.**
+
+19 kort rättade. Två undantag som ALDRIG ska tvingas blå:
+`v3_underkand::*` (bevisligen trasiga) och `v3_pausad::*`.
+
+### Domänaxeln: `allmän` tillagd, men INTE massifylld
+
+Adam: *"se också till att alla kort med full v3 får domän, det är ett koncept
+som jag verkligen gillar."*
+
+Bokstavligt går det inte. Av 412 full-v3-kort hade **64 en domän**, och exakt
+**ETT till** (`ekvivalent`) gick att belägga ur SO:s bruklighetskommentar. SO
+markerar inte fackområde för allmänt ordförråd.
+
+Värdet **`allmän`** lades därför till i `config.REGISTER_DOMAN` med
+betydelsen *bedömd, inget fackområde* — så att tomt och bedömt slutar se
+likadana ut, samma princip som Adams registerbeslut 2026-08-10.
+
+**Men det fylls inte i maskinellt**, och det är ett medvetet stopp. Orden som
+saknar domän inkluderar `kalorimeter`, `mikrofiche`, `fascikel`,
+`vernissage`, `affektiv`. Att SO inte råkar sätta en bruklighetskommentar
+betyder inte att ordet saknar fackområde — `kalorimeter` är ett
+fysikinstrument oavsett vad SO skriver. Ett automatiskt `allmän` hade blivit
+exakt den obedömda skuld som `neutral` blev på 2 681 kort, fast med en tagg
+som PÅSTÅR att någon bedömt.
+
+Domänen ska alltså bedömas per kort i samma steg som registret. För de 347
+befintliga är det ett arbete, inte en körning.

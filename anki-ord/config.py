@@ -120,6 +120,23 @@ REGISTER_VALENS = [
 # `granulera` har en medicinsk betydelse, `bleke` en jordbruksbetydelse. Alla
 # fyra fick i stället en stilnivå-tagg som inte var sann.
 REGISTER_DOMAN = [
+    # `allmän` betyder BEDÖMD, inget fackområde -- inte "ej ifylld".
+    #
+    # Adam 2026-08-11: "se också till att alla kort med full v3 får domän,
+    # det är ett koncept som jag verkligen gillar." Mätt samma dag går det
+    # inte bokstavligt: av 412 full-v3-kort hade 64 en domän och exakt ETT
+    # till gick att belägga ur SO:s bruklighetskommentar. SO markerar inte
+    # fackområde för allmänt ordförråd -- `näpsa`, `löje` och `frist` hör
+    # inte till något yrkesfält, och att sätta en domän på dem vore samma
+    # påhitt som gjorde `betuttad` till psykologi när SAOL:s ämnesområden
+    # testades.
+    #
+    # Det som DÄREMOT gick att stänga är tvetydigheten. Ett tomt domänfält
+    # betydde både "ingen har tittat" och "ordet hör inte hemma någonstans".
+    # Samma problem som Adams eget registerbeslut 2026-08-10 löste för
+    # valören: "neutral skrivs UT, inte utelämnas: ett tomt fält och ett
+    # bedömt fält såg tidigare likadana ut."
+    "allmän",
     "juridik", "medicin", "biologi", "kemi", "fysik", "matematik", "teknik",
     "IT", "ekonomi", "politik", "militär", "sjöfart", "jordbruk", "geologi",
     "religion", "bibliskt", "filosofi", "psykologi", "lingvistik", "historia",
