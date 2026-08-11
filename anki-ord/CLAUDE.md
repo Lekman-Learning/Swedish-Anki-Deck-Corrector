@@ -3165,3 +3165,47 @@ att jag filtrerat genom `grep`.
 (2026-08-09: sex kort, 2026-08-10: elva, 2026-08-11: femtio, plus dessa två),
 den här gången av någon som citerat regeln i samma session. Slutsatsen är
 inte att skärpa instruktionen. Den är att spärren är det enda som håller.
+
+### Provisoriskt släppta kort — `v3_provisorisk` (2026-08-11, samma kväll)
+
+Adam: *"problemet är att jag vill börja repetera alla is:review korten så
+snabbt som möjligt så att jag inte glömmer bort de."*
+
+Suspenderingen samma kväll slog ihop två olika påståenden: **"tillräckligt
+säker för att plugga"** och **"verifierad enligt högsta standard"**. Det är
+inte samma sak, och att spärra allt kostade 2 600 inlärda ord i glömska —
+en säker förlust, mot en låg risk.
+
+**618 kort släpptes därför tillbaka:** de som HAR en riktig sökkoll
+(`flerbetydelse_sokverifierad`) men ännu inte blindgranskats, minus alla med
+röd/gul flagga, 3+ lapses, `v3_underkand` eller `v3_pausad`. De taggas
+`v3_provisorisk::<datum>`.
+
+**Standarden för full v3 är oförändrad.** De 618 påstås inte vara verifierade
+— de har ett eget, ärligare märke. Full v3 stod på 412 före och efter.
+
+Underlaget för risken: blindgranskningen underkände 10 av 80 kort samma dag
+(12 %), men nästan alla på register, en enstaka synonym eller en
+exempelmening. Bara `farstu` och `omistlig` gällde själva betydelsen.
+
+`v3_suspend_ofullstandiga.py` undantar numera `v3_provisorisk::*` — annars
+hade nästa rutinkörning tyst rivit upp beslutet och sett ut som en städning.
+
+**Adams princip, som styr allt ovan:** *"full v3 kort ska inte vara fel,
+standarden ska vara ofattbart hög när de väl markeras som full v3."*
+Triagering får därför bestämma ORDNINGEN på arbetet, aldrig ersätta
+källäsningen före taggen. En triage som gör att 74 % av korten taggas utan
+att någon läst deras källor vore exakt vad `sokverifierad` var på 177 osökta
+kort.
+
+### Buggen: 97 kort hade fastnat mellan stegen
+
+`POOL_FRAGA["omgranskning"]` exkluderade `-tag:v3_dagsbatch::*`, alltså varje
+kort som NÅGONSIN varit i en batch. Taggen tas aldrig bort, så "påbörjad"
+behandlades som "klar". Mätt: 460 kort hade varit i en batch, **97 blev
+aldrig verifierade** (78 underkända plus avhoppade) och kunde inte plockas
+igen. Ett underkänt kort är per definition trasigt och ska tillbaka i kön
+först, inte försvinna ur den.
+
+Rätt villkor är "redan klar" (`oberoende_verifierad`) plus dagens egen batch.
+Poolen gick 2 724 → 2 805 och 57 underkända blev synliga igen.

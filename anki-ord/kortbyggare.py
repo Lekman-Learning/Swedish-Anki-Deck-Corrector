@@ -98,9 +98,21 @@ POOL_FRAGA = {
     # undantag. Det som ska hållas UTE ur poolen är i stället kort som pausats
     # för att de inte går att sökkolla (se v3_pausa.py) -- de kostar arbete
     # varje gång de plockas och blir aldrig klara.
+    # `-tag:v3_dagsbatch::*` STOD HÄR till 2026-08-11 och exkluderade varje kort
+    # som NÅGONSIN varit i en batch. Taggen finns för att slippa dra samma kort
+    # två gånger samma dag -- men eftersom den aldrig tas bort behandlades
+    # "påbörjad" som "klar". Mätt när felet hittades: 460 kort hade varit i en
+    # batch, **97 av dem blev aldrig verifierade** (78 underkända plus
+    # avhoppade), och ingen av dem kunde plockas igen. Ett underkänt kort är
+    # per definition trasigt och ska tillbaka i kön FÖRST, inte försvinna ur
+    # den.
+    #
+    # Rätt villkor är alltså "redan klar" (oberoende_verifierad), plus dagens
+    # egen batch så att en pågående omgång inte dubbelhämtas.
     "omgranskning": (
         f'deck:"{config.DECK_NAME}" tag:{config.FORMAT_TAG_V2} '
-        f'-tag:{config.OBEROENDE_TAG_PREFIX}::* -tag:{config.DAGSBATCH_TAG_PREFIX}::* '
+        f'-tag:{config.OBEROENDE_TAG_PREFIX}::* '
+        f'-tag:{config.DAGSBATCH_TAG_PREFIX}::{datetime.date.today().isoformat()} '
         f'-tag:v3_pausad::*'
     ),
 }

@@ -101,8 +101,22 @@ def main():
         print(f"  saknar {namn:<40}{len(saknar):>6}")
 
     redan_susp = hitta(f"{DECK} is:suspended")
-    kandidater = malgrupp - full_v3
+
+    # PROVISORISKT SLÄPPTA (Adams beslut 2026-08-11, samma kväll som
+    # suspenderingen). 618 kort som HAR en riktig sökkoll men ännu inte
+    # blindgranskats släpptes medvetet tillbaka i kön, eftersom kostnaden för
+    # att glömma 2 600 inlärda ord är säker medan risken att ett sökkollat kort
+    # är fel är låg.
+    #
+    # De är alltså inte full v3 och ska inte påstås vara det -- men de får
+    # heller inte spärras igen av en rutinkörning. Utan det här undantaget hade
+    # nästa `--allt` tyst rivit upp beslutet, och utdatan hade sett ut som en
+    # vanlig städning.
+    provisoriska = hitta(f"{DECK} tag:v3_provisorisk::*")
+    kandidater = malgrupp - full_v3 - provisoriska
     att_suspendera = kandidater - redan_susp
+    if provisoriska:
+        print(f"\n{'Provisoriskt släppta (undantas)':<44}{len(provisoriska):>6}")
 
     print(f"\n{'Full v3 i målgruppen (lämnas aktiva)':<44}{len(full_v3):>6}")
     print(f"{'Ofullständiga':<44}{len(kandidater):>6}")
