@@ -328,8 +328,15 @@ def verdikt(paketsokvag, granskare=None):
     #
     # Samma princip som slapp redan tillämpar ett steg senare -- kontrollera
     # mot live, inte mot vad som en gång skickades in. Den saknades bara här.
+    # `if n.get("noteId")`: AnkiConnect svarar med ett TOMT objekt, inte med
+    # null, för ett id som inte finns. Utan filtret kastade dict-byggandet
+    # KeyError innan raden nedan som faktiskt hanterar fallet ("kortet finns
+    # inte kvar i Anki") hann köras -- spärren dog alltså på precis det den
+    # skrevs för att upptäcka. Hittat 2026-08-11 av test_oberoende_sparr.py,
+    # som använder ett påhittat noteId.
     ndata = {n["noteId"]: n for n in
-             invoke("notesInfo", notes=[p["noteId"] for p in poster])}
+             invoke("notesInfo", notes=[p["noteId"] for p in poster])
+             if n.get("noteId")}
     inaktuella = []
     for p in poster:
         n = ndata.get(p["noteId"])

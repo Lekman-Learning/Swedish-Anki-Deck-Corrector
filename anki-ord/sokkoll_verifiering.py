@@ -126,8 +126,19 @@ SKRIPTKANALER = (
     ("SYNONYMER_SE_HAMTAD", "https://www.synonymer.se/sv-syn/{}"),
     ("WIKTIONARY_HAMTAD", "https://sv.wiktionary.org/wiki/{}"),
 )
+# Bytesantalet måste vara SIFFROR, inte bara "något efter HTTP 200". Kravet
+# tillkom 2026-08-11: modulens egen dokumentationsrad
+#
+#     SVENSKA_SE_HAMTAD <ord> HTTP 200 <byte>
+#
+# matchade mönstret och registrerade ordet `<ord>` som bevisligen hämtat. Den
+# raden hamnade i loggen bara för att filen greppats under en session -- alltså
+# blev en KOMMENTAR OM formatet ett bevis PÅ formatet. Ingen kort heter `<ord>`,
+# så ingenting släpptes igenom i praktiken, men felklassen är den samma som
+# fragment-buggen och den ifyllda-fältet-buggen: något som ser ut som en
+# mätning utan att vara en. En riktig hämtning har alltid en storlek.
 SKRIPTMARKOR = re.compile(
-    r"(" + "|".join(m for m, _ in SKRIPTKANALER) + r")\s+(.+?)\s+HTTP\s+200\s")
+    r"(" + "|".join(m for m, _ in SKRIPTKANALER) + r")\s+(.+?)\s+HTTP\s+200\s+\d+")
 SKRIPT_KALLA = re.compile(r"svenska\.se/api/msearch\?ord=(.+)$")
 
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
@@ -236,6 +247,42 @@ def _ord_ur_skriptutskrift():
     return ut
 
 
+def _ord_ur_valvets_verktygslogg(valvsokvag):
+    """Reserv: `raw-verktyg/` i valvet. Behövs när arbetet gjordes på en ANNAN
+    maskin.
+
+    Varför lagret måste läsas. `_ord_ur_skriptutskrift` letar i Claude Codes
+    transkriptkatalog, som är **maskinlokal**. 2026-08-11 skrevs 50 kort på
+    laptopen och skulle blindgranskas på PC:n; sessionsfilen följde med genom
+    git, men beviset gjorde inte det, och Hål 0 stoppade alla 50 med
+    "hämtningen gjordes aldrig". Den hade gjorts — 60 bevisrader låg i
+    `raw-verktyg/2026-08-11_965e18c1.md`, i valvet, redan pushat. Spärren
+    tittade bara aldrig där.
+
+    Att läsa lagret försvagar inte kravet. Filerna skrivs av valvets Stop- och
+    SessionEnd-hookar direkt ur transkriptet, inte av den som granskar, och de
+    är dessutom committade och pushade — en ändring i efterhand syns i git,
+    vilket är mer än vad den lokala transkriptfilen erbjuder. Det är samma
+    vittne, bara persisterat.
+
+    Kanalen sätts till 'skript', som för utskriften det kommer ur. Bara
+    HTTP 200 räknas, av samma skäl som där: ett misslyckat uppslag får aldrig
+    passera som ett lyckat.
+    """
+    ut = set()
+    if not valvsokvag:
+        return ut
+    for sokvag in glob.glob(os.path.join(valvsokvag, "raw-verktyg", "*.md")):
+        try:
+            with open(sokvag, encoding="utf-8", errors="ignore") as f:
+                text = f.read()
+        except OSError:
+            continue
+        for m in SKRIPTMARKOR.finditer(text):
+            ut.add((m.group(1), m.group(2)))
+    return ut
+
+
 def samla_bevis(valvsokvag=None):
     """{url: kanal} för varje URL som bevisligen hämtats.
 
@@ -245,6 +292,11 @@ def samla_bevis(valvsokvag=None):
     bevis = _urler_ur_valvloggen(valvsokvag)
     bevis.update(_urler_ur_transkript())
     mall = dict(SKRIPTKANALER)
+    # Valvets verktygslogg först, transkriptet sedan: båda ger kanalen
+    # 'skript', så ordningen ändrar inget värde -- men den gör avsikten
+    # tydlig, att den lokala källan är förstahandsvittnet.
+    for markor, o in _ord_ur_valvets_verktygslogg(valvsokvag):
+        bevis[mall[markor].format(o)] = "skript"
     for markor, o in _ord_ur_skriptutskrift():
         bevis[mall[markor].format(o)] = "skript"
     return bevis
