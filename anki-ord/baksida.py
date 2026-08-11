@@ -428,6 +428,33 @@ def validate_register(register):
             else:
                 upptagen[ledig] = t
 
+        # KRAVET PÅ BÅDA AXLARNA (implementerat 2026-08-11).
+        #
+        # Docstringen ovan har sedan 2026-08-04 sagt att stilnivå OCH valör
+        # båda krävs ("skärpt från 'minst en av dem'"). Koden kontrollerade
+        # det aldrig. Följden mättes 2026-08-11 på 70 repetitionskort: 17 hade
+        # fel eller ofullständigt register, och `arkaisk` ensamt, `negativ`
+        # ensamt och till och med `juridik` ensamt passerade valideringen utan
+        # en enda varning -- det sista alltså ett kort med enbart fackområde
+        # och inget register alls.
+        #
+        # Varför det spelar roll: axlarna svarar på olika frågor. Stilnivå
+        # säger VAR ordet hör hemma (vardagligt/formellt/ålderdomligt), valör
+        # säger hur det LÅTER (neutralt/nedsättande/ömsint). Ett ord med bara
+        # den ena är inte "delvis märkt" utan tvetydigt: `negativ` utan
+        # stilnivå lämnar öppet om ordet är slang eller kanslisvenska, och
+        # `arkaisk` utan valör om det är hånfullt eller sakligt.
+        #
+        # Domän är avsiktligt INTE obligatorisk -- den är tom för de flesta ord
+        # (se config.REGISTER_DOMAN, "Valfri, oftast tom").
+        for axel in ("stilnivå", "valör"):
+            if axel not in upptagen:
+                warnings.append(
+                    f'"{part}" saknar {axel}-tagg — både stilnivå och valör '
+                    f'krävs på varje betydelse (config.REGISTER_'
+                    f'{"FORMALITY" if axel == "stilnivå" else "VALENS"}). '
+                    f'"neutral" är ett giltigt och ofta rätt svar.')
+
         # Flykt-taggen är LAGLIG men aldrig tyst. Prefixet OKLART: gör den
         # greppbar, så "hur ofta räckte inte vokabulären?" är en körbar fråga
         # och inte en känsla. Se config.REGISTER_OKLART för resonemanget.

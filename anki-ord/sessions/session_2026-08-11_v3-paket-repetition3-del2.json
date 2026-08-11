@@ -1,0 +1,200 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080620120,
+      "ord": "debitera",
+      "facit": "påföra som skuld",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Påföra någon en kostnad",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "fakturera",
+          "påföra",
+          "belasta"
+        ],
+        "exempelmening": "Konsulten <font color=\"#3498db\">debiterade</font> tio timmar.",
+        "etymologi": "av franska débiter 'anteckna som skuld'; till latin de´bitum 'skuld'",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger endast betydelsen 'påföra (någon) en kostnad' / 'kräva betalning av ngn', vilket matchar kortet exakt. Etymologin stämmer ordagrant med SO. Exempelmeningen är naturlig (elliptisk konstruktion, jfr SO:s eget exempel 'hon debiterar sina kunder 800 kronor'). Synonymer och register rimliga. Ingen betydelse saknas, inget sakfel."
+    },
+    {
+      "noteId": 1780080620200,
+      "ord": "ömka",
+      "facit": "tycka synd om",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Känna eller uttrycka medlidande med ; äv. reflexivt: beklaga sig",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "beklaga",
+          "tycka synd om"
+        ],
+        "exempelmening": "Han ville ha hjälp, men han ville inte bli <font color=\"#3498db\">ömkad</font>.",
+        "etymologi": "fornsvenska ömka; till öm i den äldre betydelsen 'olycklig' — jfr ynka",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två delentries (ömka / ömka sig) som kortet fångar korrekt med huvudbetydelse + 'äv. reflexivt'. Exempelmeningen är identisk med SO:s egen. Etymologin ('till öm i äldre betydelsen olycklig') matchar SO ordagrant. Register 'ngt ålderdomlig' stämmer med ordets karaktär. Inget fel funnet."
+    },
+    {
+      "noteId": 1780080623050,
+      "ord": "ragu",
+      "facit": "köttstuvning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stuvning på kött i småbitar ; äv. på fisk",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "köttstuvning",
+          "gryta",
+          "frikassé"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">ragu</font> på fläsk och linser som fått puttra i rödvin.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'stuvning på bitar av kött' -- SO nämner uttryckligen även fiskvarianter, vilket kortets 'äv. på fisk' korrekt återger. Endast en betydelse i ordböckerna, matchar kortet. Synonymen 'frikassé' är kulinariskt lite löst (annan tillagningsmetod) men förekommer i etablerade synonymlistor för ragu, så inte ett sakfel. Exempelmening korrekt."
+    },
+    {
+      "noteId": 1780080623201,
+      "ord": "cedera",
+      "facit": "överlåta, avstå (ifrån);&nbsp; &nbsp;göra konkurs",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Avstå från eller överlåta något (t.ex. en rättighet) ; (äldre juridik) gå i konkurs genom att överlåta sin egendom till fordringsägarna",
+        "register": "formell, neutral ; arkaisk, neutral",
+        "synonymer": [
+          "överlåta",
+          "avstå",
+          "avträda",
+          "gå i konkurs",
+          "göra cession"
+        ],
+        "synonym_groups": [
+          [
+            "överlåta",
+            "avstå",
+            "avträda"
+          ],
+          [
+            "gå i konkurs",
+            "göra cession"
+          ]
+        ],
+        "exempelmening": "Han behövde <font color=\"#3498db\">cedera</font> sin rättighet till fastigheten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger bara 'överlåta, avstå från' (jur.), men fördjupad sökning (SAOB-härledda källor) bekräftar att cedera historiskt/juridiskt även betyder 'göra konkurs genom att avträda sin egendom till fordringsägarna' -- exakt det kortets andra betydelse beskriver. Facit-signalens fråga om saknad betydelse är alltså avklarad: båda facit-klausulerna finns med, korrekt separerade med ' ; ' och rätt grupperade synonymer/register (formell/arkaisk). Inget fel."
+    },
+    {
+      "noteId": 1780080623790,
+      "ord": "predilektion",
+      "facit": "förkärlek",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förkärlek för något",
+        "register": "formell, neutral",
+        "synonymer": [
+          "förkärlek",
+          "böjelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Jag har en stark <font color=\"#3498db\">predilektion</font> för massiva raves.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen 'förkärlek' är korrekt (bekräftad i SAOB) och matchar facit, och synonymer/exempelmening fungerar. Men ordet saknas helt i både SO och SAOL (nollträffar vid uppslag) och finns bara i SAOB, som uttryckligen noterar att det 'utom i ssgr numera föga br.' -- dvs. fristående användning är ålderdomlig/sällsynt idag, det lever nästan bara kvar i sammansättningen 'predilektionsställe'. Kortets register anges bara som 'formell, neutral' utan att flagga denna ålderdomlighet, trots att detta däck annars konsekvent taggar sådant (jfr 'ngt ålderdomlig' för ömka, 'arkaisk' för cedera). Bör kompletteras med t.ex. 'ålderdomlig' i registret."
+    },
+    {
+      "noteId": 1780080624595,
+      "ord": "trubadur",
+      "facit": "vissångare<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.invaluable.com%2Fauction-lot%2Ffrench-school-19th-century-troubadour-762-c-11d4232a67&amp;psig=AOvVaw3KFF3Iv81zpJWhgWVjCha2&amp;ust=1739791045343000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCNDw3uuIyIsDFQAAAAAdAAAAABAJ\"><img alt=\"Sold at Auction: FRENCH SCHOOL (19TH CENTURY) &quot;Troubadour&quot;\" src=\"https://image.invaluable.com/housePhotos/Ansorena/18/726118/H0184-L292934529.jpg\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vissångare som ackompanjerar sig själv och ofta skriver egna visor ; medeltida provensalsk kärleksskald",
+        "register": "formell, neutral",
+        "synonymer": [
+          "vissångare",
+          "lutsångare",
+          "skald"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Evert Taube, vår störste <font color=\"#3498db\">trubadur</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s enda entry lyder 'vissångare med luta el. gitarr; medeltida provensalsk kärleksskald' -- kortet delar korrekt upp detta i två genuint skilda betydelser med ' ; '. Etymologi (provensalska trobador) och exempelmening (Evert Taube) stämmer. Synonymerna är inte uppdelade per betydelse (synonym_groups=null) trots att 'skald' hör tydligast till den andra betydelsen, men det är en mindre brist snarare än ett sakfel."
+    },
+    {
+      "noteId": 1780080622546,
+      "ord": "hötorgskonst",
+      "facit": "billig konst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Massproducerad, banal konst av lågt värde",
+        "register": "vardaglig, nedsättande",
+        "synonymer": [
+          "kitsch"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På väggarna hängde <font color=\"#3498db\">hötorgskonst</font> med solnedgångar, röda stugor och gråtande barn.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'massproducerad enklare konst', vilket matchar kortets 'massproducerad, banal konst av lågt värde' väl (och fångar den nedsättande valören bättre än facit 'billig konst'). Endast en betydelse i ordböckerna. Register 'vardaglig, nedsättande' och synonymen 'kitsch' är korrekta. Exempelmening matchar källan exakt."
+    },
+    {
+      "noteId": 1780080626384,
+      "ord": "förebråelse",
+      "facit": "tillrättavisning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Direkt uttalat missnöje för felaktigt handlande",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "tillrättavisning",
+          "klander",
+          "reprimand"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det fanns en antydan till <font color=\"#3498db\">förebråelse</font> i hans röst.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'direkt uttalat missnöje... för visst felaktigt handlande' -- matchar kortets formulering nästan ordagrant. Endast en betydelse. Exempelmeningen är identisk med SO:s egen. Synonymer (tillrättavisning, klander, reprimand) och register (neutral, lätt negativ) är rimliga. Inget fel."
+    },
+    {
+      "noteId": 1780080625386,
+      "ord": "aposteriorisk",
+      "facit": "erfarenhetsgrundad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Grundad på erfarenhet, inte på förhandskunskap",
+        "register": "formell, neutral, filosofi",
+        "synonymer": [
+          "erfarenhetsgrundad",
+          "empirisk",
+          "induktiv"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "All <font color=\"#3498db\">aposteriorisk</font> kunskap bygger på erfarenhet, till skillnad från kunskap man vet på förhand.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL/SAOB: 'grundad på erfarenheten... empirisk, induktiv' -- kortets huvudbetydelse och båda synonymerna (empirisk OCH induktiv) är alltså direkt hämtade ur SAOB:s egen definition, inte spekulativa. Kontrasten mot 'förhandskunskap' hjälper förståelsen. Endast en betydelse, register (formell/filosofi) stämmer. Inget fel."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 40,
+  "granskning_kostnad_usd": 1.1243272999999998,
+  "granskning_turkrav": 5
+}

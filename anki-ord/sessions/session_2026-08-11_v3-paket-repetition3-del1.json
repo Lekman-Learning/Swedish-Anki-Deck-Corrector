@@ -1,0 +1,511 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080622838,
+      "ord": "frappant",
+      "facit": "iögonfallande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket påfallande, slående",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "slående",
+          "iögonfallande",
+          "påfallande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Likheten mellan bröderna var <font color=\"#3498db\">frappant</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som man genast lägger märke till pga tydligt framträdande egenskap' = mycket påfallande/slående, matchar kortets huvudbetydelse. Endast en betydelse finns, synonymer (slående, iögonfallande, påfallande) är korrekta och utbytbara, exempelmeningen är sakligt riktig och ordet är highlightat."
+    },
+    {
+      "noteId": 1780080621963,
+      "ord": "omständlig",
+      "facit": "(alltför) utförlig, invecklad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alltför detaljerad och krånglig",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [
+          "utförlig",
+          "krånglig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">omständliga</font> förklaring tog tjugo minuter när fem hade räckt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger '(alltför) detaljerad och invecklad' - matchar kortets 'alltför detaljerad och krånglig' och facit. SO har bara en betydelse, ingen lucka. Exempelmeningen illustrerar betydelsen korrekt och är grammatiskt riktig."
+    },
+    {
+      "noteId": 1780080627596,
+      "ord": "sekvester",
+      "facit": "kvarstad, beslag",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Död vävnad i kroppen ; en rättslig åtgärd att beslagta egendom",
+        "register": "formell, neutral",
+        "synonymer": [
+          "död vävnad",
+          "kvarstad",
+          "beslag",
+          "konfiskation"
+        ],
+        "synonym_groups": [
+          [
+            "död vävnad"
+          ],
+          [
+            "kvarstad",
+            "beslag",
+            "konfiskation"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Sekvester</font> hade bildats i anslutning till benrötan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar två betydelser: 'kvarstad' (mindre brukligt idag) och 'död vävnad i organism' (den mer belagda/vanligare). Kortet täcker båda med korrekt separerade synonym_groups och leder med den mer bruklinga medicinska betydelsen, vilket stämmer med SO:s bruklighetsmarkering - mer komplett än facit."
+    },
+    {
+      "noteId": 1780080622797,
+      "ord": "lapidarisk",
+      "facit": "fåordig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Knapp i formen men träffsäker",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "kortfattad",
+          "koncis",
+          "fåordig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">lapidariska</font> stilen i de isländska sagorna imponerade på forskarna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'kortfattad men träffande (om uttryck och dylikt)' - matchar kortets 'knapp i formen men träffsäker'. Exempelmeningen om isländska sagornas stil är nästan identisk med SO:s eget exempel, sakligt korrekt."
+    },
+    {
+      "noteId": 1780080619658,
+      "ord": "extraordinär",
+      "facit": "utöver det vanliga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ovanlig, utöver det vanliga",
+        "register": "formell, neutral",
+        "synonymer": [
+          "enastående",
+          "exceptionell",
+          "utomordentlig"
+        ],
+        "exempelmening": "Hon gjorde en <font color=\"#3498db\">extraordinär</font> insats.",
+        "etymologi": "Latin extra ordinem, 'utanför ordningen'.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som går mycket utöver det vanliga' - matchar kortets huvudbetydelse. Etymologin (latin extra ordinem, 'utanför ordningen') är sann - SO anger franskans extraordinaire som direkt lånväg, men den yttersta roten är ändå den angivna latinska frasen, och den hjälper till att förstå ordet."
+    },
+    {
+      "noteId": 1780080627505,
+      "ord": "farstu",
+      "facit": "litet rum omedelbart innan­för ytter­dörren<br><br>(förstuga)<br><a href=\"https://commons.wikimedia.org/wiki/File:Sk%C3%B6ndalsbro_2015b.jpg\"><img src=\"250px-sköndalsbro_2015b.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Litet rum innanför ytterdörren",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "förstuga",
+          "hall"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ta av dig stövlarna i <font color=\"#3498db\">farstun</font> innan du går in.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO anger en andra betydelse för farstu utöver 'litet rum innanför ytterdörren': en äv.-betydelse 'trappavsats i flerfamiljshus'. Kortet nämner bara den första betydelsen - en hel betydelse saknas och bör läggas till, t.ex. med ';'."
+    },
+    {
+      "noteId": 1780080622184,
+      "ord": "anskri",
+      "facit": "rop",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Plötsligt, häftigt skrik",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "skrik",
+          "utrop"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid åsynen av den stympade kroppen gav hon till ett <font color=\"#3498db\">anskri</font>.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO märker anskri med bruklighetskommentaren 'ålderdomligt' (dvs föråldrat/arkaiskt bruk), inte 'litterär' som kortet anger. Litterärt register betyder att ordet fortfarande används i finstil, medan ålderdomligt signalerar att det knappt används alls i modern svenska - registret bör rättas till arkaisk/ålderdomlig."
+    },
+    {
+      "noteId": 1780080625462,
+      "ord": "suggestion",
+      "facit": "hypnotisk påverkan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hypnotisk påverkan av mer eller mindre stark grad",
+        "register": "formell, neutral",
+        "synonymer": [
+          "hypnos",
+          "psykisk styrning",
+          "manipulation"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Förälskelse är ett slags <font color=\"#3498db\">suggestion</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'typ av (mer eller mindre) hypnotisk påverkan' - matchar kortets huvudbetydelse nästan ordagrant. Exempelmeningen ('förälskelse är ett slags suggestion') är hämtad rakt av från SO och är sakligt korrekt."
+    },
+    {
+      "noteId": 1780080626748,
+      "ord": "särk",
+      "facit": "nattlinne",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Underplagg för överkroppen, buret närmast kroppen",
+        "register": "arkaisk, neutral",
+        "synonymer": [
+          "nattlinne",
+          "underklänning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon bar en vit linnebroderad <font color=\"#3498db\">särk</font> under klänningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(kvinno)underplagg för överkroppen av linne eller dylikt', bruklighet 'mest historiskt' - matchar kortets betydelse och register ('arkaisk'). Exempelmeningen är sakligt rimlig och grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080627162,
+      "ord": "eluvial",
+      "facit": "urlakningprocess",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som utsatts för urlakning, utfällning eller vittring på platsen",
+        "register": "formell, neutral",
+        "synonymer": [
+          "vittringsbildad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Jordarten var <font color=\"#3498db\">eluvial</font> och hade bildats där den låg.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som utsätts för urlakning, utfällning eller vittring (om jord eller dylikt)' - matchar kortet väl. Tillägget 'på platsen' är sakligt korrekt: eluvialt material bildas just där det ligger, till skillnad från transporterat material, vilket gör kortet lättare att förstå."
+    },
+    {
+      "noteId": 1780080627547,
+      "ord": "sammandrag",
+      "facit": "resumé, översikt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förkortad framställning som framhäver det viktiga ; turnering där lagen möts på samma plats",
+        "register": "formell, neutral",
+        "synonymer": [
+          "resumé",
+          "referat",
+          "kortversion"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Chefen fick ett <font color=\"#3498db\">sammandrag</font> av nattens händelser.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar två skilda betydelser för sammandrag: 'sammanfattning' och 'en spelform inom t.ex. fotboll' (turnering där lagen möts på samma plats). Kortet fångar båda och separerar dem korrekt med ';' - mer komplett än facit (resumé, översikt) som bara visade den första betydelsen."
+    },
+    {
+      "noteId": 1780080620030,
+      "ord": "vestal",
+      "facit": "kysk kvinna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Prästinna i Vestas tempel, bunden vid kyskhetslöfte / Bildligt: kysk kvinna",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "prästinna",
+          "kysk kvinna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Vestalerna</font> vaktade den heliga elden i Rom.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger huvudbetydelsen 'ung prästinna i Vestatemplet, bunden vid kyskhetslöfte' samt en märkt äv.-betydelse 'sexuellt avhållsam kvinna i allmänhet' (historiskt bruk). Kortet fångar båda och märker den andra tydligt som 'Bildligt:', vilket går att läsa och förstå direkt."
+    },
+    {
+      "noteId": 1780080625360,
+      "ord": "skenbar",
+      "facit": "ej vad den tycks vara",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Något som inte är vad det verkar vara",
+        "register": "formell, neutral",
+        "synonymer": [
+          "illusorisk",
+          "låtsad",
+          "till synes"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bakom den <font color=\"#3498db\">skenbara</font> enkelheten i hans prosa döljer sig många omarbetningar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som inte är vad det tycks vara' - matchar kortet exakt. Exempelmeningen om prosans skenbara enkelhet är identisk med SO:s eget exempel och är grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080624892,
+      "ord": "gäcka",
+      "facit": "svika, lura<br><br><i>deras planer gäckades;&nbsp; &nbsp;en gäckande skugga</i>",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Lämna en förhoppning ouppfylld, svika eller lura",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "svika",
+          "lura",
+          "bedra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans förhoppningar om befordran <font color=\"#3498db\">gäckades</font> år efter år.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en huvudbetydelse ('lämna förväntning ouppfylld') och en äv.-betydelse ('narra, lura', om varelse). Kortets 'lämna en förhoppning ouppfylld, svika eller lura' samt synonymerna (svika, lura, bedra) täcker båda nyanserna - facit_signal (4 betydelser) var missvisande, ingen hel betydelse saknas i praktiken."
+    },
+    {
+      "noteId": 1780080620106,
+      "ord": "betryckt",
+      "facit": "tyngd av bekymmer, djupt förtvivlad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som känner djup nedstämdhet ; äv. om något som vållar nedstämdhet",
+        "register": "formell, negativ",
+        "synonymer": [
+          "nedstämd",
+          "beklämd",
+          "modfälld"
+        ],
+        "exempelmening": "Stämningen var <font color=\"#3498db\">betryckt</font> efter beskedet.",
+        "etymologi": null,
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har huvudbetydelsen 'som känner djup nedstämdhet' och en äv.-betydelse 'som vållar nedstämdhet' (om situation/uppsyn). Kortet fångar exakt båda med ';' - väl utfört och matchar facit."
+    },
+    {
+      "noteId": 1780080624716,
+      "ord": "rundlig",
+      "facit": "stor och omfattande<br><br><br><i>en rundlig summa;<br><br>det tog sin rundliga tid att städa lägenheten</i>",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som har stor omfattning eller storlek",
+        "register": "formell, neutral",
+        "synonymer": [
+          "betydlig",
+          "riklig",
+          "ansenlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det tog sin <font color=\"#3498db\">rundliga</font> tid att städa lägenheten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har bara EN formell betydelse ('som har stor omfattning, särsk. om tid el. pengar') illustrerad med två exempel (summa, städtid) - inte två skilda betydelser. Facit_signal (2 betydelser) byggde på att facit gav två exempel, inte två sinnen. Kortet stämmer."
+    },
+    {
+      "noteId": 1780080625800,
+      "ord": "runga",
+      "facit": "dåna, eka, skalla<br><br><i>Inne i huset hörs kommandoorden utanför&nbsp;runga&nbsp;på tyska.</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Ljuda starkt och högt ; ske med kraft",
+        "register": "formell, neutral",
+        "synonymer": [
+          "dåna",
+          "eka",
+          "genljuda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Applåderna <font color=\"#3498db\">rungade</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en huvudbetydelse ('ljuda starkt') med flera äv.-nyanser, bl.a. 'ske med kraft, mindre tanke på ljudet' (t.ex. 'en rungande örfil'). Kortets 'ljuda starkt och högt ; ske med kraft' fångar just huvudbetydelsen plus denna nyans. Facit_signal (3 betydelser) överskattade antalet formella sinnen - endast ett huvudsinne finns i SO."
+    },
+    {
+      "noteId": 1780080625946,
+      "ord": "kongruent",
+      "facit": "överensstämmande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fullt överensstämmande i storlek och form",
+        "register": "fackspråklig, neutral, matematik",
+        "synonymer": [
+          "överensstämmande",
+          "likformig",
+          "motsvarande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I <font color=\"#3498db\">kongruenta</font> trianglar är alla vinklar och alla sidor lika.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'fullt överensstämmande i storlek och form el. liknande väsentliga egenskaper', särsk. geometri/matematik/språkvetenskap - matchar kortets huvudbetydelse och register."
+    },
+    {
+      "noteId": 1780080624928,
+      "ord": "omistlig",
+      "facit": "oumbärlig, nödvändig, oförytterlig<br><br>(eng) inalienable",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så viktig att den inte kan undvaras eller ersättas",
+        "register": "litterär, positiv",
+        "synonymer": [
+          "oumbärlig",
+          "nödvändig",
+          "oförytterlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Strindbergs författarskap är en <font color=\"#3498db\">omistlig</font> del av vår kulturhistoria.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO ('omöjlig att undvara') och SAOL ('som man måste ha') definierar omistlig som odispensabel - INTE 'kan inte ersättas'. SO listar t.o.m. oersättlig som en separat jämförelseterm (cohyponym), inte som synonym till omistlig. Kortets huvudbetydelse 'inte kan undvaras eller ersättas' blandar in en betydelsenyans som hör till ett annat ord (oersättlig). 'eller ersättas' bör strykas."
+    },
+    {
+      "noteId": 1780080624879,
+      "ord": "ramponera",
+      "facit": "slå sönder",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Totalt förstöra något genom våld eller skada",
+        "register": "formell, neutral",
+        "synonymer": [
+          "förstöra",
+          "krossa",
+          "demolera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bilen blev helt <font color=\"#3498db\">ramponerad</font> vid krocken.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'totalt förstöra genom att slå sönder, köra över eller dylikt' - matchar kortets 'totalt förstöra något genom våld eller skada'. Exempelmeningen om bilkrock är SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080623075,
+      "ord": "avkunna",
+      "facit": "officiellt meddela",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Officiellt tillkännage ett beslut eller en dom",
+        "register": "formell, neutral",
+        "synonymer": [
+          "officiellt meddela ett beslut",
+          "kungöra",
+          "fälla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Domstolen <font color=\"#3498db\">avkunnade</font> en dom på fem års fängelse.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ('officiellt meddela utslag, spec. i rättegång') och SAOL ('meddela') definierar avkunna neutralt - det gäller lika mycket fällande som friande dom. Synonymen 'fälla' är fel: fälla betyder specifikt att döma skyldig/konvicera och är inte utbytbart (man kan avkunna en friande dom, men inte 'fälla' en sådan). Byt 'fälla' mot t.ex. 'kungöra' eller 'förkunna'."
+    },
+    {
+      "noteId": 1780080624183,
+      "ord": "spattig",
+      "facit": "stelbent",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stelbent i gången ; tokig, virrig",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "stelbent",
+          "ledbruten",
+          "virrig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En gammal <font color=\"#3498db\">spattig</font> häst.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar exakt: 'stelbent, ledbruten; tokig, virrig' (vard.). Kortets båda betydelser ('stelbent i gången' och 'tokig, virrig'), synonymer och register ('vardaglig') stämmer helt med SAOL."
+    },
+    {
+      "noteId": 1780080624112,
+      "ord": "cynisk",
+      "facit": "rå, krass, skeptisk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föraktar mänsklig natur och är likgiltig för andras lidanden",
+        "register": "neutral, nedsättande",
+        "synonymer": [
+          "hänsynslös",
+          "känslokall",
+          "krass"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En kall och <font color=\"#3498db\">cynisk</font> karriärist.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'föraktar den mänskliga naturen och är likgiltig för medmänniskornas olyckor' - matchar kortets huvudbetydelse nästan ordagrant, exempelmeningen är SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080622683,
+      "ord": "emeritus",
+      "facit": "pensionerad professor",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Titel för en pensionerad professor (eller präst) som behåller sin titel",
+        "register": "formell, neutral",
+        "synonymer": [
+          "pensionerad professor"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han är professor <font color=\"#3498db\">emeritus</font> i engelska men arbetar fortfarande med sin forskning.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(titel för) pensionerad (manlig) präst eller professor' - matchar kortet. Tillägget 'som behåller sin titel' är sakligt korrekt och gör betydelsen lättare att förstå. Exempelmeningen är SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080623907,
+      "ord": "ovarium",
+      "facit": "äggstock",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Organet där ägg bildas hos honor",
+        "register": "formell, neutral",
+        "synonymer": [
+          "äggstock"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Ovarierna</font> frisätter ett ägg i månaden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'äggstock' - kortets 'organet där ägg bildas hos honor' är en korrekt och tydlig omskrivning som går att läsa och förstå direkt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 46,
+  "granskning_kostnad_usd": 1.3152294,
+  "granskning_turkrav": 6
+}

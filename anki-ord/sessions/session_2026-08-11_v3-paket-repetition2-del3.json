@@ -1,0 +1,104 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080622887,
+      "ord": "bisträcka",
+      "facit": "(ek.) hjälpa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge ekonomiskt stöd åt något eller någon",
+        "register": "arkaisk, neutral",
+        "synonymer": [
+          "understödja",
+          "bidra till"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Flera storföretag <font color=\"#3498db\">bisträcker</font> partiet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger enda betydelsen 'ge (ekonomiskt) understöd åt', vilket matchar kortets huvudbetydelse och facit. Synonymerna 'understödja'/'bidra till' är utbytbara och icke-cirkulära. Exempelmeningen är hämtad rakt av SO:s eget exempel, grammatiskt korrekt och ordet är highlightat. Ordet är sällsynt i modernt bruk (popularitet 59, belagt 1842) så registret 'arkaisk' är rimligt."
+    },
+    {
+      "noteId": 1780080627779,
+      "ord": "ohägn",
+      "facit": "(lättare) besvär",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lättare besvär ; skada eller åverkan",
+        "register": "arkaisk, neutral",
+        "synonymer": [
+          "förtret",
+          "obehag",
+          "åverkan"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Grannens fest gjorde honom en del <font color=\"#3498db\">ohägn</font> under natten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerade både SO ('(lättare) besvär') och SAOL ('skada; förtret'). Kortet fångar korrekt båda betydelseklustren och separerar dem rätt med ' ; ' (lättare besvär vs. skada/åverkan) -- går längre än facit som bara nämner den ena. Synonymerna är rimliga och icke-cirkulära, exempelmeningen illustrerar besvärsbetydelsen korrekt och är grammatiskt godtagbar, registret 'arkaisk' stämmer med SO:s 'något ålderdomligt'."
+    },
+    {
+      "noteId": 1780080628028,
+      "ord": "plädering",
+      "facit": "(jur.) anförande, utläggning<br><br>(eng) plead",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Övertygande muntligt anförande, ofta juridiskt",
+        "register": "formell, neutral",
+        "synonymer": [
+          "anförande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Advokaten höll en kraftfull <font color=\"#3498db\">plädering</font> för sin klients oskuld.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar plädering som 'det att plädera' med juridisk specialbetydelse 'en rättegångsparts utläggning av sin uppfattning om hur ett mål rättsligt ska bedömas'. Kortets 'övertygande muntligt anförande, ofta juridiskt' är en rimlig omformulering (pläderingar hålls muntligt i rätten). Synonymen 'anförande' är korrekt och icke-cirkulär, exempelmeningen matchar SO:s egna juridiska exempel ('försvarets/åklagarens plädering') och registret 'formell' stämmer väl."
+    },
+    {
+      "noteId": 1780080621956,
+      "ord": "furu",
+      "facit": "trätyp",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Virke av tallträdet",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "tallvirke"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Golvet var lagt av behandlad <font color=\"#3498db\">furu</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Både SO och SAOL definierar furu som 'trä/virke av tall' -- inte trädet självt utan virket, vilket kortet korrekt återger ('Virke av tallträdet'). Synonymen 'tallvirke' är utbytbar och icke-cirkulär. Exempelmeningen bygger på SO:s eget exempel ('behandlad furu'), är grammatiskt korrekt och ordet är highlightat."
+    },
+    {
+      "noteId": 1780080628330,
+      "ord": "flängd",
+      "facit": "(vard.)&nbsp; tokig",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Tokig, galen",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "tokig",
+          "galen"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det var en helt <font color=\"#3498db\">flängd</font> idé att bygga bron där.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerade facit_signal explicit: SO:s adjektiv-lemma 'flängd' har bara EN betydelse ('tokig', vardagligt, belagt 1969) -- de två betydelserna som antyds hör till verbet 'flänga' (riva av / rusa), inte till adjektivet 'flängd'. SAOL har heller ingen egen adjektivpost för 'flängd' utanför verbparticipet. Kortets enda betydelse är alltså korrekt och komplett, inte en lucka. Exempelmeningen matchar SO:s eget exempel ('en flängd idé'), är korrekt och ordet är highlightat."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 16,
+  "granskning_kostnad_usd": 0.36784819999999996,
+  "granskning_turkrav": 5
+}

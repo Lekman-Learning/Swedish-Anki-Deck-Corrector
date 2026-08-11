@@ -84,11 +84,24 @@ POOL_FRAGA = {
         f'deck:"{config.DECK_NAME}" is:suspended -tag:{config.FORMAT_TAG_V2} '
         f'-tag:{config.DAGSBATCH_TAG_PREFIX}::*'
     ),
-    # Spår B: v2-kort som REDAN är släppta men aldrig blindverifierats.
-    # De ligger i Adams aktiva kö -- ett fel här kostar varje dag det får stå.
+    # Spår B: v2-kort som skrivits under den gamla processen och aldrig
+    # blindverifierats.
+    #
+    # `-is:suspended` STOD HÄR till 2026-08-11 och byggde på att spår B:s kort
+    # per definition låg i Adams aktiva kö. Det upphörde att gälla samma dag:
+    # när allt som inte är full v3 suspenderades blev villkoret sant för noll
+    # kort, och poolen tömdes tyst. `test_prio_urval.py` fångade det
+    # ("omgranskning hämtade 0 kort") -- utan testet hade dagsbatchen bara
+    # blivit tom utan att någon förstod varför.
+    #
+    # Suspenderat är numera normaltillståndet för ett ogranskat kort, inte ett
+    # undantag. Det som ska hållas UTE ur poolen är i stället kort som pausats
+    # för att de inte går att sökkolla (se v3_pausa.py) -- de kostar arbete
+    # varje gång de plockas och blir aldrig klara.
     "omgranskning": (
-        f'deck:"{config.DECK_NAME}" -is:suspended tag:{config.FORMAT_TAG_V2} '
-        f'-tag:{config.OBEROENDE_TAG_PREFIX}::* -tag:{config.DAGSBATCH_TAG_PREFIX}::*'
+        f'deck:"{config.DECK_NAME}" tag:{config.FORMAT_TAG_V2} '
+        f'-tag:{config.OBEROENDE_TAG_PREFIX}::* -tag:{config.DAGSBATCH_TAG_PREFIX}::* '
+        f'-tag:v3_pausad::*'
     ),
 }
 
@@ -123,6 +136,25 @@ def hamta_pool(antal, spar, ko="bada"):
     if kvar <= 0:
         return prio
     return prio + fetch_cards_sorted_by_due(f"{bas} -tag:{config.PRIO_TAG_HOG}", kvar)
+
+
+def hamta_ids(kort_ids):
+    """Hämtar exakt de angivna korten, i angiven ordning.
+
+    Finns för att prio-taggen bara kan uttrycka "viktig", inte "hur viktig":
+    hamta_pool() sorterar prio-korten inbördes på `due`, så en rankad lista
+    (v3_urgency.py) skulle tappa sin ordning och -- när fler kort är
+    prio-märkta än batchen rymmer -- tappa poster ur toppen godtyckligt.
+
+    Kastar om något ID saknas i stället för att tyst leverera en kortare
+    batch: en batch som tyst krymper ser ut som en klar batch.
+    """
+    cards = invoke("cardsInfo", cards=list(kort_ids))
+    hittade = {c["cardId"]: c for c in cards if c.get("cardId")}
+    saknas = [i for i in kort_ids if i not in hittade]
+    if saknas:
+        raise SystemExit(f"AVBRYTER: {len(saknas)} kort-ID saknas i Anki: {saknas[:5]}")
+    return [hittade[i] for i in kort_ids]
 
 
 def bygg_post(card, old_lookup, spar, prio_nids=frozenset()):
@@ -175,6 +207,11 @@ def main():
                         "Utan detta sorterar repetitionskorten alltid först och "
                         "de nya korten kommer aldrig med.")
     p.add_argument("--dump", action="store_true", help="skriv även en läsbar .txt")
+    p.add_argument("--ids-fil", metavar="FIL",
+                   help="JSON-lista från v3_urgency.py: ta exakt dessa kort, i "
+                        "listans ordning, i stället för poolurvalet.")
+    p.add_argument("--antal-ur-fil", type=int, metavar="N",
+                   help="med --ids-fil: ta bara de N översta.")
     args = p.parse_args()
 
     antal = args.antal if args.antal is not None else (
@@ -185,7 +222,26 @@ def main():
         # förfallet i Ankis mening -- filtret skulle tysta bort hela poolen.
         p.error("--ko gäller bara --spar omgranskning (spår A är suspenderat)")
 
-    cards = hamta_pool(antal, args.spar, args.ko)
+    if args.ids_fil:
+        with open(args.ids_fil, encoding="utf-8") as f:
+            rankade = json.load(f)
+        if args.antal_ur_fil:
+            rankade = rankade[:args.antal_ur_fil]
+        # Pausade kort måste filtreras HÄR också. --ids-fil går förbi
+        # POOL_FRAGA, så `-tag:v3_pausad::*` i pool-frågan skyddar den inte:
+        # 2026-08-11 kom `ytong` med i en 50-kortsbatch trots att det pausats
+        # samma dag, och kostade en sökkoll som redan var känd som omöjlig.
+        pausade = set(invoke("findCards",
+                             query=f'deck:"{config.DECK_NAME}" tag:v3_pausad::*'))
+        fore = len(rankade)
+        rankade = [r for r in rankade if r["cardId"] not in pausade]
+        if len(rankade) < fore:
+            print(f"Hoppade {fore - len(rankade)} pausade kort (v3_pausad).")
+        cards = hamta_ids([r["cardId"] for r in rankade])
+        print(f"Läste {len(cards)} kort ur {args.ids_fil} "
+              f"(poäng {rankade[0]['poang']} ned till {rankade[-1]['poang']}).")
+    else:
+        cards = hamta_pool(antal, args.spar, args.ko)
     if not cards:
         print(f"Poolen för spår '{args.spar}' (kö: {args.ko}) är tom.")
         return
@@ -200,7 +256,10 @@ def main():
     # LAGA fel så fort som möjligt. Det gör urvalet snedvridet -- räkna aldrig
     # felfrekvens på det, den blir för hög. Mätningen kommer från
     # blint_stickprov.py, som drar slumpmässigt just därför.
-    poster.sort(key=lambda e: (not e["prio"], ALLVAR_ORDNING[e["hogsta_allvar"]], e["ord"]))
+    # Med --ids-fil ÄR ordningen resultatet (urgency-rankningen). Att sortera
+    # om den här hade tyst kastat bort hela poängen med att skicka in en lista.
+    if not args.ids_fil:
+        poster.sort(key=lambda e: (not e["prio"], ALLVAR_ORDNING[e["hogsta_allvar"]], e["ord"]))
 
     idag = datetime.date.today().isoformat()
     katalog = os.path.join(os.path.dirname(__file__), "sessions")

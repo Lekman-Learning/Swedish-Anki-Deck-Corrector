@@ -3053,3 +3053,115 @@ i stället för om HTTP-anropen.
    den separata domänaxeln (`REGISTER_DOMAN`), och domänen heter `lingvistik`,
    inte "språkvetenskap". Ett fritt formulerat register går inte att filtrera
    på i Anki efteråt -- därför är listan fast.
+
+## 2026-08-11: allt utan full v3 suspenderat, sju spärrar, fem buggar
+
+**Adams beslut:** *"Jag vill att vi suspendar allt som inte är full v3."*
+2 670 repetitionskort suspenderades; kön fylls nu bara på av granskning.
+Efter dagens två omgångar: **412 full v3**, 70 i repetitionskön, 318 i
+nya-kön, **0 aktiva kort utan full v3**. Kvar att granska: 2 600.
+
+### Nya spärrar
+
+**Uppslagsordskontroll i `slaupp.py`.** svenska.se:s msearch är en fritext-
+sökning: saknas ordet returneras grannartiklar med HTTP 200. `ytong` (ett
+varumärke) fick artikeln för **yta** och trekällskontrollen räknade källan
+som komplett, eftersom den bara såg att anropet lyckades. Nu stryks
+svenska.se som källa utan exakt uppslagsordsträff. Fixen stod föreslagen men
+ogenomförd sedan tidigare samma dag.
+
+**Variantformer.** Adam: *"är det inte bara att loafer är loafers istället."*
+Rätt — `loafers` träffar SAOL och SO, `loafer` ingenting. `slaupp.py` provar
+nu ett fåtal böjningsformer innan ett ord döms som osökbart. Av 13 ord som
+pausats som "osökbara" gick **12 att belägga** efter fixen. Bara `ytong` är
+genuint utanför ordböckerna.
+
+**Omkörningssvep.** `_hamta_ratt` backade redan av 429 fyra gånger, men ett
+ord som brände sina försök besöktes ALDRIG igen — det landade i
+`tre_kallor_saknas.json` och såg där ut som ett ord källan saknar. Svepet
+körs efter batchen, bara på returbara fel.
+
+**Registret kräver båda axlarna (`baksida.validate_register`).** Regeln stod
+i docstringen sedan 2026-08-04 (*"skärpt från 'minst en av dem'"*) men fanns
+aldrig i koden: `arkaisk` ensamt, `negativ` ensamt och även `juridik` ensamt
+passerade utan varning. När spärren slogs på föll **86 av 342 full-v3-kort**
+och 2 681 av 3 233 v2-kort.
+
+**`exempelkoll.py`, inkopplad i skrivvägen.** Blindgranskaren underkände
+`brådstörtad` för en exempelmening nästan ordagrant lånad ur SO. Mätt över
+decket: bara **15** kort har lånad mening — men **1 716 av 3 233** är för
+tunna (färre än fem innehållsord). Det är den verkliga bristen.
+
+**`v3_urgency.py`** rankar is:review-kön på RISK (hur kortet blev till) +
+EXPONERING (lapses, intervall, förfallodag). 2 012 av 2 670 saknade sökkoll;
+legacy-format och flerbetydelse var noll. **Lapses är signalen som inte finns
+någon annanstans**: ett kort Adam upprepat failar kan vara fel KORT, inte fel
+Adam.
+
+**`v3_kontrollkort.py`** blandar in redan godkända kort som dolda kontroller
+i varje blint paket, så processen mäts kontinuerligt i stället för 10/vecka.
+Första två körningarna: 9 kontroller, 0 avvikelser. Mäter samstämmighet, inte
+sanning — två granskare kan dela blind fläck.
+
+### Buggar som suspenderingen avslöjade
+
+Tre av samma klass: ett antagande om världen fruset i kod, som slutade gälla.
+
+1. **`POOL_FRAGA["omgranskning"]` krävde `-is:suspended`.** Efter
+   suspenderingen matchade det noll kort och poolen tömdes tyst.
+   `test_prio_urval.py` fångade det.
+2. **`slapp` avsuspenderade inget för spår B**, styrt av flaggan
+   `redan_i_kon`. 50 blindverifierade kort hade stannat suspenderade medan
+   utdatan sa "inget avsuspenderades" som om det vore väntat. Tittar nu på
+   kortens faktiska läge.
+3. **`--ids-fil` gick förbi pausfiltret** och drog in `ytong` i en batch.
+
+Plus: `slaupp.py` och `v3_digest.py` kunde inte läsa v3:s EGNA sessionsfiler
+(väntade strängar, fick objekt — felet dök upp nere i `urllib`).
+
+### Register auto-ifyllt — en skuld, inte en fix
+
+Adam: *"fyll i neutralt då."* 2 681 kort fick `neutral` på saknad axel.
+Alla 3 233 v2-kort har nu giltigt register. **Men ingen har bedömt dem.**
+`perfid` underkändes samma dag på exakt det — valören stod som `neutral` fast
+ordet är tydligt negativt. Skulden är detekterbar men verklig; taggen
+`register_autoifylld::2026-08-11` är det som gör den hittbar.
+
+Round-trippen `parse → build` verifierades mot hela decket före skrivningen:
+1 avvikande av 3 233 (`le i mjugg`, känd formatmigrering).
+
+### Domänaxeln — SAOL:s `ämnesområden` går INTE att använda
+
+305 av 501 sparade uppslagningar har fältet ifyllt, vilket såg ut som en
+jackpot. Stickprovet stoppade det: fältet är en **semantisk klassificering**,
+inte en registermarkör. `betuttad`, `avsmak`, `bestört` taggas `psykol.`;
+`bekantgöra` som `jur.`; `blaskig` som `matlagn.`; `författning` ligger under
+både jur. och med. Hade 96 vardagliga känsloord märkts som psykologi vore
+taggen värdelös på samma sätt som `sokverifierad` blev på 177 osökta kort.
+
+Den pålitliga källan är SO:s bruklighetskommentar (*"särsk. juridik"*). Elva
+ord hade en; sex fick ny domäntagg. **71 → 77 av 3 233.** SO markerar
+fackområde för ~2 % av ett allmänt ordförråd — axeln SKA vara gles.
+
+### Bilderna: inte förlorade, bara slut
+
+757 av 3 233 v2-kort har bild. OLD-facit har 1 810 bilder på 10 030 poster.
+Endast **22** kort saknade en bild som fanns att hämta — de är åtgärdade.
+Resten saknar bild för att källan inte har någon.
+
+### Hål 0 stoppade skrivningen fem gånger, och hade rätt varje gång
+
+Först gick jag förbi spärren helt genom att anropa `apply_flerbetydelse.
+apply_card()` direkt i stället för via `kortgranskare.applicera()` — korten
+fick v3-taggen utan att sökkollen bevisats. Upptäcktes bara för att `paket`
+sa "Inga applicerade kort".
+
+Sedan vägrades idiom vars `kalla` pekade på hela frasen (URL:en kapas vid
+första mellanslaget). Sedan vägrades de igen — för att grundordsuppslagningen
+körts genom `tail -20`, som kapade bevisraderna. Och i nästa omgång igen, för
+att jag filtrerat genom `grep`.
+
+**Det är fjärde och femte gången samma misstag görs i det här projektet**
+(2026-08-09: sex kort, 2026-08-10: elva, 2026-08-11: femtio, plus dessa två),
+den här gången av någon som citerat regeln i samma session. Slutsatsen är
+inte att skärpa instruktionen. Den är att spärren är det enda som håller.

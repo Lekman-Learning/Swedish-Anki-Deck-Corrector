@@ -41,6 +41,7 @@ import sys
 
 import apply_flerbetydelse as af
 import baksida
+import exempelkoll
 import config
 
 # Windows-konsolen kor cp1252 och klarar inte tecken som granskarnas
@@ -206,6 +207,13 @@ def applicera(sokvag, granskare=None):
                 ord_=e["ord"], tillat=e.get("tillat", ()),
             )
             e["adamtal_varningar"] = mjuka
+            # Exempelmeningskollen ligger HÄR, i den enda skrivvägen, av samma
+            # skäl som Hål 0: en regel som måste köras separat blir inte körd.
+            # Mjuk varning, inte spärr -- fasta uttryck och idiom har ibland
+            # ordbokens formulering som enda rimliga, och en hård spärr hade
+            # tvingat fram sämre meningar för att passera.
+            e["exempel_varningar"] = exempelkoll.granska(
+                e["ord"], p.get("exempelmening", ""))
             e["applicerad"] = True
             # Vem som SKREV kortet. verdikt() vägrar godkänna av samma namn --
             # det är så "oberoende" blir kontrollerbart i stället för påstått.
@@ -486,16 +494,34 @@ def slapp(sokvag, torr=False):
     if torr:
         print("\n(torrkörning -- ingenting ändrades)")
         return
-    if redo and not omgranskning:
-        kort = []
-        for i in range(0, len(redo), af.NID_QUERY_CHUNK):
-            bit = redo[i:i + af.NID_QUERY_CHUNK]
-            kort.extend(invoke("findCards", query=" OR ".join(f"nid:{n}" for n in bit)))
-        invoke("unsuspend", cards=kort)
-        print(f"\nAvsuspenderade {len(redo)} kort -- dessa är nu i Adams kö.")
-    elif omgranskning:
-        print(f"\n{len(redo)} omgranskade kort är nu blindverifierade "
-              f"(låg redan i kön, inget avsuspenderades).")
+    if not redo:
+        return
+
+    kort = []
+    for i in range(0, len(redo), af.NID_QUERY_CHUNK):
+        bit = redo[i:i + af.NID_QUERY_CHUNK]
+        kort.extend(invoke("findCards", query=" OR ".join(f"nid:{n}" for n in bit)))
+
+    # Avsuspendera utifrån kortens FAKTISKA läge, inte utifrån `redan_i_kon`.
+    #
+    # Flaggan sattes när batchen byggdes och betydde "spår B-kort ligger redan
+    # i Adams kö, så avsuspendering vore en no-op". Den blev osann 2026-08-11,
+    # när allt som inte är full v3 suspenderades: spår B-korten ligger nu
+    # UTANFÖR kön och måste avsuspenderas för att godkännandet ska betyda något.
+    #
+    # Med den gamla koden hade 50 blindverifierade kort stannat suspenderade,
+    # och utdatan hade sagt "inget avsuspenderades" som om det vore väntat.
+    # Samma buggklass som POOL_FRAGA:s `-is:suspended` samma dag: ett antagande
+    # om världen inbakat i en flagga, som sedan slutade gälla.
+    suspenderade = set(invoke("findCards",
+                              query=f'deck:"{config.DECK_NAME}" is:suspended'))
+    att_slappa = [c for c in kort if c in suspenderade]
+    if att_slappa:
+        invoke("unsuspend", cards=att_slappa)
+        print(f"\nAvsuspenderade {len(att_slappa)} kort -- dessa är nu i Adams kö.")
+    if len(att_slappa) < len(kort):
+        print(f"{len(kort) - len(att_slappa)} kort låg redan i kön "
+              f"(blindverifierade, inget att avsuspendera).")
 
 
 # ------------------------------------------------------------------- status

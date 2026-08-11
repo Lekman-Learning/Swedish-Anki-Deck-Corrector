@@ -63,6 +63,82 @@ if hasattr(sys.stdout, "reconfigure"):
 
 API = "https://svenska.se/api/msearch"
 UTKAT = "uppslag"
+
+# Uppslagsordskontroll (2026-08-11). svenska.se:s msearch är en FRITEXTSÖKNING:
+# saknas ordet returnerar den grannartiklar med HTTP 200 i stället för tomt.
+# `ytong` (ett varumärke, inte ett uppslagsord) gav artikeln för **yta** --
+# "yttersta skikt av något" -- och trekällskontrollen räknade svenska.se som
+# komplett, eftersom den bara såg att anropet lyckades. Kortet såg alltså
+# sökkollat ut medan uppslagningen handlade om ett annat ord.
+#
+# Fixen stod föreslagen men ogenomförd i CLAUDE.md sedan 2026-08-11:
+# "låt trekällskontrollen räkna en källa som fullständig först när den har en
+# exakt uppslagsordsträff. Då blir 'tre källor' ett påstående om ORDET i
+# stället för om HTTP-anropen."
+#
+# Varje ordbok lagrar uppslagsordet i sitt eget fält:
+HUVUDORDSFALT = {"saol": "ordled", "so": "ortografi", "saob": "lemma"}
+
+
+def _norm(x):
+    """Jämförbar form: gemener, utan bindestreck, punkter och avstavningstecken.
+
+    SAOL:s `ordled` avstavas med '·' (yt·lig) och SO:s `ortografi` kan bära
+    accenter -- en rå strängjämförelse hade underkänt korrekta träffar.
+    """
+    return re.sub(r"[^0-9a-zåäöéèüáó]", "", (x or "").lower())
+
+
+def variantformer(ord_):
+    """Former att prova när kortets ord inte är ordbokens uppslagsform.
+
+    Adam 2026-08-11: *"är det inte bara att loafer är loafers istället."* Han
+    hade rätt -- `loafers` träffar SAOL och SO, `loafer` ingenting. Ordet är
+    inlånat i pluralform, och SAOL för in det så.
+
+    Utan den här listan pausas sådana kort som "osökbara" trots att de står i
+    ordboken under en annan form. Det är ett dyrare fel än det ser ut: ett
+    pausat kort försvinner ur kön och ingen letar efter det igen.
+
+    Listan är avsiktligt KORT och mekanisk -- inte en böjningsmotor. Den
+    provar de former som faktiskt orsakat missar, och varje träff verifieras
+    ändå mot uppslagsordet, så en felaktig gissning kan inte smyga in.
+    """
+    o = ord_.strip()
+    kand = [o + "s", o + "er", o + "ar", o + "or", o + "a", o + "e"]
+    if o.endswith("s"):
+        kand.insert(0, o[:-1])          # loafers -> loafer, och tvärtom
+    if o.endswith(("d", "t")):
+        kand += [o[:-1], o[:-1] + "a"]  # flängd -> flänga, vederkvickt -> ...
+    if o.endswith("ad"):
+        kand.append(o[:-2] + "a")
+    # Bevara ordning, ta bort dubbletter och ordet självt.
+    sett, ut = {o}, []
+    for k in kand:
+        if k not in sett and len(k) > 2:
+            sett.add(k)
+            ut.append(k)
+    return ut
+
+
+def uppslagsordstraffar(data, ord_):
+    """Vilka ordböcker som faktiskt har ORDET som uppslagsord.
+
+    För flerordsuttryck räcker det att ett av leden är uppslagsord: idiom
+    finns inte som egna artiklar (`av hävd` står under **hävd**), vilket
+    BLINDGRANSKNING.md redan föreskriver som arbetssätt. Utan det undantaget
+    hade varje idiom felaktigt rapporterats som osourcat.
+    """
+    no = _norm(ord_)
+    delar = {_norm(d) for d in ord_.split()} - {""}
+    traffar = []
+    for kalla, falt in HUVUDORDSFALT.items():
+        traf = (data or {}).get(kalla) or {}
+        huvudord = {_norm((h.get("_source") or {}).get(falt))
+                    for h in ((traf.get("hits") or {}).get("hits") or [])} - {""}
+        if no in huvudord or (len(delar) > 1 and delar & huvudord):
+            traffar.append(kalla)
+    return traffar
 INDEX = {"saol": "sa-svenska-saol", "so": "sa-svenska-so", "saob": "sa-svenska-saob"}
 
 # TRE KÄLLOR PÅ VARJE KORT (Adams krav 2026-08-10): svenska.se (SO+SAOL+SAOB
@@ -407,6 +483,14 @@ def main():
         d = json.load(open(a.fil, encoding="utf-8"))
         if isinstance(d, dict):
             d = d.get("relearn", []) + d.get("ovriga", [])
+        # Sessionsfilerna från kortbyggare.py är listor av POSTER, inte av
+        # ord. Utan den här normaliseringen gick v3:s egen sessionsfil inte
+        # att mata in i v3:s eget uppslagningssteg -- felet kom först nere i
+        # urllib som "quote_from_bytes() expected bytes", alltså långt från
+        # orsaken och omöjligt att koppla till filformatet.
+        d = [p.get("ord") if isinstance(p, dict) else p for p in d]
+        if any(not isinstance(o, str) or not o for o in d):
+            sys.exit(f"{a.fil}: posterna måste vara strängar eller objekt med 'ord'.")
         ord_ += d
     ord_ = ord_[a.hoppa:a.hoppa + a.antal]
     if not ord_:
@@ -454,6 +538,36 @@ def main():
 
         # Hela svaren sparas, inte bara sammandraget, så att en senare
         # granskare kan läsa exakt vad källan sa i stället för min tolkning.
+        # Uppslagsordskontrollen körs INNAN källan räknas. En fritextträff på
+        # granngrannartiklar är inte en uppslagning av ordet -- se
+        # uppslagsordstraffar() för hela resonemanget.
+        ordbokstraffar = uppslagsordstraffar(data, o)
+        via_form = None
+        if not ordbokstraffar and " " not in o:
+            # Kortets form är kanske inte ordbokens uppslagsform (loafer ->
+            # loafers). Prova ett fåtal varianter INNAN ordet döms som osökbart.
+            for v in variantformer(o):
+                vdata, vstatus, _b = hamta(v)
+                if vdata is None:
+                    continue
+                vtraffar = uppslagsordstraffar(vdata, v)
+                if vtraffar:
+                    ordbokstraffar, via_form, data = vtraffar, v, vdata
+                    print(f"UPPSLAGSORD {o} hittad som uppslagsform '{v}'")
+                    break
+        print(f"UPPSLAGSORD {o} traffar={','.join(ordbokstraffar) or 'INGEN'}"
+              + (f" via={via_form}" if via_form else ""))
+        if not ordbokstraffar and "svenska.se" in kallor_med_innehall:
+            kallor_med_innehall.remove("svenska.se")
+            post["svenska_se"] = {
+                "FEL": "INGEN UPPSLAGSORDSTRAFF -- svaret gallde andra ord",
+                "returnerade_uppslagsord": sorted({
+                    (h.get("_source") or {}).get(falt)
+                    for kalla, falt in HUVUDORDSFALT.items()
+                    for h in ((((data or {}).get(kalla) or {}).get("hits") or {}).get("hits") or [])
+                    if (h.get("_source") or {}).get(falt)})[:8],
+            }
+
         sh = hashlib.sha256(json.dumps(post, sort_keys=True, default=str)
                             .encode()).hexdigest()[:12]
         json.dump({"ord": o, "sha": sh,
@@ -461,6 +575,8 @@ def main():
                              "synonymer.se": SYN_URL.format(o),
                              "wiktionary": WIKT_URL.format(o)},
                    "kallor_med_innehall": kallor_med_innehall,
+                   "uppslagsordstraffar": ordbokstraffar,
+                   "uppslagsform": via_form or o,
                    "svenska_se_ratt": data, "sammandrag": post},
                   open(os.path.join(UTKAT, f"{o}.json"), "w", encoding="utf-8"),
                   ensure_ascii=False)
@@ -480,6 +596,47 @@ def main():
             ofullstandiga[o] = {"har": kallor_med_innehall,
                                 "hamtning_misslyckades": fel}
         time.sleep(0.4)
+
+    # ---- OMKÖRNINGSSVEP (2026-08-11) ----
+    # `_hamta_ratt` backar redan av 429 fyra gånger (3+6+9 s). Det räcker inte
+    # när 70 anrop går i rad: 2026-08-11 brände 10 av 70 ord alla sina försök
+    # mot Wiktionary, och en manuell omkörning gav sedan 7 riktiga artiklar.
+    #
+    # Luckan var alltså inte att omförsök saknades utan att ett ord som brände
+    # sina försök ALDRIG BESÖKTES IGEN -- det landade i tre_kallor_saknas.json
+    # och såg där ut precis som ett ord källan faktiskt saknar. Svepet körs när
+    # bursten lagt sig, alltså när chansen att lyckas är som störst.
+    #
+    # Bara RETUR-BARA fel görs om. Ett ord källan verkligen saknar ska inte
+    # köras om i evighet: det är ett besked om ordet, inte ett serverfel.
+    omkorning = {o: v for o, v in ofullstandiga.items() if v["hamtning_misslyckades"]}
+    if omkorning:
+        print(f"---OMKORNING--- {len(omkorning)} ord med misslyckad hamtning, "
+              f"vantar 20 s")
+        time.sleep(20)
+        for o, v in list(omkorning.items()):
+            if "wiktionary" not in v["hamtning_misslyckades"]:
+                continue
+            wik, w_status, w_byte = hamta_wiktionary(o)
+            print(f"WIKTIONARY_OMKORD {o} HTTP {w_status} {w_byte}")
+            if not (wik and wik.get("finns")):
+                continue
+            sokvag = os.path.join(UTKAT, f"{o}.json")
+            try:
+                sparad = json.load(open(sokvag, encoding="utf-8"))
+            except Exception:
+                continue
+            sparad["sammandrag"]["wiktionary"] = wik
+            if "wiktionary" not in sparad["kallor_med_innehall"]:
+                sparad["kallor_med_innehall"].append("wiktionary")
+            json.dump(sparad, open(sokvag, "w", encoding="utf-8"), ensure_ascii=False)
+            kvar = [k for k in v["hamtning_misslyckades"] if k != "wiktionary"]
+            if len(sparad["kallor_med_innehall"]) >= 3:
+                ofullstandiga.pop(o, None)
+            else:
+                ofullstandiga[o] = {"har": sparad["kallor_med_innehall"],
+                                    "hamtning_misslyckades": kvar}
+            time.sleep(1.5)
 
     print("---SAMMANDRAG---")
     if a.tyst:

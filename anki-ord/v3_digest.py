@@ -127,6 +127,11 @@ def main():
         ord_ = json.load(open(a, encoding="utf-8"))
         if isinstance(ord_, dict):
             ord_ = ord_.get("ord") or list(ord_)
+        # Sessionsfilerna från kortbyggare.py är listor av POSTER, inte av ord.
+        # Samma normalisering finns i slaupp.py. Utan den kraschar filen på
+        # 'dict' object has no attribute 'replace' -- ett fel som pekar på
+        # strängoperationen, inte på att filformatet var ett annat än väntat.
+        ord_ = [p.get("ord") if isinstance(p, dict) else p for p in ord_]
     else:
         ord_ = sys.argv[1:]
     for o in ord_:
