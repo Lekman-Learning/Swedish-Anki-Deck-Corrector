@@ -1,0 +1,289 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080626745,
+      "ord": "gno",
+      "facit": "gnida; arbeta hårt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gnida med små snabba rörelser ; arbeta hårt ; flänga omkring",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "gnugga",
+          "putsa",
+          "knega",
+          "arbeta hårt",
+          "flänga",
+          "rusa omkring"
+        ],
+        "synonym_groups": [
+          [
+            "gnugga",
+            "putsa"
+          ],
+          [
+            "knega",
+            "arbeta hårt"
+          ],
+          [
+            "flänga",
+            "rusa omkring"
+          ]
+        ],
+        "exempelmening": "Hon <font color=\"#3498db\">gnodde</font> rent hela huset innan gästerna kom.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger tre betydelser för 'gno': gnida/skrubba, arbeta hårt, samt flänga omkring för att uträtta något. Kortet täcker alla tre, korrekt separerade med ';', synonymgrupperna hör ihop med rätt betydelse och exempelmeningen illustrerar rensbetydelsen tydligt."
+    },
+    {
+      "noteId": 1780080620902,
+      "ord": "emballera",
+      "facit": "inpacka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Packa in, förpacka",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "förpacka",
+          "inpacka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">emballerade</font> presenten omsorgsfullt i silkespapper.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'förse med emballage', med 'förpacka' som angränsande term. Kortet matchar exakt, exempelmeningen är sakligt riktig och ordet är highlightat."
+    },
+    {
+      "noteId": 1780080619760,
+      "ord": "scenario",
+      "facit": "manus eller framtidsbild",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Regissörs praktiska anvisningar för ett verk, scen för scen ; bildligt: tänkt framtida händelseförlopp",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "manuskript",
+          "framtidsbild",
+          "tänkt utfall"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Studien presenterade ett <font color=\"#3498db\">scenario</font> med kraftigt ökade översvämningar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser i samma ordning som kortet: regissörens praktiska anvisningar, samt bildligt tänkt händelseförlopp. Kortet leder med grundbetydelsen och exempelmeningen illustrerar den bildliga betydelsen korrekt."
+    },
+    {
+      "noteId": 1780080626444,
+      "ord": "etablissemang",
+      "facit": "samhällets maktskikt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stor anläggning ; den etablerade samhällseliten",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "anläggning",
+          "den etablerade eliten"
+        ],
+        "synonym_groups": [
+          [
+            "anläggning"
+          ],
+          [
+            "den etablerade eliten"
+          ]
+        ],
+        "exempelmening": "Ett gediget <font color=\"#3498db\">etablissemang</font> som nog kan ta en förlust.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: (större) anläggning, samt den etablerade ordningen/eliten och dess försvarare. Kortet täcker båda i rätt ordning och skiljer dem med ';'. Exempelmeningen ('kan ta en förlust') illustrerar korrekt anläggningsbetydelsen."
+    },
+    {
+      "noteId": 1780080619959,
+      "ord": "uppknäppt",
+      "facit": "glad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vars knappar inte är knäppta ; bildligt: glatt avspänd och pratsam",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "oknäppt",
+          "uppsluppen",
+          "avspänd"
+        ],
+        "exempelmening": "Det <font color=\"#3498db\">uppknäppta</font> sällskapet vid bordet bredvid skrattade högt.",
+        "etymologi": null,
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL ger den bildliga betydelsen som enbart 'glatt avspänd' (SAOL: 'koppla av'). Kortet lägger till 'och pratsam' som inte finns belagt i någon källa och heller inte stöds av någon synonym i listan (ingen synonym för 'pratsam' finns). Bör vara 'bildligt: glatt avspänd' utan tillägget."
+    },
+    {
+      "noteId": 1780080620114,
+      "ord": "konspiration",
+      "facit": "sammansvärjning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hemligt samarbete, vanligen i illasinnat syfte",
+        "register": "formell, negativ, politik",
+        "synonymer": [
+          "sammansvärjning",
+          "intriger",
+          "komplott"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De anklagades för <font color=\"#3498db\">konspiration</font> mot staten efter det hemliga mötet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'hemligt samarbete vanligen i illasinnat syfte' återges ordagrant korrekt på kortet. Synonymerna (sammansvärjning, komplott) stämmer, exempelmeningen är sakligt och grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080622347,
+      "ord": "modist",
+      "facit": "hattsömmerska<br><a href=\"https://www.google.com/imgres?q=modist&amp;imgurl=https%3A%2F%2Fwww.tillskararakademin.com%2Fwt%2Fmedia%2Fimages%2FSTA-GettyImages-1078146182.width-2000.format-webp.webp&amp;imgrefurl=https%3A%2F%2Fwww.tillskararakademin.com%2Faktuellt%2Farbeta-som-modist%2F&amp;docid=p6j1iL-AKljG-M&amp;tbnid=h6GfWUj9AT1QOM&amp;vet=12ahUKEwjI_oXfxqaMAxWTGBAIHa_yLqEQM3oECHsQAA..i&amp;w=2000&amp;h=1000&amp;hcb=2&amp;ved=2ahUKEwjI_oXfxqaMAxWTGBAIHa_yLqEQM3oECHsQAA\"><div><div><div><img alt=\"Arbeta som modist - Vad gör man och ...\" src=\"paste-2be96288c598ffc6fd591736b947cc5b27a2ebc7.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som tillverkar damhattar",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "hattmakare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Modisten</font> sydde en elegant hatt inför bröllopet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som skapar, syr och säljer damhattar'. Kortets 'person som tillverkar damhattar' är en rimlig, korrekt parafras av samma enda betydelse. Facit 'hattsömmerska' och synonymen 'hattmakare' stämmer."
+    },
+    {
+      "noteId": 1780080628370,
+      "ord": "samfällighet",
+      "facit": "kommun, kollektiv, gemenskap",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förening för gemensam förvaltning",
+        "register": "formell, neutral, juridik",
+        "synonymer": [
+          "förening",
+          "sammanslutning"
+        ],
+        "exempelmening": "Väghållningen sköts av villaägarna i en <font color=\"#3498db\">samfällighet</font>.",
+        "etymologi": null,
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'organisation som samordnar viss verksamhet t.ex. i bostads- el. markfrågor'. Kortets 'Förening för gemensam förvaltning' är en korrekt parafras, och exempelmeningen är nästan ordagrant SO:s egen ('väghållningen ... villaägarna i en ... samfällighet')."
+    },
+    {
+      "noteId": 1780080623061,
+      "ord": "hillebard",
+      "facit": "spjutyxa<br><a href=\"https://www.google.com/imgres?q=hillebard&amp;imgurl=https%3A%2F%2Fems.dimu.org%2Fimage%2F019EE5ESXRNyD%3Fdimension%3D1200x1200&amp;imgrefurl=https%3A%2F%2Fdigitaltmuseum.se%2F0210213541833%2Fhillebard&amp;docid=MZTSSjGfme5KrM&amp;tbnid=sN8l3okbmXGEaM&amp;vet=12ahUKEwjs9LnGs-qLAxUzCBAIHeRKPFYQM3oECB0QAA..i&amp;w=624&amp;h=1200&amp;hcb=2&amp;ved=2ahUKEwjs9LnGs-qLAxUzCBAIHeRKPFYQM3oECB0QAA\"><div><div><div><img alt=\"Hillebard -Länsmuseet Gävleborg ...\" src=\"paste-a84c89e9aab18e1e8576d2c121bf98ab98540f82.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vapen med yxblad och stötspets på stång",
+        "register": "formell, neutral, militär",
+        "synonymer": [
+          "spjutyxa",
+          "stångvapen",
+          "pik"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Soldaten höll <font color=\"#3498db\">hillebardens</font> långa skaft stadigt under striden.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen ('vapen med yxblad och stötspets på stång') stämmer exakt med SO. Men synonymen 'pik' är felaktig: SO definierar 'pik' som 'typ av lång, lätt lans' UTAN yxblad, ett annat vapenslag än hillebarden (som specifikt kännetecknas av yxbladet). Synonymen bör tas bort eller ersättas med t.ex. 'stridsyxa på stång'."
+    },
+    {
+      "noteId": 1780080627443,
+      "ord": "inkännande",
+      "facit": "med stark inlevelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Har en djup förmåga till inlevelse i andras känslor",
+        "register": "litterär, positiv, allmän",
+        "synonymer": [
+          "inlevelsefull",
+          "empatisk",
+          "lyhörd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läraren var så <font color=\"#3498db\">inkännande</font> att hon genast märkte vilken elev som mådde dåligt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s adjektivbetydelse 'som utförs med (gradvis uppnådd) inlevelse' återges rimligt som 'djup förmåga till inlevelse i andras känslor'. Synonymerna och exempelmeningen (lärare som märker hur elever mår) stämmer med användningen."
+    },
+    {
+      "noteId": 1780080620389,
+      "ord": "maskör",
+      "facit": "sminkare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som sminkar och skapar utseenden för scen, film eller tv",
+        "register": "formell, neutral, konst",
+        "synonymer": [
+          "sminkare",
+          "skönhetstekniker"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Maskören</font> arbetade hårt för att skapa den skrämmande vampyrfiguren för teaterföreställningen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO/SAOL: 'person som yrkesmässigt maskerar'/'utför ansiktsförklädnad' för scen, film, tv – huvudbetydelsen på kortet stämmer. Men synonymen 'skönhetstekniker' är felaktig: ordet finns inte ens som uppslag i SO och avser i vanligt språkbruk en skönhetsvårdsyrkesperson (hud, naglar) på salong, inte en maskör för scen/film. Bör tas bort."
+    },
+    {
+      "noteId": 1780080622716,
+      "ord": "påvisa",
+      "facit": "skaffa bevis för",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lägga fram bevis för att något är sant",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "bevisa",
+          "ådagalägga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Forskare har <font color=\"#3498db\">påvisat</font> att antalet olyckor minskar vid hastighetsbegränsning.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'lägga fram bevis för (förekomsten av) något'. Kortets formulering och exempelmening är nära nog ordagranna med SO:s egna, sakligt korrekta och synonymerna (bevisa, ådagalägga) stämmer."
+    },
+    {
+      "noteId": 1780080622705,
+      "ord": "förslagen",
+      "facit": "listig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slug och skicklig på ett inte helt ärligt sätt",
+        "register": "litterär, lätt negativ",
+        "synonymer": [
+          "listig",
+          "bakslug",
+          "illmarig"
+        ],
+        "exempelmening": "En <font color=\"#3498db\">förslagen</font> skojare lurade av honom hela lönen.",
+        "etymologi": "Av tyskans verschlagen, troligen 'genompiskad' — den som lärt sig alla knep den hårda vägen.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som behärskar okonventionella, inte helt accepterade metoder', nära besläktat med listig/slug/smart. Kortets 'slug och skicklig på ett inte helt ärligt sätt' fångar detta väl. Etymologin (tyska verschlagen, 'genompiskad') stämmer med SO:s uppgift och tillägget hjälper minnet utan att vara sakligt fel."
+    }
+  ],
+  "granskning_turer": 22,
+  "granskning_kostnad_usd": 0.6366044000000001,
+  "granskning_turkrav": 5
+}
