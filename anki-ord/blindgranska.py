@@ -219,13 +219,33 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
     # "Inget har sparats" -- efter att ha sparat. Ett meddelande som beskriver
     # nagot annat an vad koden gjorde ar samma felklass som resten av projektet
     # jagar; upptackt 2026-08-10 direkt efter att spärren lagts in.
+    # Tröskeln var först `turer <= 1` -- byggd för att fånga det uppenbara
+    # fallet "svarade utan att röra ett verktyg". Den visade sig för svag
+    # 2026-08-11: en körning på 25 kort returnerade **2 turer** och slank
+    # igenom. Två turer räcker för att läsa paketfilen och skriva ett svar,
+    # alltså i praktiken samma sak som noll uppslagningar.
+    #
+    # Att domarna var obelagda gick att bevisa, inte bara misstänka: granskaren
+    # underkände *lumpen* för "sakfel i etymologin", men etymologin på kortet
+    # var ordagrant SO:s egen text ("av tyska Lumpen-, i sammansättn.,
+    # 'ynklig'"). En granskare som faktiskt hämtat SO hade sett det. Den
+    # resonerade i stället ur eget minne om tyska -- och lät precis lika säker
+    # som den granskning som gjort 51 turer.
+    #
+    # Det är hela poängen med lagret: en obelagd dom SER likadan ut som en
+    # belagd. Tröskeln måste därför skala med antalet kort, inte vara ett
+    # fast litet tal. Kravet är ungefär en tur per fyra kort, med golv 5 --
+    # väl under vad en verklig körning gör (del 1 samma dag: 51 turer på 25
+    # kort) men långt över vad ett minnessvar producerar.
     turer = svar.get("num_turns") or 0
-    if turer <= 1:
-        print("AVBRYTER: granskaren svarade utan att använda ett enda verktyg "
-              "(num_turns=%d).\n"
-              "  Verdikten vilar då på modellens minne, inte på SO/SAOL, och får\n"
-              "  inte skrivas in. Kontrollera att WebFetch är tillåten och att\n"
-              "  svenska.se svarar. Inget har sparats." % turer)
+    krav = max(5, len(kvar) // 4)
+    if turer < krav:
+        print("AVBRYTER: granskaren gjorde bara %d turer på %d kort (kräver >= %d).\n"
+              "  Så få turer betyder att uppslagningarna aldrig gjordes, och verdikten\n"
+              "  vilar då på modellens minne i stället för på SO/SAOL. En obelagd dom\n"
+              "  ser exakt likadan ut som en belagd -- därför får den inte skrivas in.\n"
+              "  Kontrollera att WebFetch är tillåten och att svenska.se svarar,\n"
+              "  och kör om. Inget har sparats." % (turer, len(kvar), krav))
         return 1
 
     for p in poster:
@@ -234,6 +254,16 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
             p["verdikt"] = d["verdikt"]
             p["anmarkning"] = d.get("anmarkning") or ""
     data["granskare"] = GRANSKARE_ID
+    # TURANTALET SPARAS, inte bara skrivs ut. Fram till 2026-08-11 fanns siffran
+    # bara i terminalutskriften -- så när en körning visade sig ha dömt 25 kort
+    # på 2 turer gick det inte att i efterhand kontrollera om NÅGON tidigare
+    # granskning haft samma problem. Domarna loggades, men inte hur väl belagda
+    # de var, vilket gör att alla `oberoende_verifierad`-kort ser lika starka ut.
+    # Samma lucka som `raw-verktyg/` och `raw-websearch/` finns för att stänga:
+    # slutsatsen sparades, mätningen bakom den kastades.
+    data["granskning_turer"] = turer
+    data["granskning_kostnad_usd"] = svar.get("total_cost_usd")
+    data["granskning_turkrav"] = krav
     json.dump(data, open(paketsokvag, "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
 

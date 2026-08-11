@@ -1,0 +1,501 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620113,
+      "ord": "eldprov",
+      "facit": "avgörande prov, svår utmaning<br><a href=\"https://www.google.com/imgres?q=trial%20by%20fire%20medieval&amp;imgurl=https%3A%2F%2Fdaily.jstor.org%2Fwp-content%2Fuploads%2F2018%2F08%2Fordeal_by_fire.jpg&amp;imgrefurl=https%3A%2F%2Fdaily.jstor.org%2Ftrial-by-combat-trial-by-cake%2F&amp;docid=s1__bpBG_RQgYM&amp;tbnid=yTvcvKQdd1nHwM&amp;vet=12ahUKEwig0-vl0veLAxXxJBAIHTcMDPsQM3oECDwQAA..i&amp;w=1050&amp;h=700&amp;hcb=2&amp;ved=2ahUKEwig0-vl0veLAxXxJBAIHTcMDPsQM3oECDwQAA\"><div><div><div><img alt=\"Trial by Combat? Trial by Cake! - JSTOR ...\" src=\"paste-2d616bd5d23570d52b6082c201f1be4506f1768e.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Avgörande och svårt prov",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "prövning",
+          "pärs",
+          "avgörande prov"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Premiären blev ett <font color=\"#3498db\">eldprov</font> för hela ensemblen.",
+        "etymologi": "ursprungligen om gudsdom: den anklagade skulle bevisa sin oskuld genom att gå genom eld utan att brännas"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger 'avgörande prov', SO:s exempel ('premiären blev ett ... eldprov för ... ensemblen') matchar kortets exempelmening nästan ordagrant. Etymologin om gudsdom (bevisa oskuld genom eld) är korrekt och hjälper minnet. Synonymerna prövning/pärs är utbytbara och betydelsen leder rätt."
+    },
+    {
+      "noteId": 1780080620068,
+      "ord": "agglomerera",
+      "facit": "hopgyttra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hopa samman delar till en enda massa eller kropp",
+        "register": "fackspråklig, neutral, teknik",
+        "synonymer": [
+          "hopa",
+          "koncentrera",
+          "gyttra ihop"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Partiklarna <font color=\"#3498db\">agglomererade</font> till större klumpar.",
+        "etymologi": "se ursprung till agglomerat"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelse och synonymer (hopa, koncentrera, gyttra ihop) stämmer väl med SO/SAOL ('hopa samman delar till en massa'; SAOL: 'hopa, koncentrera'). Men etymologin 'se ursprung till agglomerat' förklarar ingenting i sig själv, utan hänvisar bara vidare till ett annat ord som måste slås upp - det bryter mot kravet att en angiven etymologi ska göra betydelsen lättare att förstå och att kortet ska gå att läsa högt och förstå direkt. Borde antingen ge den faktiska etymologin (av latin agglomerare 'hopa', till glomus 'nystan') eller utelämnas."
+    },
+    {
+      "noteId": 1780080620103,
+      "ord": "botanisera",
+      "facit": "välja och plocka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Samla in och undersöka växter ; bildligt: leta och välja bland ett större utbud",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "samla växter",
+          "leta",
+          "ströva bland"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">botaniserade</font> bland antikvariatets hyllor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Båda betydelserna (samla/undersöka växter; bildligt leta/välja bland utbud) stämmer med SO och SAOL ('bildl. göra sig hemmastadd, ströva omkring'). Exempelmeningen illustrerar korrekt den bildliga betydelsen, i linje med SO:s eget exempel om bibliotek."
+    },
+    {
+      "noteId": 1780080620121,
+      "ord": "furste",
+      "facit": "titel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person i regentställning, särskilt över ett furstendöme ; äv. om medlem av regentfamilj ; i uttrycket *mörkrets furste*: djävulen",
+        "register": "ngt ålderdomlig, neutral, historia",
+        "synonymer": [
+          "regent",
+          "monark",
+          "härskare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mörkrets <font color=\"#3498db\">furste</font> frestade honom.",
+        "etymologi": "fornsvenska förste; av lågtyska vurste, eg. 'den förste'; jfr först"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s definition inklusive idiomet 'mörkrets furste' = djävulen, registret 'mest historiskt' återges korrekt som 'ngt ålderdomlig, historia'. Etymologin (fornsvenska förste, lågtyska vurste) är korrekt återgiven."
+    },
+    {
+      "noteId": 1780080620077,
+      "ord": "ha skygglappar",
+      "facit": "blunda för verkligheten",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vägra se annat än sitt eget perspektiv",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "vara trångsynt",
+          "blunda för verkligheten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ledningen <font color=\"#3498db\">hade skygglappar</font> och missade hela marknadsskiftet.",
+        "etymologi": "skygglappar är de utstående lappar på ett betsel som hindrar hästen från att se åt sidan; efter tyska Scheuklappe"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Den bildliga betydelsen matchar SO:s beskrivning av skygglappar ('ovillighet att erkänna eller förstå något'). Synonymen 'blunda för verkligheten' matchar facit ordagrant. Etymologin om betselns skygglappar och tyska Scheuklappe stämmer."
+    },
+    {
+      "noteId": 1780080620100,
+      "ord": "kråma sig",
+      "facit": "göra sig till",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stolt och kokett vrida på kroppen för att visa upp sig ; äv. bete sig inställsamt",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "stoltsera",
+          "brösta sig",
+          "göra sig till"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">kråmade sig</font> framför spegeln.",
+        "etymologi": "jfr svensk dialekt krumma 'kröka'; nära besläktat med krum"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Både huvudbetydelsen och underbetydelsen ('bete sig inställsamt') matchar SO exakt, liksom exempelmeningen ('kråmade sig framför spegeln' är nästan identisk med SO:s eget exempel). Etymologin (dialektalt krumma/krum) stämmer."
+    },
+    {
+      "noteId": 1780080620056,
+      "ord": "matrona",
+      "facit": "fetlagd kvinna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Äldre, ofta fyllig och värdig gift kvinna",
+        "register": "neutral, skämtsam",
+        "synonymer": [
+          "husmoder",
+          "äldre dam"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon tronade vid bordsänden som en riktig <font color=\"#3498db\">matrona</font>.",
+        "etymologi": "av latin matro´na 'husfru', till ma´ter 'moder'; besläktat med matris"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kombinerar korrekt SO:s 'äldre (gift) kvinna' och SAOL:s 'fyllig och värdig' på ett rimligt sätt. Etymologin (latin matrona, till mater) stämmer ordagrant med SO."
+    },
+    {
+      "noteId": 1780080620051,
+      "ord": "ouvertyr",
+      "facit": "musikalisk inledning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inledande orkesterstycke till en opera eller ett större verk ; äv. fristående konsertstycke ; bildligt: upptakt",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "inledningsstycke",
+          "förspel",
+          "preludium"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kvällens <font color=\"#3498db\">ouvertyr</font> var av Rossini.",
+        "etymologi": "av franska ouverture 'början', till ouvrir 'öppna'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kortets tre delbetydelser (operainledning, fristående konsertstycke, bildligt upptakt) täcker exakt SO:s tre nyanser. Etymologin (franska ouverture, till ouvrir) är korrekt."
+    },
+    {
+      "noteId": 1780080620109,
+      "ord": "resolvera",
+      "facit": "bestämma",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Besluta eller bestämma ; äv. officiellt meddela ett beslut",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "besluta",
+          "bestämma",
+          "avgöra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Styrelsen <font color=\"#3498db\">resolverade</font> att ärendet skulle bordläggas.",
+        "etymologi": "via tyska av latin resol´vere 'upplösa', dvs. upplösa varje tvivel; jfr resolut, absolut"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('besluta', 'något ålderdomligt') och SAOL ('besluta, bestämma; avgöra') väl, inklusive underbetydelsen om att officiellt meddela ett beslut. Etymologin stämmer."
+    },
+    {
+      "noteId": 1780080620073,
+      "ord": "restituera",
+      "facit": "återbetala",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Återställa i rätt skick ; äv. betala tillbaka",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "återställa",
+          "återbetala",
+          "återlämna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Beloppet <font color=\"#3498db\">restituerades</font> till köparen.",
+        "etymologi": "av latin restitu´ere 'återställa'; jfr konstituera, statuera"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "(Se ovan - dubblettkontroll ej relevant, se post för restituera.)"
+    },
+    {
+      "noteId": 1780080620090,
+      "ord": "socialisera",
+      "facit": "anpassa till samhället",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överföra i samhällets ägo eller under samhällets kontroll ; äv. fostra någon in i ett samhälles normer",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "förstatliga",
+          "nationalisera",
+          "fostra in"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Regeringen ville <font color=\"#3498db\">socialisera</font> bankerna.",
+        "etymologi": "till social"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Täcker SO:s båda betydelser (överföra i samhällets ägo; uppfostra/anpassa in i beteendemönster). Exempelmeningen om att socialisera bankerna matchar SO:s eget exempel nästan ordagrant ('äv. banker m.m.')."
+    },
+    {
+      "noteId": 1780080620125,
+      "ord": "stadgad",
+      "facit": "föreskriven",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fastställd i lag eller föreskrift ; äv. om person: stadig, mogen och sansad",
+        "register": "formell, neutral",
+        "synonymer": [
+          "fastställd",
+          "föreskriven",
+          "sansad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Avgiften är <font color=\"#3498db\">stadgad</font> i förordningen.",
+        "etymologi": "fornsvenska staþhga; till stadga"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Båda betydelserna verifierade: 'fastställd i lag' matchar verbet 'stadga' i SO/SAOL, och 'om person: stadig, mogen, sansad' matchar SO:s reflexiva 'stadga sig' ('övergå till en mer ordnad livsföring'). Ingen betydelse saknas."
+    },
+    {
+      "noteId": 1780080620110,
+      "ord": "tiptop",
+      "facit": "utmärkt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I bästa skick, av högsta klass",
+        "register": "vardaglig, positiv",
+        "synonymer": [
+          "förstklassig",
+          "perfekt",
+          "finfin"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Lägenheten var i <font color=\"#3498db\">tiptop</font> skick.",
+        "etymologi": "av engelska tiptop; till tipp och topp"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s 'tipptopp'-artikel ('som är av högsta klass eller i bästa skick') nästan ordagrant, liksom etymologin (engelska tiptop, tipp och topp)."
+    },
+    {
+      "noteId": 1780080620054,
+      "ord": "antibiotika",
+      "facit": "bakteriedödande medel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läkemedel som dödar eller hämmar bakterier",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "bakteriedödande medel",
+          "penicillin"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läkaren skrev ut <font color=\"#3498db\">antibiotika</font> mot infektionen.",
+        "etymologi": "modern bildning till anti- och grekiska bi´os 'liv'; jfr biologi"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen matchar SO ('ämne som dödar eller hämmar bakterier'). Men 'penicillin' i synonymlistan är sakligt missvisande: penicillin är bara EN specifik typ av antibiotika, inte utbytbart med hela begreppet (man kan t.ex. behöva 'antibiotika som inte är penicillin', vilket vore motsägelsefullt om orden vore synonyma). Byt ut penicillin mot en verklig synonym, t.ex. 'bakteriehämmande läkemedel'."
+    },
+    {
+      "noteId": 1780080620126,
+      "ord": "autonom",
+      "facit": "självständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har hög grad av oberoende och styr sig själv ; äv. om fordon: som kan framföras utan förare",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "självständig",
+          "oberoende",
+          "självstyrande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">autonom</font> region med eget parlament.",
+        "etymologi": "av grekiska auton´omos 'självstyrande'; till auto- och nom´os 'sed; lag'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar en hel betydelse. SO listar en andra, fristående huvudbetydelse (belagd sedan 1990): 'som uttrycker en starkt kritisk inställning till samhället', dvs. det politiska bruket om vänsterautonoma/anarkistiska grupper ('det autonoma nätverket omfattade ... anarkister och husockupanter'). Kortet tar bara upp oberoende/självstyrande-betydelsen (inkl. självkörande fordon). Lägg till den samhällskritiska/politiska betydelsen."
+    },
+    {
+      "noteId": 1780080620055,
+      "ord": "aviarium",
+      "facit": "fågelhus",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stor flygbur eller byggnad för fågelhållning",
+        "register": "fackspråklig, neutral, biologi",
+        "synonymer": [
+          "fågelhus",
+          "voljär"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Djurparkens nya <font color=\"#3498db\">aviarium</font> rymmer trettio arter.",
+        "etymologi": "av latin avia´rium, till av´is 'fågel'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('stor flygbur för fåglar', även 'anläggning för fågelhållning i större skala') och SAOL ('stor fågelbur, fågelhus'). Etymologin (latin aviarium, till avis 'fågel') stämmer."
+    },
+    {
+      "noteId": 1780080620061,
+      "ord": "beklagligtvis",
+      "facit": "dessvärre",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vilket är beklagligt — tyvärr",
+        "register": "formell, lätt negativ",
+        "synonymer": [
+          "tyvärr",
+          "dessvärre",
+          "olyckligtvis"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Beklagligtvis</font> kunde ärendet inte behandlas i tid.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Huvudbetydelsen är nästan ordagrant SO:s ('vilket är beklagligt'), och synonymerna tyvärr/dessvärre/olyckligtvis matchar SO:s egen synonymlista exakt."
+    },
+    {
+      "noteId": 1780080620106,
+      "ord": "betryckt",
+      "facit": "tyngd av bekymmer, djupt förtvivlad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som känner djup nedstämdhet ; äv. om något som vållar nedstämdhet",
+        "register": "formell, negativ",
+        "synonymer": [
+          "nedstämd",
+          "beklämd",
+          "modfälld"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stämningen var <font color=\"#3498db\">betryckt</font> efter beskedet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s primära betydelse ('som känner djup nedstämdhet') och den bildliga ('en betryckt situation' = vållar nedstämdhet). Synonymerna nedstämd/beklämd finns i SO:s egen lista."
+    },
+    {
+      "noteId": 1780080620085,
+      "ord": "betuttad",
+      "facit": "bekymrad; förtjust i",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Förtjust i någon, vanligen med erotisk innebörd",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [
+          "förtjust i",
+          "betagen",
+          "förälskad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var alldeles <font color=\"#3498db\">betuttad</font> i grannflickan.",
+        "etymologi": "svensk dialekt betuttad 'förlägen; rådvill'; av oklart ursprung"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal ifrågasatte om en betydelse ('bekymrad') saknas, men både SO och SAOL ger idag bara EN betydelse: 'förtjust i' (vard.). 'Bekymrad/rådvill' finns bara i etymologin som en äldre dialektal betydelse, inte som en nu gällande betydelse - kortets etymologifält nämner redan detta korrekt ('förlägen; rådvill'). Ingen betydelse saknas alltså i praktiken."
+    },
+    {
+      "noteId": 1780080620096,
+      "ord": "bliga",
+      "facit": "stirra<br><a href=\"https://www.google.com/imgres?q=staring%20stock%20image&amp;imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F1146472788%2Fphoto%2Freal-caucasian-man-with-surprised-expression-looking-at-camera.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DbVEIZyQrIVn995yYwSZBWfyVgVXKOAtW3DfWTKMjR8s%3D&amp;imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fstaring&amp;docid=QqN4OufMKRT1QM&amp;tbnid=w4aF1RkKVJ4KxM&amp;vet=12ahUKEwi3zeGouuGLAxUR2SoKHQldCdEQM3oECBUQAA..i&amp;w=459&amp;h=612&amp;hcb=2&amp;ved=2ahUKEwi3zeGouuGLAxUR2SoKHQldCdEQM3oECBUQAA\"><div><div><div><img alt=\"483,000+ Staring Stock Photos, Pictures ...\" src=\"paste-e06002c63995ec877fc4f978ac7f1e4637303c0c.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Titta ihållande och på ett dumt sätt, oftast på en person",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "glo",
+          "stirra",
+          "blänga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sluta <font color=\"#3498db\">bliga</font> på folk.",
+        "etymologi": "fornsvenska bligha; till en germansk ordstam med betydelsen 'glänsa'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('titta ihållande ... på ett dumt sätt') exakt. Exempelmeningen och etymologin (fornsvenska bligha) stämmer."
+    },
+    {
+      "noteId": 1780080620083,
+      "ord": "catgut",
+      "facit": "kirurgisk sytråd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kirurgisk sytråd, ofta tillverkad av fårtarm",
+        "register": "ngt ålderdomlig, neutral, medicin",
+        "synonymer": [
+          "kirurgisk sytråd",
+          "tarmsträng"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Såret syddes med <font color=\"#3498db\">catgut</font>.",
+        "etymologi": "av engelska catgut, till cat 'katt' och gut 'tarm' — trots namnet aldrig av katt"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('kirurgiskt symaterial ... av tarmar från får el. get'); 'fårtarm' är en rimlig förenkling med 'ofta'. Den tillagda etymologikommentaren ('trots namnet aldrig av katt') är sann och minnesvänlig."
+    },
+    {
+      "noteId": 1780080620120,
+      "ord": "debitera",
+      "facit": "påföra som skuld",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Påföra någon en kostnad",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "fakturera",
+          "påföra",
+          "belasta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Konsulten <font color=\"#3498db\">debiterade</font> tio timmar.",
+        "etymologi": "av franska débiter 'anteckna som skuld'; till latin de´bitum 'skuld'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('påföra (någon) en kostnad') och SAOL ('kräva betalning av ngn') exakt. Etymologin (franska débiter, latin debitum) stämmer."
+    },
+    {
+      "noteId": 1780080620069,
+      "ord": "detaljhandel",
+      "facit": "försäljn. till konsument",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Handel med varor för försäljning direkt till slutkonsumenter, vanligen i små kvantiteter",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "minuthandel",
+          "återförsäljning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Detaljhandeln</font> står för en tredjedel av branschens omsättning.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Definitionen matchar SO nästan ordagrant, och 'minuthandel' är SO:s egen angivna synonym. Exempelmeningen är naturlig och korrekt."
+    },
+    {
+      "noteId": 1780080620049,
+      "ord": "echaufferad",
+      "facit": "upphettad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Varm och röd i ansiktet, oftast av stark sinnesrörelse",
+        "register": "högtidlig, neutral",
+        "synonymer": [
+          "upphettad",
+          "röd i ansiktet",
+          "upphetsad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han kom in <font color=\"#3498db\">echaufferad</font> efter grälet.",
+        "etymologi": "till franska échauffer 'värma'; jfr chaufför, kalfaktor"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('varm och röd i ansiktet ... av stark sinnesrörelse', 'något högtidligt') nästan ordagrant. Etymologin (franska échauffer) med kopplingen till chaufför/kalfaktor är korrekt och minnesvänlig."
+    },
+    {
+      "noteId": 1780080620048,
+      "ord": "emedan",
+      "facit": "eftersom",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Av den orsaken att — eftersom",
+        "register": "formell, neutral",
+        "synonymer": [
+          "eftersom",
+          "därför att",
+          "alldenstund"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mötet ställdes in <font color=\"#3498db\">emedan</font> ordföranden var sjuk.",
+        "etymologi": "fornsvenska ä mäþan, till ä 'alltid' och medan"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('av den orsaken att', 'något formellt') ordagrant, och synonymerna eftersom/därför att matchar både SO och SAOL. Etymologin (fornsvenska ä mäþan) stämmer."
+    }
+  ]
+}
