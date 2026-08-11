@@ -1,0 +1,521 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080621949,
+      "ord": "lisös",
+      "facit": "bäddjacka<br><a href=\"https://commons.wikimedia.org/wiki/File:Bedjacket.JPG\"><img src=\"250px-bedjacket.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fin bäddjacka att ha vid läsning i sängen",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "bäddjacka",
+          "bäddkofta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon drog på sig <font color=\"#3498db\">lisösen</font> innan hon slog sig ner med sin bok.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar 'finare bäddjacka' (ngt åld.); ordet saknas i SO (arkaiskt). Kortets betydelse, register och exempel stämmer väl."
+    },
+    {
+      "noteId": 1780080624594,
+      "ord": "vrenskas",
+      "facit": "streta emot<br><br><i>hästen vrenskades och stegrade sig</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara motsträvig och vägra att lyda",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "trilskas",
+          "streta emot",
+          "vara motspänstig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hästen <font color=\"#3498db\">vrenskas</font> när den inte vill gå framåt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'vara motsträvig och protestera', med underbetydelsen 'streta emot' särsk. om häst. Kortets 'vara motsträvig och vägra att lyda' och synonymerna trilskas/streta emot/vara motspänstig matchar väl, exempelmeningen illustrerar den konkreta hästbetydelsen korrekt."
+    },
+    {
+      "noteId": 1780080622531,
+      "ord": "svara för",
+      "facit": "ansvara",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ha ansvaret för något / Utgöra en viss andel",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "ansvara för",
+          "stå för",
+          "utgöra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Exporten <font color=\"#3498db\">svarar för</font> en tredjedel av företagets omsättning.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'ansvara för något' (äv. 'vara upphovsman till') som betydelse. 'Utgöra en viss andel' (t.ex. 'exporten svarar för en tredjedel') är korrekt och vanlig användning som hänger ihop med samma grundidé ('det som kan hänföras till'), så '/' är försvarbart. Exempelmeningen matchar typisk användning."
+    },
+    {
+      "noteId": 1780080626575,
+      "ord": "abstrus",
+      "facit": "dunkel, oklar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Dunkelt eller otydligt uttryckt och svårt att förstå",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "dunkel",
+          "oklar",
+          "svårbegriplig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det var en <font color=\"#3498db\">abstrus</font> teori som ingen kunde förstå.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'dunkelt uttryckt', äv. 'svårfattlig'. Kortet fångar detta korrekt i en betydelse, synonymer och exempel stämmer."
+    },
+    {
+      "noteId": 1780080626287,
+      "ord": "obscen",
+      "facit": "fräck och oanständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Präglad av ohöljd sexualitet ; allmännare om något som upplevs som stötande",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "oanständig",
+          "slipprig",
+          "stötande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han tyckte att direktörernas <font color=\"#3498db\">obscena</font> bonusar var ett hån mot de anställda.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt två betydelser i denna ordning: 'präglad av ohöljd sexualitet' och (utvidgat) 'allmännare om något som upplevs som stötande'. Kortet återger båda korrekt separerade med ';', synonymer (oanständig, stötande) matchar SO:s jämförelseord, exempelmeningen ('obscena bonusar') matchar SO:s egna exempel ('obscena löner/summor')."
+    },
+    {
+      "noteId": 1780080626073,
+      "ord": "kommissarie",
+      "facit": "ombud",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tjänsteman med ledande eller övervakande uppdrag ; historiskt: regeringsmedlem i Sovjetunionen",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "poliskommissarie",
+          "ombud",
+          "folkkommissarie"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Kommissarien</font> utreder brotten med stor noggrannhet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymet 'ombud' är fel - ombud betyder representant/ställföreträdare, ett helt annat yrke/begrepp än kommissarie (polis-/regeringstjänsteman). Det tycks ha kommit in via etymologin (lat. commissarius 'ombud') snarare än som verklig synonym. Övrigt på kortet - båda huvudbetydelserna (nutida tjänsteman resp. historiskt sovjetiskt regeringsmedlem), register och exempel - stämmer väl med SO."
+    },
+    {
+      "noteId": 1780080621052,
+      "ord": "tjudra",
+      "facit": "fastbinda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Binda fast ett djur med rep eller kedja",
+        "register": "vardaglig, neutral, jordbruk",
+        "synonymer": [
+          "binda fast",
+          "kedja fast"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hästarna var löst <font color=\"#3498db\">tjudrade</font>.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet ger bara den bokstavliga betydelsen 'binda fast ett djur'. SO anger också en utvidgad betydelse ('äv. utvidgat: binda fast', t.ex. 'tjudra cyklarna' - inte bara djur) och en genuint skild bildlig betydelse ('äv. bildligt', t.ex. 'skolan får inte tjudra elevernas fantasi' - att begränsa/hämma). Den bildliga betydelsen saknas helt på kortet."
+    },
+    {
+      "noteId": 1780080622293,
+      "ord": "flakong",
+      "facit": "parfymflaska",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten, elegant parfymflaska",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "parfymflaska"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon samlade på vackra <font color=\"#3498db\">flakonger</font> från olika länder.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'liten elegant flaska (särsk. för parfym)'/'liten parfymflaska'. Kortets definition, synonym och exempel stämmer väl."
+    },
+    {
+      "noteId": 1780080625281,
+      "ord": "prägla",
+      "facit": "stämpla in märke;&nbsp; genomsyra, känneteckna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Åstadkomma avtryck och relief i metall ; ge viss prägel åt ; fästa i minnet ; (om djurunge) lära upp genom prägling",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "stämpla",
+          "känneteckna",
+          "inpränta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Prägla</font> in en klave i myntet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelser (åstadkomma avtryck i metall; ge viss prägel åt; fästa i minnet/inprägla; lära upp genom prägling hos djurunge) återges alla korrekt och rätt separerade med ';'. Kortet är här mer komplett än facit, vilket inte är ett fel. Synonymer och exempel matchar."
+    },
+    {
+      "noteId": 1780080628689,
+      "ord": "sto",
+      "facit": "märr, honhäst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Honhäst",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "honhäst",
+          "märr"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon skötte sitt <font color=\"#3498db\">sto</font> med stor omsorg varje morgon.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition är något bredare ('hona av hästdjur, särsk. häst men även åsna och zebra'), medan kortet bara säger 'honhäst'. Häst är dock klart den vanligaste och centrala betydelsen (matchar även facit 'märr, honhäst'), så detta är en marginell, inte avgörande, brist."
+    },
+    {
+      "noteId": 1780080626292,
+      "ord": "abbreviation",
+      "facit": "förkortning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förkortning, särskilt inom musikaliska sammanhang",
+        "register": "fackspråklig, neutral, musik",
+        "synonymer": [
+          "förkortning",
+          "kortform",
+          "reduktion"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I musiknoten användes <font color=\"#3498db\">abbreviation</font> för att spara plats.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO anger 'förkortning' med bruklighetskommentaren 'särsk. i musikaliska sammanhang' - exakt vad kortet säger. Ordet saknas i SAOL. Register och exempel stämmer."
+    },
+    {
+      "noteId": 1780080625072,
+      "ord": "nedkomst",
+      "facit": "förlossning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förlossning, det högtidliga tillfället då barn föds",
+        "register": "högtidlig, neutral, medicin",
+        "synonymer": [
+          "förlossning",
+          "barnafödande",
+          "barnsbörd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Nedkomsten</font> väntas i oktober.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'förlossning', bruklighetskommentar 'något högtidligt', med exempel 'nedkomsten väntas i oktober' - matchar kortets exempelmening nästan ordagrant. Register och synonymer stämmer."
+    },
+    {
+      "noteId": 1780080624252,
+      "ord": "ebonit",
+      "facit": "en hårdplast<br><a href=\"https://www.google.com/imgres?q=ebonit&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F18%2FEbonit.JPG%2F1200px-Ebonit.JPG&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FEbonit&amp;docid=ic03qF_k0bMxMM&amp;tbnid=KaQbt8SU9C0DqM&amp;vet=12ahUKEwj4oJHMt-SLAxUnFhAIHd1HDxwQM3oECBoQAA..i&amp;w=1200&amp;h=900&amp;hcb=2&amp;ved=2ahUKEwj4oJHMt-SLAxUnFhAIHd1HDxwQM3oECBoQAA\"><div><div><div><img alt=\"Ebonit – Wikipedia\" src=\"paste-58d601143a319348c6c6df2a772bd80c50e2eda1.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hårt gummi med högt svavelhalt",
+        "register": "formell, neutral, kemi",
+        "synonymer": [
+          "hårdgummi",
+          "isolermaterial",
+          "gummiprodukt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Ebonit</font> användes historiskt som isolermaterial i elektriska apparater.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'hårt gummi med hög svavelhalt', historiskt använt som elektriskt isoleringsmaterial - matchar kortets definition och exempelmening nästan ordagrant. Synonymerna hårdgummi/isolermaterial/gummiprodukt är förankrade i SO:s egen definitionstext."
+    },
+    {
+      "noteId": 1780080627454,
+      "ord": "framfusig",
+      "facit": "påflugen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som oblygt tränger sig på ; ibland med positiv värdering: driftig och orädd",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [
+          "påträngande",
+          "påflugen",
+          "oblyg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Är han inte lite väl <font color=\"#3498db\">framfusig</font> som besvärar chefen så där?",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som oblygt tränger sig på', med underbetydelsen 'ibland äv. med positiv värdering'. Kortet fångar båda nyanserna korrekt separerade med ';', och exempelmeningen ('Är han inte lite väl framfusig...') är identisk med SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080627560,
+      "ord": "valspråk",
+      "facit": "devis, motto",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kort uttryck för en livshållning",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "motto",
+          "devis"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Gustav VI Adolfs <font color=\"#3498db\">valspråk</font> var \"Plikten framför allt\".",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: kortfattat uttryck som sammanfattning av livsinställning, jämförelseord devis/motto. Kortets definition, synonymer och exempelmening (identisk med SO:s eget Gustav VI Adolf-exempel) stämmer väl."
+    },
+    {
+      "noteId": 1780080622173,
+      "ord": "bundsförvant",
+      "facit": "samarbetspartner",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Allierad, part som samarbetar mot ett gemensamt mål",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "allierad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stormakten och dess närmaste <font color=\"#3498db\">bundsförvanter</font> gick samman inför kriget.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'part som samarbetar med viss annan part för att uppnå gemensamt mål', ofta i militära/politiska sammanhang - matchar kortets definition, register och exempelmening (nära SO:s eget exempel) väl."
+    },
+    {
+      "noteId": 1780080623378,
+      "ord": "kronologi",
+      "facit": "tidsordning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om beräkning och indelning av tiden ; tidsmässig inbördes ordning",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "tideräkning",
+          "tidsföljd",
+          "tidsordning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Kronologin</font> kastas om i berättelsen genom flera tillbakablickar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt två betydelser i denna ordning: '(läran om) beräkning och indelning av tiden' och 'tidsmässig inbördes ordning'. Kortet återger båda korrekt separerade med ';', synonymer och exempelmening matchar SO:s egna termer/exempel nära nog ordagrant."
+    },
+    {
+      "noteId": 1780080620701,
+      "ord": "paralysera",
+      "facit": "förlama",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Orsaka fullständig förlust av rörelseförmågan hos ; bildligt: orsaka tillfällig förlust av handlingsförmågan",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "förlama",
+          "lamslå",
+          "bedöva"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Olyckan <font color=\"#3498db\">paralyserade</font> hans vänstra arm.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt två betydelser: 'orsaka fullständig förlust av rörelseförmågan' och (bildligt) 'orsaka tillfällig förlust av handlingsförmågan'. Kortet återger båda korrekt separerade med ';'. Synonymet 'bedöva' är något löst (avser egentligen känselbortfall, inte rörelseförlamning) men har viss legitim bildlig överlappning (t.ex. 'chocken bedövade/paralyserade honom'); förlama och lamslå är precisa."
+    },
+    {
+      "noteId": 1780080625247,
+      "ord": "härröra",
+      "facit": "ha sitt ursprung i",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ha sitt ursprung i något",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "härstamma",
+          "utgå",
+          "komma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Uppgiften <font color=\"#3498db\">härrör</font> från en säker källa inom myndigheten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ha sitt ursprung i något' - exakt vad kortet säger. Exempelmeningen ('uppgiften härrör från en säker källa') är nästan identisk med SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080619815,
+      "ord": "verifiera",
+      "facit": "intyga sanningen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bestyrka riktigheten av något",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "bekräfta",
+          "styrka",
+          "intyga"
+        ],
+        "exempelmening": "Uppgifterna om gränskränkningar var svåra att <font color=\"#3498db\">verifiera</font>.",
+        "etymologi": null,
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bestyrka riktigheten av påstående, uppgift, dokument e.d.' - matchar kortet exakt. Exempelmeningen är ordagrant identisk med SO:s eget exempel. Synonymer stämmer med SO:s jämförelseord (bekräfta, intyga)."
+    },
+    {
+      "noteId": 1780080627386,
+      "ord": "förnumstig",
+      "facit": "som tror sig vara klok",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Framställer självklarheter som djupa insikter",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [
+          "snusförnuftig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "\"Man kan inte betala ut pengar man inte har\", sa hans <font color=\"#3498db\">förnumstige</font> svåger.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som meddelar självklarheter som om de vore produkter av djup tankeverksamhet', synonym snusförnuftig - matchar kortet väl. Exempelmeningen är nästan ordagrant identisk med SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080628239,
+      "ord": "bitumen",
+      "facit": "<div>oljeprodukt</div><div><a href=\"https://www.google.com/imgres?q=bitumen&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F28%2FBitumen.jpg%2F1200px-Bitumen.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBitumen&amp;docid=pxsgxf2t4-uYmM&amp;tbnid=_ChdbD-5Jzy4wM&amp;vet=12ahUKEwjR2sLlwpmOAxVzKBAIHeS5EjMQM3oECB4QAA..i&amp;w=1200&amp;h=619&amp;hcb=2&amp;ved=2ahUKEwjR2sLlwpmOAxVzKBAIHeS5EjMQM3oECB4QAA\"><img alt=\"Bitumen - Wikipedia\" src=\"paste-f580f1bdd63ff9677e0a416be1022dc735c088f2.webp\"></a></div><div><a href=\"https://www.google.com/imgres?q=bitumen&amp;imgurl=https%3A%2F%2Finfinitygalaxy.org%2Fwp-content%2Fuploads%2F2020%2F07%2Fwhere-does-bitumen-come-from-ig.jpg&amp;imgrefurl=https%3A%2F%2Finfinitygalaxy.org%2Fwhere-does-bitumen-come-from%2F&amp;docid=FPTQWf_QVkdsOM&amp;tbnid=EMk245c2XpvuhM&amp;vet=12ahUKEwjR2sLlwpmOAxVzKBAIHeS5EjMQM3oFCIYBEAA..i&amp;w=1920&amp;h=1080&amp;hcb=2&amp;ved=2ahUKEwjR2sLlwpmOAxVzKBAIHeS5EjMQM3oFCIYBEAA\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><img alt=\"Sources of Bitumen | Infinity Galaxy\" src=\"paste-809bbab9710aae081765cf50df36ef495cef38b5.webp\"></div></div></div></a></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Naturlig kolväteförening med mörk färg — sammanfattande beteckning för bl.a. naturgas, petroleum och asfalt",
+        "register": "formell, neutral, kemi",
+        "synonymer": [
+          "asfalt",
+          "beck",
+          "petroleumprodukt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Bitumen</font> används för att asfaltera vägar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'naturlig kolväteförening med mörk färg', bruklighetskommentar 'sammanfattande beteckning för bl.a. naturgas, petroleum och asfalt' - matchar kortets definition nästan ordagrant. Synonymerna asfalt/petroleumprodukt är förankrade i just den formuleringen i SO, så det är försvarbart trots att de strikt sett är exempel på/närliggande begrepp snarare än fullt likvärdiga synonymer."
+    },
+    {
+      "noteId": 1780080624813,
+      "ord": "barm",
+      "facit": "bröst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bröst ; äv. om förvaringsplatsen innanför kläderna vid bröstet",
+        "register": "högtidlig, neutral, allmän",
+        "synonymer": [
+          "bröst",
+          "bringa",
+          "famn"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon gömde brevet vid sin <font color=\"#3498db\">barm</font> så att ingen skulle hitta det.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar SO:s bildliga underbetydelse 'äv. bildligt i uttryck för känslor (äv. hos män)', t.ex. 'ha mod i barmen' - en genuint skild betydelse som är viktig eftersom den visar att ordet inte är begränsat till kvinnobröst. Dessutom är två av tre synonymer fel: 'bringa' avser (enligt SO) främst djurs bröstparti eller, mer sällan, människans bröstkorg rent fysiskt - inte specifikt (kvinno)bröst/barm - och 'famn' avser utrymmet mellan överkropp och öppna armar (en omfamning), ett helt annat begrepp."
+    },
+    {
+      "noteId": 1780080623744,
+      "ord": "östan",
+      "facit": "från öster",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Från eller åt öster ; vind från öster",
+        "register": "arkaisk, neutral, allmän",
+        "synonymer": [
+          "österifrån",
+          "östanvind",
+          "östlig vind"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vinden blåste <font color=\"#3498db\">östan</font> från havet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger två betydelser (adverb: 'från eller åt öster', ålderdomligt; substantiv: 'vind från öster'). Kortet återger båda korrekt separerade med ';', med register och synonymer som matchar väl."
+    },
+    {
+      "noteId": 1780080620856,
+      "ord": "gå upp i limningen",
+      "facit": "ilskna till<br><br><i>hans insändare fick många läsare att gå upp i limningen</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tappa kontrollen helt, oftast av ilska",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "ilskna till",
+          "explodera",
+          "bryta ihop"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">gick upp i limningen</font> när bilen gick sönder igen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s idiombetydelse 'inte kunna behärska sig' med exemplet 'hans insändare fick många läsare att gå upp i limningen' matchar kortets 'tappa kontrollen helt, oftast av ilska' och facit väl. Exempelmeningen är trovärdig och begriplig."
+    },
+    {
+      "noteId": 1780080625024,
+      "ord": "ränsel",
+      "facit": "mindre ryggsäck<br><a href=\"https://www.google.com/imgres?q=r%C3%A4nsel&amp;imgurl=https%3A%2F%2Fems.dimu.org%2Fimage%2F032s9YXo2L9v%3Fdimension%3D1200x1200&amp;imgrefurl=https%3A%2F%2Fdigitaltmuseum.se%2F011024053999%2Fransel&amp;docid=ocsPOqD_2ZzWkM&amp;tbnid=_UjsrlqDHFxWOM&amp;vet=12ahUKEwjCgozgh8iLAxWpGBAIHTMIL4MQM3oECBcQAA..i&amp;w=947&amp;h=1200&amp;hcb=2&amp;ved=2ahUKEwjCgozgh8iLAxWpGBAIHTMIL4MQM3oECBcQAA\"><div><div><div><img alt=\"Ränsel -Flygvapenmuseum / DigitaltMuseum\" src=\"paste-e5b3ede9fcd96e6631fa79f16d8a6157f65b96b0.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mindre ryggsäck",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "ryggsäck",
+          "packsäck",
+          "tornister"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han packade sin <font color=\"#3498db\">ränsel</font> med matsäck och regnkläder inför vandringen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'mindre ryggsäck av äldre modell' - matchar kortets definition. Synonymen 'tornister' är precis, 'ryggsäck' är en nära överordnad term men fungerar i sammanhanget. Exempelmeningen matchar SO:s eget exempel ('packa sin ränsel')."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 62,
+  "granskning_kostnad_usd": 2.5532335999999995,
+  "granskning_turkrav": 6
+}

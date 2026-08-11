@@ -285,10 +285,28 @@ _KOMMENTARER = re.compile(r"<!--.*?-->", re.DOTALL)
 _WIDGET_INLEDNING = ("vad betyder", "läs mer", "förklaring", "se även",
                      "här hittar du", "dagens", "vill du föreslå")
 
+# Sidfotslänken och avdelningsrubrikerna ligger i SAMMA block som orden och
+# följde tidigare med in i listan som om de vore synonymer.
+#
+# Mätt 2026-08-11 på de tio kort blindgranskaren fällde på synonymerna:
+# "tillbaka i grottekvarnen" stod i ALLA TIO, och för `hortonom` och `kväkare`
+# var den det ENDA som extraherats. Parsern returnerade alltså ett svar som såg
+# ifyllt ut fast den inte hittat en enda synonym -- samma felklass som registret
+# hade före 2026-08-10: ett tomt fält och ett bedömt fält får inte se likadana ut.
+_EJ_SYNONYM = ("tillbaka i grottekvarnen", "motsatsord", "användarnas bidrag",
+               "synonymer", "synonymer till", "andra ord", "korsord",
+               "föreslå synonym", "alla synonymer")
+
 
 def _ar_synonym(t):
-    lag = t.lower()
+    lag = t.lower().strip()
     if len(t) > 34 or "?" in t:
+        return False
+    # Taggavgränsaren delar även på parenteser och liknande, så "(", "av", ")"
+    # dök upp som egna poster på `abstrahera`. En synonym innehåller bokstäver.
+    if not re.search(r"[a-zåäöéA-ZÅÄÖÉ]", t):
+        return False
+    if lag in _EJ_SYNONYM or "grottekvarnen" in lag:
         return False
     return not any(lag.startswith(p) for p in _WIDGET_INLEDNING)
 
@@ -326,11 +344,46 @@ def hamta_synonymer(ord_):
         return None, status, byte
     avdelningar = {}
     for block in _SYN_BLOCK.findall(html):
+        # HELA widgetblocket kastas, inte bara dess enskilda ord.
+        #
+        # Sidospalterna delar CSS-klass med synonymblocken. `_WIDGET_INLEDNING`
+        # fanns redan, men tillämpades PER ORD: ett ord silades bort om det
+        # började med "vad betyder", "förklaring" osv. Det höll så länge hela
+        # widgeten blev EN lång sträng, som dessutom stoppades av
+        # 34-teckensgränsen.
+        #
+        # När taggarna 2026-08-11 började ersättas med en avgränsare (för att
+        # sluta foga ihop grannord till påhittade ord som "blandaspäcka")
+        # sprack widgeten i stället i korta fragment -- "kvarn", "guld",
+        # "Frode", "Väldigt berusad" -- och inget av dem BÖRJAR med en
+        # widgetfras. De gick alltså rakt igenom. `hortonom` fick elva falska
+        # synonymer och räknades felaktigt som täckt av tre källor.
+        #
+        # Mätt på hortonom: sajten levererar fyra block, och INGET av dem är
+        # redaktionella synonymer -- ett användarbidrag och tre sidospalter
+        # ("Vad betyder grottekvarn?", "Förklaring: Väldigt berusad", "Läs mer
+        # om dagens uttryck"). Rätt svar för det ordet är alltså noll synonymer.
+        #
+        # Testet hör därför hemma på BLOCKET, inte på orden i det: ett block är
+        # antingen synonymer eller inte.
+        blocktext = " ".join(_TAGGAR.sub(" ", block).split()).lower()
+        if any(blocktext.startswith(p) for p in _WIDGET_INLEDNING):
+            continue
         h2 = _SYN_H2.search(block)
         rubrik = _TAGGAR.sub("", h2.group(1)).strip() if h2 else "synonymer"
         kropp = _SYN_H2.sub("", block)
-        text = _TAGGAR.sub("", _KOMMENTARER.sub("", kropp))
-        ord_lista = [t.strip() for t in re.split(r"[,|]", text) if t.strip()]
+        # Taggarna byts mot en AVGRÄNSARE, inte mot ingenting. Varje synonym
+        # ligger i sitt eget <a>-element utan mellanrum i källan, så en tom
+        # ersättning fogade ihop grannar till ord som inte finns: `bemänga`
+        # fick "blandaspäcka" (blanda + späcka) och `pryd` fick
+        # "viktorianskmotsatsordlättsinnig" (viktoriansk + rubriken + lättsinnig).
+        # Det är värre än att tappa en synonym -- kortet får ett PÅHITTAT ord
+        # som ser ut att komma från en källa. Hittat 2026-08-11.
+        text = _TAGGAR.sub("|", _KOMMENTARER.sub("", kropp))
+        # Semikolon skiljer betydelsegrupper på synonymer.se. Utan det i
+        # mönstret blev "detektiv; ombud" en enda post, som varken matchade
+        # "detektiv" eller "ombud" vid jämförelse.
+        ord_lista = [t.strip() for t in re.split(r"[,|;]", text) if t.strip()]
         ord_lista = [t for t in ord_lista
                      if t.lower() != ord_.lower() and _ar_synonym(t)]
         if ord_lista:

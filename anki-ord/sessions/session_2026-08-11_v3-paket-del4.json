@@ -1,0 +1,545 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080619989,
+      "ord": "vertebrat",
+      "facit": "ryggradsdjur",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Djur med ryggrad — fisk, groddjur, kräldjur, fågel eller däggdjur",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "ryggradsdjur"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fiskar, fåglar och däggdjur är alla <font color=\"#3498db\">vertebrater</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har endast betydelsen 'ryggradsdjur'. Kortet återger detta korrekt och konkretiserar med fisk, groddjur, kräldjur, fågel, däggdjur. Synonym och exempelmening stämmer."
+    },
+    {
+      "noteId": 1780080626609,
+      "ord": "föröva",
+      "facit": "göra sig skyldig till",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utföra en handling eller gärning",
+        "register": "neutral, lätt negativ, juridik",
+        "synonymer": [
+          "begå",
+          "utöva",
+          "åstadkomma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han anklagas för att ha <font color=\"#3498db\">förövat</font> tre mord.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s enda betydelse är specifikt 'utföra brottslig handling' (SAOL: 'föröva ett brott'). Kortets huvudbetydelse 'Utföra en handling eller gärning' är för vag och tappar just den avgörande nyansen att ordet betyder att begå något brottsligt/klandervärt, inte vilken handling som helst. Bör lyda t.ex. 'Utföra en brottslig eller klandervärd handling, begå (ett brott)'."
+    },
+    {
+      "noteId": 1780080627642,
+      "ord": "visshet",
+      "facit": "säkerhet<br><br>över­tygelse som grundar sig på säkra fakta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Övertygelse som grundar sig på säkra fakta ; säkerhet, frånvaro av tvivel",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "säkerhet",
+          "övertygelse",
+          "bestämdhet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon ringde skolan om och om igen för att få <font color=\"#3498db\">visshet</font> om att barnen var i säkerhet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har bara EN betydelse ('övertygelse som grundar sig på säkra fakta'), där 'säkerhet' anges som en 'äv.'-underbetydelse till SAMMA betydelse, inte en egen skild betydelse. Kortet skiljer ändå 'övertygelse...' och 'säkerhet, frånvaro av tvivel' med ';', som om det vore två genuint skilda betydelser — det bryter mot regeln att ';' bara ska användas mellan verkligt skilda betydelser. Borde ha stått med '/' istället, t.ex. 'Övertygelse grundad på säkra fakta / säkerhet, frånvaro av tvivel'."
+    },
+    {
+      "noteId": 1780080621965,
+      "ord": "nabo",
+      "facit": "granne<br><br>(när bo)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Granne eller närboende ; person i grannland",
+        "register": "dialektal, neutral, allmän",
+        "synonymer": [
+          "granne",
+          "närboende",
+          "grannfolk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Min <font color=\"#3498db\">nabo</font> hjälpte mig när jag flyttade in.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Varken SO eller SAOL märker 'nabo' som dialektalt; SAOL anger istället ämnesområdet 'jur.' (juridik). Registret 'dialektal' i kortet saknar stöd i källorna. Själva betydelsen (granne/närboende ; person i grannland) stämmer dock exakt med SO."
+    },
+    {
+      "noteId": 1780080624446,
+      "ord": "astrakan",
+      "facit": "ett sorts äpple",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sommaräpple med löst, sött och genomskinligt kött ; fint, krusulligt lammskinn och tyg som liknar det",
+        "register": "formell, neutral, jordbruk",
+        "synonymer": [
+          "sommaräpple",
+          "lammskinn",
+          "persian"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vit <font color=\"#3498db\">astrakan</font> är en populär sommaräppelsort.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två homografer: sommaräpple med löst, sött, genomskinligt kött, samt fint krusulligt lammskinn/liknande tyg. Kortet fångar båda korrekt separerade med ';'."
+    },
+    {
+      "noteId": 1780080625642,
+      "ord": "amfora",
+      "facit": "antik tvåörad kruka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Större tvåörad kruka med smäcker form",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "kruka",
+          "vas",
+          "urna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I graven låg en spräckt <font color=\"#3498db\">amfora</font> med en bild på Akilles.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'större tvåörad kruka med smäcker form, särskilt vanlig under antiken.' Kortet återger den enda betydelsen korrekt."
+    },
+    {
+      "noteId": 1780080624492,
+      "ord": "behållning",
+      "facit": "resultat, kvar­stående värde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kvarstående värde efter utgifter ; gott utbyte av något",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "överskott",
+          "saldo",
+          "utbyte"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Behållningen</font> av auktionen gick oavkortad till klasskassan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'kvarstående värde', underbetydelse (ofta bildligt) 'gott utbyte'. Kortet täcker båda korrekt."
+    },
+    {
+      "noteId": 1780080626477,
+      "ord": "hambo",
+      "facit": "en folkdans<br><a href=\"https://www.google.com/imgres?q=hambo&amp;imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2Ffif8Zt1ir70%2Fmaxresdefault.jpg&amp;imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dfif8Zt1ir70&amp;docid=-5kAZxKPViW-VM&amp;tbnid=mQeBJ4hNWD_JUM&amp;vet=12ahUKEwiZ04KlluWLAxXvJRAIHQvMIrMQM3oECB0QAA..i&amp;w=1280&amp;h=720&amp;hcb=2&amp;ved=2ahUKEwiZ04KlluWLAxXvJRAIHQvMIrMQM3oECB0QAA\"><div><div><div><img alt=\"Hambo - YouTube\" src=\"paste-aa1eb8b0059a94aaf883e99ddabea52289c5e288.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svensk folkdans i tretakt",
+        "register": "vardaglig, neutral, musik",
+        "synonymer": [
+          "folkdans"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Hambon</font> dansades glatt på midsommarfirandet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har TVÅ betydelser: 'en folkdans i 3/4-takt' samt (äv.) 'motsvarande musikstycke'. Kortet nämner bara dansen och missar helt betydelsen 'musikstycket/melodin' — den typen av lucka som är decket vanligaste fel. Bör kompletteras, t.ex. '...; även: motsvarande musikstycke'."
+    },
+    {
+      "noteId": 1780080623029,
+      "ord": "risa",
+      "facit": "kritisera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kritisera strängt ; täcka eller förse med ris och kvistar ; aga med ris ; (risa ihop) falla samman",
+        "register": "vardaglig, negativ, allmän",
+        "synonymer": [
+          "kritisera",
+          "klandra",
+          "täcka med ris"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kritikerna <font color=\"#3498db\">risade</font> filmen för det svaga manuset.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har tre betydelser (täcka med ris/kvistar, aga med ris [mest historiskt], kritisera) plus egna uppslaget 'risa ihop' (falla samman, vardagligt). Kortet täcker alla fyra och leder korrekt med dagens vanligaste betydelse 'kritisera'; exempelmeningen matchar SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080620208,
+      "ord": "gloriös",
+      "facit": "ärorik",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Full av ära och glans",
+        "register": "litterär, positiv, allmän",
+        "synonymer": [
+          "ärorik",
+          "strålande",
+          "lysande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Laget firade en <font color=\"#3498db\">gloriös</font> seger i finalen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'full av ära'. Kortets 'full av ära och glans' är en rimlig, inte sakligt felaktig, utvidgning av samma betydelse."
+    },
+    {
+      "noteId": 1780080624820,
+      "ord": "hirs",
+      "facit": "ett sädesslag<br><a href=\"https://www.google.com/imgres?q=hirs&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ff0%2FGrain_millet%252C_early_grain_fill%252C_Tifton%252C_7-3-02.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FHirs&amp;docid=XQY6cKskLBfhRM&amp;tbnid=0DhWSgAt_M97kM&amp;vet=12ahUKEwjat9_x0M6LAxWnSvEDHXF8AQwQM3oECGcQAA..i&amp;w=1024&amp;h=768&amp;hcb=2&amp;ved=2ahUKEwjat9_x0M6LAxWnSvEDHXF8AQwQM3oECGcQAA\"><div><div><div><img alt=\"Hirs – Wikipedia\" src=\"paste-95d3027e2e6324b1a6694c83880ca5ba96cbfec8.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett sädesslag med små, runda ax i tät vippa",
+        "register": "vardaglig, neutral, jordbruk",
+        "synonymer": [
+          "sädesslag",
+          "spannmål",
+          "korn"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De odlade <font color=\"#3498db\">hirs</font> för att få mjöl till bröd.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ett sädesslag med små rundade ax i tät vippa'. Kortet återger detta korrekt som enda betydelsen."
+    },
+    {
+      "noteId": 1780080626345,
+      "ord": "prominent",
+      "facit": "framstående",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Framstående ; (anatomi) framskjutande, utstående",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "framstående",
+          "bemärkt",
+          "framskjutande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mannen på porträttet kändes igen på sin <font color=\"#3498db\">prominenta</font> haka.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har två betydelser: (1) framstående (vanligast, t.ex. 'prominenta utländska gäster'), (2) anatomiskt: framskjutande. Kortets huvudbetydelser stämmer, men exempelmeningen ('sin prominenta haka') är hämtad direkt ur SO:s eget exempel för specialbetydelsen (2) och illustrerar aldrig huvudbetydelsen 'framstående'. Läsaren får alltså aldrig se ordet i sin vanligaste användning. Byt exempel till ett som visar 'framstående', t.ex. en prominent politiker/affärsman."
+    },
+    {
+      "noteId": 1780080623516,
+      "ord": "kummel",
+      "facit": "båk; stenröse; torskfisk<br><a href=\"https://commons.wikimedia.org/wiki/File:Hamnsk%C3%A4r,_stenkumlet_p%C3%A5_Kikarberget.JPG\"><img src=\"250px-hamnskär _stenkumlet_på_kikarberget.webp\"></a><br><img src=\"paste-d72a94900ff5610da5df11cf6f8d94eeab459050.webp\"><br><img src=\"paste-c76efcab10083e520ea2a0e8f5ebdd7dfff65cb4.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stenröse som minnesmärke eller gravröse ; fast sjömärke av sten ; en långsträckt torskfisk med stort huvud",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "gravröse",
+          "båk",
+          "torskfisk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På Hamnskär växer stenröser som kallas <font color=\"#3498db\">kummel</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har (under en homograf) stenröse som minnesmärke med gravröse som specialfall, samt sjömärke i konform, och en separat homograf för torskfisken. Kortet fångar alla tre korrekt, med synonymer som tydligt hör ihop en och en med respektive betydelse."
+    },
+    {
+      "noteId": 1780080627021,
+      "ord": "dementera",
+      "facit": "förneka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Offentligt förklara något vara osant",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "förneka",
+          "bestrida",
+          "vederlägga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Presstalesmannen fick <font color=\"#3498db\">dementera</font> ryktena om avgången redan samma kväll.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'offentligt förklara (något) vara osant'. Matchar kortet nästan ordagrant."
+    },
+    {
+      "noteId": 1780080620209,
+      "ord": "kiropraktik",
+      "facit": "ryggbehandling",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Manuell behandling av rygg och leder genom ledjustering",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "manuell terapi",
+          "ledbehandling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon provade <font color=\"#3498db\">kiropraktik</font> för sin långvariga ryggvärk.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'metod för att diagnostisera, behandla och förebygga störningar i muskel-, skelett- och nervsystem'. Kortets 'manuell behandling av rygg och leder genom ledjustering' är en något snävare men sakligt rimlig beskrivning av kiropraktik i praktiken, ingen egentlig lucka eller sakfel."
+    },
+    {
+      "noteId": 1780080625520,
+      "ord": "flyhänt",
+      "facit": "snabb",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som snabbt når resultat, ofta med elegans ; ibland med bibetydelsen ytlig",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "rapp",
+          "flink",
+          "lättvindig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Översättningen var <font color=\"#3498db\">flyhänt</font> men missade textens allvar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'som snabbt når resultat' (särskilt skickligt handarbete), plus underbetydelser om elegans respektive ytlighet. Kortet fångar alla tre nyanser korrekt, och exempelmeningen matchar nästan exakt SO:s eget exempel ('en flyhänt översättning')."
+    },
+    {
+      "noteId": 1780080627153,
+      "ord": "partisk",
+      "facit": "orättvis",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Otillbörligt gynnar eller stöder en part på annan bekostnad",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "orättvis",
+          "subjektiv",
+          "fördomsfull"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bortalaget ansåg att domaren var <font color=\"#3498db\">partisk</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som (otillbörligt) gynnar eller stöder en part på en annans bekostnad'. Matchar kortet nästan ordagrant."
+    },
+    {
+      "noteId": 1780080626024,
+      "ord": "respiration",
+      "facit": "andning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kroppens gasutbyte — syre in, koldioxid ut",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "andning",
+          "andhämtning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Patientens <font color=\"#3498db\">respiration</font> övervakades under operationen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'andning' (i medicinska sammanhang). Kortets 'kroppens gasutbyte — syre in, koldioxid ut' är en sakligt korrekt precisering av vad andning/respiration innebär fysiologiskt, ingen felaktighet."
+    },
+    {
+      "noteId": 1780080624534,
+      "ord": "pärs",
+      "facit": "hårdansträngning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svår påfrestning ; (titel för) huvudman i engelsk adelsätt, ledamot av överhuset",
+        "register": "vardaglig, negativ, allmän",
+        "synonymer": [
+          "hårt prov",
+          "svår prövning",
+          "engelsk adelsman"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "För elever som mobbas är varje dag i skolan en <font color=\"#3498db\">pärs</font>.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "'Pärs' är i både SO och SAOL ett eget uppslagsord som bara betyder 'svår påfrestning/hårt prov'. Betydelsen '(titel för) huvudman i engelsk adelsätt, ledamot av överhuset' hör till ett helt annat ord, 'pär' (utan s) — 'pärs' är där bara genitivformen ('en pärs hus'). Kortet blandar ihop två olika ord och tillskriver 'pärs' en betydelse det inte har. Andra betydelsen samt synonymen 'engelsk adelsman' ska tas bort."
+    },
+    {
+      "noteId": 1780080626757,
+      "ord": "bagge",
+      "facit": "hanfår<br><a href=\"https://www.google.com/imgres?q=bagge&amp;imgurl=https%3A%2F%2Fcdn.abicart.com%2Fshop%2Fws89%2F90489%2Fart89%2Fh8739%2F187858739-origpic-39f7d0.jpg&amp;imgrefurl=https%3A%2F%2Fwww.zoologishoppen.se%2Fsv%2Fvarumarken%2Fsafari-ltd%2Fsafari-ltd-bagge.html&amp;docid=9GkELXbaoBQniM&amp;tbnid=8utNTtbthpnu0M&amp;vet=12ahUKEwjSoL6B1tOLAxUnIhAIHWZzPWEQM3oECBYQAA..i&amp;w=2048&amp;h=2048&amp;hcb=2&amp;ved=2ahUKEwjSoL6B1tOLAxUnIhAIHWZzPWEQM3oECBYQAA\"><div><div><div><img alt=\"Safari Ltd - Bagge - Zoologishoppen\" src=\"paste-617cd95595cf4737233eebd1d73481481cf0ab12.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hanne av får",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "vädur",
+          "fårhanne",
+          "gumse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Baggen</font> vägrade att följa flocken.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'hanne av får'. Matchar kortet exakt, med korrekta synonymer (vädur, gumse)."
+    },
+    {
+      "noteId": 1780080624837,
+      "ord": "epistemologi",
+      "facit": "(fil.) kunskapsteori, läran om kunskap",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Filosofisk teori om kunskapens natur och källor",
+        "register": "fackspråklig, neutral, filosofi",
+        "synonymer": [
+          "kunskapsteori",
+          "kunskapslära",
+          "läran om kunskap"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Epistemologi</font> undersöker vilka kriterier som gör kunskap giltig.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'kunskapsteori' (filosofi). Kortets utförligare formulering ('filosofisk teori om kunskapens natur och källor') stämmer sakligt."
+    },
+    {
+      "noteId": 1780080627446,
+      "ord": "puffa",
+      "facit": "stöta lätt; göra reklam, pusha",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utvecklas i korta stötar ; ge lätt stöt ; mana på, utöva påtryckning ; göra reklam för",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "ryka i stötar",
+          "pysa",
+          "knuffa",
+          "putta",
+          "mana på",
+          "pusha",
+          "göra reklam för",
+          "lyfta fram"
+        ],
+        "synonym_groups": [
+          [
+            "ryka i stötar",
+            "pysa"
+          ],
+          [
+            "knuffa",
+            "putta"
+          ],
+          [
+            "mana på",
+            "pusha"
+          ],
+          [
+            "göra reklam för",
+            "lyfta fram"
+          ]
+        ],
+        "exempelmening": "Mörk rök <font color=\"#3498db\">puffade</font> ur den gamla skorstenen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har tre huvudbetydelser: (1) utvecklas i korta stötar (t.ex. rök puffar ur skorstenen), (2) FÅ gas/rök att utvecklas i korta stötar (t.ex. 'puffa på en cigarr'), (3) ge lätt stöt — med underbetydelserna mana på/utöva påtryckning samt göra reklam. Kortet missar helt betydelse (2), den transitiva 'dra bloss på/få att pysa'-betydelsen, trots att övriga fyra nyanser är korrekt uppdelade i synonym_groups. Betydelsen 'få gas/rök att pysa, t.ex. puffa på en cigarr' bör läggas till."
+    },
+    {
+      "noteId": 1780080624337,
+      "ord": "beivra",
+      "facit": "vidta åtgärder mot",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vidta rättsliga åtgärder mot något",
+        "register": "formell, neutral, juridik",
+        "synonymer": [
+          "ingripa mot",
+          "åtala",
+          "lagföra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Polisen såg till att alla fall av skadegörelse <font color=\"#3498db\">beivrades</font> snabbt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'vidta formella (juridiska) åtgärder mot någon oönskad, ofta olaglig, handling'. Matchar kortets 'vidta rättsliga åtgärder mot något'."
+    },
+    {
+      "noteId": 1780080622558,
+      "ord": "ortopedi",
+      "facit": "hållningslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om behandling av sjukdomar och felaktigheter i rörelse- och hållningsorganen",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "rörelseorganens medicin",
+          "hållningslära"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon opererades av en kirurg specialiserad på <font color=\"#3498db\">ortopedi</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'läran om (behandling av) sjukdomar och felaktigheter i rörelse- och hållningsorganen (främst skelettet)'. Kortet matchar; att 'främst skelettet' utelämnas är inget sakfel."
+    },
+    {
+      "noteId": 1780080620235,
+      "ord": "toujours",
+      "facit": "trevlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sällskaplig och trevlig",
+        "register": "ngt ålderdomlig, positiv, allmän",
+        "synonymer": [
+          "trevlig",
+          "fryntlig",
+          "sällskaplig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Värden var <font color=\"#3498db\">toujours</font> och fick alla gäster att känna sig hemma.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sällskaplig och trevlig' (mindre brukligt, endast predikativt). Kortet matchar, och exempelmeningen använder ordet korrekt predikativt ('Värden var toujours')."
+    },
+    {
+      "noteId": 1780080625326,
+      "ord": "interregnum",
+      "facit": "mellanregering",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Period mellan två regeringar utan högsta myndighet ; utvidgat: period mellan två ledningar, t.ex. på ett företag",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "mellanregering",
+          "vakans",
+          "övergångsperiod"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Under <font color=\"#3498db\">interregnum</font> efter kungens död rådde stor förvirring.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'period mellan två regeringar, när ingen högsta myndighet finns', plus underbetydelse 'äv. utvidgat, t.ex. på företag: period mellan två ledningar'. Kortet fångar båda korrekt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 39,
+  "granskning_kostnad_usd": 1.3821653999999999,
+  "granskning_turkrav": 6
+}

@@ -1,0 +1,526 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080628908,
+      "ord": "trafikabel",
+      "facit": "farbar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Möjlig att ta sig fram på",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "framkomlig",
+          "farbar"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vägen blev <font color=\"#3498db\">trafikabel</font> igen efter att skyfallet upphört.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som kan trafikeras', enda betydelsen. Kortets 'möjlig att ta sig fram på' är en korrekt parafras. Synonymer, exempel och register stämmer."
+    },
+    {
+      "noteId": 1780080625223,
+      "ord": "förflugen",
+      "facit": "förhastad, ogenomtänkt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Framkommen tillfälligt utan eftertanke eller övervägande",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "ogenomtänkt",
+          "oöverlagd",
+          "förhastad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ett <font color=\"#3498db\">förfluget</font> ord på festen ställde till med skandal.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en betydelse: 'frambringad tillfälligt och utan eftertanke ... om replik, tanke o.d.', vilket kortet fångar korrekt. Synonymerna ogenomtänkt/oöverlagd/förhastad är utbytbara, exemplet ('ett förfluget ord') matchar ordbokens användning."
+    },
+    {
+      "noteId": 1780080627520,
+      "ord": "tilltaga",
+      "facit": "öka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Öka i styrka eller omfattning",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "öka",
+          "växa",
+          "eskalera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Regnet <font color=\"#3498db\">tilltog</font> snabbt och inom en timme stod gatorna under vatten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'öka i styrka, intensitet e.d.', enda betydelsen, matchar kortet exakt. Exemplet (regnet tilltog) motsvarar SO:s 'vinden tilltog'."
+    },
+    {
+      "noteId": 1780080625987,
+      "ord": "vederfaras",
+      "facit": "drabbas, komma till del<br><br><br><i>det oblida öde som vederfarits henne;<br><br>den ära som vederfors föräldrarna när sonen blev biskop</i>",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Komma någon till del, drabba",
+        "register": "arkaisk, neutral, allmän",
+        "synonymer": [
+          "tillkomma",
+          "drabbas"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En stor hedersbetygelse <font color=\"#3498db\">vederfarades</font> honom efter segern.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Exempelmeningen böjer verbet 'vederfarades', men vederfaras är ett deponensverb med preteritum 'vederfors' (bekräftat i SAOL), inte en svag/regelbunden böjning på '-ades'. Korrekt hade varit 'En stor hedersbetygelse vederfors honom efter segern.' Själva betydelsen (komma till del, positivt som negativt) stämmer med SO:s enda huvudbetydelse."
+    },
+    {
+      "noteId": 1780080629104,
+      "ord": "samarbetsman",
+      "facit": "landsförrädare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förrädare som hjälpte fienden under ockupation",
+        "register": "neutral, nedsättande, politik",
+        "synonymer": [
+          "landsförrädare",
+          "quisling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han dömdes som <font color=\"#3498db\">samarbetsman</font> efter krigets slut.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som samarbetar med motståndaren särsk. i krig', matchar kortets 'förrädare som hjälpte fienden under ockupation'. Synonymen quisling och exemplet om rättegångarna mot samarbetsmän stämmer med källan."
+    },
+    {
+      "noteId": 1780080627047,
+      "ord": "aplomb",
+      "facit": "självsäkerhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stor säkerhet i uppträdandet ; eftertryck och kraft",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "självsäkerhet",
+          "pondus",
+          "eftertryck"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stycket framfördes med <font color=\"#3498db\">aplomb</font> av mästaren.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL anger huvudbetydelsen som 'säkerhet i uppträdandet; eftertryck' — kortets två led ('stor säkerhet i uppträdandet' och 'eftertryck och kraft') täcker båda nyanserna korrekt."
+    },
+    {
+      "noteId": 1780080625004,
+      "ord": "oftalmi",
+      "facit": "ögoninflammation",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inflammation i ögat, oftast i konjunktivan",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "ögoninflammation",
+          "ögonkatarr",
+          "ögonsjukdom"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Patienten utvecklade <font color=\"#3498db\">oftalmi</font> efter exponering för damm och pollen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO definierar oftalmi strikt som 'ögoninflammation'. Synonymen 'ögonsjukdom' är för bred/inte utbytbar — inte alla ögonsjukdomar (t.ex. grå starr, glaukom) är inflammationer, så den riskerar att lära ut fel användning. Ta bort eller ersätt 'ögonsjukdom' med en mer precis synonym."
+    },
+    {
+      "noteId": 1780080619560,
+      "ord": "monstruös",
+      "facit": "oformlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oformlig och skrämmande ; om något omfattande: orimlig",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "ohygglig",
+          "vidunderlig",
+          "avskyvärd"
+        ],
+        "exempelmening": "Den <font color=\"#3498db\">monstruösa</font> skuggfiguren skrämde barnen.",
+        "etymologi": "Latin monstrum 'järtecken', till monstrare 'visa' — samma ord som i demonstrera.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'oformlig och skrämmande' med en försvagad nyans 'orimlig' (om något omfattande) — matchar kortets två led. Etymologin (monstrum → monstrare → demonstrera) är korrekt och hjälper minnet."
+    },
+    {
+      "noteId": 1780080627307,
+      "ord": "handlag",
+      "facit": "skicklighet, hanteringsätt<br><br><i>han har dåligt hand­lag med maskiner</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sätt att hantera något ; fallenhet för att hantera eller sköta",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "hanteringssätt",
+          "fallenhet",
+          "skicklighet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han har dåligt <font color=\"#3498db\">handlag</font> med maskiner.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sätt att hantera något' med bildlig underbetydelse 'fallenhet att hantera/sköta något' — kortets två led fångar båda nyanserna. Exemplet matchar SO:s exempel ordagrant."
+    },
+    {
+      "noteId": 1780080628245,
+      "ord": "hemgift",
+      "facit": "egendom kvinnan tar med sig vid giftemål;&nbsp; &nbsp;gåva från föräldrarna till dottern vid giftemål",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Egendom som kvinnan för med sig i boet vid giftermål ; gåva från föräldrarna till dottern vid hennes giftermål",
+        "register": "arkaisk, neutral, historia",
+        "synonymer": [
+          "medgift",
+          "hemföljd",
+          "utstyrsel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bruden kom till sitt nya hem med en riklig <font color=\"#3498db\">hemgift</font> från sina föräldrar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en huvudbetydelse ('egendom kvinnan för med sig i boet vid giftermål') med en historisk not om ursprunget ('ursprungligen gåva från föräldrarna till dottern'). Kortets två led speglar detta korrekt; ingen betydelse saknas trots facit-signalen."
+    },
+    {
+      "noteId": 1780080620337,
+      "ord": "surmulen",
+      "facit": "butter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tystlåtet missnöjd och tvär",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "tjurig",
+          "vresig",
+          "butter"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots att solen sken var han <font color=\"#3498db\">surmulen</font> över att behöva städa.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som är på dåligt humör', med underbetydelse att det även beskriver uppsyn/handling. Kortets 'tystlåtet missnöjd och tvär' är en rimlig, träffande beskrivning. Synonymerna tjurig/vresig/butter är utbytbara."
+    },
+    {
+      "noteId": 1780080628727,
+      "ord": "alla taggar utåt",
+      "facit": "aggressivt bemötande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Avvisande och lättretad",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "irriterad",
+          "på dåligt humör",
+          "taggad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han gick omkring med <font color=\"#3498db\">alla taggar utåt</font> efter de dåliga nyheterna.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s uppslag är 'ha (alla) taggarna utåt' med bestämd pluralform 'taggarna', inte 'taggar'. Både kortets rubrik och exempelmeningen ('...med alla taggar utåt') saknar den bestämda formen och är därför grammatiskt/idiomatiskt fel. Ska vara 'alla taggarna utåt'."
+    },
+    {
+      "noteId": 1780080625178,
+      "ord": "nivellera",
+      "facit": "utjämna skillnader",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utjämna till en enda nivå ; avväga höjdskillnader vid fältmätning",
+        "register": "formell, lätt negativ, allmän",
+        "synonymer": [
+          "utjämna",
+          "likrikta",
+          "avväga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Genom åren hade landskapets höjdskillnader <font color=\"#3498db\">nivellerats</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: 'utjämna till en enda nivå' (även bildligt, nedsättande) och 'avväga höjdskillnader vid fältmätning' — kortet fångar båda korrekt, och exemplet matchar SO:s nästan ordagrant."
+    },
+    {
+      "noteId": 1780080622305,
+      "ord": "tillstyrka",
+      "facit": "tillråda, bifalla, rekommendera<br><br><i>alla remissinstanserna tillstyrkte förslaget</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge sitt stöd och rekommendera att något godkänns",
+        "register": "formell, neutral, juridik",
+        "synonymer": [
+          "bifalla",
+          "tillråda",
+          "rekommendera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Alla remissinstanserna <font color=\"#3498db\">tillstyrkte</font> förslaget.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'förorda antagande eller godkännande av begäran, förslag e.d.', matchar kortet väl. Exemplet om remissinstanserna är hämtat rakt ur SO."
+    },
+    {
+      "noteId": 1780080625047,
+      "ord": "frivol",
+      "facit": "oanständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lättsinnig och ytlig, behandlar allvarliga ämnen på ett oseriöst sätt",
+        "register": "litterär, negativ, allmän",
+        "synonymer": [
+          "lättsinnig",
+          "ytlig",
+          "oanständig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Publiken skrattade åt komedins <font color=\"#3498db\">frivola</font> dialog.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO definierar frivol som att (alltför) lättsinnigt behandla 'tabubelagda ... särsk. sexuella' ämnen. Kortets 'behandlar allvarliga ämnen på ett oseriöst sätt' utelämnar den centrala tabu/sexuella nyansen som gör ordet distinkt (t.ex. 'frivola skämt'), vilket gör huvudbetydelsen missvisande generell."
+    },
+    {
+      "noteId": 1780080628393,
+      "ord": "bortklemad",
+      "facit": "bortskämd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bortskämd genom att alltid ha fått sin vilja igenom",
+        "register": "vardaglig, negativ, allmän",
+        "synonymer": [
+          "bortskämd",
+          "klemig",
+          "ouppfostrad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var en <font color=\"#3498db\">bortklemad</font> unge som aldrig fick höra ett nej.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: enda betydelsen 'bortskämd'. Synonymerna är dock inte alla utbytbara: 'ouppfostrad' betyder enligt SO 'som inte fått (ordentlig) uppfostran' (ett annat begrepp än bortskämd), och 'klemig' betyder 'överdrivet rädd om sig själv' snarare än bortskämd. Byt ut mot t.ex. curlad/förhätsad."
+    },
+    {
+      "noteId": 1780080626197,
+      "ord": "palp",
+      "facit": "känselspröt<br><a href=\"https://www.google.com/imgres?q=palp&amp;imgurl=https%3A%2F%2Fblogger.googleusercontent.com%2Fimg%2Fb%2FR29vZ2xl%2FAVvXsEjct3IaCsotQCe9_KjM7POjV0Dt4b0sotyWmSbbAlIFCiiLtDhR1Rrcxb4IuV2PFyeeRCtNOmwuIU_L3Gkmh3b3LuNSdYOJv5ewzL_TTcREdQjy_RXD_S1MsETcguwKwTFhVds3IIvqI5U%2Fs1600%2FHarlequinPalpi-KSK.jpg&amp;imgrefurl=https%3A%2F%2Fbutterflycircle.blogspot.com%2F2018%2F07%2Fthe-butterfly-labial-palps.html&amp;docid=xggZMxOlLwvilM&amp;tbnid=nDs0VIWFY4lPYM&amp;vet=12ahUKEwiDivLUsrqLAxUGFBAIHRfoAYwQM3oECDEQAA..i&amp;w=960&amp;h=640&amp;hcb=2&amp;ved=2ahUKEwiDivLUsrqLAxUGFBAIHRfoAYwQM3oECDEQAA\"><div><div><div><img alt=\"The Butterfly Labial Palps\" src=\"paste-422f8e0cc6f40bd4ce203cec33d5840882fa3ca4.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Insekts känselorgan nära munnen",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "känselspröt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Insektens <font color=\"#3498db\">palper</font> hjälper den att känna av omgivningen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'utskott ... utskjutande från munpartiet på t.ex. vissa leddjur, bl.a. insekter' — palper finns alltså hos leddjur i allmänhet (t.ex. spindlars pedipalper), inte bara hos insekter. Kortets 'Insekts känselorgan' är sakligt för snävt; borde vara 'leddjurs känselorgan'."
+    },
+    {
+      "noteId": 1780080624267,
+      "ord": "ansats",
+      "facit": "påbörjat försök; anlopp, sats; utskjutande parti",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Påbörjat försök ; teoretisk inriktning ; kort intensiv språngmarsch före hopp ; upphöjt parti på en yta",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "försök",
+          "inriktning",
+          "anlopp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De gjorde ingen <font color=\"#3498db\">ansats</font> att gömma sig.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO listar fler nyanser än kortet fångar, bl.a. 'sätt att börja ton eller språkljud' (ex. 'en hård ansats', används i sång/tal/musik). Denna betydelse saknas helt i kortet trots att övriga fyra nyanser (försök, teoretisk inriktning, språngmarsch, upphöjt parti) är med."
+    },
+    {
+      "noteId": 1780080621906,
+      "ord": "bemänga",
+      "facit": "blanda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Blanda in något främmande i något",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "blanda",
+          "tillsätta",
+          "späda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En mediokerpoet som <font color=\"#3498db\">bemängde</font> sina dikter med onödig statistik.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'blanda in (något främmande ämne) i', med tydlig negativ/oönskad nyans. Synonymen 'späda' betyder att späda/tunna ut, en annan handling, och 'tillsätta' saknar bemängas nyans av att tillföra något ovälkommet/främmande. Bättre synonymer vore t.ex. beblanda/inblanda."
+    },
+    {
+      "noteId": 1780080625988,
+      "ord": "pryd",
+      "facit": "överdrivet anständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överdrivet och ängsligt moralisk i sitt beteende. (oftast med sex)",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "överdrivet moralisk",
+          "moraliserande",
+          "tillgjort blygsam"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon var för <font color=\"#3498db\">pryd</font> för att ens uttala ordet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'överdrivet (och ängsligt) moralisk särsk. om sexuella sammanhang', synonym 'sipp'. Synonymen 'moraliserande' i kortet är missvisande — det betyder att döma/predika om andras moral, inte att själv vara blyg/skygg kring sex, vilket är kärnan i pryd."
+    },
+    {
+      "noteId": 1780080626923,
+      "ord": "metodism",
+      "facit": "frireligiös rörelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Frikyrklig rörelse med fokus på planerat fromhetsliv",
+        "register": "formell, neutral, religion",
+        "synonymer": [
+          "frikyrklig rörelse",
+          "andlig rörelse",
+          "religiös rörelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Metodismen</font> spred sig under 1800-talet som en rörelse för noga planerad andlig utveckling.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en frikyrklig rörelse med inriktning på noga planerat fromhetsliv', matchar kortet väl. Synonymerna är generiska kategoritermer, rimligt för namnet på en specifik rörelse (samma mönster som i facit)."
+    },
+    {
+      "noteId": 1780080624804,
+      "ord": "hematit",
+      "facit": "järnglans<br><a href=\"https://www.google.com/imgres?q=hematite&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F19%2FWLA_hmns_Hematite.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHematite&amp;docid=GkX4IpR0zKG7sM&amp;tbnid=SOHw-gCHwS94sM&amp;vet=12ahUKEwjirYCm4oCMAxWNUXcKHSdMDHQQM3oECBwQAA..i&amp;w=900&amp;h=678&amp;hcb=2&amp;ved=2ahUKEwjirYCm4oCMAxWNUXcKHSdMDHQQM3oECBwQAA\" style=\"color: rgb(209, 158, 250); outline: 0px;\"><div class=\"F0uyec\" data-vhid=\"SOHw-gCHwS94sM\" data-viewer-entrypoint=\"1\" jsaction=\"rcuQ6b:npT2md;h5M12e;jGQF0b:kNqZ1c;mouseover:UI3Kjd\" jscontroller=\"qKrDxc\" jsdata=\"j0Opre;SOHw-gCHwS94sM;BMhdU0\" jsshadow=\"\" role=\"button\" style=\"border-radius: 12px; overflow: hidden; outline: 0px; background-color: rgba(0, 0, 0, 0.05); box-shadow: rgb(23, 23, 23) 0px 2px 12px 0px;\" tabindex=\"0\"><div jsslot=\"\"><div class=\"H8Rx8c\" style=\"align-items: center; display: flex; justify-content: center;\"><g-img class=\"mNsIhb\" style=\"display: block;\"><img alt=\"Hematite - Wikipedia\" class=\"YQ4gaf\" data-atf=\"1\" data-csiid=\"RIPPZ-L7Lo2j3QOnmLGgBw_6\" height=\"195\" id=\"dimg_RIPPZ-L7Lo2j3QOnmLGgBw_23\" src=\"paste-0f3be82ceb6b62b0e6b21fe6d9b5eb8fe9dab61b.webp\" style=\"display: block; border: 0px; object-fit: cover; object-position: 45% 50%;\" width=\"259\"></g-img></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gråblått järnmineral med kemisk formel Fe2O3",
+        "register": "formell, neutral, geologi",
+        "synonymer": [
+          "järnglans",
+          "järnoxid",
+          "blodsten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Hematit</font> är ett viktigt järnmineral som används för järnproduktion.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'gråblått järnmineral som blir blodrött när det repas/pulvriseras', synonymer blodsten/järnglans matchar kortets synonymer. Kemisk formel Fe2O3 är korrekt för hematit (järnoxid) även om SO inte anger formeln explicit."
+    },
+    {
+      "noteId": 1780080626686,
+      "ord": "hortonom",
+      "facit": "trädgårdsexpert",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person med hortikulturexamen från lantbruksuniversitet",
+        "register": "formell, neutral, jordbruk",
+        "synonymer": [
+          "trädgårdsexpert",
+          "landskapsarkitekt",
+          "trädgårdskonsult"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Hortonomens</font> expertis inom växtskötsel var ovärderlig för trädgårdens utveckling.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'person med examen från lantbruksuniversitet, med inriktning på hortikultur'. Synonymen 'landskapsarkitekt' är fel — det är en helt annan yrkesutbildning (design/planering av utemiljöer), inte utbytbar mot hortonom (trädgårdsvetenskap)."
+    },
+    {
+      "noteId": 1780080625906,
+      "ord": "oförvitlig",
+      "facit": "oklanderlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oklanderlig och fläckfri, utan minsta fel",
+        "register": "litterär, positiv, allmän",
+        "synonymer": [
+          "oklanderlig",
+          "fläckfri",
+          "redlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots ryktena visade utredningen att borgmästaren var fullständigt <font color=\"#3498db\">oförvitlig</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som aldrig gjort sig skyldig till något olagligt eller omoraliskt', matchar kortets 'oklanderlig och fläckfri'. Exemplet om borgmästaren matchar SO:s exempel om en oförvitlig person i rättsmaskineriet."
+    },
+    {
+      "noteId": 1780080623934,
+      "ord": "entomologi",
+      "facit": "läran om insekter<br><a href=\"https://www.google.com/imgres?q=entomology%20stock%20photo&amp;imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fshutterstock%2Fphotos%2F1039970821%2Fdisplay_1500%2Fstock-photo-collecting-insects-on-pins-and-magnifying-glass-amateur-or-homemade-insect-entomologist-1039970821.jpg&amp;imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fentomology-entomologist&amp;docid=DpqCqXvuxUMznM&amp;tbnid=vRTlQawvKsHfuM&amp;vet=12ahUKEwi8qZbVxvCLAxXuCBAIHZSqFeEQM3oECBoQAA..i&amp;w=1500&amp;h=1101&amp;hcb=2&amp;ved=2ahUKEwi8qZbVxvCLAxXuCBAIHZSqFeEQM3oECBoQAA\"><div><div><div><img alt=\"Best Entomology Entomologist Royalty ...\" src=\"paste-f1312e792a93de685d259f0a46bb3a049626176b.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om insekter",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "insektsforskning",
+          "insektologi",
+          "läran om insekter"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Enligt <font color=\"#3498db\">entomologin</font> studerar man insekters livscykel.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'läran om insekterna', matchar kortets huvudbetydelse exakt. Men synonymen 'insektologi' existerar inte som svenskt ord (noll träffar i SO, inget rimligt alternativ heller) — bör tas bort eller bytas mot t.ex. insektforskning/insektlära."
+    },
+    {
+      "noteId": 1780080627114,
+      "ord": "kavat",
+      "facit": "morsk, modig, självsäker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Morsk och orädd till sinnet",
+        "register": "vardaglig, positiv, allmän",
+        "synonymer": [
+          "morsk",
+          "modig",
+          "käck"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots sin ringa storlek gick den <font color=\"#3498db\">kavata</font> terriern käckt fram mot den stora hunden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'öppen och orädd', med morsk/käck bland relaterade ord — matchar kortets 'morsk och orädd till sinnet' och synonymerna. Exemplet med den kavata terriern illustrerar betydelsen väl."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 39,
+  "granskning_kostnad_usd": 1.2829206999999996,
+  "granskning_turkrav": 6
+}
