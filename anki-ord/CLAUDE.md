@@ -3000,3 +3000,56 @@ mot den siffran innan nästa batch startas — se varningen om volym kontra kval
 rättelse skriven samma kväll UR EGET HUVUD var ofullständig. `tabernakel` fick två
 betydelser, Wiktionary listar fyra. `trolsk` fick en, SAOB listar två. Båda korten var
 redan skrivna till Anki när det upptäcktes.
+
+
+## `slaupp.py`s sammandrag blandar ihop uppslagsord (2026-08-11)
+
+**Hålet.** `sammandrag`-fältet slår ihop *alla* fuzzy-träffar som svenska.se:s
+API returnerar. För långa, ovanliga ord spelar det ingen roll -- de har en enda
+träff. För korta ord och flerordsuttryck blir sammandraget en blandning:
+
+    tes              -> 'tes' OCH 'te'    (SO-def innehöll "njutningsdryck ... tebusken")
+    brasserie        -> 'brasseri', 'brass', 'brasse', 'brassa'
+    black om foten   -> 'black', 'fot', 'om'  -- var för sig
+    ge sig till tåls -> 'tåls', 'ge sig', 'ge till', 'tåla sig'
+
+Tre av dagens 50 hade **ingen exakt uppslagsordsträff alls**. Deras
+trekällskontroll sa ändå "tre källor", eftersom den räknar *hämtningar som gav
+innehåll*, inte *hämtningar som gav rätt ord*. Beviskedjan var alltså intakt --
+hämtningen gjordes verkligen -- men den bevisade fel sak.
+
+**Samma felklass som stökiometri-nollan och den falska AnkiConnect-negativen:
+ett mätvärde som ser giltigt ut men mäter fel sak.** Hål 0 stänger frågan "gjordes
+uppslagningen?". Det stänger inte "handlade svaret om rätt ord?".
+
+**Så här läser man rätt** -- filtrera på exakt ortografi i stället för att lita
+på sammandraget:
+
+    h = uppslag['svenska_se_ratt'][db]['hits']['hits']
+    traffar = [x for x in h if x['_source'].get('ortografi','').lower() == ordet.lower()]
+
+De tre utan träff reddes ut för hand ur råträffarna: SO/SAOL har `brasserie`
+under den svenska stavningen **brasseri**; `black om foten` finns som SO:s
+definition av **black** ('hämmande faktor') med SAOL:s **black** ('klossformad
+fotboja i äldre tid') som uttryckets bild; och SO definierar uppslagsordet
+**tåla sig** som just 'ge sig till tåls', bruklighetskommentar *vardagligt*.
+
+**Förslag till fix (ej genomfört):** låt `sammanfatta()` ta med `ortografi` per
+betydelse, och låt trekällskontrollen räkna en källa som fullständig först när
+den har en exakt uppslagsordsträff. Då blir "tre källor" ett påstående om ordet
+i stället för om HTTP-anropen.
+
+### Två spärrar som fungerade samma dag
+
+1. **Hål 0 vägrade alla 50** vid första appliceringen. Orsak: `slaupp.py` kördes
+   med `| tail -80`, vilket klippte bort bevisraderna innan de nådde
+   transkriptet. `--tyst` finns för exakt detta, och kommentaren vid flaggan
+   dokumenterar att samma misstag gjorts 2026-08-09 (sex kort) och 2026-08-10
+   (elva kort). Detta var tredje gången, med 50 kort. **Rätt sätt att spara
+   kontext är att låta skriptet tiga, aldrig att filtrera dess utdata.**
+2. **Registerspärren vägrade nio kort.** Taggarna "vetenskaplig", "ålderdomlig"
+   och "historisk" var påhittade. `config.REGISTER_FORMALITY` har
+   **`ngt ålderdomlig`** och `fackspråklig`; historia och lingvistik ligger på
+   den separata domänaxeln (`REGISTER_DOMAN`), och domänen heter `lingvistik`,
+   inte "språkvetenskap". Ett fritt formulerat register går inte att filtrera
+   på i Anki efteråt -- därför är listan fast.
