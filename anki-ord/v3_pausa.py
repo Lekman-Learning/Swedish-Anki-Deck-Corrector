@@ -61,6 +61,13 @@ def har_ordbokstraff(ord_):
     else:
         return None
     d = json.load(open(namn, encoding="utf-8"))
+    # Adams regel 2026-08-11: en redaktionell synonymer.se-post räknas som
+    # fullgod verifiering, inte bara en ordbokstroff. `sobriquet` saknas i
+    # alla tre ordböckerna men har en riktig redaktionell post -- att pausa
+    # det som "osökbart" vore fel, och skulle dessutom göra pauslistan
+    # otillförlitlig på precis de lånord den finns för.
+    if "verifieringsgrund" in d:
+        return d["verifieringsgrund"] != "SAKNAS — kräver websökning"
     # Nyare filer bär svaret direkt; äldre måste räknas om ur råsvaret.
     if "uppslagsordstraffar" in d:
         return bool(d["uppslagsordstraffar"])

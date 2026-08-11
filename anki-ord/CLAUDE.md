@@ -3209,3 +3209,50 @@ först, inte försvinna ur den.
 
 Rätt villkor är "redan klar" (`oberoende_verifierad`) plus dagens egen batch.
 Poolen gick 2 724 → 2 805 och 57 underkända blev synliga igen.
+
+### Källhierarkin skärpt: synonymer.se räknas — men bara redaktionellt
+
+**Adams beslut 2026-08-11:** *"om ordet finns på synonymer.se så räcker det …
+jag tycker att svenska.se är bäst men synonymer.se räknas också som en top
+tier verifiering."*
+
+Regeln antogs, med ETT tillägg — och motexemplet kom ur samma samtal.
+`anhedoni` FINNS på synonymer.se, men bara som **användarbidrag**, och glosan
+där är *"livströtthet"*. Det är fel: anhedoni är oförmåga att känna njutning,
+inte livströtthet. En regel som säger "finns på synonymer.se räcker" hade
+alltså godkänt kortet mot en felaktig källa.
+
+Skillnaden kräver inget omdöme. Sajten namnger sina avsnitt, och
+`Användarnas bidrag` är utpekat. Mätt över 583 sparade uppslagningar:
+**555 har redaktionellt innehåll, 27 har BARA användarbidrag** — och de 27 är
+genomgående facktermer (`anhedoni`, `ftalat`, `gemmologi`, `daktyloskopi`),
+alltså precis där en crowdsourcad gloss är som minst pålitlig.
+
+| Källäge | Räknas som verifiering |
+|---|---|
+| svenska.se med uppslagsordsträff | **Ja** (bäst) |
+| synonymer.se, redaktionell avdelning | **Ja** |
+| synonymer.se, bara `Användarnas bidrag` | **Nej** → websökning krävs |
+
+`slaupp.py` skriver `verifieringsgrund` i varje sparad uppslagning
+(`ordbok` / `synonymer.se (redaktionell)` / `SAKNAS — kräver websökning`), så
+en senare granskare ser VILKEN grund kortet vilar på, inte bara att det
+passerade. Ett ord med enbart användarbidrag loggas som
+`SYNONYMER_SE_ENDAST_ANVANDARBIDRAG` i transkriptet.
+
+Utfall på testfallen: `näpsa` → ordbok, `sobriquet` → synonymer.se
+(redaktionell, alltså godkänd trots att alla tre ordböcker saknar ordet),
+`anhedoni` och `ytong` → saknas.
+
+### `anhedoni`: kortet var mer korrekt än sina källor
+
+Websökningen (NE, Svensk MeSH/Karolinska) gav *"oförmåga att uppleva
+njutning, nöje och glädje"*. Kortets *"Oförmåga att känna glädje"* var alltså
+rätt men för smalt — källorna leder med **njutning**, vilket är kärnan
+(grekiska: *"utan njutning"*). Synonymen `apati` är dessutom fel: apati är
+brist på motivation, anhedoni är att njutningen uteblir.
+
+Men OLD-facit sa *"livströtthet, likgiltighet"* och synonymer.se:s
+användarbidrag sa *"livströtthet"* — **båda fel.** Hade kortet rättats EFTER
+facit hade det försämrats. Det är det starkaste argumentet hittills för att
+blindgranskaren ska slå upp ordet själv i stället för att jämföra mot facit.

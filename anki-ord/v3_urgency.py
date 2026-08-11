@@ -104,10 +104,16 @@ def main():
     klara = set(invoke("findCards", query=(
         f"{MALGRUPP} tag:{config.OBEROENDE_TAG_PREFIX}::*")))
     pausade = set(invoke("findCards", query=f"{DECK} tag:v3_pausad::*"))
+    # Provisoriskt släppta kort ligger redan i Adams kö och pluggas -- de har
+    # en riktig sökkoll och väntar bara på blindgranskning. Adams ordning
+    # 2026-08-11: ta de 1 982 SUSPENDERADE först, eftersom de är helt osynliga
+    # för honom just nu, och återvänd till de 618 provisoriska efteråt.
+    provisoriska = set(invoke("findCards", query=f"{DECK} tag:v3_provisorisk::*"))
     kort = [c for c in invoke("findCards", query=MALGRUPP)
-            if c not in klara and c not in pausade]
+            if c not in klara and c not in pausade and c not in provisoriska]
     print(f"is:review -is:learn: {len(kort)} kort att granska "
-          f"({len(klara)} redan klara, {len(pausade)} pausade, undantagna)")
+          f"({len(klara)} klara, {len(provisoriska)} provisoriska, "
+          f"{len(pausade)} pausade — alla undantagna)")
 
     # Medlemskap via Ankis egen sökning i stället för egen datumräkning:
     # `due` är dagar sedan collection skapades, och att räkna om det själv

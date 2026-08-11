@@ -121,6 +121,43 @@ def variantformer(ord_):
     return ut
 
 
+# synonymer.se som fullvärdig källa -- men bara den REDAKTIONELLA delen
+# (Adams beslut 2026-08-11: "om ordet finns på synonymer.se så räcker det …
+# synonymer.se räknas också som en top tier verifiering").
+#
+# Villkoret behövde skärpas ett steg, och motexemplet kom ur samma samtal:
+# `anhedoni` FINNS på synonymer.se, men bara som användarbidrag, och glosan
+# där är "livströtthet" -- vilket är fel. Anhedoni är oförmåga att känna
+# njutning, inte livströtthet. En regel som säger "finns på synonymer.se
+# räcker" hade alltså godkänt kortet mot en felaktig källa.
+#
+# Skillnaden är mekanisk och behöver inget omdöme: sajten levererar sina
+# avsnitt med namn, och `Användarnas bidrag` är utpekat. Mätt över 583
+# sparade uppslagningar: 555 har redaktionellt innehåll, 27 har BARA
+# användarbidrag -- och de 27 är genomgående facktermer (anhedoni, ftalat,
+# gemmologi, daktyloskopi), alltså precis där en crowdsourcad gloss är som
+# minst pålitlig.
+ANVANDARAVDELNING = "användarnas bidrag"
+
+
+def synonymer_se_redaktionell(syn):
+    """True om synonymer.se har RIKTIGT redaktionellt innehåll för ordet.
+
+    Användarbidrag räknas inte, och inte heller sajtens tomma platshållare
+    ("tillbaka i grottekvarnen"), som annars gör en tom avdelning till en
+    falsk träff.
+    """
+    if not isinstance(syn, dict) or not syn.get("finns"):
+        return False
+    for namn, innehall in (syn.get("avdelningar") or {}).items():
+        if ANVANDARAVDELNING in namn.lower():
+            continue
+        poster = innehall if isinstance(innehall, list) else [innehall]
+        if any(p and "grottekvarnen" not in str(p) for p in poster):
+            return True
+    return False
+
+
 def uppslagsordstraffar(data, ord_):
     """Vilka ordböcker som faktiskt har ORDET som uppslagsord.
 
@@ -527,8 +564,15 @@ def main():
         syn, s_status, s_byte = hamta_synonymer(o)
         print(f"SYNONYMER_SE_HAMTAD {o} HTTP {s_status} {s_byte}")
         post["synonymer_se"] = syn if syn is not None else {"FEL": f"HTTP {s_status}"}
-        if syn and syn.get("finns"):
+        # `finns` räcker inte -- se synonymer_se_redaktionell() för varför.
+        # Ett ord som bara har användarbidrag räknas som EJ täckt av källan,
+        # inte som täckt av en svag källa: mellanlägen blir i praktiken
+        # behandlade som täckning.
+        syn_redaktionell = synonymer_se_redaktionell(syn)
+        if syn_redaktionell:
             kallor_med_innehall.append("synonymer.se")
+        elif syn and syn.get("finns"):
+            print(f"SYNONYMER_SE_ENDAST_ANVANDARBIDRAG {o}")
 
         wik, w_status, w_byte = hamta_wiktionary(o)
         print(f"WIKTIONARY_HAMTAD {o} HTTP {w_status} {w_byte}")
@@ -577,6 +621,15 @@ def main():
                    "kallor_med_innehall": kallor_med_innehall,
                    "uppslagsordstraffar": ordbokstraffar,
                    "uppslagsform": via_form or o,
+                   "synonymer_se_redaktionell": syn_redaktionell,
+                   # Godtagbar sökkoll enligt Adams regel 2026-08-11: ordboks-
+                   # träff ELLER redaktionell synonymer.se. Skrivs ut som ett
+                   # eget fält så att en senare granskare kan se VILKEN grund
+                   # kortet vilar på, inte bara att det passerade.
+                   "verifieringsgrund": (
+                       "ordbok" if ordbokstraffar
+                       else "synonymer.se (redaktionell)" if syn_redaktionell
+                       else "SAKNAS — kräver websökning"),
                    "svenska_se_ratt": data, "sammandrag": post},
                   open(os.path.join(UTKAT, f"{o}.json"), "w", encoding="utf-8"),
                   ensure_ascii=False)
