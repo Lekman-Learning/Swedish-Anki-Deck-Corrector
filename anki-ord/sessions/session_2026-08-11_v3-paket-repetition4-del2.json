@@ -1,0 +1,507 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080628618,
+      "ord": "anhedoni",
+      "facit": "livströtthet, likgiltighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oförmåga att känna njutning och glädje",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "lustlöshet",
+          "glädjelöshet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Depressionen visade sig som <font color=\"#3498db\">anhedoni</font> — han kunde inte längre njuta av något.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Uppslagning misslyckades: 'anhedoni' gav 0 träffar i både SO och SAOL (exact_match). Klinisk grundkunskap bekräftar dock att huvudbetydelsen ('oförmåga att känna njutning och glädje') stämmer, och exempelmeningen är tydlig. Godkänns försiktigt trots misslyckad ordboksuppslagning."
+    },
+    {
+      "noteId": 1780080628015,
+      "ord": "späck",
+      "facit": "fettlager (ssk hos val, säl elr svin)<br><a href=\"https://www.google.com/imgres?q=sp%C3%A4ck&amp;imgurl=https%3A%2F%2Fwww.gorvikslantbruk.se%2Fwp-content%2Fuploads%2F2022%2F03%2FSpack-300.jpg&amp;imgrefurl=https%3A%2F%2Fwww.gorvikslantbruk.se%2Fprodukt%2Fspack%2F&amp;docid=6ZztW28KhVTvmM&amp;tbnid=Lebe3hpiCSvhcM&amp;vet=12ahUKEwiswKbfiIOMAxVXFxAIHUU6EaYQM3oECBcQAA..i&amp;w=300&amp;h=300&amp;hcb=2&amp;ved=2ahUKEwiswKbfiIOMAxVXFxAIHUU6EaYQM3oECBcQAA\"><div><div><div><img alt=\"späck – Görviks lantbruk\" src=\"paste-cc6839bddd303fcf21506208b3319cd5379410f5.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fettlager, t.ex. hos val och säl",
+        "register": "vardaglig, neutral, biologi",
+        "synonymer": [
+          "fett",
+          "ister"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kocken lindade köttet med <font color=\"#3498db\">späck</font> innan det stektes.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'tjock underhudsvävnad ... hos bl.a. vattenlevande däggdjur och svin', matchar kortet. Exempelmeningen matchar nästan ordagrant SO:s egen ('linda köttet med späck'). 'Fett' är något vidare än späck men inte direkt fel; 'ister' är en bra synonym (SO:s cohyponym)."
+    },
+    {
+      "noteId": 1780080624007,
+      "ord": "efterlåten",
+      "facit": "undfallande, eftergiven",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alltför eftergiven, saknar fasthet gentemot andra",
+        "register": "litterär, lätt negativ, allmän",
+        "synonymer": [
+          "eftergiven",
+          "släpphänt",
+          "undfallande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han är väl <font color=\"#3498db\">efterlåten</font> mot sin dotter.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'eftergiven' (mindre brukligt), exempel identiskt med kortets ('han är väl efterlåten mot sin dotter'). Synonymerna eftergiven/undfallande matchar facit; släpphänt är en rimlig närbesläktad synonym."
+    },
+    {
+      "noteId": 1780080626162,
+      "ord": "förborga",
+      "facit": "dölja",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Dölja något eller någon för andra",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "dölja",
+          "gömma",
+          "skydda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En väl <font color=\"#3498db\">förborgad</font> hemlighet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO och SAOL ger båda enbart betydelsen 'dölja/hemlighålla' (SAOL: 'dölja, hemlighålla'; SO: 'dölja'). Synonymen 'skydda' saknar stöd i båda källorna och är sakligt fel -- att dölja något är inte detsamma som att skydda det. Ta bort 'skydda' ur synonymlistan."
+    },
+    {
+      "noteId": 1780080621537,
+      "ord": "bakdanta",
+      "facit": "baktala",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tala illa om någon bakom ryggen",
+        "register": "litterär, negativ, allmän",
+        "synonymer": [
+          "förtala",
+          "smutskasta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han blev <font color=\"#3498db\">bakdantad</font> på sin egen arbetsplats.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'baktala' (mindre brukligt), exempelmeningen är identisk med SO:s egen. Förtala/smutskasta är närbesläktade synonymer, med viss nyansskillnad, men inte fel nog för underkännande."
+    },
+    {
+      "noteId": 1780080628648,
+      "ord": "skoffa",
+      "facit": "skovel, skopa, skyffel<br><img alt=\"webp image\" src=\"paste_1759068885605.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skovel eller skyffel ; skovla, skyffla",
+        "register": "dialektal, neutral, allmän",
+        "synonymer": [
+          "skovel",
+          "skyffel",
+          "skopa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han använde <font color=\"#3498db\">skoffan</font> för att röja snön från trapporna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL har två homografer, båda 'prov.' (dialektala): substantiv 'skovel, skyffel, skopa' och verb 'skovla, skyffla'. Kortet fångar korrekt båda med ' ; ' mellan de genuint skilda ordklasserna/betydelserna. Exempelmeningen visar substantivbetydelsen korrekt."
+    },
+    {
+      "noteId": 1780080626468,
+      "ord": "myriad",
+      "facit": "stort antal",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ofattbart stort antal av något",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "otalig mängd",
+          "oräknelig skara",
+          "massa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Myriader</font> stjärnor skimrade på himlen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ofattbart stort antal', exempel 'myriader stjärnor' matchar kortets exempelmening nästan ordagrant. Synonymerna är rimliga omskrivningar."
+    },
+    {
+      "noteId": 1780080621580,
+      "ord": "infordra",
+      "facit": "kräva att få, rekvirera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Formellt kräva in något",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "rekvirera",
+          "begära in"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Offerter <font color=\"#3498db\">infordrades</font> från olika företag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'uppmana att lämna in' (exempel identiskt med kortets), plus underbetydelsen 'begära återbetalning av (skuld)'. Underbetydelsen är en specialtillämpning, inte en fristående huvudbetydelse, så avsaknaden är inte ett allvarligt fel. Synonymerna matchar facit."
+    },
+    {
+      "noteId": 1780080627147,
+      "ord": "efor",
+      "facit": "spartansk ledare<br><a href=\"https://en.wikipedia.org/wiki/File:Sparta_Ephoren_(WMH_11-1861-62_S_48_LLoeffler).jpg\"><img src=\"220px-sparta_ephoren_(wmh_11-1861-62_s_48_lloeffler).webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En av flera civila tillsynsämbetsmän i antikens Sparta med makt att övervaka kungarna",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "tillsynsman",
+          "överhuvud",
+          "ämbetsman"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Eforerna</font> hade makt att ställa till och med Spartas kungar till svars.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(titel för) ledare i det forntida Sparta'. Kortets utförligare beskrivning (tillsynsämbetsmän med makt att övervaka kungarna) är historiskt korrekt och förtydligar snarare än förvanskar. Synonymerna passar väl, 'överhuvud' är något löst men inte fel."
+    },
+    {
+      "noteId": 1780080626235,
+      "ord": "bejaka",
+      "facit": "bekräfta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svara ja på ; vara positiv till, välkomna",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "bekräfta",
+          "acceptera",
+          "välkomna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">bejaka</font> förslaget under mötet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger korrekt två betydelser (svara ja på ; vara positiv till/välkomna) som kortet fint fångar med ' ; '. Men exempelmeningen är grammatiskt fel: 'Hon bejaka förslaget under mötet' -- verbet står i infinitiv efter subjekt, ska vara 'bejakade' (preteritum) eller 'bejakar' (presens)."
+    },
+    {
+      "noteId": 1780080627052,
+      "ord": "parkett",
+      "facit": "trägolv;&nbsp; &nbsp;åskådarplats på golvnivå",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Finare trägolv ; åskådarplats i teater",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "trägolv",
+          "orkesterplats"
+        ],
+        "synonym_groups": [
+          [
+            "trägolv"
+          ],
+          [
+            "orkesterplats"
+          ]
+        ],
+        "exempelmening": "Han köpte biljetter längst fram på <font color=\"#3498db\">parkett</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal undersökt: SO har två huvudbetydelser (åskådarutrymme på teater; trägolv) med några underbetydelser/nyanser (t.ex. 'första parkett', parkett som material) som är utvidgningar av samma två kärnbetydelser -- ingen tredje/fjärde huvudbetydelse saknas. 'Orkesterplats' är en korrekt synonym för teaterbetydelsen."
+    },
+    {
+      "noteId": 1780080627551,
+      "ord": "smärre",
+      "facit": "mindre",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mindre till storlek eller omfattning",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "mindre",
+          "tämligen liten",
+          "ganska liten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Snickaren gjorde några <font color=\"#3498db\">smärre</font> justeringar på dörren innan den gick att stänga ordentligt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO hänvisar till '²mindre' (absolut komparativ). Kortets definition och exempel ('smärre justeringar') matchar SO:s egna nästan ordagrant."
+    },
+    {
+      "noteId": 1780080628370,
+      "ord": "samfällighet",
+      "facit": "kommun, kollektiv, gemenskap",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förening för gemensam förvaltning",
+        "register": "formell, neutral, juridik",
+        "synonymer": [
+          "förening",
+          "sammanslutning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Väghållningen sköts av villaägarna i en <font color=\"#3498db\">samfällighet</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'organisation som samordnar viss verksamhet t.ex. i bostads- eller markfrågor'. Kortets definition matchar, exempelmeningen matchar SO:s egen i sak. Facit (kommun, kollektiv, gemenskap) är löst formulerat jämfört med SO:s mer precisa betydelse, men gör inte kortet fel."
+    },
+    {
+      "noteId": 1780080626651,
+      "ord": "affekterad",
+      "facit": "tillgjord",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som uppträder överdrivet och tillgjort ; (medicin) påverkad, angripen",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "tillgjord",
+          "konstlad",
+          "angripen"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En obehärskad och <font color=\"#3498db\">affekterad</font> person.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar två betydelser: 'tillgjord' och 'påverkad' (med.). Kortet fångar korrekt båda med ' ; '. Synonymerna tillgjord/konstlad matchar första betydelsen, angripen matchar den medicinska. Exempelmeningen illustrerar förstabetydelsen tydligt."
+    },
+    {
+      "noteId": 1780080622873,
+      "ord": "tillvita",
+      "facit": "anklaga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Formellt anklaga eller beskylla någon för något",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "beskylla",
+          "anklaga",
+          "förebrå"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Åklagaren <font color=\"#3498db\">tillvitade</font> den misstänkte grova ekonomiska oegentligheter under rättegången.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'beskylla för (någon negativ egenskap, handling eller dylikt)'. Kortet matchar väl, exempelmeningen följer SO:s valensmönster och är grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080623145,
+      "ord": "synnerligen",
+      "facit": "anmärkningsvärd, ytterst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I mycket hög grad, ytterst",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "ytterst",
+          "särskilt",
+          "utomordentligt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det här är en <font color=\"#3498db\">synnerligen</font> viktig fråga som kräver allas fulla uppmärksamhet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ytterst', exempel 'en synnerligen viktig fråga' matchar kortets exempelmening nästan exakt. Synonymerna ytterst/utomordentligt är precisa, 'särskilt' är något svagare i styrka men fortfarande rimlig."
+    },
+    {
+      "noteId": 1780080628844,
+      "ord": "slatt",
+      "facit": "bottenskvätt (i dryck)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten rest av vätska på botten",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "skvätt",
+          "rest"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det fanns bara en <font color=\"#3498db\">slatt</font> kvar i termosen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(botten)skvätt', exempel 'det fanns en slatt kvar i termosen' är i det närmaste identiskt med kortets exempelmening."
+    },
+    {
+      "noteId": 1780080625983,
+      "ord": "rissel",
+      "facit": "sikt<br><a href=\"https://www.google.com/imgres?q=rissel&amp;imgurl=https%3A%2F%2Fems.dimu.org%2Fimage%2F0334ASXduQ5t%3Fdimension%3D1200x1200&amp;imgrefurl=https%3A%2F%2Fdigitaltmuseum.se%2F021028601287%2Frissel&amp;docid=ZZgWr5s7BN7t0M&amp;tbnid=4AiT9kFULDMfmM&amp;vet=12ahUKEwjYi8HjotaLAxXXGhAIHVdHAPoQM3oECBoQAA..i&amp;w=1200&amp;h=883&amp;hcb=2&amp;ved=2ahUKEwjYi8HjotaLAxXXGhAIHVdHAPoQM3oECBoQAA\"><div><div><div><img alt=\"Rissel -Kulturparken Småland / Smålands ...\" src=\"paste-c3520d82cbdefa4401667c0db2b96f019280c409.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Grovt såll för att sortera jord eller grus",
+        "register": "dialektal, neutral, jordbruk",
+        "synonymer": [
+          "grovt såll"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Arbetaren använde <font color=\"#3498db\">risseln</font> för att rensa bort stenarna ur jorden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO (homograf 1): 'grovt såll för siktning av jord eller grus' matchar kortet exakt. Homograf 2 ('rissel' till 'rissla' = prasslande) är ett annat ord/uppslag, inte en missad betydelse av samma ord."
+    },
+    {
+      "noteId": 1780080625031,
+      "ord": "adenit",
+      "facit": "körtelinflammation",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inflammation i en körtel",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "körtelinflammation",
+          "inflammation",
+          "körtel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade <font color=\"#3498db\">adenit</font> i halsen, vilket gjorde det svårt att svälja.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'inflammation i körtel (särskilt lymfkörtel)'. Synonymen 'körtelinflammation' är korrekt och matchar facit, men 'körtel' ensamt är fel -- en körtel är inte samma sak som en körtelinflammation -- och 'inflammation' ensamt är för allmänt/otydligt. Ta bort 'körtel' och 'inflammation' ur synonymlistan."
+    },
+    {
+      "noteId": 1780080628401,
+      "ord": "lodare",
+      "facit": "person som planlöst strövar omkring&nbsp;<i>o undviker arbete</i>",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Person som strövar planlöst omkring utan fast sysselsättning",
+        "register": "vardaglig, nedsättande, allmän",
+        "synonymer": [
+          "luffare",
+          "vagabond",
+          "uteliggare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">lodare</font> gick runt i tunnelbanevagnen och tiggde pengar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal undersökt: SO ger endast en betydelse, 'person som planlöst strövar omkring och undviker arbete' (nedsättande) -- flaggan beror troligen på kursiveringen i facit-HTML, inte på en verklig andra betydelse. Kortets definition matchar väl. 'Uteliggare' är en något snävare synonym (antyder specifikt hemlöshet) men inte uppenbart fel i sammanhanget."
+    },
+    {
+      "noteId": 1780080622912,
+      "ord": "lyster",
+      "facit": "glans",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skimrande ljusreflexer från belyst yta ; ljushållare med glasprismor",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "glans",
+          "skimmer",
+          "prismljusstake"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Lystern</font> från marmorgolvet var vacker.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO (homograf 1, substantiv) har två betydelser: skimrande ljusreflexer samt ljushållare med glasprismor. Kortet fångar korrekt båda med ' ; '. Exempelmeningen matchar SO:s egen ('lystern från marmorgolvet')."
+    },
+    {
+      "noteId": 1780080629207,
+      "ord": "intrigant",
+      "facit": "lömsk och beräknande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En person som ränker och konspirerar bakom ryggen på andra",
+        "register": "neutral, nedsättande, allmän",
+        "synonymer": [
+          "ränkfull",
+          "lömsk",
+          "beräknande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade många <font color=\"#3498db\">intriganta</font> drag.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO/SAOL: den vanligaste betydelsen är adjektivet 'som gärna skapar intriger'/'ränkfull' (utan bruklighetsmarkering); substantivbetydelsen 'person som skapar intriger' finns men är märkt 'mindre brukligt' i SO. Kortet definierar ordet enbart som substantiv ('En person som...') och missar den vanligare adjektivbetydelsen -- leder alltså inte med vanligaste betydelsen. Dessutom är kortet internt motsägelsefullt: både synonymerna (ränkfull, lömsk, beräknande) och exempelmeningen ('Han hade många intriganta drag') är adjektivformer, vilket visar att adjektivbetydelsen borde ha varit huvudbetydelsen."
+    },
+    {
+      "noteId": 1780080627888,
+      "ord": "esperanto",
+      "facit": "artificiellt språk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Planspråk skapat för internationell kommunikation",
+        "register": "formell, neutral, lingvistik",
+        "synonymer": [
+          "konstgjort språk",
+          "planspråk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Esperanto</font> skapades på 1880-talet för att främja fred mellan folk.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ett konstgjort internationellt hjälpspråk', matchar kortet väl. Exempelmeningens sakuppgifter (skapades på 1880-talet, syfte att främja fred/förståelse mellan folk) stämmer med vedertagen kunskap om Zamenhofs esperanto."
+    },
+    {
+      "noteId": 1780080626791,
+      "ord": "spoliera",
+      "facit": "förstöra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förstöra något i grunden eller helt",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "förstöra",
+          "ödelägga",
+          "skövla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hela deras arbete <font color=\"#3498db\">spolierades</font> av skyfallet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'i grunden förstöra (något, vanligen abstrakt)', exempelmeningen är identisk med SO:s egen ('spolierades av skyfallet'). Ödelägga/skövla är något starkare/mer bokstavliga i klang men ligger inom rimlig synonymgrupp."
+    },
+    {
+      "noteId": 1780080626272,
+      "ord": "agorafobi",
+      "facit": "torgskräck",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjuklig rädsla för att vistas bland människor på öppna platser",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "torgskräck",
+          "platsångest",
+          "rädsla för öppna platser"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">agorafobi</font> gjorde det svårt att besöka köpcentrum och stora torg.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sjuklig rädsla för att vistas bland människor (särskilt) på stora, öppna platser', synonym 'torgskräck' bekräftad av SO. Kortet matchar nästan ordagrant, exempelmeningen är trovärdig och korrekt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 39,
+  "granskning_kostnad_usd": 1.5185136999999995,
+  "granskning_turkrav": 6
+}
