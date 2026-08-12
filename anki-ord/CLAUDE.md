@@ -218,6 +218,33 @@ slapp granskare. **Ett motargument finns dock i mätdatan:** granskaren körde
 **2,65 turer per kort** mot batch2:s 1,63 -- alltså mer arbete per kort, inte
 mindre. Det talar mot slapphet, men ersätter inte en kontrollmätning.
 
+**Adams fråga efteråt: "är det för att vi tillåter 0 synonymer?"** Delvis, och
+mätningen visar hur mycket. Batch3 har **hälften så många synonympåståenden**
+som batch2 (23 mot 44; 1,1 mot 2,3 per kort) -- alltså mindre yta att ha fel på.
+Men antalet betydelser per kort är oförändrat (1,3 mot 1,4), så den andra stora
+feltypen hade samma yta som förut.
+
+Och synonymeffekten räcker inte för att förklara noll. Över alla **1 062**
+loggade blindgranskningar i `oberoende_granskningar.jsonl`:
+
+| | |
+|---|---|
+| Underkända | 201 (**19 %**) |
+| Nämner synonymer | 104 (52 % av underkännandena) |
+| **Rena** synonymfel | 16 (**8 %**) |
+
+Försvinner synonymfelen helt hamnar frekvensen mellan **9 % och 17 %** beroende
+på hur de blandade fallen räknas -- inte på 0 %. Resten är sannolikt tur plus
+lite lättare ord: batch3:s median-popularitet är 4 800 mot batch2:s 2 918, och
+**0 av 20 vid en sann frekvens på 10 % inträffar i 12 % av fallen**, ungefär var
+åttonde batch. Ett parti om 20 kort kan inte skilja "processen blev bättre" från
+"det gick bra den här gången".
+
+**Skillnaden som måste hållas isär:** tom synonymlista gör korten mindre
+felaktiga, men delvis genom att de påstår mindre -- inte bara genom att de
+påstår rätt. Ett kort utan synonymer kan inte ha fel synonym. Det är en verklig
+vinst för HP-provet och ska inte bokföras som att skrivandet blivit bättre.
+
 **Varför kontrollkorten inte gick att blanda in, och det är inte en bugg:**
 `valj_kontroller` kräver kort som blindgodkänts för minst 3 dagar sedan.
 Taggen `oberoende_verifierad` finns bara i tre dagar: 236 kort 2026-08-10,
