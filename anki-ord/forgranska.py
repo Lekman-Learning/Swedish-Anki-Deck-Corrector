@@ -53,6 +53,7 @@ HAR = os.path.dirname(os.path.abspath(__file__))
 HARDA = (
     "uppslagsord_saknas",
     "frammande_uppslagsord",
+    "synonym_fel_relation",
     "synonym_utan_stod",
     "register_motsager_markning",
 )
@@ -159,7 +160,13 @@ def _kallord(u):
         bitar += [str(x) for x in _so(u, f)] + [str(x) for x in _saol(u, f)]
     try:
         avd = u["sammandrag"]["synonymer_se"].get("avdelningar") or {}
-        for lista in avd.values():
+        for namn, lista in avd.items():
+            # ALDRIG motsatsord. Fram till 2026-08-12 loopades avd.values()
+            # rakt av, vilket gjorde att syn.se:s motsatslista räknades som
+            # STÖD för en synonym -- regeln godkände alltså ord som betyder
+            # tvärtom.
+            if "motsats" in str(namn).lower() or "antonym" in str(namn).lower():
+                continue
             bitar += [str(x) for x in lista]
     except Exception:
         pass
@@ -199,6 +206,61 @@ def _har_stod(syn, kallpase, kalltext):
         if len(st) >= 4 and any(k.startswith(st) for k in kallpase):
             return True
     return False
+
+
+# SO taggar varje korshänvisning med sin RELATION. Det är den uppgiften hela
+# synonymproblemet handlar om, och den kastades tidigare bort som brus.
+#
+# MÄTT 2026-08-12 över hela uppslagscachen:
+#     JFR:cohyponym    1204     syskonord      -- ellips/oval, klenät/struva
+#     SYN:synonym       148     likvärdigt     -- böld/abscess
+#     MOTSATS:antonym    58     motsats        -- konkret/abstrakt
+#     JFR:hyponym        23     underordnat    -- infix/affix
+#     JFR:hyperonym       4     överordnat     -- rentjur/härk
+#
+# Åtta gånger fler syskon än synonymer. Att läsa "SO nämner ordet" som stöd
+# för synonymi är alltså fel i ungefär åtta fall av nio -- vilket är precis
+# felfrekvensen i synonymlistorna innan den här kontrollen fanns.
+# BACKTESTAT 2026-08-12, och hypotesen FÖLL. Jag antog att `JFR:cohyponym`
+# kunde blockera synonymer, eftersom taggen förklarar ellips/oval och
+# klenät/struva. Mot två dygns kända domar slog regeln ut på 27 kort, varav
+# bara 7 faktiskt underkändes -- och den underkände `girig`/*snål*,
+# `grossist`/*grosshandlare* och `bleke`/*stiltje*, där ordet ifråga är
+# SAOL:s EGEN gloss. SO använder `cohyponym` löst, även om nära synonymer.
+# Den får därför inte blockera.
+#
+# De tre precisa taggarna behålls som ett billigt skyddsnät. De är sällsynta
+# (85 förekomster mot cohyponyms 1204) och gav noll falska utslag -- men också
+# noll äkta, eftersom taggarna bara täcker SO:s egna länkord: `affix` länkar
+# till *prefix*, medan kortet skriver *förstavelse*. Regeln fångar alltså
+# bara den som råkar använda exakt ordbokens ord.
+RELATION_FEL = {
+    "JFR:hyponym": "underordnat specialfall, inte synonym",
+    "JFR:hyperonym": "överordnat begrepp, inte synonym",
+    "MOTSATS:antonym": "MOTSATS -- betyder tvärtom",
+    "mots.": "MOTSATS -- betyder tvärtom",
+}
+# Informativ, blockerar inte. Visas när jag skriver kort, som underlag för
+# ett omdöme -- inte som dom.
+RELATION_ATT_TANKA_PA = {"JFR:cohyponym": "syskonord — kontrollera utbytbarhet"}
+_LANKTEXT = re.compile(r"<[^>]+>")
+# SO numrerar homografer i länktexten ("1konkret", "tagg 1"). Siffran hör till
+# uppslagsordets identitet, inte till ordet.
+_HOMOGRAFNR = re.compile(r"^\d+|\s+\d+$")
+
+
+def so_relationer(u):
+    """{ord: relationstyp} ur SO:s och SAOL:s egna korshänvisningar."""
+    ut = {}
+    for kalla in ("so", "saol"):
+        for h in _hits(u, kalla):
+            for hb in ((h.get("_source") or {}).get("huvudbetydelser") or []):
+                for hv in (hb.get("hänvisningar") or []):
+                    typ = hv.get("typ")
+                    txt = _HOMOGRAFNR.sub("", _LANKTEXT.sub("", hv.get("hänvisning") or "")).strip()
+                    if typ and txt:
+                        ut.setdefault(txt.lower(), typ)
+    return ut
 
 
 def _samma_uppslag(traff, ord_):
@@ -279,7 +341,18 @@ def granska_post(p):
                     f"SO har {antal_so} betydelser/underbetydelser, kortet har "
                     f"{antal_kort}"))
 
-    # 4. Synonymer utan stöd i något hämtat underlag.
+    # 4a. Synonym som SO uttryckligen taggar som NÅGOT ANNAT än synonym.
+    #     Starkaste kontrollen i hela filen: ordboken har redan sagt att orden
+    #     inte är utbytbara, med ord.
+    rel = so_relationer(u)
+    for s in (pr.get("synonymer") or []):
+        nyckel = re.sub(r"<[^>]+>", "", str(s or "")).strip().lower()
+        typ = rel.get(nyckel)
+        if typ in RELATION_FEL:
+            fel.append(("synonym_fel_relation",
+                        f"{s!r}: SO taggar ordet som {typ} — {RELATION_FEL[typ]}"))
+
+    # 4b. Synonymer utan stöd i något hämtat underlag.
     kallpase, kalltext = _kallord(u)
     if kallpase:
         utan = [s for s in (pr.get("synonymer") or []) if not _har_stod(s, kallpase, kalltext)]

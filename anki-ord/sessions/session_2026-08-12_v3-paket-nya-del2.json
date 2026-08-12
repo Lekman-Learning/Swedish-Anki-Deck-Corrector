@@ -1,0 +1,382 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080619572,
+      "ord": "komma för",
+      "facit": "plötsligt få",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Plötsligt dyka upp i tankarna hos någon",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "uppenbara sig i tankarna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det <font color=\"#3498db\">kom för</font> honom att han hade sett mannen förut, men han kunde inte placera ansiktet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en betydelse: 'uppenbara sig för (någon) i tankarna', vilket matchar kortets huvudbetydelse och exempelmening väl. Ingen betydelse saknas, synonymen är rimlig och kortet går att läsa och förstå direkt."
+    },
+    {
+      "noteId": 1780080619524,
+      "ord": "depreciera",
+      "facit": "skriva ned",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Minska värdet av något, skriva ned en valutas värde ; i vidare bemärkelse: sjunka i värde",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "skriva ned",
+          "devalvera",
+          "sjunka i värde"
+        ],
+        "synonym_groups": [
+          [
+            "skriva ned",
+            "devalvera"
+          ],
+          [
+            "sjunka i värde"
+          ]
+        ],
+        "exempelmening": "Riksbanken lät kronan <font color=\"#3498db\">depreciera</font> för att stärka exporten.",
+        "etymologi": "Latin pretium 'värde' — samma rot som pris. de- = nedåt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en huvudbetydelse ('genomföra depreciering av valuta' / 'minska värdet av, skriva ned valuta') vars valens tillåter både transitivt bruk och bruk om att valutan självmant sjunker, så kortets uppdelning i 'skriva ned/devalvera' och 'i vidare bemärkelse: sjunka i värde' är en rimlig nyansering av samma betydelse, inte en påhittad andra betydelse. Etymologin (pretium/de-) stämmer och exempelmeningen är korrekt använd."
+    },
+    {
+      "noteId": 1780080620126,
+      "ord": "autonom",
+      "facit": "självständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har hög grad av oberoende och styr sig själv ; om fordon: som kan framföras utan förare ; om person eller grupp: starkt samhällskritisk",
+        "register": "neutral, neutral, politik",
+        "synonymer": [
+          "självständig",
+          "självstyrande",
+          "självkörande",
+          "starkt kritisk inställning till samhället"
+        ],
+        "synonym_groups": [
+          [
+            "självständig",
+            "självstyrande"
+          ],
+          [
+            "självkörande"
+          ],
+          [
+            "starkt kritisk inställning till samhället"
+          ]
+        ],
+        "exempelmening": "En <font color=\"#3498db\">autonom</font> region med eget parlament.",
+        "etymologi": "av grekiska auton´omos 'självstyrande'; till auto- och nom´os 'sed; lag'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två huvudbetydelser (allmänt oberoende -- med bildligt bruk och förarlösa fordon som nyanser -- samt den samhällskritiska betydelsen sedan 1990) täcks av kortets tre betydelser; ingen betydelse saknas. Synonymerna självständig/självstyrande/självkörande bekräftas som jämförelseord i SO, och etymologin stämmer ordagrant. Litet men ej diskvalificerande: domänetiketten 'politik' passar bara den samhällskritiska nyansen, inte fordons- eller grundbetydelsen."
+    },
+    {
+      "noteId": 1780080620182,
+      "ord": "affix",
+      "facit": "förstavelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Betydelsebärande orddel som fästs före, efter eller inuti ordets kärna",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ordet \"betalning\" har två <font color=\"#3498db\">affix</font>: \"be-\" och \"-ning\".",
+        "etymologi": "till latin affixus 'fästad', av affigere 'fästa vid' — samma rot som fix, prefix och suffix"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse matchar kortet nästan ord för ord, exemplet är korrekt och etymologin (affixus/affigere, släkt med fix/prefix/suffix) stämmer exakt."
+    },
+    {
+      "noteId": 1780080620246,
+      "ord": "manisk",
+      "facit": "besatt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvångsmässigt fixerad vid en enda idé ; sjukligt upprymd",
+        "register": "neutral, neutral, psykologi",
+        "synonymer": [
+          "besatt",
+          "fixerad",
+          "sjukligt upprymd",
+          "exalterad"
+        ],
+        "synonym_groups": [
+          [
+            "besatt",
+            "fixerad"
+          ],
+          [
+            "sjukligt upprymd",
+            "exalterad"
+          ]
+        ],
+        "exempelmening": "Han blev nästan <font color=\"#3498db\">manisk</font> i sitt samlande av frimärken.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger exakt två betydelser (fixerad vid en idé; sjukligt upprymd) i samma ordning som kortet, med rimliga synonymgrupper och en korrekt exempelmening."
+    },
+    {
+      "noteId": 1780080619990,
+      "ord": "ocker",
+      "facit": "oskäligt höga priser",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att ta ut orimligt höga räntor eller priser av någon som är i knipa",
+        "register": "formell, negativ",
+        "synonymer": [
+          "procenteri",
+          "utsugning",
+          "utpressning"
+        ],
+        "exempelmening": "Att ta ut sådan ränta på ett nödlån är ren <font color=\"#3498db\">ocker</font>.",
+        "etymologi": "Besläktat med växa — ocker är pengar som växer på någon annans trångmål.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymen 'utpressning' är fel: SO definierar utpressning som 'framtvingande, med hjälp av hot, av önskvärt handlande [mot personens vilja]' -- ett hot-baserat tvångsbrott, medan ocker är att ta ut orimlig ränta/pris genom att utnyttja någons svaghet/trångmål. Begreppen är inte utbytbara. 'Utpressning' bör tas bort ur synonymlistan (procenteri och utsugning är rimligare kvar)."
+    },
+    {
+      "noteId": 1780080619960,
+      "ord": "konstruktivism",
+      "facit": "all verklighet är subjektiv<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fconstructivism-teaching&amp;psig=AOvVaw0ZBrcpERL1cyIsw5dIRIW1&amp;ust=1740793488984000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCOCYvJ2f5YsDFQAAAAAdAAAAABAE\"><img alt=\"23 Constructivism Teaching Royalty-Free Photos and Stock Images |  Shutterstock\" src=\"stock-vector-constructivism-learning-theory-educational-psychology-vector-illustration-inf.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Konstnärlig och arkitektonisk riktning som uppstod i Ryssland kring 1920 ; inom samhällsvetenskap: uppfattningen att verkligheten är socialt konstruerad",
+        "register": "fackspråklig, neutral, konst",
+        "synonymer": [
+          "riktning inom vetenskap och konst",
+          "verkligheten är socialt konstruerad"
+        ],
+        "synonym_groups": [
+          [
+            "riktning inom vetenskap och konst"
+          ],
+          [
+            "verkligheten är socialt konstruerad"
+          ]
+        ],
+        "exempelmening": "Tatlins torn är <font color=\"#3498db\">konstruktivismens</font> mest kända verk — stål och glas i stället för marmor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s definition ('en modern riktning inom konst och arkitektur') matchar kortets första betydelse väl, inklusive den ryska ~1920-kontexten (Tatlins torn i exemplet). SO:s uppslag 'social konstruktivism' ('en riktning inom samhällsvetenskaperna som hävdar att verkligheten är socialt konstruerad') motsvarar kortets andra betydelse. Ingen betydelse saknas."
+    },
+    {
+      "noteId": 1780080620138,
+      "ord": "förmäla",
+      "facit": "berätta; gifta bort",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Meddela eller omtala ; gifta bort någon ; om företeelser: förekomma tillsammans, förenas",
+        "register": "formell, neutral ; ngt ålderdomlig, neutral ; litterär, neutral",
+        "synonymer": [
+          "omtala",
+          "förtälja",
+          "gifta bort",
+          "förena"
+        ],
+        "synonym_groups": [
+          [
+            "omtala",
+            "förtälja"
+          ],
+          [
+            "gifta bort"
+          ],
+          [
+            "förena"
+          ]
+        ],
+        "exempelmening": "Vad som sedan hände <font color=\"#3498db\">förmäler</font> inte historien.",
+        "etymologi": "av lågtyska vormälen 'lova bort' — jfr gemål och giftermål"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Etymologin hör inte till den ledande betydelsen. Kortets etymologi ('lågtyska vormälen, lova bort -- jfr gemål/giftermål') är SO:s etymologi för homograf 1 ('gifta bort'), men kortet leder med betydelsen 'meddela/omtala', som i SO är en annan homograf med en helt annan etymologi ('fornsvenska formäla, av lågtyska vormelden, med anslutning till mäla'). Som kortet nu står antyder det felaktigt att 'förmäla'=berätta kommer från äktenskapsordet -- sakligt fel och missvisande i stället för minnesstödjande. Betydelserna i övrigt (tre homografer: meddela, gifta bort, förena/gifta sig) stämmer väl mot SO."
+    },
+    {
+      "noteId": 1780080619526,
+      "ord": "loafer",
+      "facit": "sko utan snören<br><a href=\"https://www.google.com/imgres?q=loafer&amp;imgurl=https%3A%2F%2Fcdn.chic.ae%2Fuploads%2FMen-Loafer-Shoes-When-Why-To-Wear-Loafers-Expert-Guide.jpg&amp;imgrefurl=https%3A%2F%2Fwww.chic.ae%2Fmen-loafer-shoes-advantages%2F&amp;docid=3HE_7Bzf5PYatM&amp;tbnid=U8L8hYbHgAaohM&amp;vet=12ahUKEwjs2Ymch4WMAxUtQvEDHb9pCpMQM3oECFUQAA..i&amp;w=590&amp;h=390&amp;hcb=2&amp;ved=2ahUKEwjs2Ymch4WMAxUtQvEDHb9pCpMQM3oECFUQAA\"><div><div><div><img alt=\"Men Loafer Shoes When &amp; Why To Wear ...\" src=\"paste-9101a0394efd4e4e30ac947d79c63c1720d612df.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lätt sko utan snörning",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "lågsko utan snörning",
+          "promenadsko"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade ett par bruna <font color=\"#3498db\">loafers</font> utan strumpor.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Formfel: både SO och SAOL har uppslagsordet endast i pluralform 'loafers' (böjning 'pl. ~en'), dvs. ett pluraletantum -- singularformen 'loafer' finns inte som svenskt uppslagsord. 'Ord' borde alltså vara 'loafers', och huvudbetydelsen borde formuleras i plural ('lätta promenadskor utan snörning') i stället för singular 'lätt sko'. Betydelsen i sak (sko/skor utan snörning) är annars korrekt."
+    },
+    {
+      "noteId": 1780080620020,
+      "ord": "oratorium",
+      "facit": "musikaliskt verk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stort dramatiskt musikverk för kör, solister och orkester, oftast över religiöst ämne",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "sakralt musikverk",
+          "körverk för solister"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Haydns <font color=\"#3498db\">oratorium</font> Skapelsen framfördes av kör, solister och orkester i domkyrkan.",
+        "etymologi": "av medeltidslatin orato´rium 'bönsal', till latin ora´re 'bedja'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'större dramatiskt musikverk för kör, solister (och orkester), vanligen till religiös text, avsett för kyrka' -- matchar kortets huvudbetydelse (stort, kör, solister, orkester, oftast religiöst) och exemplet (Haydns Skapelsen) mycket väl. Etymologin stämmer ordagrant."
+    },
+    {
+      "noteId": 1780080619778,
+      "ord": "härk",
+      "facit": "renoxe<br><a href=\"https://www.google.com/imgres?q=h%C3%A4rk&amp;imgurl=https%3A%2F%2Fems.dimu.org%2Fimage%2F019EBskTZ3H8K%3Fdimension%3D1200x1200&amp;imgrefurl=https%3A%2F%2Fdigitaltmuseum.se%2F0210111528491%2Fen-gammel-hark&amp;docid=1Ti2qntPDoUXWM&amp;tbnid=xhNlb_hDHBVGKM&amp;vet=12ahUKEwiHyKyS3_eLAxWOJBAIHWsmB3AQM3oECHAQAA..i&amp;w=1200&amp;h=800&amp;hcb=2&amp;ved=2ahUKEwiHyKyS3_eLAxWOJBAIHWsmB3AQM3oECHAQAA\"><div><div><div><img alt=\"museum / DigitaltMuseum\" src=\"paste-bbf0ea50018560e42e16a793765ff18e5f2eef96.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kastrerad rentjur",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [
+          "renoxe",
+          "kastrerad rentjur"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Härken</font> spändes för ackjan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'kastrerad rentjur', belagt sedan 1873 från samiska hierke -- exakt matchning med kortets huvudbetydelse och exempelmening."
+    },
+    {
+      "noteId": 1780080619722,
+      "ord": "kalibrera",
+      "facit": "ställa in mätinstrument",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ställa in ett instrument mot en känd referens så det mäter rätt",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "fininställa",
+          "finjustera",
+          "justera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Teknikern <font color=\"#3498db\">kalibrerade</font> vågen innan mätningen.",
+        "etymologi": "Till kaliber — ordet kom från uppmätning av eldvapens kaliber."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'anpassa/ställa in efter i förväg fastställda mått, särskilt om mätinstrument' -- matchar kortet väl. Synonymerna fininställa/finjustera bekräftas som jämförelseord i SO, och etymologin (till kaliber, ursprungligen eldvapen) stämmer."
+    },
+    {
+      "noteId": 1780080620068,
+      "ord": "agglomerera",
+      "facit": "hopgyttra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hopa samman delar till en enda massa eller kropp",
+        "register": "fackspråklig, neutral, teknik",
+        "synonymer": [
+          "hopa",
+          "koncentrera",
+          "gyttra ihop"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Partiklarna <font color=\"#3498db\">agglomererade</font> till större klumpar.",
+        "etymologi": "se ursprung till agglomerat"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'hopa samman delar till en massa eller kropp' -- matchar kortet exakt, med sociologi/teknik som specialanvändningar som förklarar det fackspråkliga registret. Synonymerna är rimliga (koncentrera har reell betydelseöverlappning: 'samla i stor mängd på begränsat område')."
+    },
+    {
+      "noteId": 1780080619795,
+      "ord": "snuthäck",
+      "facit": "polisbil",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Polisbil ; äv. polisstation",
+        "register": "slang, nedsättande, allmän",
+        "synonymer": [
+          "polisbil",
+          "polisstation"
+        ],
+        "synonym_groups": [
+          [
+            "polisbil"
+          ],
+          [
+            "polisstation"
+          ]
+        ],
+        "exempelmening": "En <font color=\"#3498db\">snuthäck</font> svängde runt hörnet med blåljusen på.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar båda betydelserna (polisbil; äv. polisstation) med registret vardagligt/nedsättande, vilket motsvarar kortets 'slang, nedsättande'. Ingen betydelse saknas."
+    },
+    {
+      "noteId": 1780080619938,
+      "ord": "sint",
+      "facit": "vred<br><br><i>en&nbsp;<u>sint</u>&nbsp;chef som reste sig ur stolen och skällde ut sina medarbetare.</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Arg, ilsken ; sinnad, i sammansättningar som lättsint och hårdsint",
+        "register": "dialektal, neutral",
+        "synonymer": [
+          "vred",
+          "ilsken",
+          "sinnad"
+        ],
+        "synonym_groups": [
+          [
+            "vred",
+            "ilsken"
+          ],
+          [
+            "sinnad"
+          ]
+        ],
+        "exempelmening": "Hon blev <font color=\"#3498db\">sint</font> över sakernas tillstånd.",
+        "etymologi": "fornsvenska -sinter; jfr svensk dialekt sint(er) 'hågad; förtretad'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar exakt två betydelser: 'vred, ilsken' (prov., dvs. dialektalt) och 'sinnad' (i sammansättningar) -- precis de två kortet har. Facit-signalen om en tredje betydelse besannas inte i vare sig SO eller SAOL; det är sannolikt bara facitets exempelmening som förvillar. Etymologin stämmer."
+    },
+    {
+      "noteId": 1780080620054,
+      "ord": "antibiotika",
+      "facit": "bakteriedödande medel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läkemedel som dödar eller hämmar bakterier",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "bakteriedödande medel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läkaren skrev ut <font color=\"#3498db\">antibiotika</font> mot infektionen.",
+        "etymologi": "modern bildning till anti- och grekiska bi´os 'liv'; jfr biologi"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslagsord är 'antibiotikum' men med formkommentaren 'vanligen plur.' -- pluralformen 'antibiotika' är den normala bruksformen, så kortets ordval är korrekt praxis (singularformen finns här, till skillnad från loafer/loafers-fallet ovan). Definition och etymologi (anti- + grekiska bios) stämmer exakt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 41,
+  "granskning_kostnad_usd": 1.2268862000000003,
+  "granskning_turkrav": 5
+}

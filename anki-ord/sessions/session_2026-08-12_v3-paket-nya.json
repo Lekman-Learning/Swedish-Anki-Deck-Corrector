@@ -1,0 +1,768 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080620043,
+      "ord": "brikett",
+      "facit": "bit för eldning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sammanpressat stycke av pulvriserat eller fibrigt material, ofta bränsle",
+        "register": "neutral, neutral, teknik",
+        "synonymer": [
+          "sammanpressat stycke"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De halvt uppbrända <font color=\"#3498db\">briketterna</font> pyrde.",
+        "etymologi": "av franska briquette, diminutiv av brique 'tegelsten'; samma ursprung som bricka"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619947,
+      "ord": "kardinal",
+      "facit": "hög katolsk präst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Innehavare av den näst högsta värdigheten i romersk-katolska kyrkan ; nordamerikansk fältsparv med skarpt färgad fjäderdräkt ; som utgör en huvudpunkt, som i kardinalfel",
+        "register": "neutral, neutral, religion",
+        "synonymer": [
+          "prelat",
+          "fältsparv",
+          "grundläggande",
+          "väsentlig"
+        ],
+        "synonym_groups": [
+          [
+            "prelat"
+          ],
+          [
+            "fältsparv"
+          ],
+          [
+            "grundläggande",
+            "väsentlig"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Kardinalerna</font> samlades i Rom för att välja ny påve.",
+        "etymologi": "av medeltidslatin cardina´lis, till car´do 'dörrtapp; huvudpunkt'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628022,
+      "ord": "framstöt",
+      "facit": "(begränsat) anfall; initiativ, krav",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Begränsat anfall ; initiativ eller krav",
+        "register": "formell, neutral, militär",
+        "synonymer": [
+          "anfall",
+          "framryckning",
+          "initiativ"
+        ],
+        "exempelmening": "Debattens <font color=\"#3498db\">framstöt</font> mot regeringen väckte stor uppmärksamhet.",
+        "etymologi": null,
+        "bild_html": "<br><br><img src=\"swedopt_d6b235c707eb33ae.jpg\" style=\"max-width:400px; border-radius:4px;\">",
+        "synonym_groups": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620256,
+      "ord": "receptarie",
+      "facit": "apoteksutbildad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Farmaceut med kandidatexamen som får expediera recept",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "farmaceut"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Receptarien</font> på apoteket gav henne råd om medicinen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619866,
+      "ord": "curare",
+      "facit": "sydamerikanskt pilgift<br><a href=\"https://upload.wikimedia.org/wikipedia/commons/f/f0/R._Bentley_%26_H._Trimen%2C_Medicinal_Plants_Wellcome_L0019166.jpg\"><img alt=\"File:R. Bentley &amp; H. Trimen, Medicinal Plants Wellcome L0019166.jpg\" src=\"413px-R._Bentley_&amp;_H._Trimen,_Medicinal_Plants_Wellcome_L0019166.jpg\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Muskelförlamande pilgift ur sydamerikanska växter ; muskelavslappnande medel som används vid kirurgi",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "pilgift",
+          "muskelförlamande medel"
+        ],
+        "synonym_groups": [
+          [
+            "pilgift"
+          ],
+          [
+            "muskelförlamande medel"
+          ]
+        ],
+        "exempelmening": "Jägarna doppade pilspetsarna i <font color=\"#3498db\">curare</font>.",
+        "etymologi": "av spanska curare; ur ett sydamerikanskt indianspråk"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619689,
+      "ord": "entente",
+      "facit": "pakt mellan stater",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vänskapligt samförstånd mellan stater",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "samförstånd",
+          "vänskapsförbindelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Frankrike och Storbritannien bildade en <font color=\"#3498db\">entente</font> före första världskriget.",
+        "etymologi": "Franska entendre 'förstå' — en entente är en förståelse, inte ett bindande förbund."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619567,
+      "ord": "aristokratisk",
+      "facit": "förnäm",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som utmärker aristokratin, med förnämt och lite överlägset sätt ; som har att göra med aristokrati",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "högdragen",
+          "adlig"
+        ],
+        "synonym_groups": [
+          [
+            "högdragen"
+          ],
+          [
+            "adlig"
+          ]
+        ],
+        "exempelmening": "Han hade ett <font color=\"#3498db\">aristokratiskt</font> sätt att tala.",
+        "etymologi": "Grekiska aristos 'bäst' + kratos 'makt' — de bästas välde."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620216,
+      "ord": "accession",
+      "facit": "ökning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tillskott eller nyförvärv till en befintlig samling, t.ex. ett bibliotek eller museum ; en stats anslutning till ett redan existerande fördrag",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "nyförvärv",
+          "tillskott",
+          "anslutning"
+        ],
+        "synonym_groups": [
+          [
+            "nyförvärv",
+            "tillskott"
+          ],
+          [
+            "anslutning"
+          ]
+        ],
+        "exempelmening": "Bibliotekets <font color=\"#3498db\">accession</font> under året uppgick till drygt tvåtusen band.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619816,
+      "ord": "depression",
+      "facit": "förtvivlan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svår och långvarig nedstämdhet ; djup ekonomisk kris med produktionsminskning och stor arbetslöshet ; landområde som ligger under havsytans nivå",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "nedstämdhet",
+          "lågkonjunktur",
+          "sänka"
+        ],
+        "synonym_groups": [
+          [
+            "nedstämdhet"
+          ],
+          [
+            "lågkonjunktur"
+          ],
+          [
+            "sänka"
+          ]
+        ],
+        "exempelmening": "Döda havets <font color=\"#3498db\">depression</font> ligger drygt 420 meter under havsytan och sjunker för varje år.",
+        "etymologi": "av franska dépression; till latin depri´mere 'trycka ned'; jfr deprimerad"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620074,
+      "ord": "infiltration",
+      "facit": "inträngning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Omärkligt eller gradvis inträngande av främmande element i en organisation eller organism ; vattnets nedträngande i marken",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "innästling",
+          "inträngning",
+          "nedträngning"
+        ],
+        "synonym_groups": [
+          [
+            "innästling",
+            "inträngning"
+          ],
+          [
+            "nedträngning"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Infiltration</font> av regnvatten i marken tar flera dygn.",
+        "etymologi": "till infiltrera"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620078,
+      "ord": "pläd",
+      "facit": "liten filt<br><a href=\"https://www.google.com/imgres?q=pl%C3%A4d&amp;imgurl=https%3A%2F%2F02.cdn37.se%2FKe5%2Fimages%2F2.189100%2Fnefelli-plad.jpeg&amp;imgrefurl=https%3A%2F%2Fwww.nolhagahem.se%2Fsv%2Farticles%2F2.300.22133%2Fnefelli-plad&amp;docid=VsplsAMAknOjCM&amp;tbnid=eTf5L5gF7qf3uM&amp;vet=12ahUKEwipyIuHvMmLAxW2HhAIHf2EACgQM3oECGkQAA..i&amp;w=748&amp;h=800&amp;hcb=2&amp;ved=2ahUKEwipyIuHvMmLAxW2HhAIHf2EACgQM3oECGkQAA\"><div><div><div><img alt=\"Nefelli Pläd - Nolhaga hem\" src=\"paste-df5fa4e4af6334a5ca30408ad75a7f7ca382887b.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mindre, lättare filt som används utan lakan, särskilt vid vila dagtid ; rutig yllesjal av skotskt slag",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "filt",
+          "resfilt",
+          "yllesjal"
+        ],
+        "synonym_groups": [
+          [
+            "filt",
+            "resfilt"
+          ],
+          [
+            "yllesjal"
+          ]
+        ],
+        "exempelmening": "Hon drog <font color=\"#3498db\">plädet</font> över benen i soffan.",
+        "etymologi": "av engelska plaid; identiskt med iriska ploid 'filt'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620255,
+      "ord": "övlig",
+      "facit": "enligt rådande tradition",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vanlig, bruklig",
+        "register": "ngt ålderdomlig, ironisk",
+        "synonymer": [
+          "vanlig",
+          "bruklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han kom med sina <font color=\"#3498db\">övliga</font> undanflykter om att tåget varit försenat.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620128,
+      "ord": "hedonism",
+      "facit": "med njutning som mål",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Filosofisk riktning som ser lusten och njutningen som livets högsta värde",
+        "register": "formell, neutral, filosofi",
+        "synonymer": [
+          "njutningslära",
+          "njutningsevangelium"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">hedonism</font> gjorde att han alltid valde det bekväma.",
+        "etymologi": "till grekiska hedoné 'njutning; nöje'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619724,
+      "ord": "stilisera",
+      "facit": "förenkla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förenkla en avbildning så att det typiska framhävs",
+        "register": "formell, neutral, konst",
+        "synonymer": [
+          "förenkla",
+          "schematisera",
+          "renodla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Logotypen visade en kraftigt <font color=\"#3498db\">stiliserad</font> örn.",
+        "etymologi": "Till stil, via italienskans stilizzare."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619868,
+      "ord": "semiologi",
+      "facit": "teckenlära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om tecken och deras betydelse — detsamma som semiotik",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [
+          "semiotik",
+          "teckenlära"
+        ],
+        "exempelmening": "Kursen i <font color=\"#3498db\">semiologi</font> handlade om hur reklam skapar mening.",
+        "etymologi": "till grekiska semei´on 'tecken' och log´os '(en) lära'",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619988,
+      "ord": "näver",
+      "facit": "björkbark<br><a href=\"https://commons.wikimedia.org/wiki/File:Langetatud_kase_koorimine._K%C3%B5rvemaa,_2017._aprill..jpg\"><img src=\"250px-langetatud_kase_koorimine._kõrvemaa _2017._aprill..webp\"></a><br><a href=\"https://commons.wikimedia.org/wiki/File:Birch_bark_national_museum_of_finland_in_helsinki.jpg\"><img src=\"250px-birch_bark_national_museum_of_finland_in_helsinki.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bark av björk, använd som material",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "björkbark"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Korgen var flätad av <font color=\"#3498db\">näver</font>.",
+        "etymologi": "fornsvenska näver; av ovisst ursprung"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619636,
+      "ord": "runda ord",
+      "facit": "(sex.) fula ord",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vardagliga, raka och burdusa ord för sexuella saker",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "fula ord",
+          "ord med sexuell anspelning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots sin akademiska bakgrund hade han en förvånande förkärlek för <font color=\"#3498db\">runda ord</font> i sina skämt.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619572,
+      "ord": "komma för",
+      "facit": "plötsligt få",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Plötsligt dyka upp i tankarna hos någon",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "uppenbara sig i tankarna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det <font color=\"#3498db\">kom för</font> honom att han hade sett mannen förut, men han kunde inte placera ansiktet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619524,
+      "ord": "depreciera",
+      "facit": "skriva ned",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Minska värdet av något, skriva ned en valutas värde ; i vidare bemärkelse: sjunka i värde",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "skriva ned",
+          "devalvera",
+          "sjunka i värde"
+        ],
+        "synonym_groups": [
+          [
+            "skriva ned",
+            "devalvera"
+          ],
+          [
+            "sjunka i värde"
+          ]
+        ],
+        "exempelmening": "Riksbanken lät kronan <font color=\"#3498db\">depreciera</font> för att stärka exporten.",
+        "etymologi": "Latin pretium 'värde' — samma rot som pris. de- = nedåt."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620126,
+      "ord": "autonom",
+      "facit": "självständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har hög grad av oberoende och styr sig själv ; om fordon: som kan framföras utan förare ; om person eller grupp: starkt samhällskritisk",
+        "register": "neutral, neutral, politik",
+        "synonymer": [
+          "självständig",
+          "självstyrande",
+          "självkörande",
+          "starkt kritisk inställning till samhället"
+        ],
+        "synonym_groups": [
+          [
+            "självständig",
+            "självstyrande"
+          ],
+          [
+            "självkörande"
+          ],
+          [
+            "starkt kritisk inställning till samhället"
+          ]
+        ],
+        "exempelmening": "En <font color=\"#3498db\">autonom</font> region med eget parlament.",
+        "etymologi": "av grekiska auton´omos 'självstyrande'; till auto- och nom´os 'sed; lag'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620182,
+      "ord": "affix",
+      "facit": "förstavelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Betydelsebärande orddel som fästs före, efter eller inuti ordets kärna",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ordet \"betalning\" har två <font color=\"#3498db\">affix</font>: \"be-\" och \"-ning\".",
+        "etymologi": "till latin affixus 'fästad', av affigere 'fästa vid' — samma rot som fix, prefix och suffix"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620246,
+      "ord": "manisk",
+      "facit": "besatt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvångsmässigt fixerad vid en enda idé ; sjukligt upprymd",
+        "register": "neutral, neutral, psykologi",
+        "synonymer": [
+          "besatt",
+          "fixerad",
+          "sjukligt upprymd",
+          "exalterad"
+        ],
+        "synonym_groups": [
+          [
+            "besatt",
+            "fixerad"
+          ],
+          [
+            "sjukligt upprymd",
+            "exalterad"
+          ]
+        ],
+        "exempelmening": "Han blev nästan <font color=\"#3498db\">manisk</font> i sitt samlande av frimärken.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619990,
+      "ord": "ocker",
+      "facit": "oskäligt höga priser",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att ta ut orimligt höga räntor eller priser av någon som är i knipa",
+        "register": "formell, negativ",
+        "synonymer": [
+          "procenteri",
+          "utsugning",
+          "utpressning"
+        ],
+        "exempelmening": "Att ta ut sådan ränta på ett nödlån är ren <font color=\"#3498db\">ocker</font>.",
+        "etymologi": "Besläktat med växa — ocker är pengar som växer på någon annans trångmål.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619960,
+      "ord": "konstruktivism",
+      "facit": "all verklighet är subjektiv<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fconstructivism-teaching&amp;psig=AOvVaw0ZBrcpERL1cyIsw5dIRIW1&amp;ust=1740793488984000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCOCYvJ2f5YsDFQAAAAAdAAAAABAE\"><img alt=\"23 Constructivism Teaching Royalty-Free Photos and Stock Images |  Shutterstock\" src=\"stock-vector-constructivism-learning-theory-educational-psychology-vector-illustration-inf.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Konstnärlig och arkitektonisk riktning som uppstod i Ryssland kring 1920 ; inom samhällsvetenskap: uppfattningen att verkligheten är socialt konstruerad",
+        "register": "fackspråklig, neutral, konst",
+        "synonymer": [
+          "riktning inom vetenskap och konst",
+          "verkligheten är socialt konstruerad"
+        ],
+        "synonym_groups": [
+          [
+            "riktning inom vetenskap och konst"
+          ],
+          [
+            "verkligheten är socialt konstruerad"
+          ]
+        ],
+        "exempelmening": "Tatlins torn är <font color=\"#3498db\">konstruktivismens</font> mest kända verk — stål och glas i stället för marmor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620138,
+      "ord": "förmäla",
+      "facit": "berätta; gifta bort",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Meddela eller omtala ; gifta bort någon ; om företeelser: förekomma tillsammans, förenas",
+        "register": "formell, neutral ; ngt ålderdomlig, neutral ; litterär, neutral",
+        "synonymer": [
+          "omtala",
+          "förtälja",
+          "gifta bort",
+          "förena"
+        ],
+        "synonym_groups": [
+          [
+            "omtala",
+            "förtälja"
+          ],
+          [
+            "gifta bort"
+          ],
+          [
+            "förena"
+          ]
+        ],
+        "exempelmening": "Vad som sedan hände <font color=\"#3498db\">förmäler</font> inte historien.",
+        "etymologi": "av lågtyska vormälen 'lova bort' — jfr gemål och giftermål"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619526,
+      "ord": "loafer",
+      "facit": "sko utan snören<br><a href=\"https://www.google.com/imgres?q=loafer&amp;imgurl=https%3A%2F%2Fcdn.chic.ae%2Fuploads%2FMen-Loafer-Shoes-When-Why-To-Wear-Loafers-Expert-Guide.jpg&amp;imgrefurl=https%3A%2F%2Fwww.chic.ae%2Fmen-loafer-shoes-advantages%2F&amp;docid=3HE_7Bzf5PYatM&amp;tbnid=U8L8hYbHgAaohM&amp;vet=12ahUKEwjs2Ymch4WMAxUtQvEDHb9pCpMQM3oECFUQAA..i&amp;w=590&amp;h=390&amp;hcb=2&amp;ved=2ahUKEwjs2Ymch4WMAxUtQvEDHb9pCpMQM3oECFUQAA\"><div><div><div><img alt=\"Men Loafer Shoes When &amp; Why To Wear ...\" src=\"paste-9101a0394efd4e4e30ac947d79c63c1720d612df.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lätt sko utan snörning",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "lågsko utan snörning",
+          "promenadsko"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade ett par bruna <font color=\"#3498db\">loafers</font> utan strumpor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620020,
+      "ord": "oratorium",
+      "facit": "musikaliskt verk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stort dramatiskt musikverk för kör, solister och orkester, oftast över religiöst ämne",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "sakralt musikverk",
+          "körverk för solister"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Haydns <font color=\"#3498db\">oratorium</font> Skapelsen framfördes av kör, solister och orkester i domkyrkan.",
+        "etymologi": "av medeltidslatin orato´rium 'bönsal', till latin ora´re 'bedja'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619778,
+      "ord": "härk",
+      "facit": "renoxe<br><a href=\"https://www.google.com/imgres?q=h%C3%A4rk&amp;imgurl=https%3A%2F%2Fems.dimu.org%2Fimage%2F019EBskTZ3H8K%3Fdimension%3D1200x1200&amp;imgrefurl=https%3A%2F%2Fdigitaltmuseum.se%2F0210111528491%2Fen-gammel-hark&amp;docid=1Ti2qntPDoUXWM&amp;tbnid=xhNlb_hDHBVGKM&amp;vet=12ahUKEwiHyKyS3_eLAxWOJBAIHWsmB3AQM3oECHAQAA..i&amp;w=1200&amp;h=800&amp;hcb=2&amp;ved=2ahUKEwiHyKyS3_eLAxWOJBAIHWsmB3AQM3oECHAQAA\"><div><div><div><img alt=\"museum / DigitaltMuseum\" src=\"paste-bbf0ea50018560e42e16a793765ff18e5f2eef96.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kastrerad rentjur",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [
+          "renoxe",
+          "kastrerad rentjur"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Härken</font> spändes för ackjan.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619722,
+      "ord": "kalibrera",
+      "facit": "ställa in mätinstrument",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ställa in ett instrument mot en känd referens så det mäter rätt",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "fininställa",
+          "finjustera",
+          "justera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Teknikern <font color=\"#3498db\">kalibrerade</font> vågen innan mätningen.",
+        "etymologi": "Till kaliber — ordet kom från uppmätning av eldvapens kaliber."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620068,
+      "ord": "agglomerera",
+      "facit": "hopgyttra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hopa samman delar till en enda massa eller kropp",
+        "register": "fackspråklig, neutral, teknik",
+        "synonymer": [
+          "hopa",
+          "koncentrera",
+          "gyttra ihop"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Partiklarna <font color=\"#3498db\">agglomererade</font> till större klumpar.",
+        "etymologi": "se ursprung till agglomerat"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619795,
+      "ord": "snuthäck",
+      "facit": "polisbil",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Polisbil ; äv. polisstation",
+        "register": "slang, nedsättande, allmän",
+        "synonymer": [
+          "polisbil",
+          "polisstation"
+        ],
+        "synonym_groups": [
+          [
+            "polisbil"
+          ],
+          [
+            "polisstation"
+          ]
+        ],
+        "exempelmening": "En <font color=\"#3498db\">snuthäck</font> svängde runt hörnet med blåljusen på.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619938,
+      "ord": "sint",
+      "facit": "vred<br><br><i>en&nbsp;<u>sint</u>&nbsp;chef som reste sig ur stolen och skällde ut sina medarbetare.</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Arg, ilsken ; sinnad, i sammansättningar som lättsint och hårdsint",
+        "register": "dialektal, neutral",
+        "synonymer": [
+          "vred",
+          "ilsken",
+          "sinnad"
+        ],
+        "synonym_groups": [
+          [
+            "vred",
+            "ilsken"
+          ],
+          [
+            "sinnad"
+          ]
+        ],
+        "exempelmening": "Hon blev <font color=\"#3498db\">sint</font> över sakernas tillstånd.",
+        "etymologi": "fornsvenska -sinter; jfr svensk dialekt sint(er) 'hågad; förtretad'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620054,
+      "ord": "antibiotika",
+      "facit": "bakteriedödande medel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läkemedel som dödar eller hämmar bakterier",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "bakteriedödande medel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läkaren skrev ut <font color=\"#3498db\">antibiotika</font> mot infektionen.",
+        "etymologi": "modern bildning till anti- och grekiska bi´os 'liv'; jfr biologi"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}
