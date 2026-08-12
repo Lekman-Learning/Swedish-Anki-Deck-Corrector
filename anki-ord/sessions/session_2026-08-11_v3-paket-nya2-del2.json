@@ -1,0 +1,511 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080620218,
+      "ord": "ghostwriter",
+      "facit": "anonym författare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som skriver texter åt någon annan utan kreditering",
+        "register": "formell, neutral, litteraturvetenskap",
+        "synonymer": [
+          "spökskrivare",
+          "författare för annans räkning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Boken var i själva verket skriven av en <font color=\"#3498db\">ghostwriter</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslag för ghostwriter hänvisar bara vidare till 'spökskrivare' utan egen utskriven definition (ofullständig källa), men kortets betydelse ('skriver åt annan utan kreditering') stämmer med detta och med facit 'anonym författare'. Enda betydelsen, korrekt formulerad; exempelmeningen fungerar och ordet är highlightat."
+    },
+    {
+      "noteId": 1780080620226,
+      "ord": "bard",
+      "facit": "sångare; diktare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Endera av de fransade hornskivor som ersätter tänder hos bardvalar ; keltisk skald och sångare som framför verser till musik",
+        "register": "litterär, neutral, biologi",
+        "synonymer": [
+          "hornskiva",
+          "valfiskben",
+          "skald",
+          "sångare",
+          "diktare"
+        ],
+        "synonym_groups": [
+          [
+            "hornskiva",
+            "valfiskben"
+          ],
+          [
+            "skald",
+            "sångare",
+            "diktare"
+          ]
+        ],
+        "exempelmening": "Valen silar plankton genom sina <font color=\"#3498db\">barder</font>, medan medeltidens <font color=\"#3498db\">bard</font> sjöng hjältesånger vid elden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser i samma ordning som kortet: hornskiva hos bardval, samt keltisk skald/sångare. Synonymgrupperna är rätt kopplade till respektive betydelse, och exempelmeningen illustrerar båda sakligt korrekt (valen silar plankton genom barder; medeltida barder sjöng vid elden)."
+    },
+    {
+      "noteId": 1780080620241,
+      "ord": "ajournera",
+      "facit": "skjuta upp",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tillfälligt skjuta upp ett möte eller en förhandling",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "uppskjuta",
+          "bordlägga",
+          "skjuta upp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ordföranden <font color=\"#3498db\">ajournerade</font> mötet till nästa vecka.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL:s enda betydelse ('avbryta för att senare återuppta sammankomst el. dyl.') matchar kortets huvudbetydelse. Synonymerna är rimliga och exempelmeningen korrekt."
+    },
+    {
+      "noteId": 1780080620016,
+      "ord": "kvalifikation",
+      "facit": "lämplig kompetens",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Merit eller förmåga som gör någon behörig ; det att kvalificera sig till ett fortsatt skede, t.ex. i en tävling ; juridiskt förfarande där en tvistefråga förs till en viss rättsregel",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "behörighet",
+          "kompetens",
+          "merit",
+          "kvalificering",
+          "tolkningsförfarande"
+        ],
+        "synonym_groups": [
+          [
+            "behörighet",
+            "kompetens",
+            "merit"
+          ],
+          [
+            "kvalificering"
+          ],
+          [
+            "tolkningsförfarande"
+          ]
+        ],
+        "exempelmening": "Båda de sökande hade tillräckliga <font color=\"#3498db\">kvalifikationer</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger kompetens-betydelsen och den juridiska tolkningsbetydelsen, SAOL ger dessutom 'kvalificering' som egen betydelse - alla tre finns med i kortet, rätt separerade med ';' och rätt grupperade med sina synonymer. Kortet leder med den vanligaste (merit/kompetens), i linje med facit."
+    },
+    {
+      "noteId": 1780080619586,
+      "ord": "amsaga",
+      "facit": "osannolik historia",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Historia som framställs som autentisk men avslöjas som påhittad ; allmännare: osannolik historia",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "skröna",
+          "rövarhistoria",
+          "påhitt",
+          "osannolik historia"
+        ],
+        "synonym_groups": [
+          [
+            "skröna",
+            "rövarhistoria",
+            "påhitt"
+          ],
+          [
+            "osannolik historia"
+          ]
+        ],
+        "exempelmening": "Trots vittnets detaljerade beskrivning avfärdade polisen alltihop som en ren <font color=\"#3498db\">amsaga</font>.",
+        "etymologi": "Ursprungligen ammsaga — en historia man berättar för små barn."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvud- och underbetydelse ('historia som framställs som autentisk men avslöjas som påhittad' resp. mer allmänt 'osannolik historia') återges korrekt och rätt separerade i kortet. Etymologin ('ammsaga', till 'amma') stämmer med SO."
+    },
+    {
+      "noteId": 1780080620252,
+      "ord": "verserad",
+      "facit": "artig, belevad, världsvan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Världsvan och artig",
+        "register": "formell, positiv, allmän",
+        "synonymer": [
+          "världsvan",
+          "polerad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var mycket <font color=\"#3498db\">verserad</font> i sällskapslivet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en enda betydelse, 'mycket artig och världsvan/belevad', vilket matchar kortets 'Världsvan och artig' och facit exakt. Exempelmeningen fungerar."
+    },
+    {
+      "noteId": 1780080619964,
+      "ord": "bläs",
+      "facit": "ljus pannfläck på häst<br><a href=\"https://commons.wikimedia.org/wiki/File:Horsemarkings_blazes.png\"><img src=\"250px-horsemarkings_blazes.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ljus, långsträckt strimma på framsidan av huvudet, särskilt på häst ; äv. om hästen som har en sådan",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [
+          "ljus fläck i pannan",
+          "bläsig häst"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En fux med vit <font color=\"#3498db\">bläs</font>.",
+        "etymologi": "germanskt ord av osäkert ursprung; besläktat med blossa"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s definition slår uttryckligen ihop märket och djuret som bär det ('ljus...fläck på pannan...; häst med bläs'), precis som kortets '; äv. om hästen som har en sådan'. Etymologin (germanskt, osäkert ursprung, jfr blossa) stämmer med SO."
+    },
+    {
+      "noteId": 1780080619808,
+      "ord": "kroasera",
+      "facit": "korsa raser",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Korsa raser eller sorter för att få fram en ny",
+        "register": "fackspråklig, neutral, biologi",
+        "synonymer": [
+          "korsa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">kroaserade</font> två rosensorter för att få en ny färg.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Ordet gav inga träffar i vare sig SO eller SAOL (0 träffar, inga relevanta stavningsförslag). Kompletterande sökning bekräftar dock att 'kroasera' är en ålderdomlig form av 'korsa', använd om att korsa raser/sorter för att få fram nya - vilket matchar kortets definition och facit. Godkänns men med reservation för att huvudkällan inte gav träff."
+    },
+    {
+      "noteId": 1780080619996,
+      "ord": "mystifiera",
+      "facit": "förbrylla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skapa oklarhet och förvirring hos någon ; föra någon bakom ljuset ; göra något hemlighetsfullt",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "förbrylla",
+          "förvirra",
+          "föra bakom ljuset",
+          "göra mystisk"
+        ],
+        "synonym_groups": [
+          [
+            "förbrylla",
+            "förvirra"
+          ],
+          [
+            "föra bakom ljuset"
+          ],
+          [
+            "göra mystisk"
+          ]
+        ],
+        "exempelmening": "Ett uttalande som snarare <font color=\"#3498db\">mystifierade</font> än klargjorde situationen.",
+        "etymologi": "av franska mystifier"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger EN betydelse formulerad 'förbrylla, föra ngn bakom ljuset; göra mystisk' - samma tre nyanser som kortet listar, fast kortet skiljer dem med ';' som om det vore skilda betydelser trots att SAOL samlar dem under en enda numrering. Ingen nyans är sakligt fel, och exempelmeningen (nästan ordagrant SO:s egen) illustrerar huvudnyansen korrekt, så det räcker inte till underkänt."
+    },
+    {
+      "noteId": 1780080619938,
+      "ord": "sint",
+      "facit": "vred<br><br><i>en&nbsp;<u>sint</u>&nbsp;chef som reste sig ur stolen och skällde ut sina medarbetare.</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Arg, ilsken",
+        "register": "dialektal, neutral",
+        "synonymer": [
+          "arg",
+          "ilsken",
+          "förargad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon blev <font color=\"#3498db\">sint</font> över sakernas tillstånd.",
+        "etymologi": "fornsvenska -sinter; jfr svensk dialekt sint(er) 'hågad; förtretad'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL listar, förutom 'vred/ilsken' (markerat mindre brukligt/provinsiellt - matchar kortets 'dialektal'), även betydelsen 'sinnad', som används i sammansättningar som lättsint, hårdsint, fastsint. Kortet nämner bara ilsken-betydelsen. Facit-signalen (facit antyder fler betydelser än kortets 1) bekräftas alltså av ordboken - en hel betydelse ('sinnad', i sammansättningar) saknas och borde läggas till."
+    },
+    {
+      "noteId": 1780080620127,
+      "ord": "brasserie",
+      "facit": "restaurang",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Enklare restaurang av fransk typ, ofta med ölservering",
+        "register": "neutral, neutral, matlagning",
+        "synonymer": [
+          "brasseri",
+          "ölstuga",
+          "ölkafé",
+          "matställe"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De åt lunch på en liten <font color=\"#3498db\">brasserie</font> i Paris.",
+        "etymologi": "av franska brasserie 'bryggeri, restaurang', till brasser 'brygga' — därav ölen"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL har bara uppslagsordet i försvenskad form 'brasseri' ('enklare restaurang av fransk typ, ofta med ölservering'); den franska stavningen 'brasserie' gav inga träffar. Betydelsen i kortet stämmer dock exakt med brasseri-artikeln, och den franska stavningen är etablerad i svenskt bruk om franska restauranger, så det bedöms inte som ett sakfel."
+    },
+    {
+      "noteId": 1780080619960,
+      "ord": "konstruktivism",
+      "facit": "all verklighet är subjektiv<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fconstructivism-teaching&amp;psig=AOvVaw0ZBrcpERL1cyIsw5dIRIW1&amp;ust=1740793488984000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCOCYvJ2f5YsDFQAAAAAdAAAAABAE\"><img alt=\"23 Constructivism Teaching Royalty-Free Photos and Stock Images |  Shutterstock\" src=\"stock-vector-constructivism-learning-theory-educational-psychology-vector-illustration-inf.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Konstnärlig och arkitektonisk riktning som uppstod i Ryssland kring 1920 ; inom samhällsvetenskap: uppfattningen att verkligheten är socialt konstruerad",
+        "register": "fackspråklig, neutral, filosofi",
+        "synonymer": [
+          "riktning inom vetenskap och konst",
+          "verkligheten är socialt konstruerad"
+        ],
+        "synonym_groups": [
+          [
+            "riktning inom vetenskap och konst"
+          ],
+          [
+            "verkligheten är socialt konstruerad"
+          ]
+        ],
+        "exempelmening": "Den bärande tanken i social <font color=\"#3498db\">konstruktivism</font> är att vi alla är sociala varelser.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger två betydelser (konstriktning ca 1920 i Ryssland; samt, under 'social konstruktivism', uppfattningen att verkligheten är socialt konstruerad), vilket kortet i grunden återger. Men exempelmeningen illustrerar bara den andra, icke-ledande betydelsen - inte konstriktningen kortet leder med - och den förenklar dessutom den betydelsen felaktigt: 'vi är alla sociala varelser' är inte samma påstående som 'verkligheten är socialt konstruerad'. Även registrets ämnesfält ('filosofi') speglar bara den andra betydelsen. Exempelmeningen bör bytas ut mot en som illustrerar konstriktningen, och/eller en som korrekt återger den samhällsvetenskapliga tesen."
+    },
+    {
+      "noteId": 1780080620229,
+      "ord": "tyckmycken",
+      "facit": "petig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alltför nogräknad och krävande om småsaker ; som lätt blir stött",
+        "register": "vardaglig, negativ, allmän",
+        "synonymer": [
+          "nogräknad",
+          "granntyckt",
+          "grätten",
+          "som lätt blir stött"
+        ],
+        "synonym_groups": [
+          [
+            "nogräknad",
+            "granntyckt",
+            "grätten"
+          ],
+          [
+            "som lätt blir stött"
+          ]
+        ],
+        "exempelmening": "Han var så <font color=\"#3498db\">tyckmycken</font> att ingen restaurang någonsin dög.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvud- och 'ibland äv.'-betydelse (nogräknad/krävande; lätt blir stött) matchar kortets två synonymgrupper. Exempelmeningen illustrerar förstabetydelsen korrekt."
+    },
+    {
+      "noteId": 1780080620245,
+      "ord": "ad libitum",
+      "facit": "efter behag",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Efter eget behag, fritt",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "efter behag"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kryddorna fick tillsättas <font color=\"#3498db\">ad libitum</font> efter smak.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Frasen gav inga träffar i SO/SAOL (troligen eftersom den är latinsk och inte ett eget svenskt uppslagsord). Extern verifiering bekräftar entydigt betydelsen 'efter behag/eget gottfinnande', vilket matchar både kort och facit. Godkänns med reservation för att huvudkällan inte gav träff."
+    },
+    {
+      "noteId": 1780080620223,
+      "ord": "fortuna",
+      "facit": "öde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Spel där en metallkula stöts i hål med olika poäng ; lycka eller öde, i litterärt bruk",
+        "register": "neutral, neutral, sport ; litterär, neutral",
+        "synonymer": [
+          "spel med kulor",
+          "lycka",
+          "tur"
+        ],
+        "synonym_groups": [
+          [
+            "spel med kulor"
+          ],
+          [
+            "lycka",
+            "tur"
+          ]
+        ],
+        "exempelmening": "På tivolit stod ett gammalt <font color=\"#3498db\">fortuna</font> där kulan skulle ner i mitthålet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL har bara EN betydelse för 'fortuna': spelet med en metallkula (belagt 1850, jfr flipperspel) - matchar kortets första betydelse exakt. Kortets andra betydelse ('lycka/öde, litterärt') kunde inte beläggas i SO/SAOL, men är etablerad litterär/personifierande användning (jfr gudinnan Fortuna, som även nämns i etymologin) och stämmer med facit. Godkänns med reservation för att lookupen inte gav fullt stöd för betydelse två."
+    },
+    {
+      "noteId": 1780080620259,
+      "ord": "kambrosilur",
+      "facit": "lång geologisk period",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Geologisk period som omfattar kambrium, ordovicium och silur",
+        "register": "formell, neutral, geologi",
+        "synonymer": [
+          "kambrium",
+          "ordovicium och silur"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fossilen hittades i berggrund från <font color=\"#3498db\">kambrosilur</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL:s enda betydelse (geologisk period, samlingsnamn för kambrium, ordovicium och silur) matchar kortet nästan ordagrant."
+    },
+    {
+      "noteId": 1780080620146,
+      "ord": "luminiscens",
+      "facit": "ljusutstrålning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ljusstrålning från ett ämne som inte är upphettat",
+        "register": "fackspråklig, neutral, fysik",
+        "synonymer": [
+          "kallt ljus"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Maneterna lyste med en svag <font color=\"#3498db\">luminiscens</font> i det mörka vattnet.",
+        "etymologi": "till latin lumen 'ljus'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL:s definition (ljus(strålning) från ämne som inte är upphettat) matchar kortet. Exempelmeningen (manetlysande i mörkt vatten) är sakligt korrekt och illustrerar bioluminiscens väl."
+    },
+    {
+      "noteId": 1780080619522,
+      "ord": "putslustig",
+      "facit": "tokrolig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lustig på ett lite löjligt, narraktigt sätt",
+        "register": "vardaglig, skämtsam, allmän",
+        "synonymer": [
+          "smårolig",
+          "skojig",
+          "skämtsam",
+          "lustig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">putslustige</font> morbrorn drog samma gamla vitsar vid varje julbord.",
+        "etymologi": "Till puts i betydelsen 'spratt' — som i 'spela någon ett puts'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger 'smårolig (t.ex. genom lustiga infall)/skojig'. Kortets 'lustig på ett lite löjligt, narraktigt sätt' ligger något mer åt det burleska hållet än ordboken, men är inte sakligt fel eller missvisande nog för underkänt."
+    },
+    {
+      "noteId": 1780080620261,
+      "ord": "minnesbeta",
+      "facit": "läxa för framtiden",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En smärtsam erfarenhet eller motgång man länge minns och lär sig av",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "läxa",
+          "näsbränna",
+          "dyrköpt erfarenhet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Förlusten i förra valet blev en <font color=\"#3498db\">minnesbeta</font> som tvingade partiet att helt tänka om sin strategi.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL:s 'smärtsam erfarenhet' / 'läxa för framtiden' matchar kortets definition och facit väl. Exempelmeningen (valförlust som lärdom) illustrerar betydelsen korrekt."
+    },
+    {
+      "noteId": 1780080619526,
+      "ord": "loafer",
+      "facit": "sko utan snören<br><a href=\"https://www.google.com/imgres?q=loafer&amp;imgurl=https%3A%2F%2Fcdn.chic.ae%2Fuploads%2FMen-Loafer-Shoes-When-Why-To-Wear-Loafers-Expert-Guide.jpg&amp;imgrefurl=https%3A%2F%2Fwww.chic.ae%2Fmen-loafer-shoes-advantages%2F&amp;docid=3HE_7Bzf5PYatM&amp;tbnid=U8L8hYbHgAaohM&amp;vet=12ahUKEwjs2Ymch4WMAxUtQvEDHb9pCpMQM3oECFUQAA..i&amp;w=590&amp;h=390&amp;hcb=2&amp;ved=2ahUKEwjs2Ymch4WMAxUtQvEDHb9pCpMQM3oECFUQAA\"><div><div><div><img alt=\"Men Loafer Shoes When &amp; Why To Wear ...\" src=\"paste-9101a0394efd4e4e30ac947d79c63c1720d612df.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lätt sko utan snörning",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "lågsko utan snörning",
+          "promenadsko"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade ett par bruna <font color=\"#3498db\">loafers</font> utan strumpor.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Varken SO eller SAOL har uppslagsordet 'loafer' i singularform - enbart pluralformen 'loafers', som fungerar oböjd utan egen singularform i svenskan. Kortets egen exempelmening bekräftar detta genom att använda och highlighta 'loafers', inte kortets uppslagsord 'loafer'. Ordet på kortet borde alltså vara 'loafers'."
+    },
+    {
+      "noteId": 1780080619524,
+      "ord": "depreciera",
+      "facit": "skriva ned",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjunka i värde — motsatsen till appreciera",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "sjunka i värde",
+          "skriva ned",
+          "devalvera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den ekonomiska krisen fick den svenska kronan att <font color=\"#3498db\">depreciera</font> kraftigt mot euron.",
+        "etymologi": "Latin pretium 'värde' — samma rot som pris. de- = nedåt."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL anger verbets grundbetydelse som transitiv: 'minska värdet av / skriva ned (valuta)' (någon/något deprecierar något, ev. med ett tal). Kortets huvudbetydelse 'Sjunka i värde' återger bara den bredare, sekundära intransitiva användningen (SO: 'används ibland äv. i vidare bem.') och missar den egentliga huvudbetydelsen, som även facit ('skriva ned') pekar mot. Huvudbetydelsen bör ledas med det transitiva 'minska värdet av/skriva ned (valutans värde)'."
+    },
+    {
+      "noteId": 1780080619511,
+      "ord": "daktyloskopi",
+      "facit": "fingeravtryckslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Metod att identifiera personer med hjälp av fingeravtryck",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "identifiering med fingeravtryck"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Polisen använde <font color=\"#3498db\">daktyloskopi</font> för att identifiera den misstänkte genom hans fingeravtryck.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('metod att identifiera personer med hjälp av fingeravtryck') matchar kortet och facit exakt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 70,
+  "granskning_kostnad_usd": 2.1416906999999994,
+  "granskning_turkrav": 5
+}

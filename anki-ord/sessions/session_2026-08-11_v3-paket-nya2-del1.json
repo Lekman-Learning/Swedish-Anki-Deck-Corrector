@@ -1,0 +1,448 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080620159,
+      "ord": "sjåpig",
+      "facit": "rädd, tillgjort blyg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överdrivet rädd eller blyg, ofta på ett tillgjort sätt",
+        "register": "vardaglig, negativ, allmän",
+        "synonymer": [
+          "pjoskig",
+          "pryd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var alltid <font color=\"#3498db\">sjåpig</font> när det gällde att gå till doktorn.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet just som 'tillgjort blyg el. rädd; blödig, pryd' - kortets betydelse och båda synonymerna (pjoskig, pryd) stämmer alltså med ordboken. Register (vardaglig, negativ) matchar SO:s 'vard.'-markering. Exempelmeningen är korrekt och ordet är highlightat."
+    },
+    {
+      "noteId": 1780080620240,
+      "ord": "divergens",
+      "facit": "skiljaktighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det att gå isär eller peka åt olika håll ; skiljaktighet mellan uppfattningar",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "isärgående",
+          "skiljaktighet"
+        ],
+        "synonym_groups": [
+          [
+            "isärgående"
+          ],
+          [
+            "skiljaktighet"
+          ]
+        ],
+        "exempelmening": "Det fanns en tydlig <font color=\"#3498db\">divergens</font> mellan deras åsikter.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: 1) isärgående/peka åt olika håll, 2) skiljaktighet (särsk. i åsikter). Kortet täcker båda, korrekt separerade med ';', och synonym_groups delar upp 'isärgående' och 'skiljaktighet' på rätt betydelse. Exempelmeningen illustrerar betydelse 2 korrekt."
+    },
+    {
+      "noteId": 1780080620256,
+      "ord": "receptarie",
+      "facit": "apoteksutbildad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Farmaceut med kandidatexamen som får expediera recept",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "apotekare med kandidatexamen"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Receptarien</font> på apoteket gav henne råd om medicinen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Sakfel i synonymen: 'apotekare med kandidatexamen' blandar ihop två skilda, legalt reglerade yrkestitlar. Apotekare avser den som avlagt apotekarexamen (5-årig masterexamen), medan receptarie är en egen kortare yrkesexamen (receptarieexamen, kandidatnivå) - man kan inte vara 'apotekare med kandidatexamen', det är en motsägelse. Synonymen bör tas bort eller ersättas med t.ex. 'farmaceut'. Huvudbetydelsen i övrigt stämmer väl med SO/facit."
+    },
+    {
+      "noteId": 1780080619795,
+      "ord": "snuthäck",
+      "facit": "polisbil",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Polisbil ; äv. polisstation",
+        "register": "slang, nedsättande",
+        "synonymer": [
+          "polispiket",
+          "polisstation"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">snuthäck</font> svängde runt hörnet med blåljusen på.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen (polisbil ; äv. polisstation) stämmer fint mot SO, som ger exakt dessa två slangbetydelser. Men synonymen 'polispiket' är fel: enligt SO betyder piket 'polis- eller truppstyrka i beredskap', dvs. en insatsstyrka av personer - inte ett fordon. Det är alltså inte utbytbart mot 'snuthäck' (polisbil). Bör bytas mot t.ex. 'kravallbuss' eller tas bort."
+    },
+    {
+      "noteId": 1780080620227,
+      "ord": "dirigent",
+      "facit": "orkesterledare<br><br>(<i>förväxla ej med direktör</i>)<br><a href=\"https://commons.wikimedia.org/wiki/File:Charles_Lamoureux.png\"><img src=\"250px-charles_lamoureux.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som leder en orkester eller kör",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "orkesterledare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Dirigenten</font> höjde taktpinnen och orkestern tystnade.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s definition (person som leder kör/orkester med hand- och armrörelser) och facit 'orkesterledare'. En betydelse, korrekt synonym, exempelmening korrekt och highlightad, register (formell, musik) stämmer."
+    },
+    {
+      "noteId": 1780080620243,
+      "ord": "oansenlig",
+      "facit": "liten och obetydlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Obetydlig till utseende eller storlek",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [
+          "obetydlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Huset såg <font color=\"#3498db\">oansenligt</font> ut utifrån men var enormt inuti.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('som man knappast lägger märke till p.g.a. litenhet, avsaknad av framträdande egenskaper') och facit. En betydelse, rimlig synonym (obetydlig), exempel korrekt."
+    },
+    {
+      "noteId": 1780080619533,
+      "ord": "kontenta",
+      "facit": "huvudinnehåll",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det viktigaste i korthet ; det som något till slut ledde till",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "kärna",
+          "sammanfattning",
+          "slutkläm",
+          "essens"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter tre timmars möte var <font color=\"#3498db\">kontentan</font> att vi behövde byta strategi helt och hållet.",
+        "etymologi": "Latin contentus, 'sammanfattad' — det som ryms i något."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två nyanser: huvudinnehåll i korthet, och slutresultat ('kontentan av aktionen blev...'). Kortet fångar båda via ';'. Etymologin (latin contentus, 'det som ryms i något') stämmer med SO:s uppgift om ordets ursprung. Exempelmeningen illustrerar slutresultat-betydelsen korrekt."
+    },
+    {
+      "noteId": 1780080619893,
+      "ord": "eau-de-vie",
+      "facit": "konjak<br><a href=\"https://en.wikipedia.org/wiki/File:Eaudeviebottles.jpg\"><img src=\"300px-eaudeviebottles.webp\"></a><a href=\"https://en.wikipedia.org/wiki/File:Nosing_glass_with_Eau_de_Vie.jpg\"><img src=\"220px-nosing_glass_with_eau_de_vie.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Destillat på druvor eller frukt",
+        "register": "neutral, neutral, matlagning",
+        "synonymer": [
+          "druv- eller fruktdestillat",
+          "konjaksliknande spritdryck"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De avslutade middagen med en liten <font color=\"#3498db\">eau-de-vie</font>.",
+        "etymologi": "av franska eau-de-vie, eg. 'livsvatten'; jfr akvavit"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kortets huvudbetydelse ('destillat på druvor eller frukt') är mer exakt än det förenklade facit 'konjak' och stämmer väl med SO ('destillerat druv- eller fruktvin ... destillat av frukter, bär el. blommor'). Etymologin (franska 'livsvatten', jfr akvavit) matchar SO exakt. Synonymerna är rimliga."
+    },
+    {
+      "noteId": 1780080620020,
+      "ord": "oratorium",
+      "facit": "musikaliskt verk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stort dramatiskt musikverk för kör, solister och orkester, oftast över religiöst ämne ; äv. bönesal eller bönkapell",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "musikverk för kör och solister",
+          "sal för bön"
+        ],
+        "synonym_groups": [
+          [
+            "musikverk för kör och solister"
+          ],
+          [
+            "sal för bön"
+          ]
+        ],
+        "exempelmening": "Haydns <font color=\"#3498db\">oratorium</font> Skapelsen.",
+        "etymologi": "av medeltidslatin orato´rium 'bönsal', till latin ora´re 'bedja'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet lägger till en påhittad andra betydelse: 'äv. bönesal eller bönkapell'. Både SO och SAOL ger bara EN nutida betydelse för oratorium - det dramatiska musikverket. 'Bönesal' är bara ordets medeltidslatinska ETYMOLOGI (till orare 'bedja'), inte en levande betydelse av svenska ordet idag. Synonymgruppen 'sal för bön' bör tas bort helt; kortet ska bara ha musikverk-betydelsen."
+    },
+    {
+      "noteId": 1780080619988,
+      "ord": "näver",
+      "facit": "björkbark<br><a href=\"https://commons.wikimedia.org/wiki/File:Langetatud_kase_koorimine._K%C3%B5rvemaa,_2017._aprill..jpg\"><img src=\"250px-langetatud_kase_koorimine._kõrvemaa _2017._aprill..webp\"></a><br><a href=\"https://commons.wikimedia.org/wiki/File:Birch_bark_national_museum_of_finland_in_helsinki.jpg\"><img src=\"250px-birch_bark_national_museum_of_finland_in_helsinki.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bark av björk, använd som material",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "björkbark",
+          "björknäver"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Korgen var flätad av <font color=\"#3498db\">näver</font>.",
+        "etymologi": "fornsvenska näver; av ovisst ursprung"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen stämmer med SO ('bark av björk'). Men synonymen 'björknäver' är cirkulär - den innehåller uppslagsordet 'näver' självt, vilket bryter mot regeln att synonymer inte får innehålla ordet/böjning av det. Bör tas bort; 'björkbark' räcker som synonym."
+    },
+    {
+      "noteId": 1780080620221,
+      "ord": "åsamka",
+      "facit": "vålla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Orsaka, vålla",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "vålla",
+          "förorsaka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stormen <font color=\"#3498db\">åsamkade</font> stora skador på huset.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('belasta med problem e.d.', cohyponym 'vålla') och facit. Synonymerna vålla/förorsaka är korrekta och utbytbara. Exempelmeningen är sakligt och grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080620182,
+      "ord": "affix",
+      "facit": "förstavelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Betydelsebärande orddel som fästs före, efter eller inuti ordets kärna",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [
+          "förstavelse",
+          "ändelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ordet \"betalning\" har två <font color=\"#3498db\">affix</font>: \"be-\" och \"-ning\".",
+        "etymologi": "till latin affixus 'fästad', av affigere 'fästa vid' — samma rot som fix, prefix och suffix"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO listar uttryckligen infix/prefix/suffix som 'JFR:hyponym' till affix - dvs. underordnade specialfall, INTE synonymer. Kortets synonymer 'förstavelse' (=prefix) och 'ändelse' (=suffix) är alltså hyponymer, inte utbytbara synonymer för det överordnade begreppet affix (som även omfattar infix, mitt i ordet). Ett lärande barn skulle kunna tro att affix bara betyder förstavelse. Synonymerna bör tas bort eller ersättas."
+    },
+    {
+      "noteId": 1780080619603,
+      "ord": "variabel",
+      "facit": "föränderlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Storhet som kan anta olika värden — motsatsen till en konstant ; som adjektiv: föränderlig",
+        "register": "formell, neutral",
+        "synonymer": [
+          "föränderlig storhet",
+          "växlande",
+          "skiftande"
+        ],
+        "exempelmening": "I ekvationen är x den okända <font color=\"#3498db\">variabeln</font> vi ska lösa ut.",
+        "etymologi": "Till variera, av latin variare 'växla'.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger både substantiv- ('storhet som kan anta olika värden') och adjektivbetydelse ('som varierar'/föränderlig). Kortet täcker båda via ';'. Synonymerna växlande/skiftande matchar SO:s adjektivsynonymer. Etymologin stämmer (till variera, lat. variare)."
+    },
+    {
+      "noteId": 1780080619733,
+      "ord": "talträngd",
+      "facit": "pratsam",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ivrig att få tala",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "pratsam",
+          "talför",
+          "språksam",
+          "mångordig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Farbrorn på festen var väldigt <font color=\"#3498db\">talträngd</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('ivrig att tala, ofta något ironiskt') och delar synonymen 'pratsam'. Register (lätt negativ/ironisk ton) stämmer rimligt. Exempel korrekt och highlightat."
+    },
+    {
+      "noteId": 1780080620217,
+      "ord": "makadam",
+      "facit": "stenkross till vägbygge",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Krossad sten använd i vägbygge",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "krossten",
+          "krossad sten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Gångvägen belades med <font color=\"#3498db\">makadam</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('krossad sten som används till underlag för vägbygge') och facit exakt. Synonymerna är korrekta. Ingen etymologi angiven, men det är enligt instruktionen aldrig ett fel i sig."
+    },
+    {
+      "noteId": 1780080619900,
+      "ord": "lappri",
+      "facit": "obetydliga småsaker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Obetydlig sak, struntsak",
+        "register": "ngt ålderdomlig, lätt negativ",
+        "synonymer": [
+          "struntsak",
+          "bagatell",
+          "petitess"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi kan inte slösa tid på sådant <font color=\"#3498db\">lappri</font>!",
+        "etymologi": "av lågtyska lapperi 'lagning; fuskverk'; till lapp"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('obetydlig företeelse', ålderdomlig ton) och facit. Synonymerna (struntsak, bagatell, petitess) matchar SO:s lista. Etymologin (lågtyska lapperi, till lapp) stämmer med SO. Exempelmeningen är nästan identisk med SO:s eget exempel."
+    },
+    {
+      "noteId": 1780080620225,
+      "ord": "garant",
+      "facit": "borgensman, finansiär<div>som tar ansvar för</div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person eller sak som ger säkerhet för något",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "borgensman"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fackföreningen fungerade som en <font color=\"#3498db\">garant</font> för medlemmarnas rättigheter.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition ('person/organisation som tar yttersta ansvaret', även bildligt om sak som säkerställer något) täcks väl av kortets 'person eller sak som ger säkerhet för något'. Synonymen borgensman är korrekt (SO:s eget relaterade ord). Exempelmeningen illustrerar den bildliga användningen rimligt."
+    },
+    {
+      "noteId": 1780080619722,
+      "ord": "kalibrera",
+      "facit": "ställa in mätinstrument",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ställa in ett instrument mot en känd referens så det mäter rätt",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "justera",
+          "finjustera",
+          "ställa in",
+          "nollställa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Teknikern <font color=\"#3498db\">kalibrerade</font> vågen innan mätningen.",
+        "etymologi": "Till kaliber — ordet kom från uppmätning av eldvapens kaliber."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen och exemplet är korrekta mot SO. Men synonymen 'nollställa' är inte utbytbar mot kalibrera: att nollställa är bara att sätta ett instrument till noll, medan kalibrering innebär att jämföra och justera mot en känd referens (ofta i flera punkter över skalan), inte bara nollpunkten. SO:s egna relaterade ord är 'fininställa'/'finjustera', inte nollställa. Bör tas bort som synonym."
+    },
+    {
+      "noteId": 1780080619631,
+      "ord": "försigkommen",
+      "facit": "tidig för sin ålder, brådmogen, lillgammal<br><br>(eng) precocious -&nbsp;<i>typ<br><br><br>han var mycket försig­kommen – redan vid fyra års ålder kunde han läsa;<br><br>de mest försig­komna eleverna hade redan börjat röka</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mer mogen än åldern medger — ibland beundrande, ibland om någon som gått för fort fram",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "tidig för sin ålder",
+          "brådmogen",
+          "lillgammal"
+        ],
+        "exempelmening": "Pojken var mycket <font color=\"#3498db\">försigkommen</font> – redan vid fyra års ålder kunde han läsa.",
+        "etymologi": "Bildat till komma sig för, 'komma igång'.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s båda nyanser (beundrande 'väl utvecklad för sin ålder' och den mer kritiska 'alltför avancerad'), fångade i kortets 'ibland beundrande, ibland om någon som gått för fort fram'. Synonymer och exempelmening är identiska med facit/SO. Etymologin stämmer (till komma sig för)."
+    },
+    {
+      "noteId": 1780080619932,
+      "ord": "träl",
+      "facit": "slav",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som berövats rätten att bestämma över sig själv och tvingas arbeta åt någon annan, särskilt i det forntida Norden ; bildligt: någon som är tvingad till mycket hårt arbete eller starkt beroende av något",
+        "register": "neutral, neutral, historia",
+        "synonymer": [
+          "slav",
+          "ofri"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han levde som en <font color=\"#3498db\">träl</font> under sitt spelberoende.",
+        "etymologi": "fornsvenska þräl; nordiskt ord av osäkert ursprung"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre nyanser (forntida slav, tvingad till hårt arbete av omständigheter, bildligt beroende) täcks alla: den historiska av huvudledet, de två senare av kortets bildliga led ('tvingad till mycket hårt arbete eller starkt beroende'). Exempelmeningen illustrerar den bildliga betydelsen korrekt och matchar SO:s egna exempel ('en träl under lasten')."
+    },
+    {
+      "noteId": 1780080619654,
+      "ord": "grossist",
+      "facit": "mellanledshandlare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som köper in stora partier och säljer vidare till butiker — motsatsen till en detaljhandlare",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "grosshandlare",
+          "partihandlare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På Årsta partihallar handlade <font color=\"#3498db\">grossisterna</font> med frukt och grönt i palltal.",
+        "etymologi": "Till en gros, franska för 'i stort' — motsatsen till i detalj."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('person som bedriver grosshandel') med tillägget om motsatsen detaljhandlare, vilket SO också anger som antonym. Synonymerna grosshandlare/partihandlare är korrekta. Exempelmeningen är sakligt rimlig och highlightad."
+    },
+    {
+      "noteId": 1780080620239,
+      "ord": "skrymsle",
+      "facit": "liten vrå",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten, undangömd plats",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "vrå"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Katten hittade ett <font color=\"#3498db\">skrymsle</font> bakom bokhyllan att sova i.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO ('litet (undangömt) utrymme') och facit 'liten vrå'. Synonymen vrå är korrekt. Exempelmeningen illustrerar betydelsen bra och är grammatiskt korrekt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 38,
+  "granskning_kostnad_usd": 1.272991,
+  "granskning_turkrav": 5
+}

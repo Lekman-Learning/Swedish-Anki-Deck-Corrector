@@ -1,0 +1,414 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080620043,
+      "ord": "brikett",
+      "facit": "bit för eldning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sammanpressat stycke av pulvriserat eller fibrigt material, ofta bränsle",
+        "register": "neutral, neutral, teknik",
+        "synonymer": [
+          "kolbit",
+          "fyrkantig bit"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De halvt uppbrända <font color=\"#3498db\">briketterna</font> pyrde.",
+        "etymologi": "av franska briquette, diminutiv av brique 'tegelsten'; samma ursprung som bricka"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymerna är missvisande: 'fyrkantig bit' påstår en form som inte finns i definitionen -- briketter är ofta runda, ovala eller cylindriska (t.ex. grillbriketter), inte fyrkantiga. 'Kolbit' är för snävt: enligt både SO och SAOL kan brikett vara pressat av pulver- ELLER fibermaterial (t.ex. torv, sågspån), inte bara kol. Huvudbetydelse och exempelmening är däremot korrekta -- borde ha fått bättre, faktiskt utbytbara synonymer."
+    },
+    {
+      "noteId": 1780080620220,
+      "ord": "performance",
+      "facit": "föreställning av konstnär<br><img src=\"paste-fe152b3ff9d344ac4ba7a004187177fcb644916f.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bildkonstform där konstnären själv framför verket inför publik",
+        "register": "formell, neutral, konst",
+        "synonymer": [
+          "konstnärlig föreställning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Konstnären bjöd på en <font color=\"#3498db\">performance</font> mitt på torget.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s (och SAOL:s) enda belagda betydelse -- bildkonstform där konstnären själv framför verket inför publik -- nästan ordagrant. Exempelmening och register stämmer."
+    },
+    {
+      "noteId": 1780080619922,
+      "ord": "en masse",
+      "facit": "i mängder",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I stor mängd, alla på en gång",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "massvis",
+          "i mängd",
+          "lassvis"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De verkar ha pengar <font color=\"#3498db\">en masse</font>.",
+        "etymologi": "av franska en masse; jfr massa"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'i stor mängd' (vardagligt, belagt sedan 1881) täcks, exempelmeningen är identisk med SO:s egen. Tillägget 'alla på en gång' är en rimlig nyans av frasens ursprung utan att motsäga källan. Etymologi och register (vardaglig) stämmer."
+    },
+    {
+      "noteId": 1780080620265,
+      "ord": "abscess",
+      "facit": "bulnad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En var­fylld svullnad i vävnad, orsakad av infektion",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "böld",
+          "bulnad",
+          "varsamling",
+          "varbildning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han hade en <font color=\"#3498db\">abscess</font> på kinden som gjorde ont.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: varig, avgränsad bildning / varsamling, bulnad. Kortets 'i vävnad' (i stället för SO:s snävare 'i huden') är en saklig och vanlig medicinsk precisering. Synonymerna böld/bulnad/varsamling/varbildning matchar båda källorna."
+    },
+    {
+      "noteId": 1780080619616,
+      "ord": "girig",
+      "facit": "snål",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vill hänsynslöst ha mer, särskilt pengar ; som häftigt åtrår något för stunden",
+        "register": "neutral, nedsättande, allmän",
+        "synonymer": [
+          "snål",
+          "vinningslysten",
+          "sniken"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sagan handlar om en <font color=\"#3498db\">girig</font> kung som samlade guld på hög medan folket svalt.",
+        "etymologi": "Till giri 'begär' — besläktat med begära och gärna."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (för starkt inriktad på att äga föremål/pengar) och underbetydelsen om momentant åtrående (jfr 'giriga blickar mot smörgåsbordet') täcks av kortets två delbetydelser. Synonymer, register (nedsättande) och etymologi (giri, begära, gärna) stämmer med SO."
+    },
+    {
+      "noteId": 1780080620234,
+      "ord": "rumstera",
+      "facit": "stöka och bråka, husera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara i livlig och störande verksamhet ; böka omkring och ställa till oordning",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [
+          "stöka",
+          "bråka",
+          "husera",
+          "böka"
+        ],
+        "synonym_groups": [
+          [
+            "stöka",
+            "bråka",
+            "husera"
+          ],
+          [
+            "böka"
+          ]
+        ],
+        "exempelmening": "Barnen <font color=\"#3498db\">rumsterade</font> runt på vinden hela eftermiddagen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Båda SO-betydelserna (vara i livlig/störande verksamhet; böka omkring) fångas och separeras korrekt med ';'. Synonymgrupperna matchar SO:s hänvisning till husera respektive definitionen 'böka omkring'."
+    },
+    {
+      "noteId": 1780080619689,
+      "ord": "entente",
+      "facit": "pakt mellan stater",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vänskapligt samförstånd mellan stater",
+        "register": "formell, neutral, politik",
+        "synonymer": [
+          "samförstånd",
+          "överenskommelse",
+          "statsförbund"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Frankrike och Storbritannien bildade en <font color=\"#3498db\">entente</font> före första världskriget.",
+        "etymologi": "Franska entendre 'förstå' — en entente är en förståelse, inte ett bindande förbund."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet motsäger sig självt: etymologifältet slår fast att en entente 'inte [är] ett bindande förbund', men bland synonymerna listas ändå 'statsförbund' -- alltså precis en förbundsbildning. Läsaren får två oförenliga signaler om vad ordet betyder; en av delarna måste ändras."
+    },
+    {
+      "noteId": 1780080619816,
+      "ord": "depression",
+      "facit": "förtvivlan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svår och långvarig nedstämdhet ; djup ekonomisk kris med produktionsminskning och stor arbetslöshet ; landområde som ligger under havsytans nivå",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "nedstämdhet",
+          "lågkonjunktur",
+          "sänka"
+        ],
+        "synonym_groups": [
+          [
+            "nedstämdhet"
+          ],
+          [
+            "lågkonjunktur"
+          ],
+          [
+            "sänka"
+          ]
+        ],
+        "exempelmening": "Döda havets <font color=\"#3498db\">depression</font> når 392 meter under havsytan.",
+        "etymologi": "av franska dépression; till latin depri´mere 'trycka ned'; jfr deprimerad"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Exempelmeningen anger att Döda havets depression 'når 392 meter under havsytan' -- föråldrad/felaktig siffra; nivån ligger idag omkring 422 meter under havsytan (och sjunker fortfarande), så exemplet är sakligt fel. Betydelserna i övrigt (nedstämdhet, ekonomisk kris, landsänka) täcker SO:s tre betydelser korrekt och väl separerade."
+    },
+    {
+      "noteId": 1780080620246,
+      "ord": "manisk",
+      "facit": "besatt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvångsmässigt fixerad vid en enda idé ; sjukligt upprymd",
+        "register": "ngt ålderdomlig, neutral, psykologi",
+        "synonymer": [
+          "besatt",
+          "fixerad",
+          "sjukligt upprymd",
+          "exalterad"
+        ],
+        "synonym_groups": [
+          [
+            "besatt",
+            "fixerad"
+          ],
+          [
+            "sjukligt upprymd",
+            "exalterad"
+          ]
+        ],
+        "exempelmening": "Han blev nästan <font color=\"#3498db\">manisk</font> i sitt samlande av frimärken.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Registret anges som 'ngt ålderdomlig', men SO ger ingen sådan bruklighetsmarkering -- manisk är ett vedertaget, fullt aktuellt kliniskt/vardagligt ord (jfr manisk-depressiv, manisk episod). Betydelserna (fixerad vid en idé; sjukligt upprymd) är annars korrekta och väl separerade -- fel ligger enbart i registerfältet."
+    },
+    {
+      "noteId": 1780080619724,
+      "ord": "stilisera",
+      "facit": "förenkla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förenkla så att det typiska framhävs ; om personer och text ofta klandrande: göra schablonmässig",
+        "register": "formell, neutral, konst",
+        "synonymer": [
+          "förenkla",
+          "schematisera",
+          "renodla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Logotypen visade en kraftigt <font color=\"#3498db\">stiliserad</font> örn.",
+        "etymologi": "Till stil, via italienskans stilizzare."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet lägger till en betydelse som inte finns i SO: 'om personer och text ofta klandrande: göra schablonmässig'. SO har bara en huvudbetydelse (förenkla och framhäva det typiska) med en neutral bildlig underbetydelse (t.ex. 'bokens stiliserade persongalleri'), utan nedsättande ton. Den påstådda andra betydelsen saknar lexikonstöd och bör tas bort."
+    },
+    {
+      "noteId": 1780080619648,
+      "ord": "bleke",
+      "facit": "vindstilla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vindstilla med spegelblank vattenyta ; kalkrik vit jordart",
+        "register": "neutral, neutral, sjöfart",
+        "synonymer": [
+          "stiltje",
+          "spegelblankt vatten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Segelbåten låg helt orörlig i den spegelblanka <font color=\"#3498db\">bleken</font>, och besättningen fick ta till årorna för att nå land innan kvällen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två homografer (vindstilla över spegelblank vattenyta; kalkrik jordart) fångas korrekt och separeras med ';'. Exempelmening, synonymer och etymologi stämmer med källan."
+    },
+    {
+      "noteId": 1780080620250,
+      "ord": "trångbröstad",
+      "facit": "oförstående",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inskränkt och fördomsfull i sitt synsätt",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [
+          "inskränkt",
+          "fördomsfull"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han var alldeles för <font color=\"#3498db\">trångbröstad</font> för att acceptera nya idéer.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse (fördomsfull och intolerant) väl. Synonymer (inskränkt, fördomsfull) och exempelmening stämmer, register (negativ) är korrekt."
+    },
+    {
+      "noteId": 1780080619947,
+      "ord": "kardinal",
+      "facit": "hög katolsk präst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Innehavare av den näst högsta värdigheten i romersk-katolska kyrkan ; nordamerikansk fältsparv med skarpt färgad fjäderdräkt ; som utgör en huvudpunkt, som i kardinalfel",
+        "register": "neutral, neutral, religion",
+        "synonymer": [
+          "prelat",
+          "kardinalbiskop",
+          "fältsparv",
+          "grundläggande",
+          "väsentlig"
+        ],
+        "synonym_groups": [
+          [
+            "prelat",
+            "kardinalbiskop"
+          ],
+          [
+            "fältsparv"
+          ],
+          [
+            "grundläggande",
+            "väsentlig"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Kardinalerna</font> samlades i Rom för att välja ny påve.",
+        "etymologi": "av medeltidslatin cardina´lis, till car´do 'dörrtapp; huvudpunkt'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymen 'kardinalbiskop' är inte utbytbar mot 'kardinal' -- kardinalbiskop är bara en av tre rangklasser bland kardinaler (kardinalbiskop/kardinalpräst/kardinaldiakon), inte en synonym för titeln i allmänhet, och skulle vilseleda en inlärare. Övriga betydelser (prästtitel, fältsparv, 'grundläggande' som i kardinalfel -- den sistnämnda bekräftas av SAOL:s egen adjektivbetydelse 'ytterst viktig, grundläggande') är korrekta och väl belagda."
+    },
+    {
+      "noteId": 1780080619739,
+      "ord": "dupera",
+      "facit": "lura och vilseleda<br><br><br>(eng) dupe<br><br><i>en försäljare som duperar alla kunder genom sin skenbara saklighet</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vilseleda någon med en falsk fasad",
+        "register": "formell, negativ",
+        "synonymer": [
+          "lura",
+          "föra bakom ljuset",
+          "blända"
+        ],
+        "exempelmening": "Bedragaren <font color=\"#3498db\">duperade</font> hela styrelsen med falska papper.",
+        "etymologi": "Franska dupe 'narr' — att dupera är att göra någon till narr.",
+        "bild_html": null,
+        "synonym_groups": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse (medvetet ge felaktigt intryck) och exempel (försäljare som duperar via skenbar saklighet) speglas väl av 'vilseleda med falsk fasad'. Etymologin 'franska dupe' bekräftas av SO (inte engelska, som facit antyder) -- kortet har alltså rätt trots avvikelse från facit."
+    },
+    {
+      "noteId": 1780080620009,
+      "ord": "ligga i lä",
+      "facit": "inte vara lika bra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara underlägsen någon i en jämförelse",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "vara underlägsen",
+          "ligga efter",
+          "komma till korta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I fråga om mareld <font color=\"#3498db\">ligger</font> ostkusten klart <font color=\"#3498db\">i lä</font> för västkusten.",
+        "etymologi": "till lä 'skydd mot vinden'; jfr isländska hlé; besläktat med ljum"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s idiombetydelse 'vara underlägsen' med snarlikt exempel (mareld, ost- kontra västkusten). Synonymer (vara underlägsen, ligga efter, komma till korta) och etymologi (lä, hlé, ljum) stämmer med SO."
+    },
+    {
+      "noteId": 1780080620222,
+      "ord": "hovera sig",
+      "facit": "kråma sig, stoltsera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bete sig högfärdigt och visa upp sig",
+        "register": "ngt ålderdomlig, negativ",
+        "synonymer": [
+          "kråma sig",
+          "stoltsera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">hoverade sig</font> med sin nya bil framför grannarna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s betydelse 'uppträda högfärdigt', synonymer (kråma sig, stoltsera) och exempel (visa upp ny bil för grannarna) stämmer nära överens med SO:s egna."
+    },
+    {
+      "noteId": 1780080619582,
+      "ord": "atonal",
+      "facit": "utan tonart och harmoni",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om musik: obunden till tonart, motsatsen till tonal ; om person: tondöv",
+        "register": "formell, neutral, musik",
+        "synonymer": [
+          "utan tonart",
+          "tondöv"
+        ],
+        "synonym_groups": [
+          [
+            "utan tonart"
+          ],
+          [
+            "tondöv"
+          ]
+        ],
+        "exempelmening": "Musiken var så <font color=\"#3498db\">atonal</font> att den var svår att tolka.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har både huvudbetydelsen (obunden till tonart) och en underbetydelse 'någon gång även: tondöv' om person -- båda fångas korrekt och separerat i kortet."
+    },
+    {
+      "noteId": 1780080620242,
+      "ord": "obstetrik",
+      "facit": "förlossningskonst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om graviditet och förlossning",
+        "register": "formell, neutral, medicin",
+        "synonymer": [
+          "förlossningskonst"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon specialiserade sig inom <font color=\"#3498db\">obstetrik</font> efter läkarexamen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse (läran om graviditet och förlossning) exakt, synonym (förlossningskonst) och exempelmening stämmer."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 36,
+  "granskning_kostnad_usd": 1.2727225,
+  "granskning_turkrav": 5
+}

@@ -224,11 +224,19 @@ ADAMTAL_HARDA = (
     "tom_exempelmening", "saknar_highlight", "avslutande_skiljetecken_hb",
     "semikolon_utan_mellanslag", "formatering_i_hb", "html_skrap",
     "tom_synonym", "tom_synonymgrupp", "grupper_matchar_ej_betydelser",
+    # Hård sedan 2026-08-12 på Adams beslut. Var mjuk, och mjukheten kostade:
+    # i EN batch om 100 kort skrev jag själv in sju cirkulära synonymer
+    # (märlkräfta åt märla, bruttobelopp åt brutto, ljusmanschett åt
+    # manschett ...) utan att något stoppade mig. Granskaren underkände
+    # näver/björknäver av exakt det skälet. En synonym som innehåller
+    # uppslagsordet avslöjar svaret innan Adam hunnit försöka minnas det --
+    # det gör kortet verkningslöst, oavsett om ordparet är språkligt riktigt.
+    "cirkular_synonym",
     "fler_register_an_betydelser",
 )
 ADAMTAL_MJUKA = (
     "flera_meningar", "fragment_exempel", "ordbokslangd_hb",
-    "cirkular_definition", "cirkular_synonym", "osymmetriska_grupper",
+    "cirkular_definition", "osymmetriska_grupper",
     "etymologi_langd",
 )
 
