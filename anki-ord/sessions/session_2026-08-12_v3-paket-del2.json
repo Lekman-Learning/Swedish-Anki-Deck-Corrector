@@ -1,0 +1,340 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080620374,
+      "ord": "förseelse",
+      "facit": "lindrigare brott",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lindrigare brott eller regelbrott",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "felsteg",
+          "försyndelse",
+          "överträdelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han slapp undan med böter eftersom <font color=\"#3498db\">förseelsen</font> var liten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger enda betydelsen 'lindrigare brott mot lagen el. annat regelsystem', vilket kortet återger korrekt. Synonymerna (felsteg, försyndelse, överträdelse) är rimliga och icke-cirkulära, exempelmeningen är sakligt riktig, ordet highlightat och registret (neutral) stämmer."
+    },
+    {
+      "noteId": 1780080620383,
+      "ord": "balalajka",
+      "facit": "gitarrintstrument",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ryskt stränginstrument med trekantig resonanslåda och lång hals",
+        "register": "neutral, neutral, musik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han knäppte vant på sin <font color=\"#3498db\">balalajka</font> och snart dansade hela sällskapet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ett gitarrliknande (ryskt) instrument med trekantig resonanslåda och lång hals' matchar kortets huvudbetydelse exakt. Inga synonymer saknas att ange. Exempelmeningen är naturlig och korrekt."
+    },
+    {
+      "noteId": 1780080620354,
+      "ord": "cysta",
+      "facit": "vätskefylld blåsa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjuklig vätskefylld blåsa i kroppen",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "vätskefylld blåsa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läkaren tömde <font color=\"#3498db\">cystan</font> på handleden med en tunn nål.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sjuklig blåsformig bildning i kroppen innehållande vätska el. geléartad massa'. Kortet nämner bara vätskealternativet och utelämnar 'geléartad massa', men det är en nyans inom samma enda betydelse, inte en utelämnad hel betydelse. Exemplet (cysta på handleden som töms) är sakligt korrekt."
+    },
+    {
+      "noteId": 1780080620393,
+      "ord": "preludium",
+      "facit": "förspel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kortare musikstycke som inleder ett större verk ; inledning eller förberedelse till något",
+        "register": "neutral, neutral, musik ; formell, neutral",
+        "synonymer": [
+          "förspel",
+          "förberedelse"
+        ],
+        "synonym_groups": [
+          [
+            "förspel"
+          ],
+          [
+            "förberedelse"
+          ]
+        ],
+        "exempelmening": "Konserten öppnade med ett stilla <font color=\"#3498db\">preludium</font> på orgel.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger två betydelser: (1) kortare musikstycke som inledning/självständigt tonstycke, (2) bildligt: förberedelse/inledning till något. Kortet fångar båda och skiljer dem korrekt med ';'. Exemplet illustrerar den musikaliska betydelsen träffsäkert."
+    },
+    {
+      "noteId": 1780080620378,
+      "ord": "kuva",
+      "facit": "undertrycka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvinga någon till underkastelse ; slå ner en känsla eller ett uppror",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "betvinga",
+          "kväsa",
+          "undertrycka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Regimen försökte <font color=\"#3498db\">kuva</font> varje protest med hårda straff.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'tvinga till underkastelse', med användning även för att slå ner uppror/känslor - båda aspekterna finns med i kortet. Synonymerna (betvinga, kväsa, undertrycka) är korrekta och icke-cirkulära. Exemplet är sakligt och grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080620388,
+      "ord": "till förfång",
+      "facit": "som gör skada",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Till skada eller nackdel för någon",
+        "register": "formell, negativ",
+        "synonymer": [
+          "till avbräck",
+          "till men"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bristande rutiner var honom <font color=\"#3498db\">till förfång</font> när kraven ökade.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'till (stort) förfång för ngn/ngt' = 'till (stor) skada för ngn/ngt'. Kortets 'till skada eller nackdel för någon' stämmer, liksom synonymerna (till avbräck, till men). Registret formell/negativ passar frasens juridiskt-högtidliga prägel."
+    },
+    {
+      "noteId": 1780080620363,
+      "ord": "våras",
+      "facit": "gå mot bättre tider",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bli vår ; börja gå mot bättre tider",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "ljusna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det börjar <font color=\"#3498db\">våras</font> för vinylskivan, som säljer i stora upplagor igen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: 'bli vår' och bildligt 'bli bättre tider', båda med i kortet och korrekt åtskilda med ';'. Exemplet illustrerar bara den bildliga betydelsen, men gör det korrekt och tydligt."
+    },
+    {
+      "noteId": 1780080620396,
+      "ord": "efterräkning",
+      "facit": "obehaglig följd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Obehaglig påföljd av något man själv ställt till med",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "påföljd",
+          "efterspel",
+          "vidräkning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Festen var rolig, men <font color=\"#3498db\">efterräkningen</font> kom med hyran i månadsskiftet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'obehaglig påföljd av handling eller dylikt (vanligen plur.)'. Kortets definition och synonymer (påföljd, efterspel, vidräkning) stämmer väl. Exempelmeningen är något indirekt (festen kopplas till hyran) men tolkningsbar: överspenderandet vid festen ger en obehaglig konsekvens när hyran ska betalas."
+    },
+    {
+      "noteId": 1780080620384,
+      "ord": "nödsakad",
+      "facit": "tvingad av svåra omständigheter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvingad av svåra omständigheter",
+        "register": "formell, neutral",
+        "synonymer": [
+          "tvungen",
+          "nödgad",
+          "föranlåten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter branden var familjen <font color=\"#3498db\">nödsakad</font> att flytta till en annan stad.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'tvingad av svåra omständigheter', exakt match. Synonymen 'föranlåten' bekräftas i SAOL som perfekt particip av 'föranlåta', nära besläktat med 'nödga' - korrekt om än ovanlig. Exemplet är sakligt och grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080620358,
+      "ord": "eventuell",
+      "facit": "möjlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som kanske kommer att inträffa",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "möjlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ta med paraply för <font color=\"#3498db\">eventuellt</font> regn på vägen hem.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger två betydelser: (1) 'som kanske kommer att inträffa' och (2) 'som kanske existerar/förekommande' (bekräftas i SAOL: 'möjligen inträffande el. förekommande'). Kortets huvudbetydelse fångar bara den första och missar den andra, som täcker uttryck som 'eventuella fel/missförstånd' (något som redan möjligen existerar, inte en framtida händelse). En hel betydelse saknas - borde vara 'Som kanske kommer att inträffa eller som kanske redan existerar'."
+    },
+    {
+      "noteId": 1780080620399,
+      "ord": "tomahawk",
+      "facit": "indianyxa<br><div><div><div><a href=\"https://www.google.com/imgres?q=native%20american%20tomahawk&amp;imgurl=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2FpskAAOSwCyFmn8F8%2Fs-l400.jpg&amp;imgrefurl=https%3A%2F%2Fwww.ebay.com%2Fitm%2F166579175934&amp;docid=k1pC-Sjq-WQBLM&amp;tbnid=T9aiGJytmN_ovM&amp;vet=12ahUKEwjqv_SMoemLAxWXFBAIHY01OMoQM3oECGQQAA..i&amp;w=400&amp;h=400&amp;hcb=2&amp;ved=2ahUKEwjqv_SMoemLAxWXFBAIHY01OMoQM3oECGQQAA\"><img alt=\"Indian tomahawk battle Hatchet Hand ...\" src=\"paste-445e4db4ab9a191a31f73578f4a1423ea41c4046.webp\"></a></div><a href=\"https://www.google.com/imgres?q=tomahawk&amp;imgurl=https%3A%2F%2Faustin-eats.com%2Fwp-content%2Fuploads%2Ftomahawk.jpg&amp;imgrefurl=https%3A%2F%2Faustin-eats.com%2Freverse-seared-tomahawk-steak%2F&amp;docid=lrM1jvj54oi4TM&amp;tbnid=5eHgQea9xoAknM&amp;vet=12ahUKEwiR7tmJoemLAxViBRAIHfUKObMQM3oECDcQAA..i&amp;w=1200&amp;h=1200&amp;hcb=2&amp;ved=2ahUKEwiR7tmJoemLAxViBRAIHfUKObMQM3oECDcQAA\"><div><div><div><img alt=\"Tomahawk Steak - A Double Cut Bone-In ...\" src=\"paste-652e7c4c793a56c45279afdcef4df73a01b0ba1e.webp\"></div></div></div></a></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stridsyxa hos Nordamerikas urfolk",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "indianyxa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">tomahawk</font> var en familjeklenod som gått i arv i generationer.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stridsyxa bland amerikanska urfolk', vilket kortets 'Stridsyxa hos Nordamerikas urfolk' återger korrekt. Synonymen 'indianyxa' matchar facit. Exemplet är sakligt rimligt och grammatiskt korrekt."
+    },
+    {
+      "noteId": 1780080620360,
+      "ord": "vederlägga",
+      "facit": "motbevisa<br><br><i>en djärv teori som ingen har kunnat veder­lägga</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bevisa att ett påstående är felaktigt",
+        "register": "formell, neutral",
+        "synonymer": [
+          "motbevisa",
+          "gendriva"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det tog forskarna tio år att <font color=\"#3498db\">vederlägga</font> teorin.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bevisa felaktigheten hos påstående, resonemang etc.', matchar kortet exakt. Synonymerna motbevisa och gendriva är korrekta (gendriva bekräftas direkt av SO). Exemplet liknar SO:s eget exempel om en teori ingen kunnat vederlägga."
+    },
+    {
+      "noteId": 1780080620381,
+      "ord": "kompatibel",
+      "facit": "ihoppassningsbar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Möjlig att få att fungera ihop med något annat",
+        "register": "neutral, neutral, IT",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Den gamla skrivaren är inte längre <font color=\"#3498db\">kompatibel</font> med min dator.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'möjlig att samordna och få att överensstämma med något, utan motsägelser'. Kortets formulering är en rimlig omformulering av samma betydelse. Exemplet om skrivare/dator liknar SO:s eget PC/Mac-exempel."
+    },
+    {
+      "noteId": 1780080620392,
+      "ord": "apostel",
+      "facit": "gudsman",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En av Jesu tolv lärjungar som spred kristendomen ; ivrig förkunnare av en lära eller rörelse",
+        "register": "neutral, neutral, religion ; neutral, neutral",
+        "synonymer": [
+          "Jesu sändebud",
+          "förkunnare",
+          "missionär"
+        ],
+        "synonym_groups": [
+          [
+            "Jesu sändebud"
+          ],
+          [
+            "förkunnare",
+            "missionär"
+          ]
+        ],
+        "exempelmening": "Han blev en <font color=\"#3498db\">apostel</font> för den nya kostläran och predikade den överallt.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SAOL:s huvudbetydelse är 'efterföljare till Jesus som medverkade till att sprida kristendomen' - INTE begränsat till de tolv lärjungarna. SAOL:s eget exempel är 'aposteln Paulus', och Paulus var inte en av de ursprungliga tolv lärjungarna. Ordet används historiskt även om senare missionärer (t.ex. 'Ansgar, Nordens apostel'). Kortets 'En av Jesu tolv lärjungar' är därför sakligt för snävt; det borde stå något i stil med 'Efterföljare till Jesus som spred kristendomen' utan begränsning till just de tolv."
+    },
+    {
+      "noteId": 1780080620395,
+      "ord": "homeopati",
+      "facit": "naturläkemetod m.spädning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alternativ läkemetod med kraftigt utspädda doser av det som orsakar besväret",
+        "register": "neutral, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Kritiker menar att <font color=\"#3498db\">homeopati</font> saknar vetenskapligt stöd helt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'system för alternativmedicin ... små doser av ett ämne som i större doser framkallar sjukdomen; ej vetenskapligt erkänd'. Kortets definition matchar väl, och den vetenskapliga skepsisen fångas upp naturligt i exempelmeningen."
+    },
+    {
+      "noteId": 1780080620355,
+      "ord": "vara främmande för",
+      "facit": "inte befatta sig med",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inte alls kunna tänka sig något ; sakna all erfarenhet av något",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "ta avstånd från",
+          "vara obekant med"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att fuska på provet <font color=\"#3498db\">är främmande för</font> henne.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslag 'främmande' innehåller bl.a. betydelsen 'som tar avstånd från något' samt en idiomatisk användning 'vara/inte vara främmande för' som rör ovilja/öppenhet inför något. Kortets två led ('inte kunna tänka sig något' / 'sakna erfarenhet av något') ligger i linje med detta och med facit ('inte befatta sig med'). Exemplet är korrekt och naturligt, men den exakta ordboksformuleringen för just frasen gick inte att hämta i sin helhet, så bedömningen görs med viss försiktighet."
+    },
+    {
+      "noteId": 1780080620367,
+      "ord": "biltog",
+      "facit": "fredlös, fågelfri<br><a href=\"https://www.google.com/imgres?q=biltog%20fredl%C3%B6s&amp;imgurl=https%3A%2F%2Fwww.iglabo.se%2Fwp-content%2Fuploads%2FAvrattning-av-tyska-sjorovare-1573-500x500-1.jpg&amp;imgrefurl=https%3A%2F%2Fwww.iglabo.se%2Fb208%2F&amp;docid=RnNhIRJw24jvqM&amp;tbnid=xM9dWPla2XW4uM&amp;vet=12ahUKEwizo6ix09OLAxVhIBAIHUuhC28QM3oECHUQAA..i&amp;w=500&amp;h=500&amp;hcb=2&amp;ved=2ahUKEwizo6ix09OLAxVhIBAIHUuhC28QM3oECHUQAA\"><div><div><div><img alt=\"208. Brott att döma | IGLABO\" src=\"paste-91fc1f660b95875d74873a81da9a67f8d8dd7222.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som är fredlös och står utanför lagens skydd",
+        "register": "ngt ålderdomlig, neutral, historia",
+        "synonymer": [
+          "fredlös",
+          "fågelfri"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter dråpet förklarades han <font color=\"#3498db\">biltog</font> och tvingades gömma sig i skogen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som står utanför lagen enligt forntida germansk rätt', med fredlös och fågelfri som angivna kohyponymer - exakt vad kortet anger. Registret (ngt ålderdomlig, historia) stämmer och exemplet är sakligt och grammatiskt korrekt."
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 34,
+  "granskning_kostnad_usd": 1.0770275000000002,
+  "granskning_turkrav": 5
+}

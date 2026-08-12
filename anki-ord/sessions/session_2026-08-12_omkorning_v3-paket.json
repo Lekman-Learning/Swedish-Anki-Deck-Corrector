@@ -1,0 +1,232 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620366,
+      "ord": "nativ",
+      "facit": "naturlig, medfödd;&nbsp; &nbsp;gedigen, ren",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 3 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som finns färdig i naturen ; medfödd och inneboende ; om metall: gedigen och ren",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "naturlig",
+          "medfödd",
+          "gedigen"
+        ],
+        "synonym_groups": [
+          [
+            "naturlig"
+          ],
+          [
+            "medfödd"
+          ],
+          [
+            "gedigen"
+          ]
+        ],
+        "exempelmening": "Guld förekommer <font color=\"#3498db\">nativt</font> i naturen och behöver inte framställas.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL visar tre urskiljbara aspekter: 'finns färdig i naturen' (SO huvudbetydelse), 'medfödd' (SO: nämns som ytterligare relaterad betydelse) och 'om metall: gedigen' (SAOL). Kortets tre led matchar detta. facit_signal:s '4 betydelser' är bara en räkning av orden naturlig/medfödd/gedigen/ren i facit, inte fyra verkliga lexikonbetydelser -- ingen hel betydelse saknas. Exempelmeningen om guld är sakligt korrekt och belyser huvudbetydelsen. Registret 'fackspråklig' stämmer med SO:s 'vetenskapligt och tekniskt språk'."
+    },
+    {
+      "noteId": 1780080620359,
+      "ord": "dagsedel",
+      "facit": "örfil<br><a href=\"https://www.google.com/imgres?q=will%20smith%20slap&amp;imgurl=http%3A%2F%2Fmedia.newyorker.com%2Fphotos%2F624143a04121dd98d3b8b3d9%2Fmaster%2Fpass%2FCunningham-Rock-Smith-Slap.jpg&amp;imgrefurl=https%3A%2F%2Fwww.newyorker.com%2Fculture%2Fcultural-comment%2Fwill-smiths-slap-and-the-ecstatic-blur-that-followed-at-the-oscars&amp;docid=0MZkDScNKli4nM&amp;tbnid=SepKU3K4ZvQW9M&amp;vet=12ahUKEwiX_NqKwqOMAxW4UlUIHZr1N0MQM3oECBEQAA..i&amp;w=2560&amp;h=1707&amp;hcb=2&amp;ved=2ahUKEwiX_NqKwqOMAxW4UlUIHZr1N0MQM3oECBEQAA\"><div><div><div><img alt=\"the Oscars ...\" src=\"paste-beb5962851df602b87361a3088c82a828731f656.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kraftig örfil",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "örfil",
+          "snyting",
+          "hurring"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han delade ut en <font color=\"#3498db\">dagsedel</font> mitt framför kamerorna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "OBS: facit-fältet för det här kortet innehåller korrupt/irrelevant HTML (en Google-bildsöks-länk om 'will smith slap') som jag bortsett från -- ordet 'örfil' i facit stämmer dock med ordboken. SO ger bara en betydelse, 'kraftig örfil' (vardagligt, något ålderdomligt), som kortet återger korrekt. Synonymerna 'snyting' och 'hurring' är verifierade i SO/SAOL som äkta vardagliga synonymer för slag/örfil, inga cirkulära. Mindre brist: kortets register 'ngt ålderdomlig' fångar bara halva SO:s dubbelstämpel 'vardagligt; något ålderdomligt' -- den vardagliga karaktären nämns inte, men det gör inte kortet missvisande."
+    },
+    {
+      "noteId": 1780080620358,
+      "ord": "eventuell",
+      "facit": "möjlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som kanske kommer att inträffa ; som kanske redan finns",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "möjlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ta med paraply för <font color=\"#3498db\">eventuellt</font> regn på vägen hem.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslag har en huvudbetydelse ('kanske inträffa', ex. eventuella skador) och en explicit underbetydelse ('kanske existera', ex. eventuella missförstånd). Kortets två led separerade med ';' återger exakt denna struktur, ingen påhittad uppdelning. Synonymen 'möjlig' matchar facit exakt. Exempelmeningen är korrekt och highlightad."
+    },
+    {
+      "noteId": 1780080620392,
+      "ord": "apostel",
+      "facit": "gudsman",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Efterföljare till Jesus som spred kristendomen ; ivrig förkunnare av en lära eller rörelse",
+        "register": "neutral, neutral, religion ; neutral, neutral",
+        "synonymer": [
+          "Jesu sändebud",
+          "förkunnare",
+          "missionär"
+        ],
+        "synonym_groups": [
+          [
+            "Jesu sändebud"
+          ],
+          [
+            "förkunnare",
+            "missionär"
+          ]
+        ],
+        "exempelmening": "Han blev en <font color=\"#3498db\">apostel</font> för den nya kostläran och predikade den överallt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en huvudbetydelse (efterföljare till Jesus/kristendomens spridare) och en bildlig underbetydelse (ivrig förkunnare/anhängare av en lära), vilket kortet återger korrekt separerat med ';'. Synonymgrupperna hör ihop med rätt betydelse ('Jesu sändebud' till religiösa betydelsen, 'förkunnare/missionär' till den bildliga). Exempelmeningen illustrerar den bildliga betydelsen sakligt korrekt."
+    },
+    {
+      "noteId": 1780080622034,
+      "ord": "frodig",
+      "facit": "yppig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fysiskt väl utvecklad och yppig ; rikt växande och grönskande ; starkt produktiv, om fantasi och bildspråk",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "yppig",
+          "ymnig",
+          "välfödd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">frodiga</font> skogen var full av liv och grönska.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelser (fysiskt välutvecklad p.g.a. gynnsam miljö, växtlighet/'frodigt gräs', bildligt om fantasi/'starkt produktiv') matchar kortets tre led väl. facit 'yppig' ingår som första synonym. Exempelmeningen om skogen illustrerar växtbetydelsen korrekt och är highlightad. Synonymerna saknar explicit gruppering men är alla rimliga."
+    },
+    {
+      "noteId": 1780080620895,
+      "ord": "sätta sig",
+      "facit": "sjunka;&nbsp; &nbsp;vara nedlåtande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Placera sig i sittande ställning ; sjunka ihop, om mark eller husgrund ; vara nedlåtande mot någon ; hävda sin auktoritet",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "slå sig ner",
+          "sjunka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trött efter promenaden <font color=\"#3498db\">satte hon sig</font> på närmaste bänk.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s underbetydelse 'vara nedlåtande' (ex. 'varför måste han alltid sätta sig på sina yngre kompisar?') är entydigt negativt laddad, men kortets register anger 'neutral, neutral' för hela ordet utan att skilja ut valören för just den betydelsen -- registret stämmer inte på valör-axeln för en av de fyra angivna betydelserna (kriterium 6). Dessutom saknas synonymer helt för två av fyra betydelser ('vara nedlåtande' och 'hävda sin auktoritet'). Bör vara: negativ valör markerad för den nedlåtande betydelsen, t.ex. genom att dela upp registret per betydelse (som korten för 'preja' och 'apostel' gör) samt lägga till minst en synonym per betydelse, t.ex. 'nedlåtande' resp. 'markera sin ställning'."
+    },
+    {
+      "noteId": 1780080621187,
+      "ord": "preja",
+      "facit": "tvinga att stanna;&nbsp; &nbsp;skörta upp, pungslå",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 3 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Anropa och tvinga ett fartyg att stanna ; tränga ett fordon av vägen ; ta alltför mycket betalt av någon",
+        "register": "neutral, neutral, sjöfart ; neutral, neutral ; ngt ålderdomlig, negativ",
+        "synonymer": [
+          "tvinga att stanna",
+          "tränga undan",
+          "skinna",
+          "pungslå"
+        ],
+        "synonym_groups": [
+          [
+            "tvinga att stanna"
+          ],
+          [
+            "tränga undan"
+          ],
+          [
+            "skinna",
+            "pungslå"
+          ]
+        ],
+        "exempelmening": "Handelsfartyget <font color=\"#3498db\">prejades</font> av en jagare i blockadflottan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal:s påstående om '4 betydelser' stämmer inte -- facit skiljer bara två grupper med ';' ('tvinga att stanna' och 'skörta upp/pungslå'). SO+SAOL visar tre verkliga betydelser (tvinga fartyg att stanna, tränga fordon av vägen, ta för mycket betalt), och kortet täcker alla tre korrekt, med register uppdelat per betydelse (sjöfart / neutral / ngt ålderdomlig-negativ) vilket är korrekt nyanserat. Exempelmeningen illustrerar sjöfartsbetydelsen sakligt riktigt."
+    },
+    {
+      "noteId": 1780080629009,
+      "ord": "destillera",
+      "facit": "rena",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skilja en vätskas beståndsdelar åt genom förångning och kondensering",
+        "register": "fackspråklig, neutral, kemi",
+        "synonymer": [
+          "rena",
+          "avskilja"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På destilleriet lärde hon sig att <font color=\"#3498db\">destillera</font> whisky.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har utöver grundbetydelsen (skilja en vätskas beståndsdelar via förångning/kondensering) en etablerad bildlig underbetydelse: 'destillera fram' = utvinna/rendera fram t.ex. slutsatser eller principer ur ett stort material -- SO:s exempel: 'ur myllret av fakta försökte han destillera fram några mer allmänna principer'. Den betydelsen saknas helt på kortet, som bara ger den kemisk-tekniska betydelsen. En hel betydelse fattas (kriterium 1). Bör läggas till, t.ex. 'destillera fram: utvinna eller rendera fram (t.ex. slutsatser) ur en stor mängd material'."
+    },
+    {
+      "noteId": 1780080620998,
+      "ord": "bulla upp",
+      "facit": "duka fram massvis med mat",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Duka fram mat i stor och riklig mängd",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "bjuda rundhänt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Till kalaset hade mormor <font color=\"#3498db\">bullat upp</font> med tårtor, bullar och saft.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger endast en betydelse, 'duka fram rikligt (med mat)', vilket matchar kortet och facit exakt -- ingen betydelse saknas. Exempelmeningen om kalaset är trovärdig, grammatiskt korrekt och highlightad. Registret 'vardaglig' är rimligt för detta talspråkliga uttryck; SAOL ger ingen motsägande registeruppgift."
+    },
+    {
+      "noteId": 1780080627874,
+      "ord": "brödtext",
+      "facit": "löpande text<br><br>(eng) body text",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den löpande huvudtexten i en artikel",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "löpande text"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Artikelns <font color=\"#3498db\">brödtext</font> gav detaljerna mellan rubrik och bild.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar explicit registret 'vardagligt' (bruklighetskommentar) samt betydelsen 'löpande text i artikel (tryckt med brödstil)', vilket matchar kortet och facit. SO har bara en betydelse -- ingen saknas. Exempelmeningen är korrekt, tydlig och ordet är highlightat. Synonymen 'löpande text' är inte cirkulär trots att den delar ordet 'text' med uppslagsordet -- den är inte uppslagsordet eller en böjning av det."
+    }
+  ],
+  "granskning_turer": 33,
+  "granskning_kostnad_usd": 1.1158136,
+  "granskning_turkrav": 5
+}
