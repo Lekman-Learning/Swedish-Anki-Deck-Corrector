@@ -239,6 +239,16 @@ def _har_stod(syn, kallpase, kalltext):
 # tom lista. För ett deck som pluggas mot HP-provets ORD-del är det dessutom
 # det pedagogiskt rätta: distraktorerna där ÄR ord som ligger nära utan att
 # vara utbytbara, så en nästan-synonym tränar exakt det fel provet straffar.
+# SAOL inleder ofta ett synonymled med en bruklighetsmarkör: "äv. blek,
+# ointressant", "ofta nedsättande", "bildl. hård". Markören är metatext om
+# glosan, inte en del av den -- utan den här strippningen föll `blek` bort
+# som obelagt trots att SAOL listar det, eftersom `äv.` stod först i ledet.
+_LEDMARKOR = re.compile(
+    r"^(äv\.?|ofta|ibl\.?|ibland|särsk\.?|särskilt|eg\.?|egentligen|bildl\.?|"
+    r"bildligt|vanl\.?|vanligen|numera|förr|ngt|något|mest|i sht|i synnerhet)\s+",
+    re.I)
+
+
 def _ordboksbelagg(u, ord_):
     """Ord som SO/SAOL själva pekar ut som synonymer till uppslagsordet."""
     belagg = set()
@@ -253,7 +263,7 @@ def _ordboksbelagg(u, ord_):
             for hb in (s.get("huvudbetydelser") or []):
                 d = _LANKTEXT.sub("", hb.get("definition") or "")
                 for led in re.split(r"[;,]", d):
-                    led = led.strip().strip(".").lower()
+                    led = _LEDMARKOR.sub("", led.strip().lower()).strip().strip(".")
                     if not led:
                         continue
                     belagg.add(led)
@@ -349,11 +359,39 @@ def _samma_uppslag(traff, ord_):
     a, b = traff.lower().strip(" -"), ord_.lower().strip(" -")
     if a == b:
         return True
-    for suffix in (" sig", " ut", " av", " om"):
+    # Partikelverb listas som egna uppslagsord: `spritta` ger även
+    # `spritta till`, `bona` ger `bona om`. Listan var tidigare fyra partiklar
+    # lång och missade bland annat `till`, vilket gjorde att `spritta` larmade
+    # om sin egen partikelform. Partiklarna är ett slutet ordförråd -- att
+    # räkna upp dem alla är billigare än att gissa.
+    for suffix in (" sig", " ut", " av", " om", " till", " på", " i", " upp",
+                   " ner", " ned", " bort", " fram", " efter", " igenom",
+                   " emot", " mot", " för", " över", " under", " undan",
+                   " ifrån", " från", " åt", " in", " loss", " sönder", " till sig"):
         if a == b + suffix or b == a + suffix:
             return True
+    # Particip av partikelverb, där partikeln flyttar fram och blir prefix:
+    # `bona om` -> `ombonad`, `skriva om` -> `omskriven`. Ordföljden kastas om,
+    # så varken suffixlistan ovan eller prefixjämförelsen nedan ser släktskapet.
+    for x, y in ((a, b), (b, a)):
+        delar = x.split()
+        if len(delar) == 2:
+            verb, partikel = delar
+            st = _stam(verb)
+            if len(st) >= 3 and y.startswith(partikel) and y[len(partikel):].startswith(st):
+                return True
     # Singular/plural och bestämd form av samma ord (pellets/pellet).
+    #
+    # Längdkravet är inte kosmetik. Utan det blev `gem` (pappersklämma) samma
+    # ord som `gemen` och `te` samma ord som `tes`, eftersom -en och -s också
+    # är böjningsändelser -- och då räknades det främmande uppslagsordets
+    # glosor som ordets egna. `te`/`tes` stod som öppen defekt sedan
+    # 2026-08-11; `gem`/`gemen` dök upp i batch3 och gjorde "pappersklämma"
+    # till en belagd synonymkandidat för `gemen`. Ett kort ord plus en
+    # ändelse är oftare ett ANNAT ord än en böjning av det korta.
     kort, lang = sorted((a, b), key=len)
+    if len(kort) < 5:
+        return False
     return lang.startswith(kort) and lang[len(kort):] in ("s", "n", "t", "en", "et", "er")
 
 

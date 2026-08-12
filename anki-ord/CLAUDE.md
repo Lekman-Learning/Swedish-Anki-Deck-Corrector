@@ -200,6 +200,60 @@ urvalet gratis. Blindgranskaren fångade bara 4 av de 14 obelagda i batch2, så
 spärren är inte överflödig bredvid granskaren.
 
 
+## Batch3, 20 is:new-kort: 0 % underkänt -- första felfria batchen (2026-08-12)
+
+Första batchen skriven under synonymspärren. **20 av 20 godkända**, 53 turer,
+1,79 USD. Föregående två batcher samma kväll: 15 % och 26 % underkänt.
+
+**Sju av tjugo kort fick tom synonymlista** (fiffel, hydrokultur, kanvas,
+bokslut, lagbunden, lektor, metates). Det är regeln som arbetar som avsett --
+ordböckerna gav inget utbytbart ord, så kortet får inget. Där ordboken levererar
+blev synonymerna i gengäld starka: `skolexempel` -> `typexempel` är SO:s egen
+`SYN:synonym`, och `påpasslig` -> `alert, vaken` står ordagrant i SAOL.
+
+**Kan 0 % lita på?** Inte fullt ut, och det ska sägas rakt ut: kontrollkorten
+uteblev igen, så granskarens egen träffsäkerhet är omätt. En nollsiffra utan
+planterade fel är precis det läge där ett bra parti inte går att skilja från en
+slapp granskare. **Ett motargument finns dock i mätdatan:** granskaren körde
+**2,65 turer per kort** mot batch2:s 1,63 -- alltså mer arbete per kort, inte
+mindre. Det talar mot slapphet, men ersätter inte en kontrollmätning.
+
+**Varför kontrollkorten inte gick att blanda in, och det är inte en bugg:**
+`valj_kontroller` kräver kort som blindgodkänts för minst 3 dagar sedan.
+Taggen `oberoende_verifierad` finns bara i tre dagar: 236 kort 2026-08-10,
+339 den 11:e, 214 den 12:e. Gränsen i dag är <= 2026-08-09, alltså tom mängd.
+**Från 2026-08-13 blir de 236 korten från den 10:e valbara** och funktionen
+börjar fungera av sig själv. Ingen åtgärd behövs, men glöm inte att kontrollera
+att den faktiskt slår igång.
+
+### Tre buggar i spärrarna, hittade genom att läsa utdatan
+
+1. **SAOL:s bruklighetsmarkörer åt upp synonymer.** `"äv. blek, ointressant"`
+   gjorde att `blek` inte inledde sitt led och föll som obelagt, trots att SAOL
+   listar ordet. `_LEDMARKOR` strippar nu `äv.`, `ofta`, `ibl.`, `särsk.`,
+   `bildl.` med flera.
+2. **Partikelverb larmade om sin egen form.** `spritta` gav
+   `frammande_uppslagsord: spritta till`. Suffixlistan i `_samma_uppslag` var
+   fyra partiklar lång. Utökad till hela det slutna partikelförrådet, plus en
+   regel för particip där partikeln flyttar fram till prefix (`bona om` ->
+   `ombonad`).
+3. **`gem` räknades som samma ord som `gemen`** -- och därmed blev
+   *pappersklämma* en belagd synonymkandidat för `gemen`. Orsaken var
+   plural-/bestämdformsregeln: `gem` + `en`. Exakt samma bugg som den
+   dokumenterade `te`/`tes`-sammanblandningen från 2026-08-11, som stått som
+   öppen defekt sedan dess. Åtgärd: kortformen måste vara minst 5 tecken innan
+   ändelseregeln får slå till -- ett kort ord plus en ändelse är oftare ett
+   ANNAT ord än en böjning av det korta. Regressionstest: 14 fall, 14 rätt,
+   inklusive `brass`/`brasserie` och `black`/`black om foten`.
+
+Registerfel som förgranskningen fångade före granskningen: `fiffel` är märkt
+*vardagligt*, `gemen`s betydelse 'vanlig' *något ålderdomligt*, `sensation`s
+sinnesintrycksbetydelse *psykologi*. Alla tre hade gått till granskaren fel.
+
+Läget efter: full v3 **769 -> 789**, färdig is:new-pool **469 -> 489**,
+underkända 89, pausade 3, spår A kvar 6 725.
+
+
 ## Nästa steg
 
 Fortsätt Fas 2 i `session_2026-08-04.json`, börja med **"förråda sig"**

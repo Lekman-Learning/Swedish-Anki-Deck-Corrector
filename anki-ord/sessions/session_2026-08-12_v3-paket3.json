@@ -1,0 +1,366 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620438,
+      "ord": "lektor",
+      "facit": "en sorts lärare<br><a href=\"https://www.google.com/imgres?q=lektor&amp;imgurl=https%3A%2F%2Fmedia.wpd.digital%2Fnorsklektorlag%2Fuploads%2F2021%2F03%2Fom_lektorer_og_lektortittel_lektor_baard_underviser_i_markedsforing_foto_eva_rose-840x500.jpg%3Fver%3D1614689036&amp;imgrefurl=https%3A%2F%2Fwww.norsklektorlag.no%2Finfo%2Fhva-er-en-lektor%2F&amp;docid=BaSCLZvHbjtzdM&amp;tbnid=g3YNeb05emJIVM&amp;vet=12ahUKEwi70-XS3feLAxWVEhAIHQriI9cQM3oECEAQAA..i&amp;w=840&amp;h=500&amp;hcb=2&amp;ved=2ahUKEwi70-XS3feLAxWVEhAIHQriI9cQM3oECEAQAA\"><div><div><div><img alt=\"Hva er en lektor? - Norsk Lektorlag\" src=\"paste-46f91b287aa5e44702bc0e6e3f82e35efcc4560a.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Titel för person med högre lärartjänst vid gymnasieskola eller högskola",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon utnämndes till <font color=\"#3498db\">lektor</font> i matematik vid högskolan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(titel för) person med högre lärartjänst vid gymnasieskola el. högskola'. Kortets huvudbetydelse matchar ordagrant, enda betydelsen finns med, ledande. Ingen synonymlista är korrekt eftersom SO inte anger någon. Exempelmeningen matchar SO:s eget belägg ('lektor i fysik och kemi') och är korrekt/highlightad. Register neutral stämmer."
+    },
+    {
+      "noteId": 1780080620434,
+      "ord": "fiffel",
+      "facit": "smussel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Verksamhet som är på gränsen till olaglig",
+        "register": "vardaglig, negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Revisorn upptäckte omfattande <font color=\"#3498db\">fiffel</font> med reseräkningarna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar enda betydelsen 'verksamhet som är på gränsen till olaglig', vardagligt register. Kortet matchar. Facit 'smussel' är en rimlig parafras, inte en motsägelse. Exempelmeningen är sakligt korrekt och illustrerar betydelsen väl."
+    },
+    {
+      "noteId": 1780080620436,
+      "ord": "hydrokultur",
+      "facit": "vattenkultur<br><a href=\"https://www.google.com/imgres?q=hydroculture&amp;imgurl=https%3A%2F%2Fwww.ambius.com%2Fdam%2Fjcr%3A3ae75207-553e-4aec-9fe7-2bb686a5fbfc%2F1200-image-banner-stock-woman-worker-inspects-growing-tulips-in-a-1209113949.webp&amp;imgrefurl=https%3A%2F%2Fwww.ambius.com%2Fresources%2Fblog%2Fplant-care%2Fhydroculture-growing-plants-without-soil&amp;docid=ZS5zeQW95G32hM&amp;tbnid=J9VQiLQwG4PZ7M&amp;vet=12ahUKEwiom4rKwPWLAxULKBAIHTKkFYcQM3oECBwQAA..i&amp;w=1200&amp;h=650&amp;hcb=2&amp;ved=2ahUKEwiom4rKwPWLAxULKBAIHTKkFYcQM3oECBwQAA\"><div><div><div><img alt=\"Growing plants without soil ...\" src=\"paste-7abd112a86b7cae99ff32ca6f5b46a6d2076b082.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Odling av växter i näringsberikat vatten",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Basilikan växte i <font color=\"#3498db\">hydrokultur</font> utan en enda kruka jord.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'odling i (näringsberikat) vatten i stället för jord', en enda huvudbetydelse. Kortet fångar detta ('istället för jord' framgår tydligt av exempelmeningen). Ingen synonym anges av SO, tom lista är korrekt."
+    },
+    {
+      "noteId": 1780080620426,
+      "ord": "klausul",
+      "facit": "tillägg i bestämmelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tilläggsbestämmelse eller förbehåll i ett avtal",
+        "register": "neutral, neutral, juridik",
+        "synonymer": [
+          "förbehåll",
+          "särbestämmelse",
+          "tillägg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Avtalet innehöll en <font color=\"#3498db\">klausul</font> om uppsägning med tre månaders varsel.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'tilläggsbestämmelse eller förbehåll (i avtal)'. SAOL:s egen definition lyder ordagrant 'förbehåll; tillägg; särbestämmelse' — exakt de tre synonymer kortet listar, alltså dictionary-sanktionerade och inte cirkulära. Enda betydelsen, juridik-registret stämmer (SAOL: jur.)."
+    },
+    {
+      "noteId": 1780080620440,
+      "ord": "blodfattig",
+      "facit": "färglös, kraftlös;&nbsp; &nbsp;intetsägande;&nbsp; &nbsp;anemisk",
+      "facit_signal": "facit antyder 7 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som tycks sakna kraft och liv ; intetsägande och färglös",
+        "register": "neutral, lätt negativ ; neutral, negativ",
+        "synonymer": [
+          "blek",
+          "ointressant"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Texten var <font color=\"#3498db\">blodfattig</font> och lämnade ingen bild kvar hos läsaren.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en huvudbetydelse ('som tycks sakna kraft och liv, om person') med en bildlig underbetydelse ('intetsägande, färglös') — precis de två delar kortet ger. SAOL:s definition är ordagrant 'blek, ointressant', vilket exakt matchar kortets synonymer. Facits tredje glosa 'anemisk' representerar inte en egen ordboksbetydelse i SO/SAOL utan samma kärnbetydelse, så ingen hel betydelse saknas."
+    },
+    {
+      "noteId": 1780080620449,
+      "ord": "undra",
+      "facit": "tvivla på",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara intresserad av att få veta ; tvivla på",
+        "register": "neutral, neutral ; neutral, neutral",
+        "synonymer": [
+          "fråga sig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Jag <font color=\"#3498db\">undrar</font> om tåget kommer i tid.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två huvudbetydelser i denna ordning: 1) 'vara intresserad av att få veta' (med 'fråga sig' uttryckligen taggad SYN:synonym i SO — matchar kortets synonym exakt), 2) 'tvivla på'. SAOL bekräftar samma två betydelser. Kortet är fullständigt och korrekt ordnat; facits 'tvivla på' är bara den andra av de två betydelserna, ingen lucka."
+    },
+    {
+      "noteId": 1780080620444,
+      "ord": "skolexempel",
+      "facit": "typexempel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Särskilt tydligt och karakteristiskt exempel",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "typexempel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fallet är ett <font color=\"#3498db\">skolexempel</font> på hur en utredning inte ska gå till.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL har en enda betydelse: 'särskilt tydligt/typiskt exempel'. SO taggar uttryckligen 'typexempel' som SYN:synonym — matchar kortets synonym exakt. Fullständigt och korrekt."
+    },
+    {
+      "noteId": 1780080620437,
+      "ord": "pli",
+      "facit": "hyfs och ordning<br><a href=\"https://www.google.com/imgres?q=disciplined%20dog%20stock%20photo&amp;imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F1278274917%2Fphoto%2Flabrador-dog-looking-up-giving-you-whale-eye-being-punished-by-its-owner-with-finger-pointer.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DtPbaKmRls1_5HnkLqnmlrJSqAH-hlD9F_BK_DLEPty8%3D&amp;imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fdisciplined-dog&amp;docid=Ev5AqBa5LddoOM&amp;tbnid=wKzLQC-DKacMyM&amp;vet=12ahUKEwjrhZ-s0fKLAxUsJBAIHUacCScQM3oECDIQAA..i&amp;w=612&amp;h=293&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjrhZ-s0fKLAxUsJBAIHUacCScQM3oECDIQAA\"><div><div><div><img alt=\"175,300+ Disciplined Dog Stock Photos ...\" src=\"paste-7f0a14082f1811ea4088c1029044be36f9684e2e.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stramt och disciplinerat uppträdande",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "god hållning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sergeanten satte <font color=\"#3498db\">pli</font> på rekryterna redan första veckan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stramt, disciplinerat uppträdande'. SAOL:s definition lyder ordagrant 'disciplinerat skick, god hållning' — matchar kortets synonym 'god hållning' exakt. Enda betydelsen, exempelmeningen följer SO:s egen valensmönster ('pli på någon/något')."
+    },
+    {
+      "noteId": 1780080620429,
+      "ord": "sensation",
+      "facit": "uppseende, skräll;&nbsp; &nbsp;sinnesförnimmelse",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Oväntad och uppseendeväckande händelse ; upplevelse som härrör från sinnesintryck",
+        "register": "neutral, neutral ; neutral, neutral, psykologi",
+        "synonymer": [
+          "uppseendeväckande händelse",
+          "sinnesintryck"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fyndet blev en <font color=\"#3498db\">sensation</font> i hela forskarvärlden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger exakt två huvudbetydelser i denna ordning: 1) 'oväntad, uppseendeväckande händelse', 2) 'sinnesintryck' (fackspråk psykologi). Kortets två betydelser och synonymer är nästan ordagranna citat av SAOL:s egna definitioner. Facit_signal antydde fler betydelser, men både SO och SAOL bekräftar bara två — ingen lucka finns."
+    },
+    {
+      "noteId": 1780080620445,
+      "ord": "ombonad",
+      "facit": "bekväm och hemtrevlig<br><br><i>Tapeter i stället för målade väggar ger en&nbsp;<u>ombonad</u>&nbsp;känsla.</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Hemtrevlig och bekväm",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "trivsam",
+          "välordnad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stugan var liten men <font color=\"#3498db\">ombonad</font>, med filtar och brasa.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL har en enda betydelse. SAOL:s definition lyder ordagrant 'välordnad, trivsam' — matchar kortets båda synonymer exakt. Facit_signal antydde tre betydelser men det stöds inte av ordböckerna; kortet är fullständigt."
+    },
+    {
+      "noteId": 1780080620427,
+      "ord": "spritta",
+      "facit": "rycka till",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Plötsligt rycka till i kroppen",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "rycka till",
+          "hoppa till"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">spritter</font> till varje gång dörren slår igen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda huvudbetydelsen 'plötsligt rycka till (i kroppen)', med 'till'-partikeln som formkommentar — matchar exempelmeningen. 'Rycka till' är hämtat direkt ur definitionen (facit ger samma ord); 'hoppa till' är en näraliggande, vedertagen synonym för samma kroppsliga reflex. Den bildliga underbetydelsen (livfullhet, 'sprittande glädje') är en nyansering av samma sinnesbetydelse, inte en fristående betydelse som måste finnas med."
+    },
+    {
+      "noteId": 1780080620443,
+      "ord": "gemen",
+      "facit": "elak",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Elak på ett simpelt sätt ; vanlig och folklig ; liten bokstav i boktryck, till skillnad från versal",
+        "register": "neutral, negativ ; ngt ålderdomlig, neutral ; neutral, neutral",
+        "synonymer": [
+          "elak",
+          "vanlig",
+          "folklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att sprida ryktet vidare var ett <font color=\"#3498db\">gement</font> tilltag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s adjektivhomograf har tre huvudbetydelser: 'elak på ett simpelt sätt', 'vanlig/folklig' (ngt ålderdomligt) och 'liten bokstav i tryck, mots. versal' — alla tre finns med i rätt ordning och med rätt register (bl.a. 'ngt ålderdomlig' bekräftat av SO). SO har även två substantivhomografer ('allmänhet'/'folk i gemen' samt 'gemen' som bokstav), men dessa är egna uppslagsord/ordklasser vars kärninnehåll redan täcks av adjektivbetydelserna på kortet — rimlig avgränsning för ett enda ordkort. Exempelmeningen är grammatiskt korrekt och matchar SO:s egen typ av belägg."
+    },
+    {
+      "noteId": 1780080620446,
+      "ord": "blazer",
+      "facit": "udda kavaj",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kavaj som inte ingår i en kostym",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "udda kavaj"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han bar en marinblå <font color=\"#3498db\">blazer</font> till ljusa byxor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda betydelsen 'kavaj som inte ingår i kostym'. Kortets synonym 'udda kavaj' matchar både facit och definitionen. Exempelmeningen liknar SO:s eget belägg ('ljus blazer och mörka byxor')."
+    },
+    {
+      "noteId": 1780080620430,
+      "ord": "föresats",
+      "facit": "bestämd avsikt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bestämd avsikt att lyckas med något",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "ambition",
+          "mål"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">föresats</font> att sluta röka höll i tre veckor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda betydelsen 'bestämd avsikt att lyckas med något'. SAOL:s definition lyder ordagrant 'ambition, mål' — matchar kortets synonymer exakt. Exempelmeningen är nästan identisk med SO:s eget belägg ('hans föresats var att sluta röka')."
+    },
+    {
+      "noteId": 1780080620448,
+      "ord": "kanvas",
+      "facit": "grovt tyg<br><a href=\"https://commons.wikimedia.org/wiki/File:Sj%C3%B6manss%C3%A4ck_-_1991.jpg\"><img src=\"250px-sjömanssäck_-_1991.webp\"></a><a href=\"https://commons.wikimedia.org/wiki/File:3D_Schildersdoek.JPG\"><img src=\"250px-3d_schildersdoek.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Grovt, styvt tyg av bomull eller hampa",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Seglen var av <font color=\"#3498db\">kanvas</font> och tålde saltvattnet i åratal.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda huvudbetydelsen 'grovt, vanligen oblekt styvt tyg av bomull eller hampa'. Boxningsring-användningen är bara en bildlig underbetydelse av samma tygbetydelse, inte en egen betydelse. Kortet är korrekt och fullständigt, ingen synonym behövs (SO ger ingen)."
+    },
+    {
+      "noteId": 1780080620452,
+      "ord": "påpasslig",
+      "facit": "uppmärksamt reagerande, alert",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som reagerar och handlar vid rätt tillfälle",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "alert",
+          "vaken"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">påpasslig</font> granne ringde brandkåren innan elden spred sig.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda betydelsen 'som reagerar och handlar vid rätt tillfälle'. SAOL:s definition lyder ordagrant 'alert, vaken' — matchar kortets båda synonymer exakt. Exempelmeningen liknar SO:s eget belägg (fotograf/agerande vid rätt tillfälle)."
+    },
+    {
+      "noteId": 1780080620450,
+      "ord": "lagbunden",
+      "facit": "reglerad och bestämd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som regleras av lagar ; som följer ett regelbundet och förutsägbart mönster",
+        "register": "neutral, neutral ; neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Tidvattnet är <font color=\"#3498db\">lagbundet</font> och går att räkna ut på förhand.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två huvudbetydelser i denna ordning: 'som regleras av lagar' och 'som följer ett regelbundet, förutsägbart mönster' (SO:s eget exempel är just 'naturens lagbundna processer', vilket motsvarar kortets exempelmening om tidvatten). Kortet är fullständigt och korrekt separerat med ';'."
+    },
+    {
+      "noteId": 1780080620432,
+      "ord": "bokslut",
+      "facit": "ekonomisk årsredovisning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sammanställning av bokföringen vid slutet av en redovisningsperiod",
+        "register": "neutral, neutral, ekonomi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Företagets <font color=\"#3498db\">bokslut</font> visade vinst för första gången.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda huvudbetydelsen 'sammanställning av bokföring vid slutet av en redovisningsperiod' (SAOL: ekon.). Den bildliga användningen ('ett bokslut över hans ungdom') är bara en underbetydelse, ingen egen betydelse som saknas. Exempelmeningen matchar SO:s eget belägg nära nog ordagrant."
+    },
+    {
+      "noteId": 1780080620439,
+      "ord": "libertin",
+      "facit": "vällusting",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som ohämmat ägnar sig åt njutningar",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "vällusting"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han levde som en <font color=\"#3498db\">libertin</font> och struntade i alla förmaningar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar libertin rakt av som 'vällusting' — exakt kortets synonym, alltså direkt bekräftad av ordboken (inte bara en lös association). SO:s definition 'person som ohämmat ägnar sig åt (erotiska) njutningar' matchar kortets huvudbetydelse. Enda betydelsen."
+    },
+    {
+      "noteId": 1780080620431,
+      "ord": "metates",
+      "facit": "omkastning av ljud<br><br>(se Andre och Anders)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Omkastning av språkljud i ett ord",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Namnformerna Andre och Anders skiljs åt av en <font color=\"#3498db\">metates</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda betydelsen 'omkastning av (språk)ljud'. Kortets exempelmening om Andre/Anders motsvarar nästan exakt SO:s och facits eget exempel. Fackspråklig, lingvistik-registret stämmer med SAOL:s ämnesområde (lingv.)."
+    }
+  ],
+  "granskning_turer": 53,
+  "granskning_kostnad_usd": 1.7887276,
+  "granskning_turkrav": 5
+}
