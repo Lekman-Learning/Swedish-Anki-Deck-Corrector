@@ -129,6 +129,77 @@ Läget efter: full v3 **755 → 769**, färdig is:new-pool **455 → 469**,
 underkända 89, pausade 3, spår A kvar 6 745.
 
 
+## Synonymspärren: ordboken måste själv säga det, och tom lista är godkänt (2026-08-12, Adams beslut)
+
+**Adam:** *"kort som inte ska ha synonymer alltså 0 eftersom att kortet
+representerar ett ord som är väldigt unikt och inte har synonymer så krävs inga
+synonymer och blir därigenom godkänt."*
+
+Ny hård regel `synonym_utan_ordboksbelagg` i `forgranska.py`. En synonym godtas
+bara om **ordboken själv pekar ut den**, på ett av två sätt:
+
+* (a) SO taggar korshänvisningen `SYN:synonym`, eller
+* (b) ordet **inleder ett eget led** i SO:s eller SAOL:s definition.
+
+Att kravet är *inleder*, inte *förekommer*, är hela finessen. SAOL definierar
+`pandemi` som "allomfattande farsot" -- `farsot` står där, men modifierat, och
+bara hela frasen är utbytbar. Jämför `triumfera`: "segra; jubla efter att ha
+vunnit framgång", där båda orden inleder sina led och är riktiga synonymglosor.
+En ren containment-kontroll släpper igenom farsot; den här gör det inte.
+
+**Varför den gamla regeln inte räckte.** `synonym_utan_stod` frågar bara om
+ordet förekommer **någonstans i det hämtade underlaget** -- och syn.se ingår i
+det underlaget. syn.se blandar synonymer, överordnade begrepp, syskonord och
+lösa associationer i en platt lista som `las.py` mycket riktigt märker
+*"KANDIDATER, ej facit"*. Regeln var därför uppfylld av allt syn.se råkade
+lista.
+
+**Tom lista är normalfallet, inte ett misslyckande.** Mätt över 828 uppslag med
+egen SO/SAOL-post: **7 %** har `SYN:synonym`, **24 %** har en definition som är
+en synonymuppräkning, **69 % har inget belägg alls**. `baksida.tom_synonym`
+fångar bara tomma strängar i listan, aldrig en tom lista -- verifierat.
+`VERIFIERARINSTRUKTION` säger nu uttryckligen att en tom synonymlista aldrig
+ensam får ge underkänt.
+
+**Det pedagogiska argumentet, som är starkare än det källkritiska:** decket
+pluggas mot HP-provets ORD-del, som *är* ett synonymtest. Distraktorerna där är
+just ord som ligger nära utan att vara utbytbara. En nästan-synonym på kortet
+tränar alltså exakt det fel provet straffar. Tom lista är inte bara ärligare,
+den är bättre.
+
+**Regressionstest:** 22 kända fall, 22 rätt. Fångar farsot/pandemi,
+boja+förtöjning/kätting, antikviteter/kuriosa, inmontering/installation.
+Släpper igenom segra+jubla/triumfera, förutsätta+tänka sig/ponera,
+kokett/behagsjuk, gåsunge/gässling, specialist/fackman (SYN),
+frikostig+givmild/generös (SYN), svågerpolitik/nepotism (SYN),
+anslutning/installation.
+
+### Omfattningen: 676 av 769 full v3-kort bär minst en obelagd synonym (89 %)
+
+Mätt mot live-decket. 9 kort har redan tom synonymrad, 83 är helt rena.
+
+Siffran är hög, men stickprov visar att regeln har rätt i de flesta fallen --
+det är decket som är fel, inte spärren. Korten genererades ursprungligen med
+tre synonymer var oavsett om det fanns några:
+
+| Kort | Kortets synonymer | Vad ordboken säger |
+|---|---|---|
+| `konstitutiv` | bestämmande | "grundläggande, väsentlig" -- kortets ord är sannolikt fel |
+| `beprövad` | tillförlitlig, pålitlig, härdad | "som prövats med framgång" -- följder, inte synonymer |
+| `putslustig` | skämtsam, lustig | "smårolig, skojig" -- två dugliga fanns, kortet tog andra |
+| `bonitet` | godhetsgrad | "grad av avkastningsförmåga" -- ordet finns inte i någon ordbok |
+| `otolog` | öronläkare | "specialist på otologi" -- **äkta falskt utslag** |
+
+`otolog` visar den enda falska formen: ordboken definierar med en fackterm och
+kortet ger det korrekta vardagsordet. Räkna med att en minoritet av de 676 är av
+den sorten.
+
+**Inte en massfix.** De 676 godkändes under den gamla standarden och är en
+arbetslista, inte en brand. Kör om dem batchvis i vanlig ordning -- spärren ger
+urvalet gratis. Blindgranskaren fångade bara 4 av de 14 obelagda i batch2, så
+spärren är inte överflödig bredvid granskaren.
+
+
 ## Nästa steg
 
 Fortsätt Fas 2 i `session_2026-08-04.json`, börja med **"förråda sig"**

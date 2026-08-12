@@ -55,6 +55,7 @@ HARDA = (
     "frammande_uppslagsord",
     "synonym_fel_relation",
     "synonym_utan_stod",
+    "synonym_utan_ordboksbelagg",
     "register_motsager_markning",
 )
 MJUKA = (
@@ -208,6 +209,79 @@ def _har_stod(syn, kallpase, kalltext):
     return False
 
 
+# --- Ordboksbelägg för synonymer (Adams beslut 2026-08-12) --------------------
+#
+# `_har_stod` ovan frågar bara om ordet FÖREKOMMER någonstans i det hämtade
+# underlaget. syn.se ingår i det underlaget, och syn.se blandar synonymer,
+# överordnade begrepp, syskonord och lösa associationer i EN platt lista som
+# `las.py` mycket riktigt märker "KANDIDATER, ej facit". Regeln var alltså
+# uppfylld av precis allt syn.se råkade lista, och fyra av fem underkännanden
+# i batch2 (2026-08-12) var syn.se-ord: `farsot` åt pandemi (överordnad term),
+# `boja`+`förtöjning` åt kätting (fotboja respektive tross), `antikviteter` åt
+# kuriosa (definieras av ålder, inte av det udda), `inmontering` åt
+# installation (hörde till fel betydelse).
+#
+# Belägg kräver härefter att ORDBOKEN säger det, på ett av två sätt:
+#   (a) SO taggar korshänvisningen `SYN:synonym`, eller
+#   (b) ordet inleder ett eget led i SO:s/SAOL:s definition av uppslagsordet.
+#
+# Att kräva att ordet INLEDER ledet är hela finessen. SAOL definierar pandemi
+# som "allomfattande farsot" -- `farsot` står där, men modifierat, och bara
+# hela frasen är utbytbar. Jämför SAOL för triumfera: "segra; jubla efter att
+# ha vunnit framgång", där både `segra` och `jubla` inleder sina led och
+# därför är riktiga synonymglosor. En ren containment-kontroll hade släppt
+# igenom farsot; den här släpper igenom segra och jubla men inte farsot.
+#
+# Mätt över 828 uppslag med egen SO/SAOL-post: 7 % har SYN:synonym, 24 % har
+# en definition som är en synonymuppräkning, 69 % har INGET belägg alls.
+# TOM SYNONYMLISTA ÄR DÄRFÖR NORMALFALLET OCH ETT GODKÄNT KORT -- se
+# `baksida.tom_synonym`, som bara fångar tomma strängar i listan, aldrig en
+# tom lista. För ett deck som pluggas mot HP-provets ORD-del är det dessutom
+# det pedagogiskt rätta: distraktorerna där ÄR ord som ligger nära utan att
+# vara utbytbara, så en nästan-synonym tränar exakt det fel provet straffar.
+def _ordboksbelagg(u, ord_):
+    """Ord som SO/SAOL själva pekar ut som synonymer till uppslagsordet."""
+    belagg = set()
+    for txt, typ in so_relationer(u).items():
+        if typ == "SYN:synonym":
+            belagg.add(txt)
+    for kalla in ("so", "saol"):
+        for h in _hits(u, kalla):
+            s = h.get("_source") or {}
+            if not _samma_uppslag(str(s.get("ortografi", "")), ord_):
+                continue
+            for hb in (s.get("huvudbetydelser") or []):
+                d = _LANKTEXT.sub("", hb.get("definition") or "")
+                for led in re.split(r"[;,]", d):
+                    led = led.strip().strip(".").lower()
+                    if not led:
+                        continue
+                    belagg.add(led)
+                    forsta = re.findall(r"[a-zåäöéèü]+", led)
+                    if forsta:
+                        belagg.add(forsta[0])
+    return belagg
+
+
+def _har_ordboksbelagg(syn, belagg):
+    """Säger ordboken själv att det här är en synonym?"""
+    s = _LANKTEXT.sub("", str(syn or "")).strip().strip(".").lower()
+    if not s:
+        return True  # tom sträng är baksidas regel, inte vår
+    if s in belagg:
+        return True
+    # Flerordssynonym duger om dess huvudord (det första) är belagt -- "insättning
+    # i ämbete" mot SAOL:s "insättning i ämbete".
+    delar = re.findall(r"[a-zåäöéèü]+", s)
+    if delar and delar[0] in belagg:
+        return True
+    # Böjningsvariant: ordboken skriver singular, kortet plural (rarietet/
+    # rariteter). Stammen får matcha, men bara mot ett belagt ord -- inte mot
+    # hela underlaget, vilket var den gamla regelns lucka.
+    st = _stam(s.replace(" ", ""))
+    return len(st) >= 4 and any(b.replace(" ", "").startswith(st) for b in belagg)
+
+
 # SO taggar varje korshänvisning med sin RELATION. Det är den uppgiften hela
 # synonymproblemet handlar om, och den kastades tidigare bort som brus.
 #
@@ -359,6 +433,17 @@ def granska_post(p):
         if utan:
             fel.append(("synonym_utan_stod",
                         f"saknar stöd i hämtad källa: {', '.join(map(str, utan))}"))
+
+    # 4c. Synonymer som bara syn.se/wiktionary stöder -- ordboken själv säger
+    #     ingenting. Tom lista passerar tyst: det är normalfallet (69 %).
+    belagg = _ordboksbelagg(u, ord_)
+    obelagda = [s for s in (pr.get("synonymer") or [])
+                if not _har_ordboksbelagg(s, belagg)]
+    if obelagda:
+        fel.append(("synonym_utan_ordboksbelagg",
+                    f"{', '.join(map(str, obelagda))} -- varken SO:s SYN:synonym "
+                    f"eller SO/SAOL:s definitionstext säger att ordet är en synonym. "
+                    f"Stryk det; tom synonymlista är godkänt"))
 
     # 5. Ordboken HAR märkt ordet, men kortets register nämner inte märkningen.
     reg = str(pr.get("register") or "").lower()
