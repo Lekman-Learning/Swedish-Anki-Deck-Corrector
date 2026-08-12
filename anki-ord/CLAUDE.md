@@ -78,6 +78,57 @@ att `fetch_blue_suspects.py`s docstring antar att definitionen alltid
 stämmer på blå kort. Kontrollera det antagandet under granskningen, inte
 bara synonymen.
 
+## Batch2, 20 is:new-kort: syn.se:s kandidatlista är inte synonymstöd (2026-08-12)
+
+19 kort blindgranskade (ett pausat före granskning, se nedan): **14 godkända,
+5 underkända — 26 %**, mot kvällens tidigare 15 %. Kostnad 1,01 USD, 31 turer.
+
+**Fyra av de fem underkännandena är samma defekt, och den är systematisk:
+synonymer hämtade ur syn.se.**
+
+| Kort | Synonym | Vad granskaren visade |
+|---|---|---|
+| `pandemi` | farsot | Överordnad term — farsot kräver ingen spridning över stora områden |
+| `kätting` | boja, förtöjning | Boja = fotboja; förtöjning = tross/rep. Ingendera är en lastbärande kedja |
+| `kuriosa` | antikviteter | Antikvitet definieras av *ålder*, kuriosa av det *udda* |
+| `installation` | inmontering | Hör till anslutningsbetydelsen, inte konstbetydelsen |
+
+`las.py` skriver ut listan under rubriken **"syn.se (KANDIDATER, ej facit)"** —
+etiketten var alltså redan rätt, och jag behandlade den ändå som beläggning.
+`forgranska.py`s `synonym_utan_stod` fångar inte det, eftersom regeln bara
+kontrollerar att ordet **förekommer** i en källa, inte att källan **påstår
+synonymi**. syn.se blandar synonymer, hyperonymer, kohyponymer och lösa
+associationer i samma platta lista.
+
+**Regel härav:** en synonym får bara skrivas in om en av dessa gäller —
+(a) SO markerar den `SYN:synonym`, eller (b) den står i SO:s eller SAOL:s
+definitionstext för ordet. syn.se duger till att *hitta* kandidater, aldrig till
+att belägga dem. `fackman` (specialist, SYN:synonym) och `generös` (frikostig,
+givmild, båda SYN:synonym) klarade granskningen just därför.
+
+**Det femte underkännandet, `schakt`, är bara delvis rätt.** Granskaren avfärdade
+kortets hisstrumma-betydelse som sakligt fel med hänvisning till SO — men **SAOL
+säger ordagrant "stor öppning i marken; hisstrumma"**, och enligt valvets
+källhierarki avgör SO *och* SAOL dagens betydelser. Underkännandet står ändå,
+för kortet hade ett verkligt fel: det saknade SO:s faktiska andra homograf
+("sänkning av markytan på utstakat område"). Granskaren hade rätt slutsats av
+delvis fel skäl — andra gången en blindgranskare visats resonera fel om SAOL
+(jfr `brödtext` samma dag).
+
+**`förborgad` pausades före granskningen** (`v3_pausad::inget_uppslagsord_i_so_saol`).
+Förgranskningen larmade `frammande_uppslagsord`, och rådatan gav flaggan rätt:
+varken SO eller SAOL har formen som eget uppslagsord, bara verbet `förborga`.
+Betydelsen var inte problemet — registret var det, eftersom `ngt ålderdomlig`
+då vilar på min slutledning i stället för på en märkning.
+
+**Kontrollkorten uteblev:** `v3_kontrollkort.py blanda` hittade 0 av 3 kandidater
+(kort äldre än 3 dagar med `oberoende_verifierad`). Paketet gick alltså ut utan
+planterade fel, så granskarens egen träffsäkerhet är omätt den här gången.
+
+Läget efter: full v3 **755 → 769**, färdig is:new-pool **455 → 469**,
+underkända 89, pausade 3, spår A kvar 6 745.
+
+
 ## Nästa steg
 
 Fortsätt Fas 2 i `session_2026-08-04.json`, börja med **"förråda sig"**

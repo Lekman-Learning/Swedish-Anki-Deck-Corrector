@@ -1,0 +1,376 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse?\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620418,
+      "ord": "fackman",
+      "facit": "specialist",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person med en specialists kompetens på ett visst område",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "specialist"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Låt en <font color=\"#3498db\">fackman</font> dra om elen i badrummet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar en (1) betydelse: 'person med en specialists kompetens på ett visst område', matchar kortet exakt. Facit 'specialist' matchar synonymen. Exempelmening, register och synonym är korrekta."
+    },
+    {
+      "noteId": 1780080620417,
+      "ord": "pandemi",
+      "facit": "världsspridd smitta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Epidemi som sprider sig över mycket stora områden",
+        "register": "neutral, neutral, medicin",
+        "synonymer": [
+          "farsot"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">pandemi</font> stängde skolor över hela världen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger bara en betydelse, som kortet återger korrekt ('epidemi som sprider sig över mycket stora områden') -- ingen hel betydelse saknas. Men synonymen 'farsot' är inte fullt utbytbar: farsot betyder enligt SO bara 'epidemisk sjukdom' i allmänhet, utan krav på spridning över stora/globala områden -- en överordnad term, inte en sann synonym till pandemi. SO ger själv ingen synonym alls till pandemi. Farsot bör bytas ut eller strykas."
+    },
+    {
+      "noteId": 1780080620408,
+      "ord": "installation",
+      "facit": "invigning av professor; &nbsp; an­slutning; &nbsp; större konstverk",
+      "facit_signal": "facit antyder 5 betydelse(r), kortet har 3 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Högtidlig insättning i ämbete ; anslutning till ledningsnät ; konstverk där rummets egen plats medvetet ingår som uttrycksmedel",
+        "register": "neutral, neutral ; neutral, neutral, teknik ; neutral, neutral, konst",
+        "synonymer": [
+          "insättning i ämbete",
+          "anslutning",
+          "inmontering"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Utställningens största <font color=\"#3498db\">installation</font> fyllde hela rummet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger exakt tre betydelser (högtidlig insättning i ämbete; anslutning till ledningsnät; konstverk där platsen ingår som uttrycksmedel) som matchar kortets tre -- facit_signal om 5 betydelser stämmer inte (nbsp-tecken i facit gav falsk räkning), ingen betydelse saknas. Men synonymlistans tredje ord 'inmontering' hör inte till konstbetydelsen. Enligt SAOL betyder 'inmontering' montering/infogande av något tekniskt, dvs. det hör till betydelse 2 (anslutning), där 'anslutning' redan står som synonym. Konstbetydelsen saknar därmed en fungerande synonym."
+    },
+    {
+      "noteId": 1780080620415,
+      "ord": "triumfera",
+      "facit": "segra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vinna stor framgång ; jubla segerstolt efter en framgång",
+        "register": "neutral, positiv ; neutral, neutral",
+        "synonymer": [
+          "segra",
+          "jubla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter tre förlorade set lyckades hon ändå <font color=\"#3498db\">triumfera</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser i samma ordning som kortet (vinna stor framgång ; jubla segerstolt), korrekt separerade med ';'. Synonymerna 'segra' och 'jubla' matchar respektive betydelse. Exempelmeningen illustrerar segerbetydelsen korrekt."
+    },
+    {
+      "noteId": 1780080620423,
+      "ord": "kuriosa",
+      "facit": "märkvärdiga saker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Samling märkvärdiga eller egendomliga saker",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "rariteter",
+          "sällsyntheter",
+          "antikviteter"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hyllorna var fulla av <font color=\"#3498db\">kuriosa</font> från farfars resor.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s uppslag (kuriosum, plural kuriosa) ger en betydelse som täcker både allmänna kuriositeter och specifikt 'ovanliga föremål' i plural -- kortets 'samling märkvärdiga eller egendomliga saker' fångar detta korrekt, ingen betydelse saknas. Men synonymen 'antikviteter' är inte utbytbar: en antikvitet definieras av ålder och värde, medan kuriosa handlar om det udda/märkvärdiga oavsett ålder. Byt 'antikviteter' mot t.ex. 'kuriositeter' eller 'udda föremål'."
+    },
+    {
+      "noteId": 1780080620404,
+      "ord": "ponera",
+      "facit": "anta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förutsätta något som ett faktum",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "förutsätta",
+          "tänka sig",
+          "antaga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi kan <font color=\"#3498db\">ponera</font> att priset fördubblas och räkna om kalkylen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'förutsätta som ett faktum för resonemangs skull' matchar kortet; nyansen 'för resonemangs skull' framgår tydligt av exempelmeningen ('vad gör vi då', 'räkna om kalkylen'). Synonymer och register stämmer."
+    },
+    {
+      "noteId": 1780080620402,
+      "ord": "kätting",
+      "facit": "grov kedja<br><a href=\"https://www.google.com/imgres?q=k%C3%A4tting&amp;imgurl=https%3A%2F%2Fimg.bolist.se%2Fimg%2Fedcfce9ecd024abab2b05c4aa9bda9c3%2Fkatting-langlank-carlmarks-elforzink-4x32mm-2m-din763.jpg%3Ft%3Dproduct%26gs%3D1220x1220%26v%3Df0f8f4464834b1357c2e97aab5e42ddc&amp;imgrefurl=https%3A%2F%2Fbolist.se%2Fprodukt%2Fkatting-langlank-carlmarks-elforzink-4x32mm-2m-din763%2F&amp;docid=ynPF8DmBNMADwM&amp;tbnid=F5qXOab8gCCnfM&amp;vet=12ahUKEwjAzKy88tWMAxUnKBAIHY6dIeoQM3oECHMQAA..i&amp;w=1220&amp;h=1220&amp;hcb=2&amp;ved=2ahUKEwjAzKy88tWMAxUnKBAIHY6dIeoQM3oECHMQAA\"><div><div><div><img alt=\"4X32MM 2M DIN763 | BOLIST ...\" src=\"paste-b2568e9d3846c004c035c45382d444a69612f8ef.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Grövre kedja avsedd att bära tyngre laster",
+        "register": "neutral, neutral, teknik",
+        "synonymer": [
+          "boja",
+          "förtöjning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Lasten säkrades med en <font color=\"#3498db\">kätting</font> av härdat stål.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s enda betydelse ('grövre kedja avsedd att bära tyngre laster, särskilt ankarkedja på fartyg') matchar kortets huvudbetydelse. Men båda synonymerna är fel: 'boja' betyder enligt SO en låsbar fjätter/fotboja för att begränsa någons rörelsefrihet, inte en lastbärande kedja; 'förtöjning' betyder enligt SO den anordning (ofta tross/rep) som ett fartyg förtöjs med, inte en kedja. Rätt synonymer vore t.ex. 'ankarkedja' eller 'länk'."
+    },
+    {
+      "noteId": 1780080620410,
+      "ord": "behagsjuk",
+      "facit": "göra sig överdrivet tilldragande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som på ett överdrivet sätt försöker göra sig tilldragande",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "kokett",
+          "flörtig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">behagsjuka</font> leende övertygade ingen i rummet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse matchar kortet nästan ordagrant. 'Kokett' matchar SO:s cohyponym, 'flörtig' ligger nära nog i betydelse. Den lätt negativa valören bekräftas av SO:s exempel ('framstår som behagsjuk och självcentrerad')."
+    },
+    {
+      "noteId": 1780080620405,
+      "ord": "avvakta",
+      "facit": "vänta och se",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tills vidare avstå från att handla i väntan på något",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "invänta",
+          "avbida",
+          "förbida"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi bör <font color=\"#3498db\">avvakta</font> tills provsvaren kommer.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse matchar kortet nästan ordagrant. Synonymerna (invänta, avbida, förbida) ligger nära SO:s cohyponymer (bida, dröja, vänta)."
+    },
+    {
+      "noteId": 1780080620400,
+      "ord": "armera",
+      "facit": "förstärka material<br><a href=\"https://www.google.com/imgres?q=armering&amp;imgurl=https%3A%2F%2Fcelsa-steelservice.se%2Fwp-content%2Fuploads%2F2019%2F08%2Farmering_betong-1-1080x364.jpg&amp;imgrefurl=https%3A%2F%2Fcelsa-steelservice.se%2Farmering%2F&amp;docid=SGXdfi8ZIrCZsM&amp;tbnid=lo4v3o2MZnJTrM&amp;vet=12ahUKEwip8efcpt2LAxVWAxAIHXODE9QQM3oECBgQAA..i&amp;w=1080&amp;h=364&amp;hcb=2&amp;ved=2ahUKEwip8efcpt2LAxVWAxAIHXODE9QQM3oECBgQAA\"><div><div><div><img alt=\"Celsa Steel Service\" src=\"paste-792ab79e16c8b8c8ba815d73008aab6d87d29712.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förstärka material genom att foga in ett mer hållfast ämne ; förse med beväpning",
+        "register": "neutral, neutral, teknik ; neutral, neutral, militär",
+        "synonymer": [
+          "förstärka",
+          "beväpna",
+          "bestycka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Betongplattan måste <font color=\"#3498db\">armeras</font> med stålnät för att bära lasten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser (militär: förse med beväpning; teknik: förstärka material). Kortet leder med materialbetydelsen, vilket är rimligt eftersom 'armerad betong' är betydligt vanligare i dagligt språk än den militära användningen, trots att SO daterar den militära betydelsen tidigare (1740 mot 1875). Synonymerna matchar respektive betydelse."
+    },
+    {
+      "noteId": 1780080620407,
+      "ord": "schakt",
+      "facit": "djupt hål<br><img alt=\"webp image\" src=\"paste_1759081500963.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fördjupning i marken med mer eller mindre lodräta väggar ; lodrät trumma genom en byggnad, till exempel för hiss",
+        "register": "neutral, neutral, teknik ; neutral, neutral, teknik",
+        "synonymer": [
+          "gruvhål",
+          "brunn",
+          "trumma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Grävmaskinen öppnade ett djupt <font color=\"#3498db\">schakt</font> för vattenledningen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s första homograf ('fördjupning i marken med lodräta väggar, ursprungligen i gruva') matchar kortets första betydelse. Men kortets ANDRA betydelse ('lodrät trumma genom en byggnad, t.ex. för hiss') är sakligt fel: SO:s verkliga andra homograf betyder 'sänkning av markytan på utstakat område t.ex. före väg- eller husbygge', dvs. markarbete inför byggnation -- inte ett hisschakt. 'Hisschakt' är enligt SO bara ett sammansatt ord kopplat till FÖRSTA homografen. Andra betydelsen bör bytas mot 'markarbete/urgrävning inför väg- eller husbygge'."
+    },
+    {
+      "noteId": 1780080620421,
+      "ord": "bondånger",
+      "facit": "samvetskval",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skamsen ruelse över något man har gjort",
+        "register": "ngt ålderdomlig, negativ",
+        "synonymer": [
+          "samvetskval",
+          "självförebråelse",
+          "dåligt samvete"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Dagen efter festen kom <font color=\"#3498db\">bondångern</font> över allt han hade sagt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO saknar träff men SAOL bekräftar ordet: 'skamsen ånger', ålderdomligt, vilket matchar kortets 'skamsen ruelse över något man har gjort' och registret 'ngt ålderdomlig, negativ' exakt. Facit 'samvetskval' stämmer väl överens."
+    },
+    {
+      "noteId": 1780080620412,
+      "ord": "nepotism",
+      "facit": "att favorisera släktingar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Orättvist gynnande av släktingar eller vänner",
+        "register": "neutral, negativ, politik",
+        "synonymer": [
+          "svågerpolitik",
+          "vänskapskorruption",
+          "gunstlingssystem"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att chefen anställde sin egen svåger var ren <font color=\"#3498db\">nepotism</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse matchar kortet ordagrant, inklusive synonymen 'svågerpolitik'."
+    },
+    {
+      "noteId": 1780080620416,
+      "ord": "salongslejon",
+      "facit": "snobb",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som tycker om att synas på eleganta tillställningar",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "dandy",
+          "sprätt",
+          "sprätthök"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han rörde sig som ett <font color=\"#3498db\">salongslejon</font> mellan borden på banketten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse matchar kortet nästan ordagrant. Synonymerna dandy/sprätt/sprätthök ligger i linje med hur ordet vanligen grupperas i svenska synonymordböcker."
+    },
+    {
+      "noteId": 1780080620413,
+      "ord": "generös",
+      "facit": "frikostig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som gärna delar med sig ; väl tilltagen ; välvillig och tolerant",
+        "register": "neutral, positiv ; neutral, positiv ; neutral, positiv",
+        "synonymer": [
+          "frikostig",
+          "givmild"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon var <font color=\"#3498db\">generös</font> med både sin tid och sina pengar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s struktur (dela med sig / väl tilltagen mängd / välvillig-tolerant) matchar kortets tre betydelser och ordning; 'generöst bidrag'-nyansen i SO är bara en tillämpning av huvudbetydelsen, ingen egen betydelse som saknas."
+    },
+    {
+      "noteId": 1780080620401,
+      "ord": "gässling",
+      "facit": "gåsunge",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Unge av gås",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [
+          "gåsunge"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En kull <font color=\"#3498db\">gässlingar</font> följde gåsen ner till dammen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('gåsunge') matchar kortet och facit exakt."
+    },
+    {
+      "noteId": 1780080620419,
+      "ord": "med bravur",
+      "facit": "skickligt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Med stor och påfallande skicklighet",
+        "register": "neutral, positiv",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon klarade den svåra uppgiften <font color=\"#3498db\">med bravur</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslag 'bravur' ('stor och påfallande skicklighet') matchar kortets definition av frasen exakt, och SO:s exempelmening är nästan identisk med kortets."
+    },
+    {
+      "noteId": 1780080620414,
+      "ord": "avbasning",
+      "facit": "upptuktelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lindrigare kroppslig bestraffning ; skarp tillrättavisning",
+        "register": "neutral, negativ ; neutral, negativ",
+        "synonymer": [
+          "smörj",
+          "prygel",
+          "upptuktelse",
+          "tillrättavisning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick en rejäl <font color=\"#3498db\">avbasning</font> av chefen inför hela avdelningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse (lindrigare kroppslig bestraffning, även muntlig upptuktelse) matchar kortets två betydelser och deras ordning. Synonymen 'upptuktelse' matchar facit."
+    },
+    {
+      "noteId": 1780080620411,
+      "ord": "doning",
+      "facit": "sak, don",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Anordning eller sak av obestämt slag",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "grunka",
+          "pryl"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vad är det för <font color=\"#3498db\">doning</font> du har satt fast på cykeln?",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('don, vanligen del av en uppsättning för visst ändamål', vardagligt) matchar kortets 'anordning eller sak av obestämt slag' tillräckligt väl -- exempelmeningen ('vad är det för doning') visar den vardagliga, vaga användningen. Facit 'sak, don' och synonymerna grunka/pryl stämmer."
+    }
+  ],
+  "granskning_turer": 31,
+  "granskning_kostnad_usd": 1.0138355,
+  "granskning_turkrav": 5
+}
