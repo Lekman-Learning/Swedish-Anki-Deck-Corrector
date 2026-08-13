@@ -243,10 +243,21 @@ def _har_stod(syn, kallpase, kalltext):
 # ointressant", "ofta nedsättande", "bildl. hård". Markören är metatext om
 # glosan, inte en del av den -- utan den här strippningen föll `blek` bort
 # som obelagt trots att SAOL listar det, eftersom `äv.` stod först i ledet.
+# Gradadverben tillagda 2026-08-13, samma argument: SO definierar `avfallen`
+# som "starkt avmagrad" och `ofelbar` som "helt säkert" -- graden hör till
+# definitionen, glosan är `avmagrad` respektive `säkert`. Utan dem föll båda
+# bort som obelagda trots att ordboken säger exakt det ordet.
 _LEDMARKOR = re.compile(
     r"^(äv\.?|ofta|ibl\.?|ibland|särsk\.?|särskilt|eg\.?|egentligen|bildl\.?|"
-    r"bildligt|vanl\.?|vanligen|numera|förr|ngt|något|mest|i sht|i synnerhet)\s+",
+    r"bildligt|vanl\.?|vanligen|numera|förr|ngt|något|mest|i sht|i synnerhet|"
+    r"starkt|helt|mycket|ganska|tämligen|alltför)\s+",
     re.I)
+
+# SO sätter ofta ett frivilligt led inom parentes FÖRE glosan: "(mild)
+# uppmaning till visst handlande", "(svag) ansats till förekomst". Parentesen
+# är en precisering av definitionen, inte en del av synonymen -- utan den här
+# strippningen blev `uppmaning` och `ansats` obelagda trots att de står där.
+_INLEDANDE_PARENTES = re.compile(r"^\([^)]*\)\s*")
 
 
 def _ordboksbelagg(u, ord_):
@@ -261,15 +272,25 @@ def _ordboksbelagg(u, ord_):
             if not _samma_uppslag(str(s.get("ortografi", "")), ord_):
                 continue
             for hb in (s.get("huvudbetydelser") or []):
-                d = _LANKTEXT.sub("", hb.get("definition") or "")
-                for led in re.split(r"[;,]", d):
-                    led = _LEDMARKOR.sub("", led.strip().lower()).strip().strip(".")
-                    if not led:
-                        continue
-                    belagg.add(led)
-                    forsta = re.findall(r"[a-zåäöéèü]+", led)
-                    if forsta:
-                        belagg.add(forsta[0])
+                # Underbetydelserna räknas också. SO lägger ofta sina RENASTE
+                # synonymglosor där: `balsamisk` har definitionen "som doftar
+                # som balsam" (en omskrivning, oanvändbar som synonym) och
+                # underbetydelserna "väldoftande" + "lindrande" -- alltså
+                # precis de två ord som HÖR hemma på kortet. Utan den här
+                # raden underkände spärren dem båda. Hittat 2026-08-13.
+                defs = [hb.get("definition") or ""]
+                defs += [ub.get("definition") or "" for ub in (hb.get("underbetydelser") or []) if ub]
+                for d in defs:
+                    d = _LANKTEXT.sub("", d)
+                    for led in re.split(r"[;,]", d):
+                        led = _INLEDANDE_PARENTES.sub("", led.strip().lower())
+                        led = _LEDMARKOR.sub("", led).strip().strip(".")
+                        if not led:
+                            continue
+                        belagg.add(led)
+                        forsta = re.findall(r"[a-zåäöéèü]+", led)
+                        if forsta:
+                            belagg.add(forsta[0])
     return belagg
 
 
@@ -401,7 +422,19 @@ def _riktiga_underbetydelser(u):
 
 
 def granska_post(p):
-    """Returnerar lista med (regel, detalj) för en post."""
+    """Returnerar lista med (regel, detalj) för en post.
+
+    En post kan bära `forgranska_tillat`: {regel: motivering}. Undantaget
+    döljer INTE regeln -- flaggan skrivs om till `<regel>_tillaten` och blir
+    mjuk, så den syns både i förgranskningens utskrift och i sessionsfilen som
+    blindgranskaren läser. Samma princip som `baksida.validate_adamtal(tillat=)`:
+    *"Använd den hellre än att göra en regel mjuk -- undantaget syns då i
+    sessionsfilen."* Ett tyst undantag vore värre än ingen regel alls, eftersom
+    kortet då ser granskat ut.
+
+    Motiveringen är obligatorisk. Ett undantag utan skäl behandlas som om det
+    inte fanns.
+    """
     fel = []
     ord_ = (p.get("ord") or "").strip()
     pr = p.get("proposed") or {}
@@ -530,6 +563,11 @@ def main():
     rapport, rakning = [], Counter()
     for p in poster:
         fel = granska_post(p)
+        tillat = {k: v for k, v in (p.get("forgranska_tillat") or {}).items()
+                  if str(v or "").strip()}
+        if tillat:
+            fel = [(f"{r}_tillaten", f"{t}  || MOTIVERING: {tillat[r]}")
+                   if r in tillat else (r, t) for r, t in fel]
         if a.bara_hard:
             fel = [f for f in fel if f[0] in HARDA]
         if fel:
