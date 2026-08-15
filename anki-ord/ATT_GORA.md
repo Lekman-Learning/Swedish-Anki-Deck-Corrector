@@ -97,3 +97,75 @@ sig har någon annan än jag rört kortet.
 3. Fundera på om `slapp` ska ta bort `oberoende_verifierad` när Adam rört
    kortet. Annars påstår decket att ett kort är oberoende verifierat i en form
    det inte längre har.
+
+---
+
+## Hittat 2026-08-15
+
+### 1. `slaupp.py` kraschar på uppslagsord som innehåller `/`
+
+`regel / rigel` gav `FileNotFoundError: 'uppslag\regel / rigel.json'` — snedstrecket
+gör filnamnet till en ogiltig sökväg. Två följdproblem gör den värre än den ser ut:
+
+* **Kraschen sker EFTER hämtningen.** Alla tre API-anropen görs, svaret kastas.
+* **Körningen avbryts.** Ord som ligger efter det trasiga i listan slås aldrig upp
+  — `svärmisk` (nr 50) föll bort tyst och upptäcktes bara för att applicera-steget
+  saknade det.
+
+Fix: `re.sub(r'[\/:*?"<>|]', '_', ordet)` på filnamnet, och låt loopen fånga
+undantag per ord i stället för att fälla hela körningen.
+
+### 2. Två kort har defekt framsida
+
+* **`kvintessensen`** står i bestämd form; ordbokens lemma är `kvintessens`.
+  Hål 0 gav `traffar=INGEN`. Samma klass som `te`/`tes` och `gem`/`gemen`.
+* **`regel / rigel`** har två stavningar i samma fält, och `regel` är dessutom ett
+  helt annat ord ('föreskrift, norm', latin *regula*) än låsanordningen.
+* **`divan`** är genuint tvetydig: möbelns grundform ELLER bestämd form av `diva`.
+  SO och SAOL listar båda. Kortet skriver möbeln.
+
+Alla tre är lämnade orörda — framsidan ändrar vad Adam testas på och är hans beslut.
+
+### 3. Förorenade MÄRKNINGAR, inte bara definitioner
+
+Känt sedan tidigare att `slaupp.py`s sammandrag slår ihop fuzzy-träffar. Nytt fynd:
+**registermärkningen smittas likadant**, och den spärren larmar på det.
+
+| Ord | Fick märkningen | Från |
+|---|---|---|
+| `på nåder` | "något högtidligt" | `nådens år` |
+| `vind för våg` | "vardagligt" | `grön våg` |
+| `barka åt skogen` | "delvis historiskt" | `barka` = behandla segel |
+| `fiken` | "vardagligt" | `fik` = kaféet |
+| `vitsord` | "finl." | SAOL:s finlandssvenska bibetydelse |
+
+Alla fem krävde redovisat undantag. Det är värt en egen kontroll: när ett ord har
+främmande uppslagsord i träffarna är dess märkning lika misstänkt som dess glosor.
+
+### 4. Blindgranskningen kraschade på ett 53-posters paket (2026-08-15)
+
+`blindgranska.py sessions/session_2026-08-15_v3-paket-repetition.json` gav:
+
+```
+RuntimeError: claude gav inget användbart svar (returkod 1)
+stdout: {"is_error":true,"duration_api_ms":1397289,"num_turns":1,
+         "stop_reason":"stop_sequence","total_cost_usd":3.66566955,
+         "usage":{"input_tokens":0,"output_tokens":0, ...}}
+```
+
+**23 minuter, 3,67 USD, noll utdata, noll tokens registrerade.** `num_turns: 1`
+och `stop_reason: "stop_sequence"` -- granskaren stannade direkt utan att svara.
+
+Skillnaden mot batchen som gick igenom samma kväll: **53 poster mot 50.** Det kan
+vara storleken, men det kan lika gärna vara en övergående störning -- en enda
+observation räcker inte för att avgöra.
+
+**Följd just nu: 50 kort ligger skrivna och applicerade i Anki men utan
+`oberoende_verifierad`.** De är alltså INTE full v3 och släpps inte. Frågan
+`tag:v3_granskad::2026-08-15 -tag:oberoende_verifierad::*` hittar dem (55 st,
+inklusive de 5 underkända från spår A-batchen).
+
+**Nästa gång:** kör om paketet först utan ändringar -- om det fungerar var det
+en störning. Fungerar det inte, dela paketet i två om ~27 (fortfarande långt
+över golvet på 17) och jämför. Logga utfallet här oavsett vilket; det här är
+första gången steget failat helt sedan det byggdes.
