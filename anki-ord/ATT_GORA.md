@@ -169,3 +169,23 @@ inklusive de 5 underkända från spår A-batchen).
 en störning. Fungerar det inte, dela paketet i två om ~27 (fortfarande långt
 över golvet på 17) och jämför. Logga utfallet här oavsett vilket; det här är
 första gången steget failat helt sedan det byggdes.
+
+**Omkörning samma kväll — failade igen, men annorlunda:**
+
+```
+AVBRYTER: granskaren gjorde bara 4 turer på 53 kort (kräver >= 13).
+```
+
+Andra gången är alltså **inte** en krasch utan en spärr som gjorde sitt jobb:
+granskaren svarade utan att slå upp något, och en obelagd dom får inte skrivas in.
+
+**Det ändrar diagnosen.** Storleken är sannolikt inte problemet — samma kväll
+klarades 50 poster med 18 turer. Båda felen pekar i stället mot att
+granskarprocessen **inte kommer åt uppslagningarna**: första gången noll utdata
+efter 23 minuter, andra gången svar utan hämtningar. Felmeddelandet säger det
+själv: *"Kontrollera att WebFetch är tillåten och att svenska.se svarar."*
+
+**Dela alltså INTE paketet än** — det åtgärdar fel sak. Kontrollera först att den
+fristående `claude -p`-processen får använda WebFetch, och att svenska.se svarar
+från den miljön. Kostnad hittills för de två försöken: **3,67 USD plus en
+omkörning, noll granskade kort.**
