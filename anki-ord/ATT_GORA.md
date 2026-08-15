@@ -189,3 +189,22 @@ själv: *"Kontrollera att WebFetch är tillåten och att svenska.se svarar."*
 fristående `claude -p`-processen får använda WebFetch, och att svenska.se svarar
 från den miljön. Kostnad hittills för de två försöken: **3,67 USD plus en
 omkörning, noll granskade kort.**
+
+**Diagnosen rättad efter kontroll (2026-08-15, sent):** båda mina hypoteser var fel.
+
+* **Inte behörigheten.** `TILLATNA_VERKTYG = ["Read", "WebFetch", "WebSearch"]` —
+  WebFetch är redan tillåten, så felmeddelandets egen gissning stämmer inte.
+* **Inte storleken.** Paketet som failade är **mindre** än det som lyckades:
+  42 854 byte på 53 poster mot 53 049 byte på 50. Snitt per post 647 mot 896 tecken.
+
+Kvar står **variation i granskarens beteende**. Tröskeln är `max(5, antal // 4)`,
+alltså 13 turer för 53 kort. Samma sorts jobb gav 18 turer i den lyckade körningen
+och 4 i den failade. Spärren gör exakt vad den ska — den skiljer en granskare som
+slår upp från en som svarar ur minnet — men den kan inte tvinga fram uppslagningar.
+
+**Slutsats: dela inte paketet, kör om.** Failar tre körningar i rad är det något
+systematiskt och då är delning nästa steg. En enstaka miss är väntad variation.
+
+Värt att överväga senare: låta scriptet **själv köra om en gång** vid turer under
+tröskeln, i stället för att avbryta och kräva manuellt ingripande. Kostnaden för
+en omkörning är densamma som för den misslyckade körningen som redan betalats.
