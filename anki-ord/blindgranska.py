@@ -82,6 +82,12 @@ ARBETSGÅNG per kort:
   att avgöra, inte ett konstaterat fel.
 - Misslyckas en uppslagning: skriv det uttryckligen i anmärkningen och döm försiktigt.
 
+KRAV PÅ ARBETSMÄNGD: du ska göra minst {krav} verktygsanrop i den här uppgiften.
+En granskning med färre anrop KASSERAS automatiskt och sparas inte, eftersom en
+dom utan uppslagning inte går att skilja från en dom med. Slå upp orden ett i
+taget. Försök inte spara turer genom att döma flera ur minnet -- det gör hela
+körningen värdelös, inte snabbare.
+
 "godkand" betyder att du själv skulle låta någon lära sig ordet från kortet.
 
 SVARA MED ENBART JSON, ingen text före eller efter, exakt denna form:
@@ -114,7 +120,7 @@ def _claude_binar():
     return binar
 
 
-def _kor_granskare(poster, instruktion, modell, timeout):
+def _kor_granskare(poster, instruktion, modell, timeout, krav):
     """Startar en fristående claude-process i en TOM katalog. Se docstring."""
     arbetsrum = tempfile.mkdtemp(prefix="blindgranskning_")
     try:
@@ -131,7 +137,8 @@ def _kor_granskare(poster, instruktion, modell, timeout):
         # vilket pekade bort från längden. Kommandoraden hålls nu kort.
         with open(os.path.join(arbetsrum, "instruktion.md"), "w",
                   encoding="utf-8") as f:
-            f.write(PROMPT.format(n=len(poster), instruktion=instruktion.strip()))
+            f.write(PROMPT.format(n=len(poster), krav=krav,
+                                  instruktion=instruktion.strip()))
         prompt = ("Läs `instruktion.md` i din arbetskatalog och följ den exakt. "
                   "Den beskriver en granskningsuppgift och vilket format svaret "
                   "ska ha.")
@@ -154,6 +161,44 @@ def _kor_granskare(poster, instruktion, modell, timeout):
         return json.loads(r.stdout)
     finally:
         shutil.rmtree(arbetsrum, ignore_errors=True)
+
+
+def _granska_med_omkorning(poster, instruktion, modell, timeout, krav, forsok=2):
+    """Kor granskaren, och kor om EN gang om den gjorde for fa turer.
+
+    Bakgrund 2026-08-15: samma paket gav 18 turer i en korning och 4 i nasta.
+    Det ar variation i granskarens beteende, inte ett fel i uppsattningen --
+    behorigheten var redan pa plats och det failade paketet var MINDRE an det
+    som lyckades. Tidigare avbrots hela jobbet vid for fa turer och kravde att
+    nagon startade om for hand. Kostnaden for en omkorning ar densamma som for
+    den misslyckade korning som redan betalats, sa den gors nu automatiskt.
+
+    Spärren tas INTE bort -- den ligger kvar nedstroms och falller aven det
+    andra forsoket om det ocksa svarar ur minnet.
+    """
+    svar = None
+    for n in range(1, forsok + 1):
+        try:
+            svar = _kor_granskare(poster, instruktion, modell, timeout, krav)
+        except RuntimeError as e:
+            print("  forsok %d/%d misslyckades: %s"
+                  % (n, forsok, str(e).splitlines()[0]))
+            if n == forsok:
+                raise
+            continue
+        turer = svar.get("num_turns") or 0
+        if svar.get("is_error"):
+            print("  forsok %d/%d: granskaren felade" % (n, forsok))
+            if n == forsok:
+                return svar
+            continue
+        if turer >= krav:
+            if n > 1:
+                print("  forsok %d gav %d turer -- over troskeln %d" % (n, turer, krav))
+            return svar
+        print("  forsok %d/%d gav bara %d turer (kraver >= %d) -- kor om automatiskt"
+              % (n, forsok, turer, krav))
+    return svar
 
 
 def _plocka_json(text):
@@ -191,10 +236,13 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
         print("\n--- vad granskaren far se (forsta posten) ---")
         print(json.dumps(blint[0], ensure_ascii=False, indent=2))
         print("\n--- prompt ---")
-        print(PROMPT.format(n=len(blint), instruktion=data.get("instruktion", "")))
+        print(PROMPT.format(n=len(blint), krav=max(5, len(blint) // 4),
+                            instruktion=data.get("instruktion", "")))
         return 0
 
-    svar = _kor_granskare(blint, data.get("instruktion", ""), modell, timeout)
+    krav = max(5, len(blint) // 4)
+    svar = _granska_med_omkorning(blint, data.get("instruktion", ""),
+                                  modell, timeout, krav)
     if svar.get("is_error"):
         print("AVBRYTER: granskaren felade: %s" % svar.get("result"))
         return 1
@@ -238,7 +286,6 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
     # väl under vad en verklig körning gör (del 1 samma dag: 51 turer på 25
     # kort) men långt över vad ett minnessvar producerar.
     turer = svar.get("num_turns") or 0
-    krav = max(5, len(kvar) // 4)
     if turer < krav:
         print("AVBRYTER: granskaren gjorde bara %d turer på %d kort (kräver >= %d).\n"
               "  Så få turer betyder att uppslagningarna aldrig gjordes, och verdikten\n"

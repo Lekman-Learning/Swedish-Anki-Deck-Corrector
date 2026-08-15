@@ -208,3 +208,23 @@ systematiskt och då är delning nästa steg. En enstaka miss är väntad variat
 Värt att överväga senare: låta scriptet **själv köra om en gång** vid turer under
 tröskeln, i stället för att avbryta och kräva manuellt ingripande. Kostnaden för
 en omkörning är densamma som för den misslyckade körningen som redan betalats.
+
+**ÅTGÄRDAT 2026-08-15 (sent): två ändringar i `blindgranska.py`.**
+
+*1. Kravet syns nu för granskaren.* Spärren var **osynlig för den som granskades** —
+prompten sa "SLÅ UPP ORDET SJÄLVT" men nämnde aldrig att för få verktygsanrop
+kasserar hela jobbet. En granskare som optimerar för att bli klar hade alltså
+inget skäl att veta att genvägen förstörde körningen. Prompten säger nu rakt ut:
+
+> *"du ska göra minst {krav} verktygsanrop … En granskning med färre anrop
+> KASSERAS automatiskt och sparas inte … det gör hela körningen värdelös, inte
+> snabbare."*
+
+*2. Automatisk omkörning.* Ny `_granska_med_omkorning()` kör granskaren igen **en
+gång** om turerna hamnar under tröskeln, i stället för att avbryta och kräva att
+någon startar om för hand. Kostnaden för omkörningen är densamma som för den
+misslyckade körning som redan är betald.
+
+⚠️ **Spärren är INTE borttagen.** Den ligger kvar nedströms och fäller även andra
+försöket om det också svarar ur minnet. Det som ändrats är bara att ett
+misslyckande inte längre kräver mänskligt ingripande.
