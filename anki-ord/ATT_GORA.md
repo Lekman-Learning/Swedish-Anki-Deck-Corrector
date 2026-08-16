@@ -271,3 +271,77 @@ något. Rate limit eller veckokvot ger exakt det mönstret.
 
 **Kör inte fler försök blint.** Tre av fyra kostade pengar utan att ge ett enda
 granskat kort.
+
+### LÖST 2026-08-16: paketstorleken, och de tre kontrollerna i tur och ordning
+
+Kontrollistan ovan följdes, och den första punkten avfärdade genast de två
+hypoteser som stod kvar:
+
+```
+$ claude -p "hej" --output-format json      # i tom katalog
+{"is_error":false,"duration_api_ms":1710,"total_cost_usd":0.0665526, ...}
+```
+
+**Alltså varken kvoten eller CLI:t.** Kontot svarade normalt minuterna efter att
+fjärde försöket nekats. Punkt 2 och 3 behövde aldrig köras.
+
+Kvar stod paketet, och delkörningar avgjorde saken:
+
+| Poster | Turer | Kostnad | Utfall |
+|---|---|---|---|
+| **53** | 1 / 4 / 11 / 1 | 3,67 USD + 3 | ❌ fyra gånger |
+| **20** | 38 | 1,28 USD | ✅ |
+| **10** | 20 | 0,74 USD | ✅ |
+
+**Granskaren gör ~1,9 turer per kort.** Det är den siffran som förklarar allt:
+53 kort kräver omkring **100 turer**, och en `claude -p`-process har ett tak för
+hur många turer den får ta. Körning 1 passar mönstret exakt — 23 minuter och
+3,67 USD betalt, alltså arbetet faktiskt utfört, men `num_turns: 1` och inget
+svar när taket slog i innan JSON:en hann skrivas.
+
+**Det rättar min egen felslutning från i går.** Jag mätte paketen i *byte* (42 854
+mot 53 049) och skrev "inte storleken — det failade paketet är mindre". Måttet var
+fel: granskaren betalar per **kort**, inte per tecken, eftersom varje kort kostar
+sina egna uppslagningar. Ett kompakt paket med fler poster är dyrare i turer än ett
+mångordigt med färre. Byte var aldrig rätt enhet.
+
+**Regel härefter: högst ~25 poster per blindgranskning.** Är paketet större, dela
+med `--antal`. Spärren i `granska()` säger nu ifrån före körningen i stället för
+efter att pengarna är spenderade.
+
+**Tre ändringar i `blindgranska.py`:**
+
+1. **`--antal N`** — granska bara de N första odömda. Urvalet görs på
+   `verdikt`-fältet, så delkörningar är återupptagbara utan egen bokföring.
+2. **Felmeddelandet kapades vid 500 tecken → 8 000.** `claude` lägger sin
+   felorsak i JSON-fältet `result`, som kommer EFTER `usage`-blocket. Alla fyra
+   failade körningar visade därför bara *att* något gick fel, aldrig *vad* —
+   stdout tog slut mitt i usage-siffrorna. Samma felklass som `raw-verktyg/`s
+   kapningsregel finns för att stänga: en kapad utdata som ser komplett ut är
+   värre än ingen alls.
+3. **`granskning_korningar`** — varje delkörning läggs till i en lista.
+   `granskning_turer` skrivs över av nästa omgång, och då försvann mätningen för
+   de tidigare; exakt den lucka fältet lades till för att stänga.
+
+### `apoplexi` — andra gången en blindgranskare har bevisligen fel
+
+Underkändes för "sakfel: kortet anger 'blödning ELLER propp', men SAOL definierar
+ordet som hjärnblödning". SO:s kedja säger motsatsen:
+
+* `apoplexi` → **"slaganfall"**
+* `slaganfall` → **"plötslig förlamning, medvetslöshet eller död särsk. till följd
+  av cirkulationsstörning i hjärnan (blödning el. blodpropp)"**
+
+Kortet följer SO ordagrant. **Samma felmönster som `brödtext` 2026-08-12:**
+granskaren dömde på SAOL:s korta glosa där SO — som prompten uttryckligen säger
+"avgör dagens betydelser" — har den fylliga definitionen. Två observationer är ett
+mönster: SAOL är ett *stavnings*lexikon och dess glosor är avsiktligt knappa, men
+de läser som fullständiga definitioner.
+
+**Värt att pröva i prompten:** säg rakt ut att SAOL:s korthet inte är ett
+motargument mot en fylligare betydelse i SO, och att ett `jfr`- eller
+hänvisningsord ska följas ett steg. Ändra dock inte mitt i ett paket — då blir
+delkörningarna inte jämförbara.
+
+Kortet skickas tillbaka **oförändrat** med SO-citatet inskrivet i sökkollen, samma
+väg som `brödtext`. Domen vänds inte för hand.

@@ -399,8 +399,11 @@ def verdikt(paketsokvag, granskare=None):
             "datum": idag, "noteId": p["noteId"], "ord": p["ord"],
             "granskare": gr, "skriven_av": skrivare,
             "verdikt": "godkand", "anmarkning": p.get("anmarkning"),
-            "turer": data.get("granskning_turer"),
-            "turkrav": data.get("granskning_turkrav"),
+            # Per post forst: ett delgranskat paket har olika turantal per omgang,
+            # och paketfaltet innehaller bara den sista. Fallback for aldre paket
+            # skrivna innan `--antal` fanns.
+            "turer": p.get("granskning_turer_post", data.get("granskning_turer")),
+            "turkrav": p.get("granskning_turkrav_post", data.get("granskning_turkrav")),
         })
     # UNDERKÄNDA MÅSTE SYNAS I ANKI, inte bara i en loggfil (Adams beslut
     # 2026-08-10). Fram till dess gjorde det här steget ENBART en loggrad: ingen
@@ -438,8 +441,11 @@ def verdikt(paketsokvag, granskare=None):
             "datum": idag, "noteId": p["noteId"], "ord": p["ord"],
             "granskare": gr, "skriven_av": skrivare,
             "verdikt": "underkand", "anmarkning": p.get("anmarkning"),
-            "turer": data.get("granskning_turer"),
-            "turkrav": data.get("granskning_turkrav"),
+            # Per post forst: ett delgranskat paket har olika turantal per omgang,
+            # och paketfaltet innehaller bara den sista. Fallback for aldre paket
+            # skrivna innan `--antal` fanns.
+            "turer": p.get("granskning_turer_post", data.get("granskning_turer")),
+            "turkrav": p.get("granskning_turkrav_post", data.get("granskning_turkrav")),
         })
     print(f"Blind granskare        : {gr}   (kortskrivare: {skrivare or 'okänd'})")
     print(f"Godkända (taggade {config.OBEROENDE_TAG_PREFIX}::{idag}): {len(godkanda)}")

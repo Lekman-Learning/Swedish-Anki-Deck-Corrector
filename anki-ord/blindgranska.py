@@ -41,7 +41,12 @@ kort/dag kostat orimligt; per paket (10–25 kort) fördelas uppstarten. Kör d�
 ALDRIG en post i taget.
 
     python blindgranska.py sessions/<paket>_v3-paket.json
-    python blindgranska.py sessions/<paket>_v3-paket.json --torr   # visa prompten
+    python blindgranska.py sessions/<paket>_v3-paket.json --torr      # visa prompten
+    python blindgranska.py sessions/<paket>_v3-paket.json --antal 20  # dela stort paket
+
+Taket är 25 poster per körning (`MAX_POSTER`) -- inte en stilfråga utan en mätt
+gräns, se spärren i `granska()`. Större paket körs i omgångar med `--antal`;
+odömda poster ligger kvar och tas av nästa körning.
 """
 import argparse
 import json
@@ -60,6 +65,11 @@ if hasattr(sys.stdout, "reconfigure"):
 TILLATNA_VERKTYG = ["Read", "WebFetch", "WebSearch"]
 
 GRANSKARE_ID = "claude-cli-blind"
+
+# Storsta antal poster i EN granskarkorning. Se spärren i granska() for matningen
+# bakom siffran. Docstringen ovan sager 10-25 kort per paket -- taket gor den
+# rekommendationen till en regel som inte gar att kora forbi av misstag.
+MAX_POSTER = 25
 
 SYSTEMTILLAGG = (
     "Du är en fristående andragranskare av svenska ordkort. Du har medvetet "
@@ -155,9 +165,15 @@ def _kor_granskare(poster, instruktion, modell, timeout, krav):
                            text=True, encoding="utf-8", errors="replace",
                            timeout=timeout)
         if r.returncode != 0 or not (r.stdout or "").strip():
+            # KAPA INTE. Kapningen låg tidigare på 500 tecken, och `claude`
+            # lägger sitt felmeddelande i JSON-fältet `result` -- som kommer
+            # EFTER `usage`-blocket. Fyra misslyckade körningar 2026-08-15 visade
+            # därför bara att något gick fel, aldrig vad: stdout tog slut mitt i
+            # usage-siffrorna. Ett kapat felmeddelande som ser komplett ut är
+            # samma felklass som `raw-verktyg/`s kapningsregel finns för.
             raise RuntimeError(
                 "claude gav inget användbart svar (returkod %s).\n  stderr: %s\n  stdout: %s"
-                % (r.returncode, (r.stderr or "")[:500], (r.stdout or "")[:500]))
+                % (r.returncode, (r.stderr or "")[:2000], (r.stdout or "")[:8000]))
         return json.loads(r.stdout)
     finally:
         shutil.rmtree(arbetsrum, ignore_errors=True)
@@ -216,13 +232,38 @@ def _plocka_json(text):
     raise ValueError("hittade ingen JSON i granskarens svar:\n" + text[:600])
 
 
-def granska(paketsokvag, modell=None, timeout=2400, torr=False):
+def granska(paketsokvag, modell=None, timeout=2400, torr=False, antal=None):
     data = json.load(open(paketsokvag, encoding="utf-8"))
     poster = data["poster"]
     kvar = [p for p in poster if not p.get("verdikt")]
     if not kvar:
         print("Alla %d poster har redan verdikt -- inget att göra." % len(poster))
         return 0
+
+    # --antal: granska bara de N forsta odomda. Tillagt 2026-08-16 for att ett
+    # stort paket som failar inte gick att felsoka -- varje forsok kostade en
+    # full korning och gav samma intetsagande fel. Kvarvarande poster behaller
+    # sitt tomma verdikt och plockas upp av nasta korning, eftersom urvalet
+    # gors pa just `verdikt`-falter. Delkorningar ar alltsa aterupptagbara.
+    if antal and antal < len(kvar):
+        print("URVAL: granskar %d av %d odomda poster (--antal)." % (antal, len(kvar)))
+        kvar = kvar[:antal]
+
+    # TAKET. Granskaren gor ~1,9 turer per kort (matt 2026-08-16: 20 turer pa 10,
+    # 38 pa 20). En claude -p-process har ett tak for antalet turer, sa ett paket
+    # over ~25 poster slar i det -- och gor det pa varsta tankbara satt: korningen
+    # betalas i sin helhet och dor sedan vid utskriften. Ett 53-posterspaket
+    # failade fyra ganger, forsta gangen efter 23 minuter och 3,67 USD.
+    # Spärren ligger FORE anropet, sa felet kostar ingenting.
+    if len(kvar) > MAX_POSTER:
+        print("AVBRYTER: %d poster ar for manga for en korning (tak %d).\n"
+              "  Granskaren gor ~1,9 turer per kort, och en claude -p-process tar\n"
+              "  slut pa turer nagonstans mellan 20 och 53 kort. Korningen betalas\n"
+              "  anda -- forsta gangen detta hande kostade det 3,67 USD och gav noll\n"
+              "  granskade kort.\n"
+              "  Dela upp korningen:  --antal %d   (resten tas av nasta korning)"
+              % (len(kvar), MAX_POSTER, MAX_POSTER))
+        return 1
 
     # Skicka BARA de fält granskaren ska se. Att lita på att paketfilen redan
     # är rensad räcker inte: fälten plockas ut explicit här, så ett nytt fält i
@@ -300,6 +341,14 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
         if d:
             p["verdikt"] = d["verdikt"]
             p["anmarkning"] = d.get("anmarkning") or ""
+            # Matningen skrivs PER POST, inte bara per paket. Med --antal granskas
+            # ett paket i flera omgangar med olika turantal, och paketets falt
+            # `granskning_turer` innehaller da bara den SISTA omgangens siffra --
+            # varpa oberoende_granskningar.jsonl hade fatt fel belagg for korten i
+            # de tidigare omgangarna. Ett kort ska bara veta hur val just DESS dom
+            # ar belagd.
+            p["granskning_turer_post"] = turer
+            p["granskning_turkrav_post"] = krav
     data["granskare"] = GRANSKARE_ID
     # TURANTALET SPARAS, inte bara skrivs ut. Fram till 2026-08-11 fanns siffran
     # bara i terminalutskriften -- så när en körning visade sig ha dömt 25 kort
@@ -311,6 +360,13 @@ def granska(paketsokvag, modell=None, timeout=2400, torr=False):
     data["granskning_turer"] = turer
     data["granskning_kostnad_usd"] = svar.get("total_cost_usd")
     data["granskning_turkrav"] = krav
+    # Med --antal granskas ett paket i flera omgangar, och faltet ovan skrivs
+    # over av varje ny omgang -- da forsvinner matningen for de tidigare, precis
+    # den lucka som gjorde att faltet lades till fran borjan. Varje omgang
+    # laggs darfor ocksa till i en lista.
+    data.setdefault("granskning_korningar", []).append(
+        {"poster": len(domar), "turer": turer, "turkrav": krav,
+         "kostnad_usd": svar.get("total_cost_usd")})
     json.dump(data, open(paketsokvag, "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
 
@@ -334,6 +390,9 @@ def main():
     ap.add_argument("paket", help="sessions/<namn>_v3-paket.json")
     ap.add_argument("--modell", default=None, help="t.ex. claude-opus-5")
     ap.add_argument("--timeout", type=int, default=2400)
+    ap.add_argument("--antal", type=int, default=None,
+                    help="granska bara de N första odömda posterna; resten "
+                         "lämnas orörda och tas av nästa körning")
     ap.add_argument("--torr", action="store_true",
                     help="visa vad granskaren skulle få se, kör ingenting")
     ap.add_argument("--tillat-api", action="store_true",
@@ -359,7 +418,7 @@ def main():
                   % nyckel)
             if not a.tillat_api:
                 return 1
-    return granska(a.paket, a.modell, a.timeout, a.torr)
+    return granska(a.paket, a.modell, a.timeout, a.torr, a.antal)
 
 
 if __name__ == "__main__":
