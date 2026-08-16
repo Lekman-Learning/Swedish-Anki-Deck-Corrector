@@ -228,3 +228,46 @@ misslyckade körning som redan är betald.
 ⚠️ **Spärren är INTE borttagen.** Den ligger kvar nedströms och fäller även andra
 försöket om det också svarar ur minnet. Det som ändrats är bara att ett
 misslyckande inte längre kräver mänskligt ingripande.
+
+**Fjärde körningen (2026-08-16, strax efter midnatt) — nytt felmönster, och det pekar bort från modellen.**
+
+Omkörningsloopen fungerade som byggd: två försök, båda rapporterade. Men båda
+failade **omedelbart**:
+
+```
+forsok 1/2 misslyckades: claude gav inget användbart svar (returkod 1).
+forsok 2/2 misslyckades: claude gav inget användbart svar (returkod 1).
+stdout: {"is_error":true,"duration_api_ms":0,"num_turns":1,
+         "stop_reason":"stop_sequence","total_cost_usd":0,
+         "usage":{"input_tokens":0,"output_tokens":0,
+                  "server_tool_use":{"web_fetch_requests":0}}}
+```
+
+**`duration_api_ms: 0` och `total_cost_usd: 0` betyder att API:et aldrig
+anropades.** Det är inte en granskare som svarar dåligt — det är en process som
+vägras innan den börjar. Jämför med körning 1 samma kväll: 23 minuter och 3,67
+USD, alltså samma slutresultat men efter att arbetet faktiskt utförts.
+
+Hela serien, i ordning:
+
+| # | Turer | Duration | Kostnad | Tolkning |
+|---|---|---|---|---|
+| 1 | 1 | 1 397 s | 3,67 USD | kördes, dog vid utskrift |
+| 2 | 4 | — | — | kördes, för få uppslagningar |
+| 3 | 11 | — | — | kördes, marginellt under tröskeln |
+| 4 | 1 + 1 | **0 s** | **0 USD** | **startade aldrig** |
+
+**Sannolikaste förklaringen: användningsgräns.** Kvällen innehöll en fullständig
+granskning (3,67 USD) plus tre försök till, och nummer fyra nekas utan att kosta
+något. Rate limit eller veckokvot ger exakt det mönstret.
+
+**Att kontrollera innan nästa försök**, i den här ordningen:
+
+1. Kör `claude -p "hej" --output-format json` för hand i en tom katalog. Failar
+   den likadant är det kontot, inte scriptet.
+2. Kolla veckokvoten. Blindgranskningen startar ett **eget** `claude`-anrop som
+   drar från samma tak som huvudsessionen.
+3. Först därefter är det värt att titta på paketet igen.
+
+**Kör inte fler försök blint.** Tre av fyra kostade pengar utan att ge ett enda
+granskat kort.
