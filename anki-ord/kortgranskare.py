@@ -486,10 +486,20 @@ def kontrollera_slappbar(note_ids):
 
 
 def slapp(sokvag, torr=False):
-    poster = _las(sokvag)
-    ids = [e["noteId"] for e in poster if e.get("applicerad")]
+    # Paketfilen är en dict {..., "poster": [...]}, batchfilen en ren lista.
+    # `verdikt` normaliserar redan så här; utan samma rad kraschade `slapp` på
+    # en paketfil med `AttributeError: 'str' object has no attribute 'get'` --
+    # iteration över en dict ger nycklarna, alltså strängar. Felet pekade inte
+    # på orsaken, som är att fel fil i kedjan skickats in.
+    data = _las(sokvag)
+    poster = data["poster"] if isinstance(data, dict) else data
+    ids = [e["noteId"] for e in poster if isinstance(e, dict) and e.get("applicerad")]
     if not ids:
         print("Inga applicerade kort i filen.")
+        if isinstance(data, dict) and "poster" in data:
+            print("  Detta ser ut som en PAKETfil (skriven av `paket`, läst av\n"
+                  "  `verdikt`). `slapp` vill ha BATCHfilen som `applicera`\n"
+                  "  skrev -- det är där fältet `applicerad` sätts.")
         return
     # Spår B-kort ligger redan i Adams kö. Avsuspendering är då en no-op,
     # men rapporten får inte påstå att de "släpptes in" -- det som händer

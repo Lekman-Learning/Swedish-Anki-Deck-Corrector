@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080629093,
@@ -32,8 +32,10 @@
         "exempelmening": "Hon stannade framför spegeln för att <font color=\"#3498db\">jämka</font> på hatten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger jämka som en huvudbetydelse ('flytta ngt till lämpligare läge') med underbetydelser (ändra egna åsikter, medla mellan parter, minska ekonomiskt/juridiskt, avpassa). Kortets tre betydelser (flytta, minska, avpassa åsikter) täcker dessa nyanser rimligt väl, och synonymerna flytta/minska/avpassa,anpassa är ordboksgrundade. Exempelmeningen illustrerar huvudbetydelsen korrekt.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080619690,
@@ -50,8 +52,10 @@
         "exempelmening": "Hennes romaner utmärktes av ett <font color=\"#3498db\">märgfullt</font> språk.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('full av inre kraft och uttrycksfullhet') matchar kortets huvudbetydelse exakt. SAOL bekräftar dessutom synonymen 'spännande' ordagrant ('äv. bildl. färgstark, spännande'), så synonymen är ordboksgrundad även om den vid första anblick känns udda. Register och exempel stämmer.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080619875,
@@ -69,8 +73,10 @@
         "exempelmening": "Han drabbades av <font color=\"#3498db\">apoplexi</font> och förlorade talförmågan.",
         "etymologi": "av grekiska apoplexia med samma betydelse"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'slaganfall'; SAOL: 'slaganfall, hjärnblödning'. Kortets huvudbetydelse och båda synonymerna (slaganfall, hjärnblödning) är ordboksgrundade, och etymologin (grekiska apoplexia) stämmer.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080620370,
@@ -87,8 +93,10 @@
         "exempelmening": "En värdig och <font color=\"#3498db\">korpulent</font> gentleman steg ur vagnen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som har stort kroppsomfång med viss fetma'. Kortet återger detta korrekt, synonymen fetlagd matchar facit, och registret (formell, eufemistisk) är rimligt för ordet.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080623065,
@@ -115,8 +123,10 @@
         "exempelmening": "Han berättade hur det hela hade <font color=\"#3498db\">tillgått</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser ('utspela sig på visst sätt' och '(ha möjlighet att) utnyttja') som kortet återger korrekt separerade, med rätt synonymer (ske/förlöpa respektive utnyttja) kopplade till rätt betydelse.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080624389,
@@ -131,8 +141,10 @@
         "exempelmening": "Hennes något <font color=\"#3498db\">prosaiska</font> man talade helst om hyra och räkningar.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar två skilda nyanser i sin definition: 'på prosa, prosa-' (litterär form) och 'vardaglig, torr' (stil), vilket motsvarar kortets två betydelser. SO lyfter fram 'vardaglig och saklig' som huvudbetydelsen, vilket kortet korrekt leder med.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080624693,
@@ -157,8 +169,10 @@
         "exempelmening": "Försäkringsbolagen är <font color=\"#3498db\">njugga</font> när det gäller skadestånd.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Både SO ('1. (onödigt) snål och knusslig' -- enda numrerade betydelsen, med exempel som täcker både personer och anslag under samma punkt) och SAOL ('snål; knapp', en sammanhållen definition) behandlar njugg som EN betydelse. Kortet delar felaktigt upp ordet i två separata betydelser med olika register (ngt ålderdomlig vs neutral) och skilda synonymgrupper (snål / knapp) -- det rör sig om samma grundbetydelse (för lite tilltaget/givet) tillämpad på både person och sak, inte två genuint skilda betydelser. Bör slås ihop till en betydelse, t.ex. 'onödigt snål och gnidig; alltför knappt tilltaget' som EN enhet, eller separeras med '/' i stället för ';'.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625036,
@@ -187,8 +201,10 @@
         "exempelmening": "Länderna undertecknade en <font color=\"#3498db\">traktat</font> om ömsesidigt bistånd.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre betydelser (skriftlig överenskommelse mellan stater, avhandling, uppbygglig religiös skrift) återges korrekt och i rätt ordning, med synonymen fördrag som SO själv anger för första betydelsen.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625162,
@@ -203,8 +219,10 @@
         "exempelmening": "Hon <font color=\"#3498db\">hisnade</font> när hon fick veta vad hotellsviten kostade.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (börja känna svindel; känna stark häpnad) återges korrekt i rätt ordning. Exempelmeningen matchar SO:s eget exempel nästan ordagrant ('hon hisnade när hon fick veta vad hotellsviten kostade').",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627712,
@@ -222,8 +240,10 @@
         "exempelmening": "Han hade en sådan <font color=\"#3498db\">snits</font> i skidåkningen att alla i backen vände sig om.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'elegans i utförande ... (något vardagligt)'. Kortet matchar väl inklusive register och synonymen elegans, som är SO:s eget uppslagsord för jämförelsen.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627869,
@@ -248,8 +268,10 @@
         "exempelmening": "Manodepressiv sjukdom kännetecknas av återkommande <font color=\"#3498db\">skov</font>.",
         "etymologi": "fornsvenska skof 'stöt, knuff'; till skjuva; jfr uppskov"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (avgränsad period; uppflammande sjukdomstillstånd) återges korrekt i rätt ordning, med grundade synonymer och korrekt etymologi (fornsvenska skof, jfr uppskov, som facit också hänvisar till).",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080620633,
@@ -264,8 +286,10 @@
         "exempelmening": "Farfar var en <font color=\"#3498db\">nimrod</font> som kände varje spår i skogen.",
         "etymologi": "till Nimrod, namn på skicklig jägare i Gamla testamentet"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en person som är ivrig och skicklig jägare (något högtidligt)'. Matchar kortet exakt, inklusive register och etymologi (Nimrod, Gamla testamentet).",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080621448,
@@ -280,8 +304,10 @@
         "exempelmening": "Han <font color=\"#3498db\">miste sansen</font> vid minsta tecken på blod.",
         "etymologi": "sans av franska sens 'mening; förnuft'; av latin sensus 'förnimmelse'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslagsord 'sans' har både betydelsen medvetande (varav 'mista sansen' = svimma, som i facit) och betydelsen lugn/självbehärskning -- båda är vedertagna läsningar av uttrycket 'mista/tappa sansen', så kortets två betydelser är rimliga. Exemplet matchar facits egen exempelmening nära nog ordagrant.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080621628,
@@ -298,8 +324,10 @@
         "exempelmening": "Hon <font color=\"#3498db\">sällade</font> sig genast till kamraterna när hon kom in i lokalen.",
         "etymologi": "fornsvenska sälla sik; till sälle"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ansluta sig till församlad grupp, organisation eller dylikt', matchar kortet exakt inklusive exempel ('sällade sig till kamraterna') och etymologi (fornsvenska sälla sik).",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080621988,
@@ -316,8 +344,10 @@
         "exempelmening": "Hon är en <font color=\"#3498db\">utpräglad</font> individualist som aldrig följer strömmen.",
         "etymologi": "till ut och prägla"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'tydlig, påtaglig' -- synonymen 'påtaglig' är alltså ordboksgrundad, inte en lös association. Betydelsen matchar SO/SAOL, och etymologin (ut + prägla) stämmer.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622160,
@@ -334,8 +364,10 @@
         "exempelmening": "Statsministern var ytterst <font color=\"#3498db\">fåmäld</font> efter mötet.",
         "etymologi": "till få och mäla; jfr lågmäld, högmäld"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som ogärna yttrar sig', med synonymen 'fåordig' explicit angiven av SO. Etymologi (få + mäla, jfr lågmäld/högmäld) och exempel stämmer ordagrant med SO.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622695,
@@ -360,8 +392,10 @@
         "exempelmening": "Vem av de båda kandidaterna som vinner är i grunden <font color=\"#3498db\">likgiltigt</font>.",
         "etymologi": "efter tyska gleichgültig med samma betydelse"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (helt ointresserad om person/handling; väcker inget intresse t.ex. vid val) återges korrekt separerade och i rätt ordning, med synonymen 'egal' som SO själv anger för andra betydelsen. Etymologin (tyska gleichgültig) stämmer.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622929,
@@ -379,8 +413,10 @@
         "exempelmening": "Lagret lovade att <font color=\"#3498db\">effektuera</font> beställningen inom två arbetsdagar.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'verkställa beslut, beställning och dylikt (något formellt)'. Matchar kortet väl, synonymerna verkställa/utföra stämmer mot SO:s egna jämförelseord genomföra/utföra.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080623083,
@@ -395,8 +431,10 @@
         "exempelmening": "Historiskt förbjöds <font color=\"#3498db\">sodomi</font> genom sträng lagstiftning.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'sexuell handling som förr ansågs avvika från det tillåtna eller normala t.ex. sex mellan homosexuella män' plus underbetydelsen 'analsex' återges sakligt korrekt av kortet -- 't.ex.'-tillägget i SO är en illustration av definitionen, inte en nödvändig del av den, så att utelämna det är ingen sakfel.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080623270,
@@ -421,8 +459,10 @@
         "exempelmening": "Det berömda <font color=\"#3498db\">gästgiveriet</font> vid foten av Hallandsåsen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (traditionsrikt matställe vid allmän väg; verksamhet som gästgivare) återges korrekt i rätt ordning, med synonymen gästgivargård som SO själv anger för första betydelsen.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080623627,
@@ -439,8 +479,10 @@
         "exempelmening": "Det gäller att variera <font color=\"#3498db\">konfekten</font> så att gästerna inte tröttnar.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'finare sötsaker vanligen i mindre bitar'. Kortets huvudbetydelse och synonymen 'finare godis' matchar väl.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080623993,
@@ -457,8 +499,10 @@
         "exempelmening": "En <font color=\"#3498db\">gallup</font> visade att över 90 procent ansåg miljöfrågorna viktiga.",
         "etymologi": "efter den amerikanske sociologen George Gallup"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition och etymologi (George Gallup, amerikansk sociolog) matchar kortet exakt, liksom synonymen opinionsundersökning.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080624734,
@@ -485,8 +529,10 @@
         "exempelmening": "Efter hustruns död blev han alltmer <font color=\"#3498db\">inbunden</font>.",
         "etymologi": "jfr fornsvenska inbundin 'innestängd; invecklad'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "facit_signal överskattade antalet betydelser -- verifiering mot SO visar att det finns exakt två betydelser (försedd med pärmar; obenägen att yttra sig), så ingen hel betydelse saknas. Problemet är i stället ordningen: SO listar 'försedd med pärmar om bok' som betydelse 1 (huvudbetydelse, JSON-index 192206) och 'obenägen att yttra sig' som betydelse 2 (index 192207), medan kortet leder med personlighetsbetydelsen och sätter bokbetydelsen sist -- fel prioritetsordning mot kravet att kortet ska leda med den vanligaste/primära betydelsen.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625556,
@@ -515,8 +561,10 @@
         "exempelmening": "Vi får inte <font color=\"#3498db\">skygga</font> för att tala klartext om kostnaderna.",
         "etymologi": "fornsvenska skygga; bildn. till skygg"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre verbbetydelser (rycka kroppen bakåt inför fara; undvika/vara rädd; ge skugga åt) återges korrekt separerade och i rätt ordning. Synonymerna 'undvika' och 'ge skugga åt' är hämtade nästan ordagrant ur SO; 'rycka undan' är en rimlig, om än något friare, parafras av 'rycka kroppen bakåt'.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625879,
@@ -534,8 +582,10 @@
         "exempelmening": "Sent <font color=\"#3498db\">omsider</font> blev hennes författarskap upptäckt.",
         "etymologi": "fornsvenska um sidher; troligen besläktat med sedan"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'efter viss (lång) tid', med synonymen 'slutligen' som SO själv anger. Etymologi (fornsvenska um sidher, besläktat med sedan) och exempel stämmer.",
+      "granskning_turer_post": 43,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626467,
@@ -550,8 +600,10 @@
         "exempelmening": "Det är <font color=\"#3498db\">färm</font> betjäning på restaurangen vid torget.",
         "etymologi": "av franska ferme 'fast; stadig'; av latin firmus; jfr firma"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL bekräftar betydelsen 'rask/snabb och ivrig i utförandet' (SAOL: 'rask, flink'), exempel och etymologi (< fra. ferme < lat. firmus) stämmer. Registret 'ngt ålderdomlig' anges inte uttryckligen i SO/SAOL (ingen stilangivelse för variantformen 'färm'), men är en rimlig, inte sakligt felaktig, tolkning givet att formen är ovanlig (1577 mot 13403 träffar för 'ferm').",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626571,
@@ -568,8 +620,10 @@
         "exempelmening": "De <font color=\"#3498db\">högmälda</font> orden från talaren nådde hela salen.",
         "etymologi": "till hög och mäla; jfr fåmäld, lågmäld"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Ordet saknas i SO (0 träffar) men finns i SAOL: 'högröstad' (åld.). Kortets huvudbetydelse och synonym 'högröstad' stämmer med facit och SAOL, liksom registret 'arkaisk'.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626600,
@@ -586,8 +640,10 @@
         "exempelmening": "Familjen brukade samma <font color=\"#3498db\">hemman</font> i fem generationer.",
         "etymologi": "fornsvenska heman 'bostad; gård'; till hember 'hem'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'jordbruksfastighet betraktad som ekonomisk enhet ... numera ej officiell beteckning', vilket matchar kortets huvudbetydelse och arkaiska register.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626979,
@@ -602,8 +658,10 @@
         "exempelmening": "<font color=\"#3498db\">Minareten</font> på den gamla moskén syntes långt bort.",
         "etymologi": "ur arabiska manara 'fyrtorn; torn vid moské'; till nar 'eld'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'torn för böneutrop invid moské' matchar kortets huvudbetydelse ordagrant, liksom etymologin.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626988,
@@ -620,8 +678,10 @@
         "exempelmening": "Om Anders <font color=\"#3498db\">braskar</font>, slaskar julen.",
         "etymologi": "jfr fornsvenska braska 'bullra'; av ljudhärmande ursprung"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'vara under fryspunkten om utomhustemperatur' (ngt ålderdomlig) och SAOL ger 'knastra i köld'. Kortets huvudbetydelse och dess enda synonym 'knastra i köld' är hämtade direkt ur SAOL.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627573,
@@ -648,8 +708,10 @@
         "exempelmening": "Myndigheternas <font color=\"#3498db\">vanmakt</font> inför våldet blev alltmer uppenbar.",
         "etymologi": "fornsvenska vanmakt; till van- och makt"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser (oförmåga/känsla av hjälplöshet; tillfällig medvetslöshet, den senare ngt ålderdomlig), vilket matchar kortets två betydelser och register exakt. facit_signal om fyra betydelser var en formateringsartefakt, inte ett verkligt fel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627971,
@@ -682,8 +744,10 @@
         "exempelmening": "Författaren har <font color=\"#3498db\">förlagt</font> handlingen till 1800-talets Indien.",
         "etymologi": "fornsvenska forläggia; av lågtyska vorleggen"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO listar sex betydelser: (1) tilldela (någon/något) utrymme att vistas i, t.ex. inkvartera trupp eller upplåta lokal, (2) lägga undan så det inte hittas, (3) ge ut bok, (4) lämna kapital/lån, (5) perfekt particip 'förlagd' = inkvarterad, (6) bildligt: placera i tidssammanhang. Kortet saknar helt SO:s centrala betydelse (1) 'tilldela utrymme' (t.ex. 'bataljonen är förlagd i baracker', 'förlägga presscentrum till ett våningsplan'). Dessutom är kortets exempelmening ('Författaren har förlagt handlingen till 1800-talets Indien') hämtad ur SO:s bildliga tidsbetydelse (6), men den kopplas i kortet till den vaga generella definitionen 'Placera på en viss plats' som varken tydligt beskriver utrymmesbetydelsen eller tidsbetydelsen. En hel, vanlig betydelse (tilldela utrymme/inkvartera) saknas.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080628240,
@@ -708,8 +772,10 @@
         "exempelmening": "Turerna kring företagsnedläggningen <font color=\"#3498db\">kalfatrades</font> i medierna.",
         "etymologi": "av nederländska kalfateren; troligen ur arabiska qafr 'beck'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: täta fartygsnåt med drev och beck (historiskt) samt strängt/kritiskt granska. Matchar kortets två betydelser. Synonymerna 'täta' (SO:s eget verb i definitionen) och 'nagelfara' (finns även i facit) är väl belagda.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080629094,
@@ -736,8 +802,10 @@
         "exempelmening": "Man måste <font color=\"#3498db\">tillskriva</font> henne ett visst mod.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'skriva formellt brev till' samt 'anse (någon) vara bärare av viss egenskap/upphov till/rättmätig innehavare av något', vilket matchar kortets två betydelser väl; synonymerna 'tillräkna' och 'tillerkänna' täcker underbetydelserna.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080624959,
@@ -754,8 +822,10 @@
         "exempelmening": "Hon <font color=\"#3498db\">hädade</font> Gud genom att uttala förbannelser.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse 'uttrycka upprörande ringaktning för något heligt' matchar kortet exakt. SO nämner även en försvagad, skämtsam användning (ifrågasätta/motsäga något, t.ex. neutraliteten), men det är en avblekt variant av samma kärnbetydelse snarare än en genuint skild betydelse, så det underkänner inte kortet.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625659,
@@ -780,8 +850,10 @@
         "exempelmening": "En artist med en speciell förmåga att <font color=\"#3498db\">domptera</font> publiken.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (tvinga vilt djur till visst beteende) och underbetydelse (om personer/publik) matchar kortets två betydelser exakt, liksom synonymerna tämja/tvinga.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625732,
@@ -798,8 +870,10 @@
         "exempelmening": "<font color=\"#3498db\">Ischias</font> gjorde det svårt för honom att sitta någon längre stund.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse, 'sjukligt tillstånd med smärtor kring höfterna och nedåt benen', som matchar kortet ordagrant.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625937,
@@ -814,8 +888,10 @@
         "exempelmening": "<font color=\"#3498db\">Hädiska</font> tankar om att männen i vissa avseenden behandlas sämre än kvinnorna.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (uttrycker hädelse, syn. blasfemisk) och underbetydelse (avviker från allmänt accepterade uppfattningar, jfr respektlös) matchar kortets två betydelser exakt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626505,
@@ -830,8 +906,10 @@
         "exempelmening": "De spelade <font color=\"#3498db\">canasta</font> vid köksbordet varje fredagskväll.",
         "etymologi": "av spanska canasta 'korg'; av grekiska kanastron; jfr kanister"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse, 'kortspel med två kortlekar', matchar kortet ordagrant, liksom etymologin.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626802,
@@ -858,8 +936,10 @@
         "exempelmening": "Med åren har hans <font color=\"#3498db\">ockulta</font> intressen blivit allt större.",
         "etymologi": "av latin occultus 'fördold; hemlig'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s underbetydelser ('har att göra med övernaturliga företeelser'; medicin: 'dold, osynlig') matchar kortets två betydelser, och synonymerna dold/osynlig/övernaturlig är hämtade direkt ur SO:s text.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080626975,
@@ -874,8 +954,10 @@
         "exempelmening": "Takmålningen var full av <font color=\"#3498db\">keruber</font> som svävade bland molnen.",
         "etymologi": "av hebreiska kerub 'högre väsen i nära förbindelse med gudomen'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (knubbig ängel i barngestalt) och första underbetydelse (ursprungligen väktarängel i paradiset) matchar kortets två betydelser.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627005,
@@ -890,8 +972,10 @@
         "exempelmening": "Familjen levde i djupt <font color=\"#3498db\">armod</font> under krigsvintern.",
         "etymologi": "av lågtyska armot; till arm 'fattig'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'svår fattigdom på gränsen till nöd', matchar kortets 'svår fattigdom' väl.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627062,
@@ -916,8 +1000,10 @@
         "exempelmening": "Ett <font color=\"#3498db\">vittert</font> sällskap samlades varje torsdag för att diskutera poesi.",
         "etymologi": "fornsvenska viter 'vettig; klok'; besläktat med veta"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse ('tycker om och förstår sig på litteratur', ngt högtidligt) och underbetydelse (om verk/tal: lärt skönlitterär) matchar kortet exakt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080627348,
@@ -934,8 +1020,10 @@
         "exempelmening": "De saknade pengarna var ett svårt <font color=\"#3498db\">huvudbry</font> för henne.",
         "etymologi": "till bry i betydelsen 'möda, besvär; oro'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'tankemöda i syfte att lösa problem' samt en underbetydelse om det som orsakar tankemöda - kortets sammanslagna definition täcker båda. Synonymen 'tankemöda' är hämtad ordagrant ur SO.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080628258,
@@ -960,8 +1048,10 @@
         "exempelmening": "Det nya <font color=\"#3498db\">lokuset</font> vid torget serverar utsökt mat.",
         "etymologi": "studentslang; till latin locus 'plats'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser (matställe, studentslang; bestämd plats, särskilt gen på kromosom) som matchar kortets två betydelser. Mindre anmärkning: kortets ämnesangivelse 'allmän' för andra betydelsen är vagare än SO:s precisering till genetik, men det underkänner inte kortet.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080620970,
@@ -976,8 +1066,10 @@
         "exempelmening": "Efter tre öl var han rejält <font color=\"#3498db\">på örat</font> när han skulle hitta hem.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s idiom 'vara på örat' = 'vara berusad' (vardagligt) matchar kortet ordagrant.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080621308,
@@ -994,8 +1086,10 @@
         "exempelmening": "Paret tog ut <font color=\"#3498db\">lysning</font> tre veckor före bröllopet.",
         "etymologi": "fornsvenska lysning, i lysninga dagher 'dag för lysning'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse, 'kungörelse i samband med gudstjänst om planerat giftermål, numera frivillig och sällsynt', matchar kortets definition och arkaiska register väl.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622760,
@@ -1010,8 +1104,10 @@
         "exempelmening": "\"Jag kom, jag såg, jag segrade\" är en <font color=\"#3498db\">anafor</font>.",
         "etymologi": "av grekiska anaphora 'tillbakasyftning'; jfr metafor"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'stilistisk upprepning av ord/fras i två eller flera på varandra följande satsers början' matchar kortet nästan ordagrant.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080625989,
@@ -1026,8 +1122,10 @@
         "exempelmening": "Flygvapnets första <font color=\"#3498db\">flottilj</font> stationerades i Västerås.",
         "etymologi": "av franska flottille; diminutiv av flota 'flotta'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (förband av stridsflygplan) och underbetydelse (förband av krigsfartyg) matchar kortets två betydelser. Mindre anmärkning: kortet anger register 'sjöfart' för sjöbetydelsen, men SO:s underbetydelse gäller krigsfartyg (militär/sjömilitär kontext), inte civil sjöfart - i övrigt korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080629498,
@@ -1042,8 +1140,27 @@
         "exempelmening": "Det var många på auktionen som ville <font color=\"#3498db\">lägga rabarber på</font> brevsamlingen.",
         "etymologi": "skämtsam ombildning av lägga embargo på, belagd sedan 1893"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse, '(hänsynslöst) lägga beslag på något', matchar kortet nästan ordagrant inklusive exempelmeningen om auktionen. facit_signal om två betydelser var missvisande - det rör sig om en och samma betydelse omformulerad i facit.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    }
+  ],
+  "granskning_turer": 33,
+  "granskning_kostnad_usd": 0.9344157000000001,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 43,
+      "turkrav": 6,
+      "kostnad_usd": 1.6213867999999998
+    },
+    {
+      "poster": 25,
+      "turer": 33,
+      "turkrav": 6,
+      "kostnad_usd": 0.9344157000000001
     }
   ]
 }
