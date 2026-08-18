@@ -455,3 +455,88 @@ artikelns `ortografi`/`ordled`-fält (samma mekanism som redan finns för
 `frammande_uppslagsord` i `forgranska.py`) och vägra spara/flagga tydligt
 när de inte stämmer överens, i stället för att skriva en fil som SER
 komplett ut.
+
+---
+
+## Hittat 2026-08-18, sent: Adam-tal-regression -- kort läser som ordbok
+
+**Adam, mitt i ett HP-prov, utan tid att peka ut exempel:** *"jag ser kort
+som läser ut som kopior av SO/SAOB istället för Adam-tal."* Undersökt utan
+honom, mot cachad källa i `uppslag/`.
+
+### Mätningen
+
+Alla 45 kort släppta till full v3 idag (14 innan kvällens fortsättning +
+15 från review18 + 16 från review17) jämförda ord-för-ord mot sin egen
+cachade SO/SAOL-definition (containment-score: andel ord i Huvudbetydelsen
+som också finns i källtexten).
+
+| Score | Antal | Vad det betyder |
+|---|---|---|
+| 1.00 (ordagrant) | 15 av 45 (33 %) | Varje ord i Huvudbetydelsen finns i SO/SAOL:s egen text |
+| 0,83-0,90 | 4 av 45 | Nästan ordagrant, enstaka ord bytt |
+| ≤0,5 | 26 av 45 | Genuint omskrivet med egna ord |
+
+**Verdikt: verklig regression, inte normal variation.** 19 av 45 (42 %) är
+ordagranna eller nästan ordagranna kopior. Motbeviset mot "vissa ord saknar
+en piggare formulering" finns i samma mätning: kort som `i förbigående`
+("Bara flyktigt, som en parentes i något annat man höll på med"),
+`konnässör` ("...ofta mat eller vin", draget ur SO:s exempel, inte
+definitionen) och `husvill` ("Utan tak över huvudet") visar att en
+Adam-tal-omskrivning GÅR att göra för nästan vilket ord som helst -- de
+ordagranna korten är inte ord utan alternativ, de är kort där omskrivningen
+aldrig gjordes.
+
+**Rotorsak: inget steg i pipelinen kontrollerar avstånd till källan.**
+`forgranska.py`s enda längdrelaterade regel (`ordbokslangd_hb`) blockerar
+bara betydelser över 12 ord -- den mäter LÄNGD, inte NÄRHET till SO/SAOL:s
+egen formulering, så en kort ordagrann kopia (t.ex. `burrig`: "Yvig, krusig
+och något rufsig", 5 ord) passerar den perfekt. Blindgranskningens egen
+`VERIFIERARINSTRUKTION` (punkt 8) frågar bara "går kortet att läsa högt och
+förstå direkt, utan att slå upp ännu ett ord" -- en ordagrann SO-kopia
+klarar OCKSÅ det trivialt, eftersom SO:s korta glosor per definition är
+begripliga. **Ingen kontroll i hela kedjan (varken den mekaniska spärren
+eller den blinda granskaren) frågar "är detta AdamS röst eller ordbokens?"**
+Det är alltså inte ett slarvfel av en enskild skrivare -- det är en riktig
+lucka i vad pipelinen mäter, och den drabbar flera sessioner samma kväll
+(både kort skrivna innan denna fortsättning och kort jag själv skrev).
+
+### Fem värsta exemplen (score 1.00, med förslag på Adam-tal -- INTE applicerat)
+
+| Ord | Nuvarande (= SO/SAOL ordagrant) | Föreslaget Adam-tal |
+|---|---|---|
+| `vederhäftig` | "Saklig och sanningsenlig ; Pålitlig när det gäller sakuppgifter" | "Går att lita på -- säger sanningen och håller sig till fakta" |
+| `burrig` | "Yvig, krusig och något rufsig" | "Håret står åt alla håll, lite tovigt" |
+| `exkrement` | "Avföring från tarmen" | "Bajs -- det medicinska ordet för det" |
+| `paradox` | "Skenbart orimligt men ändå djupare sett sant påstående" | "Något som låter motsägelsefullt först, men stämmer om man tänker efter" |
+| `konvoj` | "Grupp av handelsfartyg som åtföljs och skyddas av örlogsfartyg ; Skyddad transport till lands ; Rad av fordon som färdas tillsammans, utan att nödvändigtvis vara skyddade" | "En grupp fartyg som reser tillsammans med militärt skydd ; En rad fordon som kör i följd, med eller utan skydd" |
+
+`konvoj` är mitt eget fel -- jag skrev om kortet tidigare i kväll (efter ett
+annat underkännande om en saknad betydelse) och lade till den tredje
+betydelsen i exakt SO:s egen hedge-formulering ("utan att nödvändigtvis
+vara skyddade") istället för att formulera om den. `vederhäftig`, `burrig`,
+`exkrement`, `paradox` skrevs INTE av mig -- de fanns bland de 14 som redan
+var släppta innan kvällens fortsättning började, alltså från en tidigare
+session/dag. Regressionen är alltså inte knuten till en enda skrivomgång.
+
+### Vad som INTE gjorts
+
+**Inga av de 45 korten har ändrats som en följd av den här undersökningen.**
+Adam bad uttryckligen att inte tyst massrätta -- han behöver se
+omfattningen själv först. De fem exemplen ovan är förslag i den här filen,
+inte applicerade ändringar.
+
+**Konsekvens för kvällens 50 nya kort (samma session, se nedan i
+loggen/commit-historiken):** varje Huvudbetydelse kontrollerades mot samma
+containment-mått INNAN applicering, med en informell tumregel: score över
+~0,6 mot SO/SAOL = skriv om innan kortet skickas vidare.
+
+### Förslag till permanent fix (ej byggt, Adams beslut om det ska prioriteras)
+
+En mjuk regel i `forgranska.py`, `ordagrann_kopia`: räkna containment
+mellan varje betydelse i Huvudbetydelsen och den cachade SO/SAOL-texten
+(samma metod som användes i den här undersökningen). Larma vid t.ex. >70 %
+overlap. Mjuk, inte hård -- några ord (korta, redan vardagliga SAOL-glosor
+som `sari`s "ett indiskt kvinnoplagg") har helt enkelt ingen piggare
+formulering, och en hård spärr hade tvingat fram konstlade omskrivningar
+bara för sakens skull.
