@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude-agent-skrivare",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080620682,
@@ -18,8 +18,10 @@
         "exempelmening": "Man kan <font color=\"#3498db\">näppeligen</font> kalla resultatet en framgång.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'sannolikt inte', SAOL 'knappast' — kortets 'Knappast, sannolikt inte' är samma betydelse i två formuleringar, inte två betydelser. Exempelmeningen är korrekt och ordet highlightat.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620707,
@@ -34,8 +36,10 @@
         "exempelmening": "Stålytan <font color=\"#3498db\">passiverades</font> för att bättre stå emot rost.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO listar tre skilda betydelser: (1) göra overksam/passiv, (2) omvandla ett verb till passiv form (grammatik, t.ex. 'jaga' -> 'jagas', belagt sedan ca 1970), (3) skydda en metallyta mot korrosion (kemi). Kortet tar med (1) och (3) men saknar helt den grammatiska betydelsen (2), som är en egen, etablerad betydelse i SO. Bör läggas till, t.ex. '(grammatik) omvandla ett verb till passiv form'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620719,
@@ -50,8 +54,10 @@
         "exempelmening": "Inför högtiden höll <font color=\"#3498db\">rabbinen</font> en predikan för församlingen.",
         "etymologi": "Av hebreiska rabbi 'min mästare'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'judisk församlingsanställd med uppgift att bl.a. vara rättskipare och förkunnare'. Kortets 'Andlig ledare och lärare i en judisk församling' är en korrekt parafras. Etymologin (hebreiska rabbi, 'min mästare') stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620713,
@@ -70,8 +76,10 @@
         "exempelmening": "Rätten serverades med ett <font color=\"#3498db\">raffinemang</font> som avslöjade kockens erfarenhet.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet rakt av som 'förfining, utsökthet, sinnrikhet' — samtliga tre synonymer på kortet är alltså direkt belagda i ordboken, inte bara lösa associationer. Huvudbetydelsen matchar facit ('förfining').",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620703,
@@ -86,8 +94,10 @@
         "exempelmening": "Hon bar en färgstark <font color=\"#3498db\">sari</font> till bröllopsfesten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ett indiskt kvinnoplagg som består av ett långt, brett tygstycke som viras runt kroppen'. Kortet matchar väl, exempelmeningen är korrekt och naturlig.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620721,
@@ -102,8 +112,10 @@
         "exempelmening": "Landets <font color=\"#3498db\">suveränitet</font> innebär att ingen annan stat får bestämma över dess inre angelägenheter.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser — 'fullständig självständighet för stat' och 'överlägsen skicklighet' — båda finns med på kortet och är rätt separerade med ';'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620680,
@@ -121,8 +133,10 @@
         "exempelmening": "Frågan <font color=\"#3498db\">tarvar</font> ett tydligt svar.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'behöva, fordra ... ngt åld.' Kortets betydelse och synonymer (behöva, fordra) samt registret (ngt ålderdomlig) är direkt belagda i ordbokens egen definition.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620693,
@@ -139,8 +153,10 @@
         "exempelmening": "Ryktena <font color=\"#3498db\">underminerade</font> hans auktoritet inom partiet.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'gradvis förstöra underifrån för att på sikt rasera', bokstavligt och bildligt, med synonymen 'undergräva'. Kortet matchar exakt och synonymen är ordboksbelagd.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620681,
@@ -155,8 +171,10 @@
         "exempelmening": "Chefen <font color=\"#3498db\">utstakade</font> en tydlig plan för avdelningens framtid.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bestämma riktlinjer för visst (riktigt) handlingssätt'. Kortets 'Märka ut eller bestämma riktningen för något, ofta bildligt' är en rimlig parafras som täcker samma betydelse.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620677,
@@ -171,8 +189,10 @@
         "exempelmening": "Berget hade <font color=\"#3498db\">vittrat</font> sönder under tusentals år av regn.",
         "etymologi": "efter tyska verwittern, till Wetter 'väder'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO+SAOL bekräftar att 'vittra' har exakt tre genuina betydelser: falla sönder, känna lukt, samt ett naturväsen i folktron (SO: skogsrå i norrländsk folktro; SAOL: naturväsen boende under jorden). Adjektivet 'vitter' (litteraturälskande) som också dyker upp i sökningen är ett helt annat uppslagsord, inte en fjärde/femte betydelse av 'vittra'. Kortets tre betydelser täcker alltså precis vad ordböckerna ger — facit_signal-frågan om saknad betydelse är därmed avfärdad.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620725,
@@ -187,8 +207,10 @@
         "exempelmening": "<font color=\"#3498db\">Konvojen</font> korsade Atlanten under eskort av två jagare.",
         "etymologi": "av franska convoi, till voie 'väg'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger flera nyanser (handelsfartyg skyddade av örlogsfartyg, skyddad landtransport, en försvagad betydelse 'rad av fordon') som alla återfinns på kortet, rätt separerade med ';'. Etymologin (franska convoi, till voie 'väg') stämmer och hjälper förståelsen.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620694,
@@ -203,8 +225,10 @@
         "exempelmening": "Viruset agerade som en <font color=\"#3498db\">trojansk häst</font> och öppnade en bakdörr i systemet.",
         "etymologi": "efter trähästen i berättelsen om Trojas fall"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO (under 'häst'): 'person eller grupp som infiltrerar och försvagar ett land eller en organisation ... för något annat lands räkning' — matchar kortets första betydelse och facit ('gömt angrepp inifrån'). IT-betydelsen (skadlig programvara) är en vedertagen, sakligt korrekt förlängning av samma bild i datasammanhang.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620727,
@@ -222,8 +246,10 @@
         "exempelmening": "Hon hann med dagens <font color=\"#3498db\">göromål</font> före lunch.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet rakt av som 'sysselsättning, aktivitet' — exakt de två ord kortet anger som synonymer. Huvudbetydelsen matchar facit ('syssla').",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620686,
@@ -238,8 +264,10 @@
         "exempelmening": "'Ett röd hus' innehåller en grammatisk <font color=\"#3498db\">inkongruens</font> -- adjektivet böjs inte efter substantivets genus.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL taggar ordet med domänen 'lingv.' (lingvistik), vilket bekräftar att kortets avgränsning till 'grammatisk form' är korrekt snarare än för snäv. Matchar facit ('bristande överensstämmelse').",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620704,
@@ -256,8 +284,10 @@
         "exempelmening": "För att vara <font color=\"#3498db\">bärig</font> måste gården normalt vara på flera hundra hektar.",
         "etymologi": "till bära"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL/SO ger två betydelser inom domänerna 'ekon.' och 'sjö.', båda med på kortet och rätt separerade, med ekonomi-betydelsen (matchar facit 'lönsam') ledande. Registerfältets enda domänslot råkar bara nämna 'sjöfart', men båda domänerna är redan tydligt taggade inline i själva betydelsetexten, så det är inget sakfel.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620715,
@@ -275,8 +305,10 @@
         "exempelmening": "Hon förblev fullständigt <font color=\"#3498db\">indifferent</font> inför nyheten, utan minsta tecken på glädje eller sorg.",
         "etymologi": "Av latin in- och differre 'skilja åt' -- alltså 'utan åtskillnad'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s kärndefinition är 'obestämd, likgiltig' — exakt kortets synonymer. Huvudbetydelsen 'likgiltig, utan intresse' är den vanligaste, allmänna betydelsen och leder kortet korrekt. De smalare fackbetydelserna (kem., psykol.) är avgränsade specialbetydelser som rimligen utelämnas då kortets omfång uttryckligen är satt till 'allmän'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620732,
@@ -293,8 +325,21 @@
         "exempelmening": "Grannarna kallade honom en <font color=\"#3498db\">krämare</font> som bara brydde sig om vinsten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'små handlare; krass affärsman', ngt nedsätt., ekon. Kortets ordning (neutral 'småhandlare, köpman' följt av nedsättande 'girig, beräknande affärsman') matchar exakt SAOL:s definition och register.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 36,
+  "granskning_kostnad_usd": 0.9037223999999998,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 17,
+      "turer": 36,
+      "turkrav": 5,
+      "kostnad_usd": 0.9037223999999998
     }
   ]
 }

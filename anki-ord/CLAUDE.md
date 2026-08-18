@@ -3601,3 +3601,47 @@ tidigare underkännandena). Väntar nu på en färsk granskning.
 De 14 sparade ovan + de 3 nya underkännandena (bärig/indifferent/krämare,
 omskrivna) = **17**, exakt golvvärdet. Paketerade och skickade till en ny
 blind granskning: `sessions/session_2026-08-18_v3-paket-review17.json`.
+
+### review17: 16 godkända, 1 underkänt (`passivera`)
+
+36 turer, 0,90 USD, **16 av 17 godkända (94 %)**. 16 släppta. Det enda
+underkännandet var mitt eget: `passivera` saknade SO:s grammatiska
+betydelse ("omvandla ett verb till passiv form", t.ex. jaga → jagas) --
+jag hade medvetet skalat bort den som "för nischad" (samma resonemang som
+jag använde för `indifferent`s kemibetydelse), men här hade granskaren
+rätt: det är en egen, etablerad SO-betydelse, inte en teknisk fotnot.
+Tillagd som tredje betydelse, omskriven, applicerad, gammal
+`v3_underkand`-tagg + röd flagga borttagna. Väntar på nästa
+granskningsomgång (1 kort, långt under golvet -- sparas till dess fler
+finns att köra tillsammans).
+
+### Slutläge för kvällens fortsättning
+
+- **19 av 23 ursprungligen oskrivna kort skrivna och applicerade** (4
+  pausade: se ovan).
+- **45 kort släppta till full v3 idag totalt** (14 innan den här
+  fortsättningen + 15 från review18 + 16 från review17).
+- **0 kort står kvar underkända** -- alla sex underkännanden under kvällen
+  (vittra, konvoj, trojansk häst, göromål, inkongruens, bärig, indifferent,
+  krämare, passivera -- nio räknat, se nedan) omskrivna och applicerade på
+  nytt samma kväll.
+- **1 kort (`passivera`) väntar på en framtida granskningsomgång**,
+  medvetet inte kört ensamt under 17-kortsgolvet.
+- Full v3 i hela decket: **1029 → 1074** (+45).
+- Ett verkligt Hål 0-fel hittat och fixat (rekursiv glob för
+  subagent-transkript, se ovan och `ATT_GORA.md` punkt 4).
+- Ett nytt, ofarligt men dokumenterat datakvalitetsfel hittat
+  (`slaupp.py` kan tyst hämta fel ords artikel för flerordsuttryck,
+  `ATT_GORA.md` punkt 5).
+
+**Mönster värt att notera bland underkännandena:** fyra av de nio (nästan
+hälften) berodde på att jag MEDVETET skalade bort en betydelse för att
+hålla kortet kort ("koncist före uttömmande") -- indifferent (kemi),
+krämare (fel uppdelning, inte en skalning men samma familj av fel),
+passivera (grammatik), och delvis konvoj/trojansk häst (saknade
+betydelser, men inte medvetet uteslutna, snarare missade). Granskaren
+konsekvent rättade tillbaka mot "SO:s alla etablerade betydelser hör med",
+inte mot min egen avvägning om vad som är "nischat". Värt att komma ihåg
+nästa gång frestelsen att skala bort en betydelse för koncishetens skull
+dyker upp -- facit är tydligen SO:s egna betydelseindelning, inte min
+bedömning av vad som är användbart.
