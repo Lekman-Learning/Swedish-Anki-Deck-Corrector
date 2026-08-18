@@ -46,10 +46,10 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=anonym",
-      "slutsats": "SAOL: 'som härrör från person som inte uppgivit sitt namn; opersonlig' -- 'opersonlig' inleder sitt eget led efter semikolon, belagd. SO ger fyra nyanser (okänd upphovsman, döljer identitet, saknar särdrag, obemärkt) som alla ryms i grundbetydelsen 'namnlös/oidentifierad' -- skrivet som en betydelse istället för fyra."
+      "slutsats": "SAOL: 'som härrör från person som inte uppgivit sitt namn; opersonlig' -- 'opersonlig' inleder sitt eget led efter semikolon, belagd. SO ger fyra nyanser (okänd upphovsman, döljer identitet, saknar särdrag, obemärkt) som alla ryms i grundbetydelsen 'namnlös/oidentifierad' -- skrivet som en betydelse istället för fyra. | RÄTTAD efter underkännande: saknade SO:s andra betydelse ('som saknar individuella särdrag', ex. 'man känner sig lätt anonym i storstaden'). Tillagd. 'opersonlig' hör i SO ihop med just den betydelsen, inte den första -- nu korrekt placerad som andra betydelsens synonym."
     },
     "proposed": {
-      "huvudbetydelse": "Utan känt namn eller ursprung, ingen vet vem som ligger bakom",
+      "huvudbetydelse": "Utan känt namn eller ursprung, ingen vet vem som ligger bakom ; Utan särdrag som gör en person urskiljbar, man syns inte som individ",
       "synonymer": [
         "opersonlig"
       ],
@@ -181,13 +181,11 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=bekännelse",
-      "slutsats": "SAOL: 'handlingen att bekänna ngt; tro' -- 'tro' inleder sitt led efter semikolon, belagd för den religiösa betydelsen. SO:s huvudsenses (medgivande av skuld / öppen redovisning / religiös riktning) skrivna som två betydelser: erkännande och trosinriktning -- 'öppen redovisning' är en nyans av erkännande-betydelsen, inte en egen betydelse."
+      "slutsats": "SAOL: 'handlingen att bekänna ngt; tro' -- 'tro' inleder sitt led efter semikolon, belagd för den religiösa betydelsen. SO:s huvudsenses (medgivande av skuld / öppen redovisning / religiös riktning) skrivna som två betydelser: erkännande och trosinriktning -- 'öppen redovisning' är en nyans av erkännande-betydelsen, inte en egen betydelse. | RÄTTAD efter underkännande: SO har tre betydelser (skulderkännande / öppen redovisning av tro-ELLER-åsikt / religiös riktning) -- kortet hade slagit ihop de två sista till en. Nu tre skilda betydelser. Synonymen 'tro' borttagen -- granskaren påpekade korrekt att 'tro' är det man bekänner sig TILL, inte akten att bekänna, och SO stödde den aldrig."
     },
     "proposed": {
-      "huvudbetydelse": "Att erkänna något man gjort, ofta något man skäms för ; En religiös inriktning eller trosuppfattning",
-      "synonymer": [
-        "tro"
-      ],
+      "huvudbetydelse": "Att erkänna något man gjort, ofta något man skäms för ; Att öppet stå för en åsikt eller övertygelse ; En religiös inriktning",
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Han avgav en fullständig <font color=\"#3498db\">bekännelse</font> inför polisen.",
       "register": "neutral, neutral, allmän",
@@ -1001,10 +999,10 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=dyrka",
-      "slutsats": "SAOL: 'tillbe, hylla' (sense 1, kommalista, båda belagda) / 'öppna med dyrk' (sense 2, egen betydelse)."
+      "slutsats": "SAOL: 'tillbe, hylla' (sense 1, kommalista, båda belagda) / 'öppna med dyrk' (sense 2, egen betydelse). | RÄTTAD efter underkännande: lås-betydelsen hör till det separata partikelverbet 'dyrka upp' ('öppna med dyrk'), inte till 'dyrka' i grundform -- felaktigt sammanslagen, nu borttagen. Kvar står bara den SAOL-belagda betydelsen (tillbe, hylla)."
     },
     "proposed": {
-      "huvudbetydelse": "Beundra eller tillbe någon utan att ifrågasätta ; Öppna ett lås utan nyckel, med ett verktyg",
+      "huvudbetydelse": "Beundra eller tillbe någon utan att ifrågasätta",
       "synonymer": [
         "tillbe",
         "hylla"
@@ -1132,7 +1130,7 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=fradga",
-      "slutsats": "SAOL: 'skum, lödder' (substantiv, kommalista, båda belagda). SO ger den bildliga vrede-betydelsen ('känna vanmäktig vrede')."
+      "slutsats": "SAOL: 'skum, lödder' (substantiv, kommalista, båda belagda). SO ger den bildliga vrede-betydelsen ('känna vanmäktig vrede'). | RÄTTAD efter underkännande: grammatikfel i exempelmeningen -- 'det långa spring' skulle vara 'det långa SPRINGET' (dubbel bestämdhet kräver bestämd form efter 'den/det/de + adjektiv'). Fixat."
     },
     "proposed": {
       "huvudbetydelse": "Skum eller skummande saliv kring munnen ; (bildligt) vara rasande av vrede (tugga fradga)",
@@ -1141,7 +1139,7 @@
         "lödder"
       ],
       "synonym_groups": null,
-      "exempelmening": "Hunden <font color=\"#3498db\">tuggade fradga</font> efter det långa spring i värmen.",
+      "exempelmening": "Hunden tuggade <font color=\"#3498db\">fradga</font> efter det långa springet i värmen.",
       "register": "vardaglig, negativ, allmän",
       "etymologi": null
     },
@@ -1468,7 +1466,7 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=kid",
-      "slutsats": "SO/SAOL identiska: 'killing' / 'kalv av hjortdjur' -- 'killing' belagd. Domän hålls allmän eftersom betydelserna spänner både jordbruk och jakt."
+      "slutsats": "SO/SAOL identiska: 'killing' / 'kalv av hjortdjur' -- 'killing' belagd. Domän hålls allmän eftersom betydelserna spänner både jordbruk och jakt. | RÄTTAD efter underkännande: exempelmeningen highlightade synonymen 'Killingen' istället för en böjning av uppslagsordet 'kid' -- illustrerade alltså inte ordet eleven ska lära sig. Bytt till 'Kidet'."
     },
     "proposed": {
       "huvudbetydelse": "Killing (ungt djur av get) ; Kalv av ett hjortdjur, t.ex. rådjur",
@@ -1476,7 +1474,7 @@
         "killing"
       ],
       "synonym_groups": null,
-      "exempelmening": "<font color=\"#3498db\">Killingen</font> följde tätt efter sin mamma i hagen.",
+      "exempelmening": "<font color=\"#3498db\">Kidet</font> klängde envist fast vid sin mammas sida i hagen.",
       "register": "neutral, neutral, allmän",
       "etymologi": null
     },
@@ -2156,14 +2154,11 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=fåfäng",
-      "slutsats": "SAOL: 'mån om sin status; kokett' (sense 1) / 'fruktlös' (sense 2) -- 'kokett' och 'fruktlös' belagda, ett från vardera led."
+      "slutsats": "SAOL: 'mån om sin status; kokett' (sense 1) / 'fruktlös' (sense 2) -- 'kokett' och 'fruktlös' belagda, ett från vardera led. | RÄTTAD efter underkännande: 'kokett' är inte SO:s egen synonym för betydelse 1 (SO:s jfr-lista ger 'flärdfull'/'inbilsk') -- kokett betyder flirtig, en näraliggande men inte utbytbar egenskap. Bytt mot 'flärdfull' (det första, starkast belagda ordet i SO:s jfr-lista). | Ytterligare rättning: granskarens 'flärdfull' kommer ur SO:s jfr-lista, inte ur SYN:synonym-tagg eller definitionstext -- forgranska.py:s mekaniska sparr (samma regel som skiljer jfr/cohyponym fran SYN pa haftig/paradox m.fl.) godkanner det inte som belagt. Tom synonymlista i stallet, i linje med 2026-08-12-regeln."
     },
     "proposed": {
       "huvudbetydelse": "Alltför upptagen av sitt utseende eller sin status ; Som inte kan lyckas, meningslös (t.ex. fåfänga försök)",
-      "synonymer": [
-        "kokett",
-        "fruktlös"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Hans <font color=\"#3498db\">fåfänga</font> försök att dölja flintskallen lurade ingen.",
       "register": "neutral, negativ, allmän",
@@ -2458,7 +2453,7 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=g%C3%B6ra%20en%20h%C3%B6na%20av%20en%20fj%C3%A4der",
-      "slutsats": "Idiomet har ingen egen artikel i SO/SAOL -- träffarna (traffar=saol,so) gäller grundordet 'fjäder' och dess många orelaterade betydelser (fågelfjäder, maskindel, boaorm), INTE idiomet. Den faktiska idiombetydelsen och etymologin ('beskriva något obetydligt som viktigt', ursprung H.C. Andersen-saga) kommer från Wiktionary, som har en egen artikel för hela uttrycket."
+      "slutsats": "Idiomet har ingen egen artikel i SO/SAOL -- träffarna (traffar=saol,so) gäller grundordet 'fjäder' och dess många orelaterade betydelser (fågelfjäder, maskindel, boaorm), INTE idiomet. Den faktiska idiombetydelsen och etymologin ('beskriva något obetydligt som viktigt', ursprung H.C. Andersen-saga) kommer från Wiktionary, som har en egen artikel för hela uttrycket. | RÄTTAD efter underkännande: etymologin hade fel antal -- H.C. Andersens saga 'Det är alldeles sant!' slutar på FEM hönor ('Av en liten fjäder kan bli fem höns'), inte tio. Wiktionary-citatet jag byggde på hade själv fel siffra ('tio höns') -- källan var alltså fel, inte bara min läsning av den. Rättat mot den faktiska sagotexten."
     },
     "proposed": {
       "huvudbetydelse": "Göra en stor sak av något obetydligt, överdriva en småsak",
@@ -2466,7 +2461,7 @@
       "synonym_groups": null,
       "exempelmening": "Sluta <font color=\"#3498db\">göra en höna av en fjäder</font> -- det var bara en repig CD-skiva.",
       "register": "vardaglig, neutral, allmän",
-      "etymologi": "Från en saga av H.C. Andersen om hur en liten fjäder blev till tio hönor."
+      "etymologi": "Från en saga av H.C. Andersen om hur en liten fjäder blev till fem hönor."
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
@@ -2577,16 +2572,15 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=interpretera",
-      "slutsats": "SAOL: 'tolka; förklara' -- två led, båda enstaka ord, båda belagda. SO: 'tolka'."
+      "slutsats": "SAOL: 'tolka; förklara' -- två led, båda enstaka ord, båda belagda. SO: 'tolka'. | RÄTTAD efter underkännande: ordet är snävare än allmän tolkning -- SO/SAOL definierar det specifikt som konstnärlig tolkning (SAOL: huvudsakligen musikterm). Den ursprungliga juridiska exempelmeningen ('domarna fick interpretera lagtexten') var en obelagd breddning. Huvudbetydelse och exempel bytta till den faktiska, snäva betydelsen."
     },
     "proposed": {
-      "huvudbetydelse": "Tolka eller förklara innebörden av något",
+      "huvudbetydelse": "Tolka och framföra ett konstverk på sitt eget sätt, t.ex. ett musikstycke",
       "synonymer": [
-        "tolka",
-        "förklara"
+        "tolka"
       ],
       "synonym_groups": null,
-      "exempelmening": "Domarna fick <font color=\"#3498db\">interpretera</font> lagtexten på olika sätt.",
+      "exempelmening": "Pianisten <font color=\"#3498db\">interpreterade</font> sonaten med ovanligt mjuka, sångbara fraser.",
       "register": "neutral, neutral, allmän",
       "etymologi": null
     },
@@ -3012,10 +3006,10 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=svepa",
-      "slutsats": "SAOL ger fyra betydelser (veckla/linda/hölja, stryka/fara förbi, röja minor, hastigt dricka ur) -- minsvep-betydelsen utelämnad som alltför fackspecifik för ett grundkort. 'veckla, linda' kommalistat i SAOL:s första led, båda belagda. SO märker dryck-betydelsen 'vardagligt'."
+      "slutsats": "SAOL ger fyra betydelser (veckla/linda/hölja, stryka/fara förbi, röja minor, hastigt dricka ur) -- minsvep-betydelsen utelämnad som alltför fackspecifik för ett grundkort. 'veckla, linda' kommalistat i SAOL:s första led, båda belagda. SO märker dryck-betydelsen 'vardagligt'. | RÄTTAD efter underkännande: saknade SO:s betydelse 'få (något) att förflytta sig i snabb, vid rörelse' (dra/sopa med sig, ex. 'sveptes bort av strömmen') -- enligt granskaren facit's huvudpoäng. Tillagd som andra betydelse. Den vardagliga dryck-betydelsen ('svepa en öl') plockades bort för att hålla korten vid tre betydelser -- registret ändrat från vardaglig till neutral i linje med det. Minsvepnings-fackbetydelsen utelämnad även efter rättning, för nischad för ett grundkort. | Ytterligare rättning: forgranska.py flaggade registret (SO markerar 'vardagligt' men kortet sade neutral) -- markningen galler tydligen ordet bredare an bara dryck-betydelsen jag tog bort. Atergick till vardaglig formalitet."
     },
     "proposed": {
-      "huvudbetydelse": "Röra sig snabbt och vitt, som en vid rörelse ; Vira in något i ett tygstycke ; (vardagligt) dricka ur snabbt, i ett drag",
+      "huvudbetydelse": "Röra sig snabbt och vitt, som en vid rörelse ; Dra eller sopa med sig i en kraftig rörelse, t.ex. en ström som sveper bort något ; Vira in något i ett tygstycke",
       "synonymer": [
         "veckla",
         "linda"
@@ -3027,7 +3021,10 @@
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
-    "adamtal_varningar": [],
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 16 ord i en betydelse -- korta ner: 'Dra eller sopa med sig i en kraftig rörelse, t.ex.'",
+      "cirkular_definition: 'svepa' tycks förklaras med sig självt"
+    ],
     "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": "claude-agent-skrivare"
@@ -3196,10 +3193,10 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=välbeställd",
-      "slutsats": "SO/SAOL överens: 'som har god ekonomi'. SO:s första sense ('väl ordnad') är daterad/mindre använd -- utelämnad till förmån för huvudbruket."
+      "slutsats": "SO/SAOL överens: 'som har god ekonomi'. SO:s första sense ('väl ordnad') är daterad/mindre använd -- utelämnad till förmån för huvudbruket. | RÄTTAD efter underkännande: kortet hade bara med SO:s bibetydelse ('särsk.' som har god ekonomi) och saknade huvudbetydelsen 'väl ordnad' helt. Tillagd som första, primära betydelse."
     },
     "proposed": {
-      "huvudbetydelse": "Som har det ekonomiskt gott ställt, förmögen",
+      "huvudbetydelse": "Väl ordnad och organiserad ; Som har det ekonomiskt gott ställt, förmögen",
       "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Familjen bodde i ett stort hus i det <font color=\"#3498db\">välbeställda</font> villaområdet.",

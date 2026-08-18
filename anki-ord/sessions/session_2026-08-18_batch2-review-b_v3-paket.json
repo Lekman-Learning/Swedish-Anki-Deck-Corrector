@@ -1,0 +1,479 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-agent-skrivare",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620793,
+      "ord": "sköka",
+      "facit": "prostitut",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "(starkt nedsättande, ålderdomligt) prostituerad kvinna",
+        "register": "arkaisk, starkt nedsättande, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "I den gamla pjäsen kallades kvinnan nedsättande för <font color=\"#3498db\">sköka</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'prostituerad kvinna', ålderdomligt och starkt nedsättande -- exakt vad kortet anger. Register, exempelmening och avsaknad av synonymer (SO listar inga) stämmer alla.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620801,
+      "ord": "som en löpeld",
+      "facit": "snabbt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket snabbt, som en brand som sprider sig okontrollerat (om t.ex. rykten eller nyheter)",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Nyheten om skilsmässan spreds som en <font color=\"#3498db\">löpeld</font> genom kontoret.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: löpeld = 'skogsbrand som sprider sig snabbt', idiomet 'sprida sig som en löpeld' betyder just detta. Kortets betydelse och exempel stämmer väl.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620745,
+      "ord": "åstunda",
+      "facit": "längta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Önska sig något starkt, längta efter det",
+        "register": "högtidlig, neutral, allmän",
+        "synonymer": [
+          "önska",
+          "längta efter"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">åstundade</font> en befordran han aldrig riktigt trodde skulle komma.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'hysa begär efter något', högtidligt register, med 'önska' bland relaterade ord -- matchar kortet. Exempelmeningen liknar SO:s eget exempel ('den chefspost han så hett åstundade').",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620741,
+      "ord": "apanage",
+      "facit": "statsbidrag till kungahuset",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ekonomiskt underhåll som en kunglig eller furstlig person får av staten",
+        "register": "formell, neutral, politik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Prinsessan behöll sitt <font color=\"#3498db\">apanage</font> även efter att ha lämnat officiella uppdrag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'statligt underhåll för kunglig person', vilket exakt matchar kortets huvudbetydelse och facit.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620744,
+      "ord": "dekor",
+      "facit": "teaterkulisser;&nbsp; smyckning",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Utsmyckning av en yta eller ett rum ; Scenbilden i en teateruppsättning",
+        "register": "neutral, neutral, konst",
+        "synonymer": [
+          "utsmyckning",
+          "scenbild"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vasens <font color=\"#3498db\">dekor</font> bestod av handmålade blommönster.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal var ett falsklarm: SO bekräftar exakt två betydelser (konstnärlig utsmyckning av rum/föremål; scenbild i teateruppsättning), i samma ordning som kortet. Inget saknas.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620809,
+      "ord": "drummel",
+      "facit": "tölp, buffel, luns; slyngel",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "(vardagligt) en klumpig, tölpaktig kille eller man",
+        "register": "vardaglig, nedsättande, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Den där <font color=\"#3498db\">drummeln</font> välte hela brickan med glas.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal var ett falsklarm: SO ger bara EN betydelse ('pojke eller man som bär sig klumpigt och vårdslöst åt'), vardagligt register. 'Slyngel' i facit listas av SO som ett näraliggande ord till SAMMA betydelse, inte en egen betydelse. Tom synonymlista är inget fel.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620755,
+      "ord": "fåfäng",
+      "facit": "självupptagen; fruktlös",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alltför upptagen av sitt utseende eller sin status ; Som inte kan lyckas, meningslös (t.ex. fåfänga försök)",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [
+          "kokett",
+          "fruktlös"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">fåfänga</font> försök att dölja flintskallen lurade ingen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymen 'kokett' är inte styrkt av ordboken. SO:s egna synonymer för betydelse 1 ('överdrivet mån om sitt yttre/anseende') är 'flärdfull' och 'inbilsk' -- 'kokett' betyder kokett/flirtig, en näraliggande men INTE utbytbar egenskap (man kan vara fåfäng utan att vara flirtig). Byt 'kokett' mot 'flärdfull' eller 'inbilsk'. Betydelserna i övrigt (självupptagen; fruktlös) är korrekta och rätt separerade.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620759,
+      "ord": "förespegla",
+      "facit": "inge falska förhoppningar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Få någon att tro på något som inte är sant, ofta ett falskt löfte",
+        "register": "formell, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Säljaren <font color=\"#3498db\">förespeglade</font> kunderna en vinst som aldrig blev av.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'inge (falska) förhoppningar om' -- matchar kortet exakt, liksom valensen (någon förespeglar någon något). Enda betydelsen i SO.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620742,
+      "ord": "förhäva sig",
+      "facit": "skryta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skryta för mycket om sig själv, bli högfärdig av framgång",
+        "register": "litterär, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Laget fick inte <font color=\"#3498db\">förhäva sig</font> efter segern -- nästa match väntade redan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'alltför mycket framhäva sin egen skicklighet' (över framgång/tur) -- matchar kortets 'skryta för mycket om sig själv, bli högfärdig av framgång'. Exempelmeningen liknar SO:s eget exempel om att inte förhäva sig efter en seger.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620757,
+      "ord": "förlägen",
+      "facit": "blyg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Generad och lite osäker, vet inte var man ska ta vägen",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "generad",
+          "blyg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han blev <font color=\"#3498db\">förlägen</font> när alla applåderade just honom.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som visar blyghet och förvirring' -- matchar kortet. Facit anger 'blyg' som synonym, vilket kortet också har med.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620785,
+      "ord": "grynna",
+      "facit": "litet grund<br><a href=\"https://www.google.com/imgres?q=grynna&amp;imgurl=http%3A%2F%2Fwww.dagensbatliv.se%2Fupload%2Farticle%2Fbild%2F1%2F569694%2Fgrynnan_s.PNG&amp;imgrefurl=http%3A%2F%2Fwww.dagensbatliv.se%2Fsjokort%2Flomsk-grynna-utprickad-tack-vare-soderkopings-kommun&amp;docid=JvIlA658jAEgjM&amp;tbnid=vAa7dOOmJOjBPM&amp;vet=12ahUKEwi9_eTllu-LAxVjKRAIHRrAAOMQM3oECFMQAA..i&amp;w=565&amp;h=377&amp;hcb=2&amp;ved=2ahUKEwi9_eTllu-LAxVjKRAIHRrAAOMQM3oECFMQAA\"><div><div><div><img alt=\"Lömsk grynna utprickad tack vare ...\" src=\"paste-36943cac8c363f0645fba5c6cc9e938f41dcfe20.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett litet, grunt ställe under vattenytan där en båt kan gå på grund",
+        "register": "fackspråklig, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Båten skrapade botten på en <font color=\"#3498db\">grynna</font> strax utanför hamnen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'litet (undervattens)grund', vilket exakt matchar kortets huvudbetydelse och facit.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620811,
+      "ord": "göra en höna av en fjäder",
+      "facit": "förstora upp ngts betydelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Göra en stor sak av något obetydligt, överdriva en småsak",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Sluta <font color=\"#3498db\">göra en höna av en fjäder</font> -- det var bara en repig CD-skiva.",
+        "etymologi": "Från en saga av H.C. Andersen om hur en liten fjäder blev till tio hönor."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Etymologin är felaktig. H.C. Andersens saga 'Det är alldeles sant!' slutar med att skvallret vuxit till FEM hönor ('Av en liten fjäder kan bli fem höns'), inte tio hönor som kortet påstår. Själva huvudbetydelsen är dock korrekt och väl formulerad.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620748,
+      "ord": "i blindo",
+      "facit": "planlöst, på måfå",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utan att se vad man gör, utan eftertanke eller förberedelse",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han svarade <font color=\"#3498db\">i blindo</font> på frågan utan att ha läst texten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en bokstavlig ('utan att se') och en bildlig betydelse ('helt utan eftertanke'/planlöst) av samma idiom. Kortets sammanslagna definition ('utan att se vad man gör, utan eftertanke eller förberedelse') täcker båda och matchar facit ('planlöst, på måfå').",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620758,
+      "ord": "interpretera",
+      "facit": "tolka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tolka eller förklara innebörden av något",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "tolka",
+          "förklara"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Domarna fick <font color=\"#3498db\">interpretera</font> lagtexten på olika sätt.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL definierar ordet snävt som 'tolka konstnärligt verk' (SAOL: huvudsakligen musikterm), inte allmän tolkning av vad som helst. Kortets huvudbetydelse ('tolka eller förklara innebörden av något') är för bred, och exempelmeningen ('Domarna fick interpretera lagtexten...') illustrerar juridisk tolkning -- en användning ordböckerna inte belägger för detta ord. Facit 'tolka' är i sig för generellt för att ensamt friskriva den felaktiga breddningen.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620791,
+      "ord": "kraxa",
+      "facit": "ljuda som kråkor<br><a href=\"https://www.google.com/imgres?q=crows%20cawing&amp;imgurl=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1200%2F0*1T6tT_qxqcJavaGM.jpg&amp;imgrefurl=https%3A%2F%2Fmedium.com%2F%40christchris68%2Fthe-crow-s-caw-196f0572ebd2&amp;docid=PqyZ86sNOiI3cM&amp;tbnid=xN86orJ8ceM84M&amp;vet=12ahUKEwjxhMuG0vKLAxVkJBAIHZlpAB8QM3oECGAQAA..i&amp;w=1200&amp;h=675&amp;hcb=2&amp;ved=2ahUKEwjxhMuG0vKLAxVkJBAIHZlpAB8QM3oECGAQAA\"><div><div><div><img alt=\"The Crow's Caw. By Christopher Dancy ...\" src=\"paste-01e23dbd19cdcaf47a5f2e06d385e187fcb6a999.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Låta som en kråka -- ett kort, hest läte",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Kråkorna <font color=\"#3498db\">kraxade</font> högt uppe i granen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse 'ge ifrån sig hesa ljud särsk. om kråkfåglar' matchar kortet exakt. SO:s bildliga underbetydelser (person som kraxar fram ord; olyckskorpar som kraxar om olycka) är naturliga bildliga utvidgningar av samma kärnbetydelse, inte en separat betydelse som måste räknas upp.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620752,
+      "ord": "metrik",
+      "facit": "verslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om versrytm och versmått i dikter",
+        "register": "fackspråklig, neutral, litteraturvetenskap",
+        "synonymer": [
+          "verslära"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I kursen om <font color=\"#3498db\">metrik</font> lärde de sig skilja jamber från trokéer.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'läran om rytmen som stilmedel i poesin', med synonymen 'verslära' -- matchar kortet och facit exakt.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620818,
+      "ord": "mörja",
+      "facit": "slam, slask, sörja;&nbsp; &nbsp;glödande aska m. kolstycken",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Mjuk, sörjig massa av lera eller smuts ; Het, glödande aska med kolrester",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "sörja",
+          "slam"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stövlarna sjönk ner i <font color=\"#3498db\">mörjan</font> efter regnet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal var ett falsklarm (nbsp-formateringen gav sken av fler betydelser): SO bekräftar exakt två betydelser (mjuk sörjig massa; glödande aska med kolstycken), båda med på kortet i rätt separering.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620795,
+      "ord": "ostyrig",
+      "facit": "yster; vild",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Svår att få lugn och stillsam, bråkig och yster",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [
+          "yster",
+          "bråkig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De <font color=\"#3498db\">ostyriga</font> barnen sprang runt hela festen utan att lyssna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal prövad: SO:s 'underbetydelser' (om hår, om gest/handling) är samma kärnbetydelse ('svår att tygla/kontrollera') tillämpad på andra sorters subjekt, inte genuint skilda betydelser. Kortets 'svår att få lugn och stillsam, bråkig och yster' täcker kärnan och innehåller facits 'yster'. Ingen synonym på kortet pekar mot en obehandlad betydelse.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620773,
+      "ord": "pragmatisk",
+      "facit": "praktiskt inriktad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Praktiskt inriktad, löser problem på det sätt som faktiskt fungerar",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon var <font color=\"#3498db\">pragmatisk</font> och valde den lösning som faktiskt gick att genomföra.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'som har att göra med praktisk nytta eller resultat' -- matchar kortet exakt.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620750,
+      "ord": "receptiv",
+      "facit": "mottaglig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mottaglig för nya intryck och idéer, har lätt att ta till sig och lära",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Publiken var <font color=\"#3498db\">receptiv</font> och lyssnade uppmärksamt på hela föreläsningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två näraliggande betydelser ('har lätt att lära'; 'mottaglig för intryck'), båda vävda in i kortets enda meningsformulering. Matchar facit ('mottaglig').",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620770,
+      "ord": "svepa",
+      "facit": "dra med sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Röra sig snabbt och vitt, som en vid rörelse ; Vira in något i ett tygstycke ; (vardagligt) dricka ur snabbt, i ett drag",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "veckla",
+          "linda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">svepte</font> förbi i dörren utan att stanna till för att hälsa.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar SO:s betydelse 2: 'få (något) att förflytta sig i snabb, vid rörelse' (t.ex. 'han sveptes bort av strömmen') -- vilket är EXAKT den betydelse facit pekar ut ('dra med sig'). Kortets tre delbetydelser (röra sig snabbt; vira in i tyg; dricka snabbt) missar alltså facits egen huvudpoäng helt. SO:s minsvepningsbetydelse ('oskadliggöra minor') saknas också.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620747,
+      "ord": "uraktlåta",
+      "facit": "försumma",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "(formellt) glömma eller strunta i att göra något man är skyldig att göra",
+        "register": "formell, negativ, juridik",
+        "synonymer": [
+          "underlåta",
+          "försumma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">uraktlät</font> att anmäla den nya inkomsten till myndigheten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'underlåta att fullgöra skyldigheten som framgår av sammanhanget', formellt register, synonym 'försumma' -- matchar kortet och facit exakt, liksom exempelmeningen som ligger nära SO:s eget exempel.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620768,
+      "ord": "visthus",
+      "facit": "matbod<br><a href=\"https://commons.wikimedia.org/wiki/File:Visthusbod_vid_Stora_Torp4800.jpg\"><img alt=\"\" src=\"250px-visthusbod_vid_stora_torp4800.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett förrådsrum eller en byggnad för matvaror, vanligt förr på gårdar",
+        "register": "neutral, neutral, jordbruk",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Rökt kött och inlagd sill förvarades i <font color=\"#3498db\">visthuset</font> över vintern.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: '(del av) byggnad avsedd för förvaring av födoämnen på äldre gård' -- matchar kortet exakt.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620800,
+      "ord": "välbeställd",
+      "facit": "välordnad, välbärgad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har det ekonomiskt gott ställt, förmögen",
+        "register": "neutral, neutral, ekonomi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Familjen bodde i ett stort hus i det <font color=\"#3498db\">välbeställda</font> villaområdet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar SO:s HUVUDbetydelse 'väl ordnad' helt och beskriver bara bibetydelsen ('särsk.') 'som har god ekonomi'. Facit har med båda ('välordnad, välbärgad') men kortet bara den ena. Kortet leder alltså inte ens med den primära betydelsen -- den saknas helt.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    }
+  ],
+  "granskning_turer": 39,
+  "granskning_kostnad_usd": 1.3195776,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 24,
+      "turer": 39,
+      "turkrav": 6,
+      "kostnad_usd": 1.3195776
+    }
+  ]
+}

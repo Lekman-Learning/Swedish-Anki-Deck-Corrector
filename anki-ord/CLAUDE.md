@@ -3645,3 +3645,59 @@ inte mot min egen avvägning om vad som är "nischat". Värt att komma ihåg
 nästa gång frestelsen att skala bort en betydelse för koncishetens skull
 dyker upp -- facit är tydligen SO:s egna betydelseindelning, inte min
 bedömning av vad som är användbart.
+
+## Adam-tal-regressionen upptäckt och en ny 50-kortsbatch (2026-08-18, samma kväll fortsatt)
+
+Adam flaggade mitt i ett HP-prov (utan tid att ge exempel) att kort läste
+ut som SO/SAOB-avskrifter. Full utredning + fem värsta exemplen + förslag
+på en mjuk `forgranska.py`-regel loggade i `ATT_GORA.md`
+("Hittat 2026-08-18, sent: Adam-tal-regression"). Kort sammanfattat:
+**15 av 45 släppta kort (33 %) var ordagranna kopior av SO/SAOL:s egen
+text, ytterligare 4 nästan ordagranna (42 % totalt)** -- en verklig
+regression, inte normal variation, eftersom andra kort samma kväll visar
+att omskrivning går att göra för nästan vilket ord som helst. Rotorsaken:
+inget steg i pipelinen (varken de mekaniska reglerna eller den blinda
+granskarens instruktion) kontrollerar avstånd till källan, bara längd och
+faktakorrekthet. Inget av de 45 korten ändrades -- Adam skulle se
+omfattningen själv först.
+
+### 50 nya is:new-kort, med lärdomen tillämpad direkt
+
+`kortbyggare.py --spar nya --antal 50` (`session_2026-08-18_v3-batch2.json`).
+Varje Huvudbetydelse självgranskades mot en ord-överlappsmätning (samma
+metod som avslöjade regressionen) INNAN den skickades vidare -- tre kort
+(`kateder`, `svepa`, `emittera`) skrevs om på plats när överlappet mot
+SO/SAOL var för högt.
+
+**2 av 50 pausade:** `villös` (bara SAOB-stubbe, inget SO/SAOL-belägg) och
+`räcka lång näsan åt` (SO/SAOL saknar träff helt, och den korrekta
+idiomformen `räcka lång näsa åt` saknar dem också -- trolig
+framsidefelstavning, `v3_pausad::framsida_mojligen_felstavad`).
+
+**48 skrivna och applicerade.** Ett nytt Hål 0-fel hittat på vägen: `kalla`
+för flerordsuppslag med bokstavligt mellanslag trunkerades av
+`_URL_RE` och gav falska "hämtningen gjordes aldrig" -- löst med
+procentkodning (`urllib.parse.quote`), se `ATT_GORA.md`.
+
+**Blindgranskat i två paket om 24 (körda parallellt), sedan verdikt+släpp:**
+
+| Paket | Godkända | Underkända |
+|---|---|---|
+| review-a | 19 | 5 (anonym, bekännelse, dyrka, fradga, kid) |
+| review-b | 19 | 5 (fåfäng, göra en höna av en fjäder, interpretera, svepa, välbeställd) |
+
+**38 släppta till full v3.** De 10 underkända omskrivna direkt efter
+granskarens konkreta anmärkningar (saknad betydelse på 5 av dem, en
+felkopplad betydelse på `dyrka` som egentligen hör till `dyrka upp`, en
+obelagd synonym på `fåfäng`, ett grammatikfel på `fradga`, en
+exempelmening som highlightade fel ord på `kid`, och en faktafel
+etymologi på `göra en höna av en fjäder` -- H.C. Andersens saga slutar på
+FEM hönor, inte tio som jag skrivit, källan jag själv byggde på hade fel
+siffra). Applicerade på nytt, gamla `v3_underkand`-taggar/röda flaggor
+borttagna. Väntar på nästa granskningsomgång (10 kort, under golvet).
+
+**Slutläge:** 83 kort släppta till full v3 under hela kvällens session
+(45 + 38). Full v3 i decket: **1029 → 1112**. 0 kort står kvar
+underkända. 11 kort väntar medvetet på en framtida granskningsomgång
+(1 `passivera` sedan tidigare + 10 nya, tillsammans under golvet men
+tillräckligt nära för att bli nästa paket).
