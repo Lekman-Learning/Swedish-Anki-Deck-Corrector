@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080620709,
@@ -19,8 +19,10 @@
         "exempelmening": "Hennes <font color=\"#3498db\">burriga</font>, ljusa hår stod rakt ut åt alla håll.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'yvig, krusig och något rufsig, vanligen om hår el. fjädrar' - en betydelse, matchar kortet exakt. Synonymerna yvig/krusig är hämtade direkt ur SO:s egen definition, alltså inte cirkulära eller påhittade. Exempelmeningen illustrerar rätt betydelse och är highlightad. Register och form stämmer.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620677,
@@ -35,8 +37,10 @@
         "exempelmening": "Berget hade <font color=\"#3498db\">vittrat</font> sönder under tusentals år av regn.",
         "etymologi": "efter tyska verwittern, till Wetter 'väder'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO ger tre betydelser (verb: 'falla sönder i små partiklar...' och 'känna lukten av'; substantiv: 'skogsrå i norrländsk folktro') - alla tre finns representerade på kortet, så ingen hel betydelse saknas (facit_signal om 5 betydelser stämmer inte mot SO). Men substantivbetydelsen innehåller ett sakfel: kortet säger att väsendet 'bor under jorden', medan SO definierar det som ett skogsrå - knutet till SKOGEN, inte jorden/underjorden. Bör ändras till ngt i stil med 'Kvinnligt naturväsen i norrländsk folktro knutet till skogen (skogsrå)'.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620702,
@@ -51,8 +55,10 @@
         "exempelmening": "Nato är en <font color=\"#3498db\">akronym</font>, inte ett vanligt namn.",
         "etymologi": "till grekiska akros 'ytterst' och onyma 'namn'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'förkortning som består av initialer t.ex. LO' - matchar kortets definition väl. SO har en snävare formulering ('...och uppfattas som ett namn el. ord'), men SAOL:s eget exempel LO uttalas bokstav för bokstav, så källorna själva är oense om den nyansen; kortets bredare definition kan då inte räknas som ett sakfel. Exempel och etymologi stämmer mot SO.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620692,
@@ -67,8 +73,10 @@
         "exempelmening": "<font color=\"#3498db\">Galären</font> drevs framåt av hundra roddare vid årorna.",
         "etymologi": "av franska galère, av italienska galera"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'i äldre tid: fartyg som roddes av slavar' - matchar kortets formulering nästan ordagrant. SO ('framdrivet av krigs- el. straffångar') pekar åt samma håll. Etymologi och exempelmening stämmer.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620699,
@@ -86,8 +94,10 @@
         "exempelmening": "En <font color=\"#3498db\">häftig</font> åskskur drog in över staden på några minuter.",
         "etymologi": "av lågtyska heftig; besläktat med hast"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre huvudbetydelser (plötslig/kraftig, lättretlig, vardagligt 'tilltalande') finns alla med på kortet. 'Intensiv' motsvarar SO:s undernyans 1a ('(snabb och) intensiv', t.ex. häftig sjögång) inom samma huvudbetydelse som 'plötslig och kraftig', inte en egen betydelse - uppdelningen är rimlig, inte felaktig. Synonymerna intensiv/uppbrusande bekräftas av SO:s definitionstext, och exempelmeningen matchar SO:s eget exempel.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620729,
@@ -104,8 +114,10 @@
         "exempelmening": "Han nämnde uppsägningen bara <font color=\"#3498db\">i förbigående</font> och gick vidare.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(bara) i förbigående' = 'flyktigt', vilket matchar facit och kortets kärna. Kortets tillägg om att nämna något 'som en parentes' ligger nära den besläktade idiomvarianten 'i förbigående sagt' ('sagt som en parentes') och är en rimlig, sakligt korrekt utvidgning snarare än en felaktig sammanblandning. Exempelmeningen illustrerar bra och är highlightad.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620725,
@@ -120,8 +132,10 @@
         "exempelmening": "<font color=\"#3498db\">Konvojen</font> korsade Atlanten under eskort av två jagare.",
         "etymologi": "av franska convoi, till voie 'väg'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO listar tre undermeningar: (1) gruppen inklusive eskorten, (2) 'äv. om skyddad transport till lands', (3) 'äv. försvagat' om en rad fordon (t.ex. lastbilskonvoj) UTAN att skydd/eskort krävs. Kortet har bara betydelse (2) och saknar den vanliga, försvagade betydelsen (3) - en genuint annorlunda användning eftersom skyddsaspekten faller bort helt. Bör läggas till som egen betydelse, t.ex. 'Rad av fordon som färdas tillsammans (utan att nödvändigtvis vara skyddad)'.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620734,
@@ -139,8 +153,10 @@
         "exempelmening": "Hans <font color=\"#3498db\">niece</font> fyllde tio år i förra veckan.",
         "etymologi": "av franska nièce, av latin neptia 'sondotter'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'brors- el. systerdotter', register 'något ålderdomligt' - matchar kortet exakt på både betydelse och register. Etymologin (fra. nièce, av lat. neptia) stämmer ordagrant.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620710,
@@ -155,8 +171,10 @@
         "exempelmening": "Meningen \"jag ljuger nu\" är en klassisk <font color=\"#3498db\">paradox</font>.",
         "etymologi": "av grekiska paradox 'sällsynt', till para 'emot' och doxa 'mening'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse ('skenbart orimligt men [djupare sett] sant påstående') matchar kortet exakt. De två undernyanserna i SO (filosofiska satser i konflikt med sant/falskt-principen; motsägande företeelser) är exemplifieringar/tillämpningar av samma grundbetydelse, inte fristående moment, så ingen hel betydelse saknas. Exempel och etymologi (grek. para 'emot', doxa 'mening') stämmer mot SO.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620694,
@@ -171,8 +189,10 @@
         "exempelmening": "Den nya delägaren visade sig vara en <font color=\"#3498db\">trojansk häst</font> i företaget.",
         "etymologi": "efter trähästen i berättelsen om Trojas fall"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO:s idiomartikel för 'trojansk häst' omfattar uttryckligen två sidor av uttrycket: dels person/grupp som infiltrerar en organisation, dels (mycket vanlig användning idag) skadlig programvara som smugit sig in i en dator ('virusskyddet signalerade att en trojansk häst tagit sig in i datorn'). Kortet nämner bara infiltratör-betydelsen och saknar helt IT/datavirus-betydelsen, som sannolikt är den mest kända i dagligt språk.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620726,
@@ -189,8 +209,10 @@
         "exempelmening": "Kungens porträtt sitter på myntets <font color=\"#3498db\">advers</font>.",
         "etymologi": "till latin adversus 'vänd emot'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'framsida av mynt eller medalj', antonym 'revers'. 'Avers' finns som eget uppslagsord i SO med identisk betydelse och antonym-relation, och är alltså en äkta, ordboksbelagd synonym - inte cirkulär. Exempel och etymologi stämmer.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620736,
@@ -207,8 +229,10 @@
         "exempelmening": "<font color=\"#3498db\">Exkrementer</font> från råttor och möss kan sprida sjukdomar.",
         "etymologi": "av latin excrementum 'utsöndrat ämne'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'avföring från tarmen hos djur el. människa', med synonymen 'fekalier'. Kortets synonym 'avföring' är själva definitionsordet i SO och alltså en äkta, utbytbar synonym. Exempelmeningen är nästan ordagrant SO:s eget exempel.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620727,
@@ -226,8 +250,10 @@
         "exempelmening": "Hon hann med dagens <font color=\"#3498db\">göromål</font> före lunch.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Definition och synonymer bekräftas ordagrant av SAOL: 'sysselsättning, aktivitet'. Men registret 'ngt ålderdomlig' saknar stöd - varken SO eller SAOL markerar ordet som ålderdomligt, och det används fortfarande i vardagligt tal (t.ex. 'dagliga göromål'). Registret bör vara neutralt, inte ålderdomligt.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620686,
@@ -242,8 +268,10 @@
         "exempelmening": "Det fanns en tydlig <font color=\"#3498db\">inkongruens</font> mellan hans ord och hans handlingar.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SAOL taggar ordet uttryckligen med fackområdet 'lingv.' (lingvistik), och SO preciserar definitionen till 'bristande överensstämmelse... om olikhet i yttre form' - dvs. en term för formell/grammatisk bristande överensstämmelse. Kortet anger domänen som 'allmän' och exemplifierar med 'inkongruens mellan hans ord och hans handlingar', vilket är en betydelseglidning mot allmän motsägelse/hyckleri som inte stöds av ordböckerna. Domänen bör vara lingvistik/fackspråk och exemplet bytas mot ett grammatiskt/formellt exempel.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620678,
@@ -261,8 +289,10 @@
         "exempelmening": "<font color=\"#3498db\">Salinerna</font> vid Medelhavet lyser vita av torkat salt.",
         "etymologi": "till latin salinae 'saltgruva', till sal 'salt'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bassäng där man utvinner salt genom att stänga in havsvatten och låta det avdunsta', med korsreferenser just till 'saltbassäng' och 'saltverk' - exakt kortets synonymer. Exempel och etymologi stämmer.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620705,
@@ -277,8 +307,10 @@
         "exempelmening": "Hon hade ett <font color=\"#3498db\">tillgodohavande</font> på 300 kronor i bokhandeln.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ekonomisk fordran...', med ett exempel som är identiskt med kortets ('hon har ett tillgodohavande på 300 kronor i bokhandeln'). En betydelse, inget saknas, inga synonymer angivna i SO heller.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620708,
@@ -296,8 +328,10 @@
         "exempelmening": "Tidningen har rykte om sig att vara <font color=\"#3498db\">vederhäftig</font>.",
         "etymologi": "fornsvenska vidherhäftogher, ursprungligen 'som har något att sätta som borgen'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'saklig och sanningsenlig' samt 'pålitlig' (om uppgifter/personer) - matchar kortets båda nyanser och facit. Etymologin (fornsv. vidherhäftogher, ursprungligen 'ha något att sätta som borgen') stämmer ordagrant.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620730,
@@ -312,8 +346,10 @@
         "exempelmening": "Han utreddes för en <font color=\"#3498db\">alimentär</font> allergi.",
         "etymologi": "till latin alimentarius 'näring', till alere 'nära'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som har att göra med födan', exempel 'alimentär allergi' - matchar kortet exakt, inklusive etymologi (lat. alimentarius, av alere 'nära').",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620717,
@@ -328,8 +364,21 @@
         "exempelmening": "Den nya regeringen utfärdade <font color=\"#3498db\">amnesti</font> för politiska fångar.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger uttryckligen två betydelser: 'allmän benådning; välvillig behandling av större grupp' - vilket bekräftar kortets båda angivna betydelser ordagrant. Inget saknas.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 38,
+  "granskning_kostnad_usd": 1.2253600000000002,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 19,
+      "turer": 38,
+      "turkrav": 5,
+      "kostnad_usd": 1.2253600000000002
     }
   ]
 }
