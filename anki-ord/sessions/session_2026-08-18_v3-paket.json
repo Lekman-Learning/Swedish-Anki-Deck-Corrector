@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": "claude-cli-blind",
+  "granskare": null,
   "poster": [
     {
       "noteId": 1780080620709,
@@ -19,10 +19,8 @@
         "exempelmening": "Hennes <font color=\"#3498db\">burriga</font>, ljusa hår stod rakt ut åt alla håll.",
         "etymologi": null
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'yvig, krusig och något rufsig, vanligen om hår el. fjädrar' - en betydelse, matchar kortet exakt. Synonymerna yvig/krusig är hämtade direkt ur SO:s egen definition, alltså inte cirkulära eller påhittade. Exempelmeningen illustrerar rätt betydelse och är highlightad. Register och form stämmer.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620677,
@@ -37,10 +35,8 @@
         "exempelmening": "Berget hade <font color=\"#3498db\">vittrat</font> sönder under tusentals år av regn.",
         "etymologi": "efter tyska verwittern, till Wetter 'väder'"
       },
-      "verdikt": "underkand",
-      "anmarkning": "SO ger tre betydelser (verb: 'falla sönder i små partiklar...' och 'känna lukten av'; substantiv: 'skogsrå i norrländsk folktro') - alla tre finns representerade på kortet, så ingen hel betydelse saknas (facit_signal om 5 betydelser stämmer inte mot SO). Men substantivbetydelsen innehåller ett sakfel: kortet säger att väsendet 'bor under jorden', medan SO definierar det som ett skogsrå - knutet till SKOGEN, inte jorden/underjorden. Bör ändras till ngt i stil med 'Kvinnligt naturväsen i norrländsk folktro knutet till skogen (skogsrå)'.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620702,
@@ -55,10 +51,8 @@
         "exempelmening": "Nato är en <font color=\"#3498db\">akronym</font>, inte ett vanligt namn.",
         "etymologi": "till grekiska akros 'ytterst' och onyma 'namn'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SAOL: 'förkortning som består av initialer t.ex. LO' - matchar kortets definition väl. SO har en snävare formulering ('...och uppfattas som ett namn el. ord'), men SAOL:s eget exempel LO uttalas bokstav för bokstav, så källorna själva är oense om den nyansen; kortets bredare definition kan då inte räknas som ett sakfel. Exempel och etymologi stämmer mot SO.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620692,
@@ -73,10 +67,8 @@
         "exempelmening": "<font color=\"#3498db\">Galären</font> drevs framåt av hundra roddare vid årorna.",
         "etymologi": "av franska galère, av italienska galera"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SAOL: 'i äldre tid: fartyg som roddes av slavar' - matchar kortets formulering nästan ordagrant. SO ('framdrivet av krigs- el. straffångar') pekar åt samma håll. Etymologi och exempelmening stämmer.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620699,
@@ -94,10 +86,8 @@
         "exempelmening": "En <font color=\"#3498db\">häftig</font> åskskur drog in över staden på några minuter.",
         "etymologi": "av lågtyska heftig; besläktat med hast"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO:s tre huvudbetydelser (plötslig/kraftig, lättretlig, vardagligt 'tilltalande') finns alla med på kortet. 'Intensiv' motsvarar SO:s undernyans 1a ('(snabb och) intensiv', t.ex. häftig sjögång) inom samma huvudbetydelse som 'plötslig och kraftig', inte en egen betydelse - uppdelningen är rimlig, inte felaktig. Synonymerna intensiv/uppbrusande bekräftas av SO:s definitionstext, och exempelmeningen matchar SO:s eget exempel.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620729,
@@ -114,10 +104,8 @@
         "exempelmening": "Han nämnde uppsägningen bara <font color=\"#3498db\">i förbigående</font> och gick vidare.",
         "etymologi": null
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: '(bara) i förbigående' = 'flyktigt', vilket matchar facit och kortets kärna. Kortets tillägg om att nämna något 'som en parentes' ligger nära den besläktade idiomvarianten 'i förbigående sagt' ('sagt som en parentes') och är en rimlig, sakligt korrekt utvidgning snarare än en felaktig sammanblandning. Exempelmeningen illustrerar bra och är highlightad.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620725,
@@ -132,10 +120,8 @@
         "exempelmening": "<font color=\"#3498db\">Konvojen</font> korsade Atlanten under eskort av två jagare.",
         "etymologi": "av franska convoi, till voie 'väg'"
       },
-      "verdikt": "underkand",
-      "anmarkning": "SO listar tre undermeningar: (1) gruppen inklusive eskorten, (2) 'äv. om skyddad transport till lands', (3) 'äv. försvagat' om en rad fordon (t.ex. lastbilskonvoj) UTAN att skydd/eskort krävs. Kortet har bara betydelse (2) och saknar den vanliga, försvagade betydelsen (3) - en genuint annorlunda användning eftersom skyddsaspekten faller bort helt. Bör läggas till som egen betydelse, t.ex. 'Rad av fordon som färdas tillsammans (utan att nödvändigtvis vara skyddad)'.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620734,
@@ -153,10 +139,8 @@
         "exempelmening": "Hans <font color=\"#3498db\">niece</font> fyllde tio år i förra veckan.",
         "etymologi": "av franska nièce, av latin neptia 'sondotter'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO/SAOL: 'brors- el. systerdotter', register 'något ålderdomligt' - matchar kortet exakt på både betydelse och register. Etymologin (fra. nièce, av lat. neptia) stämmer ordagrant.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620710,
@@ -171,10 +155,8 @@
         "exempelmening": "Meningen \"jag ljuger nu\" är en klassisk <font color=\"#3498db\">paradox</font>.",
         "etymologi": "av grekiska paradox 'sällsynt', till para 'emot' och doxa 'mening'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO:s huvudbetydelse ('skenbart orimligt men [djupare sett] sant påstående') matchar kortet exakt. De två undernyanserna i SO (filosofiska satser i konflikt med sant/falskt-principen; motsägande företeelser) är exemplifieringar/tillämpningar av samma grundbetydelse, inte fristående moment, så ingen hel betydelse saknas. Exempel och etymologi (grek. para 'emot', doxa 'mening') stämmer mot SO.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620694,
@@ -189,10 +171,8 @@
         "exempelmening": "Den nya delägaren visade sig vara en <font color=\"#3498db\">trojansk häst</font> i företaget.",
         "etymologi": "efter trähästen i berättelsen om Trojas fall"
       },
-      "verdikt": "underkand",
-      "anmarkning": "SO:s idiomartikel för 'trojansk häst' omfattar uttryckligen två sidor av uttrycket: dels person/grupp som infiltrerar en organisation, dels (mycket vanlig användning idag) skadlig programvara som smugit sig in i en dator ('virusskyddet signalerade att en trojansk häst tagit sig in i datorn'). Kortet nämner bara infiltratör-betydelsen och saknar helt IT/datavirus-betydelsen, som sannolikt är den mest kända i dagligt språk.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620726,
@@ -209,10 +189,8 @@
         "exempelmening": "Kungens porträtt sitter på myntets <font color=\"#3498db\">advers</font>.",
         "etymologi": "till latin adversus 'vänd emot'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'framsida av mynt eller medalj', antonym 'revers'. 'Avers' finns som eget uppslagsord i SO med identisk betydelse och antonym-relation, och är alltså en äkta, ordboksbelagd synonym - inte cirkulär. Exempel och etymologi stämmer.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620736,
@@ -229,10 +207,8 @@
         "exempelmening": "<font color=\"#3498db\">Exkrementer</font> från råttor och möss kan sprida sjukdomar.",
         "etymologi": "av latin excrementum 'utsöndrat ämne'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'avföring från tarmen hos djur el. människa', med synonymen 'fekalier'. Kortets synonym 'avföring' är själva definitionsordet i SO och alltså en äkta, utbytbar synonym. Exempelmeningen är nästan ordagrant SO:s eget exempel.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620727,
@@ -250,10 +226,8 @@
         "exempelmening": "Hon hann med dagens <font color=\"#3498db\">göromål</font> före lunch.",
         "etymologi": null
       },
-      "verdikt": "underkand",
-      "anmarkning": "Definition och synonymer bekräftas ordagrant av SAOL: 'sysselsättning, aktivitet'. Men registret 'ngt ålderdomlig' saknar stöd - varken SO eller SAOL markerar ordet som ålderdomligt, och det används fortfarande i vardagligt tal (t.ex. 'dagliga göromål'). Registret bör vara neutralt, inte ålderdomligt.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620686,
@@ -268,10 +242,8 @@
         "exempelmening": "Det fanns en tydlig <font color=\"#3498db\">inkongruens</font> mellan hans ord och hans handlingar.",
         "etymologi": null
       },
-      "verdikt": "underkand",
-      "anmarkning": "SAOL taggar ordet uttryckligen med fackområdet 'lingv.' (lingvistik), och SO preciserar definitionen till 'bristande överensstämmelse... om olikhet i yttre form' - dvs. en term för formell/grammatisk bristande överensstämmelse. Kortet anger domänen som 'allmän' och exemplifierar med 'inkongruens mellan hans ord och hans handlingar', vilket är en betydelseglidning mot allmän motsägelse/hyckleri som inte stöds av ordböckerna. Domänen bör vara lingvistik/fackspråk och exemplet bytas mot ett grammatiskt/formellt exempel.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620678,
@@ -289,10 +261,8 @@
         "exempelmening": "<font color=\"#3498db\">Salinerna</font> vid Medelhavet lyser vita av torkat salt.",
         "etymologi": "till latin salinae 'saltgruva', till sal 'salt'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'bassäng där man utvinner salt genom att stänga in havsvatten och låta det avdunsta', med korsreferenser just till 'saltbassäng' och 'saltverk' - exakt kortets synonymer. Exempel och etymologi stämmer.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620705,
@@ -307,10 +277,8 @@
         "exempelmening": "Hon hade ett <font color=\"#3498db\">tillgodohavande</font> på 300 kronor i bokhandeln.",
         "etymologi": null
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'ekonomisk fordran...', med ett exempel som är identiskt med kortets ('hon har ett tillgodohavande på 300 kronor i bokhandeln'). En betydelse, inget saknas, inga synonymer angivna i SO heller.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620708,
@@ -328,10 +296,8 @@
         "exempelmening": "Tidningen har rykte om sig att vara <font color=\"#3498db\">vederhäftig</font>.",
         "etymologi": "fornsvenska vidherhäftogher, ursprungligen 'som har något att sätta som borgen'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'saklig och sanningsenlig' samt 'pålitlig' (om uppgifter/personer) - matchar kortets båda nyanser och facit. Etymologin (fornsv. vidherhäftogher, ursprungligen 'ha något att sätta som borgen') stämmer ordagrant.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620730,
@@ -346,10 +312,8 @@
         "exempelmening": "Han utreddes för en <font color=\"#3498db\">alimentär</font> allergi.",
         "etymologi": "till latin alimentarius 'näring', till alere 'nära'"
       },
-      "verdikt": "godkand",
-      "anmarkning": "SO: 'som har att göra med födan', exempel 'alimentär allergi' - matchar kortet exakt, inklusive etymologi (lat. alimentarius, av alere 'nära').",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
+      "verdikt": null,
+      "anmarkning": null
     },
     {
       "noteId": 1780080620717,
@@ -364,21 +328,147 @@
         "exempelmening": "Den nya regeringen utfärdade <font color=\"#3498db\">amnesti</font> för politiska fångar.",
         "etymologi": null
       },
-      "verdikt": "godkand",
-      "anmarkning": "SAOL ger uttryckligen två betydelser: 'allmän benådning; välvillig behandling av större grupp' - vilket bekräftar kortets båda angivna betydelser ordagrant. Inget saknas.",
-      "granskning_turer_post": 38,
-      "granskning_turkrav_post": 5
-    }
-  ],
-  "granskning_turer": 38,
-  "granskning_kostnad_usd": 1.2253600000000002,
-  "granskning_turkrav": 5,
-  "granskning_korningar": [
+      "verdikt": null,
+      "anmarkning": null
+    },
     {
-      "poster": 19,
-      "turer": 38,
-      "turkrav": 5,
-      "kostnad_usd": 1.2253600000000002
+      "noteId": 1780080620696,
+      "ord": "apostat",
+      "facit": "förrädare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Avfälling från en religion",
+        "register": "ngt ålderdomlig, neutral, religion",
+        "synonymer": [
+          "avfälling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kyrkan betraktade honom som en <font color=\"#3498db\">apostat</font> sedan han lämnat tron.",
+        "etymologi": "av grekiska apostates 'avfälling'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620704,
+      "ord": "bärig",
+      "facit": "lönsam",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som åtminstone går jämnt ut ekonomiskt ; Som flyter bra i vattnet",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "bärkraftig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "För att vara <font color=\"#3498db\">bärig</font> måste gården normalt vara på flera hundra hektar.",
+        "etymologi": "till bära"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620689,
+      "ord": "diktator",
+      "facit": "envåldshärskare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Nationell ledare som härskar utan inskränkningar och utan folkligt inflytande ; (förr) romersk ämbetsman med tidsbegränsat envälde ; (försvagat) person som styr med hård hand",
+        "register": "neutral, neutral, politik",
+        "synonymer": [
+          "envåldshärskare",
+          "despot"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Diktatorn</font> tog makten genom en statskupp, stödd av militären.",
+        "etymologi": "av latin dictator, till dictare 'föreskriva'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620712,
+      "ord": "dränera",
+      "facit": "avleda vatten, torrlägga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Leda bort oönskat vatten från mark ; (medicin) leda bort vätska från ett sår ; (bildligt) tömma på resurser",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Sankmarken runt sjön har <font color=\"#3498db\">dränerats</font> med diken.",
+        "etymologi": "via franska av engelska drain 'torrlägga'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620698,
+      "ord": "döbattang",
+      "facit": "dubbeldörr<br><a href=\"https://www.google.com/imgres?q=d%C3%B6battang&amp;imgurl=https%3A%2F%2Fcust.kulturhotell.se%2Fc32%2Ffiles%2Ffullsize%2Fe9002976b1d7aae72a0cb7e92e2b213b.jpg&amp;imgrefurl=https%3A%2F%2Fcust.kulturhotell.se%2Fc32%2Fitems%2Fshow%2F35899%3Ftags%3DD%25C3%25B6battang%26sort_field%3Dadded%26sort_dir%3Dd%26ref%3D%252Fc32%252Fitems%252Fbrowse%253Flayout%253Dlist&amp;docid=p7jMusI_rfUFyM&amp;tbnid=Wv7qrFDroO1BVM&amp;vet=12ahUKEwiZh6H7hMyLAxUsGBAIHS6BEtAQM3oECGoQAA..i&amp;w=1006&amp;h=1024&amp;hcb=2&amp;ved=2ahUKEwiZh6H7hMyLAxUsGBAIHS6BEtAQM3oECGoQAA\"><div><div><div><img alt=\"Blekinge museum · Blm A 22153 - Herrgård\" src=\"paste-c9b259d12416eefb2cb8a21dec51f1e0a890cac0.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Dörr som är delad i två längsgående halvor ; Den ena dörrhalvan i en dubbeldörr",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Döbattangen</font> mellan de båda salongerna stod vidöppen.",
+        "etymologi": "av franska porte à deux battants 'dörr med två dörrhalvor'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620688,
+      "ord": "framsynt",
+      "facit": "förutseende",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som förutser och planerar för en oundviklig utveckling",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "förutseende"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">framsynt</font> företagare föreslog miljöåtgärder redan på 1960-talet.",
+        "etymologi": "av norska fremsynt; jfr fornsvenska framsyn 'begåvad med siarblick'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620697,
+      "ord": "gavel",
+      "facit": "kortsida på hus<br><div><div><div><a href=\"https://www.google.com/imgres?q=gavel%20arkitektur&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F3%2F33%2FHusgavlar_-_Ystad-2015.jpg%2F800px-Husgavlar_-_Ystad-2015.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FHusgavel&amp;docid=jcXz4WtDstqmvM&amp;tbnid=ICatjOzjrOnMoM&amp;vet=12ahUKEwiQgbXsuOGLAxVCJRAIHW2wABwQM3oECGoQAA..i&amp;w=800&amp;h=432&amp;hcb=2&amp;ved=2ahUKEwiQgbXsuOGLAxVCJRAIHW2wABwQM3oECGoQAA\"><img alt=\"Husgavel – Wikipedia\" src=\"paste-6fa058aa016eb0f27023a1fcdaf6dff2264c2c8d.webp\"></a><a href=\"https://commons.wikimedia.org/wiki/File:Husgavel.svg\"><img src=\"160px-husgavel.svg.webp\"></a></div></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kortsidan av en byggnad ; (i uttrycket på vid gavel) vidöppen",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "kortsida"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Alla fönster stod på vid <font color=\"#3498db\">gavel</font> i sommarvärmen.",
+        "etymologi": "fornsvenska gafl; jfr gotiska gibla 'spets, tinne'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620684,
+      "ord": "generator",
+      "facit": "strömalstrare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Anordning som alstrar elektrisk energi ; Anordning som alstrar gas",
+        "register": "neutral, neutral, teknik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Generatorn</font> försörjde huset med el under strömavbrottet.",
+        "etymologi": "av latin generator 'alstrare, skapare'"
+      },
+      "verdikt": null,
+      "anmarkning": null
     }
   ]
 }
