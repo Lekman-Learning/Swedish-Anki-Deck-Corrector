@@ -421,3 +421,37 @@ var ~6 sekunder — ingen prestandaoro.
 loggar redan en nivå ned och träffades av det gamla mönstret. Värt att
 komma ihåg om Adam ser samma felmeddelande från en huvudsession framöver —
 då är förklaringen en ANNAN, inte den här.
+
+### 5. `slaupp.py` kan tysta hämta FEL ord för flerordsuttryck
+
+Upptäckt 2026-08-18 vid en rutinkomplettering av `uppslag/trojansk häst.json`
+(gjord bara för att städa bort en mjuk `uppslag_saknas`-varning -- ordet var
+redan skrivet och släppt utan denna fil). Hämtningen gav HTTP 200 och
+`traffar=saol,so` -- ser alltså ut som en lyckad uppslagning -- men
+`sammandrag.svenska_se.so.def` innehåller Troja-etymologi, dragdjursspann,
+brovalv och skidbindning: **det är ordet `spann`s artikel**, inte idiomets.
+`trojansk häst` förekommer bara som EXEMPELMENING i `spann`s artikel
+("spannet var förspänt"-familjen), och svenska.se:s fuzzy-sök i
+`msearch?ord=trojansk häst` landade på den artikeln istället för idiomets
+egen (om en sådan ens är egen-indexerad).
+
+**Samma felklass som redan dokumenterad 2026-08-15** ("Förorenade
+MÄRKNINGAR, inte bara definitioner") -- fast där gällde det enskilda ord med
+närliggande stavning, här ett helt flerordsuttryck som inte alls matchar
+sökträffen semantiskt. `forgranska.py`s `frammande_uppslagsord`-regel fångade
+det (35 obesläktade uppslagsord i träffarna: "biff, box, däst, flank, fäst
++29 till" -- en tydlig signal att sökträffen inte hör hemma här).
+
+**Ingen skada skedd den här gången**: kortets faktiska innehåll (skrivet av
+en tidigare session) verkar korrekt källat på annat sätt (troligen riktig
+websökning, inte `slaupp.py`), och den lokala cachefilen läses aldrig av
+`blindgranska.py` (som bara ser paketfilens `facit`+`kort`). Men **kör alltid
+`forgranska.py` på en fil EFTER en `slaupp.py`-komplettering**, inte bara
+efter att ha skrivit nytt innehåll -- annars upptäcks en förorenad cache för
+sent, som här (upptäckt efter att blindgranskningen redan startats).
+
+Möjlig framtida fix: låt `slaupp.py` jämföra sökordet mot den TRÄFFADE
+artikelns `ortografi`/`ordled`-fält (samma mekanism som redan finns för
+`frammande_uppslagsord` i `forgranska.py`) och vägra spara/flagga tydligt
+när de inte stämmer överens, i stället för att skriva en fil som SER
+komplett ut.
