@@ -1,0 +1,1071 @@
+[
+  {
+    "noteId": 1780080620682,
+    "ord": "näppeligen",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "knappast",
+        "föga sannolikt",
+        "svårligen"
+      ],
+      "definitioner": [
+        "Knappast eller troligen inte.",
+        "Med stor svårighet (omöjligt)."
+      ],
+      "exempelmening": "Han kommer <b>näppeligen</b> hinna klart före deadline.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "knappast",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=näppeligen",
+      "slutsats": "SO taggar uttryckligen jfr-ordet 'knappast' med 'SYN:synonym' -- den starkaste formen av belägg som finns (regel a, inte bara 'inleder ett led'). SAOL:s hela definition är för övrigt bara ordet 'knappast'. SO:s egen def: 'sannolikt inte' / 'svårligen'. Registret satt till litterär snarare än 'ngt ålderdomlig' eftersom SO inte märker ordet som daterat -- det är bokspråk som fortfarande används aktivt i skrift, till skillnad från t.ex. tarva/echappera som SO/SAOL uttryckligen märker som daterade."
+    },
+    "proposed": {
+      "huvudbetydelse": "Knappast, sannolikt inte",
+      "synonymer": [
+        "knappast"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Man kan <font color=\"#3498db\">näppeligen</font> kalla resultatet en framgång.",
+      "register": "litterär, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620707,
+    "ord": "passivera",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "göra passiv",
+        "neutralisera",
+        "avaktivera"
+      ],
+      "definitioner": [
+        "Göra något eller någon i ett passiv tillstånd.",
+        "Ta bort eller minska aktiviteten hos något eller någon."
+      ],
+      "exempelmening": "Han passiviserades av den långa resan.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "göra passiv",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=passivera",
+      "slutsats": "SO ger tre betydelser: (1) 'göra overksam' (allmän/pedagogisk, ex. 'det passiverande tv-tittandet'), (2) grammatisk 'omvandla till passiv form' (ex. 'passivera verbet jaga'), (3) kemisk/teknisk 'minska reaktionsförmågan hos' (ex. 'passivera stål mot korrosion'). Kortet begränsas till betydelse (3) + den allmänna betydelse (1) -- den grammatiska underbetydelsen (2) är för nischad för ett grundkort och skalas bort, i linje med tidigare praxis (jfr metronom/cyklon). Ingen synonym är belagd -- alla tre SO-definitioner är hela satser."
+    },
+    "proposed": {
+      "huvudbetydelse": "(kemi/teknik) behandla en metallyta så att den motstår korrosion bättre ; göra overksam eller passiv",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Stålytan <font color=\"#3498db\">passiverades</font> för att bättre stå emot rost.",
+      "register": "neutral, neutral, kemi",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620719,
+    "ord": "rabbin",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "präst",
+        "religiös ledare",
+        "talman"
+      ],
+      "definitioner": [
+        "En ledare inom judendomen som undervisar och leder religiösa ceremonier.",
+        "En person som studerar och undervisar i judisk lag och tradition."
+      ],
+      "exempelmening": "En rabbin höll en föreläsning om den hebreiska Bibeln.",
+      "etymologi": null,
+      "bild_html": "<br> <img src=\"250px-albert_edelfelt_-_rabbi_reading_-_a_ii_771_3_-_finnish_national_gallery.webp\" alt=\"Albert Edelfelt - Rabbi reading - A II 771 3 - Finnish National Gallery\">",
+      "synonym_groups": null
+    },
+    "old_facit": "judisk präst<br><a href=\"https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Rabbi_Reading_-_A_II_771_3_-_Finnish_National_Gallery.jpg\"><img src=\"250px-albert_edelfelt_-_rabbi_reading_-_a_ii_771_3_-_finnish_national_gallery.webp\"></a>",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=rabbin",
+      "slutsats": "SO: '(titel för) judisk församlingsanställd med uppgift att bl.a. vara rättskipare och förkunnare', märkt 'särsk. i förbindelse med namn'. SAOL: 'andlig ledare i judisk församling'. Ingen fristående synonymglosa i någon av definitionerna (båda är beskrivande fraser) så synonymlistan lämnas tom -- synonymer.se:s 'judisk präst/religionslärare' är bara kandidater."
+    },
+    "proposed": {
+      "huvudbetydelse": "Andlig ledare och lärare i en judisk församling",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Inför högtiden höll <font color=\"#3498db\">rabbinen</font> en predikan för församlingen.",
+      "register": "neutral, neutral, religion",
+      "etymologi": "Av hebreiska rabbi 'min mästare'."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620713,
+    "ord": "raffinemang",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "förfining",
+        "förskönning",
+        "förädling"
+      ],
+      "definitioner": [
+        "Handlingen att göra något mer fint, elegant eller värdefullt.",
+        "En process som innebär att något blir mer avancerat eller sofistikerat."
+      ],
+      "exempelmening": "Den konstnären är känd för sin raffinerad stil.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "förfining",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=raffinemang",
+      "slutsats": "SAOL: 'förfining, utsökthet, sinnrikhet' -- kommalista, alla tre inleder sina led och är belagda. SO: 'förfining', ex. 'filmens dialog hade både raffinemang och humor', jfr 'finess' (cohyponym, inte synonym, utelämnad)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Förfining, raffinerad elegans i något",
+      "synonymer": [
+        "förfining",
+        "utsökthet",
+        "sinnrikhet"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Rätten serverades med ett <font color=\"#3498db\">raffinemang</font> som avslöjade kockens erfarenhet.",
+      "register": "neutral, positiv, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620703,
+    "ord": "sari",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "svepande kvinnodräkt",
+        "drapering",
+        "klädsel"
+      ],
+      "definitioner": [
+        "En traditionell kvinnodräkt i Sydasien, som består av ett långt tygstycke som bärs runt kroppen och över axlarna.",
+        "Ett tygstycke som används för att sy en sådan klädsel."
+      ],
+      "exempelmening": "En kvinna i en röd sari med guldtråd var en imponerande syn på bröllopsfesten.",
+      "etymologi": null,
+      "bild_html": "<br> <img src=\"190px-sari1847.webp\" alt=\"svepande kvinnodräkt\">",
+      "synonym_groups": null
+    },
+    "old_facit": "svepande kvinnodräkt<br><a href=\"https://commons.wikimedia.org/wiki/File:Sari1847.jpg\"><img src=\"190px-sari1847.webp\"></a>",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=sari",
+      "slutsats": "SO: 'ett indiskt kvinnoplagg som består av ett långt, brett tygstycke som viras runt kroppen'. SAOL: 'ett indiskt kvinnoplagg' (kortare, samstämmig). Kulturspecifikt klädesplagg utan svensk synonym -- synonymer.se:s 'skynke/schal/klädnad' beskriver INTE samma sak (en sari är inte en schal) och utelämnas korrekt, tom synonymlista är rätt här."
+    },
+    "proposed": {
+      "huvudbetydelse": "Indiskt kvinnoplagg av ett långt tygstycke som viras runt kroppen",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Hon bar en färgstark <font color=\"#3498db\">sari</font> till bröllopsfesten.",
+      "register": "neutral, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620721,
+    "ord": "suveränitet",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "självständighet",
+        "makt",
+        "överhöghet"
+      ],
+      "definitioner": [
+        "Statens högsta maktfullkomlighet.",
+        "Fullständigt oberoende från främmande."
+      ],
+      "exempelmening": "Denna stat har en stark suveränitet inom sitt eget territorium.<br>",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "självständighet",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=suveränitet",
+      "slutsats": "SO ger två skilda betydelser: (1) 'fullständig självständighet' (statsrättslig), (2) 'överlägsen skicklighet', spec. om att vara överlägsen konkurrenter, ex. 'lagets suveränitet visade sig i att det vann serien med 10 poängs försprång'. Ingen synonym belagd -- 'självständighet' i SO:s def (1) modifieras av 'fullständig' och inleder därför INTE sitt eget led (samma mönster som farsot/pandemi, se 2026-08-12-regeln), så det skrivs inte in trots att ordet syns i definitionstexten. synonymer.se:s övriga kandidater är av samma skäl uteslutna."
+    },
+    "proposed": {
+      "huvudbetydelse": "Fullständig självständighet för en stat ; Överlägsen skicklighet eller dominans",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Landets <font color=\"#3498db\">suveränitet</font> innebär att ingen annan stat får bestämma över dess inre angelägenheter.",
+      "register": "neutral, neutral, politik",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620680,
+    "ord": "tarva",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "behöva",
+        "kräv",
+        "ville ha"
+      ],
+      "definitioner": [
+        "Ha ett behov av något.",
+        "Värna om något."
+      ],
+      "exempelmening": "Jag tarva en kopp kaffe för att orka med resten av dagen.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "behöva",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=tarva",
+      "slutsats": "SAOL: 'behöva, fordra', märkt 'ngt åld.' -- båda orden belagda. SO: 'behöva', märkt 'något ålderdomligt', ex. 'ett dunkelt textställe som tarvar en förklaring'. Båda ordböckerna markerar samma formalitetsnivå, så registret är starkt belagt, inte en gissning."
+    },
+    "proposed": {
+      "huvudbetydelse": "Behöva eller kräva något",
+      "synonymer": [
+        "behöva",
+        "fordra"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Frågan <font color=\"#3498db\">tarvar</font> ett tydligt svar.",
+      "register": "ngt ålderdomlig, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620693,
+    "ord": "underminera",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "undergräva",
+        "försvaga",
+        "urholka"
+      ],
+      "definitioner": [
+        "Skada eller försämra något sakta och subtilt.",
+        "Undergräva någonns ställning eller auktoritet."
+      ],
+      "exempelmening": "Han försökte undergräva sin motståndares argument med falska fakta.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "undergräva",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=underminera",
+      "slutsats": "SO taggar jfr-ordet 'undergräva' uttryckligen med 'SYN:synonym' -- starkast möjliga belägg. SO:s egen def: 'gradvis förstöra underifrån', med både en bokstavlig (ex. 'järnvägen hade underminerats av vårfloden') och en bildlig användning (ex. 'regeringens auktoritet underminerades av alla affärerna'). Behandlas som EN betydelse (bokstavligt/bildligt är samma grundinnebörd, inte två skilda betydelser) -- markerat inom huvudbetydelsen i stället för med ' ; '."
+    },
+    "proposed": {
+      "huvudbetydelse": "Gradvis förstöra eller gräva under något, bokstavligt eller bildligt (t.ex. någons auktoritet)",
+      "synonymer": [
+        "undergräva"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Ryktena <font color=\"#3498db\">underminerade</font> hans auktoritet inom partiet.",
+      "register": "neutral, negativ, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620681,
+    "ord": "utstaka",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "markera",
+        "dra riktlinjer",
+        "planera"
+      ],
+      "definitioner": [
+        "Markera en väg med stakar.",
+        "Fastställa planer för framtiden."
+      ],
+      "exempelmening": "Läraren utstakade tydliga regler för klassrummet.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "dra riktlinjer, markera",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=utstaka",
+      "slutsats": "SAOL: 'märka ut; ofta bildl.', ex. 'utstaka el. staka ut en handlingsplan' -- 'staka ut' är en variantform av SAMMA verb (inte en fristående synonym) och skrivs inte in som synonym eftersom den delar stam med uppslagsordet (cirkularitetsrisk). SO: 'bestämma riktlinjer för', ex. 'den utstakade handlingsplanen'. Ingen oberoende synonym belagd, tom lista korrekt."
+    },
+    "proposed": {
+      "huvudbetydelse": "Märka ut eller bestämma riktningen för något, ofta bildligt (t.ex. en plan)",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Chefen <font color=\"#3498db\">utstakade</font> en tydlig plan för avdelningens framtid.",
+      "register": "neutral, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620677,
+    "ord": "vittra",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "småfolk",
+        "underjordiska",
+        "vittra sönder"
+      ],
+      "definitioner": [
+        "Mytiska väsen i folktro. (kvinnligt väsen)",
+        "Sönderfalla genom kemisk påverkan."
+      ],
+      "exempelmening": "",
+      "etymologi": null,
+      "bild_html": "<br> <img alt=\"webp image\" src=\"paste_1759082373317.webp\">",
+      "synonym_groups": [
+        [
+          "småfolk",
+          "underjordiska"
+        ],
+        [
+          "vittra sönder"
+        ]
+      ]
+    },
+    "old_facit": "falla sönder; &nbsp; känna lukt; &nbsp; skogsfru<br><img alt=\"webp image\" src=\"paste_1759082373317.webp\">",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "old_har_fler_betydelser",
+        "allvar": "hog",
+        "forklaring": "OLD anger 3 betydelser (falla sönder |   känna lukt |   skogsfru) men kortet har 2. Kontrollera om en HEL betydelse saknas."
+      },
+      {
+        "flagga": "cirkular_synonym",
+        "allvar": "medel",
+        "forklaring": "Synonymen vittra sönder innehåller uppslagsordet och avslöjar svaret."
+      },
+      {
+        "flagga": "tom_exempelmening",
+        "allvar": "lag",
+        "forklaring": "Exempelmening saknas, måste skrivas."
+      }
+    ],
+    "hogsta_allvar": "hog",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=vittra",
+      "slutsats": "Kontrollerat mot SO och SAOL via svenska.se. Betydelserna foljer SO:s egen ordning och SAOL:s formulering. Synonymer ar tagna ENBART ur ordbokens definitionstext (ordet inleder ett led i SO/SAOL) - inte ur synonymer.se. Tom synonymlista dar ordboken saknar belagg, enligt beslut 2026-08-12. | RÄTTAD efter underkännande 2026-08-18: substantivbetydelsen (skogsrå) sa felaktigt att väsendet bor UNDER JORDEN. SO definierar skogsrå som knutet till SKOGEN, inte jorden -- fixat till \"knutet till skogen (skogsrå)\". De två verbbetydelserna (falla sönder / känna lukt) var korrekta och orörda."
+    },
+    "proposed": {
+      "huvudbetydelse": "Falla sönder i små partiklar ; Känna lukten av ; Kvinnligt naturväsen i norrländsk folktro knutet till skogen (skogsrå)",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Berget hade <font color=\"#3498db\">vittrat</font> sönder under tusentals år av regn.",
+      "register": "neutral, neutral, allmän",
+      "etymologi": "efter tyska verwittern, till Wetter 'väder'"
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620725,
+    "ord": "konvoj",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "transport",
+        "tåg",
+        "eskort"
+      ],
+      "definitioner": [
+        "En grupp fordon som färdas tillsammans för skydd eller säkerhet.",
+        "En grupp fordon som transporterar gods eller militär utrustning."
+      ],
+      "exempelmening": "En lång konvoj av lastbilar transporterade varor till den fjärre staden.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "skyddad transport<br><img src=\"paste-526eae092243da87e11289d8f595b3aacddbce97.webp\">",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "dubblettdefinition",
+        "allvar": "medel",
+        "forklaring": "Två definitioner börjar likadant -- troligen samma betydelse formulerad två gånger, slå ihop till en."
+      }
+    ],
+    "hogsta_allvar": "medel",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=konvoj",
+      "slutsats": "Kontrollerat mot SO och SAOL via svenska.se. Betydelserna foljer SO:s egen ordning och SAOL:s formulering. Synonymer ar tagna ENBART ur ordbokens definitionstext (ordet inleder ett led i SO/SAOL) - inte ur synonymer.se. Tom synonymlista dar ordboken saknar belagg, enligt beslut 2026-08-12. | RÄTTAD efter underkännande 2026-08-18: saknade SO:s tredje, försvagade betydelse (rad av fordon UTAN skyddskrav, t.ex. lastbilskonvoj). Tillagd som egen betydelse. De två ursprungliga betydelserna (skyddad sjötransport / skyddad landtransport) var korrekta och orörda."
+    },
+    "proposed": {
+      "huvudbetydelse": "Grupp av handelsfartyg som åtföljs och skyddas av örlogsfartyg ; Skyddad transport till lands ; Rad av fordon som färdas tillsammans, utan att nödvändigtvis vara skyddade",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "<font color=\"#3498db\">Konvojen</font> korsade Atlanten under eskort av två jagare.",
+      "register": "neutral, neutral, sjöfart",
+      "etymologi": "av franska convoi, till voie 'väg'"
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620694,
+    "ord": "trojansk häst",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "spion",
+        "förrädare",
+        "lura"
+      ],
+      "definitioner": [
+        "En dold eller smygande attack som utförs från insidan.",
+        "En person eller sak som utgör en dold fara eller hot."
+      ],
+      "exempelmening": "Denna nya affärsaffär visade sig vara en trojansk häst, full av gömda villkor som skadade företaget.<br>",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "gömt angrepp inifrån",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "old_delar_inget_ordforrad",
+        "allvar": "medel",
+        "forklaring": "Kortet och OLD delar inget innehållsord (OLD: angrepp, gömt, inifrån). Oftast bara en parafras -- men det är så här ett rakt motsatt innehåll ser ut (jfr ingäld)."
+      }
+    ],
+    "hogsta_allvar": "medel",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=trojansk häst",
+      "slutsats": "Kontrollerat mot SO och SAOL via svenska.se. Betydelserna foljer SO:s egen ordning och SAOL:s formulering. Synonymer ar tagna ENBART ur ordbokens definitionstext (ordet inleder ett led i SO/SAOL) - inte ur synonymer.se. Tom synonymlista dar ordboken saknar belagg, enligt beslut 2026-08-12. | RÄTTAD efter underkännande 2026-08-18: saknade SO:s IT/datavirus-betydelse (skadlig programvara som smugit sig in, \"virusskyddet signalerade att en trojansk häst tagit sig in i datorn\") -- enligt granskaren den mest kända användningen idag. Tillagd som egen betydelse, exempelmeningen bytt till att illustrera just den betydelsen eftersom den är vanligast. Infiltratör-betydelsen kvar som första betydelse."
+    },
+    "proposed": {
+      "huvudbetydelse": "Person eller grupp som infiltrerar och försvagar en organisation inifrån ; (IT) skadlig programvara som smugit sig in i en dator, förklädd till något ofarligt",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Viruset agerade som en <font color=\"#3498db\">trojansk häst</font> och öppnade en bakdörr i systemet.",
+      "register": "neutral, negativ, allmän",
+      "etymologi": "efter trähästen i berättelsen om Trojas fall"
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: '(IT) skadlig programvara som smugit sig in i en da'"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620727,
+    "ord": "göromål",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "syssla",
+        "uppgift",
+        "arbete"
+      ],
+      "definitioner": [
+        "Saker som ska uträttas.",
+        "Vardagliga sysslor eller uppdrag."
+      ],
+      "exempelmening": "",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "syssla",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "tom_exempelmening",
+        "allvar": "lag",
+        "forklaring": "Exempelmening saknas, måste skrivas."
+      }
+    ],
+    "hogsta_allvar": "lag",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=göromål",
+      "slutsats": "Kontrollerat mot SO och SAOL via svenska.se. Betydelserna foljer SO:s egen ordning och SAOL:s formulering. Synonymer ar tagna ENBART ur ordbokens definitionstext (ordet inleder ett led i SO/SAOL) - inte ur synonymer.se. Tom synonymlista dar ordboken saknar belagg, enligt beslut 2026-08-12. | RÄTTAD efter underkännande 2026-08-18: register \"ngt ålderdomlig\" saknade stöd -- varken SO eller SAOL märker ordet som daterat, och det används fortfarande i vardagligt tal (\"dagliga göromål\"). Ändrat till neutral. Huvudbetydelse/synonymer/exempelmening var redan korrekta och är orörda."
+    },
+    "proposed": {
+      "huvudbetydelse": "Arbetsuppgift eller syssla",
+      "synonymer": [
+        "sysselsättning",
+        "aktivitet"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Hon hann med dagens <font color=\"#3498db\">göromål</font> före lunch.",
+      "register": "neutral, neutral, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620686,
+    "ord": "inkongruens",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "bristande överensstämmelse",
+        "missmatchning",
+        "avvikelser"
+      ],
+      "definitioner": [
+        "En situation där två eller flera saker inte överensstämmer eller stämmer överens.",
+        "En skillnad eller avvikelse från det som är förväntat eller normalt."
+      ],
+      "exempelmening": "",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "bristande överensstämmelse",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "tom_exempelmening",
+        "allvar": "lag",
+        "forklaring": "Exempelmening saknas, måste skrivas."
+      }
+    ],
+    "hogsta_allvar": "lag",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=inkongruens",
+      "slutsats": "Kontrollerat mot SO och SAOL via svenska.se. Betydelserna foljer SO:s egen ordning och SAOL:s formulering. Synonymer ar tagna ENBART ur ordbokens definitionstext (ordet inleder ett led i SO/SAOL) - inte ur synonymer.se. Tom synonymlista dar ordboken saknar belagg, enligt beslut 2026-08-12. | RÄTTAD efter underkännande 2026-08-18: domän \"allmän\" och exemplet (ord vs handling) matchade inte källan -- SAOL taggar ordet \"lingv.\" och SO preciserar till formell/grammatisk bristande överensstämmelse. Huvudbetydelse skärpt till \"...i grammatisk form\", domän ändrad till lingvistik, exemplet bytt till ett konkret grammatiskt kongruensfel (genus mellan adjektiv och substantiv)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Bristande överensstämmelse i grammatisk form",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "'Ett röd hus' innehåller en grammatisk <font color=\"#3498db\">inkongruens</font> -- adjektivet böjs inte efter substantivets genus.",
+      "register": "fackspråklig, neutral, lingvistik",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620704,
+    "ord": "bärig",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "lönsam",
+        "avkastande",
+        "vinstgivande"
+      ],
+      "definitioner": [
+        "Som kan ge ekonomisk vinning eller utdelning.",
+        "Som är lätt att bära eller transportera."
+      ],
+      "exempelmening": "Den nya affärsmodellen visade sig vara bärig.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "lönsam",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=bärig",
+      "slutsats": "Kontrollerat mot SO och SAOL via svenska.se. ALLA SO-betydelser ar med, aven de som SO markerar med 'av.' (forsvagat/bildligt) - det var den vanligaste bristen i blindgranskningen samma dag. Synonymer enbart dar ordet inleder ett led i SO/SAOL eller ar SYN-taggat. Register satt till neutral dar kallan inte markerar nagot; ingen gissning. | RÄTTAD efter underkännande 2026-08-18: andra betydelsen var en felaktig övergeneralisering (\"flyter bra i vattnet\" om vad som helst) -- SO:s faktiska betydelse gäller specifikt fartyg/fartygsdelar som flyter bra TROTS att de är lastade, inte flytförmåga i allmänhet. Domän ändrad från allmän till sjöfart (SAOL märker ekon./sjö.), båda betydelserna nu explicit fackmärkta i texten."
+    },
+    "proposed": {
+      "huvudbetydelse": "(ekonomi) bärkraftigt, går runt utan förlust ; (sjöfart) som flyter bra trots att fartyget eller fartygsdelen är lastad",
+      "synonymer": [
+        "bärkraftig"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "För att vara <font color=\"#3498db\">bärig</font> måste gården normalt vara på flera hundra hektar.",
+      "register": "neutral, neutral, sjöfart",
+      "etymologi": "till bära"
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620715,
+    "ord": "indifferent",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "likgiltig",
+        "ointresserad",
+        "neutral"
+      ],
+      "definitioner": [
+        "Som saknar intresse eller engagemang.",
+        "Som inte gör någon skillnad."
+      ],
+      "exempelmening": "Hon visade sig vara helt indifferent mot hans förslag.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "likgiltig",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=indifferent",
+      "slutsats": "SAOL: 'obestämd', 'likgiltig' -- två fristående glosor, båda belagda synonymer. SO ger tre betydelser: (1) 'som inte visar något intresse' (märkt 'något ålderdomligt', ex. 'politiskt indifferent'), (2) kemisk 'obenägen att ingå i kemiska föreningar' (ex. 'indifferenta gaser'), (3) en snäv biologisk underbetydelse. Kortet begränsas medvetet till huvudbetydelsen (1) -- kemibetydelsen är en fackterm som sällan efterfrågas i vardagsspråk och biologibetydelsen är för nischad för ett grundkort, i linje med tidigare beslut att skala bort encyklopediska underbetydelser (jfr metronom/cyklon 2026-08-04). Registret 'ngt ålderdomlig' följer SO:s egen märkning på just den betydelse kortet leder med."
+    },
+    "proposed": {
+      "huvudbetydelse": "Likgiltig, utan intresse eller engagemang",
+      "synonymer": [
+        "likgiltig",
+        "obestämd"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Hon förblev fullständigt <font color=\"#3498db\">indifferent</font> inför nyheten, utan minsta tecken på glädje eller sorg.",
+      "register": "ngt ålderdomlig, neutral, allmän",
+      "etymologi": "Av latin in- och differre 'skilja åt' -- alltså 'utan åtskillnad'."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  },
+  {
+    "noteId": 1780080620732,
+    "ord": "krämare",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "säljare",
+        "affärsman",
+        "försäljare"
+      ],
+      "definitioner": [
+        "En person som säljer varor eller tjänster, ofta med aggressiv eller oärlig taktik.",
+        "En person som arbetar inom försäljning, särskilt inom finans eller fastigheter."
+      ],
+      "exempelmening": "Denna krämare lovade mig enorma vinster, men det visade sig vara en bluff.",
+      "etymologi": null,
+      "bild_html": "<br> <img alt=\"American Psycho” the novel (1991 ...\" src=\"paste-f43600623d148fe9dff3066ab17ed3ea7b45ebf6.webp\">",
+      "synonym_groups": null
+    },
+    "old_facit": "krass affärsman<br><a href=\"https://www.google.com/imgres?q=american%20psycho%20book%20cover&amp;imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D3400498956155449371&amp;imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fonlystarleft%2Fp%2FC8w_8ozuYfv%2F&amp;docid=wYv1K5znyVFgFM&amp;tbnid=-YJkTOFltKLJCM&amp;vet=12ahUKEwjiqb-DyvyLAxWVDRAIHabCJjcQM3oECBsQAA..i&amp;w=1101&amp;h=1345&amp;hcb=2&amp;ved=2ahUKEwjiqb-DyvyLAxWVDRAIHabCJjcQM3oECBsQAA\"><div><div><div><img alt=\"American Psycho” the novel (1991 ...\" src=\"paste-f43600623d148fe9dff3066ab17ed3ea7b45ebf6.webp\"></div></div></div></a>",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=krämare",
+      "slutsats": "SAOL: 'småhandlare; krass affärsman', märkt 'ngt nedsätt.'. SO: 'affärsman' / (äv. bildligt) 'beräknande och materialistisk person', märkt 'nedsättande'. 'Småhandlare' inleder sitt led i SAOL och räknas som belagd synonym för grundbetydelsen; 'krass affärsman' är en hel beskrivande fras, inte en fristående synonymglosa, och skrivs i stället in i huvudbetydelsen. Valören satt till nedsättande eftersom det är den betydelse ordet oftast bär i modernt bruk (den bokstavliga 'småhandlare'-betydelsen är mer daterad)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Småhandlare, köpman ; (nedsättande) girig, beräknande affärsman",
+      "synonymer": [
+        "småhandlare"
+      ],
+      "synonym_groups": null,
+      "exempelmening": "Grannarna kallade honom en <font color=\"#3498db\">krämare</font> som bara brydde sig om vinsten.",
+      "register": "neutral, nedsättande, allmän",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-agent-skrivare"
+  }
+]

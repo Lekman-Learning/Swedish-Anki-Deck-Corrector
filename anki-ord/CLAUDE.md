@@ -3570,5 +3570,34 @@ vilket oreviderat kort som helst.
 5 omskrivna = 14) sparas till nästa gång istället för att köras
 underdimensionerat.
 
-Se `sessions/session_2026-08-18_v3-paket-review18.json` för granskarens
-verdikt.
+### review18: 15 godkända, 3 nya underkännanden
+
+`session_2026-08-18_v3-paket-review18.json` -- 37 turer, 1,28 USD, **15
+godkända / 3 underkända (17 %)**. 15 släppta (`kortgranskare.py slapp`),
+in i Adams aktiva kö. Full v3 i decket: **1043 → 1058**.
+
+De tre underkännandena, alla med konkreta, träffsäkra anmärkningar:
+
+- **bärig** (ett av de 8 gamla, inte skrivet ikväll): "som flyter bra i
+  vattnet" var en övergeneralisering -- SO:s faktiska betydelse gäller
+  specifikt fartyg/fartygsdelar som flyter bra TROTS att de är lastade,
+  inte flytförmåga i allmänhet. Domän ändrad allmän → sjöfart.
+- **indifferent**: synonymen "obestämd" hörde till den kemiska betydelsen
+  (indifferenta gaser) som kortet medvetet INTE tog med -- matchade alltså
+  inte den kvarvarande betydelsen (likgiltig). Ren följdfel av mitt eget
+  beslut att skala bort fackbetydelsen utan att städa synonymlistan efter.
+  Borttagen.
+- **krämare**: jag hade delat upp ordet i en påhittad neutral
+  förstabetydelse ("Småhandlare, köpman") och en nedsatt andra --
+  ordböckerna har EN betydelse, taggad nedsättande rakt av. Slagit ihop,
+  märkt nedsättande genomgående.
+
+Alla tre omskrivna efter anmärkningarna, applicerade på nytt, gammal
+`v3_underkand`-tagg och röd flagga borttagna (samma mönster som de fem
+tidigare underkännandena). Väntar nu på en färsk granskning.
+
+### 17 kort kvar väntar -- exakt på golvet, paketerade också
+
+De 14 sparade ovan + de 3 nya underkännandena (bärig/indifferent/krämare,
+omskrivna) = **17**, exakt golvvärdet. Paketerade och skickade till en ny
+blind granskning: `sessions/session_2026-08-18_v3-paket-review17.json`.

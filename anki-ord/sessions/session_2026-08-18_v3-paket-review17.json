@@ -1,0 +1,300 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-agent-skrivare",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080620682,
+      "ord": "näppeligen",
+      "facit": "knappast",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Knappast, sannolikt inte",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "knappast"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Man kan <font color=\"#3498db\">näppeligen</font> kalla resultatet en framgång.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620707,
+      "ord": "passivera",
+      "facit": "göra passiv",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "(kemi/teknik) behandla en metallyta så att den motstår korrosion bättre ; göra overksam eller passiv",
+        "register": "neutral, neutral, kemi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Stålytan <font color=\"#3498db\">passiverades</font> för att bättre stå emot rost.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620719,
+      "ord": "rabbin",
+      "facit": "judisk präst<br><a href=\"https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Rabbi_Reading_-_A_II_771_3_-_Finnish_National_Gallery.jpg\"><img src=\"250px-albert_edelfelt_-_rabbi_reading_-_a_ii_771_3_-_finnish_national_gallery.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Andlig ledare och lärare i en judisk församling",
+        "register": "neutral, neutral, religion",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Inför högtiden höll <font color=\"#3498db\">rabbinen</font> en predikan för församlingen.",
+        "etymologi": "Av hebreiska rabbi 'min mästare'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620713,
+      "ord": "raffinemang",
+      "facit": "förfining",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förfining, raffinerad elegans i något",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [
+          "förfining",
+          "utsökthet",
+          "sinnrikhet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Rätten serverades med ett <font color=\"#3498db\">raffinemang</font> som avslöjade kockens erfarenhet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620703,
+      "ord": "sari",
+      "facit": "svepande kvinnodräkt<br><a href=\"https://commons.wikimedia.org/wiki/File:Sari1847.jpg\"><img src=\"190px-sari1847.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Indiskt kvinnoplagg av ett långt tygstycke som viras runt kroppen",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon bar en färgstark <font color=\"#3498db\">sari</font> till bröllopsfesten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620721,
+      "ord": "suveränitet",
+      "facit": "självständighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fullständig självständighet för en stat ; Överlägsen skicklighet eller dominans",
+        "register": "neutral, neutral, politik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Landets <font color=\"#3498db\">suveränitet</font> innebär att ingen annan stat får bestämma över dess inre angelägenheter.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620680,
+      "ord": "tarva",
+      "facit": "behöva",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Behöva eller kräva något",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "behöva",
+          "fordra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Frågan <font color=\"#3498db\">tarvar</font> ett tydligt svar.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620693,
+      "ord": "underminera",
+      "facit": "undergräva",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gradvis förstöra eller gräva under något, bokstavligt eller bildligt (t.ex. någons auktoritet)",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [
+          "undergräva"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ryktena <font color=\"#3498db\">underminerade</font> hans auktoritet inom partiet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620681,
+      "ord": "utstaka",
+      "facit": "dra riktlinjer, markera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Märka ut eller bestämma riktningen för något, ofta bildligt (t.ex. en plan)",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Chefen <font color=\"#3498db\">utstakade</font> en tydlig plan för avdelningens framtid.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620677,
+      "ord": "vittra",
+      "facit": "falla sönder; &nbsp; känna lukt; &nbsp; skogsfru<br><img alt=\"webp image\" src=\"paste_1759082373317.webp\">",
+      "facit_signal": "facit antyder 5 betydelse(r), kortet har 3 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Falla sönder i små partiklar ; Känna lukten av ; Kvinnligt naturväsen i norrländsk folktro knutet till skogen (skogsrå)",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Berget hade <font color=\"#3498db\">vittrat</font> sönder under tusentals år av regn.",
+        "etymologi": "efter tyska verwittern, till Wetter 'väder'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620725,
+      "ord": "konvoj",
+      "facit": "skyddad transport<br><img src=\"paste-526eae092243da87e11289d8f595b3aacddbce97.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Grupp av handelsfartyg som åtföljs och skyddas av örlogsfartyg ; Skyddad transport till lands ; Rad av fordon som färdas tillsammans, utan att nödvändigtvis vara skyddade",
+        "register": "neutral, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Konvojen</font> korsade Atlanten under eskort av två jagare.",
+        "etymologi": "av franska convoi, till voie 'väg'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620694,
+      "ord": "trojansk häst",
+      "facit": "gömt angrepp inifrån",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person eller grupp som infiltrerar och försvagar en organisation inifrån ; (IT) skadlig programvara som smugit sig in i en dator, förklädd till något ofarligt",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Viruset agerade som en <font color=\"#3498db\">trojansk häst</font> och öppnade en bakdörr i systemet.",
+        "etymologi": "efter trähästen i berättelsen om Trojas fall"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620727,
+      "ord": "göromål",
+      "facit": "syssla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Arbetsuppgift eller syssla",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "sysselsättning",
+          "aktivitet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon hann med dagens <font color=\"#3498db\">göromål</font> före lunch.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620686,
+      "ord": "inkongruens",
+      "facit": "bristande överensstämmelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bristande överensstämmelse i grammatisk form",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "'Ett röd hus' innehåller en grammatisk <font color=\"#3498db\">inkongruens</font> -- adjektivet böjs inte efter substantivets genus.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620704,
+      "ord": "bärig",
+      "facit": "lönsam",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "(ekonomi) bärkraftigt, går runt utan förlust ; (sjöfart) som flyter bra trots att fartyget eller fartygsdelen är lastad",
+        "register": "neutral, neutral, sjöfart",
+        "synonymer": [
+          "bärkraftig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "För att vara <font color=\"#3498db\">bärig</font> måste gården normalt vara på flera hundra hektar.",
+        "etymologi": "till bära"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620715,
+      "ord": "indifferent",
+      "facit": "likgiltig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Likgiltig, utan intresse eller engagemang",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "likgiltig",
+          "obestämd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon förblev fullständigt <font color=\"#3498db\">indifferent</font> inför nyheten, utan minsta tecken på glädje eller sorg.",
+        "etymologi": "Av latin in- och differre 'skilja åt' -- alltså 'utan åtskillnad'."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620732,
+      "ord": "krämare",
+      "facit": "krass affärsman<br><a href=\"https://www.google.com/imgres?q=american%20psycho%20book%20cover&amp;imgurl=https%3A%2F%2Flookaside.instagram.com%2Fseo%2Fgoogle_widget%2Fcrawler%2F%3Fmedia_id%3D3400498956155449371&amp;imgrefurl=https%3A%2F%2Fwww.instagram.com%2Fonlystarleft%2Fp%2FC8w_8ozuYfv%2F&amp;docid=wYv1K5znyVFgFM&amp;tbnid=-YJkTOFltKLJCM&amp;vet=12ahUKEwjiqb-DyvyLAxWVDRAIHabCJjcQM3oECBsQAA..i&amp;w=1101&amp;h=1345&amp;hcb=2&amp;ved=2ahUKEwjiqb-DyvyLAxWVDRAIHabCJjcQM3oECBsQAA\"><div><div><div><img alt=\"American Psycho” the novel (1991 ...\" src=\"paste-f43600623d148fe9dff3066ab17ed3ea7b45ebf6.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Småhandlare, köpman ; (nedsättande) girig, beräknande affärsman",
+        "register": "neutral, nedsättande, allmän",
+        "synonymer": [
+          "småhandlare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Grannarna kallade honom en <font color=\"#3498db\">krämare</font> som bara brydde sig om vinsten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "claude-agent-skrivare",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080620696,
@@ -18,8 +18,10 @@
         "exempelmening": "Kyrkan betraktade honom som en <font color=\"#3498db\">apostat</font> sedan han lämnat tron.",
         "etymologi": "av grekiska apostates 'avfälling'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL har bara en betydelse: 'avfälling (från en religion)', SO taggad 'mindre brukligt'. Kortets definition, synonym ('avfälling') och etymologi stämmer alla mot ordboken. Registret 'ngt ålderdomlig' är en lätt förenkling av SO:s 'mindre brukligt' men vilseleder inte.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620704,
@@ -36,8 +38,10 @@
         "exempelmening": "För att vara <font color=\"#3498db\">bärig</font> måste gården normalt vara på flera hundra hektar.",
         "etymologi": "till bära"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO ger två betydelser: (1) ekonomiskt bärkraftig, (2) exakt 'som flyter bra om (del av) fartyg med last' -- alltså specifikt om fartyg/fartygsdelar med LAST, inte flytförmåga i allmänhet. Kortets 'Som flyter bra i vattnet' är en felaktig övergeneralisering som tappar bort både att det gäller fartyg och att lasten är avgörande -- det låter som om vilket föremål som helst kan vara 'bärigt' om det flyter, vilket är fel. Registret borde också visa fackområdena ekonomi/sjöfart (SAOL: ekon., sjö.) i stället för 'allmän'. Bör skrivas om till ngt i stil med '(sjöfart) som flyter bra trots att fartyget/fartygsdelen är lastad'.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620689,
@@ -55,8 +59,10 @@
         "exempelmening": "<font color=\"#3498db\">Diktatorn</font> tog makten genom en statskupp, stödd av militären.",
         "etymologi": "av latin dictator, till dictare 'föreskriva'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre nyanser (modern envåldshärskare, historisk romersk ämbetsman, försvagad användning) återges i rätt ordning och sakligt korrekt. Synonymerna 'envåldshärskare' och 'despot' bekräftas som näraliggande termer i SO.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620712,
@@ -71,8 +77,10 @@
         "exempelmening": "Sankmarken runt sjön har <font color=\"#3498db\">dränerats</font> med diken.",
         "etymologi": "via franska av engelska drain 'torrlägga'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre betydelser (mark, medicin, bildligt 'tömma på resurser') matchar kortet exakt. Tom synonymlista är korrekt, ordboken ger inga sanna synonymer.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620698,
@@ -87,8 +95,10 @@
         "exempelmening": "<font color=\"#3498db\">Döbattangen</font> mellan de båda salongerna stod vidöppen.",
         "etymologi": "av franska porte à deux battants 'dörr med två dörrhalvor'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar ordet som hela dörren ('dörr som är delad i två längsgående halvor'), medan SAOL definierar det som en enda dörrhalva ('dörrhalva i dubbeldörr'). Kortets två betydelser täcker exakt dessa två auktoritativa men sinsemellan skilda ordboksdefinitioner. Domänen borde rimligen vara 'arkitektur' snarare än 'allmän' (SAOL taggar arkit.), men det är inte diskvalificerande.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620688,
@@ -105,8 +115,10 @@
         "exempelmening": "En <font color=\"#3498db\">framsynt</font> företagare föreslog miljöåtgärder redan på 1960-talet.",
         "etymologi": "av norska fremsynt; jfr fornsvenska framsyn 'begåvad med siarblick'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s definition och exempel nästan ordagrant. Synonymen 'förutseende' bekräftas av SO:s egna korsreferenser.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620697,
@@ -123,8 +135,10 @@
         "exempelmening": "Alla fönster stod på vid <font color=\"#3498db\">gavel</font> i sommarvärmen.",
         "etymologi": "fornsvenska gafl; jfr gotiska gibla 'spets, tinne'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO har en huvudbetydelse ('kortsida av byggnad') med fyra underbetydelser (sängkortända, bordskortända, takvinkel, utrymme) som ordboken själv inte räknar som egna betydelser. Kortets uppdelning i kärnbetydelse plus idiomet 'på vid gavel' (SO: 'stå på vid gavel' = 'vara vidöppen') är korrekt och komplett.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620684,
@@ -139,8 +153,10 @@
         "exempelmening": "<font color=\"#3498db\">Generatorn</font> försörjde huset med el under strömavbrottet.",
         "etymologi": "av latin generator 'alstrare, skapare'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s båda betydelser (elenergi, gas) återges korrekt. Tom synonymlista är rimlig -- SO:s 'dynamo' är nära men 'elmotor' är faktiskt motsatsen (omvandlar el till rörelse), så det är klokt att inte lista någon synonym.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620738,
@@ -155,8 +171,10 @@
         "exempelmening": "Segern <font color=\"#3498db\">cementade</font> lagets plats i tabelltoppen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL hänvisar till 'cementera': dels bokstavligt (belägga/bygga med cement), dels bildligt ('göra permanent', SO:s eget exempel om ett tal som 'cementerade motsättningarna'). Kortet återger båda korrekt.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620716,
@@ -171,8 +189,10 @@
         "exempelmening": "Efter branden stod tjugo familjer <font color=\"#3498db\">husvilla</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s enda betydelse ('som saknar bostad och ibland husrum för natten') och exempel ('vid branden blev 20 familjer husvilla') mycket nära.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620676,
@@ -190,8 +210,10 @@
         "exempelmening": "Potatisen och rotfrukterna förvarades i <font color=\"#3498db\">härbret</font> över vintern.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'förrådshus, visthusbod' (jordbr.). Båda kortets synonymer återfinns ordagrant i ordboksdefinitionen. Tilläggen 'litet' och 'på stolpar' är korrekta sakuppgifter (jfr SO:s närbesläktade uppslag stabbur/stolpbod) och stör inte förståelsen.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620718,
@@ -206,8 +228,10 @@
         "exempelmening": "Landets <font color=\"#3498db\">imperialistiska</font> erövringar sträckte sig över hela kontinenten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två nyanser ('som utmärker imperialismen' / 'som för en politik i imperialismens anda') slås rimligen samman i kortets enda formulering utan att något sakligt går förlorat.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620715,
@@ -225,8 +249,10 @@
         "exempelmening": "Hon förblev fullständigt <font color=\"#3498db\">indifferent</font> inför nyheten, utan minsta tecken på glädje eller sorg.",
         "etymologi": "Av latin in- och differre 'skilja åt' -- alltså 'utan åtskillnad'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SAOL listar TVÅ separata huvudbetydelser: 'obestämd' (kem.) och 'likgiltig' (psykol.); SO bekräftar dessutom en tredje, biologisk nyans. Kortet tar bara med den allmänna/psykologiska betydelsen 'likgiltig' men har ändå kvar synonymen 'obestämd', som egentligen hör till den utelämnade kemiska betydelsen (jfr 'indifferenta gaser' = ädelgaser som inte reagerar). En hel betydelse saknas alltså, och den kvarvarande synonymen hör inte ihop med den angivna betydelsen -- förvirrande vid högläsning. Lägg till en egen post för fackbetydelsen ('kemi/biologi: obenägen att reagera/påverkas') eller ta bort 'obestämd' ur synonymlistan.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620700,
@@ -244,8 +270,10 @@
         "exempelmening": "Innan hon skrev under kontraktet ville hon <font color=\"#3498db\">konferera</font> med sina kollegor.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s enda huvudbetydelse är ordagrant 'överlägga, förhandla' -- kortets båda synonymer är alltså direkt hämtade ur ordbokens egen definition, inte löst associerade.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620695,
@@ -263,8 +291,10 @@
         "exempelmening": "Som <font color=\"#3498db\">konnässör</font> av fina viner kunde han direkt känna igen druvsorten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s definition ('person med djupare kännedom inom något område'); tillägget 'ofta mat eller vin' stöds av SO:s eget vinexempel. Synonymerna 'kännare' och 'förståsigpåare' bekräftas som SO:s egna relaterade termer.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620690,
@@ -279,8 +309,10 @@
         "exempelmening": "Han spelade en gladlynt melodi på sin <font color=\"#3498db\">kornett</font> under stadsfesten.",
         "etymologi": "Av franska corne 'horn' -- instrumentet och den gamla graden har samma rot."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (blåsinstrument, förr lägsta kavalleriofficersgrad) återges korrekt och i rätt ordning.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620732,
@@ -297,8 +329,10 @@
         "exempelmening": "Grannarna kallade honom en <font color=\"#3498db\">krämare</font> som bara brydde sig om vinsten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "SO har EN huvudbetydelse, 'affärsman', som ordboken själv taggar 'nedsättande' rakt av (med en bildlig underbetydelse 'beräknande och materialistisk person'); SAOL ger samma bild: 'små handlare; krass affärsman', taggat 'ngt nedsätt.' för hela definitionen. Kortet delar i stället upp ordet i en påhittad NEUTRAL förstabetydelse ('Småhandlare, köpman') och en nedsatt andrabetydelse -- det stöds inte av någon av ordböckerna, där hela kärnbetydelsen redan är negativt värderad. Exempelmeningen illustrerar dessutom bara den nedsatta läsningen. Slå ihop till en betydelse och märk den nedsättande genomgående.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080620731,
@@ -315,8 +349,21 @@
         "exempelmening": "Det blev ett <font color=\"#3498db\">mankemang</font> med bilen på vägen till jobbet.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet just som 'fel, brist, missförhållande' -- kortets synonym 'fel' är alltså hämtad direkt ur ordbokens egen definitionstext, inte en lös association.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 37,
+  "granskning_kostnad_usd": 1.2816937000000002,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 18,
+      "turer": 37,
+      "turkrav": 5,
+      "kostnad_usd": 1.2816937000000002
     }
   ]
 }
