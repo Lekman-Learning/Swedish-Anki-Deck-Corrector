@@ -539,4 +539,54 @@ mellan varje betydelse i Huvudbetydelsen och den cachade SO/SAOL-texten
 overlap. Mjuk, inte hård -- några ord (korta, redan vardagliga SAOL-glosor
 som `sari`s "ett indiskt kvinnoplagg") har helt enkelt ingen piggare
 formulering, och en hård spärr hade tvingat fram konstlade omskrivningar
+
+---
+
+## Hittat 2026-08-18, sent (batch2 50 is:new-kort): Hål 0 trunkerar flerordsuppslag i `kalla`
+
+`kortgranskare.py applicera` blockerade 4 av 48 kort (`som en löpeld`,
+`förhäva sig`, `göra en höna av en fjäder`, `i blindo`) med "SÖKKOLL EJ
+BEVISAD ... hämtningen gjordes aldrig" -- felmeddelandet visade
+`https://svenska.se/api/msearch?ord=som` för `som en löpeld`, alltså
+`kalla`-URL:en trunkerad vid mellanslaget.
+
+**Orsak:** `sokkoll_verifiering._URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")`
+stannar vid första blanksteget -- korrekt för att skanna fri text efter
+URL:er (t.ex. i ett WebFetch-anrop), men fel när själva `kalla`-fältet
+ÄR URL:en och `ord=`-värdet innehåller mellanslag (flerordsuttryck).
+`slaupp.py` bygger sin egen bevisrad (och `kalla` skrevs, i linje med det,
+via) med ett BOKSTAVLIGT mellanslag i `ord=`-värdet -- inte
+procentkodat -- så den extraherade (trunkerade) URL:en matchar aldrig
+bevisnyckeln, som är den fullständiga strängen.
+
+**Förvillande detalj:** `trojansk häst` (skrivet TIDIGARE i kväll, se punkt
+4 ovan) klarade sig ändå -- men av en slump, inte för att det fungerade
+rätt. En separat, ORELATERAD bevisrad för bara `ord=trojansk` (utan
+`häst`) råkade redan finnas i transkriptet (troligen en bieffekt av
+`slaupp.py "trojansk häst" "i förbigående" --tyst`-körningen tidigare
+samma kväll, som av oklar anledning även loggade en post för enbart
+`trojansk`). Den trunkerade extraktionen matchade DEN posten. Kortets
+innehåll är fortfarande korrekt sökkollat -- den maskinella bevisningen
+för just det kortet var bara tur, inte en fungerande kontroll.
+
+**Verifierat workaround (använt för alla fyra blockerade korten):**
+procentkoda mellanslaget i `kalla` (`urllib.parse.quote`, t.ex.
+`?ord=som%20en%20l%C3%B6peld`). Då stannar `_URL_RE` inte vid URL:en, och
+`_normalisera()`s `urllib.parse.unquote`-steg gör att den avkodade formen
+matchar bevisnyckeln (som har ett bokstavligt mellanslag) exakt. Bekräftat
+med ett direkttest mot `sokkoll_verifiering.granska_kalla()` innan det
+användes skarpt.
+
+**Ingen kodändring gjord i `sokkoll_verifiering.py`** -- `_URL_RE` används
+även för fri textskanning (WebFetch-anrop) där en bredare regel som
+tillåter mellanslag skulle riskera att sluka efterföljande prosa. En
+riktig fix kräver antingen en URL-kodad konvention för `kalla` (dokumentera
+och eventuellt validera vid skrivning) eller en särskild, snävare regel
+bara för `svenska.se/api/msearch`-mönstret. Adams beslut om det är värt
+att bygga.
+
+**Regel för framtida flerordsuppslag i `kalla`:** procentkoda alltid
+mellanslag (`urllib.parse.quote(ord, safe="")`) när uppslagsordet har fler
+än ett ord -- annars ser sökkollen ut att misslyckas trots en bevisligen
+gjord hämtning.
 bara för sakens skull.
