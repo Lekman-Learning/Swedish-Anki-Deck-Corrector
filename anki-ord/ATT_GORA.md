@@ -345,3 +345,44 @@ delkörningarna inte jämförbara.
 
 Kortet skickas tillbaka **oförändrat** med SO-citatet inskrivet i sökkollen, samma
 väg som `brödtext`. Domen vänds inte för hand.
+
+---
+
+## Hittat 2026-08-18
+
+### 1. `blindgranska.py` måste startas som förgrundsprocess
+
+**Symtom:** tom loggfil, `granskare: None`, alla 19 verdikt `None` — och
+exitkod 0, alltså inget som ser ut som ett fel.
+
+**Orsak:** startad som `nohup python blindgranska.py ... &` inifrån ett
+verktygsanrop. Skriptet startar en fristående `claude`-process; när det
+anropande skalet returnerar dör hela processträdet med det. Ingenting skrivs,
+och `&` gör att felet inte syns i exitkoden.
+
+⚠️ **Förväxla inte med 16 augusti-felet.** Då gav körningen *23 minuter,
+3,67 USD och noll utdata* — orsaken var paketstorleken. Här är kostnaden noll
+och tiden noll. **Samma tomma resultat, helt olika orsak** — kontrollera
+alltid loggens storlek innan slutsatsen dras.
+
+**Regel:** kör `blindgranska.py` i förgrunden (låt anropet självt vara
+bakgrundat om det behövs), aldrig med `nohup ... &`. Kontrollera efteråt att
+`granskare` är ifyllt och att verdikträknaren inte är `{None: N}`.
+
+### 2. Bevisraderna kapades — fjärde och femte gången
+
+`slaupp.py`s `SVENSKA_SE_HAMTAD`-rader måste nå transkriptet intakt, annars
+vägrar Hål 0 skriva korten. Kapades den här gången först med `grep -v` och sedan
+med `tail -70`. **`--tyst` finns för exakt det här** och användes först i tredje
+försöket.
+
+**Spärren fungerade som avsett** — inget obelagt kort kom in, båda gångerna.
+Det är kommandovanan som är problemet, inte skriptet. Överväg att låta
+`slaupp.py` skriva bevisraderna även till en fil, så att de överlever ett
+filtrerat stdout.
+
+### 3. Idiom: `kalla` måste peka på grundordet
+
+`i förbigående` slås upp som **förbigående** — men `sokkoll.kalla` sattes till
+`?ord=i`, vilket Hål 0 underkände. Sätt alltid `kalla` till det uppslagsord
+`slaupp.py` faktiskt hämtade, inte till kortets framsida.
