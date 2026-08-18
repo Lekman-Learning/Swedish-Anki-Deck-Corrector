@@ -180,8 +180,18 @@ def _urler_ur_transkript():
     urler = {}
     kanaler = ((("WebFetch", "web_fetch"), "webfetch"),
                (BROWSERVERKTYG, "browser"))
-    monster = os.path.join(_transkriptkatalog(), "*", "*.jsonl")
-    for sokvag in glob.glob(monster):
+    # Rekursiv (**), inte "*/*.jsonl" -- fixat 2026-08-18. En subagent (Agent-
+    # verktyget) loggar till en EGEN fil under en "subagents/"-underkatalog,
+    # t.ex. projects/<projekt>/<session>/subagents/agent-<id>.jsonl, tre nivåer
+    # under _transkriptkatalog(). "*/*.jsonl" hittar bara filer EN nivå ned och
+    # missar den helt -- upptäckt när 14 av 19 ord i en dagsbatch skriven av en
+    # subagent blockerades med "hämtningen gjordes aldrig" trots att
+    # SVENSKA_SE_HAMTAD-raden bevisligen fanns i subagentens transkript (grep
+    # hittade den direkt). De 5 som ändå gick igenom kom av en slump från en
+    # ISOLERAD kopia i förälderns egen (icke uppdaterade) transkriptfil, inte
+    # från subagentens. Samma fix i _ord_ur_skriptutskrift() nedan.
+    monster = os.path.join(_transkriptkatalog(), "**", "*.jsonl")
+    for sokvag in glob.glob(monster, recursive=True):
         try:
             with open(sokvag, encoding="utf-8", errors="ignore") as f:
                 for rad in f:
@@ -230,9 +240,12 @@ def _ord_ur_skriptutskrift():
     till svenska.se. Tre källor per kort är bara meningsfullt om de tre går
     att skilja åt i efterhand."""
     ut = set()
-    monster = os.path.join(_transkriptkatalog(), "*", "*.jsonl")
+    # Rekursiv, samma skäl och samma fix som i _urler_ur_transkript() ovan --
+    # subagent-transkript ligger under en "subagents/"-underkatalog som
+    # "*/*.jsonl" inte når.
+    monster = os.path.join(_transkriptkatalog(), "**", "*.jsonl")
     markorer = tuple(m for m, _ in SKRIPTKANALER)
-    for sokvag in glob.glob(monster):
+    for sokvag in glob.glob(monster, recursive=True):
         try:
             with open(sokvag, encoding="utf-8", errors="ignore") as f:
                 for rad in f:

@@ -3502,3 +3502,73 @@ som PÅSTÅR att någon bedömt.
 
 Domänen ska alltså bedömas per kort i samma steg som registret. För de 347
 befintliga är det ett arbete, inte en körning.
+
+## Fortsättning 18 augusti: de 23 oskrivna korten, en subagent, och ett nytt fel i Hål 0
+
+Session sparad halvvägs samma kväll (`792bae5`) lämnade 23 ord i
+`session_2026-08-18_v3-batch.json` oskrivna. En isolerad subagent (körd
+utan tillgång till valvet, se `verktyg/README.md`-liknande separation)
+fortsatte kedjan: `slaupp.py --tyst` → skriv → `applicera` → `paket` →
+blind granskning → `verdikt` → `slapp`.
+
+### slaupp.py:s dolda gräns
+
+`--antal` defaultar till **20**, inte "alla ord i filen". Första körningen
+på 23 ord slog tyst av vid 20 -- tre ord (tarva, underminera, utstaka)
+fick ingen uppslagning alls, utan varning. Fångades bara för att
+uppslag/-katalogen kontrollerades efteråt. Andra körningen med
+`--hoppa 20 --antal 3` fångade resten. Värt en framtida fix: låt filläget
+(`--fil`) defaulta `--antal` till hela listans längd istället för 20.
+
+### 4 av 23 pausade, inte skrivna
+
+- **hippopotamus, echappera, passiar**: `forgranska.py`s hårda regel
+  `uppslagsord_saknas` (0 träffar i SO och SAOL) slog till på alla tre --
+  echappera/passiar har bara en SAOB-artikel utan digitaliserad
+  definitionstext, hippopotamus har ingen artikel alls (bara Wiktionary
+  "flodhäst"). Taggade `v3_pausad::inget_uppslagsord_i_so_saol`, samma
+  princip som `ytong`/`förborgad`.
+- **kliche**: svenska.se ger noll träff för exakt den stavningen men
+  föreslår **kliché** (med accent) -- samma felklass som
+  `kvintessensen`/`regel-rigel` i `ATT_GORA.md`, fast på ett HELT OSKRIVET
+  kort denna gång. Framsidan ändrar vad Adam testas på, så den rörs inte
+  utan hans beslut -- taggad `v3_pausad::framsida_mojligen_felstavad`
+  istället för att gissa fram innehåll under en trolig felstavning.
+
+### Nytt fel hittat i Hål 0: glob-mönstret nådde aldrig en subagents transkript
+
+`kortgranskare.py applicera` blockerade 14 av 19 nyskrivna kort med
+"SÖKKOLL EJ BEVISAD ... hämtningen gjordes aldrig", trots att `slaupp.py`
+bevisligen kört och `grep` hittade bevisraderna direkt i transkriptfilen.
+Orsak: `sokkoll_verifiering.py`s glob (`projects/*/*.jsonl`) letar en nivå
+under `~/.claude/projects/` -- men en subagent (Agent-verktyget) loggar
+till `projects/<projekt>/<session>/subagents/agent-<id>.jsonl`, TRE nivåer
+ned. De 5 kort som ändå gick igenom kom av en slump ur föräldersessionens
+egen (ytligare, men ofullständigt speglade) transkriptfil.
+
+Fixat: rekursiv glob (`projects/**/*.jsonl`, `recursive=True`) i båda
+funktionerna i `sokkoll_verifiering.py`. Verifierat: alla 19 ord gick från
+`False` till `True`, hela sökningen (inkl. en 130 MB-fil på disken) tog
+~6 sekunder. Gäller bara arbete kört via en subagent -- vanliga
+huvudsessioner loggar redan en nivå ned och träffades aldrig av buggen.
+Se `ATT_GORA.md`, "Hittat 2026-08-18", punkt 4, för fullständig logg.
+
+### Utfall
+
+19 av 23 skrivna och applicerade. Dessutom omskrivna de 5 kort som
+underkändes tidigare samma kväll (`vittra`, `konvoj`, `trojansk häst`,
+`göromål`, `inkongruens`) efter granskarens konkreta anmärkningar --
+saknad betydelse (vittra, konvoj, trojansk häst), fel register (göromål),
+fel domän+exempel (inkongruens). Gammal `v3_underkand::2026-08-18`-tagg
+och röd flagga borttagna efter omskrivning (innehållet som doms är inte
+längre samma) -- korten väntar nu på en FÄRSK blind granskning precis som
+vilket oreviderat kort som helst.
+
+27 kort väntade totalt på blind granskning (8 sedan tidigare + 19 nya).
+27 delar inte jämnt i två paket ≥17 (golvet), så **18 paketerades nu**
+(de 8 gamla + de 10 första alfabetiskt av de 19 nya), resten (9 nya +
+5 omskrivna = 14) sparas till nästa gång istället för att köras
+underdimensionerat.
+
+Se `sessions/session_2026-08-18_v3-paket-review18.json` för granskarens
+verdikt.

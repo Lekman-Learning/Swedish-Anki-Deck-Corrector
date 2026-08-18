@@ -386,3 +386,38 @@ filtrerat stdout.
 `i förbigående` slås upp som **förbigående** — men `sokkoll.kalla` sattes till
 `?ord=i`, vilket Hål 0 underkände. Sätt alltid `kalla` till det uppslagsord
 `slaupp.py` faktiskt hämtade, inte till kortets framsida.
+
+**Spotkollad 2026-08-18 (senare samma kväll): fortfarande rätt.** Både
+`i förbigående` och `trojansk häst` i dagens batch har `kalla` satt till
+respektive grundords faktiska uppslag (`?ord=förbigående`,
+`?ord=trojansk häst`), inte framsidans första ord. Inget kodfel kvar att
+åtgärda — bara ett mönster att komma ihåg vid nästa idiomkort.
+
+### 4. LÖST 2026-08-18: Hål 0 hittade aldrig en subagents transkript
+
+**Symtom:** en `kortgranskare.py applicera`-körning från en Agent-verktygs-
+subagent blockerade 14 av 19 kort med `SÖKKOLL EJ BEVISAD ... hämtningen
+gjordes aldrig` — trots att `slaupp.py` bevisligen hade kört och skrivit
+`SVENSKA_SE_HAMTAD <ord> HTTP 200 <byte>` för alla 19, och `grep` hittade
+raderna direkt i transkriptfilen.
+
+**Orsak:** `sokkoll_verifiering.py`s glob-mönster var `projects/*/*.jsonl` —
+EN nivå under `~/.claude/projects/`. En subagent (startad via Agent-
+verktyget) loggar till en EGEN fil TRE nivåer ned:
+`projects/<projekt>/<session-id>/subagents/agent-<id>.jsonl`. Mönstret
+missade den helt. De 5 kort som ändå gick igenom (av 19) berodde på en
+slump: föräldrasessionens EGEN transkriptfil (en nivå ned, alltså
+matchande) råkade innehålla en tidig, ofullständig kopia av subagentens
+utskrift — bara de första fem orden hade hunnit speglas dit innan
+kopieringen (vad det nu var) slutade följa med.
+
+**Fix:** bytt till rekursiv glob (`projects/**/*.jsonl`, `recursive=True`) i
+BÅDA `_urler_ur_transkript()` och `_ord_ur_skriptutskrift()`. Verifierat:
+alla 19 ord gick från `False` till `True` i `granska_kalla()`, körtiden för
+en full genomsökning av hela `~/.claude/projects/` (inklusive en 130 MB-fil)
+var ~6 sekunder — ingen prestandaoro.
+
+**Påverkar bara arbete gjort via en subagent.** Vanliga huvudsessioner
+loggar redan en nivå ned och träffades av det gamla mönstret. Värt att
+komma ihåg om Adam ser samma felmeddelande från en huvudsession framöver —
+då är förklaringen en ANNAN, inte den här.
