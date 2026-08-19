@@ -3789,3 +3789,75 @@ Kvällens totalsumma: **105 kort släppta till full v3** (14 + 15 + 16 +
 (1 `passivera` + 10 från den förra omskrivningsrundan + 6 nya: de tre
 omskrivna underkännandena + de tre odömda från 25-taket) -- exakt på
 golvet igen, men inte kört ensamt eftersom kvällen redan var lång.
+
+## Fjärde batchen: 30 kort medan Adam gjorde ett ärende + städade, medvetet lättare urval
+
+Adam bad om ytterligare 30 is:new-kort medan han var borta -- med en ny
+begäran: han kommer tillbaka från en jobbig natt och ville ha en lättare
+startsträcka, inte en batch full av de svåraste orden i poolen. Ingen
+`--svårighet`-flagga finns i `kortbyggare.py` (poolen sorteras bara på
+`due`, ingen svårighets-/frekvenssignal alls), och uppdraget var
+uttryckligt: bygg ingen ny tooling för det, chansa på ordurvalet i
+stället.
+
+### Metod: hämta bredare, välj smalare, lämna tillbaka resten
+
+`kortbyggare.py --spar nya --antal 90` gav 90 kandidater att välja
+30 "lättare" ord ur för hand (kortare, enkelsidiga, vardagliga --
+`pixel`, `nobel`, `memorera`, `sätta in` -- i stället för poolens
+tyngsta arkaismer som `dväljas`, `ådagalägga`, `slåss mot
+väderkvarnar`-liknande idiom).
+
+**Viktig bieffekt upptäckt och hanterad:** `hamta_pool()` (i
+`kortbyggare.py`) taggar VARJE hämtat kort med `v3_dagsbatch`, oavsett om
+det sedan skrivs eller inte -- och för spår "nya" exkluderar
+`POOL_FRAGA` kort med den taggen FÖR ALLTID (inget datum i frågan, till
+skillnad från spår "omgranskning"). Att bara plocka 30 av 90 hade alltså
+tyst tagit bort 60 fullt dugliga ord ur poolen för gott. Löst genom att
+`removeTags` de 60 obehövda korten direkt efter urvalet -- de är nu
+exakt som innan de någonsin rördes.
+
+### Resultat: fler underkännanden, som väntat
+
+`slaupp.py --tyst` komplett i en körning. `alliteration` pausad --
+`svenska.se` ger noll träff, men den korrekta stavningen `allitteration`
+(dubbelt L) har full SO/SAOL/SAOB-täckning, samma mönster som
+`kliche`→`kliché` tidigare i kväll.
+
+29 skrivna, 25 granskade (samma 25-taksbegränsning som batch 3).
+**19 godkända, 6 underkända (24 %)** -- klart högre andel än kvällens
+tidigare batcher (12-21 %), en direkt, förväntad kostnad av att
+medvetet skriva enkelsidiga kort för ett pool fullt av flerbetydelseord:
+`sätta in`, `infinna sig`, `mellanhand`, `syna` och `urna` underkändes
+alla för en saknad betydelse (`mellanhand` t.o.m. tre av tre möjliga --
+kortet innehöll bara den minst primära). `gruva sig` underkändes av ett
+annat skäl: SAOL:s kommalista "oroa sig, ängslas" fick mig att skriva in
+'ängslas' som belagd synonym, men granskaren visade att orden INTE är
+fullt utbytbara trots kommaformatet -- ett tecken på att den mekaniska
+"inleder ett led"-regeln inte fångar allt, den fångar bara ordagrann
+källhärledning, inte faktisk utbytbarhet.
+
+Alla sex omskrivna efter anmärkningarna (`mellanhand` fick alla tre
+SO-betydelser tillagda, `urna` fick sin huvudbetydelse bytt från den
+snävare kremeringsbetydelsen till SO:s bredare grundbetydelse),
+applicerade på nytt, gamla `v3_underkand`-taggar borttagna.
+
+**19 släppta till full v3.** Full v3 i decket: **1134 → 1153**.
+
+**Slutsats om "lättare kort"-uppdraget:** gick delvis att uppfylla --
+orden som VALDES var genuint enklare/vanligare (pixel, nobel, memorera,
+hålla av snarare än dväljas, ådagalägga), men "enklare ord" och "enkelt
+KORT" visade sig vara olika saker -- flera av de valda orden hade ändå
+flera SO-betydelser, och att medvetet skriva bara en av dem för
+enkelhetens skull är precis det mönster som orsakade underkännanden
+tidigare i kväll (`föredrag`, `göra sig`). Nästa gång Adam vill ha en
+lättare batch: välj korta, vardagliga ORD (det gick bra), men skriv
+ALLA deras betydelser ändå -- enkelhet ska komma från ordvalet, inte
+från att tunna ut korten.
+
+**Session-totalsumma (18-19 augusti): 124 kort släppta till full v3**
+(105 från föregående dags-logg + 19 härifrån). 0 kort står kvar
+underkända. **27 kort väntar nu medvetet på en framtida
+granskningsomgång** (11 från 18 augusti + 16 från 19 augusti: 3
+omskrivna + 3 odömda från batch 3, 6 omskrivna + 4 odömda från batch 4)
+-- gott om marginal över 17-golvet till nästa körning.
