@@ -1,0 +1,524 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-agent-skrivare",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620825,
+      "ord": "småskrake",
+      "facit": "typ av fågel,&nbsp; ard, pracka<br><img src=\"paste-d6535b7e8a1028891872cc0c90730fa443be3e3f.webp\"><img src=\"paste-95a0cc7a89254cd1f9d8b1f21f6d493921a28c9a.webp\">",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "En liten, smal sjöfågel av andsläktet, med krokig, tunn näbb",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vid sjökanten simmade en <font color=\"#3498db\">småskrake</font> med sina ungar i en rad efter sig.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO beskriver 'skrake' som en andfågel med långsträckt kropp, lång hals och smal, hakformigt böjd näbb -- kortets 'liten, smal sjöfågel av andsläktet med krokig, tunn näbb' stämmer väl. Facit-signalens 'ard, pracka' är dialektala binamn på fågeln, inte separata betydelser, så ingen betydelselucka.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620845,
+      "ord": "trampa vatten",
+      "facit": "inte komma ngn vart",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hålla sig flytande i vattnet genom att röra benen, utan att simma någonstans",
+        "register": "vardaglig, neutral, sport",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">trampade vatten</font> medan han väntade på att livräddaren skulle komma.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger två betydelser: (1) konkret 'hålla sig flytande i vatten genom att utföra tramprörelser' och (2) bildligt, om att något 'håller på utan framsteg', dvs. inte komma någon vart (matchar facit exakt). Kortet innehåller bara den konkreta betydelsen -- den vanliga bildliga användningen saknas helt och bör läggas till som en andra betydelse.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620848,
+      "ord": "dra sitt strå till stacken",
+      "facit": "att lämna sitt bidrag - se myror<br><img alt=\"webp image\" src=\"paste_1762629382143.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bidra med sin egen insats till ett gemensamt arbete, göra sin del",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Alla i klassen drog sitt <font color=\"#3498db\">strå till stacken</font> när de skulle städa upp efter festen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bidra efter bästa förmåga'. Matchar kortets 'bidra med sin egen insats till ett gemensamt arbete, göra sin del'.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620823,
+      "ord": "fläng",
+      "facit": "nervös (men effektiv) brådska",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stor brådska eller stress, ofta i uttrycket 'i flygande fläng' (mycket snabbt) ; (vardagligt) virrig eller överspänd i huvudet",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hela flytten gick i flygande <font color=\"#3498db\">fläng</font> -- vi hann knappt packa lådorna innan flyttbilen stod utanför.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger substantivbetydelsen 'nervös (men effektiv) brådska' (i 'flygande fläng') samt en adjektivbetydelse som motsvarar 'flängd' (tokig i huvudet, ex. 'hon är helt fläng i huvudet'). Kortets två led ('stor brådska' ; 'virrig/överspänd i huvudet') fångar båda med rimlig parafras.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620863,
+      "ord": "häva",
+      "facit": "lyfta och sänka; annullera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Upphäva giltigheten av något, t.ex. ett avtal eller en belägring ; Lyfta eller kasta med en kraftig, plötslig rörelse",
+        "register": "neutral, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Domstolen <font color=\"#3498db\">hävde</font> avtalet eftersom villkoren aldrig hade uppfyllts.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger just dessa två betydelser: fysisk 'förflytta uppåt med kraftig, plötslig rörelse' (även reflexivt, t.ex. häva sig upp) och 'göra slut på giltigheten av avtal, belägring e.d.'. Kortet täcker båda korrekt och exemplet med domstol/avtal är sakligt riktigt.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620822,
+      "ord": "tamp",
+      "facit": "rep- elr. snörända<br><img alt=\"webp image\" src=\"paste_1759322930815.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Änden av ett rep eller en lina ; (bildligt, i uttrycket på sista tampen) mot slutet",
+        "register": "neutral, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Matrosen kastade <font color=\"#3498db\">tampen</font> till hamnarbetaren på bryggan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ända av rep, lina e.d.' samt idiomet 'på (sista) tampen' = 'på slutet'. Matchar kortet exakt, inklusive bildliga uttrycket.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620864,
+      "ord": "understå sig",
+      "facit": "fräckt våga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara fräck eller djärv nog att göra något man egentligen inte får",
+        "register": "formell, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">understod sig</font> att komma en timme sent utan att ens ursäkta sig.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'vara fräck nog att bete sig på visst, provocerande sätt'. Matchar kortets definition väl.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620835,
+      "ord": "örlog",
+      "facit": "(åld.)&nbsp; krig",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "(ålderdomligt) krig, särskilt sjökrig",
+        "register": "ngt ålderdomlig, neutral, militär",
+        "synonymer": [
+          "krig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fartyget byggdes för <font color=\"#3498db\">örlog</font> och bar tunga kanoner på båda sidor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger huvudbetydelsen 'krig' (åld.); underbetydelsen är bara en användning i sammansättningar (örlogsfartyg m.fl.) om sjökrigsutrustning, ingen fristående andra betydelse att sakna. Kortets 'krig, särskilt sjökrig' fångar nyansen väl. Synonymen 'krig' är dictionary-bekräftad.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620843,
+      "ord": "spotta i nävarna",
+      "facit": "samla sig o ta nya tag, samla sig för en ny insats",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förbereda sig och ta i ordentligt inför en ansträngning, kavla upp ärmarna",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Nu får vi <font color=\"#3498db\">spotta i nävarna</font> och sätta fart på trädgårdsarbetet innan vintern kommer.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'samla krafter för en insats'. Matchar kortets 'förbereda sig och ta i ordentligt inför en ansträngning'.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620826,
+      "ord": "väldeliga",
+      "facit": "väldigt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "(ålderdomligt) väldigt, i mycket hög grad",
+        "register": "arkaisk, neutral, allmän",
+        "synonymer": [
+          "väldigt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det spekulerades <font color=\"#3498db\">väldeliga</font> om vem som skulle bli den nya chefen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'väldigt (mycket)', ålderdomligt, belagt sedan 1737. Matchar kortet, och synonymen 'väldigt' är dictionary-bekräftad.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620862,
+      "ord": "avfalla",
+      "facit": "överge lära eller åsikt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sluta stödja eller tro på något man tidigare bekände sig till, t.ex. en tro eller ideologi",
+        "register": "högtidlig, neutral, religion",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Drottningen <font color=\"#3498db\">avföll</font> från sina fäders tro och konverterade i hemlighet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'upphöra att tjäna eller bekänna sig till viss sak, särsk. religiös lära el. politisk åskådning'. Matchar kortets 'sluta stödja eller tro på något man tidigare bekände sig till'.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620839,
+      "ord": "det allena saliggörande",
+      "facit": "det enda som ska lösa problem",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det enda som löser alla problem, ofta använt ironiskt om en föreslagen universallösning",
+        "register": "ngt ålderdomlig, ironisk, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Fler poliser är knappast <font color=\"#3498db\">det allena saliggörande</font> mot brottsligheten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som löser alla problem', används vanligen i negerad form ('inte det allena saliggörande'). Kortets exempel ('knappast det allena saliggörande') följer detta bruksmönster korrekt.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620847,
+      "ord": "dra det tyngsta lasset",
+      "facit": "göra det mesta arbetet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Göra den största delen av jobbet, bära det tyngsta ansvaret i en grupp",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Eftersom hon jobbar deltid är det oftast hennes man som får <font color=\"#3498db\">dra det tyngsta lasset</font> hemma.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'göra den största delen av arbetet'. Matchar kortet.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620832,
+      "ord": "ettdera",
+      "facit": "endera, en av dem, den ene",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En av två (eller flera) alternativ, det ena eller det andra",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Du får välja <font color=\"#3498db\">ettdera</font> av de två alternativen, inte båda.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO (under 'endera', varav 'ettdera' är neutrumformen): 'en av två'. Matchar både kortet och facit.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620833,
+      "ord": "föredrag",
+      "facit": "föreläsning, tal, anförande;&nbsp; framställningssätt, diktion",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "En längre muntlig presentation om ett ämne, inför en grupp åhörare",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ämnet för kvällens <font color=\"#3498db\">föredrag</font> var stadsodling och hållbarhet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger två betydelser: (1) 'muntlig framställning över visst ämne' (föreläsning) och (2) 'sätt att framställa eller utföra något, t.ex. ett ämne muntligt eller ett musikstycke' (framställningssätt, diktion -- facklspråkligt). Kortet har bara betydelse 1; betydelse 2, som facit också pekar ut ('framställningssätt, diktion'), saknas helt och bör läggas till.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620858,
+      "ord": "förråda sig",
+      "facit": "råka avslöja sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oavsiktligt avslöja något om sig själv, t.ex. genom kroppsspråk",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">förrådde sig</font> genom att le brett så fort hans namn nämndes.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'oavsiktligt avslöja sig'. Matchar kortet exakt.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620860,
+      "ord": "göra sig",
+      "facit": "se bra ut",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Se bra ut eller passa fint ihop, göra ett gott intryck",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De nya gardinerna <font color=\"#3498db\">gör sig</font> verkligen bra mot den ljusblå väggen.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO listar under 'göra sig' två separata betydelser: 'göra ett gott (estetiskt) intryck' (t.ex. 'mattan gör sig till tapeterna') och 'åstadkomma att man blir' + adjektiv (t.ex. 'hon gjorde sig vacker'). Kortet innehåller bara den första (se bra ut); den andra, minst lika vanliga betydelsen ('göra sig' + adjektiv = bli/göra sig till något, t.ex. göra sig redo/illa/varm) saknas helt.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620859,
+      "ord": "handlägga",
+      "facit": "ha hand om och utreda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utreda och behandla ett ärende, t.ex. hos en myndighet",
+        "register": "formell, neutral, juridik",
+        "synonymer": [
+          "behandla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det är kommunens bygglovsavdelning som <font color=\"#3498db\">handlägger</font> ansökan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'genomföra prövning eller utredning av ärende, vanligen om myndighet'. SAOL definierar ordet rentav som 'behandla', så synonymen 'behandla' är dictionary-bekräftad, inte bara en lös association. Matchar kortet.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620840,
+      "ord": "inte säga flaska",
+      "facit": "vara tyst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara alldeles tyst, inte säga ett enda ord",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han var så nervös inför publiken att han <font color=\"#3498db\">inte sa flaska</font> hela kvällen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'vara helt tyst', vardagligt. Matchar kortet exakt.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620831,
+      "ord": "kronblad",
+      "facit": "ofta färgade inre blad runt blommans fortplantningsorgan<br><br>(eng) petal<br><img src=\"paste-a3117e924f2d6dd6f51d4288e6f7bd38860dbf45.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett av de färgade bladen runt mitten av en blomma",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon plockade av <font color=\"#3498db\">kronbladen</font> ett efter ett och räknade: älskar, älskar inte.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ettdera av de inre bladen runt blommans fortplantningsorgan, ofta vackert färgade'. Kortets 'färgade blad runt mitten av en blomma' är en godtagbar förenkling för en icke-facktermsanvändare.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620841,
+      "ord": "kärringen mot strömmen",
+      "facit": "person vars åsikter sticker ut",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En person som alltid gör tvärtom eller är av annan åsikt än alla andra, en riktig contrarian",
+        "register": "vardaglig, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon är <font color=\"#3498db\">kärringen mot strömmen</font> på jobbet -- säger alltid emot bara för att alla andra är överens.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som till varje pris måste göra tvärt emot andras vilja'. Matchar kortets 'gör alltid tvärtom eller är av annan åsikt än alla andra'.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620834,
+      "ord": "likar",
+      "facit": "likasinnade, meningsfränder, konsorter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Personer som är ens jämlikar, med samma förmåga eller ställning i samhället",
+        "register": "dialektal, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han umgicks helst med sina <font color=\"#3498db\">likar</font> inom det akademiska samfundet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'like' = 'person med lika god förmåga/ställning som viss annan person' (synonym: jämlike). Detta är den betydelse både facit och kortet syftar på; den andra homografen (verbet 'lika'/tycka om) är irrelevant här. Matchar.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620824,
+      "ord": "skränfock",
+      "facit": "skränande person, gaphals",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En högljudd, skränande person",
+        "register": "vardaglig, nedsättande, allmän",
+        "synonymer": [
+          "gaphals"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den där <font color=\"#3498db\">skränfocken</font> på läktaren gick knappt att höra sig själv tänka bredvid.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'skränande person', med synonymen 'gaphals' explicit angiven. Matchar kortet exakt, inklusive synonymen.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620861,
+      "ord": "stocka sig",
+      "facit": "upphöra att flyta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sluta flyta eller röra sig framåt, fastna eller stanna av (t.ex. timmer i en älv, trafik, eller rösten av upprördhet)",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Trafiken <font color=\"#3498db\">stockade sig</font> totalt efter olyckan på motorvägen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'upphöra att flyta framåt p.g.a. oordning eller för stor anhopning', med metaforiska exempel för trafik och röst. Matchar kortet inklusive de givna exemplen (timmer, trafik, röst).",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620844,
+      "ord": "sätta bocken till trädgårdsmästare",
+      "facit": "ge ngn ett uppdrag som personen ifråga passar dåligt för",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge någon ansvar för något de garanterat kommer missbruka, som att sätta en tjuv att vakta pengaskåpet",
+        "register": "vardaglig, nedsättande, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Att låta honom sköta bokföringen efter allt som hänt är verkligen att <font color=\"#3498db\">sätta bocken till trädgårdsmästare</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ge någon ett uppdrag som vederbörande passar mycket illa för'. Kortets parallell ('sätta en tjuv att vakta pengaskåpet') är en idiomatiskt likvärdig, tydlig bild av samma betydelse.",
+      "granskning_turer_post": 41,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080620837,
+      "ord": "tjo och tjim",
+      "facit": "(vard.)&nbsp; &nbsp;livad stämning, hålligång,&nbsp; munter o. högljudd samvaro",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Glatt stoj och stimmigt jubel, högljudda glädjerop",
+        "register": "vardaglig, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det blev <font color=\"#3498db\">tjo och tjim</font> när laget äntligen vann finalen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620849,
+      "ord": "visa framfötterna",
+      "facit": "att ta initiativ, göra ngt bra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Visa tidigt att man är skicklig eller duktig, bevisa sin förmåga",
+        "register": "vardaglig, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Den nya praktikanten <font color=\"#3498db\">visade framfötterna</font> redan under sin första vecka på jobbet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620827,
+      "ord": "överpröva",
+      "facit": "före avgjort mål till högre instans (domstol)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ta upp ett redan avgjort ärende till förnyad prövning i en högre instans",
+        "register": "formell, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Länsstyrelsen beslutade att <font color=\"#3498db\">överpröva</font> kommunens tillståndsbeslut.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ],
+  "granskning_turer": 41,
+  "granskning_kostnad_usd": 1.5107184000000005,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 41,
+      "turkrav": 6,
+      "kostnad_usd": 1.5107184000000005
+    }
+  ]
+}

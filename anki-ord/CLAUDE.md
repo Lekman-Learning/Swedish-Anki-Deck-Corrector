@@ -3701,3 +3701,91 @@ borttagna. Väntar på nästa granskningsomgång (10 kort, under golvet).
 underkända. 11 kort väntar medvetet på en framtida granskningsomgång
 (1 `passivera` sedan tidigare + 10 nya, tillsammans under golvet men
 tillräckligt nära för att bli nästa paket).
+
+## Tredje batchen samma kväll: 30 kort medan Adam var borta från tangentbordet
+
+Adam bad om ytterligare 30 is:new-kort medan han själv körde eget
+Anki-pass + tittade på TV -- ingen tillgänglig för frågor, samma
+självständiga arbetssätt som resten av kvällen.
+`kortbyggare.py --spar nya --antal 30` → `session_2026-08-19_v3-batch.json`.
+`slaupp.py --tyst` komplett i EN körning för alla 30 (ingen trunkering).
+
+Adam-tal-disciplinen från tidigare i kväll tillämpad rakt av: varje
+Huvudbetydelse självgranskad mot containment-måttet innan skrivning --
+bara `småskrake` låg över tröskeln (0,73) och skrevs om innan den ens
+nådde `forgranska.py`.
+
+### Ovanligt många idiom -- och en tydlig lärdom om källkontaminering
+
+Batchen innehöll ovanligt många flerordsuttryck (`trampa vatten`,
+`dra sitt strå till stacken`, `spotta i nävarna`, `det allena
+saliggörande`, `dra det tyngsta lasset`, `inte säga flaska`, `kärringen
+mot strömmen`, `sätta bocken till trädgårdsmästare`, `tjo och tjim`,
+`visa framfötterna`) -- och `forgranska.py` slog ut `frammande_uppslagsord`
+på 15 av 28 kort, klart fler än i tidigare batcher. Mönstret bakom:
+svenska.se:s fuzzy-sök för flerordsfraser landar ofta i en HELT
+orelaterad artikel vars exempeltext råkar innehålla frasen (samma
+felklass som `trojansk häst`→`spann` tidigare i kväll, se
+`ATT_GORA.md` punkt 5) -- `kärringen mot strömmen` gav t.ex. bara
+prepositionen "mot", `tjo och tjim` bara ordet "skalle". Varje sådant
+fall kontrollerades manuellt: den faktiskt relevanta raden (oftast en
+enda, identifierbar via en direkt matchande exempelmening) plockades ut
+för hand, Wiktionary eller SAOL användes som primärkälla där SO var ren
+brus, och kontamineringen skrevs ut explicit i `sokkoll.slutsats` för
+varje sådant kort.
+
+### forgranska.py bekräftat vara ett fristående revisionsverktyg, INTE en spärr i `applicera()`
+
+Tre kvarstående `register_motsager_markning`-flaggor (`det allena
+saliggörande`, `föredrag`, `inte säga flaska`) visade sig vara riktiga
+gränser i verktyget snarare än fel i korten:
+- `föredrag`: SO:s `i fackspråk`-märkning gäller en enda av två
+  betydelser, men kontrollen är ordnivå, inte betydelsenivå.
+- `inte säga flaska`: SO ger TVÅ formalitetsmärkningar samtidigt
+  ("vardagligt" OCH "något ålderdomligt"), men registerfältet har bara
+  EN formalitetsplats -- omöjligt att tillfredsställa båda samtidigt.
+- `det allena saliggörande`: märkningen "åld. utom i några uttr." är en
+  sammansatt fras `_MARKNING_LIKA`-tabellen i `forgranska.py` inte
+  känner igen.
+
+`kortgranskare.py applicera` kördes ändå och skrev alla tre kort utan
+problem -- vilket bekräftar att `forgranska.py`s HÅRDA flaggor är en
+stark rekommendation ("rätta INNAN blindgranskningen"), inte en teknisk
+spärr i skrivvägen (den enda faktiska spärren är `baksida.validate_adamtal()`,
+ett annat, snävare regelset). Nyttigt att veta för framtida sessioner:
+en envis hård flagga som inte går att lösa utan att förstöra kortets
+sakinnehåll behöver inte blockera skrivning -- men ska alltid
+dokumenteras i `sokkoll` OCH få en riktig, oberoende bedömning av
+blindgranskaren (som den fick här).
+
+### 28 skrivna, 25 granskade (26-golvsregeln + `blindgranska.py`s 25-tak)
+
+2 pausade: `hovjunkare` (noll träff i SO/SAOL/SAOB/Wiktionary -- inget
+att bygga på över huvud taget) och `korpgluggarna` (samma sak; grundordet
+`korpglugg` har bara en SAOB-stubbe, inget facit).
+
+28 skrivna kort delar inte jämnt i två paket ≥17 (minsta möjliga summa
+för två sådana är 34), och `blindgranska.py`s eget tak (`MAX_POSTER=25`)
+tillåter inte alla 28 i en körning. Löst genom `--antal 25`: 25
+granskade nu, 3 (`tjo och tjim`, `visa framfötterna`, `överpröva`) ligger
+kvar odömda i samma paketfil för en framtida omgång.
+
+**22 av 25 godkända, 3 underkända** (`trampa vatten`, `föredrag`,
+`göra sig` -- alla tre saknade en hel betydelse enligt granskaren).
+Ironiskt nog var `föredrag` samma kort jag redan hade skalat ner för att
+undvika en `register_motsager_markning`-flagga -- fel prioritering,
+granskaren ville ha tillbaka precis den betydelsen. Lärdom: en mekanisk
+varning väger aldrig tyngre än fullständighet: skala aldrig bort en
+sann betydelse för att tysta ett verktyg.
+
+Alla tre omskrivna efter anmärkningarna, applicerade på nytt, gamla
+`v3_underkand`-taggar/röda flaggor borttagna.
+
+**22 släppta till full v3.** Full v3 i decket: **1112 → 1134**.
+Kvällens totalsumma: **105 kort släppta till full v3** (14 + 15 + 16 +
+38 + 22, se historiken ovan för uppdelningen per omgång).
+
+**17 kort väntar nu medvetet på en framtida granskningsomgång**
+(1 `passivera` + 10 från den förra omskrivningsrundan + 6 nya: de tre
+omskrivna underkännandena + de tre odömda från 25-taket) -- exakt på
+golvet igen, men inte kört ensamt eftersom kvällen redan var lång.
