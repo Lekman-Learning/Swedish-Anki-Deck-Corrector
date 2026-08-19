@@ -69,6 +69,46 @@ fångar). Så mönstret säger VILKA delmoment som är svaga, inte VARFÖR
 (räknefel vs. feltolkning vs. metodval vs. tidsbrist) — den skillnaden kräver
 att Adam själv kommenterar varje fel, eller att förklaringssidan klipps separat.
 
+## Positionsmönster inom delmoment (2026-08-19) — tidspress, mätbart utan frågetext
+
+**Bakgrund:** ett fristående provpass (Provpass 5, Våren 2016, kört 2026-08-18 i
+Study-Coach-Ai-valvet) löstes fråga för fråga med riktig frågetext — se
+`Study Coach Ai/coach/sessioner/2026-08-18-hp-kvant-provpass5-varen2016.md`. Försök
+att göra samma sak för dessa 12 äldre provpass: **misslyckades.** Ingen av dem har
+sparad frågetext (bara denna mapps `sessions/`-tabeller, poäng och bokstäver).
+Två hpguiden.se-URL:er ur `sessions/`-filerna hämtades live 2026-08-19
+(`hptranaren/correct/1084602` och `/1046335`) — båda gav VIP-betalväggen, ingen
+provtext. Samma resultat som 2026-08-18-kvällen. Frågetext för dessa 12 pass är
+alltså inte återvinnbar med tillgängliga verktyg.
+
+**Vad som gick att göra i stället:** en positionsanalys på bokstavsdatan över alla
+12 pass (480 feltillfällen, 119 fel) — dela varje delmoments frågenummer i två lika
+halvor och jämföra felfrekvens:
+
+| Delmoment | Första halvan | Andra halvan | Skillnad |
+|---|---|---|---|
+| XYZ (1–12) | 12/72 (16,7 %) | 16/72 (22,2 %) | +5,6 pp |
+| KVA (13–22) | 8/60 (13,3 %) | 26/60 (43,3 %) | **+30,0 pp** |
+| NOG (23–28) | 4/36 (11,1 %) | 12/36 (33,3 %) | **+22,2 pp** |
+| DTK (29–40) | 11/72 (15,3 %) | 30/72 (41,7 %) | **+26,4 pp** |
+
+KVA, NOG och DTK visar alla en kraftig fel-i-andra-halvan-effekt; XYZ knappt någon.
+Det stämmer med att XYZ (matematisk problemlösning) redan är det starkaste
+delmomentet (81 %) och de andra tre delar bottenplatsen (72–78 %).
+
+**Enskilt starkaste fyndet:** NOG:s sista fråga (fråga 28 i varje pass) fel i
+**8 av 12 pass (67 %)** — högst felfrekvens av alla 40 frågepositioner. NOG har
+bara 6 frågor på ~10 minuter, minst tid per fråga av de fyra delmomenten. Andra
+frågor fel i ≥50 % av passen: KVA 20 och 22 (58 % vardera), KVA 18 (50 %), DTK 36
+och 37 (58 % vardera) — DTK:s riskzon ligger alltså strax efter mitten av
+delmomentet (position 8–9 av 12), inte i de allra sista frågorna.
+
+**Ärlig begränsning:** detta kan INTE skilja tidspress från att HP:s frågor inom
+ett delmoment eventuellt är konstruerade med stigande svårighet — båda
+förklaringarna är förenliga med samma mönster, och frågetext (som skulle avgöra
+det) finns inte. Det som är nytt är ATT mönstret finns och är mätbart, inte VARFÖR.
+Full genomgång: `Study Coach Ai/rapporter/2026-08-19-hp-provet-positionsanalys-alla-provpass.md`.
+
 ## Öppen fråga — dubbla "provpass 2" och "provpass 4" för Våren 2015
 
 Fyra sparade rättningssidor säger alla "Våren 2015", men två par delar samma

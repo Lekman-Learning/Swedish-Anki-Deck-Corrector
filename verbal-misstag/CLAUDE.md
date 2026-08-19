@@ -58,6 +58,47 @@ Samma begränsning som på kvant-sidan: det här är poäng- och bokstavsdata fr
 sparade rättningssidor, inte frågetext. Säger VILKET delmoment som är svagt,
 inte VARFÖR (ordförråd vs. lästempo vs. att missa vad frågan efterfrågar).
 
+## Positionsmönster inom delmoment (2026-08-19) — svagt underlag men riktigt
+
+**Bakgrund:** samma försök som i `../kvantitativ-misstag/CLAUDE.md` — utvidga
+2026-08-18-kvällens fråga-för-fråga-djupanalys (riktig frågetext, varje fel löst
+för hand) till dessa 3 äldre provpass. **Misslyckades av samma skäl:** ingen sparad
+frågetext finns (varken i valvet eller i denna mapp), och hpguiden.se gav
+VIP-betalväggen på två oberoende URL:er testade live 2026-08-19. Analysen nedan
+bygger uteslutande på bokstavsdata (fråga/delmoment/rätt-fel/valt/rätt) ur
+`sessions/`.
+
+**Metod:** dela varje delmoments 10 frågor i två halvor (fråga 1–5 resp. 6–10
+inom delmomentet) och jämför felfrekvens över de 3 passen (120 feltillfällen,
+59 fel — **litet underlag, n=3 per position, läs försiktigare än kvant-sidans
+n=12**):
+
+| Delmoment | Första halvan | Andra halvan | Skillnad |
+|---|---|---|---|
+| ORD (1–10) | 6/15 (40,0 %) | 8/15 (53,3 %) | +13,3 pp |
+| LÄS (11–20) | 10/15 (66,7 %) | 8/15 (53,3 %) | **−13,3 pp** |
+| MEK (21–30) | 8/15 (53,3 %) | 5/15 (33,3 %) | **−20,0 pp** |
+| ELF (31–40) | 4/15 (26,7 %) | 10/15 (66,7 %) | **+40,0 pp** |
+
+**Det viktigaste fyndet är var felen INTE ökar.** LÄS är redan svagast av alla åtta
+HP-delmoment (40 % rätt totalt) och tabellen visar att felen där är höga redan från
+första frågan — snarare minskande än ökande mot slutet. Det talar emot att
+LÄS-svagheten huvudsakligen handlar om tidspress/trötthet, och för att den är en
+**genuin läsförståelse-/ordförrådslucka**. MEK visar samma riktning ännu tydligare.
+
+**ELF sticker ut åt andra hållet:** +40 pp sämre i andra halvan — starkast
+positionseffekt i HELA HP-underlaget (kvant och verbalt). ELF ligger dessutom sist
+av de fyra verbala delmomenten i själva passet (ORD→LÄS→MEK→ELF), så effekten är
+dubbelt sen. Gör ELF till den starkaste kandidaten för en ren tidspress-/
+uttröttningsförklaring bland de fyra verbala delmomenten — starkare signal än LÄS,
+trots att LÄS har lägre totalsiffra.
+
+Enskilda frågepositioner fel i alla 3 pass (fråga 7 ORD, 14/18 LÄS, 37 ELF) — bara
+100 % för att n=3, flaggas inte som ett fynd i sig, för litet underlag.
+
+Full genomgång inklusive metodval och gränser:
+`Study Coach Ai/rapporter/2026-08-19-hp-provet-positionsanalys-alla-provpass.md`.
+
 ## Provkalender 2014–2026
 
 26 sittningar, källa: UHR/studera.nu (fritt tillgängliga, inte hpguiden VIP).
