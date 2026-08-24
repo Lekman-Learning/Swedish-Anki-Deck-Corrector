@@ -1,0 +1,433 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621289,
+      "ord": "däven",
+      "facit": "dåsig; avslagen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Unken och något fuktig ; (om dryck) avslagen och fadd ; (om person) trött",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "unken",
+          "dåsig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Källarluften var <font color=\"#3498db\">däven</font> och luktade mögel.",
+        "etymologi": "Av fornsvenska <i>dävin</i> 'fuktig'. Ursprunget i övrigt är ovisst."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar tre betydelser i samma ordning som kortet: unken/fuktig om luft (huvudbetydelse), avslagen/fadd om dryck, trött om person. Kortet leder korrekt med huvudbetydelsen och separerar de tre genuint skilda betydelserna rätt med ' ; '. Etymologin (fsv. dävin 'fuktig') stämmer med SO. Synonymerna 'unken' och 'dåsig' är rimliga mot SO:s definition respektive facit.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621302,
+      "ord": "merkantil",
+      "facit": "handelsanknuten",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har att göra med handel",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han gick en <font color=\"#3498db\">merkantil</font> utbildning och tog över faderns firma.",
+        "etymologi": "Av franska <i>mercantile</i>, till latin <i>mercari</i> 'driva handel' — samma rot som i <i>kommers</i> och <i>marknad</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse, 'som har att göra med handel', identisk med kortets huvudbetydelse och med facit ('handelsanknuten'). Etymologin (franska mercantile, latin mercari, släkt med kommers/marknad) matchar SO exakt. Tom synonymlista är korrekt eftersom SO inte anger några synonymer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621313,
+      "ord": "tråkad",
+      "facit": "retad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Retad på ett godmodigt sätt ; uttråkad, trött på något",
+        "register": "vardaglig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han blev <font color=\"#3498db\">tråkad</font> av kompisarna varje gång han gick till gosskören.",
+        "etymologi": "Av svensk dialekt <i>tråka</i> 'gå och släpa, knoga'. Besläktat med <i>trycka</i>."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortets andra betydelse, 'uttråkad, trött på något', hör inte till den nakna participformen 'tråkad'. SO:s motsvarande betydelse ('få att känna leda och trötthet') kräver partikeln 'ut' eller 'ihjäl' ('tråka ut', 'tråka ihjäl'), och SAOL definierar verbet tråka enbart som 'reta, ge gliringar'. Facit stödjer bara en betydelse ('retad'). Felet borde rättas genom att ta bort 'uttråkad, trött på något' -- kortet bör bara ha betydelsen 'retad på ett godmodigt sätt', annars riskerar man lära ut en icke-standardanvändning.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621292,
+      "ord": "insidiös",
+      "facit": "lömsk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som döljer sin skadliga eller oangenäma innebörd",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "försåtlig",
+          "lömsk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kritiken kom i form av <font color=\"#3498db\">insidiösa</font> antydningar i stället för öppna angrepp.",
+        "etymologi": "Av franska <i>insidieux</i>, av latin <i>insidiosus</i> 'lömsk, försåtlig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('döljer sin skadliga eller oangenäma innebörd') matchar kortet, och synonymerna 'försåtlig' och 'lömsk' är ordagrant SO:s egna angivna närliggande ord (matchar även facit). Etymologin (fra. insidieux, lat. insidiosus) stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621310,
+      "ord": "anbelanga",
+      "facit": "angå",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Beträffa, angå",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "beträffa",
+          "angå"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vad den saken <font color=\"#3498db\">anbelangar</font> vill jag säga följande.",
+        "etymologi": "Av lågtyska <i>anbelangen</i>, egentligen 'nå fram till'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse 'beträffa' med hänvisning till 'angå' matchar kortets huvudbetydelse och facit. Exempelmeningen är i praktiken identisk med SO:s eget exempel. SO ger bara en betydelse, så ingen saknas.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621291,
+      "ord": "beråd",
+      "facit": "vara i tvekan, dilemma",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Situation där ett besvärligt val måste göras ; att just ämna göra något",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Föräldrarna var i <font color=\"#3498db\">beråd</font> om sonen skulle få gå in vid teatern.",
+        "etymologi": "Av lågtyska <i>berat</i> 'övervägande'. Samma rot som i <i>råd</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar båda uttrycken kortet bygger på: 'vara i beråd' = 'vara tveksam' (besvärligt val) och 'stå i beråd att' = 'vara på väg att' (just ämna göra något). Kortet täcker alltså mer än facit ('vara i tvekan, dilemma'), vilket är en styrka, inte ett fel. Exempelmeningen använder korrekt konstruktionen 'vara i beråd om'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621297,
+      "ord": "beskänkt",
+      "facit": "berusad<br><a href=\"https://www.google.com/imgres?q=inebriated%20stock%20photo&amp;imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F176759840%2Fphoto%2Fslightly-inebriated-man.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3Dk8hSZFX8ZF_0al_Y06W-pQh-7mJCGO4v57zOEqrE1q8%3D&amp;imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Finebriated&amp;docid=Uy9Dke8-9n4I_M&amp;tbnid=G43ocjwG2WUXnM&amp;vet=12ahUKEwjq6paqj-SLAxU3JRAIHXayIPcQM3oECHYQAA..i&amp;w=612&amp;h=409&amp;hcb=2&amp;ved=2ahUKEwjq6paqj-SLAxU3JRAIHXayIPcQM3oECHYQAA\"><div><div><div><img alt=\"20+ Inebriated Stock Photos, Pictures ...\" src=\"images-fdb9faaa16e17d6c53ffc5458c26870fd3242eaf.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lindrigt berusad",
+        "register": "neutral, eufemistisk",
+        "synonymer": [
+          "berusad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Två <font color=\"#3498db\">beskänkta</font> herrar kom ut från restaurangen.",
+        "etymologi": "Av lågtyska <i>beschenkt</i>, perfekt particip av <i>beschenken</i> 'skänka i åt någon'. Ursprungligen alltså 'undfägnad'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'lindrigt berusad' med anmärkningen att ordet vanligen används som förskönande omskrivning matchar kortets huvudbetydelse och registerangivelse 'eufemistisk'. Etymologin (lty. beschenkt, av beschenken 'skänka i åt någon') stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621286,
+      "ord": "blötdjur",
+      "facit": "ynkrygg,&nbsp; mollusk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ryggradslöst djur med huvud, inälvssäck och ombildad fot ; (bildligt) slapp och karaktärslös person",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "mollusk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Snäckor, musslor och bläckfiskar är <font color=\"#3498db\">blötdjur</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse och bildliga betydelse ('slapp och karaktärslös person') matchar kortet nästan ordagrant, och synonymen 'mollusk' är SO:s egen angivna synonym. Exempelmeningen speglar SO:s egna exempeldjur (mussla, snäcka, bläckfisk).",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621296,
+      "ord": "drott",
+      "facit": "fornnordisk hövding",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fornnordisk storman med eget hov",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Sagan handlar om en <font color=\"#3498db\">drott</font> som samlade ett krigarfölje kring sig.",
+        "etymologi": "Av fornsvenska <i>drotin</i>, till <i>drótt</i> '(konungens) krigarfölje'. Besläktat med gotiska <i>driugan</i> 'göra krigstjänst'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'fornnordisk storman med eget hov' är identisk med kortets huvudbetydelse, och SO anger 'hövding' som närliggande begrepp (matchar facit). Etymologin (fsv. drotin, släkt med gotiska driugan 'göra krigstjänst') stämmer med SO.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621287,
+      "ord": "ekarté",
+      "facit": "kortspel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kortspel för två personer med 32 kort av hög valör",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De fördrev kvällen med <font color=\"#3498db\">ekarté</font> vid brasan.",
+        "etymologi": "Av franska <i>écarté</i>, till <i>écarter</i> 'kasta korten' — av <i>carte</i> 'kort'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'kortspel för två personer med 32 kort av hög valör' är identisk med kortets huvudbetydelse, liksom etymologin via franska écarté/écarter/carte.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621304,
+      "ord": "filklove",
+      "facit": "filfasthållningsskruvstycke<div><img src=\"paste-cdffeebe137687f657b7b72b0ef72d51871c345e.webp\"><br></div><div><img src=\"paste-99f905ee606d8ee8b07a1ffaf0e3984f54626d4a.webp\"><br></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mindre skruvstycke som håller fast arbetsstycket vid filning",
+        "register": "fackspråklig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han spände fast nyckeln i <font color=\"#3498db\">filkloven</font> innan han började fila.",
+        "etymologi": "Sammansatt av <i>fil</i> och <i>klove</i>, ett äldre ord för klämma."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'mindre skruvstycke för fasthållning av arbetsstycke vid filning' matchar kortet nästan ordagrant. Sammansättningen fil+klove i etymologin stämmer, och registret 'fackspråklig' är rimligt för denna verktygsterm.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621312,
+      "ord": "go",
+      "facit": "framåtanda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Östasiatiskt brädspel där man omsluter så stora områden som möjligt med små stenar ; (vardagligt) initiativkraft och framåtanda",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "framåtanda",
+          "kraft",
+          "fart"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han lärde sig spela <font color=\"#3498db\">go</font> av sin farfar.",
+        "etymologi": "Spelet av japanska <i>go</i>. Betydelsen framåtanda är ett annat ord: engelska <i>go</i>, till <i>go</i> 'gå, färdas'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar en hel betydelse: SO listar 'go' även som en vardaglig form av adjektivet 'god' ('tilltalande; söt/rar', t.ex. 'ungarna är så goa'), en mycket vanlig användning ('en go kille', 'go stämning') som inte nämns alls -- kortet tar bara upp brädspelet och substantivet 'framåtanda'. Facit ('framåtanda') speglar bara en av de tre betydelserna och räcker inte som ensam kontroll. Kortet borde lägga till adjektivbetydelsen, vardaglig form av 'god'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621301,
+      "ord": "hepatit",
+      "facit": "leverinflammation",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inflammation i levern",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "leverinflammation"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vaccinet skyddar mot <font color=\"#3498db\">hepatit</font> A och B.",
+        "etymologi": "Modern bildning till grekiska <i>hepar</i> (genitiv <i>hepatos</i>) 'lever'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'inflammation i levern' och synonymen 'leverinflammation' matchar kortet och facit exakt. Exempelmeningen om vaccin mot hepatit A och B är sakligt korrekt och registret 'fackspråklig' är rimligt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621293,
+      "ord": "kantin",
+      "facit": "servering för soldater",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Serveringsställe vid militärförläggning eller arbetsplats ; större kärl för mat eller dryck i restaurangkök",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "marketenteri"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Soldaterna köpte cigaretter och läsk i <font color=\"#3498db\">kantinen</font>.",
+        "etymologi": "Av franska <i>cantine</i>, av italienska <i>cantina</i> 'vinkällare'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (serveringsställe vid militärförläggning, delvis historiskt) och underbetydelse (kärl för mat/dryck) matchar kortets två betydelser och registret 'ngt ålderdomlig'. Kortets tillägg 'eller arbetsplats' går utöver SO:s exakta formulering men motsvarar väletablerad nutida användning av 'kantin' som personalmatsal, så det räknas inte som ett sakfel.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621306,
+      "ord": "komminister",
+      "facit": "en sorts präst<br><a href=\"https://www.google.com/imgres?q=komminister&amp;imgurl=https%3A%2F%2Fems.dimu.org%2Fimage%2F022ymUT6d4XB%3Fdimension%3D1200x1200&amp;imgrefurl=https%3A%2F%2Fdigitaltmuseum.se%2F021017218039%2Fkomminister-senare-kyrkoherde-och-aven-prost-lars-tofft-fodd-1853-avliden&amp;docid=FPoPc-IFr6lXJM&amp;tbnid=2HDMwoNhqqs8eM&amp;vet=12ahUKEwiljYqv_POLAxUhKRAIHXmNApAQM3oECBsQAA..i&amp;w=383&amp;h=549&amp;hcb=2&amp;ved=2ahUKEwiljYqv_POLAxUhKRAIHXmNApAQM3oECBsQAA\"><div><div><div><img alt=\"Komminister (senare kyrkoherde och även ...\" src=\"paste-9f1dfb25a42f635aad323850cbed0c3f06935c20.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ordinarie präst närmast under kyrkoherde i en församling",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han tjänstgjorde som <font color=\"#3498db\">komminister</font> i församlingen i tolv år.",
+        "etymologi": "Till latin <i>con-</i> 'med' och <i>minister</i> 'tjänare' — alltså medhjälpande tjänare."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'ordinarie präst närmast under kyrkoherde' matchar kortets huvudbetydelse. Etymologin (lat. con- 'med' + minister 'tjänare') stämmer ordagrant med SO.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621284,
+      "ord": "kostlig",
+      "facit": "lustig; dyrbar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lustig, roande ; dyrbar",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "lustig",
+          "dyrbar"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De utklädda barnen var en <font color=\"#3498db\">kostlig</font> syn.",
+        "etymologi": "Av fornsvenska <i>kosteliker</i>, till <i>kost</i> i äldre betydelsen 'utgift, värde'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL listar uttryckligen 'lustig' som betydelse 1 och 'dyrbar' som betydelse 2 (märkt 'åld.'). Kortet leder alltså korrekt med den idag vanligare betydelsen 'lustig', i linje med facit ('lustig; dyrbar'). Exempelmeningen ('utklädda barnen...kostlig syn') är identisk med SO:s eget exempel för den betydelsen.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621307,
+      "ord": "moloken",
+      "facit": "dyster och nedstämd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slokörad och nedstämd",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "modstulen",
+          "slokörad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han satt <font color=\"#3498db\">moloken</font> kvar vid bordet sedan de andra gått.",
+        "etymologi": "Till <i>mod</i> och svensk dialekt <i>loken</i> 'olustig, utmattad', till <i>loka</i> 'sloka, hänga'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'slokörad och nedstämd' matchar kortet ordagrant, och den angivna cohyponymen 'modstulen' bekräftas av SO. Etymologin (mod + dialektalt loken/loka 'sloka, hänga') stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621288,
+      "ord": "oförtruten",
+      "facit": "ihärdig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som präglas av energi och ihärdighet",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "outtröttlig",
+          "ihärdig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon förde en <font color=\"#3498db\">oförtruten</font> kamp för social rättvisa.",
+        "etymologi": "Efter lågtyska <i>unvordroten</i>, till <i>förtryta</i> 'ta illa vid sig, tröttna'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'som präglas av energi och ihärdighet' är identisk med kortets huvudbetydelse. SO:s jämförelseord är 'oförtröttlig' (kortet skriver det närbesläktade 'outtröttlig'), vilket ändå är en giltig, utbytbar synonym. Etymologin (lty. unvordroten, till förtryta) stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621303,
+      "ord": "paritet",
+      "facit": "likvärdighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Likvärdig nivå mellan två parter ; (ekonomi) likvärdighet mellan valutor",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "likvärdighet",
+          "jämngodhet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans kunnande är inte i <font color=\"#3498db\">paritet</font> med hans entusiasm.",
+        "etymologi": "Via franska av latin <i>paritas</i> 'likhet'. Samma rot som i <i>par</i> och <i>pari</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s båda betydelser (allmän likvärdighet samt valutalikvärdighet inom ekonomi) matchar kortets två betydelser, korrekt separerade. Exempelmeningen ('kunnande...i paritet med...entusiasm') är identisk med SO:s eget exempel.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621290,
+      "ord": "protagonist",
+      "facit": "huvudrollsinnehavare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Huvudrollsinnehavare, huvudperson i en berättelse",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "huvudperson"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Romanens <font color=\"#3498db\">protagonist</font> är en ung läkare i Stockholm.",
+        "etymologi": "Av grekiska <i>protagonistes</i>, till <i>protos</i> 'först' och <i>agonistes</i> 'tävlande'. Samma rot som i <i>antagonist</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'huvudrollsinnehavare' matchar kortet, och den moderna utvidgningen till 'huvudperson i en berättelse' är etablerad nutida användning som inte strider mot ordboken. Etymologin (protos + agonistes, släkt med antagonist) stämmer exakt med SO.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621285,
+      "ord": "tremänning",
+      "facit": "syssling<br><a href=\"https://www.google.com/imgres?q=trem%C3%A4nning&amp;imgurl=https%3A%2F%2Fblogg.slaktingar.se%2Fwp-content%2Fuploads%2F2015%2F07%2Fsysslingar.png&amp;imgrefurl=https%3A%2F%2Fblogg.slaktingar.se%2Fvad-ar-sysslingar-bryllingar-och-syskonbarn%2F&amp;docid=7jhG0fXqogP-AM&amp;tbnid=b3nU1z8q7FVp0M&amp;vet=12ahUKEwipj_OM3PeLAxW6BhAIHVI6IBQQM3oECFAQAA..i&amp;w=614&amp;h=282&amp;hcb=2&amp;ved=2ahUKEwipj_OM3PeLAxW6BhAIHVI6IBQQM3oECFAQAA\"><div><div><div><img alt=\"sysslingar, bryllingar och syskonbarn ...\" src=\"paste-31afde0712b0ba6c6e4512a934caeb03b88efd5d.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Syssling, alltså barn till förälders kusin",
+        "register": "dialektal, neutral",
+        "synonymer": [
+          "syssling"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi är <font color=\"#3498db\">tremänningar</font> — våra mormödrar var kusiner.",
+        "etymologi": "Av fornsvenska <i>þrämänninger</i>, till <i>tre</i> och <i>man</i> — tredje ledet i släktskapsräkningen."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar både betydelsen 'syssling' och registret 'dialektalt', matchar kortet och facit. Släktskapsräkningen i exempelmeningen (mormödrar som var kusiner ger tremänningar/sysslingar) är sakligt korrekt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 36,
+  "granskning_kostnad_usd": 1.1888839,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 21,
+      "turer": 36,
+      "turkrav": 5,
+      "kostnad_usd": 1.1888839
+    }
+  ]
+}

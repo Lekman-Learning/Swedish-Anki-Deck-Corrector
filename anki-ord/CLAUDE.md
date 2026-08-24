@@ -4035,3 +4035,99 @@ lades till (429/503 backas av och görs om, samma mönster som
 `slaupp.py`s Wiktionary-anrop, se den filens kommentar från 2026-08-10).
 
 Full v3 i decket efter batchen: **1153 → 1182** (+29).
+
+---
+
+## Batch 5, 24 augusti (natt): 0 % underkänt — och två fel i mitt eget arbetssätt
+
+**24 av 24 godkända.** Första felfria omgången sedan blindgranskningen infördes.
+Kurvan över dygnet:
+
+| Batch | Underkänt | Vad som ändrades inför den |
+|---|---|---|
+| 2 | 33 % | — |
+| 3 | 37 % | `betydelse_kan_saknas` gjordes HÅRD |
+| 4 | 10 % | batch 3:s lärdom (missa inte betydelser källan HAR) |
+| **5** | **0 %** | batch 4:s lärdom: vifta inte bort ett hårt flagg |
+
+Full v3 i decket efter batchen: **1472 → 1496** (+24). Kostnad 1,75 USD.
+
+### Det som faktiskt gjorde skillnaden
+
+`flirta` fick ett hårt `betydelse_kan_saknas` (SO 3, kortet 2). I batch 4 hade
+jag i samma läge skrivit en handviftande motivering om fuzzy-matchning på `go`
+— och blindgranskaren underkände kortet för exakt det flagget hade sagt. Den
+här gången lästes **SO:s råstruktur** i stället för sammandraget:
+
+```
+ORTO: flirta | ordklass: verb
+ORTO: flörta | ordklass: verb
+  DEF: antyda och försöka väcka erotiskt intresse
+    UNDER: antyda intresse för samverkan | brukl: särsk. politik
+```
+
+Exakt en huvudbetydelse och en underbetydelse, båda på kortet. Trean uppstod
+för att underbetydelsen räknas två gånger när sammandraget plattas ut — en gång
+i `def`-listan, en gång i `underbetydelser`-listan.
+
+**Regeln som följer:** ett hårt flagg får bara viftas bort mot
+`svenska_se_ratt[...]['hits']['hits'][*]['huvudbetydelser']`, aldrig mot
+`sammandrag`. Sammandraget är en tillplattning och kan dubbelräkna.
+
+### Fel 1 (fixat): flerordslemman kunde aldrig passera bevisspärren
+
+`grå eminens` blockerades i batch 4 och skrevs av som en olöst lucka. Orsaken
+var att `sokkoll.kalla` delas på blanksteg, så
+`https://svenska.se/api/msearch?ord=grå eminens` kapades till `...?ord=grå`.
+
+Fixen är en rad i skrivskriptet:
+
+```python
+q = urllib.parse.quote(o)          # "alter ego" -> "alter%20ego"
+e["sokkoll"]["kalla"] = f"... https://svenska.se/api/msearch?ord={q} ..."
+```
+
+`sokkoll_verifiering._normalisera()` avkodar procentkodning innan den jämför,
+så den kodade URL:en matchar den rekonstruerade okodade. Verifierat i batch 5:
+**`alter ego` och `de facto` gick båda igenom spärren.** Samma rad löser
+`grå eminens` när det kortet plockas igen.
+
+### Fel 2 (mitt, inte kodens): klipp ALDRIG `slaupp.py`s utdata
+
+Första appliceringen av batch 5 vägrade **alla 24 korten** med
+`SÖKKOLL EJ BEVISAD`. Jag misstänkte procentkodningen och hade fel — orsaken
+var att jag kört
+
+```
+python slaupp.py --tyst <14 ord> 2>&1 | tail -20
+```
+
+`tail -20` kastade bort varenda `SVENSKA_SE_HAMTAD`-rad. De raderna **är**
+beviskedjan: spärren läser dem ur transkriptet och rekonstruerar URL:en ur
+dem. En hämtning som gjorts men vars kvitto klippts bort är, för spärren, en
+hämtning som aldrig skedde.
+
+Det är värt att notera att spärren betedde sig **precis rätt** — den vägrade
+intyga något den inte kunde se bevis för, trots att hämtningen faktiskt gjorts.
+Rätt beteende hos ett skydd är att fela åt det håll som kostar arbete, inte åt
+det håll som släpper igenom.
+
+**Regeln:** `slaupp.py` körs alltid med hela utdatan synlig, eller filtrerad
+med `grep "HAMTAD\|UPPSLAGSORD"` — aldrig med `head`/`tail`.
+
+### Mätt sluttillstånd
+
+| | |
+|---|---|
+| Full v3 | **1496** |
+| Lager (osuspenderade) | 1506 |
+| Pool kvar (spår A) | 6060 |
+| Ackumulerade underkända | **161** ← växande skuld, ingen plockar upp dem |
+| Repetitionsskuld | 830 |
+
+De **161 underkända** är värda en egen omgång. De är per definition trasiga
+kort som togs ur kön och aldrig kom tillbaka — samma feltyp som
+`-tag:v3_dagsbatch::*` orsakade i spår B den 11 augusti, fast nu i en annan
+form: `POOL_FRAGA["nya"]` exkluderar `-tag:v3_dagsbatch::*` utan undantag, så
+ett underkänt spår A-kort kan **aldrig** plockas igen av `kortbyggare.py`.
+Det är inte medvetet valt, och det är därför siffran bara växer.

@@ -106,6 +106,10 @@ _MARKNING_LIKA = {
     "nedsätt": "nedsättande", "skämtsamt": "skämtsam", "ironiskt": "ironisk",
     "formellt": "formell", "litt": "litterär", "språkv": "lingvistik",
     "sjö": "sjöfart", "geol": "geologi", "vulg": "vulgär",
+    # 2026-08-24: SO:s "delvis historiskt" (kantin) sade samma sak som
+    # valvets "ngt ålderdomlig" men delade inget ordstam, så regeln slog
+    # ut på ett korrekt kort. Samma feltyp som `prov.`/dialektal ovan.
+    "historiskt": "ålderdomlig", "historisk": "ålderdomlig",
 }
 
 # Popularitetsgräns: över detta är ordet för vanligt för att rimligen bära en
