@@ -64,6 +64,27 @@ if hasattr(sys.stdout, "reconfigure"):
 API = "https://svenska.se/api/msearch"
 UTKAT = "uppslag"
 
+# Filnamnsbugg hittad 2026-08-20 (batch5): ord som "företa /företaga" har ett
+# "/" i sig -- en giltig del av ordet (två alternativa former separerade med
+# mellanslag-snedstreck), men ett OTILLÅTET tecken i ett Windows-filnamn.
+# os.path.join(UTKAT, f"{o}.json") kastade FileNotFoundError och kraschade HELA
+# processen (inte bara det ordet) eftersom skriptet kör alla ord i EN loop utan
+# per-ord felfångst -- exakt den kontextfönsterbesparing filen finns för att ge
+# blev alltså också en enda felkälla för alla 50 ord i batchen. Samma riskklass
+# som windows-encodingbuggarna ovan: ett tecken som är helt normalt i svensk
+# text kraschar tyst mot en plattformsbegränsning ingen ser förrän den kör.
+_FILNAMN_OTILLATNA = re.compile(r'[\\/:*?"<>|]')
+
+
+def _sakert_filnamn(ord_: str) -> str:
+    """Ersätter Windows-otillåtna filnamnstecken med '_' för uppslag/<ord>.json.
+
+    Bara filnamnet påverkas -- ordet som skickas till API:erna och skrivs i
+    JSON-innehållet (fältet "ord") är orört, så uppslaget fortfarande går att
+    hitta på det riktiga ordet vid läsning av filens innehåll.
+    """
+    return _FILNAMN_OTILLATNA.sub("_", ord_)
+
 # Uppslagsordskontroll (2026-08-11). svenska.se:s msearch är en FRITEXTSÖKNING:
 # saknas ordet returnerar den grannartiklar med HTTP 200 i stället för tomt.
 # `ytong` (ett varumärke, inte ett uppslagsord) gav artikeln för **yta** --
@@ -684,7 +705,7 @@ def main():
                        else "synonymer.se (redaktionell)" if syn_redaktionell
                        else "SAKNAS — kräver websökning"),
                    "svenska_se_ratt": data, "sammandrag": post},
-                  open(os.path.join(UTKAT, f"{o}.json"), "w", encoding="utf-8"),
+                  open(os.path.join(UTKAT, f"{_sakert_filnamn(o)}.json"), "w", encoding="utf-8"),
                   ensure_ascii=False)
 
         post["_kallor"] = kallor_med_innehall
@@ -727,7 +748,7 @@ def main():
             print(f"WIKTIONARY_OMKORD {o} HTTP {w_status} {w_byte}")
             if not (wik and wik.get("finns")):
                 continue
-            sokvag = os.path.join(UTKAT, f"{o}.json")
+            sokvag = os.path.join(UTKAT, f"{_sakert_filnamn(o)}.json")
             try:
                 sparad = json.load(open(sokvag, encoding="utf-8"))
             except Exception:

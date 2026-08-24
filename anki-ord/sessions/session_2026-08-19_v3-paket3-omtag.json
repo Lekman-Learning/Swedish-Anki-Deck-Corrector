@@ -1,0 +1,76 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-agent-skrivare",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620908,
+      "ord": "kuse",
+      "facit": "häst; bröd; insekt<br><div><div><a href=\"https://www.google.com/imgres?q=kuse%20h%C3%A4st&amp;imgurl=https%3A%2F%2Fcust.kulturhotell.se%2Fc66%2Ffiles%2Ffullsize%2Fae630e9b933b4ca39f2c2decf0509c76.jpg&amp;imgrefurl=https%3A%2F%2Fgamlaostersund.se%2Fitems%2Fkeywords%2Fkuse%2F&amp;docid=jghg_qvzPFZ4UM&amp;tbnid=fAugl8e736PFhM&amp;vet=12ahUKEwiZ2uzRhsuLAxVZJRAIHQfZIKQQM3oECGoQAA..i&amp;w=720&amp;h=550&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwiZ2uzRhsuLAxVZJRAIHQfZIKQQM3oECGoQAA\"><img alt=\"kuse-arkiv - Gamla Östersund\" src=\"paste-0b15a7cb0a49adc677856348da6b83a25c38597e.webp\"></a><a href=\"https://www.google.com/imgres?q=kuse&amp;imgurl=https%3A%2F%2Fwww.isof.se%2Fimages%2F18.4d08299d18bfb2bd9182a5c4%2F1701358781308%2Fsaffransbrod-pixabay.jpg&amp;imgrefurl=https%3A%2F%2Fwww.isof.se%2Fdialekter%2Fpa-gang%2Fdialektbloggen%2Finlagg%2F2010-12-01-kuse&amp;docid=3c5NJx5x2VVWzM&amp;tbnid=C_Ps69McTM55yM&amp;vet=12ahUKEwjEqNrPhsuLAxW5IBAIHZeJOMYQM3oECBIQAA..i&amp;w=1280&amp;h=853&amp;hcb=2&amp;ved=2ahUKEwjEqNrPhsuLAxW5IBAIHZeJOMYQM3oECBIQAA\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><img alt=\"Kuse | Institutet för språk och folkminnen\" src=\"paste-956df2a176cf7ddc0ffbad301ed1f427ba5c0973.webp\"></div></div></div></a><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fradiosiljan.com%2Fnyheter%2Fliten-kuse-som-forstor-for-miljoner-kronor%2F&amp;psig=AOvVaw2NUSDfpP3TJ3lqAlwc4GvE&amp;ust=1739893532475000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCODCn92Gy4sDFQAAAAAdAAAAABAE\"><img alt=\"Liten &quot;kuse&quot; som förstör för miljoner kronor - Radio Siljan\" src=\"granbarksborre.webp\"></a></div><br></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Häst ; en bulle eller limpa ; en skalbagge",
+        "register": "vardaglig, neutral ; dialektal, neutral ; dialektal, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han spände <font color=\"#3498db\">kusen</font> framför vagnen och körde iväg mot byn.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar tre betydelser i exakt kortets ordning: häst (vard., matchar kortets 'vardaglig'), bröd/bulle (SO ger explicit 'dialektalt', matchar kortets 'dialektal') och insekter/skalbaggar. SO saknar bara insektbetydelsen men SAOL har den, och facit ('häst; bröd; insekt') bekräftar samma tre skilda betydelser separerade korrekt med ';'. Exempelmeningen illustrerar häst-betydelsen sakligt korrekt ('spände kusen framför vagnen'), ordet är highlightat. Tom synonymlista är inget fel. Etymologi saknas men är valfri.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620876,
+      "ord": "låta undfalla sig",
+      "facit": "råka säga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Råka säga något man egentligen inte tänkt avslöja",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "undslippa sig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">lät undfalla sig</font> att hon redan visste vem som skulle få jobbet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt en betydelse för det reflexiva 'undfalla sig': '(oväntat eller händelsevis) framföra i ord', vilket kortets 'råka säga något man egentligen inte tänkt avslöja' är en trogen, sakligt korrekt parafras av (matchar även facit 'råka säga'). SO anger dessutom explicit synonymhänvisning till 'undslippa sig' i sin egen ordbokstext, vilket exakt matchar kortets angivna synonym - kravet att ordboken själv ska peka ut synonymen är uppfyllt. Exempelmeningen följer SO:s eget mönster ('hon lät undfalla sig att...'), är grammatiskt korrekt och ordet är highlightat. Register 'ngt ålderdomlig' är en rimlig tolkning givet att grundverbet 'undfalla' taggas 'ålderdomligt' i SO och konstruktionen känns daterad.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620916,
+      "ord": "låta undslippa sig",
+      "facit": "råka säga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Råka säga något man egentligen inte tänkt avslöja",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "undfalla sig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">lät undslippa sig</font> att han var missnöjd med flera av sina kollegor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt en betydelse för det reflexiva 'undslippa sig': 'råka säga', vilket matchar kortets huvudbetydelse och facit ordagrant. SO:s egen text hänvisar explicit till 'undfalla sig' som synonym, vilket exakt matchar kortets angivna synonym - synonymen är alltså bekräftad av ordboken själv, inte bara en lös association. Exempelmeningen är en naturlig variant av SO:s eget exempel ('hon lät undslippa sig att hon var missnöjd...'), grammatiskt korrekt och ordet är highlightat. Ingen betydelse saknas eftersom SO bara listar denna enda betydelse för den reflexiva formen.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 14,
+  "granskning_kostnad_usd": 0.5264184999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 3,
+      "turer": 14,
+      "turkrav": 5,
+      "kostnad_usd": 0.5264184999999999
+    }
+  ]
+}

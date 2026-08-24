@@ -1,0 +1,267 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "adam-huvudpass",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620923,
+      "ord": "företa /företaga",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Genomföra eller ta itu med något, t.ex. en resa eller undersökning ; (reflexivt, \"företa sig\") göra något, ta sig för något",
+        "register": "formell, neutral",
+        "synonymer": [
+          "genomföra",
+          "ta itu med",
+          "ta sig för",
+          "göra"
+        ],
+        "synonym_groups": [
+          [
+            "genomföra",
+            "ta itu med"
+          ],
+          [
+            "ta sig för",
+            "göra"
+          ]
+        ],
+        "exempelmening": "Hon visste inte vad hon skulle <font color=\"#3498db\">företa sig</font> en ledig eftermiddag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: 1) utföra verksamhet av mer omfattande slag (t.ex. resa, undersökning) 2) reflexivt 'företa sig' = göra/ta sig för. Kortet täcker båda korrekt och separerar dem med ';'. Synonymerna genomföra/ta itu med respektive ta sig för/göra är rimliga och inte cirkulära. Exempelmeningen matchar nästan ordagrant SO:s eget exempel och är korrekt highlightad. Register formell/neutral stämmer för ett skriftspråkligt verb.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620984,
+      "ord": "puckla på",
+      "facit": "(vard.)&nbsp; ge ngn mkt stryk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge någon mycket stryk ; angripa eller kritisera någon hårt med ord",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "ge stryk",
+          "slå",
+          "angripa",
+          "gå hårt åt"
+        ],
+        "synonym_groups": [
+          [
+            "ge stryk",
+            "slå"
+          ],
+          [
+            "angripa",
+            "gå hårt åt"
+          ]
+        ],
+        "exempelmening": "Storebror hotade att <font color=\"#3498db\">puckla på</font> lillebror om han inte slutade reta.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ge ngn mycket stryk (vanl. med knytnävarna)', vardagligt, plus bildlig underbetydelse (verbalt angrepp, t.ex. i debatt). Kortet fångar båda betydelserna korrekt separerade med ';', register vardaglig stämmer. Synonymerna (ge stryk/slå; angripa/gå hårt åt) är utbytbara och hör rätt till respektive betydelse. Exempelmeningen är korrekt och highlightad.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620961,
+      "ord": "vika ut sig",
+      "facit": "visa sig (mer eller mindre) naken på bild<br><a href=\"https://www.google.com/imgres?q=vika%20ut%20sig&amp;imgurl=https%3A%2F%2Fi2.wp.com%2Fbon-se.s3.amazonaws.com%2Fuploads%2F2018%2F12%2Fskugge1.jpg%3Fzoom%3D2.625%26fit%3D1205%252C981%26ssl%3D1&amp;imgrefurl=https%3A%2F%2Fbon.se%2Fmagazine%2Fbon-20%2Flinda-klar-av-sig%2F&amp;docid=4cLa1_Fy_RA2dM&amp;tbnid=hUa2p35tuKD0LM&amp;vet=12ahUKEwjjzd_TxY-MAxUYLhAIHdCHLDoQM3oECFYQAA..i&amp;w=1114&amp;h=907&amp;hcb=2&amp;ved=2ahUKEwjjzd_TxY-MAxUYLhAIHdCHLDoQM3oECFYQAA\"><div><div><div><img alt=\"Linda klär av sig | bon.se\" src=\"paste-2333ba3eb027efad792d7e118ad54777f2a7cd3b.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Visa sig naken eller nästan naken på bild ; berätta öppet om intima detaljer i sitt privatliv (t.ex. i medier)",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "exponera sig",
+          "posera avklädd",
+          "öppna sig offentligt"
+        ],
+        "synonym_groups": [
+          [
+            "exponera sig",
+            "posera avklädd"
+          ],
+          [
+            "öppna sig offentligt"
+          ]
+        ],
+        "exempelmening": "Modellen <font color=\"#3498db\">vek ut sig</font> i en herrtidning på 80-talet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser: visa sig naken på bild, samt bildligt berätta öppet om intima detaljer i sitt liv. Kortet återger båda korrekt, rätt separerade. Synonymerna är rimliga och grupperade rätt. Exempelmeningen illustrerar bildmeningen sakligt och grammatiskt korrekt, ordet highlightat.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620992,
+      "ord": "förgå sig",
+      "facit": "handla hänsynslöst&nbsp;<i>m. ord el. fysiskt</i>,&nbsp; (äv.) våldta",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Handla hänsynslöst mot någon, med ord eller fysiskt våld ; (allvarligare, juridiskt) begå ett sexuellt övergrepp",
+        "register": "formell, negativ",
+        "synonymer": [
+          "tappa besinningen",
+          "överila sig",
+          "begå ett övergrepp"
+        ],
+        "synonym_groups": [
+          [
+            "tappa besinningen",
+            "överila sig"
+          ],
+          [
+            "begå ett övergrepp"
+          ]
+        ],
+        "exempelmening": "I sitt raseri <font color=\"#3498db\">förgick han sig</font> och slog till honom.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat i både SO och SAOL. SO: 'handla hänsynslöst med ord el. ofta fysiskt övergrepp; vanligen i hastigt mod', med underbetydelse '(äv.) våldta'. SAOL: 'i överilning uppträda förolämpande'. Det är alltså EN kärnbetydelse (hänsynslöst/impulsivt agerande, med ord eller fysiskt) plus en specialisering (våldta) -- facit_signal:s '3 betydelser' bygger på att räkna 'ord' och 'fysiskt' som separata, men de hör till samma betydelse i båda ordböckerna. Kortets två betydelser matchar alltså korrekt. Synonymerna (tappa besinningen/överila sig -- matchar 'i hastigt mod'; begå ett övergrepp) är rimliga. Exempelmeningen är korrekt och highlightad.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620919,
+      "ord": "stryka",
+      "facit": "ge vika",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Dra ett hett strykjärn över tyg för att göra det slätt ; dra ett streck över något för att ta bort det ; gå under eller omkomma, t.ex. i en olycka (\"stryka med\")",
+        "register": "neutral, neutral ; neutral, neutral ; neutral, negativ",
+        "synonymer": [
+          "pressa",
+          "radera",
+          "ta bort",
+          "omkomma",
+          "duka under"
+        ],
+        "synonym_groups": [
+          [
+            "pressa"
+          ],
+          [
+            "radera",
+            "ta bort"
+          ],
+          [
+            "omkomma",
+            "duka under"
+          ]
+        ],
+        "exempelmening": "Hon <font color=\"#3498db\">strök</font> skjortan innan intervjun.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet saknar hela betydelser. Både SO och SAOL listar som huvudbetydelser bl.a. (1) 'föra handflata längs en yta på' (t.ex. stryka hunden över ryggen), (2) 'breda ut' (t.ex. stryka smör på brödet) och idiomet 'stryka'/'stryka flagg'/'stryka på foten' = ge vika, ge efter -- vilket är precis vad facit anger ('ge vika') men som INTE finns med på kortet alls. Kortet tar bara upp stryka=stryka kläder, stryka=radera text och stryka med=omkomma, och missar därmed både grundbetydelsen (handflata mot yta), breda ut-betydelsen och specifikt ge vika-betydelsen som facit pekar ut. Kortet behöver kompletteras, t.ex.: '...; ge vika, ge efter (t.ex. \"stryka på foten\")' samt gärna grundbetydelsen 'föra handen/något längs en yta'.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620974,
+      "ord": "det går upp en talgdank för ngn",
+      "facit": "ngn förstår plötsligt,&nbsp; eureka!",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Man förstår plötsligt något, en eureka-känsla",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "fatta galoppen",
+          "förstå plötsligt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter tredje förklaringen <font color=\"#3498db\">gick det äntligen upp en talgdank</font> för honom.",
+        "etymologi": "talgdank var ett enkelt ljus av talg (djurfett), inte stearin -- bilden är ett ljus som plötsligt tänds"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en enda betydelse: något blir plötsligt klart/förklarligt (eureka). facit_signal:s '2 betydelser' är en felsignal här -- 'ngn förstår plötsligt' och 'eureka!' i facit är två uttryck för SAMMA betydelse, inte skilda betydelser, vilket bekräftas av att SO bara listar en. Kortets enda betydelse är alltså korrekt och komplett. Register (ngt ålderdomlig) matchar SO. Synonymerna fatta galoppen/förstå plötsligt är goda. Etymologin om talgljus är sanningsenlig (bekräftad av SO: 'ljus stöpt av talg') och hjälper minnesbilden. Exempelmeningen är korrekt och highlightad.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620935,
+      "ord": "fager",
+      "facit": "vacker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vacker, skön att se på eller höra ; (om tal/löften) vackert klingande men falskt eller tomt",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "skön",
+          "vän",
+          "dejlig",
+          "försåtligt vacker"
+        ],
+        "synonym_groups": [
+          [
+            "skön",
+            "vän",
+            "dejlig"
+          ],
+          [
+            "försåtligt vacker"
+          ]
+        ],
+        "exempelmening": "Hon log mot den <font color=\"#3498db\">fagra</font> utsikten över fjorden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger tre nivåer: tilltalande utseende (högtidligt, sällan om personer), även angenäm för hörseln (fager sång), samt specialbetydelsen tilldragande men bedräglig tal (fagra ord/löften). Kortet slår ihop syn+hörsel i första ledet och har den bedrägliga betydelsen som andra led -- täcker sakligt allt SO anger. Register litterär matchar SO:s 'högtidligt'. Synonymerna skön/vän/dejlig är belagda arkaiska/poetiska synonymer, försåtligt vacker beskriver bedrägligheten rimligt. Exempelmeningen är korrekt böjd och highlightad.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620944,
+      "ord": "lägga an",
+      "facit": "anlägga; sikta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sikta med ett vapen ; inrikta sin strävan mot något, försöka vinna det ; göra sig till för att vinna någons gunst",
+        "register": "neutral, neutral ; formell, neutral ; vardaglig, neutral",
+        "synonymer": [
+          "sikta",
+          "sträva efter",
+          "försöka vinna",
+          "flirta med",
+          "göra sig till för"
+        ],
+        "synonym_groups": [
+          [
+            "sikta"
+          ],
+          [
+            "sträva efter",
+            "försöka vinna"
+          ],
+          [
+            "flirta med",
+            "göra sig till för"
+          ]
+        ],
+        "exempelmening": "Han <font color=\"#3498db\">lade an</font> på den nya kollegan hela kvällen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två huvudbetydelser: militärt sikta (sedan 1649) och inrikta sina strävanden mot något (sedan 1842), med en underbetydelse 'försöka framstå behaglig för ngn'. Kortets tre led matchar denna struktur exakt (sikta; sträva/vinna; göra sig till för gunst), rätt separerade med ';'. Synonymerna är relevanta och inte cirkulära. Exempelmeningen illustrerar flirtbetydelsen korrekt och är highlightad.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 16,
+  "granskning_kostnad_usd": 0.5931811,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 8,
+      "turer": 16,
+      "turkrav": 5,
+      "kostnad_usd": 0.5931811
+    }
+  ]
+}

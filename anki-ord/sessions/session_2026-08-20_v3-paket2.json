@@ -1,0 +1,226 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-batch11-skrivare",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621005,
+      "ord": "över stock och sten",
+      "facit": null,
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Genom besvärlig, ojämn terräng — ta sig fram oavsett hur marken ser ut",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vandrarna tog sig <font color=\"#3498db\">över stock och sten</font> för att hinna fram till stugan innan mörkret föll.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger betydelsen 'över svårframkomlig mark', vilket matchar kortets 'genom besvärlig, ojämn terräng'. Endast en betydelse i SO, registret (neutral) och exempelmeningen stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621015,
+      "ord": "komma som lök på laxen",
+      "facit": "som försvårande omständighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Komma som en extra påfrestning ovanpå ett problem som redan finns",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Bilen gick sönder samma dag han blev av med jobbet — det kom verkligen <font color=\"#3498db\">som lök på laxen</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(komma) som försvårande omständighet' - matchar både facit och kortets formulering exakt. Vardagligt/lätt negativt register stämmer, exempelmeningen är korrekt och ordet highlightat.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621010,
+      "ord": "se ut som en fågelholk",
+      "facit": "se frågande ut,&nbsp; se ut som om man inte förstått ngt<br><img alt=\"webp image\" src=\"paste_1762620393514.webp\">",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Se väldigt förvånad och mållös ut, med munnen öppen som av chock",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "När hon fick se prislappen på lägenheten <font color=\"#3498db\">såg hon ut som en fågelholk</font>.",
+        "etymologi": "Jämförelse med fågelholkens runda ingångshål, format som en öppen mun."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Uttrycket saknas som idiom i SO/SAOL (bara den bokstavliga betydelsen av 'fågelholk' hittades), så uppslagning kunde inte helt bekräfta facit - döms därför försiktigt men mot facit som andra källa. Facit anger betydelsen 'se frågande ut / se ut som om man inte förstått ngt', dvs en FÖRVIRRAD/undrande min. Kortet beskriver istället 'väldigt förvånad och mållös... som av chock', vilket är en sakligt annan känsloläsning (chock/förvåning snarare än förvirring/oförståelse), och exempelmeningen (chockas av en prislapp) bygger på just den avvikande tolkningen. Betydelsen bör korrigeras till en frågande/förbryllad min, inte chock.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621016,
+      "ord": "envar blir salig på sin tro/fason",
+      "facit": "var o en blir lycklig på sitt sätt, med egna val (för att poängtera att folk är/väljer olika)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Var och en blir lycklig på sitt eget sätt — utifrån sin egen tro eller sina egna val",
+        "register": "litterär, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han älskade fotboll och hon teater, men <font color=\"#3498db\">envar blir salig på sin tro</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar båda varianterna 'envar blir salig på sin tro' och 'envar blir salig på sin fason' under uppslagsordet 'salig', med innebörden att var och en finner lycka på sitt eget sätt - matchar kortet och facit. Litterärt register är rimligt för denna ålderdomliga vändning.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621006,
+      "ord": "koka soppa på en spik",
+      "facit": "göra mkt av litet,&nbsp; göra en höna av en fjäder<br><img alt=\"webp image\" src=\"paste_1762617787515.webp\"><img alt=\"webp image\" src=\"paste_1762617799236.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skapa något fullt fungerande av nästan ingenting ; Göra en alldeles för stor sak av något obetydligt",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "göra mycket av lite",
+          "göra en höna av en fjäder"
+        ],
+        "synonym_groups": [
+          [
+            "göra mycket av lite"
+          ],
+          [
+            "göra en höna av en fjäder"
+          ]
+        ],
+        "exempelmening": "Med bara lite mjöl och russin lyckades hon <font color=\"#3498db\">koka soppa på en spik</font> och trolla fram en hel kaka.",
+        "etymologi": "Från en folksaga om en luffare som lurade en snål gumma på ingredienser till en soppa."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger EN betydelse för detta idiom: 'åstadkomma något av (nästan) ingenting' - dvs skapa något värdefullt av minimala resurser (kortets första del stämmer). Kortets andra betydelse, 'Göra en alldeles för stor sak av något obetydligt', hör inte till detta uttryck - det är istället SO:s definition av det HELT ANDRA idiomet 'göra en höna av en fjäder' ('behandla eller beskriva något obetydligt som viktigt', dvs överdriva). Kortet har blandat ihop två olika idiom till en falsk andra betydelse, och synonymen 'göra en höna av en fjäder' är därmed inte en sann synonym (den har annan/motsatt valör - resurssnål skaparförmåga vs överdrift av något trivialt). Den andra betydelsen och den felaktiga synonymen bör tas bort.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621007,
+      "ord": "kola vippen",
+      "facit": "dö",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Dö",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Farbror Nisse <font color=\"#3498db\">kolade vippen</font> förra vintern, 87 år gammal.",
+        "etymologi": "Av finska kuolla, 'dö'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar betydelsen 'dö', vardagligt/skämtsamt register, exempelmeningen fungerar. Etymologin (finskans 'kuolla', 'dö') kunde inte bekräftas i SAOL:s korta notis men motsägs inte heller av någon källa jag hittade, och är en vedertagen teori för svensk slang - den hjälper minnet genom ljudlikheten kola/kuolla.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621012,
+      "ord": "komma upp sig i smöret",
+      "facit": "få gott om pengar, bli framgångsrik",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bli rik och få det mycket bättre ekonomiskt",
+        "register": "vardaglig, positiv",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Efter att företaget börsnoterades <font color=\"#3498db\">kom han verkligen upp sig i smöret</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO (variantformen 'komma upp i smöret'): 'få det ekonomiskt mycket bra' - matchar kortets 'Bli rik och få det mycket bättre ekonomiskt' samt facit. Endast en betydelse, positivt vardagligt register stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621009,
+      "ord": "ligga i stöpsleven",
+      "facit": "ngt som är under omprovning o diskussion,&nbsp; vara oavgjord",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Vara under omprövning eller omarbetning — inte bestämt än",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Frågan om en ny skolbyggnad <font color=\"#3498db\">ligger fortfarande i stöpsleven</font>.",
+        "etymologi": "En stöpslev smälter metall — det som ligger i den är fortfarande formbart, inte färdigt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en enda betydelse: 'vara under omarbetning eller omprövning' (belagt sedan 1929) - matchar kortet. Facits 'vara oavgjord' är bara en omformulering av samma sak, ingen missad betydelse trots facit_signal. Etymologin om stöpslevens smälta, formbara metall är korrekt och hjälper minnet.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621013,
+      "ord": "sätta någon på pottkanten",
+      "facit": "försätta i en besvärlig situation,&nbsp; ställa till det för ngn",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Försätta någon i en pinsam eller besvärlig situation, ofta utan förvarning",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon hoppade av uppdraget i sista sekunden och <font color=\"#3498db\">satte hela gruppen på pottkanten</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bringa någon i förlägenhet' - matchar kortets 'försätta någon i en pinsam eller besvärlig situation'. Facits två fraser ('försätta i besvärlig situation' / 'ställa till det för ngn') är samma betydelse omformulerad, ingen missad betydelse. Vardagligt/lätt negativt register stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621014,
+      "ord": "titta/se i månen efter något",
+      "facit": "se förgäves efter ngt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Leta efter något helt förgäves, utan att någonsin hitta det",
+        "register": "neutral, lätt negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Om du väntar dig en ursäkt av honom kan du <font color=\"#3498db\">titta i månen efter den</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'se förgäves efter något' - matchar kortet och facit exakt. Exempelmeningen illustrerar betydelsen korrekt.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621017,
+      "ord": "vända på kuttingen",
+      "facit": "anlägga ett nytt perspektiv, se på ett nytt sätt<br><img alt=\"webp image\" src=\"paste_1762624914812.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Se på något ur ett helt nytt, motsatt perspektiv",
+        "register": "vardaglig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Skolan valde att <font color=\"#3498db\">vända på kuttingen</font> och byggde om nästan alla klassrum till grupprum.",
+        "etymologi": "En kutting var en liten tunna — man vände den upp och ner för att se om något fanns kvar."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'anlägga ett motsatt perspektiv' - matchar kortets 'se på något ur ett helt nytt, motsatt perspektiv'. Etymologin (kutting = liten tunna som vändes för att se om något fanns kvar) stämmer med SO:s grundbetydelse av substantivet 'kutting' och hjälper minnet.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 29,
+  "granskning_kostnad_usd": 0.8879594999999998,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 11,
+      "turer": 29,
+      "turkrav": 5,
+      "kostnad_usd": 0.8879594999999998
+    }
+  ]
+}

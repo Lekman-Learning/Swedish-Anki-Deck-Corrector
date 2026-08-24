@@ -62,6 +62,7 @@ MJUKA = (
     "betydelse_kan_saknas",
     "doman_utan_stod",
     "uppslag_saknas",
+    "synonym_saknas_trots_belagg",
 )
 
 # Underbetydelselistan innehåller maskinmarkörer som inte är betydelser.
@@ -99,8 +100,17 @@ _MARKNING_LIKA = {
 POPULARITET_VARDAGSORD = 5000
 
 
+# Matchar slaupp.py:s _sakert_filnamn() (bugfix 2026-08-20): ord med "/" i sig
+# (t.ex. "företa /företaga") kraschade slaupp.py:s filskrivning eftersom "/" är
+# otillåtet i ett Windows-filnamn. Läsvägen här måste sanera på EXAKT samma
+# sätt som skrivvägen, annars letar den här funktionen efter en fil som aldrig
+# skapades under det namnet och ordet ser ut som "uppslag_saknas" trots att
+# slaupp.py bevisligen kört.
+_FILNAMN_OTILLATNA = re.compile(r'[\\/:*?"<>|]')
+
+
 def _uppslag(ord_):
-    f = os.path.join(HAR, "uppslag", ord_ + ".json")
+    f = os.path.join(HAR, "uppslag", _FILNAMN_OTILLATNA.sub("_", ord_) + ".json")
     if not os.path.exists(f):
         return None
     try:
@@ -292,6 +302,49 @@ def _ordboksbelagg(u, ord_):
                         if forsta:
                             belagg.add(forsta[0])
     return belagg
+
+
+_STOPPORD = frozenset(
+    "som att vilken vilket vilka i med utan av pa for den det de en ett "
+    "ngn ngt sarsk aven ibland vanligen ofta samt eller mycket helt "
+    "delvis mojlig mojligt svag svagt starkt lite ganska utanfor inom".split())
+
+
+def _synonymkandidater(belagg, ord_):
+    """Ur `_ordboksbelagg`-mängden: de lemman som rimligen KAN vara synonymer.
+
+    Mängden från `_ordboksbelagg` är avsiktligt vid -- den ska släppa igenom
+    allt ordboken säger, för den används till att GODKÄNNA. Här går den åt
+    andra hållet och ska föreslå, så bruset måste bort: hela definitionsfraser
+    ("som beter sig på ett avvikande sätt"), stoppord och uppslagsordet själv.
+    """
+    def _nyckel(x):
+        # jamfor utan diakriter sa "utanfor" i stopplistan traffar "utanför"
+        return (x.lower().replace("å", "a").replace("ä", "a")
+                 .replace("ö", "o").replace("é", "e"))
+
+    rena = []
+    for k in sorted(belagg):
+        k = (k or "").strip().strip(".")
+        if len(k) < 3 or len(k.split()) > 2:
+            continue
+        if _nyckel(k) in _STOPPORD:
+            continue
+        if any(_nyckel(w) in _STOPPORD for w in k.split()[:1]):
+            continue
+        if _samma_uppslag(k, ord_) or k.lower() == (ord_ or "").lower():
+            continue
+        rena.append(k)
+
+    # `_ordboksbelagg` lagger in bade hela ledet OCH dess forsta ord. Det forsta
+    # ordet ensamt ar nastan alltid ett fragment av en definitionsfras
+    # ("utanfor" ur "utanfor medelpunkten"), inte en synonym. Ta bort enordare
+    # som bara finns dar for att de inleder en langre kandidat.
+    flerord = [k for k in rena if len(k.split()) > 1]
+    ut = [k for k in rena
+          if len(k.split()) > 1
+          or not any(f.lower().startswith(k.lower() + " ") for f in flerord)]
+    return ut
 
 
 def _har_ordboksbelagg(syn, belagg):
@@ -515,6 +568,34 @@ def granska_post(p):
                     f"{', '.join(map(str, obelagda))} -- varken SO:s SYN:synonym "
                     f"eller SO/SAOL:s definitionstext säger att ordet är en synonym. "
                     f"Stryk det; tom synonymlista är godkänt"))
+
+    # 4d. SPEGELN till 4c, tillagd 2026-08-24. Adam upptäckte att 321 av 1 432
+    #     full v3-kort hade tomt synonymfält, och att andelen gick från 0 % den
+    #     10-11 augusti till 13-70 % från den 12:e -- samma dag 4c infördes som
+    #     HÅRT fel.
+    #
+    #     Orsaken var inte en bugg: `_ordboksbelagg` läser SO/SAOL:s
+    #     definitionstext precis som regeln säger, och 242 av de 251 tomma
+    #     korten HAR användbara kandidater. Felet var att spärren var ensidig.
+    #     Att skriva en obelagd synonym underkände kortet; att utelämna den
+    #     passerade tyst. Under den gradienten är det rationellt att alltid
+    #     lämna fältet tomt när man är osäker -- och det är precis vad som hände.
+    #
+    #     Samma feltyp som registerkontrollen 2026-08-12 (se _MARKNING_NEUTRAL
+    #     ovan): den mätte frånvaro av data i stället för fel i kortet. Där
+    #     vändes riktningen om; här saknades motsvarigheten.
+    #
+    #     MJUK med flit. Kandidatmängden innehåller definitionsfraser och
+    #     stoppord, så den duger till att väcka en bedömning -- aldrig till att
+    #     skriva in något automatiskt.
+    if not (pr.get("synonymer") or []):
+        kand = _synonymkandidater(belagg, ord_)
+        if kand:
+            fel.append(("synonym_saknas_trots_belagg",
+                        f"synonymfältet är tomt, men SO/SAOL:s egen definitionstext "
+                        f"ger kandidater: {', '.join(kand[:6])}. "
+                        f"Bedöm om någon är en äkta synonym -- tom lista kan "
+                        f"fortfarande vara rätt svar"))
 
     # 5. Ordboken HAR märkt ordet, men kortets register nämner inte märkningen.
     reg = str(pr.get("register") or "").lower()

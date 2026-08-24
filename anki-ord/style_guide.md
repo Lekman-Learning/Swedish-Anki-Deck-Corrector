@@ -125,6 +125,70 @@ kan härleda betydelsen istället för att minnas den.
   genuint distinkta och nyttiga. Tvinga aldrig fram konstlade extra
   synonymer för att nå ett målantal — hellre för få än för många.
 
+## Idiom och flerordsuttryck (beslutat 2026-08-24, Adams fynd)
+
+**Adam läste `trampa vatten` och såg att kortet var fel byggt.** Så här såg det ut:
+
+| Fält | Innehåll |
+|---|---|
+| huvudbetydelse | *"Hålla sig flytande i vattnet genom att röra benen… ; (bildligt) inte komma någon vart"* |
+| exempelmening | *"Han trampade vatten medan han väntade på att livräddaren skulle komma."* |
+| etymologi | TOMT |
+| synonymer | TOMT |
+
+**Exempelmeningen illustrerar den bokstavliga betydelsen** — alltså den enda som
+HP:s ORD-del inte testar. Kortets enda exempel lär ut svarsalternativet man ska
+undvika. Det är sämre än ett tunt kort; det är ett kort som tränar fel.
+
+Mätt samma dag: **117 av 152 idiomkort (77 %) har tomt etymologifält**, mot 62 %
+för enkla ord. För ett idiom kostar det mer, eftersom bilden bakom uttrycket är
+själva minneskroken.
+
+### Tre regler för flerordsuttryck
+
+**1. Ordna huvudbetydelsen efter FAKTISK ANVÄNDNING, inte efter bokstavlighet.**
+Den vanligaste betydelsen först. För idiom är det nästan alltid den bildliga —
+men skriv inte "bildlig först" som mekanisk regel, för det finns uttryck som
+oftast används bokstavligt. Adams formulering 2026-08-24: *"efter den mest
+använda betydelsen, helst den bildliga för det brukar vara den."*
+
+**2. Behåll den bokstavliga betydelsen, men sist och märkt.**
+`trampa vatten` ÄR en verklig simteknik. Att stryka sann information ur ett
+referenskort är sämre än att ordna om den, och ordningsföljden gör redan jobbet.
+
+*Undantag:* uttryck där det bokstavliga inte längre är en levande betydelse
+(`le i mjugg` — ingen "mjuggar" idag). Där hör bakgrunden bara i etymologin.
+
+**3. Exempelmeningen ska visa den betydelse som står FÖRST.**
+Alltid. Ett exempel som illustrerar en annan betydelse än kortets huvudbetydelse
+är ett fel, inte en variation.
+
+### Etymologin på idiom: skriv ut BRON
+
+Det räcker inte att ange den bokstavliga handlingen. Det som fastnar är *varför*
+bilden ger betydelsen.
+
+| Variant | Duger? |
+|---|---|
+| *"Från simtekniken att trampa vatten."* | ❌ Bara ett faktum |
+| *"Från simtekniken: man rör benen oavbrutet men förflyttar sig inte ur fläcken."* | ✅ Nu syns kopplingen till brist på framsteg |
+
+### Mall
+
+> **Framsida:** trampa vatten
+> **Huvudbetydelse:** *(bildligt)* inte komma någon vart, hålla på utan att göra
+> framsteg · *(bokstavligt)* hålla sig flytande på stället genom att röra benen
+> **Register:** vardaglig (bildligt), sport (bokstavligt)
+> **Exempelmening:** *Utredningen har trampat vatten i ett halvår utan att komma
+> närmare ett svar.*
+> **Etymologi:** Från simtekniken — man rör benen oavbrutet men förflyttar sig
+> inte ur fläcken. Bilden är ansträngning utan förflyttning.
+
+⚠️ **De 152 befintliga idiomkorten görs INTE om nu.** 239 av de tomma korten är
+redan i Adams rotation; att bygga om inlärda kort är en förbättring, inte en
+rättelse. Gäller från nästa batch, plus de osedda korten. Faller ett gammalt
+idiomkort återkommande i repetitionen — rätta det då.
+
 ## Register — stängd vokabulär (Kortformat v2, beslutat 2026-08-04)
 
 Register-raden taggar HÖGST två oberoende axlar — mer blir övertaggning:
@@ -743,9 +807,9 @@ uppnåddes, inte en ursäkt för att flagga blått vid osäkerhet.
 
 ## Under granskning, kontrollera även
 
-**Obligatorisk 5-punktschecklista (tillagt 2026-08-06, se A/B-testet
-under "Flerbetydelse-genomgång"):** kontrollera ALLTID alla fem mot en
-riktig källa (se "Källor för faktakoll"), inte bara punkt 1:
+**Obligatorisk 6-punktschecklista (utökad 2026-08-19, punkt 6 tillagd efter
+Adams kritik samma dag — se nedan för bakgrund):** kontrollera ALLTID alla
+sex mot en riktig källa (se "Källor för faktakoll"), inte bara punkt 1:
 
 1. **Är Huvudbetydelsen korrekt och tydlig?** Inte bara "har ordet fler
    betydelser" — är själva formuleringen rätt (se "subversiv"-fallet:
@@ -762,6 +826,22 @@ riktig källa (se "Källor för faktakoll"), inte bara punkt 1:
    bara om synonymerna råkar avslöja det).
 5. **Stämmer register OCH valör?** Båda axlarna, inte bara att en tagg
    är satt.
+6. **Låter Huvudbetydelsen som du pratar med en kompis, eller som en
+   uppslagsbok? (tillagd 2026-08-19)** Läs den högt. Grundreglerna ovan sa
+   redan "undvik akademiska/latinska synonymer" och "förklara inte svårt
+   med svårt" — men ingen punkt i checklistan tvingade fram frågan
+   mekaniskt, och den mjuka regeln höll inte i praktiken. Adam hittade
+   konkreta exempel som gick igenom godkänd granskning ändå: **småskrake**
+   ("En liten, smal sjöfågel av **andsläktet**, med krokig, tunn näbb" —
+   taxonomisk ordbokstermin, ingen säger "andsläktet" i vardagsspråk) och
+   **häva** ("**Upphäva giltigheten av** något, t.ex. ett avtal" —
+   byråkratspråk som förklarar ett byråkratord med samma register, precis
+   det grundreglerna varnar för). Varningstecken att aktivt leta efter:
+   fackordsuffix (`-släktet`, `-ordningen`, `-familjen`), tunga
+   nominaliseringar (`upphävande av`, `genomförande av` i stället för ett
+   vanligt verb), och passiv byråkratform. Hittar du något av detta i
+   Huvudbetydelsen: skriv om innan kortet godkänns, även om innehållet
+   sakligt sett stämmer — den här punkten underkänner FORM, inte fakta.
 
 - **Dold andra betydelse (VÄSENTLIGT, beslutat 2026-08-05):** om synonymerna
   inte alla hör till SAMMA betydelse som Huvudbetydelsen beskriver — det är

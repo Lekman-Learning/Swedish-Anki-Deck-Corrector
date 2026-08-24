@@ -1,0 +1,677 @@
+[
+  {
+    "noteId": 1780080621005,
+    "ord": "över stock och sten",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "genom svåra hinder",
+        "med besvär",
+        "med motgångar"
+      ],
+      "definitioner": [
+        "Med besvärlig terräng.",
+        "Med stora svårigheter."
+      ],
+      "exempelmening": "Han tog sig fram genom skogen, över stock och sten.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": null,
+    "har_old_facit": false,
+    "riskflaggor": [
+      {
+        "flagga": "old_saknas",
+        "allvar": "hog",
+        "forklaring": "Inget OLD-facit finns för ordet. Kortet kan inte jämföras mot något andra underlag -- kräver riktig sökkoll, och flaggas Gult, inte Grönt."
+      }
+    ],
+    "hogsta_allvar": "hog",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=stock",
+      "slutsats": "Den exakta frasen gav 0 träffar i SAOL/SO/SAOB (kontrollerat separat). SO:s artikel för uppslagsordet 'stock' listar däremot frasen ordagrant som exempel under sub-betydelsen 'över svårframkomlig mark' (jfr 'de gick på en slingrig skogsstig som bar över stock och sten'). Bekräftat oberoende via extern sökning (ordlista.se/synonymer.se): betyder att ta sig fram genom besvärlig terräng oavsett hinder i vägen. Ingen egen SO/SAOL-artikel för själva idiomet, men väl belagt under grundordet -- samma mönster som tidigare kontaminationsfall löstes på (sticka av/sticka av mot)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Genom besvärlig, ojämn terräng — ta sig fram oavsett hur marken ser ut",
+      "register": "neutral, neutral",
+      "exempelmening": "Vandrarna tog sig <font color=\"#3498db\">över stock och sten</font> för att hinna fram till stugan innan mörkret föll.",
+      "synonymer": null,
+      "synonym_groups": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 13 ord i en betydelse -- korta ner: 'Genom besvärlig, ojämn terräng — ta sig fram oavse'"
+    ],
+    "exempel_varningar": [
+      "exempelmeningen överlappar 2/2 innehållsord med ordbokens eget exempel (\"över stock och sten\") — skriv en egen som visar ordet i arbete i stället"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621015,
+    "ord": "komma som lök på laxen",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "att vara överflödig",
+        "att vara oönskad",
+        "att vara i vägen"
+      ],
+      "definitioner": [
+        "Att vara eller göra något som inte behövs eller är välkommet.",
+        "Att vara eller göra något som stör eller hindrar."
+      ],
+      "exempelmening": "Han kom med en massa förslag som var som lök på laxen.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "som försvårande omständighet",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "old_delar_inget_ordforrad",
+        "allvar": "medel",
+        "forklaring": "Kortet och OLD delar inget innehållsord (OLD: försvår, omständigh). Oftast bara en parafras -- men det är så här ett rakt motsatt innehåll ser ut (jfr ingäld)."
+      },
+      {
+        "flagga": "dubblettdefinition",
+        "allvar": "medel",
+        "forklaring": "Två definitioner börjar likadant -- troligen samma betydelse formulerad två gånger, slå ihop till en."
+      }
+    ],
+    "hogsta_allvar": "medel",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=komma%20som%20l%C3%B6k%20p%C3%A5%20laxen",
+      "slutsats": "SO ger frasen ordagrant under uppslagsordet 'lök', definition '(komma) som försvårande omständighet', exempel 'de var redan försenade, och punkteringen kom som lök på laxen', märkt 'vardagligt' -- registret satt till vardaglig därefter (forgranska.py:s register_motsager_markning fångade detta, rättat). Detta är snävare än legacy-kortets 'något som inte behövs eller är välkommet' -- den riktiga innebörden är specifikt en YTTERLIGARE motgång ovanpå en redan dålig situation, inte vilket ovälkommet inslag som helst. Omskrivet för att matcha SO:s faktiska definition. (forgranska.py:s frammande_uppslagsord-varning kontrollerad och avfärdad -- kontamination från lök-uppslagets övriga, orelaterade betydelser (grönsaken, svettfläck, soldatgrupp).)"
+    },
+    "proposed": {
+      "huvudbetydelse": "Komma som en extra påfrestning ovanpå ett problem som redan finns",
+      "register": "vardaglig, lätt negativ",
+      "exempelmening": "Bilen gick sönder samma dag han blev av med jobbet — det kom verkligen <font color=\"#3498db\">som lök på laxen</font>.",
+      "synonymer": null,
+      "synonym_groups": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen överlappar 2/3 innehållsord med ordbokens eget exempel (\"komma som lök på laxen\") — skriv en egen som visar ordet i arbete i stället"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621010,
+    "ord": "se ut som en fågelholk",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "ha en fågelholksliknande utformning",
+        "se konstigt ut",
+        "se udda ut"
+      ],
+      "definitioner": [
+        "Ha en form som liknar en fågelholk.",
+        "Se konstigt eller udda ut."
+      ],
+      "exempelmening": "Det huset hade en fågelholksliknande utformning med små fönster och en krökt taklinje.",
+      "etymologi": null,
+      "bild_html": "<br> <img alt=\"webp image\" src=\"paste_1762620393514.webp\">",
+      "synonym_groups": null
+    },
+    "old_facit": "se frågande ut,&nbsp; se ut som om man inte förstått ngt<br><img alt=\"webp image\" src=\"paste_1762620393514.webp\">",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "old_delar_inget_ordforrad",
+        "allvar": "medel",
+        "forklaring": "Kortet och OLD delar inget innehållsord (OLD: fråg, förstått). Oftast bara en parafras -- men det är så här ett rakt motsatt innehåll ser ut (jfr ingäld)."
+      }
+    ],
+    "hogsta_allvar": "medel",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://sv.wiktionary.org/wiki/som_en_f%C3%A5gelholk",
+      "slutsats": "OMSKRIVET efter blind underkännande 2026-08-20 (granskare claude-cli-blind): kortet beskrev 'väldigt förvånad ... som av chock', men både OLD-facit ('se frågande ut, se ut som om man inte förstått ngt') och granskarens egen kontroll pekar mot en FÖRVIRRAD/undrande min, inte chock. Omskrivet till att matcha facit exakt: en frågande, oförstående min, fortfarande med bilden av den öppna munnen (fågelholkens ingångshål) som Wiktionary (https://sv.wiktionary.org/wiki/som_en_fågelholk) beskriver som '(idiomatiskt) mycket förvånad; gapande av förvåning'. Ny exempelmening bytt från ett chock-scenario (dyr hyra) till ett förvirrings-scenario (fattar inte trots upprepad förklaring), så exemplet matchar den korrigerade betydelsen. KONTAMINERING alltjämt konstaterad: direkt svenska.se-sökning på hela frasen gav bara det generiska 'se ut'-uppslaget, ingen egen SO/SAOL-artikel för idiomet -- Wiktionary är primärkälla, OLD-facit sekundär bekräftelse."
+    },
+    "proposed": {
+      "huvudbetydelse": "Se förvirrad och frågande ut, med öppen mun, som om man inte fattar vad som händer",
+      "register": "vardaglig, skämtsam",
+      "exempelmening": "När läraren förklarat uppgiften för tredje gången utan att det blev klarare, satt han bara och <font color=\"#3498db\">såg ut som en fågelholk</font>.",
+      "synonymer": null,
+      "synonym_groups": null,
+      "etymologi": "Jämförelse med fågelholkens runda ingångshål, format som en öppen, frågande mun."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare",
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 16 ord i en betydelse -- korta ner: 'Se förvirrad och frågande ut, med öppen mun, som o'"
+    ],
+    "exempel_varningar": []
+  },
+  {
+    "noteId": 1780080621016,
+    "ord": "envar blir salig på sin tro/fason",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "var och en",
+        "var och en",
+        "var och en"
+      ],
+      "definitioner": [
+        "Att vara lycklig på sitt sätt.",
+        "Att leva efter sina egna värderingar och trosuppfattningar."
+      ],
+      "exempelmening": "Varje människa finner sin egen väg till lycka.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "var o en blir lycklig på sitt sätt, med egna val (för att poängtera att folk är/väljer olika)",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=envar%20blir%20salig%20p%C3%A5%20sin%20tro",
+      "slutsats": "SO ger uttrycket ordagrant under artikeln 'salig' (betydelsen 'mycket lycklig och upprymd'), och listar BÅDA framsidans varianter som egna exempel: 'envar blir salig på sin tro' och 'envar blir salig på sin fason'. Bekräftar OLD-facit ordagrant ('var o en blir lycklig på sitt sätt, med egna val'). Legacy-kortets två 'betydelser' var samma tanke uttryckt två gånger -- konsoliderat till en."
+    },
+    "proposed": {
+      "huvudbetydelse": "Var och en blir lycklig på sitt eget sätt — utifrån sin egen tro eller sina egna val",
+      "register": "litterär, neutral",
+      "exempelmening": "Han älskade fotboll och hon teater, men <font color=\"#3498db\">envar blir salig på sin tro</font>.",
+      "synonymer": null,
+      "synonym_groups": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 18 ord i en betydelse -- korta ner: 'Var och en blir lycklig på sitt eget sätt — utifrå'"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621006,
+    "ord": "koka soppa på en spik",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "göra mycket av lite",
+        "göra en höna av en fjäder",
+        "dra nytta av det minsta"
+      ],
+      "definitioner": [
+        "Göra en stor sak av en liten sak.",
+        "Maximera utnyttjandet av begränsade resurser.",
+        "Göra något stort ut av något litet."
+      ],
+      "exempelmening": "Han lyckades koka soppa på en spik genom att använda sin kreativitet och fantasi.",
+      "etymologi": null,
+      "bild_html": "<br> <img alt=\"webp image\" src=\"paste_1762617787515.webp\"><br> <img alt=\"webp image\" src=\"paste_1762617799236.webp\">",
+      "synonym_groups": null
+    },
+    "old_facit": "göra mkt av litet,&nbsp; göra en höna av en fjäder<br><img alt=\"webp image\" src=\"paste_1762617787515.webp\"><img alt=\"webp image\" src=\"paste_1762617799236.webp\">",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=koka%20soppa%20p%C3%A5%20en%20spik",
+      "slutsats": "OMSKRIVET efter blind underkännande 2026-08-20 (granskare claude-cli-blind): SO ger EN betydelse för just detta idiom -- 'åstadkomma något av (nästan) ingenting'. Min tidigare andra betydelse ('göra en alldeles för stor sak av något obetydligt') och synonymen 'göra en höna av en fjäder' hörde i själva verket till ett HELT ANNAT idiom (SO:s egen artikel för 'göra en höna av en fjäder', som betyder överdriva något trivialt -- motsatt valör mot 'koka soppa på en spik', som handlar om resurssnål skaparförmåga). Grundfelet var att en extern sammanfattning om folksagans ursprung nämnde båda tolkningarna i samma andetag utan att skilja dem åt ordentligt -- SO, den primära källan, ger bara den ena. Återgått till en enda betydelse, tagit bort den felaktiga andra betydelsen och synonymen. Ingen ny synonym satt -- 'göra mycket av lite' testades men saknar ordagrant stöd i SO/SAOL:s definitionstext (forgranska.py:s synonym_utan_ordboksbelagg fångade det; tom synonymlista är godkänt enligt regeln). Register oförändrat sedan förra rättningen: SO:s 'historiskt'-märkning hör till 'spik'-uppslagets andra, orelaterade betydelser (handeldvapen/guldmynt), inte till detta idiom -- de två 'vardagligt'-märkningarna i samma träff hör till idiomet, vardaglig behålls."
+    },
+    "proposed": {
+      "huvudbetydelse": "Skapa något fullt fungerande av nästan ingenting",
+      "register": "vardaglig, neutral",
+      "exempelmening": "Med bara lite mjöl och russin lyckades hon <font color=\"#3498db\">koka soppa på en spik</font> och trolla fram en hel kaka.",
+      "synonymer": null,
+      "synonym_groups": null,
+      "etymologi": "Från en folksaga om en luffare som lurade en snål gumma på ingredienser till en soppa."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen överlappar 2/3 innehållsord med ordbokens eget exempel (\"koka soppa på en spik\") — skriv en egen som visar ordet i arbete i stället"
+    ]
+  },
+  {
+    "noteId": 1780080621007,
+    "ord": "kola vippen",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "kolas",
+        "nötter",
+        "frukt"
+      ],
+      "definitioner": [
+        "En tropisk frukt som växer på kolaträdet.",
+        "En ingrediens som används i bland annat drycker och kosttillskott."
+      ],
+      "exempelmening": "Denna tropiska frukt är populär i många afrikanska länder.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "dö",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=kola%20vippen",
+      "slutsats": "SO ger 'avlida' med märkningen 'vardagligt', synonymer.se ger 'dö', SO:s egen etymologi anger finska 'kuolla' ('dö'). Matchar OLD-facit exakt ('dö'). Legacy-kortets nuvarande innehåll (en tropisk frukt som växer på 'kolaträdet') är helt fabricerat -- inget stöd i någon källa. Helt omskrivet kort."
+    },
+    "proposed": {
+      "huvudbetydelse": "Dö",
+      "register": "vardaglig, skämtsam",
+      "exempelmening": "Farbror Nisse <font color=\"#3498db\">kolade vippen</font> förra vintern, 87 år gammal.",
+      "synonymer": null,
+      "synonym_groups": null,
+      "etymologi": "Av finska kuolla, 'dö'."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621012,
+    "ord": "komma upp sig i smöret",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "bli rik",
+        "lyckas",
+        "få det bra"
+      ],
+      "definitioner": [
+        "Få mycket pengar och bli ekonomiskt framgångsrik.",
+        "Achieve success and prosperity."
+      ],
+      "exempelmening": "Han arbetade hårt och lyckades komma upp sig i smöret.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "få gott om pengar, bli framgångsrik",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=komma%20upp%20sig%20i%20sm%C3%B6ret",
+      "slutsats": "SO:s artikel för 'smör' ger sub-betydelsen 'få det ekonomiskt mycket bra' (fritextträffen var delvis brusig -- flera orelaterade smör-idiom i samma svar -- men just den definitionen matchar). Wiktionary bekräftar oberoende: 'få det bättre (vanligtvis ekonomiskt eller karriärsmässigt)'. Matchar OLD-facit exakt ('få gott om pengar, bli framgångsrik'). Legacy-kortets engelska rad ('Achieve success and prosperity') borttagen och ersatt med korrekt svenska. Ingen synonym satt -- 'bli rik' testades men varken SO:s SYN-taggning eller definitionstexten leder med det ordet (forgranska.py:s synonym_utan_ordboksbelagg fångade det, struken enligt regeln -- tom synonymlista är godkänt)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Bli rik och få det mycket bättre ekonomiskt",
+      "register": "vardaglig, positiv",
+      "exempelmening": "Efter att företaget börsnoterades <font color=\"#3498db\">kom han verkligen upp sig i smöret</font>.",
+      "synonymer": null,
+      "synonym_groups": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen överlappar 2/3 innehållsord med ordbokens eget exempel (\"komma upp sig i smöret\") — skriv en egen som visar ordet i arbete i stället"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621009,
+    "ord": "ligga i stöpsleven",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "vara oavgjord",
+        "vara under omprovning",
+        "vara i diskussion"
+      ],
+      "definitioner": [
+        "Att vara i en situation där beslut eller åtgärder inte är fastställda.",
+        "Att vara i en process av övervägande och debatt."
+      ],
+      "exempelmening": "Politiken är just nu i en fas där många förslag ligger i stöpsleven.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "ngt som är under omprovning o diskussion,&nbsp; vara oavgjord",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=ligga%20i%20st%C3%B6psleven",
+      "slutsats": "SO/Wiktionary: 'vara under omarbetning, råka ut för förändring, omprövning eller är eller kommer under diskussion'. Extern sökning bekräftar etymologin: stöpslev = smältslev för bly/tenn, användes bl.a. i folkliga spådomar. Konsoliderade legacy-kortets två nästan identiska definitioner till en. Ingen synonym satt -- 'oavgjord' (synonymer.se, redaktionell) testades men saknar stöd i SO/SAOL:s egen text (forgranska.py:s synonym_utan_ordboksbelagg fångade det -- regeln kräver SO/SAOL, inte synonymer.se ensamt, struken)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Vara under omprövning eller omarbetning — inte bestämt än",
+      "register": "neutral, neutral",
+      "exempelmening": "Frågan om en ny skolbyggnad <font color=\"#3498db\">ligger fortfarande i stöpsleven</font>.",
+      "synonymer": null,
+      "synonym_groups": null,
+      "etymologi": "En stöpslev smälter metall — det som ligger i den är fortfarande formbart, inte färdigt."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621013,
+    "ord": "sätta någon på pottkanten",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "försätta i en besvärlig situation",
+        "ställa till det för ngn",
+        "sätta någon i kläm"
+      ],
+      "definitioner": [
+        "Att utsätta någon för en obehaglig eller komplicerad situation.",
+        "Att skapa problem eller svårigheter för någon."
+      ],
+      "exempelmening": "Han försökte sätta sin bror på pottkanten genom att berätta en lögn för deras föräldrar.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "försätta i en besvärlig situation,&nbsp; ställa till det för ngn",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=s%C3%A4tta%20n%C3%A5gon%20p%C3%A5%20pottkanten",
+      "slutsats": "SO ger frasen ordagrant, definition 'bringa någon i förlägenhet', exempel om en ordförandekandidat som hoppar av och sätter föreningen i en besvärlig sits. Matchar legacy-kortets huvudsakliga innebörd. Konsoliderade legacy-kortets två nästan identiska definitioner till en."
+    },
+    "proposed": {
+      "huvudbetydelse": "Försätta någon i en pinsam eller besvärlig situation, ofta utan förvarning",
+      "register": "vardaglig, lätt negativ",
+      "exempelmening": "Hon hoppade av uppdraget i sista sekunden och <font color=\"#3498db\">satte hela gruppen på pottkanten</font>.",
+      "synonymer": null,
+      "synonym_groups": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621014,
+    "ord": "titta/se i månen efter något",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "spana",
+        "leta",
+        "söka"
+      ],
+      "definitioner": [
+        "Att söka efter något i månen, ofta utan att hitta det.",
+        "Att observera månen med förhoppningen att se något speciellt."
+      ],
+      "exempelmening": "Hon stod ute i natten och tittade i månen efter stjärnor.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "se förgäves efter ngt",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=se%20i%20m%C3%A5nen%20efter%20n%C3%A5got",
+      "slutsats": "Direkt sökning på 'titta i månen efter något' gav bara generiska 'titta'/'se'-uppslag (kontaminering, samma mönster som tidigare flerordsfraser). Sökning på synonymformen 'se i månen efter något' gav SO:s faktiska idiomdefinition: 'se förgäves efter något' -- matchar OLD-facit exakt ('se förgäves efter ngt')."
+    },
+    "proposed": {
+      "huvudbetydelse": "Leta efter något helt förgäves, utan att någonsin hitta det",
+      "register": "neutral, lätt negativ",
+      "exempelmening": "Om du väntar dig en ursäkt av honom kan du <font color=\"#3498db\">titta i månen efter den</font>.",
+      "synonymer": null,
+      "synonym_groups": null
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  },
+  {
+    "noteId": 1780080621017,
+    "ord": "vända på kuttingen",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "anlägga ett nytt perspektiv",
+        "se på ett nytt sätt",
+        "byta syn"
+      ],
+      "definitioner": [
+        "Byta perspektiv på en situation eller fråga.",
+        "Se något från en annan vinkel.",
+        "Försöka förstå något på ett nytt sätt."
+      ],
+      "exempelmening": "Det var dags att vända på kuttingen och se situationen ur den andra parten perspektiv.",
+      "etymologi": null,
+      "bild_html": "<br> <img alt=\"webp image\" src=\"paste_1762624914812.webp\">",
+      "synonym_groups": null
+    },
+    "old_facit": "anlägga ett nytt perspektiv, se på ett nytt sätt<br><img alt=\"webp image\" src=\"paste_1762624914812.webp\">",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=v%C3%A4nda%20p%C3%A5%20kuttingen",
+      "slutsats": "SO ger frasen ordagrant, definition 'anlägga ett motsatt perspektiv', exempel om en skola som byggde om klassrum till grupprum. Bekräftat av Wiktionary/synonymer.se ('se på ett nytt sätt') och en extern källa (Språkrådet/Språktidningen) om etymologin: kutting = liten tunna för sprit/fisk, vändes upp och ner för att se om något fanns kvar i botten. SO:s 'dialektalt'-märkning kontrollerad: hör till ordet 'kutting' som sådant (en regional benämning på en liten tunna), inte till idiomets eget bruk -- frasen används i rikstäckande medier (Språktidningen m.fl.), så vardaglig behålls snarare än dialektal. Ingen synonym satt -- 'se på ett nytt sätt' testades men saknar stöd i SO/SAOL:s egen definitionstext (forgranska.py:s synonym_utan_ordboksbelagg fångade det, struken)."
+    },
+    "proposed": {
+      "huvudbetydelse": "Se på något ur ett helt nytt, motsatt perspektiv",
+      "register": "vardaglig, neutral",
+      "exempelmening": "Skolan valde att <font color=\"#3498db\">vända på kuttingen</font> och byggde om nästan alla klassrum till grupprum.",
+      "synonymer": null,
+      "synonym_groups": null,
+      "etymologi": "En kutting var en liten tunna — man vände den upp och ner för att se om något fanns kvar."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "adamtal_varningar": [
+      "etymologi_langd: 20 ord -- etymologin ska förklara betydelsen, inte berätta ordets historia: 'En kutting var en liten tunna — man vände den upp och ner fö'"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": "claude-batch11-skrivare"
+  }
+]

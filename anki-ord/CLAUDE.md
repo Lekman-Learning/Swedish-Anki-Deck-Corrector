@@ -8,10 +8,32 @@ exakt var vi står, så en ny chatt kan fortsätta direkt.
 - Deck: `Humanities::Languages::Svenska 10 000`
 - Note type: `Grundläggande-adc63`
 - Fält: `Framsida` (ordet), `Baksida` (EN HTML-blob, se `baksida.py`)
-- Flaggor: flag:1 = **Röd** (fel) · flag:2 = **Gul** (osäker) · flag:4 =
-  **Blå** (stämmer, konfidens 9-10) · flag:3 = **Grön** (dels 84 gamla kort
-  utanför scope, dels nya konfidens-≤8-granskade kort sen 2026-08-04 — skilj
-  dem åt via tagg `konfidens::N`, se style_guide.md)
+- Flaggor: flag:1 = **Röd** (fel — men se dubbel betydelse nedan, tillagd
+  2026-08-19) · flag:2 = **Gul** (osäker) · flag:4 = **Blå** (stämmer,
+  konfidens 9-10) · flag:3 = **Grön** (dels 84 gamla kort utanför scope,
+  dels nya konfidens-≤8-granskade kort sen 2026-08-04 — skilj dem åt via
+  tagg `konfidens::N`, se style_guide.md)
+
+  **🔴 Röd har TVÅ olika betydelser beroende på var kortet är i
+  livscykeln (Adams beslut 2026-08-19) — avgör via `granskad::*`/
+  `v3_granskad::*`-taggen, aldrig via flaggan ensam:**
+  - **Kort UTAN `granskad::*`-tagg** (ännu inte v3-klara): röd betyder
+    fortfarande **innehållsfel** — det ursprungliga, oförändrade läget.
+    `fetch_queue.py`s prioritering (röd → gul → blå) gäller BARA dessa.
+  - **Kort MED `granskad::*`-tagg** (redan v3-klara, innehållet är
+    verifierat): röd betyder i stället **"Adam har svårt att lära sig det
+    här kortet"** — en personlig repetitionssignal Adam sätter själv i
+    Anki under vanligt plugg, inte ett granskningsresultat. Detta är
+    ORTOGONALT mot om kortet är sakligt korrekt.
+  - **Kontrollerat 2026-08-19: kolliderar inte med befintlig kod.**
+    `fetch_queue.py` (`build_query()`) exkluderar redan
+    `-tag:granskad::*` från alla flagg-nivåer, så v3-klara kort (som bär
+    just den taggen) hamnar aldrig i korrigeringskön oavsett flaggfärg.
+    Adams personliga röd-markeringar på redan v3-klara kort kan alltså
+    aldrig blandas in i "kort som behöver rättas" — skyddet fanns redan,
+    av ett annat skäl, innan den här regeln beslutades. Om ett FRAMTIDA
+    script någon gång skannar `flag:1` utan att gå via `fetch_queue.py`s
+    query-mönster: kom ihåg samma `-tag:granskad::*`-filtrering.
 - Befintliga taggar (`ai_optimized`, `ai_uncertain`, `ai_failed`,
   `granska_först`) är historik, INTE fakta — flaggan vinner alltid vid
   konflikt (t.ex. blå + `ai_uncertain` = Adam har redan rättat, är korrekt)
@@ -32,6 +54,9 @@ exakt var vi står, så en ny chatt kan fortsätta direkt.
 | `migrate_format.py` | Engångsmigrering v2-format: hämtar `granskad::*`-kort, parsar gammalt format (`baksida.parse_legacy`), skriver draft-huvudbetydelse (gamla definitionerna hopslagna) till sessionsfil, inget appliceras auto |
 | `apply_updates.py` | Fas 3 — skriver godkända ändringar (`updateNoteFields` via `baksida.build`, plus `Framsida` om `proposed_ord` satt). Kräver `entry["confidence"]`: ≤7 skippas (ej redo), 8→flagga Grön, 9-10→flagga Blå (fixat 2026-08-04, se style_guide.md — tidigare flaggade koden fellaktigt ALLTID blått oavsett konfidens). Taggar `granskad::<datum>` + `konfidens::N`. `apply_single` per kort under passet, eller batchat i `main()` |
 | `style_guide.md` | "Adam-tal"-checklista — struktur, grundregler, bevara humor, bildhantering, vanliga fällor |
+| `wikipedia_bild.py` | Adams beslut 2026-08-19 — hämtar en KANDIDATBILD (aldrig en bekräftad bild) från sv.wikipedia (REST `page/summary`) eller Commons-fritextsökning (fallback). Gör ALDRIG en relevansbedömning själv — se "Bildkomplettering via Wikipedia" nedan för varför det måste vara ett separat steg |
+| `wikipedia_bild_batch.py` | Fas 1 för bildkomplettering — hämtar N v3-klara (`granskad::*` ELLER `v3_granskad::*`) bildlösa kort (sorterat på due), försöker en kandidat per ord, skriver `sessions/session_<datum>_wikipedia-bilder.json`. Applicerar inget. `--batch-size` (default 20, litet med flit), `--offset` |
+| `wikipedia_bild_apply.py` | Fas 2 — applicerar bara poster med `godkand: true` (satt av granskaren för hand efter att ha jämfört kandidaten mot kortets Huvudbetydelse). Läser ALLTID live `bild_html` direkt innan skrivning, vägrar skriva om kortet fått en bild sedan batchen byggdes. Loggar varje sparad bild (ord, källa, käll-URL, licens) till `bild_kallor.jsonl`. `--torr` för torrkörning |
 
 ## Öppna sessionsfiler
 
@@ -3861,3 +3886,152 @@ underkända. **27 kort väntar nu medvetet på en framtida
 granskningsomgång** (11 från 18 augusti + 16 från 19 augusti: 3
 omskrivna + 3 odömda från batch 3, 6 omskrivna + 4 odömda från batch 4)
 -- gott om marginal över 17-golvet till nästa körning.
+
+## Femte batchen, 19 augusti: 30 is:new-kort via en fristående agent
+
+Kört av en isolerad subagent (samma separationsmönster som 18 augustis
+fortsättning), fullständig v3-kedja: `kortbyggare.py --spar nya --antal 30`
+(spår A:s pool ÄR den `is:new`-avgränsade poolen -- 6802 suspenderade
+legacy-kort som aldrig nått Adams kö) → `slaupp.py --kompakt` (30 ord) →
+skrivning → `forgranska.py` → `kortgranskare.py applicera/paket` →
+`blindgranska.py` → `verdikt` → `slapp`.
+
+**29 av 30 skrivna och släppta, 1 pausad.** `faute / fåt` pausad
+(`v3_pausad::inget_uppslagsord_i_so_saol`) -- varken "faute" eller "fåt"
+har någon egen SO/SAOL-artikel, bara SAOB (som `granska_post()`s regel 1
+inte räknar som belägg). Båda formerna betyder "misstag" och listar
+varandra som synonym på synonymer.se, men utan SO/SAOL-täckning hade
+kortet blockerats av `uppslagsord_saknas` oavsett innehåll -- samma
+mönster som `hippopotamus`/`echappera`/`passiar` 2026-08-18.
+
+**Tretton av de tjugonio hade STORA sakfel i legacy-innehållet**, inte
+bara formulering -- `eftersätta` (påstod "efterträda/ersätta", verklig
+betydelse "försumma", raka motsatsen), `hövas` (påstod "höja/lyfta",
+verklig betydelse "vara tillbörligt/passande" -- ren ordförväxling),
+`komma an på` (påstod "få tag på/komma över", verklig betydelse "bero
+på"), `nagelfara` (påstod nagelinfektion, verklig betydelse "granska
+extremt noggrant" -- bokstavstolkning av "nagel" i stället för
+idiomet), `tyken` (fel ORDKLASS: kortet gjorde ett adjektiv till ett
+substantiv), `utgjuta sig` (påstod bokstavligt "låta känslor strömma
+ut", verklig betydelse "klaga länge och känslosamt"), `ta skruv`
+(bokstavlig skruvning i stället för idiomet "ta effekt"), `ta till
+intäkt` (blandade ihop med "intäkt" = inkomst, verklig betydelse
+"åberopa som stöd för"), `ligga av sig` (påstod stress/sjukdom som
+orsak, verklig betydelse "försämras av att inte användas/övas"), `pösa`
+och `slå an` (saknade var sin hel bildlig/bokstavlig betydelse), `kuse`
+(hela innehållet påhittat -- rätt svar var tre dialektala homografer:
+häst, bröd, insekt). old_facit-fältet hade i nästan alla dessa fall
+redan rätt svar (`old_delar_inget_ordforrad`-flaggan pekade korrekt),
+men legacy-kortets FELAKTIGA innehåll hade ändå överlevt oemotsagt tills
+nu.
+
+**Kontamineringsfällan för flerordsuttryck slog till igen** (samma
+mönster som "kärringen mot strömmen"/"trojansk häst" tidigare i veckan):
+svenska.se:s fritextsökning för `komma an på`, `ta skruv`, `sticka av
+mot`, `ta till intäkt`, `låta undfalla sig` och `låta undslippa sig` drog
+in dussintals orelaterade ord (`-bar`, `andante`, `berusad`, `San
+Marino` ...) eftersom ett av frasens korta ord (`an`, `mot`, `ta`)
+matchade helt andra artiklar. `forgranska.py` flaggar detta som
+`frammande_uppslagsord` (HÅRD men rådgivande, blockerar inte skrivning --
+bekräftat i onsdagens `applicera`-körning) på alla sex. Löst genom att slå
+upp grundfrasen separat (`sticka av` i stället för `sticka av mot`) där
+det gick, och genom att dokumentera kontamineringen explicit i `sokkoll`
+där SO:s egna SYN:synonym-taggar (via `so_relationer()`) ändå gav ett
+rent facit trots det brusiga fritextsvaret.
+
+**Hål 0 fångade en riktig regression, inte bara ett känt mönster:**
+flerords-`kalla`-URL:er utan procentkodning (`?ord=ta skruv` med
+bokstavligt mellanslag) trunkerades av `_URL_RE` i
+`sokkoll_verifiering.py` och gav falska "hämtningen gjordes aldrig" på
+15 av 29 kort trots att `slaupp.py` bevisligen hämtat alla. Detta är
+EXAKT den bugg CLAUDE.md 2026-08-18 sa var löst med
+`urllib.parse.quote` -- men fixen gäller bara `slaupp.py`s EGNA
+`kalla`-generering (se `SKRIPT_KALLA`-kommentaren i
+`sokkoll_verifiering.py`), inte `kalla`-strängar en granskare skriver för
+hand utifrån bevisraden. Löst genom att procentkoda ordet i `kalla` manuellt
+för alla flerordsposter innan `applicera` kördes om.
+
+**Blindgranskningen underkände 2 av 25 i första paketet (8 %), båda på
+REGISTER, inte sakinnehåll:** `kuse` hade formalitetsaxeln omvänd (häst
+är `vard.`, bröd/insekt är `prov.` -- kortet hade det tvärtom), `låta
+undfalla sig` hade `vardaglig` där SO markerar `ålderdomligt/arkaiskt`.
+Båda omskrivna, återgranskade i ett nytt 3-kortspaket tillsammans med
+`låta undslippa sig` (samma lemmapar, samma register-misstag, men
+**inte** fångat av blindgranskaren i första körningen -- fixat proaktivt
+ändå, eftersom SO-underlaget är identiskt för båda uttrycken). Alla tre
+godkända i omgranskningen. **0 kort står kvar underkända.**
+
+**Sjätte checkpunkten (dictionary-ton, tillagd samma dag) triggade
+INTE på något av de 29 skrivna korten** -- ingen Huvudbetydelse innehöll
+fackordsuffix eller tunga nominaliseringar av den typ Adam kritiserade
+(`andsläktet`, `upphävande av`). Disciplinen tycks hålla utan att någon
+enskild fälla behövde undvikas aktivt; värt att fortsätta mäta över fler
+batchar innan det räknas som bevisat.
+
+
+## Bildkomplettering via Wikipedia — pilot på 20 kort (2026-08-19)
+
+Adams beslut: bildlösa v3-klara kort ska kunna få en bild automatiskt
+hämtad från sv.wikipedia/Wikimedia Commons -- men bara konkreta ord (djur,
+växter, föremål, artefakter, platser), aldrig gissat för abstrakta
+ord/verb/idiom, och ALDRIG på ett kort som redan har bild. Byggt i tre
+delar (se Script-inventering): `wikipedia_bild.py` (hämtar kandidater,
+gör ALDRIG en relevansbedömning själv), `wikipedia_bild_batch.py` (bygger
+kö av bildlösa v3-kort + kandidat, samma tvåstegsmönster som
+`apply_updates.py`), `wikipedia_bild_apply.py` (applicerar bara
+`godkand: true`-poster, loggar käll-URL+licens till `bild_kallor.jsonl`).
+Dessutom en best-effort-krok i `kortgranskare.slapp()`
+(`foreslag_bilder_for_slappta`) som efter varje framtida släpp bygger en
+förslagskö för nysläppta bildlösa kort -- applicerar aldrig något själv,
+och kan aldrig få `slapp()` att faila (inpackad i try/except).
+
+**Mätningen som avgör hur försiktig automationen måste vara: Commons
+fritextsökning matchar på ord i FILNAMNET, inte på betydelse.** Av 20
+pilotkort (due-sorterat ur de 2 750 av 3 580 v3-klara korten som saknar
+bild, 76,8 %) hittade modulen en kandidat för 10 -- men vid manuell
+granskning (jämförelse av bildens faktiska innehåll mot kortets
+Huvudbetydelse, i flera fall genom att faktiskt öppna bilden) var bara
+**2 av 10 kandidater användbara, 8 var felträffar**:
+
+| Ord | Kandidat | Varför fel |
+|---|---|---|
+| `drägg` | foto på ett fällbart *dragg* (ankare) | substrängmatchning "drägg"≈"dragg" |
+| `köpeskilling` | foto på prislappar i en läskautomat | generisk stockfoto-bild, inte begreppet |
+| `reminiscens` | kubistisk målning bara DÖPT "Reminiscens" | abstrakt konst, ingen visuell koppling till minnesbild |
+| `renegat` | fransk 1800-talskarikatyr, texttung | rätt tema, obrukbar som snabbt minnesknep |
+| `resolut` | foto av ett typsnittsgjuteri | helt orelaterat |
+| `vitsord` | tysk nödsedel med en ko | helt orelaterat |
+| `taverna` | flott restaurang på Musée d'Orsay | rätt artikel (`Restaurang`), fel register -- motsatsen till "enklare vardshus" |
+| `enaktare` | engelskspråkig WPA-teateraffisch | textbaserad, inget scen/karaktär |
+| `tälja` | foto från en spansk kvarn/lokalitet | helt orelaterat |
+| `attribuera` | Wikipedia-artikelns egen CC-BY-ikon | artikelstubbens enda bild råkar vara en licensikon |
+
+De två godkända: **`apoplexi`** fick en CT-bild av hjärnan med pil mot
+infarkten (sv.wikipedia-artikeln "Stroke") -- medicinskt korrekt och
+direkt matchande. **`bygdemål`** fick en karta över dialektområden i
+Norrland (Commons) -- topiskt exakt rätt, visar begreppet regional dialekt
+konkret. Båda applicerade och verifierade live i Anki, källor loggade i
+`bild_kallor.jsonl`.
+
+**8 av 20 kort gav ingen kandidat alls** (förtörnad, överloppsgärning,
+svärmisk, formsak, överrumpla, strömning, märgfull, "klä skott för
+något") -- alla abstrakta ord/verb/idiom, exakt det förväntade normalläget
+enligt Adams instruktion, inget att åtgärda.
+
+**Extrapolering till hela beståndet:** 2/20 = 10 % fick en godkänd bild i
+piloten. Appliceras samma kvot på hela poolen (2 750 bildlösa v3-kort)
+skulle en full körning sannolikt ge runt **275 nya bilder** -- en
+meningsfull men måttlig andel, och bara om VARJE kandidat granskas
+manuellt precis som i piloten. Att köra batch-scriptet utan mellansteget
+(automatiskt applicera alla hittade kandidater) hade satt fel bild på
+8 av 10 kort som fick någon kandidat alls -- exakt det Adam bad om att
+undvika.
+
+**Teknisk fälla hittad under piloten, fixad i `wikipedia_bild.py`:**
+`upload.wikimedia.org` gav HTTP 429 redan efter två nedladdningar i
+följd under den manuella granskningen (bilderna hämtades separat för att
+kunna öppnas och tittas på). `hamta_bilddata_base64()` saknade backoff --
+lades till (429/503 backas av och görs om, samma mönster som
+`slaupp.py`s Wiktionary-anrop, se den filens kommentar från 2026-08-10).
+
+Full v3 i decket efter batchen: **1153 → 1182** (+29).

@@ -1,0 +1,938 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-agent-skrivare",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621116,
+      "ord": "nyans",
+      "facit": "färgton, antydan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En liten skillnad eller skiftning, till exempel i färg eller betydelse",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "färgskiftning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Väggen var målad i en varm <font color=\"#3498db\">nyans</font> av gult.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'svag skiftning av en färg' (+ underbet. 'fin skillnad'). Kortets 'liten skillnad eller skiftning, tex i färg eller betydelse' täcker huvud- och underbetydelsen naturligt utan att de är genuint skilda betydelser. Synonymen 'färgskiftning' bekräftas direkt av SAOL som ger nyans definitionen '(färg)skiftning; fin skillnad; anstrykning'. Exempel korrekt och highlightat.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621247,
+      "ord": "nämndeman",
+      "facit": "ledamot i tingsrätt<br><br>(eng) lay judge<br><a href=\"https://www.google.com/imgres?q=lay%20judge&amp;imgurl=https%3A%2F%2Fwww.japantimes.co.jp%2Fwp-content%2Fuploads%2F2013%2F03%2Fnn20120121f2a.jpg&amp;imgrefurl=https%3A%2F%2Fwww.japantimes.co.jp%2Fnews%2F2012%2F01%2F21%2Fnational%2Flay-judges-present-ideas-to-make-system-better%2F&amp;docid=zqtXl9S8U6sfKM&amp;tbnid=YKPXouY-W3QLSM&amp;vet=12ahUKEwjcov2P6eeLAxXPEBAIHZ9ZBIsQM3oECBcQAA..i&amp;w=2592&amp;h=1944&amp;hcb=2&amp;ved=2ahUKEwjcov2P6eeLAxXPEBAIHZ9ZBIsQM3oECBcQAA\"><div><div><div><img alt=\"Lay judges present ideas to make system ...\" src=\"paste-13f763aed80383b1c41812662bac14f1e9685921.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En person utan juridisk utbildning som dömer tillsammans med en domare i domstol",
+        "register": "fackspråklig, neutral, juridik",
+        "synonymer": [
+          "lekmannadomare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Rätten bestod av en domare och tre <font color=\"#3498db\">nämndemän</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'juridiskt oskolad ledamot av dömande organ inom rättskipningen' - matchar kortet exakt. Synonymen 'lekmannadomare' är ett eget uppslag i SAOL, byggt av 'lekman' + 'domare', dvs sakligt identiskt. Register (fackspråk/juridik) och exempel stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621191,
+      "ord": "oavlåtligt",
+      "facit": "oavbruten",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ständigt och utan uppehåll",
+        "register": "formell, neutral",
+        "synonymer": [
+          "oupphörlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">oavlåtliga</font> stirrande gjorde henne obekväm.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ständigt fortsatt eller upprepad'. Synonymen 'oupphörlig' är dessutom uttryckligen SYN-taggad mot oavlåtlig i SO:s eget uppslag för oupphörlig. Register och exempel korrekta.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621214,
+      "ord": "oförmärkt",
+      "facit": "osedd, i smyg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utan att någon lägger märke till det",
+        "register": "formell, neutral",
+        "synonymer": [
+          "omärklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Tjuven tog sig <font color=\"#3498db\">oförmärkt</font> in i lokalerna mitt på dagen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som ingen lagt märke till'; SAOL definierar rentav oförmärkt som 'omärklig, förstulen', vilket bekräftar kortets synonym 'omärklig' direkt. Exempel (tjuven oförmärkt in) matchar SO:s eget exempel.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621277,
+      "ord": "olat",
+      "facit": "dålig vana<br><br>ex: \"<i>rökning är en av hans olater</i>\"",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En dålig vana",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "osed"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att bita på naglarna var en av hans värsta <font color=\"#3498db\">olater</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar olat rakt av som 'osed, oskick', vilket bekräftar kortets synonym 'osed'. Betydelsen 'dålig vana' stämmer med SO/SAOL. Exempelmeningen matchar SO:s eget exempel nästan ordagrant.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621209,
+      "ord": "orangeri",
+      "facit": "växthus<br><a href=\"https://www.google.com/imgres?q=orangeri&amp;imgurl=https%3A%2F%2Fwww.husextra.se%2Fwp-content%2Fuploads%2F2018%2F04%2F24-1.jpg&amp;imgrefurl=https%3A%2F%2Fwww.husextra.se%2Ftradgard%2Fvaxthuset-orangeri-cape-cod-fran-garden-greenhouse-del-1%2F&amp;docid=NLLpc9n4QJlFoM&amp;tbnid=NwU5SDqYxWLwtM&amp;vet=12ahUKEwjMuPrJk9aLAxWRgSoKHUmVKmwQM3oECF4QAA..i&amp;w=1000&amp;h=673&amp;hcb=2&amp;ved=2ahUKEwjMuPrJk9aLAxWRgSoKHUmVKmwQM3oECF4QAA\"><div><div><div><img alt=\"Växthuset Orangeri Cape Cod från garden ...\" src=\"images-33cab890fd443cb4240acd81cae1aa8c460f2f23.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett uppvärmt växthus, ursprungligen till för att odla apelsinträd",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "växthus"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Slottsträdgården hade ett vackert <font color=\"#3498db\">orangeri</font> fullt av citrusträd.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'uppvärmt växthus för övervintring av träd av apelsin, fikon, myrten mm'. Kortets huvudbetydelse fångar den specifika avgränsningen (uppvärmt, för apelsinträd), och synonymen 'växthus' är den överordnade term som SO själv använder i definitionen samt bekräftas av det oberoende facit. Ingen betydelse saknas.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621232,
+      "ord": "panegyrisk",
+      "facit": "överdrivet lovprisande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som berömmer något helt okritiskt och överdrivet",
+        "register": "litterär, negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Historikerns <font color=\"#3498db\">panegyriska</font> skildring av kungen ifrågasattes senare av forskare.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'som entusiastiskt och okritiskt berömmer' / 'överdrivet lovprisande' - matchar kortet ordagrant. Tom synonymlista är korrekt (inga synonymer anges i SO/SAOL). Register litterär/negativ rimligt givet ordets nedsättande underton.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621250,
+      "ord": "parnass",
+      "facit": "skaldekonst; vitterhet<br><a href=\"https://en.wikipedia.org/wiki/File:Parnassos2.jpg\"><img src=\"272px-parnassos2.webp\"></a><br><img src=\"paste-102db1e070630e6e2f8ad31f8e16a2d32c9ceee7.webp\">",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Det absoluta toppskiktet inom litteraturen, dit bara de främsta författarna når",
+        "register": "högtidlig, neutral, litteraturvetenskap",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han räknades snart till den svenska <font color=\"#3498db\">parnassen</font> efter sin första diktsamling.",
+        "etymologi": "Efter berget Parnassos i Grekland, helgat åt diktkonstens gudinnor."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal utredd: både SO och SAOL har bara EN huvudbetydelse ('högsta litterära nivå som uppnås bara av de främsta diktarna' / 'de främsta författarna'), inte två separata betydelser - facits 'skaldekonst; vitterhet' är bara en friare glosa på samma sak. Ingen betydelse saknas. Etymologin är sann och hjälper minnet. Register högtidlig bekräftas av SAOL:s 'ngt högt.'",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621074,
+      "ord": "paroxysm",
+      "facit": "häftigt sjukdomsanfall",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett häftigt anfall, till exempel av sjukdom eller starka känslor",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han skakades av en <font color=\"#3498db\">paroxysm</font> av hostattacker.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbet. 'häftigt sjukdomsanfall' + underbet. 'häftigt känsloutbrott'. Kortet fångar båda ('anfall, tex av sjukdom eller starka känslor') utan att slarva bort någon del. Exempel och register (medicin) stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621048,
+      "ord": "passé",
+      "facit": "ej längre modern<br><a href=\"https://www.google.com/imgres?q=outmoded%20stock%20photo&amp;imgurl=https%3A%2F%2Fmedia.gettyimages.com%2Fid%2F187355060%2Fvector%2Fwoman-wearing-sunglasses-and-green-swimsuit.jpg%3Fs%3D612x612%26w%3Dgi%26k%3D20%26c%3DA7Nd6FuUC75jz3SOdeV2hNQUG6CS_1t5YoIyM8kTTEY%3D&amp;imgrefurl=https%3A%2F%2Fwww.gettyimages.ca%2Fphotos%2Foutmoded&amp;docid=l9kt5pWIcHBexM&amp;tbnid=ohzWERAbZo0DmM&amp;vet=12ahUKEwjmzpui_fqLAxX5JxAIHau9AsIQM3oECBoQAA..i&amp;w=459&amp;h=612&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjmzpui_fqLAxX5JxAIHau9AsIQM3oECBoQAA\"><div><div><div><img alt=\"1,210,645 Outmoded Stock Photos, High ...\" src=\"paste-3353ca7e57b5066b84d5a8d93f598bbbd3634b74.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föråldrad, inte längre modern eller aktuell",
+        "register": "formell, negativ",
+        "synonymer": [
+          "föråldrad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Många tycker att den gamla ekonomiska politiken är <font color=\"#3498db\">passé</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar passé direkt som 'föråldrad, förlegad', vilket bekräftar kortets synonym 'föråldrad' (SO taggar den bara som jämförelseord, men SAOL:s egen definition använder ordet rakt av). Betydelse och exempel matchar.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621106,
+      "ord": "pediatrik",
+      "facit": "läran om barnsjukdomar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om barnsjukdomar och hur de behandlas",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon specialiserade sig inom <font color=\"#3498db\">pediatrik</font> för att kunna arbeta med sjuka barn.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'läran om barnsjukdomar och deras behandling' - matchar kortet exakt, inklusive tillägget om behandling. Register (medicin/fackspråk) och exempel korrekta.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621113,
+      "ord": "pejling",
+      "facit": "bestämning av riktning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att mäta riktningen till ett föremål, till exempel med kompass eller radio",
+        "register": "fackspråklig, neutral, sjöfart",
+        "synonymer": [
+          "bäring"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fartyget gjorde en <font color=\"#3498db\">pejling</font> för att avgöra var kusten låg.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'det att pejla' (sjöfart) med underbetydelsen 'uppmätt riktning till ett föremål, bäring'. Kortets definition och synonym 'bäring' täcker båda dessa. Register sjöfart bekräftas av SO:s bruklighetskommentar.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621110,
+      "ord": "piktur",
+      "facit": "handstil<br><a href=\"https://www.google.com/imgres?q=piktur%20handstil&amp;imgurl=https%3A%2F%2Fstatic6.depositphotos.com%2F1114422%2F608%2Fi%2F450%2Fdepositphotos_6088711-stock-photo-letter-and-seal-from-1800s.jpg&amp;imgrefurl=https%3A%2F%2Fdepositphotos.com%2Fse%2Fphotos%2Fpiktur.html&amp;docid=gdfpjim8cDgw3M&amp;tbnid=cXWLJOQK7iTxfM&amp;vet=12ahUKEwissa7a8LGMAxU-GRAIHXoVLMEQM3oECBgQAA..i&amp;w=600&amp;h=401&amp;hcb=2&amp;ved=2ahUKEwissa7a8LGMAxU-GRAIHXoVLMEQM3oECBgQAA\"><div><div><div><img alt=\"Piktur Stockfotografier, royaltyfria ...\" src=\"paste-bb24f9a0f65f097f23f6a8472c5140b226435830.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Handstil",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Läraren kunde knappt tyda elevens svårlästa <font color=\"#3498db\">piktur</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'handstil' - exakt matchning, inklusive exempelmeningens formulering ('svårlästa piktur'). Låg popularity_count (90) i SO stödjer registret 'ngt ålderdomlig'.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621166,
+      "ord": "precedens",
+      "facit": "företräde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Företräde, att något går före något annat",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Den äldre lagen hade <font color=\"#3498db\">precedens</font> framför den nya tolkningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'företräde, särskilt i rang' - matchar kortet exakt. Tom synonymlista korrekt eftersom 'företräde' redan är huvudbetydelsen.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621161,
+      "ord": "processa med",
+      "facit": "strida i rättegång<br><a href=\"https://www.google.com/imgres?q=fight%20in%20court%20stock%20photo&amp;imgurl=https%3A%2F%2Fmedia.gettyimages.com%2Fid%2F522936514%2Fphoto%2Flawyer-presenting-evidence-during-trial.jpg%3Fs%3D612x612%26w%3Dgi%26k%3D20%26c%3DnnJPCm8b0veijj14mdmyenaLCtAQBT5ItgiR-uL9_E8%3D&amp;imgrefurl=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Flawyer-arguing-in-court&amp;docid=nyRJWqkYK9BVtM&amp;tbnid=tKUxex-h6TtyRM&amp;vet=12ahUKEwjvlr-kxqOMAxXGIxAIHSyhAp0QM3oECGwQAA..i&amp;w=612&amp;h=401&amp;hcb=2&amp;ved=2ahUKEwjvlr-kxqOMAxXGIxAIHSyhAp0QM3oECGwQAA\"><div><div><div><img alt=\"Lawyer Arguing In Court Stock Photos ...\" src=\"paste-ed4cf54507974c68232bd935063ef9186ea2d161.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föra en rättegång mot någon, stämma någon inför domstol",
+        "register": "formell, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Företaget valde att <font color=\"#3498db\">processa med</font> sin tidigare leverantör om den uteblivna betalningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s verb 'processa' har två betydelser (driva rättegång / köra igenom teknisk process), men just prepositionsfrasen 'processa med/mot någon' hör uteslutet till den juridiska betydelsen ('driva en rättegång'), som kortet korrekt isolerar. Ingen betydelse saknas för denna specifika kollokation.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621152,
+      "ord": "pulpa",
+      "facit": "mjukdel inuti tand<br><a href=\"https://www.google.com/imgres?q=pulpa&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fa1%2FLabeledandfulltooth.jpg%2F250px-Labeledandfulltooth.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FTandpulpa&amp;docid=lu1yR7en1jmENM&amp;tbnid=_glYn633C1ABMM&amp;vet=12ahUKEwjZmOm34OyLAxVEKRAIHcCoIdEQM3oECGgQAA..i&amp;w=250&amp;h=164&amp;hcb=2&amp;ved=2ahUKEwjZmOm34OyLAxVEKRAIHcCoIdEQM3oECGgQAA\"><div><div><div><img alt=\"Tandpulpa – Wikipedia\" src=\"paste-33170f795dff4ab6cff5c7f4899d68e17fc773cf.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mjuk, blodkärlsrik vävnad inuti ett organ, till exempel inuti en tand ; foder gjort av rester från potatisstärkelsetillverkning",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Tandläkaren förklarade att infektionen hade nått tandens <font color=\"#3498db\">pulpa</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: 'mjuk, cell- och kärlrik vävnad inuti organ (särsk. tand)' samt underbet. 'foder av potatisrester från stärkelsetillverkning'. Kortet fångar båda och skiljer dem korrekt med ' ; '. Exempel illustrerar tandbetydelsen tydligt.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621135,
+      "ord": "på basis av",
+      "facit": "som grund",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utifrån något, med något som grund eller underlag",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Beslutet fattades <font color=\"#3498db\">på basis av</font> de senaste forskningsrönen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslag 'basis' ger valensen 'på basis (av något)' med definitionen 'underlag för utveckling el. verksamhet'. Kortets 'utifrån något, med något som grund eller underlag' matchar väl. Exempel och register (formellt) stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621092,
+      "ord": "reseffekter",
+      "facit": "bagage och tillhörigheter<br><div><div><div><a href=\"https://www.google.com/imgres?q=reseffekter&amp;imgurl=https%3A%2F%2Fimpro.usercontent.one%2Fappid%2FoneComShop%2Fdomain%2Fvintageart.se%2Fmedia%2Fvintageart.se%2Fwebshopmedia%2F25-1578490614639.jpg%3F%26withoutEnlargement%26resize%3D960%2B9999%26webp%26quality%3D85&amp;imgrefurl=https%3A%2F%2Fvintageart.se%2Fshop%23!%2Fproducts%2Faristo-reseeffekter-1930-tal-50x70cm&amp;docid=anwQTMGsu_0BYM&amp;tbnid=VAIG5GSjvkWJAM&amp;vet=12ahUKEwjGlcj2vs6LAxXXA9sEHYh8CJoQM3oECBcQAA..i&amp;w=713&amp;h=999&amp;hcb=2&amp;ved=2ahUKEwjGlcj2vs6LAxXXA9sEHYh8CJoQM3oECBcQAA\"><img alt=\"Aristo reseffekter. 1930-tal ...\" src=\"paste-d2c523e089c60cb8f7f9a8bcaa7b0ebdd619b222.webp\"></a></div><a href=\"https://www.google.com/imgres?q=reseffekter&amp;imgurl=https%3A%2F%2Ff.nordiskemedier.dk%2F24zf9oryxc48jqyb.jpg&amp;imgrefurl=https%3A%2F%2Fwww.habit.se%2Farticle%2Fview%2F661747%2Fny_yta_for_reseffekter&amp;docid=00ASkp0FKH91qM&amp;tbnid=v3LRUCgZ93SwTM&amp;vet=12ahUKEwjGlcj2vs6LAxXXA9sEHYh8CJoQM3oECHEQAA..i&amp;w=2657&amp;h=1772&amp;hcb=2&amp;ved=2ahUKEwjGlcj2vs6LAxXXA9sEHYh8CJoQM3oECHEQAA\"><div><div><div><img alt=\"Ny yta för reseffekter\" src=\"paste-36f05d2f28c0efaa6a741d1aca63188296789969.webp\"></div></div></div></a></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bagage, det man tar med sig på en resa",
+        "register": "formell, neutral",
+        "synonymer": [
+          "bagage"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han glömde sina <font color=\"#3498db\">reseffekter</font> i taxin på väg till flygplatsen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bagage' (bruklighetskommentar: formellt) - matchar kortet exakt inklusive register. Synonymen 'bagage' är själva SO-definitionen.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621276,
+      "ord": "resår",
+      "facit": "töjbart material; spiralfjäder<br><div><div><a href=\"https://www.google.com/imgres?q=res%C3%A5r&amp;imgurl=https%3A%2F%2Fwww.ateljeanette.se%2Fwp-content%2Fuploads%2F2017%2F08%2F40156_mjukresar_web.jpg&amp;imgrefurl=https%3A%2F%2Fwww.ateljeanette.se%2Fprodukt%2Fresar-mjuk-10-mm-svart-hel-forp-25-meter%2F&amp;docid=Oe6s3Tt8ZQbKSM&amp;tbnid=AfmVfBBVksYXFM&amp;vet=12ahUKEwjDtf-A_MuLAxXyEBAIHU5dCpoQM3oECGoQAA..i&amp;w=220&amp;h=220&amp;hcb=2&amp;ved=2ahUKEwjDtf-A_MuLAxXyEBAIHU5dCpoQM3oECGoQAA\"><img alt=\"Resår Mjuk 10 mm SW-Svart – Hel förp 25 ...\" src=\"paste-5f82d192fcd856d5da438cf8d2d3f043c4dc1aae.webp\"></a></div><div><a href=\"https://www.google.com/imgres?q=res%C3%A5r&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F5f%2FMattress_Springs.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FRes%25C3%25A5r&amp;docid=8fJQgFxsI37fYM&amp;tbnid=vWgLwXDPkoJV5M&amp;vet=12ahUKEwjDtf-A_MuLAxXyEBAIHU5dCpoQM3oECBoQAA..i&amp;w=1200&amp;h=1600&amp;hcb=2&amp;ved=2ahUKEwjDtf-A_MuLAxXyEBAIHU5dCpoQM3oECBoQAA\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><img alt=\"Resår – Wikipedia\" src=\"paste-975f073a4ffac85d0335c0da8b4bab51896e2c78.webp\"></div></div></div></a></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En elastisk del i kanten av ett klädesplagg ; en spiralfjäder i en möbel, till exempel en soffa",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "spiralfjäder"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Byxlinningen hade en bred <font color=\"#3498db\">resår</font> för extra komfort.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt två betydelser: 'elastisk del i kant av klädesplagg' och 'spiralfjäder i möbelunderrede'. Kortet återger båda korrekt separerade med ' ; '. Synonymen 'spiralfjäder' matchar den andra betydelsen ordagrant.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621119,
+      "ord": "sammankomst",
+      "facit": "möte",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett organiserat möte",
+        "register": "formell, neutral",
+        "synonymer": [
+          "möte"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Föreningens årliga <font color=\"#3498db\">sammankomst</font> hölls i stadshuset.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'organiserat möte för personer som har något gemensamt' - matchar kortet och synonymen 'möte' exakt.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621082,
+      "ord": "sexism",
+      "facit": "könsfördomsfullhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En syn på människor där kön avgör deras värde, ofta så att kvinnor värderas lägre",
+        "register": "formell, negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Företaget anklagades för <font color=\"#3498db\">sexism</font> efter att bara ha befordrat män.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'åskådning där könen har olika värde och det manliga vanligen högst' - kortets precisering att kvinnor ofta värderas lägre är alltså direkt förankrad i SO:s egen definition, inte en överdrift. Register och exempel korrekta.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621202,
+      "ord": "singularis",
+      "facit": "entalsform",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Singularform, entalsform av ett ord (motsatsen till plural)",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [
+          "singular"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ordet \"katt\" står i <font color=\"#3498db\">singularis</font>, medan \"katter\" är plural.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar singularis genom hänvisning till 'singular' - matchar kortets 'entalsform, motsatsen till plural' exakt, liksom synonymen 'singular'.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621078,
+      "ord": "självrådig",
+      "facit": "egensinnig;&nbsp; &nbsp;egenmäktig",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som handlar på egen hand utan att fråga eller lyssna på andra",
+        "register": "formell, negativ",
+        "synonymer": [
+          "egenmäktig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Chefen kritiserades för sitt <font color=\"#3498db\">självrådiga</font> beslut att avskeda hela avdelningen utan att rådfråga någon.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal utredd: SO har bara EN huvudbetydelse ('som handlar utan att först rådgöra med andra') med en underbetydelse som bara gäller om handling snarare än person - ingen betydelse saknas på kortet. SAOL definierar självrådig direkt som 'egenmäktig', vilket bekräftar kortets synonym fullt ut.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621073,
+      "ord": "skillingtryck",
+      "facit": "folklig visa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En enkel, folklig visa med lättbegripligt och ofta sentimentalt innehåll, förr tryckt och spridd som billiga blad",
+        "register": "arkaisk, neutral, litteraturvetenskap",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "På torget sålde man <font color=\"#3498db\">skillingtryck</font> med sorgliga visor om olyckliga kärlekspar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'typ av enkel, folklig visa med lättfattligt, ofta sentimentalt innehåll' + underbet. om den tryckta skriften - kortet fångar båda aspekterna naturligt. Register (arkaisk/litteraturvetenskap) rimligt givet ordets historiska karaktär.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621180,
+      "ord": "skärskåda",
+      "facit": "granska noggrannt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Granska noga och kritiskt",
+        "register": "formell, neutral",
+        "synonymer": [
+          "granska"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Revisorn <font color=\"#3498db\">skärskådade</font> företagets räkenskaper i detalj.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'noggrant (och kritiskt) granska' - matchar kortet ordagrant. Synonymen 'granska' är grundordet i SO:s egen definition.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080621087,
+      "ord": "slapphänt",
+      "facit": "allt för medgörlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alltför eftergiven och tillåtande, ger efter för lätt",
+        "register": "neutral, negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Föräldrarna var <font color=\"#3498db\">slapphänta</font> med reglerna och lät barnen göra vad de ville.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: slapphänt=släpphänt, def. 'lätt tillåtande/indulgent', nära besläktat med eftergiven. Kortets 'alltför eftergiven och tillåtande, ger efter för lätt' är sakligt korrekt och enda betydelsen. Tom synonymlista är inget fel. Exempel illustrerar rätt.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621130,
+      "ord": "snusförnuftig",
+      "facit": "småklok",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Besvärande klok och belärande på ett krystat sätt, ofta om barn som låter vuxna",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "lillgammal"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">snusförnuftiga</font> sexåringen förklarade högtravande varför godis var dåligt för tänderna.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymfel: SO listar 'lillgammal' bara som JFR/cohyponym (jämför-referens), inte som SYN -- den faktiska SO-synonymen är 'förnumstig'. lillgammal betyder 'mogen för sin ålder' och är inte utbytbart mot snusförnuftig, som specifikt betecknar besvärande, krystad, belärande klokskap. Detta är exakt den typ av nästan-synonym som ska undvikas. Huvudbetydelsen i övrigt stämmer väl med SO.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621199,
+      "ord": "sociologi",
+      "facit": "läran om gruppbeteende",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vetenskapen om hur människor beter sig i grupper och samhällen",
+        "register": "fackspråklig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon läste <font color=\"#3498db\">sociologi</font> för att förstå varför människor beter sig som de gör i grupp.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'läran om sociala beteenden, grupper och relationer'. Kortets 'vetenskapen om hur människor beter sig i grupper och samhällen' är en korrekt parafras, enda betydelsen. Ingen synonym angiven, vilket är korrekt eftersom SO inte ger någon.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621156,
+      "ord": "staga",
+      "facit": "stötta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stötta något, till exempel en mast eller ett tält, med rep eller stag ; ordna upp något (bildligt)",
+        "register": "fackspråklig, neutral, sjöfart",
+        "synonymer": [
+          "stötta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De fick <font color=\"#3498db\">staga</font> upp midsommarstången med extra rep innan blåsten tog fart.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stötta (mast) med stag', med bildlig utvidgning ('staga upp statens finanser') -- matchar kortets huvud- och bildliga betydelse. Synonymen 'stötta' är själva definitionsordet i SO, alltså fullt giltig.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621265,
+      "ord": "stundom",
+      "facit": "ibland",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ibland, vid vissa tillfällen",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "ibland"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Tonen i debatten blev <font color=\"#3498db\">stundom</font> ganska hätsk.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'vid vissa tillfällen', med 'ibland' explicit taggat SYN:synonym. Kortets definition och synonym stämmer exakt. Register (ngt ålderdomlig) rimligt för ett ord belagt sedan 1300-talet men fortfarande i bruk i skriftspråk.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621054,
+      "ord": "substituera",
+      "facit": "sätta i stället",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sätta in eller byta ut något mot något annat",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "ersätta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fabriken <font color=\"#3498db\">substituerade</font> de skadliga kemikalierna med mindre farliga alternativ.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sätta (något) i stället för något annat', fackspråkligt. 'ersätta' är refererat (jfr ersätta 1) och definitionerna är i praktiken identiska -- orden är genuint utbytbara i vanligt bruk. Exempelmeningen illustrerar korrekt.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621049,
+      "ord": "tablå",
+      "facit": "tabellformad översikt,&nbsp; programtablå (tv/radio);&nbsp; &nbsp;scen (teater), underavdelning i akt<br><img alt=\"webp image\" src=\"paste_1759585068064.webp\">",
+      "facit_signal": "facit antyder 5 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "En kortfattad översikt eller sammanställning av fakta ; en underavdelning av en akt i en teaterpjäs",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "översikt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Tablån</font> nedan visar koncernens vinstutveckling de senaste fem åren.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Saknar en hel betydelse: SO har utöver 'översikt/sammanställning' och 'underavdelning av akt' även en tredje, helt skild betydelse (egen homograf): interjektionen 'tablå!' för att uttrycka reaktion på en pinsam eller komisk överraskning (ngt ålderdomlig), t.ex. 'och då låste han in bilnyckeln -- tablå!'. Facit signalerar också fler betydelser än kortets två. De två betydelser kortet har är dock korrekt formulerade och rätt ordnade.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621255,
+      "ord": "terrin",
+      "facit": "soppskål",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En större, finare skål för att servera till exempel soppa i",
+        "register": "neutral, neutral, matlagning",
+        "synonymer": [
+          "soppskål"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon bar in soppan i en vit porslins<font color=\"#3498db\">terrin</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'större och finare (sopp)skål vanligen med lock'. Kortets definition matchar, och synonymen 'soppskål' är bokstavligen inbäddad i SO:s definition. Enda betydelsen, exempel korrekt.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621028,
+      "ord": "tribun",
+      "facit": "upphöjd scen;&nbsp; &nbsp;fornromersk ämbetsman<br><a href=\"https://www.google.com/imgres?q=tribune%20rome&amp;imgurl=https%3A%2F%2Fwww.thoughtco.com%2Fthmb%2FcfrUOVEx8Ef7LsdAgEyy78zoyi8%3D%2F1500x0%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2Fgracchus-51244079-5b96e257c9e77c0050b0bdc9.jpg&amp;imgrefurl=https%3A%2F%2Fwww.thoughtco.com%2Fwhat-was-plebeian-tribune-118558&amp;docid=JDW7rYy-glyQeM&amp;tbnid=oPRVkN2KHDI13M&amp;vet=12ahUKEwjBurGpzrmLAxWwKBAIHdqzBW0QM3oECBoQAA..i&amp;w=1500&amp;h=1093&amp;hcb=2&amp;ved=2ahUKEwjBurGpzrmLAxWwKBAIHdqzBW0QM3oECBoQAA\"><div><div><div><img alt=\"Roman Plebeian Tribune Definition\" src=\"paste-9a199f45ffae68d4acab6dc3902df010beb7f54b.webp\"></div></div></div></a>",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "En upphöjd plats för att hålla tal eller uppträda inför publik ; en hög ämbetsman i antikens Rom",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "estrad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Talaren klev upp på <font color=\"#3498db\">tribunen</font> för att adressera folkmassan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit signalerar 4 betydelser, men egen SO-kontroll visar bara två: 1) 'upphöjd plats... för offentligt framträdande', 2) 'hög fornromersk ämbetsman' -- exakt vad kortet har, i rätt ordning. Ingen betydelse saknas alltså enligt SO. Synonymen 'estrad' är JFR-taggad, inte SYN, men semantiskt mycket nära (facit bekräftar 'upphöjd scen') och accepteras.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621042,
+      "ord": "tråna",
+      "facit": "längta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Känna en stark och tärande längtan efter något eller någon",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "längta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">trånade</font> efter att få resa hem igen efter månader utomlands.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'känna stark och tärande längtan'. Kortets definition matchar exakt, och synonymen 'längta' är i praktiken definitionsordet (längtan). Enda betydelsen, exempel med rätt particip-användning.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621231,
+      "ord": "tumult",
+      "facit": "bråk, oväsen, virrvarr",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett bråk eller upplopp med många inblandade ; ett virrvarr eller kaos",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "bråk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det uppstod <font color=\"#3498db\">tumult</font> i salen när domen lästes upp.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bråk eller slagsmål med ett större antal inblandade' plus figurlig användning 'virrvarr'. Kortets sammansatta definition ('bråk/upplopp... ; virrvarr eller kaos') täcker båda SO-nyanserna. 'bråk' ingår i själva SO-definitionen, giltig synonym.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621163,
+      "ord": "tyll",
+      "facit": "tunt tyg<br><br>(eng) tulle<br><a href=\"https://www.google.com/imgres?q=tyll&amp;imgurl=https%3A%2F%2Fimage.ohlssonstyger.se%2Fimages%2FProductImages%2FShop_1%2FFullSize%2F80f518856e4f4b20a6e4da0c2a232fa6.jpg&amp;imgrefurl=https%3A%2F%2Fwww.ohlssonstyger.se%2Fsv%2Fartikel%2Ftyll-svart&amp;docid=ASEQJm8JswnMBM&amp;tbnid=5iRapuU15VK95M&amp;vet=12ahUKEwj3j-jLoNGLAxWsAhAIHbWgFLAQM3oECBUQAA..i&amp;w=600&amp;h=600&amp;hcb=2&amp;ved=2ahUKEwj3j-jLoNGLAxWsAhAIHbWgFLAQM3oECBUQAA\"><div><div><div><img alt=\"Tyll\" src=\"paste-92e1a8183d66ee9ee68d59bf546a4e52646d83ba.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett mycket tunt och genomskinligt tyg av bomull eller silke",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Bruden bar en slöja av vit <font color=\"#3498db\">tyll</font>.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Saknar en hel betydelse: SO har en andra, skild homograf av tyll -- 'utbytbart munstycke som används vid spritsning' (spritsmunstycke för bak/dekoration), belagt sedan 1899, med egen böjning (tyllen, tyllar) och inte obetydlig frekvens i korpus. Kortet nämner bara tygbetydelsen. Den betydelse som finns är korrekt beskriven.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621212,
+      "ord": "undfallande",
+      "facit": "medgörlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som lätt ger efter för andras krav eller önskemål",
+        "register": "formell, negativ",
+        "synonymer": [
+          "eftergiven"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läraren ansågs alltför <font color=\"#3498db\">undfallande</font> mot de stökigaste eleverna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som lätt faller undan för krav'. Synonymen 'eftergiven' är inte direkt korsrefererad i SO:s artikel för undfallande, men SO:s egen definition av eftergiven ('som lätt överger sin egen ståndpunkt för att lyda någon annans vilja') är nästan identisk i sak, så orden är genuint utbytbara. Huvudbetydelse och exempel korrekta.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621039,
+      "ord": "uppstudsig",
+      "facit": "oppositionell",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som öppet trotsar eller sätter sig upp mot någon med makt över en",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "ohörsam"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">uppstudsiga</font> eleven vägrade följa lärarens instruktioner.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar uppstudsig direkt som 'som sätter sig upp, ohörsam' -- alltså använder SAOL självt 'ohörsam' som definitionsord, vilket bekräftar kortets synonym. SO:s definition ('öppet visar motstånd mot överordnad') stämmer med kortets huvudbetydelse.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621266,
+      "ord": "usuell",
+      "facit": "bruklig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bruklig, vanlig eller sedvanlig",
+        "register": "formell, neutral",
+        "synonymer": [
+          "bruklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det är inte <font color=\"#3498db\">usuellt</font> att gäster kommer utan att ha blivit inbjudna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO gav 0 träffar på usuell (endast stavningsförslag), men SAOL har ordet: 'bruklig, vanlig'. Kortets definition och synonym ('bruklig') matchar SAOL:s definition ord för ord. Exempelmeningen är grammatiskt korrekt och illustrerar betydelsen väl.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621023,
+      "ord": "veta hur en slipsten ska dras",
+      "facit": "veta el. förstå hur man ska bete sig el. sköta en sak o.d (för att få sin vilja fram el. lyckas)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Veta precis hur man ska göra för att nå ett bra resultat, vara erfaren och skicklig",
+        "register": "vardaglig, positiv",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Efter tjugo år i branschen vet han verkligen <font color=\"#3498db\">hur en slipsten ska dras</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s idiomförklaring: 'veta hur man ska bete sig/sköta en sak för att få sin vilja fram eller lyckas'. Kortets 'veta precis hur man ska göra för att nå ett bra resultat, vara erfaren och skicklig' fångar detta väl. Ingen synonym angiven, vilket inte är ett fel.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621264,
+      "ord": "voja sig",
+      "facit": "jämra sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Klaga eller beklaga sig",
+        "register": "dialektal, negativ",
+        "synonymer": [
+          "beklaga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han satt och <font color=\"#3498db\">vojade sig</font> över att det regnade hela sommarlovet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'beklaga sig särsk. över visst tillstånd', belagt sedan 1751. Kortets 'klaga eller beklaga sig' matchar, och synonymen 'beklaga' är definitionsordet. Enda betydelsen, exempel passar registret (dialektalt/vardagligt klagande).",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621125,
+      "ord": "vräka",
+      "facit": "kasta, avhysa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kasta eller slunga något med kraft ; tvinga någon att flytta från sin bostad",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "kasta",
+          "avhysa"
+        ],
+        "synonym_groups": [
+          [
+            "kasta"
+          ],
+          [
+            "avhysa"
+          ]
+        ],
+        "exempelmening": "Hyresvärden hotade att <font color=\"#3498db\">vräka</font> familjen om hyran inte betalades i tid.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Saknar en hel betydelse: SO ger fyra huvudbetydelser -- 1) 'åstadkomma våldsam förflyttning' (kasta), 2) 'komma i stora mängder', t.ex. 'regnet vräkte ner' (om kraftigt regn/snöfall), 3) 'få att komma i stora mängder'/sälja billigt, 4) 'tvinga att flytta med rättsligt stöd' (avhysa). Kortet täcker bara 1 och 4. Den mycket vanliga och vardagliga betydelsen 'vräka ner' om kraftigt regn eller snöfall saknas helt, trots att den är minst lika frekvent som avhysningsbetydelsen.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621273,
+      "ord": "våndas",
+      "facit": "känna oro",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Känna djup ångest eller vånda över något",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "ångest"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">våndades</font> över vilka ord hon skulle välja i avskedsbrevet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Formfel i synonymen: 'ångest' är ett substantiv och kan inte bytas ut mot verbet 'våndas' i en mening ('hon våndades' går inte att ersätta med 'hon ångest'). SO:s verbartikel för våndas har ingen egen synonym alls -- 'ångest' är hämtat från det besläktade substantivet 'vånda' och är därför inte en giltig, utbytbar synonym för verbet. Ett verb som 'ängslas' hade fungerat, annars borde fältet vara tomt. Huvudbetydelsen i övrigt ('känna djup ångest eller vånda') är korrekt.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621177,
+      "ord": "öppenhjärtig",
+      "facit": "uppriktig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som är ärlig och inte döljer sina åsikter eller känslor",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "uppriktig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon var <font color=\"#3498db\">öppenhjärtig</font> om svårigheterna hon haft under sjukdomen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som inte döljer sina (kritiska) åsikter'. Synonymen 'uppriktig' är JFR-taggad i SO men bekräftas oberoende av facit, som anger exakt samma ord ('uppriktig'), vilket ger stark grund för att de är utbytbara. Definition och exempel korrekta.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 40,
+  "granskning_kostnad_usd": 1.1286156,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 37,
+      "turkrav": 6,
+      "kostnad_usd": 1.0413923999999999
+    },
+    {
+      "poster": 25,
+      "turer": 37,
+      "turkrav": 6,
+      "kostnad_usd": 1.1074113
+    },
+    {
+      "poster": 25,
+      "turer": 41,
+      "turkrav": 6,
+      "kostnad_usd": 1.208301
+    },
+    {
+      "poster": 25,
+      "turer": 38,
+      "turkrav": 6,
+      "kostnad_usd": 1.1092497
+    },
+    {
+      "poster": 25,
+      "turer": 40,
+      "turkrav": 6,
+      "kostnad_usd": 1.0943793000000002
+    },
+    {
+      "poster": 25,
+      "turer": 37,
+      "turkrav": 6,
+      "kostnad_usd": 1.0338726
+    },
+    {
+      "poster": 25,
+      "turer": 47,
+      "turkrav": 6,
+      "kostnad_usd": 1.7560934
+    },
+    {
+      "poster": 20,
+      "turer": 40,
+      "turkrav": 5,
+      "kostnad_usd": 1.1286156
+    }
+  ]
+}

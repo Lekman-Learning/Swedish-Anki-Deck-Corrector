@@ -1,0 +1,54 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-batch11-skrivare",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621010,
+      "ord": "se ut som en fågelholk",
+      "facit": "se frågande ut,&nbsp; se ut som om man inte förstått ngt<br><img alt=\"webp image\" src=\"paste_1762620393514.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Se förvirrad och frågande ut, med öppen mun, som om man inte fattar vad som händer",
+        "register": "vardaglig, skämtsam",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "När läraren förklarat uppgiften för tredje gången utan att det blev klarare, satt han bara och <font color=\"#3498db\">såg ut som en fågelholk</font>.",
+        "etymologi": "Jämförelse med fågelholkens runda ingångshål, format som en öppen, frågande mun."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Idiomet saknas i SO och SAOL (kontrollerat direkt samt via uppslag på 'fågelholk' och 'holk'), så uppslagning i huvudkällan misslyckades - noteras här. Kompletterande oberoende källor bekräftar dock betydelsen: Wiktionary ger 'mycket förvånad; gapande av förvåning', och synonymer.se ger ordagrant samma formulering som facit: 'se frågande ut; se ut som om man inte förstått något'. Kortets huvudbetydelse ('Se förvirrad och frågande ut, med öppen mun, som om man inte fattar vad som händer') stämmer väl med detta - förvåning och förvirrat oförstående är samma gapande ansiktsuttryck sett från två håll, ingen sann saknad betydelse. Exempelmeningen (läraren som förklarar utan att det blir klarare) illustrerar rätt betydelse, är grammatiskt korrekt och frasen är highlightad. Register 'vardaglig, skämtsam' är rimligt för en skämtsam liknelse. Etymologin (runda ingångshålet liknat vid en öppen, frågande mun) är en rimlig bildförklaring som stödjer minnet, inget sakfel. Tom synonymlista är inte ett fel.",
+      "granskning_turer_post": 18,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621006,
+      "ord": "koka soppa på en spik",
+      "facit": "göra mkt av litet,&nbsp; göra en höna av en fjäder<br><img alt=\"webp image\" src=\"paste_1762617787515.webp\"><img alt=\"webp image\" src=\"paste_1762617799236.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skapa något fullt fungerande av nästan ingenting",
+        "register": "vardaglig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Med bara lite mjöl och russin lyckades hon <font color=\"#3498db\">koka soppa på en spik</font> och trolla fram en hel kaka.",
+        "etymologi": "Från en folksaga om en luffare som lurade en snål gumma på ingredienser till en soppa."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger under uppslagsordet 'soppa' definitionen 'åstadkomma något av (nästan) ingenting' med exempelmeningen 'som krönikör är hon van att koka soppa på en spik'. Detta matchar kortets huvudbetydelse ('Skapa något fullt fungerande av nästan ingenting') väl, och SO belägger bara denna enda betydelse, så ingen betydelse saknas. Facits andra glosa 'göra en höna av en fjäder' betyder snarare 'överdriva', vilket är en annan betydelse än 'skapa något av nästan ingenting' - facit_signal var null och det vore fel att kräva att kortet inkluderar den, eftersom den inte är synonym med den belagda betydelsen. Exempelmeningen (mjöl och russin blir en hel kaka) illustrerar korrekt, är grammatiskt korrekt och idiomet är highlightat. Etymologin om luffaren som lurade en snål gumma på soppingredienser stämmer med den kända folksagan om 'spiksoppa' och förklarar varför just en spik nämns, vilket underlättar minnet. Register (vardaglig, neutral) är rimligt. Tom synonymlista är inte ett fel.",
+      "granskning_turer_post": 18,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 18,
+  "granskning_kostnad_usd": 0.5667471999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 2,
+      "turer": 18,
+      "turkrav": 5,
+      "kostnad_usd": 0.5667471999999999
+    }
+  ]
+}

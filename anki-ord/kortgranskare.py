@@ -547,6 +547,78 @@ def slapp(sokvag, torr=False):
         print(f"{len(kort) - len(att_slappa)} kort låg redan i kön "
               f"(blindverifierade, inget att avsuspendera).")
 
+    foreslag_bilder_for_slappta(redo)
+
+
+def foreslag_bilder_for_slappta(note_ids):
+    """Sista steget i v3-pipelinen (Adams beslut 2026-08-19): för nyss
+    släppta kort som saknar bild, hämta en KANDIDATBILD från Wikipedia/
+    Commons och lägg den i en förslagskö -- ANVÄNDER ALDRIG bilden
+    automatiskt. Precis som `wikipedia_bild_batch.py`/`wikipedia_bild_apply.py`
+    (se de filerna för hela resonemanget): en Commons-sökträff är ofta fel
+    på ett sätt som bara syns när man faktiskt tittar på bilden -- mätt i
+    pilotbatchen 2026-08-19, 8 av 10 hittade kandidater var missvisande vid
+    manuell granskning (t.ex. "drägg" gav ett foto på ett DRAGG/ankare,
+    "taverna" gav en flott Musée d'Orsay-restaurang). Att auto-applicera här
+    hade brutit mot Adams uttryckliga krav: en fel/irrelevant bild är värre
+    än ingen bild alls.
+
+    Körs BEST-EFFORT och FÅR ALDRIG stoppa släppet -- inpackad i try/except
+    så att ett nätverksfel mot Wikipedia inte förstör resten av `slapp()`,
+    som redan har gjort sitt jobb (avsuspenderat korten) när denna funktion
+    anropas.
+
+    Skriver en sessionsfil i samma format som wikipedia_bild_batch.py, redo
+    att granskas manuellt och sedan köras genom wikipedia_bild_apply.py.
+    """
+    if not note_ids:
+        return
+    try:
+        import wikipedia_bild_batch as wbb
+    except Exception as exc:
+        print(f"(bildförslag hoppas över -- kunde inte ladda wikipedia_bild_batch: {exc})")
+        return
+    try:
+        info = invoke("notesInfo", notes=note_ids)
+        entries = []
+        for n in info:
+            fields = {name: v["value"] for name, v in n["fields"].items()}
+            raw = fields.get(config.FIELD_BAKSIDA, "")
+            parsed = baksida.parse(raw)
+            if parsed["bild_html"]:
+                continue
+            ord_ = fields.get(config.FIELD_ORD, "")
+            try:
+                kandidat = wbb.wb.hamta_kandidat(ord_)
+            except Exception:
+                kandidat = None
+            entries.append({
+                "noteId": n["noteId"], "ord": ord_,
+                "huvudbetydelse": parsed["huvudbetydelse"],
+                "kandidat": kandidat, "hamtningsfel": None,
+                "godkand": None, "motivering": None, "applicerad": False,
+            })
+        if not entries:
+            return
+        import datetime
+        today = datetime.date.today().isoformat()
+        sessions_dir = os.path.join(os.path.dirname(__file__), "sessions")
+        os.makedirs(sessions_dir, exist_ok=True)
+        out_path = os.path.join(sessions_dir, f"session_{today}_bildforslag-efter-slapp.json")
+        m = 2
+        while os.path.exists(out_path):
+            out_path = os.path.join(sessions_dir, f"session_{today}_bildforslag-efter-slapp-batch{m}.json")
+            m += 1
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(entries, f, ensure_ascii=False, indent=2)
+        hittade = sum(1 for e in entries if e["kandidat"])
+        print(f"\nBildförslag: {hittade} av {len(entries)} nysläppta bildlösa kort "
+              f"fick en kandidat, skrivet till {out_path}")
+        print("  Granska manuellt (kandidat mot huvudbetydelse) innan "
+              "wikipedia_bild_apply.py körs -- ingen bild har applicerats än.")
+    except Exception as exc:
+        print(f"(bildförslag efter släpp misslyckades, ingen bild påverkad: {exc})")
+
 
 # ------------------------------------------------------------------- status
 def status(sokvag):

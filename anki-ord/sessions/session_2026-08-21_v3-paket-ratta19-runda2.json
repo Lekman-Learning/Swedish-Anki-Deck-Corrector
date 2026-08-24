@@ -1,0 +1,115 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-agent-rattare-19",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621101,
+      "ord": "primitiv",
+      "facit": "enkel och outvecklad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Enkel och outvecklad, oftast menat nedsättande ; ursprunglig och oförfinad, utan negativ värdering, till exempel om konst",
+        "register": "neutral, lätt negativ ; neutral, positiv",
+        "synonymer": [
+          "outvecklad",
+          "enkel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Flyktinglägret bestod av <font color=\"#3498db\">primitiva</font> tält utan rinnande vatten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar den tvådelade strukturen: dels 'låg utvecklingsnivå'/'enkel och torftig' med nedsättande klang (matchar kortets 'enkel och outvecklad, nedsättande'), dels 'ursprunglig' i neutral/positiv mening om t.ex. konst. Synonymerna 'outvecklad' och 'enkel' återfinns direkt i SO/SAOL:s definitionstext, ej cirkulära. Exempelmeningen om flyktinglägret matchar SO:s eget exempel ('flyktingarna fick bo i primitiva tältläger') och illustrerar rätt betydelse. Register stämmer. Godkänt.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621047,
+      "ord": "antagonistisk",
+      "facit": "fientlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som befinner sig i konflikt eller motsättning med något annat ; som verkar på motsatt sätt, till exempel om muskler eller läkemedel",
+        "register": "formell, negativ ; fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De två maktblocken hade en långvarigt <font color=\"#3498db\">antagonistisk</font> relation.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO definierar huvudbetydelsen som 'invecklad i motsättning AV FIENTLIG NATUR' -- fientligheten är den betydelsebärande kärnan, vilket även facit ('fientlig') pekar ut. Kortets formulering 'som befinner sig i konflikt eller motsättning med något annat' tappar bort just detta: den kan läsas som vilken oenighet som helst, inte specifikt en fientlig sådan, vilket är precis den nyans som skiljer 'antagonistisk' från närliggande men icke-utbytbara ord som 'motstridig' eller 'oförenlig' -- den typ av distraktor HP-provets ORD-del testar. Bör formuleras om till t.ex. 'som är fientligt inställd till eller öppet i konflikt med något annat'. Den medicinska bibetydelsen (motverkande muskler/läkemedel) är däremot korrekt återgiven och väl separerad.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621051,
+      "ord": "dröna",
+      "facit": "lata sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vara passiv och lat, inte göra något",
+        "register": "vardaglig, lätt negativ",
+        "synonymer": [
+          "vara lat"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han låg och <font color=\"#3498db\">drönade</font> i soffan hela söndagen i stället för att plugga.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda nutida betydelse 'föra en passiv tillvaro' (vardagligt) matchar kortets 'vara passiv och lat, inte göra något' väl. Exempelmeningen ligger nära SO:s eget exempel ('du kan inte bara ligga och dröna'), är grammatiskt korrekt och highlightad. Synonymen 'vara lat' bekräftas av SO:s kohyponym 'lata sig' och SAOL:s 'vara lat'. SAOL har visserligen en andra, starkt föråldrad dialektal betydelse 'råma utdraget' (om nötkreatur), men den saknas i SO (som avgör dagens betydelser) och är för marginell/arkaisk för att kräva plats på kortet. Godkänt.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621175,
+      "ord": "libell",
+      "facit": "smädeskrift",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett litet instrument (rör) med en vätskebubbla som används för att avgöra om något är rakt eller i våg ; en smädeskrift (ålderdomligt)",
+        "register": "fackspråklig, neutral, teknik ; arkaisk, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han la <font color=\"#3498db\">libellen</font> mot bordsskivan för att kontrollera att den var helt plan.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortets andra betydelse 'en smädeskrift (ålderdomligt)' kunde INTE beläggas: både SO och SAOL listar bara EN betydelse av 'libell', nämligen mätinstrumentet/vätskebubblan i vågar och vattenpass -- ingen 'smädeskrift'-betydelse finns i någotdera uppslaget (kontrollerat med fullständig rådata från SO, som bara har ett element i huvudbetydelser-arrayen). Facit anger visserligen 'smädeskrift', men facit är enligt uppgift bara en andra källa och motsägs här av båda ordböckerna. Antingen är betydelsen felaktig/fabricerad, eller så är den så pass föråldrad att den fallit ur SO/SAOL och i så fall borde beläggas mot en historisk ordbok (SAOB) innan den läggs på ett inlärningskort. Ta bort betydelsen eller verifiera den. Den tekniska huvudbetydelsen (mätinstrumentet) är korrekt återgiven och exempelmeningen illustrerar den rätt.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621081,
+      "ord": "marig",
+      "facit": "tovig och förkrympt; jobbig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tovig och förkrympt (mindre bruklig, till exempel om hår eller växtlighet) ; som orsakar svårigheter, besvärlig",
+        "register": "ngt ålderdomlig, neutral ; vardaglig, lätt negativ",
+        "synonymer": [
+          "besvärlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den sista uppgiften på provet var riktigt <font color=\"#3498db\">marig</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar exakt kortets tvådelade struktur: 'tovig och förkrympt' (mindre brukligt) samt 'som orsakar svårigheter/förtretligheter' (vardagligt), med kohyponymen 'besvärlig' som även facit anger. Exempelmeningen är nästan identisk med SO:s eget exempel ('den sista uppgiften på skrivningen var marig'), grammatiskt korrekt och highlightad. Register stämmer väl överens med SO:s bruklighetsangivelser. Godkänt.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 16,
+  "granskning_kostnad_usd": 0.6125768999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 5,
+      "turer": 16,
+      "turkrav": 5,
+      "kostnad_usd": 0.6125768999999999
+    }
+  ]
+}

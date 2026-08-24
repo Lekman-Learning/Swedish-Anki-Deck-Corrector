@@ -12,12 +12,12 @@ Verbal HP hanteras INTE här — se [../verbal-misstag/CLAUDE.md](../verbal-miss
 
 Satt av Adam 2026-08-07. **Mål: 2.0.** **Lägsta godtagbara: 1.8.**
 
-**Läget nu (12 genomgångna provpass, normerat resultat per provpass):**
-1.9, 1.7, 1.7, 1.6, 1.5, 1.5, 1.4, 1.4, 1.4, 1.3, 1.3, 1.2 — se Sessionshistorik
-för vilket prov som gav vilket. **1 av 12 (1.9) når lägstanivån 1.8. 0 av 12 når
+**Läget nu (13 genomgångna provpass, normerat resultat per provpass):**
+1.9, 1.7, 1.7, 1.6, 1.5, 1.5, 1.4, 1.4, 1.4, 1.4, 1.3, 1.3, 1.2 — se Sessionshistorik
+för vilket prov som gav vilket. **1 av 13 (1.9) når lägstanivån 1.8. 0 av 13 når
 målet 2.0.** Bästa resultatet (1.9, Våren 2022 Första provet pp5) är samtidigt
 den ENDA sessionen som når godkänt — och det var den allra första loggade.
-Medel över alla 12: ~1.5. Gapet till lägstanivån är omkring 0.3, till målet 0.5.
+Medel över alla 13: ~1.5. Gapet till lägstanivån är omkring 0.3, till målet 0.5.
 
 ## Arbetsflöde (körs varje session i denna mapp)
 
@@ -109,21 +109,29 @@ förklaringarna är förenliga med samma mönster, och frågetext (som skulle av
 det) finns inte. Det som är nytt är ATT mönstret finns och är mätbart, inte VARFÖR.
 Full genomgång: `Study Coach Ai/rapporter/2026-08-19-hp-provet-positionsanalys-alla-provpass.md`.
 
-## Öppen fråga — dubbla "provpass 2" och "provpass 4" för Våren 2015
+## ✅ Löst 2026-08-19 — dubbla "provpass 2" och "provpass 4" för Våren 2015
 
-Fyra sparade rättningssidor säger alla "Våren 2015", men två par delar samma
-provpass-nummer med OLIKA innehåll (olika fel-frågor, olika facit):
+Fyra sparade rättningssidor säger alla "Våren 2015" och delar provpass-nummer
+parvis (två "provpass 2", två "provpass 4"). Tidigare stod här en gissning
+byggd på flawed logik ("om det vore samma prov skulle alla fel matcha" —
+fel: att göra samma prov två gånger ger INTE identiska fel, minne och tur
+varierar mellan försöken).
 
-- Provpass 2: id 1181534 (7 fel) och id 1080691 (7 fel) — delar 3 av 7 fel
-  (fråga 19, 22, 28) men skiljer sig på resten. Om det vore samma prov skulle
-  alla fel matcha.
-- Provpass 4: id 1183412 (10 fel) och id 1083180 (9 fel) — helt olika felmönster.
+**Verifierat med riktig frågetext (Study Coach Ai-valvet fick tag i PDF:erna
+19/8):** en agent räknade fram svaren oberoende ur frågetexten och jämförde
+mot facit i båda id-paren. **Facit är identiskt på alla 40 frågor i båda
+paren.** Det är alltså SAMMA prov, gjort två separata gånger (olika
+hpguiden.se attempt-id), inte två olika prov som råkat dela nummer:
 
-Rimlig gissning: hpguiden.se återanvänder provpass-numret för flera olika
-verkliga provtillfällen under samma säsongsetikett (t.ex. "Våren 2015" kan
-dölja fler än en faktisk provomgång), men det är en gissning — inte
-verifierat. Fråga Adam: kommer han ihåg att ha gjort samma provpass två
-gånger, eller är det två olika prov som råkat hamna under samma säsong?
+- Provpass 2: id 1181534 (7 fel) och id 1080691 (7 fel) — två försök på
+  samma prov, delar 3 av 7 fel av naturliga skäl.
+- Provpass 4: id 1183412 (10 fel) och id 1083180 (9 fel) — samma sak.
+
+**Konsekvens för statistiken:** "13 kvantitativa provpass" i det här dokumentet
+innehåller alltså bara **11 unika prov** — Våren 2015 provpass 2 och 4 är
+vardera räknade två gånger i aggregatstatistiken. Se
+`Study Coach Ai/coach/sessioner/2026-08-19-hp-kvant-varen2015-provpass2.md`
+och `...-provpass4.md` för full analys.
 
 ## Provkalender 2014–2026
 
@@ -156,7 +164,7 @@ Sessionshistorik nedan).
 | Hösten 2017 | ☐ | ☐ |
 | Våren 2017 | ☐ | ☐ |
 | Hösten 2016 | ☐ | ☐ |
-| Våren 2016 | ☐ | ☐ |
+| Våren 2016 | ☑ | ☑ |
 | Hösten 2015 | ☑ | ☑ |
 | Våren 2015 | ☑ | ☑ |
 | Hösten 2014 | ☐ | ☐ |
@@ -189,3 +197,4 @@ Full fråga-för-fråga-data för varje rad finns i `sessions/` (en fil per prov
 | 2026-08-07 | Våren 2015 (provpass 4, id 1083180) | XYZ 11/12, KVA 6/10, NOG 3/6, DTK 11/12 | 9/40 | 1.6 | Under lägstanivån | NOG 3/6 — svagaste NOG-resultat i urvalet. |
 | 2026-08-07 | Våren 2012 (provpass 3) — utanför kalenderfönstret | XYZ 8/12, KVA 6/10, NOG 4/6, DTK 7/12 | 15/40 | 1.4 | Under lägstanivån | Klart svagare än 2015/2020/2022-sessionerna. |
 | 2026-08-07 | Våren 2012 (provpass 5) — utanför kalenderfönstret | XYZ 5/12, KVA 5/10, NOG 4/6, DTK 8/12 | 18/40 | 1.2 | Under lägstanivån | Svagaste sessionen totalt (22/40). XYZ 5/12 bryter mot att XYZ annars är starkast. |
+| 2026-08-18 | Våren 2016 (provpass 5) | XYZ 10/12, KVA 7/10, NOG 3/6, DTK 10/12 | 10/40 | 1.4 | Under lägstanivån | Första passet med sparad frågetext (`raw/…/hpprov-vt2016-provpass5-kvant.pdf`) — full fråga-för-fråga-analys möjlig, se `Study Coach Ai/coach/sessioner/2026-08-18-hp-kvant-provpass5-varen2016.md`. 8/10 fel var på frågor Adam INTE flaggat som svåra i förväg. |

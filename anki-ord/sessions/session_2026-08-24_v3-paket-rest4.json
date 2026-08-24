@@ -1,0 +1,87 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": "claude",
+ "granskare": "claude-cli-blind",
+ "poster": [
+  {
+   "noteId": 1780080620936,
+   "ord": "urna",
+   "facit": "förvaringskärl",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ett högt kärl med handtag, t.ex. för vatten eller andra vätskor ; En sådan urna använd för askan efter en kremering, eller för valsedlar",
+    "register": "neutral, neutral, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Den grekiska <font color=\"#3498db\">urnan</font> i museet var dekorerad med scener ur mytologin.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080620940,
+   "ord": "mönstergill",
+   "facit": "utmärkt och föredömlig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Perfekt som förebild, ett föredöme i sitt slag",
+    "register": "formell, positiv, allmän",
+    "synonymer": [
+     "exemplarisk",
+     "föredömlig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hennes <font color=\"#3498db\">mönstergilla</font> uppförande imponerade på hela klassen.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080620941,
+   "ord": "mellanhand",
+   "facit": "mellanställning;&nbsp; &nbsp;förmedlare",
+   "facit_signal": "facit antyder 4 betydelse(r), kortet har 3 -- avgör om någon saknas",
+   "kort": {
+    "huvudbetydelse": "Del av handen mellan handloven och fingrarna ; En position i kortspel mellan utspelaren och nästa motspelare, ofta obekväm ; Någon som förmedlar affärer mellan tillverkare och köpare",
+    "register": "neutral, neutral, ekonomi",
+    "synonymer": [
+     "förmedlare"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Läkaren kände försiktigt på <font color=\"#3498db\">mellanhanden</font> för att se om något ben var brutet.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080620962,
+   "ord": "sätta in",
+   "facit": "insätta, deponera",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Föra över pengar till ett bankkonto ; Skicka personal eller resurser dit de behövs ; Lära någon hur något fungerar",
+    "register": "neutral, neutral, ekonomi",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Hon <font color=\"#3498db\">satte in</font> tusen kronor på sitt sparkonto.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  }
+ ],
+ "granskning_turer": 42,
+ "granskning_kostnad_usd": 1.4515431,
+ "granskning_turkrav": 6,
+ "granskning_korningar": [
+  {
+   "poster": 25,
+   "turer": 42,
+   "turkrav": 6,
+   "kostnad_usd": 1.4515431
+  }
+ ]
+}

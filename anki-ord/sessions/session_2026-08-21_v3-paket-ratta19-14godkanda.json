@@ -1,0 +1,299 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": "claude-agent-rattare-19",
+ "granskare": "claude-cli-blind",
+ "poster": [
+  {
+   "noteId": 1780080621182,
+   "ord": "epikuré",
+   "facit": "njutningsmänniska",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En person som lever för njutning och goda upplevelser",
+    "register": "litterär, neutral",
+    "synonymer": [
+     "njutningsmänniska"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Som sann <font color=\"#3498db\">epikuré</font> lät han aldrig en god måltid gå obemärkt förbi.",
+    "etymologi": "Efter den grekiske filosofen Epikuros."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO bekräftar huvudbetydelsen 'person som lever för att uppleva förfinade njutningar', vilket matchar kortet och facit ('njutningsmänniska'). SO:s äldre bibetydelse 'anhängare av epikurismen' är en historisk not till SAMMA betydelse (märkt 'ursprungligen'), inte en egen skild betydelse -- och den fångas ändå upp av kortets etymologi om Epikuros. Exempelmening och register stämmer.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621139,
+   "ord": "usurpera",
+   "facit": "lägga beslag på",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Egenmäktigt ta sig makten eller rätten till något",
+    "register": "formell, negativ",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Generalen <font color=\"#3498db\">usurperade</font> makten genom en blodig militärkupp.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'egenmäktigt ta sig rätten till makt över något, särsk. stat', med utvidgad användning om egendom m.m. Kortets 'makten eller rätten till något' täcker båda. Exempelmening (militärkupp) och register (formell, negativ) stämmer. Tom synonymlista är inget fel i sig.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621270,
+   "ord": "avhållen",
+   "facit": "omtyckt<br><br>(se \"hålla av\")",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Mycket omtyckt",
+    "register": "neutral, positiv",
+    "synonymer": [
+     "omtyckt"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Läraren var mycket <font color=\"#3498db\">avhållen</font> bland eleverna.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO har adjektivet 'avhållen' som eget uppslag (skilt från particip av verbet 'avhålla') med exakt betydelsen 'mycket omtyckt', vilket är precis kortets betydelse och synonym. Exempel och register stämmer.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621055,
+   "ord": "griljera",
+   "facit": "hastigt steka",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Snabbt bryna eller steka något panerat som redan är kokt eller stekt, till exempel i ugn",
+    "register": "fackspråklig, neutral, matlagning",
+    "synonymer": [
+     "bryna"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon <font color=\"#3498db\">griljerade</font> julskinkan i ugnen tills ytan blev gyllenbrun.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'hastigt bereda (ett panerat, förut kokt eller stekt födoämne) i ugn eller panna så att det får färg', matchar kortet väl. SAOL definierar ordet rentav som 'steka hastigt, bryna', vilket direkt styrker synonymen 'bryna'. Exempel (julskinka) matchar SO:s eget exempel.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621235,
+   "ord": "svepande",
+   "facit": "allmännt hållen",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Allmänt hållen och ofta missvisande eller orättvis, om till exempel ett uttalande",
+    "register": "neutral, lätt negativ",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Talaren gav bara en <font color=\"#3498db\">svepande</font> beskrivning av planerna, utan några konkreta detaljer.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s enda adjektivbetydelse, 'allmänt hållen och (därför) ofta missvisande el. orättvis', matchar kortet nästan ordagrant. Exempel och register (neutral, lätt negativ) stämmer.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621128,
+   "ord": "alumn",
+   "facit": "föredetta student",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En tidigare elev eller student vid en skola eller ett universitet ; en lärjunge eller skyddsling",
+    "register": "högtidlig, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Skolan bjöd in alla sina <font color=\"#3498db\">alumner</font> till 50-årsjubileet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger 'lärjunge eller skyddsling' som grundbetydelse och 'numera särskilt: tidigare elev eller student' som den betydelse som dominerar idag. Kortet innehåller båda och leder rimligen med den SO markerar som mest aktuell. Register (högtidlig, neutral) stämmer med SO:s 'något formell'.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621154,
+   "ord": "bastard",
+   "facit": "hybrid; oäkta barn, lymmel",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En avkomma av två olika djur- eller växtarter ; ett barn fött utanför äktenskapet",
+    "register": "neutral, neutral ; ngt ålderdomlig, nedsättande",
+    "synonymer": [
+     "korsningsprodukt"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Mulåsnan är en <font color=\"#3498db\">bastard</font> mellan häst och åsna.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s två betydelser (djur-/växthybrid; utomäktenskapligt barn, ålderdomligt/nedsättande) matchar kortet exakt, med korrekt uppdelat register per betydelse. Kontrollerade separat att 'lymmel' i facit inte döljer en tredje betydelse (t.ex. skällsord) -- SO har bara två betydelser, 'lymmel' är bara en känslobeskrivning av betydelse 2.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621085,
+   "ord": "entreprenör",
+   "facit": "initiativrik företagare",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ett företag eller en person som åtar sig ett byggprojekt eller uppdrag ; en initiativrik person som startar och driver egna företag",
+    "register": "fackspråklig, neutral ; neutral, positiv",
+    "synonymer": [
+     "företagare"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han är en driven <font color=\"#3498db\">entreprenör</font> som redan startat tre företag.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s två betydelser ('person/firma som åtar sig entreprenad' och 'initiativkraftig ... egen företagare') matchar kortet med korrekt uppdelat register per betydelse och rätt synonym ('företagare').",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621151,
+   "ord": "foton",
+   "facit": "ljuspartikel",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Den minsta enheten av elektromagnetisk strålning, en ljuspartikel",
+    "register": "fackspråklig, neutral, fysik",
+    "synonymer": [
+     "ljuspartikel"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "En <font color=\"#3498db\">foton</font> är energi utan massa som rör sig med ljusets hastighet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'viss minsta mängd elektromagnetisk strålningsenergi enligt kvantteorin', matchar kortets 'minsta enheten av elektromagnetisk strålning, en ljuspartikel' och facit. Exempelmeningen är fysikaliskt korrekt (massfri, rör sig med ljusets hastighet), vilket överensstämmer med SO:s egna exempel.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621142,
+   "ord": "friktion",
+   "facit": "motstånd mellan två ytor",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Motstånd mellan två ytor som gnids mot varandra ; slitningar eller konflikter mellan människor som samarbetar",
+    "register": "fackspråklig, neutral, fysik ; neutral, negativ",
+    "synonymer": [
+     "gnidning"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Det uppstod en del <font color=\"#3498db\">friktion</font> mellan de nya kollegorna under det första året.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s två betydelser (fysikaliskt motstånd mellan ytor; bildligt om motsättningar vid samarbete) matchar kortet med korrekt uppdelat register. Synonymen 'gnidning' bekräftas direkt av SAOL, vars definition av friktion inleds med just 'gnidning'.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621141,
+   "ord": "förtjänt",
+   "facit": "värd, väl meriterad, högt kvalificerad<br><br><span style=\"font-style: italic;\">en förtjänt forskare</span>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Som har gjort sig värd något, till exempel beröm eller belöning ; väl meriterad genom långvarigt arbete",
+    "register": "formell, positiv",
+    "synonymer": [
+     "värd",
+     "väl meriterad"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Efter allt hårt arbete var segern verkligen <font color=\"#3498db\">förtjänt</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s två betydelser ('värd' samt 'väl meriterad genom långvarigt arbete') matchar kortet exakt, liksom synonymerna 'värd' och 'väl meriterad'. Exempelmeningen illustrerar korrekt den första betydelsen.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621167,
+   "ord": "giga",
+   "facit": "gammalt stråkinstrument<br><a href=\"https://www.google.com/imgres?q=giga%20instrument&amp;imgurl=https%3A%2F%2Fapi.europeana.eu%2Fthumbnail%2Fv3%2F400%2Ff723235e212eac1a420b71a185f7098d&amp;imgrefurl=https%3A%2F%2Fwww.europeana.eu%2Fen%2Fitem%2F91650%2FHeM_objekt_11543&amp;docid=_iwDuJWLSP0h4M&amp;tbnid=JCZYRtkU9jVSQM&amp;vet=12ahUKEwjA-5aIhsyLAxVnKhAIHXvUFsEQM3oECGkQAA..i&amp;w=400&amp;h=284&amp;hcb=2&amp;ved=2ahUKEwjA-5aIhsyLAxVnKhAIHXvUFsEQM3oECGkQAA\"><div><div><div><img alt=\"musikinstrument, giga | Europeana\" src=\"paste-82f536f9811c9bbe59a7c4115ac57739577520f5.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ett medeltida stråkinstrument, en sorts fiol",
+    "register": "arkaisk, neutral",
+    "synonymer": [
+     "fiol"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Musikern spelade på en <font color=\"#3498db\">giga</font> under medeltidsmarknaden.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s instrumentbetydelse ('medeltida stråkinstrument som var föregångare till violinen', med bibetydelsen 'även om andra stråkinstrument inklusive violin') stödjer kortets 'en sorts fiol' och synonymen 'fiol'. Kontrollerade separat att giga- som prefix (miljard) är ett helt skilt uppslagsord (annan ordklass, förled, eget l_nr) -- alltså ingen missad betydelse av substantivet giga.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621050,
+   "ord": "kamrer",
+   "facit": "ekonomi tjänsteman",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En tjänsteman med ansvar för ekonomisk förvaltning och bokföring",
+    "register": "formell, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "<font color=\"#3498db\">Kamrern</font> gick igenom företagets räkenskaper varje kvartal.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger endast betydelsen 'tjänsteman med ekonomisk förvaltning och räkenskapsföring som huvuduppgift', vilket matchar kortet exakt. Register och exempel rimliga.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080621217,
+   "ord": "kohort",
+   "facit": "militär trupp, skara<br><a href=\"https://www.google.com/imgres?q=cohort%20rome%20stock%20photo&amp;imgurl=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2Fpreview%2FM%2FM702%2FM702072_A-Roman-Cohort.jpg&amp;imgrefurl=https%3A%2F%2Fwww.lookandlearn.com%2Fhistory-images%2FM702072%2FA-Roman-Cohort&amp;docid=nuRESQVbIsP8NM&amp;tbnid=TF89sZVEkPJ1WM&amp;vet=12ahUKEwjg0bavvveLAxXzi8MKHdM9Cs8QM3oECHAQAA..i&amp;w=512&amp;h=477&amp;hcb=2&amp;ved=2ahUKEwjg0bavvveLAxXzi8MKHdM9Cs8QM3oECHAQAA\"><div><div><div><img alt=\"A Roman Cohort stock image | Look and Learn\" src=\"paste-dd610658497cb5f9dfb4993c2068373c3e9487b9.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En truppavdelning som var en del av en romersk legion, förr i tiden ; en grupp människor med gemensamma kännetecken, till exempel i en studie",
+    "register": "arkaisk, neutral, historia ; fackspråklig, neutral, medicin",
+    "synonymer": [
+     "truppavdelning",
+     "grupp"
+    ],
+    "synonym_groups": [
+     [
+      "truppavdelning"
+     ],
+     [
+      "grupp"
+     ]
+    ],
+    "exempelmening": "Forskarna följde en <font color=\"#3498db\">kohort</font> av 500 patienter under tio år.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s två betydelser (romersk truppavdelning, historiskt; grupp med gemensamma kännetecken inom t.ex. medicin/sociologi) matchar kortet med korrekt uppdelat register och rätt ihopkopplade synonymgrupper. Exempelmeningen illustrerar rätt (den vanligare) betydelsen idag.",
+   "granskning_turer_post": 33,
+   "granskning_turkrav_post": 5
+  }
+ ],
+ "granskning_turer": 33,
+ "granskning_kostnad_usd": 1.3855363999999997,
+ "granskning_turkrav": 5,
+ "granskning_korningar": [
+  {
+   "poster": 19,
+   "turer": 33,
+   "turkrav": 5,
+   "kostnad_usd": 1.3855363999999997
+  }
+ ]
+}

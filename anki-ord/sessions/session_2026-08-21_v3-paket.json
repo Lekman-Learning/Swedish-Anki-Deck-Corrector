@@ -1,0 +1,412 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080629170,
+      "ord": "oaktat",
+      "facit": "<div style=\"text-align: center;\">(form.)&nbsp; trots, trots att, fastän</div><div style=\"text-align: center;\"><br></div><div style=\"text-align: center;\">ex (prep.): \"<i>Vi måste ha en ordning som säkerställer att samtliga städer klarar gränsvärdena&nbsp;oaktat&nbsp;vädrets makter.</i>\"</div><div style=\"text-align: center;\"><i><span style=\"color: rgb(10, 10, 10); background-color: rgb(255, 255, 255);\"><br></span></i></div><div style=\"text-align: center;\">ex (konj.): \"<i>Vi når då aldrig framgång och det&nbsp;oaktat&nbsp;hur bra och genomarbetad en reform än är.</i>\"</div>",
+      "facit_signal": "facit antyder 6 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Trots något ; Fastän, även om",
+        "register": "formell, neutral ; ngt ålderdomlig, neutral",
+        "synonymer": [
+          "trots",
+          "fastän"
+        ],
+        "synonym_groups": [
+          [
+            "trots"
+          ],
+          [
+            "fastän"
+          ]
+        ],
+        "exempelmening": "Vi fortsatte mötet <font color=\"#3498db\">oaktat</font> alla protester.",
+        "etymologi": "Efter tyska ungeachtet, besläktat med ordet akta."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: subjunktion 'fastän' (ngt ålderdomlig) och preposition 'trots' (formell) -- båda finns med, rätt separerade och med rätt register. Synonymerna trots/fastän är ordbokens egna glosor. Etymologin (ty. ungeachtet, besläktat med akta) stämmer, exempelmeningen är korrekt och highlightad. facit_signal om 6 betydelser var ett falskt alarm.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620193,
+      "ord": "hövisk",
+      "facit": "artig och ridderlig; (eng) courtly<br><br><br><i>hövisk kärlek;<br><br>eller faller en&nbsp;hövisk&nbsp;riddare på knä inför sin dam.</i><br><img src=\"paste-c012a2e44458683a8cc1bb73145ee4eeff304b80.webp\"><br><a href=\"https://www.google.com/imgres?q=courtly&amp;imgurl=https%3A%2F%2Fstudy.com%2Fcimages%2Fmultimages%2F16%2Fpainting_tristanandisolde.png&amp;imgrefurl=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fcourtly-love-in-the-middle-ages-definition-characteristics-rules.html&amp;docid=efenU0FPM8atLM&amp;tbnid=b88a2el3SHvVGM&amp;vet=12ahUKEwi1hLH0uK6NAxVURPEDHfl6B5wQM3oFCIQBEAA..i&amp;w=391&amp;h=340&amp;hcb=2&amp;ved=2ahUKEwi1hLH0uK6NAxVURPEDHfl6B5wQM3oFCIQBEAA\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><img alt=\"Courtly Love Definition, Rules ...\" src=\"paste-b8f06ab7cd4588d84add6666a379e51d50315433.webp\"></div></div></div></a><a href=\"https://www.google.com/imgres?q=courtly&amp;imgurl=https%3A%2F%2Fstudy.com%2Fcimages%2Fmultimages%2F16%2Fpainting_tristanandisolde.png&amp;imgrefurl=https%3A%2F%2Fstudy.com%2Facademy%2Flesson%2Fcourtly-love-in-the-middle-ages-definition-characteristics-rules.html&amp;docid=efenU0FPM8atLM&amp;tbnid=b88a2el3SHvVGM&amp;vet=12ahUKEwi1hLH0uK6NAxVURPEDHfl6B5wQM3oFCIQBEAA..i&amp;w=391&amp;h=340&amp;hcb=2&amp;ved=2ahUKEwi1hLH0uK6NAxVURPEDHfl6B5wQM3oFCIQBEAA\"><br></a>",
+      "facit_signal": "facit antyder 5 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Artig, belevad och fint uppträdande, gärna ridderligt ; (om kärlek, förr) byggd på beundran utan sexuell inblandning",
+        "register": "neutral, positiv ; litterär, ömsint",
+        "synonymer": [
+          "ärbar",
+          "taktfull",
+          "ridderlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han bugade sig <font color=\"#3498db\">hövisk</font> och höll upp dörren åt henne.",
+        "etymologi": "Fornsvenska hövisker, av lågtyska hövesch, till hov -- efter franska courtois."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en huvudbetydelse ('artig och taktfull på ett förfinat och elegant sätt') plus en underbetydelse specifikt om kärleksförhållande präglat av tillbedjan med nedtonad sexualitet -- matchar kortets två led exakt. SAOL:s definition är ordagrant 'ärbar, taktfull; ridderlig', vilket bekräftar alla tre synonymer. Etymologi och exempelmening stämmer. facit_signal om 5 betydelser var ett falskt alarm.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622425,
+      "ord": "tajga",
+      "facit": "stort barrskogsområde<br><a href=\"https://www.google.com/imgres?q=taiga&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F96%2FJack_London_Lake_by_bartosh.jpg%2F1200px-Jack_London_Lake_by_bartosh.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTaiga&amp;docid=e62EPACwVy2pDM&amp;tbnid=8sarxCV7N2NKGM&amp;vet=12ahUKEwiM3ZCt24CMAxVoLRAIHdVeI_UQM3oECBkQAA..i&amp;w=1200&amp;h=592&amp;hcb=2&amp;ved=2ahUKEwiM3ZCt24CMAxVoLRAIHdVeI_UQM3oECBkQAA\"><div><div><div><img alt=\"Taiga - Wikipedia\" src=\"paste-1383cfcd09b9d03857d27d5d329ce2ba5c6ca408.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett stort skogsbälte med nästan bara barrträd, söder om tundran",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Tajgan</font> sträcker sig över stora delar av Sibirien.",
+        "etymologi": "Från ryskans tajga, med samma betydelse."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stort område med uteslutande barrskog särsk. i Sibirien' -- matchar kortet väl (söder om tundran stämmer geografiskt). Tom synonymlista är korrekt (SO ger ingen synonym, bara kohyponymen tundra). Etymologi och exempel stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080628317,
+      "ord": "kärve",
+      "facit": "nek,&nbsp; &nbsp;bunt sädesstrån<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FK%25C3%25A4rve&amp;psig=AOvVaw00p1jGLAEePIMfjoBHeKZp&amp;ust=1757039075738000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBUQjRxqFwoTCLCFnuGGvo8DFQAAAAAdAAAAABAE\"><img alt=\"Kärve – Wikipedia\" src=\"wheat_sheaves_near_king s_somborne_-_geograph.org.uk_-_889992.webp\"></a>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Ett hopbundet knippe skördad säd ; även: ett löst knippe av annat, t.ex. gnistor",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Bonden bar <font color=\"#3498db\">kärven</font> över axeln in i logen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar två betydelser: dels 'hopbundet knippe av säd', dels 'knippe el. kvast t.ex. av eld' -- matchar kortets två led. Kortets exempel 'gnistor' är en rimlig parafras av SAOL:s 'eld', inte ett sakfel.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080626993,
+      "ord": "gepäck",
+      "facit": "bagage",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Resväskor och annat man har med sig på resan, bagage",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "bagage",
+          "packning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han packade allt sitt <font color=\"#3498db\">gepäck</font> i en enda gammal resväska.",
+        "etymologi": "Från tyska Gepäck, samma betydelse."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bagage särsk. av mer tillfälligt slag', vardagligt register -- matchar kortet exakt. Synonymen 'packning' bekräftas av SO:s egen hänvisning ('jfr packning'). Etymologi och exempel stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080629039,
+      "ord": "somnambul",
+      "facit": "sömngångare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sömngångaraktig, som en sömngångare ; en sömngångare",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "sömngångare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Den <font color=\"#3498db\">somnambula</font> patienten hittades stående vid kylskåpet, utan minne av det.",
+        "etymologi": "Franska somnambule, av latinets somnus 'sömn' och ambulare 'vandra'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger både adjektivbetydelsen ('som lider av somnambulism') och substantivbetydelsen (=sömngångare) -- båda med på kortet. Etymologi (lat. somnus+ambulare) stämmer, exempelmeningen illustrerar adjektivbetydelsen korrekt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622161,
+      "ord": "harangera",
+      "facit": "hålla hyllningstal",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hålla ett hyllande tal till någon ; nämna någon berömmande, utan att nödvändigtvis tala",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "berömma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">harangerade</font> den avlidne veteranen vid ceremonin.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'hålla (hyllande) tal till någon' samt en försvagad användning 'omnämna i berömmande ordalag' (utan att nödvändigtvis hålla tal) -- matchar kortets två nyanser exakt. Exempelmeningen stämmer med SO:s egen typ av exempel.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622791,
+      "ord": "lux",
+      "facit": "ljusstyrka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En enhet som mäter hur starkt något är upplyst",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Rummet hade en belysning på 500 <font color=\"#3498db\">lux</font>.",
+        "etymologi": "Latinets lux, som betyder 'ljus'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en måttenhet för belysningsstyrka'. Kortets formulering ('hur starkt något är upplyst') är faktiskt mer korrekt fysikaliskt än facit-fältets 'ljusstyrka' (som egentligen avser ett annat begrepp, candela) -- kortet har alltså rätt där facit slarvar. Etymologi och exempel stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622958,
+      "ord": "eponym",
+      "facit": "ord av persons namn",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett ord som har bildats av ett persons- eller platsnamn",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ordet 'sandwich' är ett <font color=\"#3498db\">eponym</font>, uppkallat efter earlen av Sandwich.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ord som bildats på grundval av ett egennamn', med exempel volt/watt/quisling. Kortets 'persons- eller platsnamn' ryms i SO:s 'egennamn'. Exemplet med 'sandwich' är sakligt korrekt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080623688,
+      "ord": "encefalit",
+      "facit": "hjärnhinneinflammation",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inflammation i hjärnan",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "hjärninflammation"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Epidemisk <font color=\"#3498db\">encefalit</font> är en viral sjukdom som sprids mellan människor.",
+        "etymologi": "Av grekiskans enkephalos, som betyder 'hjärna'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger uttryckligen 'hjärninflammation', INTE 'hjärnhinneinflammation' (=meningit) som deckets facit-fält felaktigt anger -- kortet har alltså rätt betydelse där facit har fel. Synonym och exempel (epidemisk encefalit) stämmer med SO.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619696,
+      "ord": "oval",
+      "facit": "äggformad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rund och avlångt formad, som ett ägg ; en figur med den formen",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "äggrund",
+          "avlångt rund"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bordet i matsalen var <font color=\"#3498db\">ovalt</font>.",
+        "etymologi": "Bildat av latinets ovum, som betyder 'ägg'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s definition lyder ordagrant 'äggrund, avlångt rund' -- exakt kortets båda synonymer. Både adjektiv- och substantivbetydelsen finns med korrekt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621604,
+      "ord": "alltiallo",
+      "facit": "mångkunnig hjälpreda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Någon som hjälper till med lite av varje på en arbetsplats",
+        "register": "vardaglig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Anna sköter allt möjligt på kontoret, från kaffe till bokföring -- hon är firmans <font color=\"#3498db\">alltiallo</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som utför många skiftande uppgifter i visst sammanhang; vanligen praktiska och informella', vardagligt register -- matchar kortet. Kortets begränsning till 'arbetsplats' är något snävare än SO:s 'visst sammanhang' men motsägs inte, då SO:s eget exempel också är från en arbetsplats.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080628300,
+      "ord": "väbel",
+      "facit": "underofficer som håller ordning på manskapet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En underofficer vars jobb var att hålla ordning bland soldaterna",
+        "register": "arkaisk, neutral",
+        "synonymer": [
+          "underofficer"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Väbeln</font> såg till att soldaterna följde reglementet.",
+        "etymologi": "Från tyska Webel/Feldwebel, samma betydelse."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen stämmer mot SAOL ('lägre befälsperson som svarade för allmän ordning...'). Men synonymen 'underofficer' är inte en sann synonym utan bara det överordnade begrepp SAOL själv använder i definitionen -- väbel är EN typ av underofficer bland flera, orden är inte fritt utbytbara. SAOL listar ingen synonym alls för ordet. Ta bort 'underofficer' ur synonymlistan (tom lista hade varit korrekt).",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080626568,
+      "ord": "storsint",
+      "facit": "nobel och överseende",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Snäll och frikostig nog att förlåta när någon gjort en illa",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "ädelmodig",
+          "generös"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots allt hon gått igenom var hon <font color=\"#3498db\">storsint</font> nog att bjuda honom på middag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s definition är ordagrant 'generös, ädelmodig' -- matchar kortets synonymer exakt. SO:s fylligare definition (kan bortse från oförrätter och förlåta) matchar kortets huvudbetydelse. Exempelmeningen stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080623428,
+      "ord": "struva",
+      "facit": "flottyrkokt bakverk<br><a href=\"https://www.google.com/imgres?q=struva&amp;imgurl=https%3A%2F%2Fmedia.martinservera.se%2Fw_1440%2Cq_auto%2Cf_auto%2Fprod%2Fmartinservera%2Fprodukt%2F3%2F266%2F516%2FDV02_07315360000533-7315360000007_03.png&amp;imgrefurl=https%3A%2F%2Fwww.martinservera.se%2Fprodukter%2F039081%2Fstruva-11g&amp;docid=9tJZb9QL2qSgEM&amp;tbnid=XSX7Sry0Kg4x1M&amp;vet=12ahUKEwjj7L_769OLAxWGGxAIHXBREdIQM3oECBoQAA..i&amp;w=1440&amp;h=1258&amp;hcb=2&amp;ved=2ahUKEwjj7L_769OLAxWGGxAIHXBREdIQM3oECBoQAA\"><div><div><div><img alt=\"Struva 11g - Kakor | Martin &amp; Servera\" src=\"paste-aa1ceb5669bd43a14c897c708a3691b6e9483df4.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En kaka som friteras i het olja ; (i Finland) samma sorts kaka, äts kring första maj",
+        "register": "vardaglig, neutral, matlagning",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Struvorna</font> serverades varma med kräm och sylt.",
+        "etymologi": "Fornsvenska struva, av lågtyskans struve 'stel, skrovlig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger uttryckligen två betydelser: dels ett flottyrkokt bakverk i allmänhet, dels specifikt 'ett finländskt flottyrkokt bakverk som äts kring första maj' -- matchar kortets två led exakt, inklusive Finlandskopplingen.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621200,
+      "ord": "läst",
+      "facit": "fotmall för skomakare<br><a href=\"https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_13497_shoe_trees.JPG\"><img alt=\"Läster i trä\" src=\"339px-pikiwiki_israel_13497_shoe_trees.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En fotformad form som skomakare använder för att göra eller laga skor ; foten på en strumpa",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Skomakaren placerade <font color=\"#3498db\">lästen</font> inuti skon för att behålla formen.",
+        "etymologi": "Fornsvenska läster, besläktat med ordet list, ursprungligen 'spår'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL ger TVÅ betydelser för substantivet läst: (1) skomakarens fotform, (2) ett gammalt rymdmått (bl.a. för träkol, ca 20 hl), markerat arkaiskt. Kortets andra betydelse 'foten på en strumpa' saknar belägg i båda ordböckerna (SAOL svarar uttryckligen nej på just den frågan) -- det är alltså både en sakligt felaktig betydelse och en utelämnad äkta betydelse. Byt 'foten på en strumpa' mot det gamla rymdmåttet för t.ex. träkol/fartygslast.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080624045,
+      "ord": "notarie",
+      "facit": "juridiskt biträde<br><div><div><div><a href=\"https://www.google.com/imgres?q=notarie&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F8e%2FQuentin_Massys_-_Portrait_of_a_Man_-_National_Gallery_of_Scotland.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FNotarie&amp;docid=HQsbYmz1RJwvAM&amp;tbnid=yrIDNBsUnxVMhM&amp;vet=12ahUKEwj438_RzYiNAxUIKBAIHUgpKtQQM3oECE4QAA..i&amp;w=1256&amp;h=1551&amp;hcb=2&amp;ved=2ahUKEwj438_RzYiNAxUIKBAIHUgpKtQQM3oECE4QAA\"><img alt=\"Notarie – Wikipedia\" src=\"paste-c7bc7ee02845ca211b69dafcbefd463833ac2520.webp\"></a></div></div></div><div><a href=\"https://www.google.com/imgres?q=notarie&amp;imgurl=https%3A%2F%2Fwww.domstol.se%2Fpublishedmedia%2Foxkgmadna8k31z6m2f1m%2FNotarie_TR_Ume-.jpg&amp;imgrefurl=https%3A%2F%2Fwww.domstol.se%2Fhogsta-domstolen%2Fjobba-hos-oss%2Fnotarie%2F&amp;docid=sX49COQ05uiPqM&amp;tbnid=_y63CVRqSbVU-M&amp;vet=12ahUKEwj438_RzYiNAxUIKBAIHUgpKtQQM3oECGoQAA..i&amp;w=856&amp;h=500&amp;hcb=2&amp;ved=2ahUKEwj438_RzYiNAxUIKBAIHUgpKtQQM3oECGoQAA\"><div><div><div><img alt=\"Notarie - Högsta domstolen\" src=\"paste-f65e4d1cbf523e058309f0a7f517411a65f7b800.webp\"></div></div></div></a></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En juridiskt utbildad tjänsteman, ofta en nyutexaminerad jurist som gör sin tingstjänstgöring",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Notarien</font> attesterade dokumentet vid rätten.",
+        "etymologi": "Latinets notarius, 'snabbskrivare', till nota 'tecken'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO delar upp ordet i en aktuell underbetydelse om juris kandidat som gör sin tings-/hovrättstjänstgöring (INTE märkt ålderdomlig -- fortfarande en helt levande yrkestitel i Sverige) och en separat underbetydelse där notarie används som allmän artighetstitel för yngre jurister, och det är DEN som är märkt 'något ålderdomligt'. Kortets huvudbetydelse beskriver uttryckligen tingstjänstgöringen men sätter ändå registret 'ngt ålderdomlig' på den, vilket är fel -- den arkaiska stämpeln hör till en annan delbetydelse. Byt register till neutralt/fackspråkligt för den beskrivna betydelsen.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080625494,
+      "ord": "skälva",
+      "facit": "darra, skaka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Darra och skaka okontrollerat, t.ex. av rädsla eller kyla ; även om saker som skakar, t.ex. ett hus vid en smäll",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "darra",
+          "skaka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hela kroppen fick henne att <font color=\"#3498db\">skälva</font> av fruktan när hon hörde ljudet i mörkret.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ofrivilligt utföra (stora) snabba svängande rörelser' med exempel 'skälva av fruktan' och 'huset tycktes skälva' -- matchar kortets båda led (kropp respektive sak/hus). Exempelmeningen stämmer sakligt och grammatiskt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080623624,
+      "ord": "översinnlig",
+      "facit": "övernaturlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bortom det som går att uppfatta med de fem sinnena ; överjordisk, inte av denna världen",
+        "register": "litterär, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Många människor söker efter <font color=\"#3498db\">översinnliga</font> erfarenheter genom meditation och andlig praktik.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som inte kan uppfattas med något av de fem sinnena' plus en försvagad betydelse 'överjordisk' -- matchar kortets två led exakt. Exempelmeningen är sakligt riktig.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080623139,
+      "ord": "satyr",
+      "facit": "man med bockkropp<br><a href=\"https://www.google.com/imgres?q=satyr%20mythology&amp;imgurl=https%3A%2F%2Fi.etsystatic.com%2F5124363%2Fr%2Fil%2Fd763b9%2F6666642353%2Fil_570xN.6666642353_pl1t.jpg&amp;imgrefurl=https%3A%2F%2Fwww.etsy.com%2Fuk%2Flisting%2F60238541%2Fsatyr-8x10-art-print-mythical-greek&amp;docid=wd5giuhiGmhSXM&amp;tbnid=8BZXwLz-vQynJM&amp;vet=12ahUKEwij373DzumLAxVgU1UIHfBwNHYQM3oECCQQAA..i&amp;w=570&amp;h=555&amp;hcb=2&amp;ved=2ahUKEwij373DzumLAxVgU1UIHfBwNHYQM3oECCQQAA\"><div><div><div><img alt=\"Satyr 8x10 Art Print Mythical Greek ...\" src=\"images-8902c010fdce92889de2482ece030e910be01b4c.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bockliknande mansfigur i grekisk mytologi ; (nedsättande) en äldre man med överdrivet stort sexuellt intresse",
+        "register": "litterär, neutral ; vardaglig, nedsättande",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han anklagades för att vara en riktig <font color=\"#3498db\">satyr</font> som ständigt ofredade sina kolleger.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse bockliknande mytologisk figur i Dionysos följe, plus en märkt (mer sällsynt) nedsättande bibetydelse om äldre man med överdrivet sexuellt intresse -- matchar kortets två led och register exakt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 36,
+  "granskning_kostnad_usd": 1.3593826000000002,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 36,
+      "turkrav": 5,
+      "kostnad_usd": 1.3593826000000002
+    }
+  ]
+}
