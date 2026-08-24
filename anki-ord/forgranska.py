@@ -51,6 +51,21 @@ if hasattr(sys.stdout, "reconfigure"):
 HAR = os.path.dirname(os.path.abspath(__file__))
 
 HARDA = (
+    # Flyttad fran MJUKA 2026-08-24. Matt samma dag: av batch 3:s SJU
+    # blindunderkannanden hade SEX redan den har flaggan -- forgranskningen
+    # visste, men slappte igenom, och den dyra granskaren fick saga samma sak
+    # for 0,78 USD.
+    #
+    # Den ska inte blockera absolut: SO:s underbetydelser ar ibland brus, och
+    # ett kort behover inte alltid alla. Men beslutet maste SKRIVAS. Med
+    # flaggan hard kravs en motivering i `forgranska_tillat`, precis som for
+    # ovriga harda -- da blir "kortet racker" ett stallningstagande i stallet
+    # for tystnad.
+    #
+    # Tredje gangen samma feltyp dyker upp i dag: en kontroll som observerar
+    # men inte tvingar fram ett beslut blir ignorerad. Jfr spegelkontrollen
+    # `synonym_saknas_trots_belagg` (4d) och registerkontrollen 2026-08-12.
+    "betydelse_kan_saknas",
     "uppslagsord_saknas",
     "frammande_uppslagsord",
     "synonym_fel_relation",
@@ -59,7 +74,6 @@ HARDA = (
     "register_motsager_markning",
 )
 MJUKA = (
-    "betydelse_kan_saknas",
     "doman_utan_stod",
     "uppslag_saknas",
     "synonym_saknas_trots_belagg",

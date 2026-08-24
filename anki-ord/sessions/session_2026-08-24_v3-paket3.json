@@ -1,0 +1,388 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080620271,
+      "ord": "degel",
+      "facit": "värmetåligt kärl<br><a href=\"https://www.google.com/imgres?q=degel&amp;imgurl=https%3A%2F%2Fhos.se%2F20.0.0.1%2F16255%2Fcache%2F16255_29199fbf61d20d804a90095a27ea2760.jpg&amp;imgrefurl=https%3A%2F%2Fhos.se%2Fhela-sortimentet%2Fhogstadiet-gymnasiet%2Fkemi%2Fglas-porslin%2Fporslin%2Fdegel-med-lock-20ml.-10st&amp;docid=7e-z2zGU6j6EnM&amp;tbnid=ZgT0aH4xMCzdcM&amp;vet=12ahUKEwjD9oya_9qLAxWVGRAIHbUdDTwQM3oECHUQAA..i&amp;w=1000&amp;h=1000&amp;hcb=2&amp;ved=2ahUKEwjD9oya_9qLAxWVGRAIHbUdDTwQM3oECHUQAA\"><div><div><div><img alt=\"Degel med lock 20ml. 10st\" src=\"paste-15b57865cdab9c9d85776ba2060084d2cd676bde.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Eldfast och kemikaliebeständigt kärl för kraftig upphettning och smältning",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "kärl",
+          "skål"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Silvret smältes ned i en <font color=\"#3498db\">degel</font> över gaslågan.",
+        "etymologi": "Gemensamt germanskt ord, besläktat med <i>deg</i> i den äldre betydelsen 'form, formningsredskap'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO definierar degel som en typ av 'skål' avsedd för upphettning -- det gör inte skål till en sann synonym utan bara till en överordnad term (hypernym), och samma sak gäller det ännu vidare 'kärl'. Man kan inte byta ut 'degeln' mot 'skålen' eller 'kärlet' och behålla betydelsen. SO ger inga synonymer alls för degel. Bättre: tom synonymlista, ev. 'smältdegel' som nära synonym.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620273,
+      "ord": "pivå",
+      "facit": "tapp<br><a href=\"https://www.google.com/imgres?q=sv%C3%A4ngtapp&amp;imgurl=https%3A%2F%2Fdam.agcocorp.com%2Fcontent%2Fdam%2Fmultisite%2Fmulti-brand%2Fparts%2Fmulti-region%2Fimages%2Fcoreparts%2F11602%2FV37271620-PIC1.jpg%2Fjcr%3Acontent%2Frenditions%2Fcq5dam.web.1280.1280.jpeg&amp;imgrefurl=https%3A%2F%2Fparts.agcocorp.com%2Fse%2Fsv%2Fp%2Fsv%25C3%25A4ngtapp%2Fv37271620&amp;docid=52bQmmToKnV4YM&amp;tbnid=ajSmX2AeHsWzsM&amp;vet=12ahUKEwiiiqH0w7iPAxWaFBAIHZG4FlwQM3oECCUQAA..i&amp;w=1280&amp;h=1280&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwiiiqH0w7iPAxWaFBAIHZG4FlwQM3oECCUQAA\"><div><div><div><img alt=\"SVÄNGTAPP V37271620 | AGCO Parts\" src=\"paste-c88200a96a1b66becdb039c8f0c4cd42d096eac4.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tapp som något vrider sig kring",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "svängtapp",
+          "tapp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fönstret satt på en <font color=\"#3498db\">pivå</font> och kunde vridas ett helt varv.",
+        "etymologi": "Av franska <i>pivot</i> 'tapp, vridpunkt'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse är 'svängtapp', vilket matchar kortets huvudbetydelse exakt. Synonymen 'svängtapp' är ordagrant SO:s definition -- en stark, korrekt synonym. 'tapp' är visserligen vidare men rimlig som sekundär synonym. Exempelmening, register och etymologi (fra. pivot) stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620277,
+      "ord": "göt",
+      "facit": "slags german; typ av metallblock<br><img alt=\"webp image\" src=\"paste_1768655211808.webp\"><br><a href=\"https://commons.wikimedia.org/wiki/File:St%C3%A5lg%C3%B6t.jpg\"><img src=\"250px-stålgöt.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gjutet metallblock avsett för vidare bearbetning ; invånare i Götaland vid forntidens slut ; anhängare av göticismen",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "gjutet metallblock",
+          "kokill"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Stålverket gjuter <font color=\"#3498db\">göt</font> som sedan valsas till plåt.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet fångar korrekt alla tre SO-homografer (gjutet metallblock; invånare i Götaland; göticismanhängare) -- ingen hel betydelse saknas. Men synonymen 'kokill' är sakligt fel: SO definierar kokill som 'gjutform av metall för metallgjutning', dvs. FORMEN man gjuter i -- inte det gjutna blocket (götet) själv. Det är precis den typ av nära-men-fel-ord som HP-provets ORD-del testar. Ta bort 'kokill'.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620282,
+      "ord": "acceptans",
+      "facit": "godkännande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tendens till accepterande av en viss företeelse hos en viss grupp människor",
+        "register": "formell, neutral",
+        "synonymer": [
+          "accepterande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att genomföra stora förändringar utan folklig <font color=\"#3498db\">acceptans</font> är omöjligt.",
+        "etymologi": "Av latin <i>accipere</i> 'ta emot'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'tendens till accepterande av viss företeelse hos viss grupp människor' matchar kortet nästan ordagrant. Synonymen 'accepterande' är rimlig och nära definitionen. Register, exempel och etymologi (lat. accipere) stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620284,
+      "ord": "ruva",
+      "facit": "skydda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ligga på ägg om fågel ; (bildligt) hålla sig i bakgrunden men beredd att handla, med bibetydelse av hot",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "ligga på ägg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hönan <font color=\"#3498db\">ruvade</font> på sina ägg i tre veckor.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelserna (ligga på ägg; bildligt hålla sig hotfullt i bakgrunden) stämmer med SO:s båda delbetydelser under verbet ruva. Men registret 'ngt ålderdomlig' är fel -- varken SO eller SAOL märker verbet ruva som ålderdomligt (endast en helt skild homograf, ruva = sårskorpa, är märkt ngt ålderdomlig i SO). 'Hönan ruvar' och 'ruva på hämnd' är levande, neutralt modernt språk. Registret borde vara neutralt.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620288,
+      "ord": "välboren",
+      "facit": "av adlig släkt<br><br>(well-borne)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har (låg)adlig härstamning, av adlig börd",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Brevet var ställt till den <font color=\"#3498db\">välborne</font> herr baronen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'som har (låg)adlig härstamning', märkt ålderdomlig, matchar kortet exakt. Ingen synonymlista behövs (SO ger ingen), exempelmening och register stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620302,
+      "ord": "tillskyndare",
+      "facit": "initiativtagare, pådrivare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som aktivt verkar för något",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han var en av reformens främsta <font color=\"#3498db\">tillskyndare</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'person som aktivt verkar för något' matchar kortet exakt. Tom synonymlista är inget fel i sig (SO:s 'initiativtagare' hade kunnat läggas till men behövs inte). Register och exempel stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620303,
+      "ord": "ignorant",
+      "facit": "okunnig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket okunnig person",
+        "register": "neutral, nedsättande",
+        "synonymer": [
+          "okunnig person"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att avfärda någon som <font color=\"#3498db\">ignorant</font> är sällan ett sakargument.",
+        "etymologi": "Av latin <i>ignorare</i> 'inte veta'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet visar bara substantivbetydelsen ('mycket okunnig person'). SO har dessutom en egen adjektivhomograf: 'mycket okunnig eller obildad' (t.ex. 'en ignorant politiker'). Den betydelsen saknas helt på kortet.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620306,
+      "ord": "asyl",
+      "facit": "fristad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rätt för flykting att uppehålla sig i ett främmande land",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Familjen sökte <font color=\"#3498db\">asyl</font> efter att ha flytt undan kriget.",
+        "etymologi": "Av grekiska <i>asylon</i> 'fristad, okränkbar plats'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger två betydelser: (1) 'rätt att uppehålla sig i ett främmande land, särsk. för flykting' och (2) det allmännare 'tillflyktsort, fristad'. Kortet har bara (1), och smalnar dessutom av den till att gälla enbart flyktingar trots att SO:s definition är bredare ('särskilt', inte uteslutande). Facit 'fristad' pekar faktiskt på betydelse (2), som kortet helt saknar.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620307,
+      "ord": "eunuck",
+      "facit": "kastrerad man",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kastrerad man, särskilt om haremsväktare i Orienten",
+        "register": "ngt ålderdomlig, neutral, historia",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vid det osmanska hovet tjänstgjorde <font color=\"#3498db\">eunucker</font> som väktare.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'kastrerad man särsk. om haremsväktare i Orienten' matchar kortet exakt, liksom registret (historisk/ngt ålderdomlig term). Exempelmening stämmer sakligt.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620308,
+      "ord": "bivack",
+      "facit": "nattläger utomhus<br><div><div><a href=\"https://www.google.com/imgres?q=bivack&amp;imgurl=https%3A%2F%2Fusercontent.one%2Fwp%2Fwww.allinnature.se%2Fwp-content%2Fuploads%2F2023%2F08%2FBivack-6-enmans-nodbivack-med-eldstad-framfor-1024x683.jpg%3Fmedia%3D1728835929&amp;imgrefurl=https%3A%2F%2Fwww.allinnature.se%2Fnodbivack-kan-radda-ditt-liv-del-2%2F&amp;docid=iWtv63JO5tlzFM&amp;tbnid=inVWv0_GQHDSfM&amp;vet=12ahUKEwj-14mGxNOLAxWDHxAIHZXXHgEQM3oECFoQAA..i&amp;w=1024&amp;h=683&amp;hcb=2&amp;ved=2ahUKEwj-14mGxNOLAxWDHxAIHZXXHgEQM3oECFoQAA\"><img alt=\"All in Nature Sweden\" src=\"paste-1de8e01e54b061e48c6adafcc59bcbb0f64084e5.webp\"></a></div><div><a href=\"https://www.google.com/imgres?q=bivack&amp;imgurl=https%3A%2F%2Fstaffansandberg.se%2Fwp-content%2Fuploads%2F2015%2F05%2Fsnobivack-snogrop-med-skidor.jpg&amp;imgrefurl=https%3A%2F%2Fstaffansandberg.se%2Fbygga-snobivack%2F&amp;docid=P7KGgpTVJroKXM&amp;tbnid=ajJbw_q3R7GN9M&amp;vet=12ahUKEwjTmIigxNOLAxXTBxAIHcdtDFMQM3oECHEQAA..i&amp;w=770&amp;h=513&amp;hcb=2&amp;ved=2ahUKEwjTmIigxNOLAxXTBxAIHcdtDFMQM3oECHEQAA\"><div><div><div><img alt=\"Bygga snöbivack | StaffanSandberg.se\" src=\"images-d9286a0e0b4987a4a4d2a58eb44a652df29c0aac.webp\"></div></div></div></a></div><div><img src=\"paste-32d8293d70c626ac5c715008a44f1e3da8c66b7b.webp\"></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Militärt nattläger i tält, vindskydd eller snögrotta",
+        "register": "fackspråklig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Patrullen slog <font color=\"#3498db\">bivack</font> i skogsbrynet innan mörkret föll.",
+        "etymologi": "Av franska <i>bivouac</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Både SO ('militärt nattläger i tält, vindskydd el. snögrotta') och SAOL ('trupps nattläger utomhus', ämnesområde mil.) bekräftar att ordet är specifikt militärt, vilket kortet korrekt återger. Exempel och etymologi (fra. bivouac) stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620309,
+      "ord": "tidelag",
+      "facit": "otukt med djur",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Könsumgänge mellan människa och djur",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Tidelag</font> är straffbart enligt djurskyddslagen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'könsumgänge mellan människa och djur' matchar kortet exakt. Register och exempelmening är korrekta och sakligt rimliga.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620310,
+      "ord": "apodiktisk",
+      "facit": "oemotsäglig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oemotsäglig, som inte går att bestrida",
+        "register": "litterär, neutral",
+        "synonymer": [
+          "oemotsäglig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han uttalade sig i en <font color=\"#3498db\">apodiktisk</font> ton som inte tålde invändningar.",
+        "etymologi": "Av grekiska <i>apodeiktikos</i> 'bevisande'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'oemotsäglig' matchar kortet exakt. Synonymen 'oemotsäglig' är ordagrant SO:s definition. Exempel och etymologi (grek. apodeiktikos) stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620311,
+      "ord": "akustik",
+      "facit": "läran om ljud",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om ljudet som vågrörelse ; ljudverkan och ljudförhållanden i ett rum",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "ljudverkan"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Konserthusets <font color=\"#3498db\">akustik</font> är känd över hela Europa.",
+        "etymologi": "Av grekiska <i>akouein</i> 'höra'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: 'läran om ljudet som vågrörelse' och 'ljudförhållanden i lokal e.d.'. Kortet fångar båda korrekt separerade. Exempel och etymologi (grek. akouein) stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620312,
+      "ord": "inrotad",
+      "facit": "invand",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fast etablerad och svår att avlägsna, särskilt om beteenden och föreställningar",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "fast etablerad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vanan var djupt <font color=\"#3498db\">inrotad</font> efter tjugo år.",
+        "etymologi": "Bilden är något som slagit rot och därför inte går att rycka upp."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse 'fast etablerad och svår att avlägsna särsk. om beteende' matchar kortet väl (utökat med 'föreställningar', en rimlig utvidgning). Synonymen 'fast etablerad' är hämtad direkt ur definitionen. Etymologin om rot-metaforen hjälper minnet och är sann.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620315,
+      "ord": "burlesk",
+      "facit": "överdrivet komisk; skurril",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Komisk på ett grovt eller drastiskt sätt ; burleskt verk",
+        "register": "litterär, skämtsam",
+        "synonymer": [
+          "tokrolig",
+          "grovt komisk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Pjäsen var en <font color=\"#3498db\">burlesk</font> uppgörelse med maktens fåfänga.",
+        "etymologi": "Av italienska <i>burla</i> 'skämt, upptåg'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har både adjektivbetydelsen 'komisk på ett grovt eller drastiskt sätt' och en egen litterär substantivbetydelse 'konstnärligt verk kännetecknat av burlesk humor', korrekt separerade med ' ; ' på kortet. Exempel och etymologi (ital. burla) stämmer.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620316,
+      "ord": "evidensbaserad",
+      "facit": "vetenskapligt belagd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som bygger på systematisk användning av vetenskapliga faktaunderlag och beprövad erfarenhet",
+        "register": "fackspråklig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vården ska vara <font color=\"#3498db\">evidensbaserad</font>, inte byggd på tradition.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'som bygger på systematisk användning av vetenskapliga faktaunderlag och beprövad erfarenhet' matchar kortet ordagrant. Exempelmening ('evidensbaserad medicin/vård') stämmer med SO:s egna exempel.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620317,
+      "ord": "karikatyr",
+      "facit": "nidbild",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bild som överdriver karakteristiska drag i förlöjligande syfte ; vrångbild",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "vrångbild"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Tidningen publicerade en <font color=\"#3498db\">karikatyr</font> av statsministern.",
+        "etymologi": "Av italienska <i>caricare</i> 'överlasta, överdriva'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO:s grunddefinition matchar kortets första del, men kortets andra 'betydelse' -- 'vrångbild' -- är i SO bara en av flera nära synonymer (tillsammans med nidbild, skämtteckning), inte en egen betydelse; att separera den med ' ; ' som en självständig betydelse är fel bruk av skiljetecknet. Samtidigt saknas SO:s verkliga utökade betydelse: karikatyr om en förvrängd/orimlig version av något (t.ex. 'rättegången blev en karikatyr av rättvisa'). Den betydelsen finns inte på kortet.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620318,
+      "ord": "abakus",
+      "facit": "matematisk kulram<br><a href=\"https://commons.wikimedia.org/wiki/File:Noe_abacus.jpg\"><img src=\"250px-noe_abacus.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kulram, räkneram med kulor på stavar",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "kulram"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han räknade snabbare på <font color=\"#3498db\">abakus</font> än de andra gjorde på miniräknare.",
+        "etymologi": "Av grekiska <i>abax</i> 'bräde, tavla'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Kortet har bara kulram-betydelsen. SO har en andra, helt skild arkitektonisk betydelse: abakus som 'platta som kröner ett kapitäl ... särsk. i klassisk kolonnordning' (byggnadsdelen ovanpå en pelarkapitäl). Den betydelsen saknas helt på kortet.",
+      "granskning_turer_post": 27,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 27,
+  "granskning_kostnad_usd": 0.7768982000000001,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 19,
+      "turer": 27,
+      "turkrav": 5,
+      "kostnad_usd": 0.7768982000000001
+    }
+  ]
+}
