@@ -359,6 +359,27 @@ def _har_ordboksbelagg(syn, belagg):
     delar = re.findall(r"[a-zåäöéèü]+", s)
     if delar and delar[0] in belagg:
         return True
+    # Synonymen står ORDAGRANT inne i en definitionsfras. Tillagt 2026-08-24.
+    #
+    # Regeln lyder att synonymen får skrivas in om den "står i SO:s eller
+    # SAOL:s definitionstext". `_ordboksbelagg` delar bara på ; och , och
+    # lägger in hela ledet plus dess FÖRSTA ord -- ord längre in i en fras
+    # blev därför aldrig belagda. SO:s definition av `försaka` är "uppoffra
+    # sig genom att avstå från", och "avstå från" underkändes trots att det
+    # står där. Det är implementationen som var snävare än regeln.
+    #
+    # Ordgräns kollas för hand i stället för med regex: en tidigare version av
+    # den här filen fick en literal backspace () inbakad när ett regex
+    # skrevs via ett patchskript, och matchade då aldrig.
+    for b in belagg:
+        i = b.find(s)
+        while i != -1:
+            fore = b[i - 1] if i > 0 else " "
+            efter = b[i + len(s)] if i + len(s) < len(b) else " "
+            if not fore.isalpha() and not efter.isalpha():
+                return True
+            i = b.find(s, i + 1)
+
     # Böjningsvariant: ordboken skriver singular, kortet plural (rarietet/
     # rariteter). Stammen får matcha, men bara mot ett belagt ord -- inte mot
     # hela underlaget, vilket var den gamla regelns lucka.
