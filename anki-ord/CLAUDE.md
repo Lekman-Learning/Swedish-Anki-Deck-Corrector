@@ -4131,3 +4131,76 @@ kort som togs ur kön och aldrig kom tillbaka — samma feltyp som
 form: `POOL_FRAGA["nya"]` exkluderar `-tag:v3_dagsbatch::*` utan undantag, så
 ett underkänt spår A-kort kan **aldrig** plockas igen av `kortbyggare.py`.
 Det är inte medvetet valt, och det är därför siffran bara växer.
+
+---
+
+## Batch 6, 25 augusti (natt): 9 % underkänt — och en förorening jag inte såg
+
+**20 av 22 godkända.** Två pausade före skrivning (`glutinös`, `mockant` — bara
+SAOB-lemman utan definitionstext i API:t, saknas helt i SO och SAOL).
+
+Full v3 i decket: **1496 → 1516** (+20). Kostnad 0,88 USD.
+
+### Det egentliga felet: synonymer.se läckte in i BETYDELSERNA
+
+Förgranskningen gav **24 hårda anmärkningar** vid första körningen, tio av dem
+`synonym_utan_ordboksbelagg`. Jag hade tagit synonymer ur synonymer.se:s
+redaktionella lista i stället för ur SO:s och SAOL:s definitionstext — samma fel
+som sänkte `degel` i batch 3.
+
+Jag strök synonymerna och kom till noll hårda flaggor. **Men det räckte inte**,
+och det är poängen: föroreningen satt kvar i **huvudbetydelserna**.
+
+`jäsig` underkändes för att kortet sa *"(vardagligt) mallig och överlägsen"*.
+SAOL säger *"med små blåsor"* och, vardagligt, *"fin, flott"*. Orden *mallig*,
+*överlägsen*, *vräkig* och *snobbig* stod i **synonymer.se:s lista**, inte i
+någon ordbok. Jag hade läst fel källa när jag skrev betydelsen, inte bara när
+jag fyllde synonymfältet.
+
+**Regeln som följer:** `synonym_utan_ordboksbelagg` är en signal om att fel
+källa lästs över huvud taget för det kortet. När den flaggan slår ska
+**huvudbetydelsen läsas om mot SO/SAOL**, inte bara synonymfältet rensas.
+Spärren fångar bara det fält den är byggd för; felet den avslöjar kan sitta i
+ett annat.
+
+### Andra underkännandet: ett led i SAOL som föll bort
+
+`mör` underkändes för en saknad tredje betydelse. SAOL skriver
+*"lös, spröd; **bildl. foglig**"* — tre delar, och jag tog två. Den bildliga
+betydelsen (medgörlig, någon vars motstånd brutits ner) fanns i källan hela
+tiden.
+
+Det är batch 3:s fel i ren form: **missa inte betydelser källan HAR.** Att det
+återkommer efter att `betydelse_kan_saknas` gjorts hård beror på att spärren
+räknar SO:s poster, inte SAOL:s semikolonseparerade led. **SAOL:s `;` skiljer
+betydelser och måste läsas manuellt.**
+
+Granskaren invände dessutom mot synonymerna `spröd` och `lös` — de står
+ordagrant i SAOL:s definition, men *spröd* är nästan motsatsen till *mör* om
+kött. Här hade ordboken formellt rätt och granskaren sakligt rätt. Värt att
+minnas: ordboksbelägg är ett golv, inte ett tak.
+
+### Åtta hårda flaggor kontrollerade mot råstrukturen — sju var falska
+
+Batch 5:s regel höll. Sju `betydelse_kan_saknas` var underbetydelser med
+`definition: None`, alltså användningsutvidgningar som sammandraget ändå
+räknar. Den åttonde (`mör`) var två skilda lemman som delar grundform:
+adjektivet *mör* och substantivet *mö*. Samma sak låg bakom båda
+registerflaggorna — markeringen *ålderdomligt* står på *mö*.
+
+### En bugg jag införde: dubblerad nyckel i TILLAT
+
+`djuplodande` stod två gånger i dicten. Den senare posten skrev tyst över den
+förra, så motiveringen för `frammande_uppslagsord` försvann utan varning.
+Python varnar inte för dubblerade dict-nycklar. Kontrollera vid sammanslagning.
+
+### Mätt sluttillstånd
+
+| | |
+|---|---|
+| Full v3 | **1516** |
+| Lager (osuspenderade) | 1526 |
+| Pool kvar, spår A | 6036 |
+| Ackumulerade underkända | **163** ← växer fortfarande, kan aldrig plockas igen |
+| Pausade | 29 |
+| Repetitionsskuld | 830 |
