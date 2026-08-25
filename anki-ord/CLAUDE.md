@@ -4204,3 +4204,94 @@ Python varnar inte för dubblerade dict-nycklar. Kontrollera vid sammanslagning.
 | Ackumulerade underkända | **163** ← växer fortfarande, kan aldrig plockas igen |
 | Pausade | 29 |
 | Repetitionsskuld | 830 |
+
+---
+
+## 80-kortsomgangen, 25 augusti: 65 slappta, 14 % underkant
+
+Adam bad om 80 nya is:new-kort granskade till full v3. Utfall:
+
+| | |
+|---|---|
+| Hamtade ur poolen | 80 |
+| Skrivna och applicerade | 76 |
+| **Godkanda och slappta** | **65** |
+| Underkanda | 11 (14 %) |
+| Pausade, ingen ordbokskalla | 4 |
+
+Full v3 i decket: **1516 -> 1581** (+65). Kostnad 4,06 USD over fyra
+parallella blindgranskningar.
+
+### Nytt verktyg: `visa_uppslag.py`
+
+Batch 6 underkandes pa att synonymer.se lackt in i betydelserna. Slutsatsen
+var att sa lange kallan syns i utskriften lacker den in, sa den har visaren
+skriver **aldrig** ut synonymer.se. Den visar SO:s rastruktur (ett lemma i
+taget, med underbetydelser markta som utvidgning nar `definition` ar None)
+och SAOL ordagrant med semikolonen kvar.
+
+Den validerades omedelbart: korda pa batch 6:s tva underkanda kort visade den
+exakt det jag missat -- SAOL:s `mor` som "los, sprod; **bildl. foglig**" och
+`jasig` som "**fin, flott** [vard.]", inte "mallig och overlagsen".
+
+Tre fixar under korningen:
+
+1. **Vagrar dumpa fuzzy-brus.** `ortodenti` saknar exakt uppslagstraff och gav
+   30 irrelevanta lemman, fran `ortodox` till `orda`. Att skriva ut dem ar
+   aktivt skadligt: nagot av dem SER ut att passa, och da skrivs kortet ur fel
+   artikel. Nu skrivs en varning och de tre narmaste lemmana.
+2. **Ordfilter pa flerordsuttryck.** `fa gehor for` fick exakt traff men slapte
+   anda igenom 23 lemman som inte ar ord i uppslaget.
+3. **`definitionstillagg` skrivs ut** -- se nedan.
+
+### Den dyraste luckan: definitionstillagg
+
+`definitionstillagg` ar ett eget falt i SO:s rastruktur och bar **obligatorisk
+kontext**, inte en valfri parentes:
+
+    afficiera  DEF: utova (skadlig) inverkan pa  <<om sjukdom>>
+    negligera  DEF: ge sken av att inte lagga marke till
+               <<nagon/nagot; ofta med bibetydelse av nedvardering>>
+
+Visaren skrev inte ut faltet. Bada korten underkandes pa precis det som stod
+dar. Faltet visas nu inom dubbla vinkelparenteser.
+
+Det ar samma feltyp som synonymer.se-lackan: **ett verktyg som doljer ett falt
+producerar kort som saknar det faltet.** Spaerrarna kan inte fanga det, for de
+jamfor mot samma ofullstandiga lasning.
+
+### Underkannandena, sorterade
+
+**Jag delade det kallan holl ihop (2 kort).** SAOL:s KOMMA betyder samma
+betydelse; bara SEMIKOLON skiljer betydelser. `diktat` ar "patvingad losning,
+padbud" -- ett led, inte tva. Samma pa `overlappa`.
+
+Jag hade regeln om semikolon men inte den om komma. Bada behovs, och de ar
+varandras spegelbild.
+
+**Jag missade en betydelse kallan har (5 kort).** `resning` (SAOL:s fjarde led
+"moralisk kvalitet"), `salutera` ("hylla"), `androgyn` (den anatomiska
+betydelsen), `antagonist` (den medicinska), `inackordering` (om djur).
+
+**Synonymer som inte holl (2 kort).** `skravel` fick "storskryt", som SAOL
+bara kanner som verb. `traktor` fick "kallarmastare", som SO anger som
+kohyponym -- samma fel som `degel`/`skal` i batch 3, i ny forkladnad.
+
+**Definitionstillagg (2 kort).** Se ovan.
+
+### Skulden vaxer fortfarande
+
+| | |
+|---|---|
+| Ackumulerade underkanda | **174** (+11) |
+| Pausade | **32** (+4) |
+| Pool kvar, spar A | 5 956 |
+
+`POOL_FRAGA["nya"]` exkluderar `-tag:v3_dagsbatch::*` utan undantag, sa inget
+av de 174 kan hamtas igen av `kortbyggare.py`. Med 11 nya per 80-kortsomgang
+vaxer posten snabbare an den nagonsin betas av. **Det ar nasta sak att fixa i
+pipelinen, fore fler nya kort.**
+
+Tre av de pausade ar dessutom inte kallfel utan **fel Framsida i decket**:
+`ortodenti` ska vara *ortodonti*, `reaktioner` ska vara *reaktion*.
+`proposed_ord` stods inte av v3-vagen, sa de maste rattas for hand.

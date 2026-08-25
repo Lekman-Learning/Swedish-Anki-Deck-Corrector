@@ -1,0 +1,382 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080621452,
+      "ord": "bondfångeri",
+      "facit": "lurendrejeri",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bedrägeri av enklare slag",
+        "register": "neutral, nedsättande",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Erbjudandet var rent <font color=\"#3498db\">bondfångeri</font>.",
+        "etymologi": "Till <i>bonde</i> och <i>fånga</i> — ursprungligen om att lura godtrogna lantbor i staden."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO (uppslagen): 'bedrägeri som bondfångare gör sig skyldig till', vilket kortets 'bedrägeri av enklare slag' fångar väl; facit lurendrejeri stämmer. Endast en betydelse i SO/SAOL, ingen saknas. Etymologin (bonde+fånga, om att lura lantbor i staden) är korrekt och minnesstödjande.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621405,
+      "ord": "desinfektera",
+      "facit": "befria från ohyra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Desinficera, oskadliggöra smittämnen",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "desinficera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Såret <font color=\"#3498db\">desinfekterades</font> innan förbandet lades om.",
+        "etymologi": "Till <i>des-</i> 'bort' och latin <i>inficere</i> 'smitta'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast betydelsen 'desinficera'; kortets 'desinficera, oskadliggöra smittämnen' är en korrekt utvidgning. Synonymen 'desinficera' är ordboksbekräftad (SO definierar ordet med just det ordet). Exempel och etymologi stämmer.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621459,
+      "ord": "diadem",
+      "facit": "hårsmycke",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Halvcirkelformat pann- eller hårsmycke",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Bruden bar ett <font color=\"#3498db\">diadem</font> av pärlor.",
+        "etymologi": "Av grekiska <i>diadema</i> 'pannband', till <i>diadein</i> 'binda om'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'halvcirkelformat pann- eller hårsmycke...', matchar kortets huvudbetydelse och facit 'hårsmycke'. En betydelse i både SO och SAOL. Etymologin (diadema/diadein 'binda om') stämmer.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621455,
+      "ord": "diktat",
+      "facit": "befallning, påbud",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Påtvingad lösning av en motsättning ; påbud",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "påbud"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fredsavtalet uppfattades som ett <font color=\"#3498db\">diktat</font> från segrarmakterna.",
+        "etymologi": "Av latin <i>dictatum</i> 'det befallda', till <i>dictare</i> 'diktera, befalla'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Både SO och SAOL ger 'diktat' som EN sammanhållen betydelse (SAOL: 'påtvingad lösning, påbud', kommaseparerat -- inte uppdelat i skilda betydelser). Kortet skriver ändå 'Påtvingad lösning av en motsättning ; påbud' med semikolon, vilket enligt reglerna ska markera genuint skilda betydelser. Fel form -- 'påbud' är en omformulering av samma betydelse och borde stått efter ' / ', t.ex. 'Påtvingad lösning av en motsättning / påbud'.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621442,
+      "ord": "djurisk",
+      "facit": "driftstyrd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som visar ett rent driftstyrt och därför icke-mänskligt beteende",
+        "register": "neutral, nedsättande",
+        "synonymer": [
+          "rå",
+          "brutal"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Överfallet hade en <font color=\"#3498db\">djurisk</font> brutalitet.",
+        "etymologi": "Till <i>djur</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som visar ett rent driftstyrt (och därför icke-mänskligt) beteende' -- matchar kortet exakt. SAOL bekräftar synonymerna ordagrant ('rå, brutal' står i SAOL:s egen definition), så de är inte gissade nästan-synonymer. En betydelse, inget saknas.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621402,
+      "ord": "ekumenik",
+      "facit": "strävan efter kristen kyrklig enhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Strävan efter enhet mellan olika kristna samfund",
+        "register": "fackspråklig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Församlingen engagerade sig i <font color=\"#3498db\">ekumenik</font> och höll gemensamma gudstjänster.",
+        "etymologi": "Av grekiska <i>oikoumene</i> 'den bebodda världen', till <i>oikos</i> 'hus'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger en betydelse: strävan efter enhet mellan kristna samfund. SAOL lägger till 'dialog med andra religioner' som en nyans inom samma odelade definition, inte en egen betydelse. Facit och kort stämmer överens.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621487,
+      "ord": "entitet",
+      "facit": "ting eller väsen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Avgränsad och enhetlig företeelse",
+        "register": "formell, neutral",
+        "synonymer": [
+          "ting",
+          "föremål"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Varje <font color=\"#3498db\">entitet</font> i databasen har ett eget id.",
+        "etymologi": "Av medeltidslatin <i>entitas</i>, till <i>ens</i> 'varande'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'avgränsad och enhetlig företeelse av konkret el. abstrakt slag'; SAOL: 'ting, föremål; abstrakt företeelse'. Kortets synonymer (ting, föremål) står ordagrant i SAOL:s definition, alltså ordboksbelagda. SO delar inte upp konkret/abstrakt i skilda betydelser, så ingen betydelse saknas.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621485,
+      "ord": "eskapism",
+      "facit": "verklighetsflykt<br><div><div><div><a href=\"https://www.google.com/imgres?q=escapism&amp;imgurl=https%3A%2F%2Flegacy.welldoing.org%2Fstorage%2Fapp%2Fuploads%2Fpublic%2F58e%2Ff8b%2Fa29%2F58ef8ba2905c8570965535.png&amp;imgrefurl=https%3A%2F%2Fwelldoing.org%2Farticle%2Fwhy-escapism-can-be-harmful&amp;docid=2ARv_uWlJwF0XM&amp;tbnid=M45HWqd2cGuiyM&amp;vet=12ahUKEwjXs9LftLqMAxX0KRAIHawhHoIQM3oECBwQAA..i&amp;w=800&amp;h=479&amp;hcb=2&amp;ved=2ahUKEwjXs9LftLqMAxX0KRAIHawhHoIQM3oECBwQAA\"><img alt=\"Why Escapism can be Harmful\" src=\"paste-e6ef02d63484d017636edab9a1be289cc9277fac.webp\"></a></div></div></div><div><a href=\"https://www.google.com/imgres?q=escapism&amp;imgurl=https%3A%2F%2Fstatic.tvtropes.org%2Fpmwiki%2Fpub%2Fimages%2Ffantasy_escapism.png&amp;imgrefurl=https%3A%2F%2Ftvtropes.org%2Fpmwiki%2Fpmwiki.php%2FMain%2FEscapism&amp;docid=Kvpn_sQqOKywgM&amp;tbnid=DPoCxYiVd0Dw6M&amp;vet=12ahUKEwjXs9LftLqMAxX0KRAIHawhHoIQM3oFCIgBEAA..i&amp;w=299&amp;h=381&amp;hcb=2&amp;ved=2ahUKEwjXs9LftLqMAxX0KRAIHawhHoIQM3oFCIgBEAA\"><div><div><div><img alt=\"Escapism - TV Tropes\" src=\"paste-8981503b0f74b9282da0cf5f9612369928be351d.webp\"></div></div></div></a></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Flykt undan verklighetens problem",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "verklighetsflykt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han läste fantasy som ren <font color=\"#3498db\">eskapism</font>.",
+        "etymologi": "Till engelska <i>escape</i> 'fly', av fornfranska <i>eschaper</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'undflyende av verklighetens problem'; SAOL: 'flykt undan nuet; verklighetsflykt'. Kortets definition och synonymen 'verklighetsflykt' (ordagrant i SAOL) stämmer. En betydelse.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621422,
+      "ord": "familjär",
+      "facit": "förtrolig och bekant",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Otvungen och förtrolig i umgänget, ibland alltför intim ; allmänt bekant",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "förtrolig",
+          "ogenerad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han slog an en <font color=\"#3498db\">familjär</font> ton som chefen inte uppskattade.",
+        "etymologi": "Av latin <i>familiaris</i> 'som hör till huset', till <i>familia</i> 'hushåll'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två skilda betydelser: (1) otvungen/ibland alltför intim i umgänget, (2) allmänt bekant -- kortet fångar båda, korrekt separerade med ' ; '. SAOL:s definition 'förtrolig, ogenerad' matchar kortets synonymer ordagrant.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621444,
+      "ord": "fasa ut",
+      "facit": "successivt upphöra med",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Successivt avveckla något",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Kommunen ska <font color=\"#3498db\">fasa ut</font> alla oljepannor till 2030.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'successivt avveckla'/'stegvis avlägsna' -- matchar kortet exakt. En betydelse; tom synonymlista är inget fel; etymologin saknas, vilket är tillåtet.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621384,
+      "ord": "frekventera",
+      "facit": "besöka ofta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Regelbundet besöka",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">frekventerade</font> stadens finare restauranger.",
+        "etymologi": "Av latin <i>frequentare</i> 'ofta besöka', till <i>frequens</i> 'talrik, tät'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'regelbundet besöka (el. betjäna sig av)' -- kortets 'Regelbundet besöka' fångar kärnan. En betydelse i båda ordböckerna, ingen saknas.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621466,
+      "ord": "få gehör för",
+      "facit": "få gensvar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Få förståelse och samtycke för något",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon fick till slut <font color=\"#3498db\">gehör</font> för sitt förslag i styrelsen.",
+        "etymologi": "Till <i>gehör</i>, av tyska <i>Gehör</i> 'hörsel', till <i>hören</i> 'höra'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s andra betydelse av 'gehör': 'förståelse och samtycke hos annan person', med valensmönstret '(få) gehör (för något)' -- matchar kortet exakt. Facit 'få gensvar' stämmer. SAOL bekräftar att gehör har två skilda betydelser (musikaliskt/stöd); kortet använder rätt en.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621420,
+      "ord": "förment",
+      "facit": "påstådd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som med orätt påstås vara något eller ha en viss egenskap",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "förmodad",
+          "inbillad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">förmenta</font> expertis visade sig sakna grund.",
+        "etymologi": "Perfekt particip av <i>förmena</i> 'anse', efter tyska <i>vermeinen</i>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som (med orätt) påstås vara något eller ha en viss egenskap'. SAOL definierar ordet med exakt 'förmodad, inbillad' -- kortets synonymer är alltså ordagrant hämtade ur ordboken, inte gissade nästan-synonymer. En betydelse.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621410,
+      "ord": "gråben",
+      "facit": "varg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Varg",
+        "register": "ngt ålderdomlig, skämtsam",
+        "synonymer": [
+          "varg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I sagorna smyger <font color=\"#3498db\">gråben</font> kring gårdarna om natten.",
+        "etymologi": "Förskönande omskrivning — vargens rätta namn ansågs farligt att uttala."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda betydelsen är 'varg', ålderdomlig förskönande omskrivning -- matchar kortet och facit exakt. Etymologin om att vargens rätta namn ansågs farligt att uttala är vedertagen och minnesstödjande.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621467,
+      "ord": "harpun",
+      "facit": "spjut",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Spjutliknande fångstredskap med hulling, som skjuts eller kastas mot villebrådet",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Valfångarna sköt en <font color=\"#3498db\">harpun</font> från fören.",
+        "etymologi": "Av franska <i>harpon</i>, till <i>harpe</i> 'klo, krok'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda betydelsen, spjutliknande fångstredskap -- matchar kortet i detalj (hulling, skjuts/kastas mot villebråd). Etymologin (franska harpon/harpe) stämmer.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621449,
+      "ord": "inackordering",
+      "facit": "mat och husrum",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Permanent kost och logi i någons bostad ; person som bor inackorderad",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Studenten sökte <font color=\"#3498db\">inackordering</font> hos en familj i stan.",
+        "etymologi": "Till <i>ackord</i> i äldre betydelsen 'överenskommelse'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO listar tre betydelser: (1) kost och logi, (2) person som bor inackorderad, (3) utvidgad användning 'det att inhysa och utfodra andras djur' (t.ex. hästinackordering på stall, med eget exempel i SO). Kortet tar med (1) och (2) men saknar helt djur-betydelsen (3), som är en etablerad och vanlig användning i dag. Lägg till den tredje betydelsen.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621411,
+      "ord": "indisponibel",
+      "facit": "otillgänglig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inte tillgänglig, som man inte förfogar över",
+        "register": "formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Medlen är <font color=\"#3498db\">indisponibla</font> fram till årsskiftet.",
+        "etymologi": "Till latin <i>in-</i> 'o-' och <i>disponere</i> 'förfoga över'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda betydelsen 'inte tillgänglig, som man inte förfogar över' -- matchar kortet. Kontrollerade även 'indisponerad' (ett annat ord, om person i dålig form/lätt sjuk) för att utesluta sammanblandning; kortet blandar inte ihop dem.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621484,
+      "ord": "irreal",
+      "facit": "overklig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som inte är verklig eller faktisk",
+        "register": "fackspråklig, neutral, filosofi",
+        "synonymer": [
+          "overklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Filosofen skiljer mellan reala och <font color=\"#3498db\">irreala</font> storheter.",
+        "etymologi": "Till latin <i>in-</i> 'o-' och <i>realis</i> 'verklig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: enda betydelsen 'som inte är verklig eller faktisk'/'overklig' -- matchar kortet och facit; synonymen 'overklig' är ordagrant SAOL:s definition. Mindre anmärkning: registerfältet har tre värden ('fackspråklig, neutral, filosofi') i stället för två axlar (form, valör), en formavvikelse som dock inte påverkar sakinnehållet.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621470,
+      "ord": "konservativ",
+      "facit": "samhällsbevarande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som vill bevara det bestående ; (om behandling) som undviker operativa ingrepp",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Läkaren valde en <font color=\"#3498db\">konservativ</font> behandling i stället för operation.",
+        "etymologi": "Av latin <i>conservare</i> 'bevara', till <i>servare</i> 'vakta, rädda'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två skilda betydelser: (1) politiskt/allmänt 'vill bevara det bestående', (2) medicinskt 'undviker operativa ingrepp' -- kortet fångar båda, rätt separerade med ' ; '. Etymologin (till latin conservare) är i sak korrekt även om SO anger engelska 'conservative' som närmaste källspråk; kärnbetydelsen 'bevara' är ändå rättvisande och minnesstödjande.",
+      "granskning_turer_post": 42,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 42,
+  "granskning_kostnad_usd": 0.9609190999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 19,
+      "turer": 42,
+      "turkrav": 5,
+      "kostnad_usd": 0.9609190999999999
+    }
+  ]
+}
