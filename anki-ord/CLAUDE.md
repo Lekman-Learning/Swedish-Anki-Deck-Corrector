@@ -4295,3 +4295,42 @@ pipelinen, fore fler nya kort.**
 Tre av de pausade ar dessutom inte kallfel utan **fel Framsida i decket**:
 `ortodenti` ska vara *ortodonti*, `reaktioner` ska vara *reaktion*.
 `proposed_ord` stods inte av v3-vagen, sa de maste rattas for hand.
+
+
+## RATTELSE 2026-08-25: de 174 underkanda ar INTE oatkomliga
+
+Jag har pastatt motsatsen tre ganger, och skrev in det har i den har filen
+sa sent som i natt, med formuleringen:
+
+> `POOL_FRAGA["nya"]` exkluderar `-tag:v3_dagsbatch::*` utan undantag, sa
+> inget av de 174 kan hamtas igen av `kortbyggare.py`. [...] **Det ar nasta
+> sak att fixa i pipelinen, fore fler nya kort.**
+
+**Det ar fel.** Mattt mot AnkiConnect 2026-08-25:
+
+| Fraga | Antal |
+|---|---|
+| Underkanda totalt | **174** |
+| ...som bar `kortformat::v2` | **174** (alla) |
+| ...som ligger i spar B:s pool just nu | **143** |
+| ...som redan blivit omgranskade och godkanda | **31** |
+| ...som ar oatkomliga for `kortbyggare.py` | **0** |
+
+**Felet i mitt resonemang:** jag lasta spar A:s poolfraga, sag
+`-tag:v3_dagsbatch::*`, och drog slutsatsen att ett underkant kort aldrig kan
+plockas igen. Men ett underkant kort har redan passerat `applicera`, och
+`applicera` satter `kortformat::v2`. Darmed faller kortet ur spar A:s pool pa
+`-tag:kortformat::v2` -- och IN i spar B:s, som sedan 11 augusti uttryckligen
+ar byggd for just detta ("Ett underkant kort ar per definition trasigt och ska
+tillbaka i kon FORST"). **Fixen jag efterlyste gjordes for tva veckor sedan.**
+
+Jag harledde ur koden i stallet for att mata mot decket. Tre ganger.
+
+**Det som faktiskt ar kvar, och det ar mycket mindre:** 31 kort bar bade
+`v3_underkand*` OCH `oberoende_verifierad::*`. De ar omgranskade och godkanda,
+men den gamla underkand-taggen togs aldrig bort, sa de blaser upp siffran med
+18 %. En taggstadning, inte en pipelinebugg.
+
+**Regel harav:** en pastadd blockering i decket ska mätas mot AnkiConnect
+innan den skrivs ned. En fraga tar tio sekunder; det har pastaendet stod i
+tre rapporter.
