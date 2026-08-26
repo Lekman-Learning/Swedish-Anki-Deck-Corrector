@@ -1,0 +1,448 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080621694,
+      "ord": "bistå",
+      "facit": "hjälpa till",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hjälpa någon, ofta med pengar eller praktiskt stöd",
+        "register": "formell, neutral",
+        "synonymer": [
+          "hjälpa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Konsultfirman kan <font color=\"#3498db\">bistå</font> med marknadsanalyser.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stödja genom att ge medel eller annan hjälp åt någon grupp, organisation el. enskild person' – en betydelse, matchar kortets huvudbetydelse. Register formell/neutral rimligt. Synonymen 'hjälpa' pekas ut av SO (jfr-hänvisning). Exempelmeningen är hämtad rakt ur SO och är korrekt och highlightad.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621727,
+      "ord": "drastisk",
+      "facit": "rakt på sak, långtgående",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kraftig och långtgående ; chockerande rakt på sak",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "kraftig",
+          "grovkornig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Företaget vidtog <font color=\"#3498db\">drastiska</font> åtgärder och sade upp halva personalen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: 1) 'kraftigt verkande och utförd utan hänsyn till skadliga bieffekter' 2) bildligt 'chockerande'/burdus. Kortet fångar båda, rätt separerade med ';'. SAOL:s egen definition är 'kraftig och långtgående; kraftigt verkande; grovkornig' vilket direkt styrker synonymerna 'kraftig' och 'grovkornig'. Exempelmeningen illustrerar betydelse 1 korrekt.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621666,
+      "ord": "folklig",
+      "facit": "populär och vanlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som hör till vanligt folk och är omtyckt av dem",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Patron var riktigt <font color=\"#3498db\">folklig</font> och tog kaffe med drängarna.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har TVÅ skilda huvudbetydelser: (1) 'som tillhör de breda folklagren och är populär där' (inkl. underbetydelse om högt uppsatt person som uppträder folkligt – det är denna nyans exempelmeningen 'Patron var riktigt folklig' faktiskt illustrerar), och (2) en helt egen betydelse 'som har att göra med folkets breda lager', ofta i politisk debatt, t.ex. 'bred folklig förankring', 'folkligt stöd' (grunda sig i/komma från folket, snarare än att vara omtyckt). Kortets huvudbetydelse ('hör till vanligt folk och är omtyckt av dem') täcker bara betydelse 1 – betydelse 2 (den politiska/'av folket'-betydelsen) saknas helt. Bör läggas till som en andra betydelse.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621722,
+      "ord": "guttural",
+      "facit": "strup-; hes, grötig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som bildas långt bak i strupen ; om röst: grötig och sträv",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han svarade med en tjock, <font color=\"#3498db\">guttural</font> röst.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'som frambringas i bakre delen av munhålan, i svalget eller struphuvudet om (språk)ljud', underbetydelse 'allmännare om (ljud av) otydlig el. grötig röst'. Kortet fångar exakt båda, rätt separerade med ';'. Exempelmeningen 'en tjock guttural röst' är hämtad direkt ur SO. Tom synonymlista är korrekt här (SO ger ingen synonym, bara en jfr-hänvisning till 'laryngal' som är en kohyponym, inte synonym).",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621729,
+      "ord": "jordbunden",
+      "facit": "realistisk och fantasilös",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som inte kan lyfta från marken ; nyktert praktisk, utan flykt i fantasin",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "realistisk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans drömmar var inte precis <font color=\"#3498db\">jordbundna</font> — han ville bli polarforskare.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'som inte kan lyfta från marken' (om t.ex. larver), underbetydelse bildligt 'som inte hänger sig åt fantasier ... utan är realistisk'. Kortet återger båda korrekt separerade. Exempelmeningen är nästan ordagrant SO:s eget exempel ('hans drömmar var inte precis av det jordbundna slaget: han ville bli polarforskare'). Synonymen 'realistisk' finns bokstavligen i SO:s egen definitionstext för den bildliga betydelsen.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621691,
+      "ord": "saxa",
+      "facit": "ställa i kors",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ställa i kors, om vartannat ; klippa ut ur en tidning för att citera",
+        "register": "neutral, vardaglig",
+        "synonymer": [
+          "klippa",
+          "korsa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">saxade</font> över ribban på 160.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelserna är korrekt fångade och separerade (SO: 'ställa i kors, om vartannat' samt 'klippa ut, vanligen ur tidning'). Men synonymen 'korsa' är missvisande: SO:s egen artikel för 'korsa' ger 'få att bilda korsform' (statisk, t.ex. korsa armarna) eller 'ta sig över till andra sidan' (t.ex. korsa gatan) – inte den upprepade, växelvisa rörelse som 'saxa' betyder (t.ex. 'hästen saxade med öronen', 'saxade över 160 cm'). Man kan inte byta ut 'saxa' mot 'korsa' i dessa exempel. SO ger inget synonymfält alls för 'saxa', så 'klippa' (som ligger nära definitionstexten 'klippa ut') är rimligt, men 'korsa' bör tas bort eller bytas mot något som 'kryssa'.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621768,
+      "ord": "stickling",
+      "facit": "växtdel för nyplantering<br><a href=\"https://www.google.com/imgres?q=stickling&amp;imgurl=https%3A%2F%2Fwww.wexthuset.com%2Fcontent%2Fodling-skotsel%2Fforokning%2Ffem-tips-for-att-lyckas-med-sticklingar%2Fstickling-hortensia-ll.jpg&amp;imgrefurl=https%3A%2F%2Fwww.wexthuset.com%2Ffakta-och-rad%2Fom-odling-och-skotsel-av-tradgard-och-vaxter%2Fom-frosadd-och-forokning-av-vaxter%2Ffem-tips-for-att-lyckas-med-sticklingar&amp;docid=_7UlwDuamDJ43M&amp;tbnid=5PYc_qKEzHKX_M&amp;vet=12ahUKEwjevu7-yrmLAxUYHhAIHV2JCsoQM3oECBkQAA..i&amp;w=800&amp;h=600&amp;hcb=2&amp;ved=2ahUKEwjevu7-yrmLAxUYHhAIHV2JCsoQM3oECBkQAA\"><div><div><div><img alt=\"Så lyckas du med sticklingar - 5 bra ...\" src=\"paste-8695eeac0dffac181423e3eca80f64b9545e07ac.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Avskuren bit av en växt som sätts i jord för att slå rot",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "sättkvist",
+          "skott"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon satte <font color=\"#3498db\">sticklingar</font> av pelargonen i en kruka på fönsterbrädet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen stämmer väl med SO ('avskuren stam-, gren- eller rotdel av en växt som sticks ner i jorden för att slå rot'). Men båda angivna synonymerna är fel: 'sättkvist' ger noll träffar i både SO och SAOL (finns inte som uppslagsord) och är alltså inte belagt. 'Skott' listas av SO uttryckligen som en JFR-cohyponym ('skott 3': '(genom tillväxt utvecklad) stamdel... som ofta bär blad/blommor') – dvs en näraliggande men SKILD term (ett skott sitter kvar och växer på plantan, en stickling är en avskuren bit som planteras för att slå rot), inte en synonym. Synonymlistan bör vara tom eller innehålla ett faktiskt belagt ord.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621668,
+      "ord": "tentakel",
+      "facit": "känselspröt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Smal, rörlig arm som djur känner och griper med ; utsträckt arm av någon som i hemlighet söker inflytande",
+        "register": "neutral, biologi, neutral",
+        "synonymer": [
+          "känselspröt",
+          "fångarm"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Snigeln drog in sina <font color=\"#3498db\">tentakler</font> när jag rörde vid den.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'smal, lättrörlig, utskjutande kroppsdel... anv. som känselspröt, fångstarm', underbetydelse bildligt om hemlig påverkan ('storklubben sänt ut sina tentakler'). Kortet fångar båda korrekt. SAOL:s definition är ordagrant 'känselspröt; fångarm', vilket direkt styrker båda synonymerna. Exempelmeningen matchar SO:s eget exempel.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621740,
+      "ord": "vidmakthålla",
+      "facit": "bevara",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Se till att något fortsätter finnas eller gälla",
+        "register": "formell, neutral",
+        "synonymer": [
+          "bevara",
+          "upprätthålla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Polisen har till uppgift att <font color=\"#3498db\">vidmakthålla</font> lag och ordning.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bevara vanligen något abstrakt' – matchar kortets huvudbetydelse väl. Synonymen 'bevara' finns bokstavligen i SO:s definition. 'Upprätthålla' är en stark synonym i sammanhanget (SO:s eget exempel är just 'vidmakthålla lag och ordning', den gängse frasen är annars 'upprätthålla lag och ordning'). Register formell/neutral stämmer.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621749,
+      "ord": "acklimatisera",
+      "facit": "vänja sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vänja sig vid ett nytt klimat eller nya förhållanden",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon flyttade in för en månad sedan och har redan <font color=\"#3498db\">acklimatiserat</font> sig.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en betydelse: 'vänja vid nya förhållanden', med specialfall om klimatanpassning (t.ex. växter). Kortets 'vänja sig vid ett nytt klimat eller nya förhållanden' fångar samma enda betydelse korrekt (ordet 'eller' länkar här två sidor av SAMMA betydelse, inte två skilda betydelser). Tom synonymlista är korrekt eftersom SO inte ger något synonymfält.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621680,
+      "ord": "adagio",
+      "facit": "långsamt musiktempo<br><a href=\"https://www.google.com/imgres?q=musical%20tempos&amp;imgurl=https%3A%2F%2Fwpe.hoffmanacademy.com%2Fwp-content%2Fuploads%2F2022%2F11%2Fwhat-is-tempo-in-music.jpg&amp;imgrefurl=https%3A%2F%2Fwww.hoffmanacademy.com%2Fblog%2Fwhat-is-tempo-in-music&amp;docid=2EKIwIs21AgOvM&amp;tbnid=yfZxm0dWTG2yVM&amp;vet=12ahUKEwiNi-j83veLAxXDGhAIHRonHm8QM3oECBgQAA..i&amp;w=941&amp;h=628&amp;hcb=2&amp;ved=2ahUKEwiNi-j83veLAxXDGhAIHRonHm8QM3oECBgQAA\"><div><div><div><img alt=\"What is Tempo in Music? Definition ...\" src=\"paste-2cc42528d02737a00c8e8ddb617944422c69364f.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I långsamt tempo ; musikstycke som spelas långsamt",
+        "register": "fackspråklig, neutral, musik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Andra satsen är ett stillsamt <font color=\"#3498db\">adagio</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser: adverb 'i långsamt tempo' och substantiv 'musikstycke i långsamt tempo'. Kortet återger båda korrekt separerade och i rätt ordning. Exempelmeningen ('ett stillsamt adagio') illustrerar substantivbetydelsen korrekt.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621702,
+      "ord": "amplitud",
+      "facit": "svängningsvidd e. ljudstyrka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hur långt något svänger ut från sitt viloläge",
+        "register": "fackspråklig, neutral, fysik",
+        "synonymer": [
+          "svängningsvidd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vågens <font color=\"#3498db\">amplitud</font> är lika med halva våghöjden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Både SO och SAOL ger endast EN betydelse: 'avstånd mellan nolläge och ettdera av ytterlägena i en svängningsrörelse' / SAOL: 'svängningsvidd'. Ingen separat betydelse om ljudstyrka finns i dessa ordböcker (facit_signal-frågan besvaras: nej, det är inte en missad betydelse utan en association). Kortets 'hur långt något svänger ut från sitt viloläge' är en precis paraltext. Synonymen 'svängningsvidd' finns bokstavligen i SAOL:s definition.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621693,
+      "ord": "anglofil",
+      "facit": "engelskvän",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som älskar England och allt engelskt",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "engelskvän"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Som <font color=\"#3498db\">anglofil</font> drack han te klockan fem varje dag.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger adjektiv 'engelskvänlig' och substantiv 'engelskvän'. Kortets 'person som älskar England och allt engelskt' matchar substantivbetydelsen, och synonymen 'engelskvän' är ordagrant SAOL:s egen definition. Exempelmeningen använder ordet substantiviskt precis som SAOL:s huvudbetydelse.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621711,
+      "ord": "anspråk",
+      "facit": "krav",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Krav på något man menar sig ha rätt till",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "krav"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon gjorde <font color=\"#3498db\">anspråk</font> på hela arvet.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO ger TVÅ skilda huvudbetydelser: (1) 'krav för egen räkning på materiella värden, juridiska rättigheter, allmänt erkännande e.dyl.' (t.ex. 'göra anspråk på arvet') – detta är kortets enda betydelse, och (2) en helt separat huvudbetydelse kring uttrycket 'ta i anspråk' = ta i bruk/uppta ('ta någons tid i anspråk', 'verksamheten tog alla hans krafter i anspråk'). Den andra betydelsen (nyttja/uppta) saknas helt på kortet, trots att den är en egen numrerad huvudbetydelse i SO och mycket vanligt förekommande i vardagsspråk.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621640,
+      "ord": "appell",
+      "facit": "vädjan, upprop; lystringssignal (<i>hundar</i>)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vädjan om att någon ska göra något ; överklagan till högre domstol ; signal som får en hund att lyda",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "vädjan"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fredsorganisationen riktade en lidelsefull <font color=\"#3498db\">appell</font> till politikerna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger tre betydelser: vädjan, en hundtävlingsklass som testar lydnad, samt (juridisk underbetydelse) överklagande till högre instans. Kortet fångar alla tre ('vädjan', 'överklagan till högre domstol', 'signal som får en hund att lyda') rätt separerade med ';'. Hundbetydelsen är något friare formulerad än SO:s 'tävlingsklass' men överensstämmer med facits 'lystringssignal (hundar)' och med hur ordet faktiskt används i hundträning. Synonymen 'vädjan' är rimlig utifrån SO:s definitionstext.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621621,
+      "ord": "attribut",
+      "facit": "egenskap; tillbehör",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Typisk egenskap eller sak man känner igen någon på ; ord som bestämmer ett substantiv",
+        "register": "neutral, lingvistik, neutral",
+        "synonymer": [
+          "kännetecken"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Lien är dödens obligatoriska <font color=\"#3498db\">attribut</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger två huvudbetydelser: 'utmärkande egenskap/kännetecken' och (lingvistik) 'bestämning till substantiv'. Kortet fångar båda korrekt separerade och i rätt ordning. SO har även en underbetydelse om datateknik ('föränderlig egenskap... t.ex. en variabel') under betydelse 1, men det är en tillämpning av den redan täckta betydelsen (en egenskap hos ett objekt), inte en fristående huvudbetydelse, så det räknas inte som en saknad betydelse. Synonymen 'kännetecken' är ordagrant hämtad ur SAOL:s definition. Exempelmeningen matchar SO:s eget exempel om dödens attribut, lien.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621772,
+      "ord": "avlat",
+      "facit": "efterskänkning (katolicism) av botgöring mot viss prestation",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att katolska kyrkan tar bort ett straff för synder, ofta mot betalning",
+        "register": "ngt ålderdomlig, neutral, historia",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Kyrkan sålde <font color=\"#3498db\">avlat</font> för att finansiera bygget av Peterskyrkan.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'efterskänkning (inom katolska kyrkan) av botgöring mot viss prestation' – exakt matchande kortets 'katolska kyrkan tar bort ett straff för synder, ofta mot betalning'. En enda betydelse, historisk term, vilket stämmer med registret 'historia'. Exempelmeningen om Peterskyrkan är sakligt korrekt och känd historia.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621695,
+      "ord": "bemyndiga",
+      "facit": "ge rätt att göra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge någon rätt att handla eller besluta i ens ställe",
+        "register": "formell, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Årsmötet <font color=\"#3498db\">bemyndigade</font> styrelsen att söka nya lokaler.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ge befogenhet åt någon att utföra något', ofta i juridiska sammanhang – matchar kortet väl. Kortets tomma synonymlista är korrekt eftersom SO endast anger kohyponymerna 'auktorisera'/'berättiga' (jfr-hänvisningar), inte sanna synonymer. Exempelmeningen om årsmötet och styrelsen är hämtad rakt ur SO.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621684,
+      "ord": "beredvillig",
+      "facit": "som gärna hjälper till",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som gärna ställer upp och hjälper till",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ministern ställde <font color=\"#3498db\">beredvilligt</font> upp på intervjun.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som gärna utför något', exemplifierat med att ministern 'ställde beredvilligt upp på intervjun'. Kortets 'som gärna ställer upp och hjälper till' är en rimlig, om än något förtydligande, formulering av samma betydelse. En enda betydelse, ingen synonym anges i SO, kortets tomma lista är korrekt.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621735,
+      "ord": "berlock",
+      "facit": "hängsmycke<br><a href=\"https://www.google.com/imgres?q=berlock&amp;imgurl=https%3A%2F%2Fcdn.abicart.com%2Fshop%2Fimages%2F189589627-origpic-d40765%2Fws60%2F66360%2Fart60%2Fh9627%2Fberlocker-armband-feminist-kvinnosymbol-nave-luna-mane-fred-ankare-hjarta-diamant-silver.jpg&amp;imgrefurl=https%3A%2F%2Ffeministsmeden.se%2Femma-berlock&amp;docid=tXUJ2Ap3ht4xBM&amp;tbnid=EYy3p9jxTEYznM&amp;vet=12ahUKEwjY99y9wumLAxWNU1UIHftWAWAQM3oECB0QAA..i&amp;w=1280&amp;h=1280&amp;hcb=2&amp;ved=2ahUKEwjY99y9wumLAxWNU1UIHftWAWAQM3oECB0QAA\"><div><div><div><img alt=\"Emma Berlock - Feministsmeden\" src=\"paste-5177cbf6cd23565ba60836fb6a35aa5908dcf437.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Litet hängsmycke som fästs i ett arm- eller halsband",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon fick en <font color=\"#3498db\">berlock</font> i form av ett hjärta till armbandet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'litet hängsmycke' som fästs t.ex. på arm- eller halsband, ofta format som en liten figur. Matchar kortet exakt. En enda betydelse, ingen synonym finns i källan, tom lista korrekt.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621646,
+      "ord": "blessera",
+      "facit": "såra<br><a href=\"https://www.google.com/imgres?q=blessure&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F3%2F3d%2FOuchthathurt.jpg&amp;imgrefurl=https%3A%2F%2Fsg.wiktionary.org%2Fwiki%2Fblessure&amp;docid=9fgdJXqhkSICXM&amp;tbnid=GcqUGWp8rilIhM&amp;vet=12ahUKEwjC6N_mm_CLAxUhQVUIHa_pIKQQM3oECBoQAA..i&amp;w=600&amp;h=450&amp;hcb=2&amp;ved=2ahUKEwjC6N_mm_CLAxUhQVUIHa_pIKQQM3oECBoQAA\"><div><div><div><img alt=\"blessure — Wiktionary\" src=\"paste-53ecc5426849f266aeb957ea791c1dc0d07cd8fb.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Såra eller skada någon",
+        "register": "arkaisk, neutral",
+        "synonymer": [
+          "såra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Två soldater blev svårt <font color=\"#3498db\">blesserade</font> i drabbningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Ordet saknas i SO men finns i SAOL: 'såra, skada', markerat 'åld.' (arkaiskt) – matchar kortets huvudbetydelse och register ('arkaisk') exakt. Synonymen 'såra' är ordagrant SAOL:s definition. Exempelmeningen om soldater som blesserades i drabbningen är sakligt och grammatiskt korrekt.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621659,
+      "ord": "bravera",
+      "facit": "skryta, stoltsera med, briljera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skryta och göra sig märkvärdig med det man gjort",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "skryta",
+          "stoltsera"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">braverade</font> gärna med sina bragder på sjön.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'framhäva (egen prestation e.dyl.) som berömvärd', exempel 'han braverade gärna med sina erotiska äventyr'. Kortets 'skryta och göra sig märkvärdig med det man gjort' återger detta korrekt, och synonymerna 'skryta'/'stoltsera' bekräftas även av facit. Exempelmeningen om bragder på sjön följer SO:s exempelstruktur och är korrekt.",
+      "granskning_turer_post": 48,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 48,
+  "granskning_kostnad_usd": 1.3709856,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 22,
+      "turer": 48,
+      "turkrav": 5,
+      "kostnad_usd": 1.3709856
+    }
+  ]
+}

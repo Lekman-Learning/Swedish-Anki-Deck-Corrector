@@ -1,0 +1,411 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "slumpfro": 378415,
+  "minsta_alder_dagar": 3,
+  "poster": [
+    {
+      "noteId": 1780080620663,
+      "ord": "kommunion",
+      "facit": "nattvardsgång",
+      "kort": {
+        "huvudbetydelse": "Utdelning eller mottagande av nattvarden ; äv. om föreningen med Kristus i nattvarden",
+        "register": "fackspråklig, neutral, religion",
+        "synonymer": [
+          "nattvardsgång",
+          "gudsgemenskap"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter predikan följde <font color=\"#3498db\">kommunionen</font> vid altaret."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar båda betydelserna (utdelning/mottagande av nattvarden samt föreningen med Kristus i nattvarden), rätt separerade med ';'. Exempelmeningen illustrerar huvudbetydelsen korrekt och ordet är highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620970,
+      "ord": "vara på örat",
+      "facit": "vara berusad",
+      "kort": {
+        "huvudbetydelse": "Vara berusad, oftast lätt",
+        "register": "vardaglig, skämtsam, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Efter tre öl var han rejält <font color=\"#3498db\">på örat</font> när han skulle hitta hem."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uppslag på 'öra' bekräftar uttrycket 'vara på örat' = vara berusad, vardagligt, med nästan identiskt exempel som kortets. Definition, register och exempelmening stämmer.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620976,
+      "ord": "duka under",
+      "facit": "omkomma, efter att ha förlorat kamp för livet",
+      "kort": {
+        "huvudbetydelse": "Till slut ge vika och gå under",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [
+          "omkomma",
+          "förolyckas"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">dukade</font> till sist <font color=\"#3498db\">under</font> för sjukdomen."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO: 'duka under' = omkomma efter att ha förlorat kamp för livet. Synonymen 'förolyckas' är fel - enligt SO betyder förolyckas specifikt 'dö genom olyckshändelse', vilket inte stämmer med kortets egen exempelmening om att dukade under för en sjukdom (man förolyckas inte av sjukdom). 'Förolyckas' bör tas bort ur synonymlistan.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622716,
+      "ord": "påvisa",
+      "facit": "skaffa bevis för",
+      "kort": {
+        "huvudbetydelse": "Lägga fram bevis för att något är sant",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "bevisa",
+          "ådagalägga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Forskare har <font color=\"#3498db\">påvisat</font> att antalet olyckor minskar vid hastighetsbegränsning."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'lägga fram bevis för (förekomsten av) något' matchar kortets definition väl. Exempelmeningen är identisk med SO:s eget exempel och är korrekt, highlightad.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620979,
+      "ord": "vara ngn förbunden",
+      "facit": "vara skyldigt tacksam",
+      "kort": {
+        "huvudbetydelse": "Vara skyldig någon tacksamhet",
+        "register": "formell, neutral",
+        "synonymer": [
+          "tacksam",
+          "skyldig tack"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Jag är dig verkligen <font color=\"#3498db\">förbunden</font> för hjälpen."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar exakt betydelsen 'vara skyldig tacksamhet' (högtidligt) med samma exempelfras som kortets ('jag är dig ... förbunden'). Övriga betydelser av adjektivet 'förbunden' hör till ett annat uppslag och saknas inte här eftersom kortet specifikt gäller frasen.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619657,
+      "ord": "uttrycklig",
+      "facit": "bestämd",
+      "kort": {
+        "huvudbetydelse": "Klart och tydligt uttalad",
+        "register": "formell, neutral",
+        "synonymer": [
+          "uttalad",
+          "tydlig",
+          "bestämd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon gav sitt <font color=\"#3498db\">uttryckliga</font> tillstånd innan vi rörde något i lägenheten."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'tydlig och bestämd och ofta språkligt uttryckt'. Kortets huvudbetydelse fångar detta, och facits svar 'bestämd' finns med i synonymlistan. Exempelmeningen är sakligt och grammatiskt korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080627951,
+      "ord": "knyck",
+      "facit": "ryck; km/h",
+      "kort": {
+        "huvudbetydelse": "Kort, tvär och plötslig rörelse ; tvär krök ; kilometer i timmen",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "ryck",
+          "tvär krök",
+          "km/h"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bussen stannade med en <font color=\"#3498db\">knyck</font> så att alla stående passagerare vinglade till."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har exakt dessa tre betydelser (kort tvär rörelse, tvär krök, km/h) fördelade på två homografer, rätt separerade med ';'. Exempelmeningen är hämtad ur SO:s eget exempel och är korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621245,
+      "ord": "enfaldig",
+      "facit": "dum och inskränkt",
+      "kort": {
+        "huvudbetydelse": "Dum och okunnig",
+        "register": "neutral, nedsättande",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Jag kände mig lite <font color=\"#3498db\">enfaldig</font> när jag inte förstod något av den tekniska manualen."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL: 'dum och okunnig (och lättlurad)'/'enkel, naiv', nedsättande. Kortets definition och register matchar. Tom synonymlista är aldrig i sig ett fel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620521,
+      "ord": "töcknig",
+      "facit": "dimmig",
+      "kort": {
+        "huvudbetydelse": "Insvept i dimma eller dis ; intellektuellt oklar och suddig",
+        "register": "neutral, neutral, allmän ; neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Silhuetterna på andra sidan viken var <font color=\"#3498db\">töckniga</font> i gryningsljuset."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s tre nyanser (fylld av/dold av töcken samt intellektuellt oklar) täcks korrekt av kortets två ledbetydelser. Exempelmeningen matchar nästan ordagrant SO:s eget exempel 'töckniga silhuetter'.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080625694,
+      "ord": "påfund",
+      "facit": "påhitt",
+      "kort": {
+        "huvudbetydelse": "Irriterande påhitt eller uppfinning",
+        "register": "formell, neutral",
+        "synonymer": [
+          "påhitt",
+          "uppfinning",
+          "idé"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Moderna elektroniska <font color=\"#3498db\">påfund</font>."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen '(irriterande) påhitt' stämmer med SO och facit. Men exempelmeningen 'Moderna elektroniska påfund.' är ingen fullständig mening (saknar verb) - det är bara den nominalfras som är hämtad rakt av ur SO:s ordboksexempel, och den illustrerar inte hur ordet böjs/används i en sats. Bör bytas till en riktig mening, t.ex. 'Att deklarera digitalt är inget modernt påfund.'",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620607,
+      "ord": "autopsi",
+      "facit": "obduktion",
+      "kort": {
+        "huvudbetydelse": "Iakttagelse man gjort med egna ögon, självsyn ; äv. (mindre brukligt) obduktion",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "självsyn",
+          "obduktion"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Domstolen nöjde sig inte med vittnesmål utan krävde <font color=\"#3498db\">autopsi</font> på olycksplatsen."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO markerar tydligt betydelsen 'iakttagelse med egna ögon/självsyn' (belagd 1827) som 'mindre brukligt', medan 'obduktion' (belagd 1856) är den obemärkta, vanligare betydelsen som också leder uppslaget. Kortet har vänt på detta: det leder med 'självsyn' som huvudbetydelse och märker i stället 'obduktion' som 'mindre brukligt', vilket är fel både i inbördes ordning och i etikettering.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621140,
+      "ord": "flexibel",
+      "facit": "anpassningsbar",
+      "kort": {
+        "huvudbetydelse": "Som lätt kan anpassas efter det som behövs",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "anpassningsbar",
+          "smidig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han har en <font color=\"#3498db\">flexibel</font> arbetstid och kan jobba hemifrån när han vill."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som (på ett smidigt sätt) kan anpassas efter omständigheterna'. Kortets definition och synonymen 'smidig' är direkt hämtade ur SO:s egen definition. Exempelmeningen illustrerar korrekt användning.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080624318,
+      "ord": "kuriös",
+      "facit": "besynnerlig",
+      "kort": {
+        "huvudbetydelse": "Väcker nyfikenhet genom att vara ovanlig och märkvärdig",
+        "register": "litterär, neutral, allmän",
+        "synonymer": [
+          "märkvärdig",
+          "underlig",
+          "besynnerlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han visade upp ett <font color=\"#3498db\">kuriöst</font> påhitt han hittat på loppisen."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO kopplar själva ordet till synonymerna besynnerlig, egendomlig, märkvärdig, underlig - tre av dessa finns med på kortet. Exempelmeningen ('ett kuriöst påhitt') är hämtad direkt ur SO:s eget exempel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619714,
+      "ord": "märla",
+      "facit": "u-formad metallbit<br><a href=\"https://www.google.com/imgres?q=m%C3%A4rla&amp;imgurl=https%3A%2F%2Fimages.clasohlson.com%2Fmedias%2Fsys_master%2Fhbe%2Fh7a%2F68562118410270.jpg&amp;imgrefurl=https%3A%2F%2Fwww.clasohlson.com%2Fse%2FMarla-varmforzinkad%2Fp%2F40-6956&amp;docid=yHARs4Rj6DC0kM&amp;tbnid=shVyNl2MNR2psM&amp;vet=12ahUKEwjfgaX29NiNAxUJJhAIHTwfGkcQM3oECBgQAA..i&amp;w=1200&amp;h=711&amp;hcb=2&amp;ved=2ahUKEwjfgaX29NiNAxUJJhAIHTwfGkcQM3oECBgQAA\"><div><div><div><img alt=\"Märla varmförzinkad | Clas Ohlson\" src=\"paste-a99e1d4ed94ddc09b77245e370dfd62112c78d2b.webp\"></div></div></div></a>",
+      "kort": {
+        "huvudbetydelse": "U-formad metallhake att fästa med ; hyska på plagg ; liten metallring som förstärker ett hål ; litet kräftdjur",
+        "register": "formell, neutral, teknik",
+        "synonymer": [
+          "krampa",
+          "hake",
+          "hyska",
+          "ögla",
+          "märlkräfta"
+        ],
+        "synonym_groups": [
+          [
+            "krampa",
+            "hake"
+          ],
+          [
+            "hyska"
+          ],
+          [
+            "ögla"
+          ],
+          [
+            "märlkräfta"
+          ]
+        ],
+        "exempelmening": "Repet träddes fast genom <font color=\"#3498db\">märlan</font> på fördäck."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Grundligt kort: SO ger metallhake/hyska/metallring, och SAOL bekräftar dessutom kräftdjursbetydelsen samt synonymen 'krampa'. Alla fyra betydelser är belagda i SO+SAOL tillsammans och rätt separerade. Exempelmeningen är korrekt och naturlig.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621068,
+      "ord": "gans",
+      "facit": "prydnadssnöre<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.materiel-tapissier.com%2Fcorde-ficelle-ganse%2F11-ganse-coton-de-15-a-14-mm-rouleau-de-100-metres.html&amp;psig=AOvVaw3hf_4rfJWK8Mx1FMyZwCo9&amp;ust=1742728631445000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCNDltZrInYwDFQAAAAAdAAAAABAE\"><img alt=\"Ganse coton pour confection passepoil coussin, fabrication française  Diamètre ganse 1,5 MM\" src=\"ganse-coton-de-15-a-14-mm-rouleau-de-100-metres.webp\"></a>",
+      "kort": {
+        "huvudbetydelse": "Ett smalt, dekorativt band av till exempel guld- eller silvertråd, sytt på möbler eller kläder",
+        "register": "arkaisk, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Fåtöljens kant var klädd med en fin <font color=\"#3498db\">gans</font> i guldtråd."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'smalt band ... av guld-, silver- eller silketråd för garnering av möbler eller klädesplagg' matchar kortet exakt. Exempelmeningen är sakligt och grammatiskt korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620501,
+      "ord": "hattig",
+      "facit": "obeslutsam",
+      "kort": {
+        "huvudbetydelse": "Som präglas av ryckighet och brist på följdriktighet",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [
+          "oorganiserad",
+          "vimsig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mötet blev <font color=\"#3498db\">hattigt</font> — vi hoppade mellan fyra ämnen utan att avsluta något."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition ('som utmärks av ryckighet och brist på följdriktighet') är citerad nästan ordagrant på kortet. Exempelmeningen (hoppa mellan fyra ämnen på ett möte) illustrerar betydelsen konkret och korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619802,
+      "ord": "lotsa",
+      "facit": "visa vägen",
+      "kort": {
+        "huvudbetydelse": "Vägleda ett fartyg genom svår farled ; bildligt: vägleda någon fram genom något besvärligt",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "vägleda",
+          "ledsaga",
+          "guida"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Trots stormen kunde fartyget <font color=\"#3498db\">lotsas</font> i hamn."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s bokstavliga och bildliga betydelser (vägleda genom farled; vägleda ngn genom något besvärligt) täcks korrekt av kortet. Exempelmeningen visar den bokstavliga sjöfartsbetydelsen korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080624631,
+      "ord": "konvektion",
+      "facit": "värmeströmning<br><a href=\"https://en.wikipedia.org/wiki/File:ConvectionCells.svg\"><img src=\"300px-convectioncells.svg.webp\"></a><a href=\"https://en.wikipedia.org/wiki/File:Ghillie_Kettle_Thermal.jpg\"><img src=\"220px-ghillie_kettle_thermal.webp\"></a>",
+      "kort": {
+        "huvudbetydelse": "Rörelse i gas eller vätska orsakad av densitetsvariationer",
+        "register": "formell, neutral",
+        "synonymer": [
+          "värmeströmning",
+          "cirkulation",
+          "transport"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Värme kan spridas genom ledning, <font color=\"#3498db\">konvektion</font> eller strålning."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvuddefinitionen matchar SO exakt, men synonymen 'transport' är fel: SO:s eget uppslag listar 'värmeledning' som cohyponym (syskonterm på samma nivå, INTE synonym) till konvektion, eftersom ledning/konvektion/strålning alla är olika typer av 'transport' av värme. 'Transport' är alltså ett överordnat begrepp och inte utbytbart mot konvektion specifikt - bör tas bort.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620133,
+      "ord": "sauna",
+      "facit": "bastu",
+      "kort": {
+        "huvudbetydelse": "Bastu",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "bastu",
+          "badstuga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De avslutade träningen med en stund i <font color=\"#3498db\">saunan</font>."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bastu' - exakt matchning. Enkelt, korrekt kort med naturlig exempelmening.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080627551,
+      "ord": "smärre",
+      "facit": "mindre",
+      "kort": {
+        "huvudbetydelse": "Mindre till storlek eller omfattning",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "mindre",
+          "tämligen liten",
+          "ganska liten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Snickaren gjorde några <font color=\"#3498db\">smärre</font> justeringar på dörren innan den gick att stänga ordentligt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'mindre' (absolut komparativ). Exempelmeningen ('några smärre justeringar') är nästan identisk med SO:s eget exempel och är korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 33,
+  "granskning_kostnad_usd": 1.1166498,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 33,
+      "turkrav": 5,
+      "kostnad_usd": 1.1166498
+    }
+  ]
+}

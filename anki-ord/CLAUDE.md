@@ -4334,3 +4334,58 @@ men den gamla underkand-taggen togs aldrig bort, sa de blaser upp siffran med
 **Regel harav:** en pastadd blockering i decket ska mätas mot AnkiConnect
 innan den skrivs ned. En fraga tar tio sekunder; det har pastaendet stod i
 tre rapporter.
+
+## 2026-08-26: förklaringen ska ligga en nivå UNDER ordet (`svarighetskoll.py`)
+
+**Adams invändning:** *"det känns som att Adam-tal inte har blivit så effektivt
+att du ibland använder ord som är ålderdomliga i huvudbetydelsen som skapar mer
+svårigheter för mig att lära mig kortet."*
+
+Den höll, och den gick att mäta. **12 av 44 nyskrivna kort** använde ett ord i
+huvudbetydelsen som **självt är ett uppslagsord i decket** — alltså ett ord Adam
+inte kan än. Ett kort som byter ut ett okänt ord mot ett annat lär inte ut något.
+
+De grövsta:
+
+| Ord | Skrevs som | Problemet |
+|---|---|---|
+| avlat | "Efterskänkning av **botgöring** i katolska kyrkan" | botgöring är ett eget kort; efterskänkning är dessutom svårare än avlat |
+| bravera | "Skryta och **stoltsera** med det man gjort" | stoltsera är ett eget kort |
+| i onåd | "Att ha förlorat en överordnads **gunst**" | gunst är ett eget kort |
+| tentakel | "Smalt, rörligt **spröt**" | spröt är ett eget kort |
+| obstruktion | "Att medvetet sabotera eller **förhala**" | förhala är ett eget kort |
+
+**Mekanisk kontroll: `svarighetskoll.py <sessionsfil>`.** Den hämtar deckets
+9 126 uppslagsord via AnkiConnect och listar varje huvudbetydelse som innehåller
+ett av dem. **Noll träffar är kravet.** Efter omskrivningen: 12 → 0.
+
+**Begränsning som ska skrivas ut:** checken fångar inte sammansättningar, för de
+är inte egna uppslagsord. `efterskänkning`, `lystringssignal`, `hålighet`,
+`prydnadsband` och `själslig` passerade alla — och var lika svåra. Fem sådana
+skrevs om för hand. **Kör checken OCH läs igenom.**
+
+Regeln hör hemma bredvid style_guide.md:s Adam-tal-krav: *förklaringen ska ligga
+en nivå under uppslagsordet, inte bredvid det.*
+
+### Mätt 2026-08-26: kostar cirkelproblemet något? Nej, inte än
+
+Innan en städning av de 358 drabbade live-korten sattes igång mättes om de
+faktiskt failar oftare. **De gör de inte:**
+
+| | Kort | Snitt lapses | Leeches (>=8 lapses) |
+|---|---|---|---|
+| MED svårt ord i definitionen | 354 | **0,46** | 1 (0,3 %) |
+| UTAN | 1 290 | **0,58** | 7 (0,5 %) |
+
+Skillnad **-0,12 lapses per kort** — de drabbade korten failar marginellt
+*mindre*. ⚠️ **Svagt underlag:** medianen är 2 repetitioner i båda grupperna,
+decket är för ungt för att lapses ska hinna samlas. Men det är svagt underlag
+EMOT en städning, inte för.
+
+**Beslut:** regeln byggs in i generatorn (gratis, hindrar ny skuld), men de 358
+befintliga rörs inte. Adams prioritering: *"kanske bättre att fokusera på
+kvantiten just nu än att lära mig 2 ord per kort."* Mät om när medianen passerat
+~8 reps.
+
+🔴 **Lärdomen om mig själv:** jag presenterade "21 % av korten har problemet" som
+en skuld att betala, innan jag mätt om den kostade något. Att döma på utseende.

@@ -1,0 +1,38 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621774,
+      "ord": "rygga",
+      "facit": "stegra sig, backa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ta ett steg bakåt av rädsla eller olust ; dra sig för att göra något obehagligt ; få en häst att gå bakåt",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "skygga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Regeringen <font color=\"#3498db\">ryggade</font> inte för att höja skatten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat mot SO/SAOL. Ordboken har verbet 'rygga' uppdelat i betydelse 1 ('dra sig tillbaka som reaktion på ngt skrämmande/otäckt', t.ex. 'de ryggade tillbaka'), underbetydelse 1b (bildligt: 'känna motvilja eller skräck för ngt', t.ex. 'mord var det enda han skulle rygga för') och betydelse 2 ('få häst att gå bakåt', t.ex. 'hon ryggade hästen tre steg'). Kortets tre led ('ta ett steg bakåt av rädsla eller olust ; dra sig för att göra något obehagligt ; få en häst att gå bakåt') täcker precis dessa tre och leder korrekt med huvudbetydelsen; semikolonen är motiverade eftersom det rör sig om genuint skilda betydelser/underbetydelser, inte omformuleringar. Synonymen 'skygga' är dictionary-sanktionerad (SO:s artikel för 'skygga' hänvisar uttryckligen till 'rygga 1'), och är inte cirkulär. Registret 'neutral, neutral' stämmer -- inga stil- eller fackmarkeringar (t.ex. vard., högtidligt) finns för verbet i SO. Exempelmeningen ('Regeringen ryggade inte för att höja skatten') illustrerar korrekt den bildliga betydelsen ('rygga för att göra ngt'), är sakligt och grammatiskt korrekt, och ordet är highlightat. Etymologi saknas men är valfri. Kortet går att läsa och förstå direkt.",
+      "granskning_turer_post": 9,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 9,
+  "granskning_kostnad_usd": 0.4052924,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 1,
+      "turer": 9,
+      "turkrav": 5,
+      "kostnad_usd": 0.4052924
+    }
+  ]
+}
