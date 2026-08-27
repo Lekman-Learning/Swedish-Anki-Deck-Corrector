@@ -4389,3 +4389,90 @@ kvantiten just nu än att lära mig 2 ord per kort."* Mät om när medianen pass
 
 🔴 **Lärdomen om mig själv:** jag presenterade "21 % av korten har problemet" som
 en skuld att betala, innan jag mätt om den kostade något. Att döma på utseende.
+
+
+## Batch 2026-08-28: 85 kort, 84 skrivna, 84 slappta -- och sammandraget som ljog
+
+Adams uppdrag: *"forsatt granska tills vi har gjort 135 is:new kort idag"*, med
+62 redan introducerade. `kortbyggare.py --spar nya --antal 85`.
+
+**Utfall: 84 slappta, 1 pausad, 0 kvar underkanda.** Full v3 i aktiv ko
+1 846 -> 1 930. `AKTIVA kort utan v3` = 0 fore och efter.
+
+| Omgang | Granskade | Underkanda | Kostnad |
+|---|---|---|---|
+| Blind 1 | 25 | 0 (0 %) | 1,20 USD |
+| Blind 2 | 25 | 2 (8 %) | 1,12 USD |
+| Blind 3 | 25 | 2 (8 %) | 1,67 USD |
+| Blind 4 | 9 | 1 (11 %) | 0,79 USD |
+| **Totalt** | **84** | **5 (6 %)** | **4,78 USD** |
+| Omkorning | 5 | 0 (0 %) | 0,57 USD |
+
+### Det dyraste fyndet: OLD-facit var fel, inte bara tunt
+
+`lombardera` -- OLD-facit sa **"hyra ut"**, och legacys synonymlista borjade med
+samma ord. Det ar inte en parafras, det ar en annan handling. SAOB (1941, under
+avledningar till LOMBARD): *"ekon. utlana (panningar) mot handfangen pant; av.:
+belana (pant som lamnas ss. sakerhet)"*. SO har noll traffar och SAOL har ordet
+som uppslagsord men **utan definitionstext**, bara `jfr lombardlan` -- alltsa ett
+av de fa fall dar SAOB ar enda brukbara kallan.
+
+`tertial` -- legacy hade **`kvartal` som synonym**. Kvartal ar tre manader,
+tertial fyra. SO listar dem som JFR:cohyponym just for att de ska hallas isar.
+
+### Fel jag gjorde sjalv: jag laste sammandraget, inte strukturen
+
+Av de fem underkannandena var **fyra ratt och det femte lardomen**:
+
+`pur` -- jag skrev tva betydelser. `slaupp.py`s sammandrag visade
+`SO : ren och oforfalskad | mycket` plus tva olika belaggsartal, vilket ser ut
+som tva SO-betydelser. Rastrukturen i `uppslag/pur.json` har **EN**
+huvudbetydelse for adjektivet. Den andra "betydelsen" var en anvandningsnot om
+var ordet brukar sta.
+
+🔴 **Regel harav:** nar ANTALET betydelser ar det som star pa spel raknas de i
+`huvudbetydelser`/`underbetydelser` i uppslagsfilen, aldrig i sammandraget.
+Sammandraget slar ihop poster och gor anvandningsnoter till betydelser. Samma
+felkalla som `slaupp.py`s uppslagsordsblandning 2026-08-11, ett steg tidigare i
+kedjan.
+
+`tacka` -- jag skrev tre betydelser och **bad om undantag** (`betydelse_kan_saknas`)
+for resten. SO har sex: lagga over, breda ut sig over, racka till, skydda
+militart, bevaka och rapportera om, halla uppsikt i lagsport. SAOL:s exempelrad
+bekraftar fyra av dem direkt (*tacka atertaget*, *tacka ett evenemang*).
+**Undantaget var en ursakt, inte ett undantag** -- det var lattare att skriva
+motiveringen an att lasa strukturen. Borttaget, alla sex star nu pa kortet.
+
+De tre ovriga: `gigolo` slog ihop tva skilda SO-betydelser med "eller" i stallet
+for ` ; `; `homograf` saknade uttalskriteriet (SO namner det inte, men SAOL och
+Wiktionary gor det -- utan det raknas rena homonymer felaktigt som homografer);
+`membran` hade domanen `biologi` medan dess egen exempelmening var en hogtalare.
+
+### Pausat: `in infinitum`
+
+`v3_pausad::inget_uppslagsord_i_so_saol`. svenska.se:s msearch pa frasen
+returnerar artikeln for adverbet **in** plus partikelverb som *kolla in* --
+fulltexttraffar, inte uppslagsordet, sa `uppslagsordstraffar` sag ut som
+`[saol, so, saob]` trots att ingen av dem har frasen. SAOB-sokning pa
+`infinitum`: *"Sokningen pa infinitum gav inga svar."* Enda kallan ar Wiktionary.
+Samma behandling som `forborgad` 2026-08-18.
+
+⚠️ **Varning for `har_ordbokstraff()` i `v3_pausa.py`:** den litar pa
+`uppslagsordstraffar` och skulle alltsa INTE ha fangat det har kortet. Flerords-
+lemman ar sarskilt utsatta -- deras delar matchar egna artiklar.
+
+### `svarighetskoll.py` fangade 5 av 84 (6 %)
+
+`folklig`, `feminin`, `forsamling`, `hatsk`, `beslag` -- alla sjalva uppslagsord
+i decket. Ner till 0 efter omskrivning. Jamfor 12 av 44 (27 %) nar regeln var ny
+2026-08-26; att skriva med regeln i huvudet fran borjan halverar traffarna men
+tar inte bort dem.
+
+### Kvar
+
+- Poolen: **5 691** osedda kort utan v3 (av 10 031 totalt).
+- `v3_invariant.py --torr`: 14 full-v3-kort med fel flagga, 0 suspenderade.
+  ⚠️ **Kor inte `--fixa` blint** -- ett av dem (`sond`) har rod flagga, och enligt
+  regeln 2026-08-19 betyder rott pa ett `granskad::*`-kort *"Adam har svart att
+  lara sig det har"*, en personlig signal. `--fixa` skulle radera den.
+- 31 bildforslag oapplicerade (`session_2026-08-28_bildforslag-efter-slapp*.json`).

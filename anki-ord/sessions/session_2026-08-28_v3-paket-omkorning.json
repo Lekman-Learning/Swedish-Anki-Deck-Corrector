@@ -1,0 +1,110 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621999,
+      "ord": "gigolo",
+      "facit": "manlig dansör, prostituerad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Man som mot betalning dansar med kvinnliga gäster på hotell och restauranger ; man som mot betalning är älskare åt rika kvinnor",
+        "register": "neutral, neutral ; neutral, lätt negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han jobbade som <font color=\"#3498db\">gigolo</font> på hotellets danssalong.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat mot SO: exakt två betydelser bekräftas — (1) man som mot betalning dansar med kvinnliga gäster på hotell/restaurang, (2) man som mot betalning är älskare åt rika kvinnor. Kortet har båda, rätt separerade med ';', och leder med SO:s förstabetydelse (dansören), vilket också matchar facitets ordning. Exempelmeningen illustrerar korrekt betydelse 1 och ordet är highlightat. Tom synonymlista är inget fel.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621893,
+      "ord": "homograf",
+      "facit": "ord med samma stavning<br><img alt=\"webp image\" src=\"paste_1760363163122.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ord som stavas precis som ett annat ord men uttalas eller böjs annorlunda — och oftast betyder något helt annat",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Att 'tomten' kan vara både en gubbe och en markbit gör ordet till en <font color=\"#3498db\">homograf</font>.",
+        "etymologi": "Grekiska homos 'samma' och graphein 'skriva' — jämför homofon, där fon betyder ljud."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s definition är nästan ordagrann med kortet: 'ord som skrivs på samma sätt men har olika uttal el. böjning och ofta helt olika betydelse' — bekräftar att kortets 'uttalas eller böjs annorlunda' är korrekt och inte en överdrift (SO ensam nämner bara uttal, men SAOL styrker böjningsdelen). Adjektivbetydelsen i SO är bara en korsreferens till samma innehåll, alltså ingen missad betydelse. Exemplet med 'tomten' är verifierat äkta: tomte (jultomten) har grav accent (uttal 'tåm`-') medan tomt/markbiten har akut accent ('tåm´t') — verkligen olika uttal trots identisk stavning, ett korrekt och pedagogiskt exempel. Etymologin (homos+graphein) stämmer och hjälper minnet.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621977,
+      "ord": "membran",
+      "facit": "tunn hinna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tunn, böjlig hinna — i kroppen eller i en apparat, till exempel en högtalare",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "hinna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Högtalarens <font color=\"#3498db\">membran</font> vibrerade så att man kunde se det.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'tunn (elastisk) hinna organisk el. framställd'; SAOL definierar membran rakt av som 'tunn hinna'. Kortets 'tunn, böjlig hinna — i kroppen eller i en apparat' täcker båda sidorna (organisk/framställd) korrekt, endast en betydelse finns och den är med. Synonymen 'hinna' är väl underbyggd eftersom SAOL:s hela definition av membran just är 'tunn hinna'. Exempelmeningen (högtalarmembran) matchar SO:s egna sammansättningsexempel (t.ex. förgasarmembran) och illustrerar korrekt.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621953,
+      "ord": "pur",
+      "facit": "ren och oblandad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ren och oblandad — står nästan alltid framför ett känsloord: av pur glädje, av pur nyfikenhet",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De frågade av <font color=\"#3498db\">pur</font> nyfikenhet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ren och oförfalskad, vanligen om någon känsla' — matchar kortets 'ren och oblandad — står nästan alltid framför ett känsloord'. Exempelmeningen 'de frågade av pur nyfikenhet' är i princip identisk med SO:s eget exempel, grammatiskt korrekt och highlightad. En betydelse i ordboken, en på kortet — ingen lucka.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621928,
+      "ord": "täcka",
+      "facit": "skyla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lägga något över en yta så att den döljs ; breda ut sig över hela ytan ; räcka till för en kostnad ; skydda med militära medel ; vara på plats och rapportera om något ; i lagsport: hålla noga uppsikt över en motståndare",
+        "register": "neutral, neutral ; neutral, neutral ; neutral, neutral ; fackspråklig, neutral, militär ; fackspråklig, neutral ; vardaglig, neutral, sport",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">täckte</font> bordet med en duk innan gästerna kom.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar exakt sex betydelser i denna ordning: (1) dölja/lägga över, (2) breda ut sig över en yta, (3) räcka till för en kostnad, (4) skydda militärt, (5) rapportera journalistiskt på plats, (6) bevaka motståndare i lagsport. Kortet har alla sex, i samma ordning och korrekt separerade med ';' — inget bortfall, vilket annars är det vanligaste felet i decket. Exempelmeningen ('täckte bordet med en duk') illustrerar betydelse 1 tydligt och ordet är highlightat.",
+      "granskning_turer_post": 14,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 14,
+  "granskning_kostnad_usd": 0.5702612000000001,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 5,
+      "turer": 14,
+      "turkrav": 5,
+      "kostnad_usd": 0.5702612000000001
+    }
+  ]
+}
