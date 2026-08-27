@@ -4476,3 +4476,38 @@ tar inte bort dem.
   regeln 2026-08-19 betyder rott pa ett `granskad::*`-kort *"Adam har svart att
   lara sig det har"*, en personlig signal. `--fixa` skulle radera den.
 - 31 bildforslag oapplicerade (`session_2026-08-28_bildforslag-efter-slapp*.json`).
+
+### 🔴 Taggdatum ar kalenderdygn, Anki raknar fran 04:00 -- de gar isar
+
+Upptackt 2026-08-28 01:27, nar Adam invande mot min egen rapport:
+*"alltsa igar och 01:30 idag. fram tills 05:00 08-28 raknas som 27."*
+
+Han hade ratt. `getNumCardsReviewedByDay` hade da **2026-08-27** som senaste
+dag trots att klockan var 01:27 den 28:e -- Ankis dygn hade inte rullat over.
+Filtiderna visar att bada kvallens batcher ligger i samma Anki-dygn:
+
+| Fil | Skriven | Kort | Tagg |
+|---|---|---|---|
+| `session_2026-08-27_v3-batch.json` | 27/8 21:34 | 70 | `v3_granskad::2026-08-27` |
+| `session_2026-08-28_v3-batch.json` | 28/8 01:16 | 84 | `v3_granskad::2026-08-28` |
+| | | **154** | **tva taggar, ett arbetspass** |
+
+`config.V3_TAG_PREFIX`-taggen satts med Pythons `date.today()`, alltsa
+kalenderdatum. Anki rullar dygnet 04:00. Ett kvallspass som passerar midnatt
+delas darfor i tva taggar, och en jamforelse mellan taggen och Ankis
+dagssiffror visar tva halverade dagar i stallet for en hel.
+
+**Vad det kostade konkret:** jag rapporterade dagens produktion som **84 kort,
+"under 125-malet"**, till en Adam som just hade producerat **154**. Slutsatsen
+var inte bara fel, den pekade at fel hall -- "vi ligger efter" om en dag som
+lag over. Adam fick ratta mig med sin egen klocka.
+
+⚠️ **Regel:** dagsproduktion far ALDRIG raknas med `tag:v3_granskad::<datum>`
+mot Ankis dagssiffror. Anvand filtiderna pa `sessions/*_v3-batch.json`, eller
+lagg ihop bada taggarna nar ett pass passerar midnatt. Samma fallgrop galler
+`v3_dagsbatch::` och `oberoende_verifierad::`.
+
+Vard att fixa i koden nar det finns tid: lat taggdatumet folja Ankis dygn
+(kalenderdatum minus en dag om klockan ar fore 04:00) i stallet for
+kalenderdatum. Da stammer tagg och Anki-dag overens per konstruktion i stallet
+for att behova kommas ihag.
