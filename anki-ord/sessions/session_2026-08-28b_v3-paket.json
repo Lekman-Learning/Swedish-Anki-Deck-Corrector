@@ -1,0 +1,410 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080621173,
+      "ord": "allestädes",
+      "facit": "överallt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överallt — numera nästan bara i uttrycket \"allestädes närvarande\"",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "överallt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Enligt läran är Gud <font color=\"#3498db\">allestädes</font> närvarande, i varje rum och på varje plats samtidigt.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar en enda betydelse 'överallt', ålderdomlig, och att ordet idag nästan bara lever kvar i frasen 'allestädes närvarande' — exakt vad kortet säger. Exempelmeningen speglar SO:s eget exempel ('en allestädes närvarande Gud'). Synonymen 'överallt' är korrekt och ordet är highlightat.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620195,
+      "ord": "attest",
+      "facit": "intyg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skriftligt intyg om något ; påskrift som godkänner att en räkning får betalas",
+        "register": "formell, neutral ; formell, neutral, ekonomi",
+        "synonymer": [
+          "intyg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon fick en <font color=\"#3498db\">attest</font> från läkaren på att hon varit sjuk.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger definitionen 'intyg; godkännande, påskrift', vilket styrker att kortets båda betydelser (allmänt skriftligt intyg samt påskrift som godkänner en räkning) är sakligt riktiga och rätt separerade med ' ; '. Synonymen 'intyg' matchar facit. Exempelmeningen illustrerar sense 1 korrekt och grammatiskt.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620362,
+      "ord": "förnuftsvidrig",
+      "facit": "förnuftsstridig, ologisk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som går rakt emot vad som är rimligt att tänka",
+        "register": "neutral, negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Att skära ner på forskningen mitt under en pågående epidemi framstod som ett <font color=\"#3498db\">förnuftsvidrigt</font> beslut.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har bara en betydelse, '(höggradigt) förnuftsstridig', vilket kortets 'går rakt emot vad som är rimligt att tänka' fångar väl. Ingen betydelse saknas. Tom synonymlista är korrekt eftersom ordboken inte anger någon synonym. Exempelmeningen är saklig och grammatisk.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619826,
+      "ord": "gemytlig",
+      "facit": "småtrevlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vänlig och varm på ett sätt som gör alla omkring en avspända ; om en tillställning: skön och lättsam",
+        "register": "neutral, positiv ; neutral, positiv",
+        "synonymer": [
+          "godmodig",
+          "småtrevlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det var en <font color=\"#3498db\">gemytlig</font> stämning kring bordet hela kvällen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger definitionen 'godmodig, fryntlig, småtrevlig' vilket direkt bekräftar synonymerna 'godmodig' (som jag först misstänkte kunde vara en nästan-synonym-distraktor) och stöder facit 'småtrevlig'. SO anger en huvudbetydelse plus en underbetydelse om handlingar/tillställningar, vilket motiverar kortets tvådelade beskrivning. Ingen hel betydelse saknas.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620164,
+      "ord": "klosett",
+      "facit": "toalett",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Toalett med spolning",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "toalett"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det gamla huset hade fortfarande utedass i stället för <font color=\"#3498db\">klosett</font>.",
+        "etymologi": "Engelska water closet, av closet 'kammare' — samma latinska rot (claudere 'stänga') som i kloster."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har bara en betydelse: '(spolbar) anordning för uträttande av naturbehov', vilket matchar 'toalett med spolning' exakt. Synonymen 'toalett' och etymologin (water closet, claudere, släkt med kloster) bekräftas ordagrant av SO.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621401,
+      "ord": "medfaren",
+      "facit": "sliten",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sliten och skadad av att ha hanterats ovarsamt — nästan alltid med \"illa\" framför",
+        "register": "neutral, lätt negativ",
+        "synonymer": [
+          "sliten"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Väggen pryddes av en illa <font color=\"#3498db\">medfaren</font> tapet full av rispor och fuktfläckar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse, 'som visar spår av ovarsam användning', och anger explicit synonymen 'sliten' samt exemplet 'en illa medfaren tapet' — identiskt med kortets exempelmening. Inget fel hittat.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620478,
+      "ord": "memento",
+      "facit": "påminnelse; varning",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Varnande påminnelse — något som får en att tänka på vad som kan gå illa",
+        "register": "högtidlig, neutral",
+        "synonymer": [
+          "påminnelse",
+          "varning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hennes alltför tidiga död blev ett <font color=\"#3498db\">memento</font> för dem alla.",
+        "etymologi": "Latin memento 'kom ihåg!' — släkt med minne."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "facit_signal flaggade två möjliga betydelser ('påminnelse; varning'), men SO visar bara EN betydelse: 'varnande påminnelse'. Facit skiljer alltså två synonymer med ';', inte två betydelser — ingen lucka. Kortets exempelmening är nästan ordagrant SO:s eget exempel, och etymologin (latin 'kom ihåg!', släkt med minne) stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621759,
+      "ord": "odiös",
+      "facit": "förhatlig, motbjudande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så motbjudande att man känner avsky",
+        "register": "ngt ålderdomlig, negativ",
+        "synonymer": [
+          "förhatlig",
+          "olidlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans <font color=\"#3498db\">odiösa</font> sätt att tala om kollegorna gjorde honom impopulär.",
+        "etymologi": "Latin odium 'hat'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet just som 'förhatlig, olidlig', vilket bekräftar båda synonymerna på kortet (jag misstänkte först att 'olidlig' var en oattesterad nästan-synonym, men den är ordbokens egen definitionstext). Etymologin (latin odium 'hat') stämmer. En betydelse, korrekt.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620053,
+      "ord": "skärmytsling",
+      "facit": "mindre strid<br><br>(eng) skirmish",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kort och begränsad strid mellan små styrkor ; bildligt: kortare gräl eller ordväxling",
+        "register": "neutral, neutral ; neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">skärmytsling</font> mellan regeringen och oppositionen avslutade debatten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar både den bokstavliga militära betydelsen ('mindre strid... med bara ett fåtal personer') och den bildliga användningen om politiska motsättningar (SO:s eget exempel om regering/opposition) — kortets två betydelser är alltså genuint skilda och båda belagda, inte en konstruerad uppdelning.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620711,
+      "ord": "vankelmod",
+      "facit": "obeslutsamhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oförmåga att bestämma sig, som gör andra oroliga",
+        "register": "neutral, negativ",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Regeringens <font color=\"#3498db\">vankelmod</font> inför nedskärningarna oroade marknaden.",
+        "etymologi": "Lågtyska wankel 'ostadig' och mod i den äldre betydelsen 'sinne'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse, 'orosskapande obeslutsamhet', som kortet återger korrekt ('oförmåga att bestämma sig, som gör andra oroliga'). Exempelmeningen är nästan identisk med SO:s eget exempel, etymologin stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621380,
+      "ord": "ymnig",
+      "facit": "riklig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som kommer i stora mängder, nästan mer än man behöver",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "riklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det föll ett <font color=\"#3498db\">ymnigt</font> snöfall över staden hela natten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse, 'flödande riklig', vilket matchar facit och kortets definition. Synonymen 'riklig' är korrekt, exempelmeningen ('ymnigt snöfall') är hämtad rakt ur SO:s eget exempel.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619933,
+      "ord": "attribuera",
+      "facit": "tillskriva",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Peka ut vem som troligen skapat ett verk som saknar signatur",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "hänföra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Målningen har <font color=\"#3498db\">attribuerats</font> till Rembrandt.",
+        "etymologi": "Latin attribuere 'tilldela' — samma rot som attribut."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s egen definition lyder 'hänföra ngt anonymt till ngn som upphovsman', vilket bekräftar både synonymen 'hänföra' (jag misstänkte först att den korrekta synonymen 'tillskriva' saknades felaktigt, men 'hänföra' visade sig vara ordbokens egen definitionsformulering) och kortets tillägg 'som saknar signatur' (motsvarar SAOL:s 'anonymt'). Exempelmeningen matchar SAOL/SO:s eget exempel om Rembrandt.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621385,
+      "ord": "deodorant",
+      "facit": "luktborttagare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Medel som tar bort eller döljer dålig lukt",
+        "register": "neutral, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Deodorant</font> finns bland annat som spray och roll-on.",
+        "etymologi": "Latin de 'bort' och odor 'lukt' — samma rot som odör."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse, 'medel för avlägsnande eller undertryckande av obehaglig lukt', som kortet återger korrekt. Exempelmeningen är identisk med SO:s eget exempel. Etymologin (de+odor, släkt med odör) stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620157,
+      "ord": "kofångare",
+      "facit": "stötskydd på bil<br><a href=\"https://www.google.com/imgres?q=kof%C3%A5ngare&amp;imgurl=https%3A%2F%2Fdalhems.com%2Ff%2Fl%2FD144177AF781C91485C318AD96441D0C%2FKofangare-fram-tubular-dubbel-svart-med-dimljushallare.jpg&amp;imgrefurl=https%3A%2F%2Fdalhems.com%2Fsv%2Fp%2F0f2366c3033a4de4a32da03d00c3da45%2FKofangare-fram-tubular-dubbel-svart-med-dimljushallare&amp;docid=aqUCcXLsEokJsM&amp;tbnid=oZM_qbo2BkojRM&amp;vet=12ahUKEwjWsYq9zM6LAxWVB9sEHTZDLXAQM3oECB0QAA..i&amp;w=950&amp;h=722&amp;hcb=2&amp;ved=2ahUKEwjWsYq9zM6LAxWVB9sEHTZDLXAQM3oECB0QAA\"><div><div><div><img alt=\"Kofångare fram tubular dubbel, svart ...\" src=\"paste-c85e42d1c618663aee600732b3b6d2adf2c356e5.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stötfångare på bilens fram- eller baksida",
+        "register": "ngt ålderdomlig, neutral",
+        "synonymer": [
+          "stötfångare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bilens <font color=\"#3498db\">kofångare</font> låg krossad på vägbanan efter olyckan.",
+        "etymologi": "Engelska cow-catcher, om plogen framför amerikanska ånglok som sköt undan boskap från spåret."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse, 'stötfångare', märkt något ålderdomlig — matchar kortet exakt liksom synonymen. Etymologin om engelskans cow-catcher och ånglokens boskapsplog bekräftas ordagrant av SO och hjälper verkligen minnet (förklarar den annars konstiga kopplingen ko/bil).",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621782,
+      "ord": "betänkande",
+      "facit": "rapport efter utredning<br><br><i>ut­redningens <u>betänkande</u> sänds nu ut på remiss</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att tänka igenom något ordentligt före ett beslut — ofta i \"utan betänkande\", alltså utan att tveka ; skriftlig rapport med resultatet av en utredning",
+        "register": "formell, neutral ; formell, neutral, politik",
+        "synonymer": [
+          "övervägande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Utredningens <font color=\"#3498db\">betänkande</font> sänds nu ut på remiss.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar exakt två betydelser i samma ordning som kortet: 1) '(grundligt) övervägande' (bl.a. i 'utan betänkande') och 2) 'skriftlig redogörelse för resultatet av utredning...'. Kortet leder alltså med SO:s egen förstabetydelse. Exempelmeningen för sense 2 är identisk med både SO:s och facits exempel.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621368,
+      "ord": "entresol",
+      "facit": "mellanvåning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Låg mellanvåning inskjuten mellan två vanliga våningar",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "halvvåning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hotellet hade en <font color=\"#3498db\">entresol</font> mellan första och andra våningen.",
+        "etymologi": "Franska entre 'mellan' och sol 'golv'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet direkt som 'låg mellanvåning, halvvåning', vilket bekräftar synonymen 'halvvåning' som jag först inte hittade i SO:s kortare svar. En betydelse, korrekt återgiven, etymologin (franska entre+sol) stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621644,
+      "ord": "isomorf",
+      "facit": "likformig<br><a href=\"https://www.google.com/imgres?q=isomorph&amp;imgurl=https%3A%2F%2Fcalcworkshop.com%2Fwp-content%2Fuploads%2Fhow-to-tell-if-two-graphs-are-isomorphic.png&amp;imgrefurl=https%3A%2F%2Fcalcworkshop.com%2Ftrees-graphs%2Fisomorphic-graph%2F&amp;docid=6GUl4sxOMMAwCM&amp;tbnid=zIvuwRE_TKZ-0M&amp;vet=12ahUKEwixydXM2_KLAxWiERAIHXfzOKcQM3oECHoQAA..i&amp;w=1280&amp;h=720&amp;hcb=2&amp;ved=2ahUKEwixydXM2_KLAxWiERAIHXfzOKcQM3oECHoQAA\"><div><div><div><img alt=\"Isomorphic Graph (Explained w/ 15 ...\" src=\"paste-a469d9e21ff1eebf1d6758d9a1de9c0154377199.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har exakt samma form eller uppbyggnad som något annat",
+        "register": "fackspråklig, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De två kristallstrukturerna är <font color=\"#3498db\">isomorfa</font> och har samma geometriska mönster.",
+        "etymologi": "Grekiska isos 'lika' och morphe 'form'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse, 'som har samma form eller struktur (som ett annat ämne)', vilket matchar kortet. Definitionen är generisk nog att täcka både kemi- och matematikanvändning (facits bild om grafteori respektive kortets kristallexempel) utan att någon betydelse saknas. Etymologin (iso+morphe) stämmer.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080620464,
+      "ord": "polygami",
+      "facit": "månggifte",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Äktenskap där en person är gift med flera samtidigt ; utvidgat: att leva med flera partner samtidigt",
+        "register": "neutral, neutral ; neutral, neutral",
+        "synonymer": [
+          "månggifte"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Polygami</font> är lagligt i vissa länder.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar både grundbetydelsen (äktenskap med flera samtidigt) och en uttrycklig 'utvidgad betydelse' om att leva med flera partner utan äktenskap — kortets andra betydelse är alltså genuint belagd, inte en konstruerad uppdelning. Synonymen 'månggifte' anges explicit av SO.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080619519,
+      "ord": "resolut",
+      "facit": "beslutsam",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kraftfull och bestämd i sitt handlande",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [
+          "beslutsam",
+          "rask"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon tog <font color=\"#3498db\">resolut</font> initiativet när de andra tvekade.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL:s definition 'beslutsam, rask' bekräftar båda synonymerna på kortet (jag misstänkte först att 'rask' var en distraktor-nästan-synonym, men den ingår i ordbokens egen definition). SO behandlar den adverbiella användningen som samma betydelse, inte en separat sense, så kortets enda huvudbetydelse är korrekt avgränsad. Exempelmeningen är identisk med SO:s eget exempel.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080621828,
+      "ord": "sörja",
+      "facit": "slask;&nbsp; känna sorg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Blöt, smutsig blandning av snö, lera och vatten ; känna sorg efter någon som dött ; sörja för: se till att något blir gjort",
+        "register": "vardaglig, neutral ; neutral, neutral ; formell, neutral",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Efter regnet var grusvägen en enda <font color=\"#3498db\">sörja</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar alla tre betydelser exakt: substantivet 'smutsig blandning av vätska och partiklar' (slask), verbet 'känna sorg', och frasen 'sörja för: ta ansvar för utförandet av något' — inget saknas och inget är felaktigt hopblandat. Exempelmeningen för slask-betydelsen är i det närmaste ordagrant SO:s eget exempel.",
+      "granskning_turer_post": 47,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 47,
+  "granskning_kostnad_usd": 1.0900747,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 47,
+      "turkrav": 5,
+      "kostnad_usd": 1.0900747
+    }
+  ]
+}
