@@ -1,0 +1,344 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": null,
+ "granskare": "claude-cli-blind",
+ "poster": [
+  {
+   "noteId": 1780080622379,
+   "ord": "omfång",
+   "facit": "storlek och omfattning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Hur stor plats en yta eller en kropp tar upp ; också om andra mätbara utsträckningar, som en rösts omfång ; mer allmänt: hur långt något sträcker sig",
+    "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; neutral, neutral, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Skadeverkningarnas <font color=\"#3498db\">omfång</font> stod klart först efter flera veckor.",
+    "etymologi": "Tyska Umfang; samma rot som fang."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger tre betydelser (rumslig storlek hos yta/kropp; mätbar utsträckning som röstomfång; mer allmänt 'hur långt något sträcker sig'/omfattning), och kortet täcker alla tre korrekt separerade med ';'. Etymologin (ty. Umfang) stämmer med SO. Facit har färre betydelser än kortet, vilket inte är ett fel eftersom kortet snarare är mer komplett.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622369,
+   "ord": "plottrig",
+   "facit": "rörig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Full av småsaker som inte hänger ihop, så att helheten blir svår att uppfatta",
+    "register": "neutral, lätt negativ, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "En faktaspäckad men lite <font color=\"#3498db\">plottrig</font> bok.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'som består av en mängd smådetaljer utan klart sammanhang' matchar kortets formulering nästan ordagrant. En betydelse, ingen saknas. Tom synonymlista är inget fel.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622385,
+   "ord": "ranglig",
+   "facit": "ostadig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Som inte sitter väl ihop och därför vinglar ; om en person: lång och smal utan stadigt grepp om sin kropp",
+    "register": "neutral, lätt negativ, allmän ; neutral, lätt negativ, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "En <font color=\"#3498db\">ranglig</font> stol som knakade vid minsta rörelse.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger två betydelser: om sak/möbel (instabil, sitter inte ihop) och om person (lång och skranglig). Kortet täcker båda korrekt separerade med ';'.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622360,
+   "ord": "robust",
+   "facit": "kraftig och stadig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Som tål påfrestningar utan att gå sönder ; om ett system: driftsäkert, fungerar även när något går fel ; om en person: som inte tar illa vid sig av motgångar ; om ett språk eller sätt: grovt och utan förfining",
+    "register": "neutral, positiv, allmän ; fackspråklig, positiv, teknik ; neutral, positiv, allmän ; neutral, lätt negativ, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Han har en <font color=\"#3498db\">robust</font> personlighet och orättvis kritik biter inte på honom.",
+    "etymologi": "Latin robustus, till robur 'hart tra, styrka'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger huvudbetydelse plus tre underbetydelser (person, språk/sätt, system). Kortet listar alla fyra, leder med den mest allmänna fysiska betydelsen och etymologin (lat. robustus/robur) stämmer.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622323,
+   "ord": "skurril",
+   "facit": "burlesk, gycklande, plump, vulgär, rå",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Komisk på ett grovt och plumpt sätt",
+    "register": "ngt ålderdomlig, lätt negativ, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "<font color=\"#3498db\">Skurrila</font> skämt som fick halva publiken att resa sig.",
+    "etymologi": "Latin scurrilis 'narraktig', till scurra 'dagdrivare, skamtare'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: en betydelse, 'komisk på ett grovt sätt', matchar kortet. Facitets flera ord (burlesk, gycklande, plump, vulgär, rå) är synonymer till samma betydelse, inte tecken på en missad betydelse.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622374,
+   "ord": "sträva",
+   "facit": "arbeta",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kämpa målmedvetet för att nå något ; ta sig fram med stor ansträngning ; om något högt: sträcka sig uppåt ; som substantiv: snedställt stöd som håller uppe en lutande vägg",
+    "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; litterär, neutral, allmän ; fackspråklig, neutral, teknik",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Tornspiran <font color=\"#3498db\">strävar</font> mot himlen.",
+    "etymologi": "I verbbetydelsen lagtyska streven 'sticka upp, anstranga sig'; samma rot som streber. Substantivet av tyska Strebe."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Kontrollerade separat att adjektivet 'sträv' är ett eget uppslagsord skilt från 'sträva' och alltså inte en missad betydelse. SO:s 'sträva' har verb (huvudbetydelse + två underbetydelser: ta sig fram med ansträngning, peka/sträcka sig åt visst håll) och substantiv (snedställt stöd, gotisk arkitektur). Kortets fyra led täcker samtliga.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622358,
+   "ord": "utläggning",
+   "facit": "redogörelse, kommentar",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Att placera ut något, som minor eller kablar ; en lång och detaljerad redogörelse i tal eller skrift",
+    "register": "fackspråklig, neutral, teknik ; neutral, neutral, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Hon höll en lång <font color=\"#3498db\">utläggning</font> om riskerna med alkohol.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger exakt två betydelser (att placera ut något, t.ex. minor; en lång detaljerad redogörelse). Kortet täcker båda korrekt.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622350,
+   "ord": "agentur",
+   "facit": "företrädare åt företag",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Att sköta ett annat företags ekonomiska intressen, till exempel genom att sälja dess varor ; också om företaget som gör det",
+    "register": "neutral, neutral, ekonomi ; neutral, neutral, ekonomi",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "De tog över <font color=\"#3498db\">agenturen</font> för färjeleden.",
+    "etymologi": "Till agent, av latin agere 'satta i rorelse, handla'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: huvudbetydelse (sköta ett annat företags ekonomiska intressen) plus underbetydelse (själva företaget/organisationen). Kortet täcker båda.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622314,
+   "ord": "alias",
+   "facit": "annat namn",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Även kallad — sätts mellan någons riktiga namn och ett påhittat ; som substantiv: det påhittade namnet i sig",
+    "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Polisen gick ut med det <font color=\"#3498db\">alias</font> mannen använt på internet.",
+    "etymologi": "Latin alias 'vid annat tillfalle'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger två homografer (adverb 'även kallad'; substantiv 'fingerat namn/signatur'). Kortet täcker båda korrekt.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622340,
+   "ord": "avvika",
+   "facit": "skilja sig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ändra riktning och lämna den utstakade vägen ; i hemlighet ge sig av från en plats man ska vara på ; tydligt skilja sig från det vanliga eller väntade",
+    "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; neutral, neutral, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Två interner <font color=\"#3498db\">avvek</font> från fängelset under permissionen.",
+    "etymologi": "Fornsvenska afvika."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger flera användningar (ändra färdriktning; klart skilja sig; i fast uttryck rymma hemligt från plats). Kortets tre led (riktning, hemligt ge sig av, skilja sig från det vanliga) täcker dessa väl.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622306,
+   "ord": "bagatellisera",
+   "facit": "förringa",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Låtsas som att något viktigt bara är en småsak",
+    "register": "neutral, lätt negativ, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Man bör inte <font color=\"#3498db\">bagatellisera</font> miljöproblemen.",
+    "etymologi": "Till bagatell, av franska bagatelle 'smasak'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'förringa betydelsen av'. Kortets 'låtsas som att något viktigt bara är en småsak' är en godtagbar, om än något friare, parafras av samma kärnbetydelse. Ingen betydelse saknas.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622380,
+   "ord": "benign",
+   "facit": "godartad",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Om en tumör eller sjuklig förändring: som utvecklas på ett ofarligt sätt",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "godartad"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Vårtan visade sig vara <font color=\"#3498db\">benign</font>.",
+    "etymologi": "Latin benignus, till bene 'val' och gignere 'foda, frambringa'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'som utvecklas på godartat sätt, om sjukdomar/svulster' matchar kortet. Synonymen 'godartad' pekas ut direkt av ordbokens egen definitionstext och är inte cirkulär.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622366,
+   "ord": "besjälad",
+   "facit": "inspirerad, eldad; själfull",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Helt uppfylld av en känsla eller en vilja ; om naturen eller döda ting: framställd som om den hade en själ",
+    "register": "litterär, neutral, allmän ; litterär, neutral, litteraturvetenskap",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Hon var <font color=\"#3498db\">besjälad</font> av en vilja att hjälpa sina medmänniskor.",
+    "etymologi": "Efter tyska beseelen; till sjal."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO (besjäla): huvudbetydelse (uppfylla någons tankar/själsliv, används ofta i participform 'besjälad') plus underbetydelse (ge själ åt döda ting/naturen). Kortet täcker båda korrekt.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622334,
+   "ord": "bondsk",
+   "facit": "lantlig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Som har drag som kännetecknar bönder och livet på en bondgård — enkelt och osminkat",
+    "register": "neutral, neutral, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Möbler i en enkel, <font color=\"#3498db\">bondsk</font> stil.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger en betydelse ('kännetecknar bönder... enligt traditionella föreställningar') utan explicit negativ registeretikett i källan, trots att ett av SO:s exempel ('ett lite bondskt svar') har en mild nedsättande underton. Kortets neutrala register är därför försvarbart, om än ett gränsfall.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622299,
+   "ord": "deklassera",
+   "facit": "nedsätta socialt",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Trycka ner någon till en lägre samhällsställning",
+    "register": "neutral, negativ, allmän",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Genom faderns konkurs blev familjen <font color=\"#3498db\">deklasserad</font>.",
+    "etymologi": "Franska déclasser, till dé- 'itu' och classe 'klass'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'ge lägre rang eller status särsk. socialt' matchar kortet exakt.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622342,
+   "ord": "drittel",
+   "facit": "smörtunna<br><a href=\"https://www.google.com/imgres?q=drittel&amp;imgurl=http%3A%2F%2Fwww.biopix.net%2Fphotos%2Fkan-drittel-00001.jpg&amp;imgrefurl=http%3A%2F%2Fwww.biopix.net%2Fdrittel_photo-38745.aspx&amp;docid=uCewuLLq-eFClM&amp;tbnid=rJgszZBD41HyRM&amp;vet=12ahUKEwjmkf3kuc6LAxVpXvEDHXymHm4QM3oECBkQAA..i&amp;w=640&amp;h=480&amp;hcb=2&amp;ved=2ahUKEwjmkf3kuc6LAxVpXvEDHXymHm4QM3oECBkQAA\"><div><div><div><img alt=\"Drittel foto - bild 38745\" src=\"paste-20b0c86062c306e5d84b38c03c261781cae986d9.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Träkärl av sammanfogade stavar som förr användes för att förvara smör ; också om det rymdmått ett sådant kärl rymde",
+    "register": "neutral, neutral, historia ; neutral, neutral, historia",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Smöret packades i en <font color=\"#3498db\">drittel</font> för export till England.",
+    "etymologi": "Danska drittel; av tyska Drittel 'tredjedel'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL bekräftar uttryckligen båda betydelserna: 'tunna för förpackning av smör' OCH 'en volymenhet för smör'. Kortets två led (kärlet respektive rymdmåttet) stämmer exakt mot detta.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622382,
+   "ord": "eufemism",
+   "facit": "förskönande omskrivning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Mildare ord som man sätter i stället för ett som känns obehagligt eller grovt",
+    "register": "fackspråklig, neutral, lingvistik",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "\"Den lede\" är en <font color=\"#3498db\">eufemism</font> för \"fan\".",
+    "etymologi": "Grekiska euphemismos 'anvandning av ett vackert ord for en dalig sak', till eu 'god' och pheme 'ord, sprak'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: en betydelse, 'förskönande omskrivning av något stötande uttryck', matchar kortet nästan ordagrant.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  },
+  {
+   "noteId": 1780080622355,
+   "ord": "fog",
+   "facit": "skarv; bra skäl",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ställe där två delar i en konstruktion satts ihop ; i uttrycket \"knaka i fogarna\": hålla på att brista ; fullgott skäl — \"med fog\" ; i grammatiken: ljudet eller bokstaven som binder ihop två led i ett sammansatt ord",
+    "register": "neutral, neutral, teknik ; neutral, neutral, allmän ; neutral, neutral, allmän ; fackspråklig, neutral, lingvistik",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Deras äktenskap knakar i <font color=\"#3498db\">fogarna</font>.",
+    "etymologi": "Skarvbetydelsen av lagtyska voge, till vogen 'foga'. Skalbetydelsen fornsvenska fogh 'det som ar till pass' -- ett annat ord med annan historia; samma rot som ofog."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger två homografer (skarv/föreningsställe; fullgott skäl) och jag verifierade separat att skarv-homografen har en bekräftad underbetydelse 'äv. om sammanbindande ljud el. bokstav' (exempel: fogen i 'skogsbrand') -- exakt kortets fjärde, grammatiska betydelse. Alla fyra led samt idiomet 'knaka i fogarna' stämmer.",
+   "granskning_turer_post": 31,
+   "granskning_turkrav_post": 5
+  }
+ ],
+ "granskning_turer": 31,
+ "granskning_kostnad_usd": 0.9830568,
+ "granskning_turkrav": 5,
+ "granskning_korningar": [
+  {
+   "poster": 19,
+   "turer": 31,
+   "turkrav": 5,
+   "kostnad_usd": 0.9830568
+  }
+ ]
+}

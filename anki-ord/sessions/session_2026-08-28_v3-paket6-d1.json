@@ -1,0 +1,380 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622368,
+      "ord": "diminutiv",
+      "facit": "förminskningsord",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket liten ; om en ordform: som uttrycker att något är litet ; som substantiv: själva ordet som bildats för en mindre variant av något, som \"cigarett\" av cigarr",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, lingvistik ; fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "\"Cigarett\" är egentligen ett <font color=\"#3498db\">diminutiv</font> som betyder \"liten cigarr\".",
+        "etymologi": "Latin diminutivus, till diminuere 'minska'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat mot SO: två homografer, adjektiv 'mycket liten' (med underbetydelse 'spec. språkvetenskap: som uttrycker förminskning') och substantiv 'avlett ord som betecknar en mindre variant'. Kortets tre led täcker exakt detta, i samma ordning som SO. Exempelmeningen är SO:s egen ('Cigarett...'). Etymologin (latin diminutivus, till diminuere 'minska') stämmer. Inget saknas, ingen sakfel.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622372,
+      "ord": "dyslexi",
+      "facit": "läs- och skrivsvårigheter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Varaktig nedsättning av förmågan att läsa och skriva, som gäller enbart det och inte är en allmän inlärningssvårighet",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Med gott stöd kan personer med <font color=\"#3498db\">dyslexi</font> minska sina svårigheter.",
+        "etymologi": "Grekiska dys- 'daligt, svart' och lexis 'ord, tal'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'specifika läs- och skrivsvårigheter som ger hinder vid läsinlärning'. Kortet fångar detta samt den viktiga avgränsningen mot allmän inlärningssvårighet, vilket är sakligt korrekt (dyslexi särskiljs kliniskt just på det sättet). Exempelmeningen är nästan identisk med SO:s. Etymologin (dys- 'dåligt, svårt' + lexis 'ord, tal' -- diakritiska tecken saknas i filen, 'svart' är 'svårt') stämmer med SO:s 'dys-' och 'lexis'. Endast en betydelse finns i SO, inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622313,
+      "ord": "epitet",
+      "facit": "namntillägg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Beskrivande ord man sätter på någon eller något, ofta värderande ; inom grammatiken: ett ord som ansluter direkt till namnet utan paus, som \"kung\" i \"kung Karl\"",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon beskrev honom med mindre smickrande <font color=\"#3498db\">epitet</font>.",
+        "etymologi": "Grekiska epitheton 'tillagg'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: 1) '(karakteriserande) beteckning särsk. på person', 2) grammatisk term 'attribut som ansluter utan paus till huvudordet' (SO:s exempel: 'drottning' i 'drottning Sofia Magdalena'). Kortet täcker båda, med ett eget men likvärdigt exempel ('kung' i 'kung Karl'). Exempelmeningen för huvudbetydelsen är SO:s egen. Etymologin (grekiska epitheton 'tillägg') stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622310,
+      "ord": "gondol",
+      "facit": "långsmal kanalbåt<br><a href=\"https://en.wikipedia.org/wiki/File:Brooklyn_Museum_-_La_Riva_-_John_Singer_Sargent.jpg\"><img src=\"220px-brooklyn_museum_-_la_riva_-_john_singer_sargent.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Långsmal, flatbottnad venetiansk båt med uppåtböjda stävar, som förs fram med en åra i aktern ; korgen eller hytten som hänger under en luftballong ; fristående försäljningsdisk i en butik där varorna ligger öppet framme",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, teknik ; fackspråklig, neutral, ekonomi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Gondolen</font> stötte nästan i marken, så de måste kasta ballast.",
+        "etymologi": "Italienska gondola; ursprunget ar omdiskuterat, ev. till dialektens gondola 'gunga, rulla'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Verifierat med rå-JSON från SO: exakt tre huvudbetydelser -- venetiansk båt, ballongkorg, fristående säljdisk -- och kortets tre led matchar dessa nästan ordagrant. Etymologin (italienska gondola, omdiskuterat ursprung, ev. 'gunga, rulla') stämmer med SO. Exempelmeningen illustrerar ballongkorg-betydelsen tydligt och korrekt. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622317,
+      "ord": "kapellmästare",
+      "facit": "ledare för musikkår<br><a href=\"https://www.google.com/imgres?q=kapellmeister&amp;imgurl=https%3A%2F%2Fbhalzerosix.wordpress.com%2Fwp-content%2Fuploads%2F2016%2F01%2Fkapellmeister-natali-murashko.jpg&amp;imgrefurl=https%3A%2F%2Fbhalzerosix.wordpress.com%2F2016%2F01%2F25%2Fthe-kapellmeister%2F&amp;docid=z9SI7G_pVh9_zM&amp;tbnid=8JVSQWCSdyy0aM&amp;vet=12ahUKEwjY9faTluWLAxXLGRAIHbfLACIQM3oECBwQAA..i&amp;w=900&amp;h=639&amp;hcb=2&amp;ved=2ahUKEwjY9faTluWLAxXLGRAIHbfLACIQM3oECBwQAA\"><div><div><div><img alt=\"The Kapellmeister | Bhal Zero Six ™\" src=\"paste-98d0bf6343f60885ec59e20e53c0b42ee15b42a9.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Titeln på den som leder ett musikkapell ; mer allmänt: den som leder en orkester",
+        "register": "fackspråklig, neutral, musik ; neutral, neutral, musik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han var <font color=\"#3498db\">kapellmästare</font> vid hovet i över tjugo år.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Rå-JSON från SO bekräftar exakt kortets struktur: huvudbetydelse '(titel för) dirigent för musikkapell' med en underbetydelse märkt 'äv. allmännare: orkesterledare'. Kortets två led och register (fackspråklig resp. neutral) återger detta korrekt. Exempelmeningen (hovkapellmästare) passar huvudbetydelsen. Inget saknas, ingen felaktig särskrivning av betydelser.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622324,
+      "ord": "koncept",
+      "facit": "manuscript;&nbsp; &nbsp;idé",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 3 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Utkast till en längre text ; i uttrycket \"tappa koncepterna\": komma av sig och förlora fattningen ; grundidé för en ny produkt eller verksamhet, med de bärande dragen bestämda",
+        "register": "ngt ålderdomlig, neutral, allmän ; vardaglig, neutral, allmän ; neutral, neutral, ekonomi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ett beprövat <font color=\"#3498db\">koncept</font> som fungerat i tjugo länder.",
+        "etymologi": "Latin conceptum 'det sammanfattade', till concipere 'sammanfatta, avfatta'; samma rot som koncipiera."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal undersökt: rå-JSON visar att SO endast har två homografer (1: 'utkast till längre text', något ålderdomligt, med inbäddat idiom 'tappa koncepterna' = 'komma av sig och förlora fattningen'; 2: 'plan för ny produkt med grundläggande egenskaper'). Det blir totalt tre sakinnehåll, precis som kortet har -- de '4' i facit_signal verkar vara ett formateringsartefakt i facit-strängen ('manuscript;&nbsp;&nbsp;idé'), inte en verklig fjärde betydelse. Exempelmeningen matchar SO:s andra homograf. Etymologin stämmer. Ingen betydelse saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622338,
+      "ord": "kristyr",
+      "facit": "sockerglasyr<br><img alt=\"webp image\" src=\"paste_1767187794199.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Glasyr av äggvita och florsocker, som används för att dekorera bakverk",
+        "register": "neutral, neutral, matlagning",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De dekorerade pepparkakshuset med <font color=\"#3498db\">kristyr</font>.",
+        "etymologi": "Ovisst ursprung; troligen bildat i analogi med glasyr."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger samma enda betydelse: 'glasyr av äggvita och florsocker (till bakverk)'/'sockerglasyr till tårtor'. Kortet återger detta korrekt och kompletterar med användningsområdet. Exempelmeningen är SO:s egen ('...pepparkakshuset med kristyr'). Etymologin (ovisst ursprung, ev. analogi med glasyr) stämmer. Register 'matlagning' matchar SAOL:s ämnesområde 'matlagn.'.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622308,
+      "ord": "mangold",
+      "facit": "en spenatgrönsak<br><a href=\"https://www.google.com/imgres?q=mangold&amp;imgurl=https%3A%2F%2Fwww.professionalsecrets.se%2Fuploads%2F1%2F3%2F3%2F9%2F133935227%2F9aryutpq_orig.jpg&amp;imgrefurl=https%3A%2F%2Fwww.professionalsecrets.se%2Fmangold.html&amp;docid=ry0vnHn2Dsz2iM&amp;tbnid=tAsZd6euX0NUkM&amp;vet=12ahUKEwiS5ZacyaaMAxXEU1UIHerKJKcQM3oECBgQAA..i&amp;w=1000&amp;h=664&amp;hcb=2&amp;ved=2ahUKEwiS5ZacyaaMAxXEU1UIHerKJKcQM3oECBgQAA\"><div><div><div><img alt=\"Mangold\" src=\"paste-2bb9beb1b9abe948f97eb58fa55f9fdea95a5720.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Odlad beta som man äter bladen av, ungefär som spenat",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Röd <font color=\"#3498db\">mangold</font> med kraftiga stjälkar.",
+        "etymologi": "Tyska Mangold; av ovisst ursprung."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en odlad beta vars blast används som spenat'. Kortets 'blad' är en acceptabel förenkling av 'blast' (bladverket på rotfrukter). Endast en betydelse i både SO och SAOL, inget saknas. Etymologin (tyska Mangold, ovisst ursprung) stämmer. Exempelmeningen ('Röd mangold...') är sakligt rimlig.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622362,
+      "ord": "oantastlig",
+      "facit": "felfri, perfekt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så väl gjord att det inte går att rikta minsta kritik mot den",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [
+          "oklanderlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hans resonemang var logiskt <font color=\"#3498db\">oantastligt</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som inte ger skäl för minsta kritik', exempelmening identisk med kortets. SAOL definierar ordet rakt av som 'oklanderlig', vilket bekräftar att kortets angivna synonym faktiskt är ordbokssanktionerad (inte bara en lös association). Endast en betydelse finns. Ingen etymologi angiven, vilket är tillåtet.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622341,
+      "ord": "postmodernism",
+      "facit": "ny fas efter det moderna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Riktning inom konst och litteratur som växte fram som en reaktion mot modernismen",
+        "register": "fackspråklig, neutral, konst",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Byggnaden räknas som ett tidigt exempel på <font color=\"#3498db\">postmodernism</font>.",
+        "etymologi": "Till post- 'efter' och modernism."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en konstnärlig stilriktning som präglas av reaktion mot modernismen, ursprungligen inom arkitektur'. Kortet återger detta och breddar rimligt till 'konst och litteratur', vilket är en vedertagen användning av termen. Exempelmeningen om en byggnad matchar SO:s arkitekturfokus. Etymologin (post- + modernism) stämmer. Endast en betydelse finns i SO.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622364,
+      "ord": "profetera",
+      "facit": "sprida religiösa åsikter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Framföra ett budskap man säger sig ha fått från Gud ; försvagat i modern svenska: förutsäga vad som kommer att hända",
+        "register": "neutral, neutral, bibliskt ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ekonomerna <font color=\"#3498db\">profeterade</font> om en krasch som aldrig kom.",
+        "etymologi": "Fornsvenska prophetera; till profet."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: primärt 'uppträda som religiös förkunnare' (bibliskt) och en försvagad, moderna 'förutspå/förutsäga'. Kortet återger båda i samma ordning och med rätt registerskillnad. Exempelmeningen om ekonomer illustrerar korrekt den försvagade betydelsen. Etymologin (fornsvenska prophetera, till profet) stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622318,
+      "ord": "recession",
+      "facit": "tillbakagång",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Period när ekonomin krymper i stället för att växa — en mildare nedgång än en riktig ekonomisk kris",
+        "register": "fackspråklig, neutral, ekonomi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Landet gick in i <font color=\"#3498db\">recession</font> efter ett år av fallande efterfrågan.",
+        "etymologi": "Engelska recession; samma rot som recess."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat att SO endast har en (1) träff/betydelse: 'mildare lågkonjunktur med nolltillväxt el. krympande ekonomi'. Kortets formulering ('ekonomin krymper i stället för att växa, en mildare nedgång än en riktig kris') återger detta sakligt korrekt. Etymologin (engelska recession, samma rot som recess) stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622329,
+      "ord": "supera",
+      "facit": "äta kvällsmat",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Äta ett sent kvällsmål",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De <font color=\"#3498db\">superade</font> på en flott restaurang efter teatern.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda betydelsen 'äta supé', med exakt samma exempelmening som kortet ('...superade på en flott restaurang'). Endast en betydelse finns, register 'neutral, allmän' rimligt. Inget saknas, inget sakfel.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622325,
+      "ord": "tjusig",
+      "facit": "behagfull",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Elegant och vacker att se på ; om något som ger status: påkostat och eftertraktat ; ibland om en handling: fin och beundransvärd",
+        "register": "neutral, positiv, allmän ; neutral, positiv, allmän ; neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det var <font color=\"#3498db\">tjusigt</font> av honom att ta på sig skulden.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'elegant och vacker', med användningsexempel som spänner över utseende (villa, klänning), status/åtrå (jobb i filmbranschen) och beundransvärt handlande ('tjusigt av honom att ta på sig skulden'). Kortets tre led täcker exakt dessa tre nyanser inom SO:s enda huvudbetydelse. Exempelmeningen är SO:s egen. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622344,
+      "ord": "undfå",
+      "facit": "(rel.) mottaga",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ta emot något som ges en, särskilt något andligt",
+        "register": "högtidlig, neutral, religion",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Man <font color=\"#3498db\">undfår</font> syndernas förlåtelse genom tron.",
+        "etymologi": "Fornsvenska untfa; efter lagtyska untfan 'ta emot'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger samma enda betydelse: '(få) ta emot', högtidligt/religiöst (SAOL: 'åld.', ämnesområde religion). Kortet återger detta korrekt med tillägget 'särskilt något andligt'. Exempelmeningen är SO:s egen ('Man undfår syndernas förlåtelse genom tron'). Etymologin (fornsvenska untfa, lågtyska untfan 'ta emot') stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622312,
+      "ord": "annullera",
+      "facit": "upphäva",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förklara att ett beslut, ett avtal eller en bokning inte längre gäller",
+        "register": "neutral, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Årsmötet <font color=\"#3498db\">annullerade</font> styrelsens beslut.",
+        "etymologi": "Latin annullare 'forinta', till nullus 'ingen'; samma rot som noll."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: enda betydelsen 'förklara (beslut, kontrakt e.d.) ogiltigt'. Kortets 'beslut, avtal eller bokning' är en rimlig konkretisering. Exempelmeningen ('Årsmötet annullerade styrelsens beslut') är SO:s egen. Etymologin (latin annullare 'förinta', till nullus 'ingen', samma rot som noll) stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622361,
+      "ord": "betagande",
+      "facit": "förtjusande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så vacker eller charmerande att man inte kan värja sig",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hennes sång var helt <font color=\"#3498db\">betagande</font>.",
+        "etymologi": "Till betaga, fornsvenska betaka; efter lagtyska benemen, till nemen 'ta' -- nagot som TAR en."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: adjektivet 'betagande' har en (1) betydelse, 'som väcker oemotståndlig förtjusning', exempel 'hennes sång var helt betagande' -- identiskt med kortets exempelmening. Etymologin (till betaga, fornsvenska betaka, lågtyska benemen 'ta') stämmer ordagrant med SO, och tillägget 'något som TAR en' hjälper minnet på ett sakligt korrekt sätt. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622301,
+      "ord": "eklog",
+      "facit": "herdedikt<br><a href=\"https://www.google.com/imgres?q=eclogue&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F65%2FVirgil%252C_Eclogues%252C_Vaticanus_Palatinus_lat._1632.jpg%2F1200px-Virgil%252C_Eclogues%252C_Vaticanus_Palatinus_lat._1632.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FEclogue&amp;docid=RK3GNHTVmQBuTM&amp;tbnid=MNU6DrsOKSyZ-M&amp;vet=12ahUKEwjZs8awjPWLAxWeIBAIHZQbAawQM3oECB0QAA..i&amp;w=1200&amp;h=1613&amp;hcb=2&amp;ved=2ahUKEwjZs8awjPWLAxWeIBAIHZQbAawQM3oECB0QAA\"><div><div><div><img alt=\"Eclogue - Wikipedia\" src=\"paste-d9954a7911215e067bb4aa0f6433a8cd8b7ed4ec.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Dikt om herdar och deras liv ; mer allmänt: dikt som målar upp ett idylliskt liv på landet",
+        "register": "fackspråklig, neutral, litteraturvetenskap ; fackspråklig, neutral, litteraturvetenskap",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vergilius <font color=\"#3498db\">ekloger</font> är genrens förebild.",
+        "etymologi": "Grekiska ekloge 'urval, citat'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Rå-JSON från SO bekräftar exakt kortets struktur: huvudbetydelse 'herdedikt (en populär genre i äldre litteratur)' med underbetydelse 'äv. om dikt som skildrar idylliskt lantligt liv'. Kortets två led återger detta korrekt separerade. Exempelmeningen bygger på SO:s eget exempel (Vergilius ekloger). Etymologin (grekiska ekloge 'urval, citat') stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622302,
+      "ord": "homogen",
+      "facit": "enhetlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sammansatt av delar som är likadana rakt igenom ; ibland med bibetydelsen att helheten därför håller jämn och god kvalitet",
+        "register": "neutral, neutral, allmän ; neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ett <font color=\"#3498db\">homogent</font> försvar utan svaga punkter.",
+        "etymologi": "Grekiska homogenes 'av samma art', till homo- 'samma' och genos 'art, slag'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sammansatt av alltigenom likartade beståndsdelar', med en extra nyans om att helheten därigenom ofta håller jämn/god kvalitet (SO:s exempel 'ett homogent försvar utan svaga punkter' är identiskt med kortets exempelmening). Kortets två led återger båda nyanserna korrekt. Etymologin (grekiska homogenes, homo- + genos) stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622326,
+      "ord": "krackelera",
+      "facit": "spricka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge glasyr eller glas ett nät av fina sprickor ; om en yta: spricka upp i ett sådant nät ; bildligt om en fasad eller en bild av något: börja spricka och falla isär",
+        "register": "fackspråklig, neutral, konst ; neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Den äldre Sverigebilden har <font color=\"#3498db\">krackelerat</font>.",
+        "etymologi": "Franska craqueler, till craquer 'knaka'; nara beslaktat med kracka."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: primär betydelse 'ge glasyr/glas ett nät av fina sprickor', sekundär 'spricka' (om yta) med explicit bildlig användning. Kortets tre led (dekorsprickor, ytas uppsprickning, bildligt om fasad/bild som faller isär) täcker detta väl utan att lägga till fel innehåll. Exempelmeningen illustrerar den bildliga användningen korrekt. Etymologin (franska craqueler, till craquer 'knaka', besläktat med kracka) stämmer. Inget saknas.",
+      "granskning_turer_post": 35,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 35,
+  "granskning_kostnad_usd": 1.2762845,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 35,
+      "turkrav": 5,
+      "kostnad_usd": 1.2762845
+    }
+  ]
+}

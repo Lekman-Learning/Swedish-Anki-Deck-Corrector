@@ -39,6 +39,11 @@ FIELD_BAKSIDA = "Baksida"
 SYNONYM_COLOR = "#3498db"
 ETYMOLOGI_COLOR = "#9e9e9e"
 ETYMOLOGI_PIL = "→"
+# Registerfargen anvands BARA i den numrerade layouten (>=3 betydelser,
+# se baksida.NUMRERAD_FRAN). I ett- och tvabetydelsekort star registret
+# ofargat pa egen rad som forut. Samma gra som etymologin, av samma skal:
+# lasbar mot bade ljust och morkt tema.
+REGISTER_COLOR = "#9e9e9e"
 
 # Register-tagg: STÄNGD vokabulär, en tagg per axel max (se style_guide.md).
 # Fritext gled isär över 10k kort/flera pass tidigare (t.ex. fabricerade

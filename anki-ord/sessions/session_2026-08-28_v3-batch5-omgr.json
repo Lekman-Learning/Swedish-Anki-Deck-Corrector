@@ -1,0 +1,265 @@
+[
+ {
+  "noteId": 1780080622252,
+  "ord": "krum",
+  "spar": "nya",
+  "prio": false,
+  "redan_i_kon": false,
+  "nuvarande_format": "legacy",
+  "legacy": {
+   "synonymer": [
+    "böjd",
+    "krokig",
+    "krökt"
+   ],
+   "definitioner": [
+    "Böjd, inte rakt",
+    "Har en kurva eller böjning"
+   ],
+   "exempelmening": "<font color=\"#3498db\">Krumma</font> ben.",
+   "etymologi": null,
+   "bild_html": "<br><br><img src=\"paste-1e280c0c847844bf0788615859233d86b74090b7.webp\" style=\"max-width:400px; border-radius:4px;\">",
+   "synonym_groups": null
+  },
+  "old_facit": "böjd och krokig<div><img src=\"paste-1e280c0c847844bf0788615859233d86b74090b7.webp\"><br></div>",
+  "har_old_facit": true,
+  "riskflaggor": [
+   {
+    "flagga": "fragment_exempel",
+    "allvar": "lag",
+    "forklaring": "Exempelmeningen är en fras, inte en mening: 'Krumma ben.'"
+   }
+  ],
+  "hogsta_allvar": "lag",
+  "adamtal_krav": [
+   "tom_exempelmening",
+   "saknar_highlight",
+   "avslutande_skiljetecken_hb",
+   "semikolon_utan_mellanslag",
+   "formatering_i_hb",
+   "html_skrap",
+   "tom_synonym",
+   "tom_synonymgrupp",
+   "grupper_matchar_ej_betydelser",
+   "cirkular_synonym",
+   "fler_register_an_betydelser"
+  ],
+  "sokkoll": {
+   "kalla": "https://svenska.se/api/msearch?ord=krum https://www.synonymer.se/sv-syn/krum https://sv.wiktionary.org/wiki/krum",
+   "slutsats": "SO ger tva: adjektivet 'bojd' och substantivet 'bojd form' (SO:s exempel: 'hon satt med ryggen i krum'). Bada ar med -- att samma ord ar bade adjektiv och substantiv ar precis den sorts sak ett kort ska visa. SAOL:s 'krokt' och Wiktionarys 'krokig' ar INTE upptagna som synonymer: krokig anvands ocksa om en vag som slingrar sig, vilket krum aldrig gor, sa bada-hallen-provet faller. RATTAT efter blindgranskning, TVA fel i ett kort. (1) Min formulering 'krokig i formen' var for bred -- SO:s samtliga exempel pa adjektivet ar kroppsliga (krumma ben, en krum kropp, ryggen krum), sa 'en krum pinne' hade blivit inlart som godkant. Facit ar nu forankrat i kroppen. (2) Samtidigt hade jag SLAGIT IHOP bort SO:s underbetydelse 'av. om vaxt' (SO:s eget exempel: 'krumma trad'), som nu ar en egen betydelse. Kortet var alltsa for brett och for smalt pa en gang. NOT: granskaren skrev att ordet ar avgransat till kropp -- det ar en overdrift at andra hallet, for SO:s aldsta belagg (1560) galler ett oxhorn och vaxtbetydelsen ar uttrycklig. Facit foljer SO, inte granskarens skarpning."
+  },
+  "proposed": {
+   "huvudbetydelse": "Om kropp eller rygg: krökt framåt av ålder, sjukdom eller tungt arbete ; också om växter: krokvuxen ; som substantiv: själva kröken — \"med ryggen i krum\"",
+   "register": "neutral, neutral, allmän ; neutral, neutral, biologi ; neutral, neutral, allmän",
+   "synonymer": [],
+   "synonym_groups": null,
+   "exempelmening": "Han stod med ryggen <font color=\"#3498db\">krum</font> över arbetsbänken.",
+   "etymologi": "→ Lagtyska krum; beslaktat med kramp och krympa."
+  },
+  "approved": true,
+  "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+  "confidence": 9,
+  "adamtal_varningar": [
+   "cirkular_definition: 'krum' tycks förklaras med sig självt"
+  ],
+  "exempel_varningar": [
+   "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+  ],
+  "applicerad": true,
+  "skriven_av": null
+ },
+ {
+  "noteId": 1780080622288,
+  "ord": "subtil",
+  "spar": "nya",
+  "prio": false,
+  "redan_i_kon": false,
+  "nuvarande_format": "legacy",
+  "legacy": {
+   "synonymer": [
+    "fin",
+    "diskret",
+    "raffinerad"
+   ],
+   "definitioner": [
+    "Mycket fin och nästan inte märkbar.",
+    "Fint och elegant utan att vara överdrivet."
+   ],
+   "exempelmening": "En <font color=\"#3498db\">subtil</font> skillnad.",
+   "etymologi": null,
+   "bild_html": null,
+   "synonym_groups": null
+  },
+  "old_facit": "knappt märkbar",
+  "har_old_facit": true,
+  "riskflaggor": [
+   {
+    "flagga": "fragment_exempel",
+    "allvar": "lag",
+    "forklaring": "Exempelmeningen är en fras, inte en mening: 'En subtil skillnad.'"
+   }
+  ],
+  "hogsta_allvar": "lag",
+  "adamtal_krav": [
+   "tom_exempelmening",
+   "saknar_highlight",
+   "avslutande_skiljetecken_hb",
+   "semikolon_utan_mellanslag",
+   "formatering_i_hb",
+   "html_skrap",
+   "tom_synonym",
+   "tom_synonymgrupp",
+   "grupper_matchar_ej_betydelser",
+   "cirkular_synonym",
+   "fler_register_an_betydelser"
+  ],
+  "sokkoll": {
+   "kalla": "https://svenska.se/api/msearch?ord=subtil https://www.synonymer.se/sv-syn/subtil https://sv.wiktionary.org/wiki/subtil",
+   "slutsats": "SO: 'mycket fin' -- en definition sa knapp att den inte forklarar nagot, sa SAOL:s 'knappt markbar' ar inskrivet i stallet. SO:s JFR harfin ar cohyponymmarkt och tas inte upp. SAOL:s 'sofistikerad, spetsfundig' galler en ANNAN sida av ordet (om ett resonemang) och ar medvetet utelamnad -- den anvandningen ar sallsynt i svenskan och skulle grumla kortet. OLD-facit 'knappt markbar' stammer. RATTAT efter blindgranskning, TVA fel. (1) Ordet 'forsiktig' ar STRUKET ur facit -- det stod i ingen kalla. Subtil handlar om finhet och forfining, inte om forsiktighet, och den inlasningen hade lart in fel nyans. (2) Jag skrev uttryckligen i den forsta sokkollen att jag UTELAMNADE SAOL:s 'sofistikerad, spetsfundig' med motiveringen att den anvandningen ar sallsynt i svenskan. Det var fel: SO:s egen exempelmening ar just den ('han talar inte sa oppet utan mera subtilt med antydningar'), och latinets subtilis ges av SO sjalv som 'fin; harfin; SKARPSINNIG'. Betydelsen ar nu med. Tredje gangen samma dag som jag skar bort en betydelse och skrev ut att jag gjorde det -- att dokumentera en hopslagning gor den inte riktig."
+  },
+  "proposed": {
+   "huvudbetydelse": "Så fin att den knappt märks — man måste vara uppmärksam för att uppfatta den ; om ett resonemang eller ett sätt att uttrycka sig: förfinat och skarpsinnigt, med antydningar i stället för raka besked",
+   "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+   "synonymer": [],
+   "synonym_groups": null,
+   "exempelmening": "Det är en <font color=\"#3498db\">subtil</font> skillnad mellan de två orden.",
+   "etymologi": "→ Latin subtilis 'fin, harfin, skarpsinnig'."
+  },
+  "approved": true,
+  "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+  "confidence": 9,
+  "adamtal_varningar": [
+   "ordbokslangd_hb: 15 ord i en betydelse -- korta ner: 'Så fin att den knappt märks — man måste vara uppmä'",
+   "ordbokslangd_hb: 19 ord i en betydelse -- korta ner: 'om ett resonemang eller ett sätt att uttrycka sig:'"
+  ],
+  "exempel_varningar": [
+   "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+  ],
+  "applicerad": true,
+  "skriven_av": null
+ },
+ {
+  "noteId": 1780080622259,
+  "ord": "notabel",
+  "spar": "nya",
+  "prio": false,
+  "redan_i_kon": false,
+  "nuvarande_format": "legacy",
+  "legacy": {
+   "synonymer": [
+    "anmärkningsvärd",
+    "märklig",
+    "betydande"
+   ],
+   "definitioner": [
+    "Värd att lägga märke till eller uppmärksamma.",
+    "Av särskild betydelse eller värde som förtjänar uppmärksamhet."
+   ],
+   "exempelmening": "<font color=\"#3498db\">Notabelt</font> är det höga oddset på trean.",
+   "etymologi": null,
+   "bild_html": null,
+   "synonym_groups": null
+  },
+  "old_facit": "anmärkningsvärd",
+  "har_old_facit": true,
+  "riskflaggor": [],
+  "hogsta_allvar": null,
+  "adamtal_krav": [
+   "tom_exempelmening",
+   "saknar_highlight",
+   "avslutande_skiljetecken_hb",
+   "semikolon_utan_mellanslag",
+   "formatering_i_hb",
+   "html_skrap",
+   "tom_synonym",
+   "tom_synonymgrupp",
+   "grupper_matchar_ej_betydelser",
+   "cirkular_synonym",
+   "fler_register_an_betydelser"
+  ],
+  "sokkoll": {
+   "kalla": "https://svenska.se/api/msearch?ord=notabel https://www.synonymer.se/sv-syn/notabel https://sv.wiktionary.org/wiki/notabel",
+   "slutsats": "SO: 'vard att lagga marke till', med markningen formellt. SAOL:s 'marklig; bemarkt, fornam' ar INTE upptagna som synonymer. Bemarkt skrevs dessutom i foregaende batch samma dag och foll da just pa synonymfaltet -- skillnaden ar att bemarkt beskriver en PERSON som ar kand, notabel beskriver en UPPGIFT som ar vard att namna. OLD-facit 'anmarkningsvard' ligger nara men ar starkare: notabelt betyder vart att namna, anmarkningsvart betyder uppseendevackande. RATTAT efter blindgranskning: personbetydelsen saknades helt. SAOL:s definition ar 'marklig; bemarkt, fornam' -- jag las andra halvan som glosor att INTE ta som synonymer (vilket var ratt) men drog fel slutsats av det och strok betydelsen ocksa. Att ett ord inte duger som synonym betyder inte att betydelsen det pekar pa saknas. Jfr slaktordet notabilitet 'framstaende person' och uttrycket 'notabla gaster'."
+  },
+  "proposed": {
+   "huvudbetydelse": "Värd att lägga märke till — tillräckligt ovanlig för att nämnas ; om en person: framstående och av hög samhällsställning",
+   "register": "formell, neutral, allmän ; formell, positiv, allmän",
+   "synonymer": [],
+   "synonym_groups": null,
+   "exempelmening": "<font color=\"#3498db\">Notabelt</font> är det höga oddset på trean.",
+   "etymologi": "→ Franska notable, latin notabilis; till notera."
+  },
+  "approved": true,
+  "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+  "confidence": 9,
+  "adamtal_varningar": [],
+  "exempel_varningar": [
+   "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+  ],
+  "applicerad": true,
+  "skriven_av": null
+ },
+ {
+  "noteId": 1780080622260,
+  "ord": "tabelras",
+  "spar": "nya",
+  "prio": false,
+  "redan_i_kon": false,
+  "nuvarande_format": "legacy",
+  "legacy": {
+   "synonymer": [
+    "rent bord",
+    "fullständig förödelse",
+    "total ödeläggelse"
+   ],
+   "definitioner": [
+    "Total förstörelse eller fullständig utplåning av något.",
+    "Ett tillstånd av absolut tomhet och ödeläggelse."
+   ],
+   "exempelmening": "Efter kriget låg staden i <font color=\"#3498db\">tabelras</font>, helt utplånad och tom.",
+   "etymologi": null,
+   "bild_html": null,
+   "synonym_groups": null
+  },
+  "old_facit": "fullständig förödelse",
+  "har_old_facit": true,
+  "riskflaggor": [],
+  "hogsta_allvar": null,
+  "adamtal_krav": [
+   "tom_exempelmening",
+   "saknar_highlight",
+   "avslutande_skiljetecken_hb",
+   "semikolon_utan_mellanslag",
+   "formatering_i_hb",
+   "html_skrap",
+   "tom_synonym",
+   "tom_synonymgrupp",
+   "grupper_matchar_ej_betydelser",
+   "cirkular_synonym",
+   "fler_register_an_betydelser"
+  ],
+  "sokkoll": {
+   "kalla": "https://svenska.se/api/msearch?ord=tabelras https://www.synonymer.se/sv-syn/tabelras https://sv.wiktionary.org/wiki/tabelras",
+   "slutsats": "SO: 'total forstorelse', med markningen mindre brukligt; SAOL: 'fullstandig forodelse'. MOTSAGELSE MELLAN KALLOR: Wiktionary ger en helt annan betydelse -- 'gora rent bord, ata, dricka eller gora slut pa det som dukats fram'. Den ar INTE med: SO och SAOL ar overens mot Wiktionary, och samma feltyp (en Wiktionary-egen betydelse) fallde anlopa och autograf i foregaende batch. Facit foljer SO/SAOL men skriver ut att det handlar om att sopa bort for att BORJA OM, vilket etymologin (den utplanade vaxtavlan) gor tydlig. RATTAT efter blindgranskning: bade facit och valensen var for mjuka. SO sager 'total forstorelse' och SAOL 'fullstandig forodelse' -- jag skrev 'allt sopas bort och man borjar om fran noll', vilket gor ordet till en nystart, och satte valensen till neutral. Felet kom av att jag lat ETYMOLOGIN styra facit: latinets tabula rasa (den utplanade vaxtavlan) bar mycket riktigt en nystart, men det svenska ordet har inte foljt med dit. Samma sorts overtolkning som pa singular i foregaende batch, dar jag lat synonymen styra facit. NOT: granskaren skriver att SAOL taggar ordet 'mil.' -- den markningen syns INTE i uppslaget, som ger 'mindre brukligt' och 'ald.'. Nagon militar doman ar darfor inte inskriven."
+  },
+  "proposed": {
+   "huvudbetydelse": "Fullständig förödelse: att allt jämnas med marken och ingenting lämnas kvar",
+   "register": "ngt ålderdomlig, negativ, allmän",
+   "synonymer": [],
+   "synonym_groups": null,
+   "exempelmening": "Efter branden var det <font color=\"#3498db\">tabelras</font> i hela kvarteret.",
+   "etymologi": "→ Franska table rase 'rent bord'; av latin tabula rasa '(vax)tavla med utplanad skrift' -- samma rot som tavla."
+  },
+  "approved": true,
+  "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+  "confidence": 9,
+  "adamtal_varningar": [
+   "etymologi_langd: 19 ord -- etymologin ska förklara betydelsen, inte berätta ordets historia: \"→ Franska table rase 'rent bord'; av latin tabula rasa '(vax\""
+  ],
+  "exempel_varningar": [
+   "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+  ],
+  "applicerad": true,
+  "skriven_av": null
+ }
+]

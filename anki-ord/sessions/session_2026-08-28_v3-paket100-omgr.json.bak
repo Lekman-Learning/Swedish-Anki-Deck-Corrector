@@ -1,0 +1,182 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622202,
+      "ord": "harnesk",
+      "facit": "bröstpansar<br><img alt=\"webp image\" src=\"paste_1759098264770.webp\"><br><img alt=\"webp image\" src=\"paste_1759098293698.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den del av en rustning som skyddar bröstet och överkroppen ; i uttrycket ”gå i harnesk mot”: bli stridslysten och helt avvisande mot något ; i vävning: mekanismen som lyfter trådarna i en vävstol ; i geologin: en blankslipad yta i berget där två block glidit mot varandra",
+        "register": "arkaisk, neutral, historia ; neutral, neutral, allmän ; fackspråklig, neutral, allmän ; fackspråklig, neutral, geologi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon gick i <font color=\"#3498db\">harnesk</font> mot varje förslag om förändring.",
+        "etymologi": "Fornsvenska harnesk, av lagtyska harnesch; av fornfranska harnas 'rustning, utrustning'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kollade SO (en huvudbetydelse: 'rustning', ålderdomligt, med bildlig användning 'gå i harnesk mot' = helt avvisande) och SAOL (tre betydelser: rustning, geologi 'polerad glidyta', teknik 'draginrättning för solv'). Kortets fyra betydelser (rustning, idiomet, vävning, geologi) stämmer alla mot dessa två källor - ovanligt grundligt, ingen betydelse saknas. Enda anmärkning: register för vävningsbetydelsen anger fackomrade 'allmän' istallet för 'vävning', vilket är en mindre inkonsekvens (jfr geologibetydelsens korrekta 'geologi') men påverkar inte lärbarheten.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622213,
+      "ord": "ax",
+      "facit": "sädesax",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Toppen på ett sädesstrå, där kornen sitter tätt samlade ; hos växter i allmänhet: en blomsamling där blommorna sitter utan skaft direkt på en lång stjälk ; den utskjutande delen av en nyckel som griper in i låset ; vardagligt: acceleration hos ett fordon",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, biologi ; neutral, neutral, teknik ; vardaglig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Tunga, gyllene <font color=\"#3498db\">ax</font> vajade över åkern.",
+        "etymologi": "Fornsvenska ax; ur en indoeuropeisk ordgrupp med betydelsen 'vass, spetsig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger tre kärnbetydelser: sädesax/allmän blomställning, nyckelax (den del som griper i låset) och vardagligt 'acceleration'. Kortets fyra betydelser täcker alla dessa (delar upp sädesax och allmän botanisk betydelse, vilket är korrekt eftersom SO ger dem som separata underdefinitioner). Exempelmeningen matchar nastan ordagrant SO:s egen exempel ('tunga, gyllene ax vajade pa akern'). Etymologin (fornsvenska ax, indoeuropeisk rot for 'vass, spetsig') är rimlig och hjälper förståelsen.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622136,
+      "ord": "bemärkt",
+      "facit": "känd och framstående",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Känd och respekterad för att ha uträttat något ovanligt bra",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon har gjort sig <font color=\"#3498db\">bemärkt</font> inom genforskningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en enda betydelse: 'känd för framstående egenskaper på sitt område', med exakt samma exempelmening som på kortet ('hon har gjort sig bemärkt inom genforskningen'). Kortets formulering ('känd och respekterad för att ha uträttat något ovanligt bra') är en rimlig parafras. Register (neutral, positiv) stämmer. Ingen betydelse saknas.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622176,
+      "ord": "anlöpa",
+      "facit": "inkomma till hamns<br><a href=\"https://www.google.com/imgres?q=anl%C3%B6pa&amp;imgurl=https%3A%2F%2Fimages.aftonbladet-cdn.se%2Fv2%2Fimages%2F9a4a410d-681e-4777-9014-1c2d7e110f8e%3Ffit%3Dcrop%26format%3Dauto%26h%3D2533%26q%3D50%26w%3D1900%26s%3D13671d5e3bea6098df8689abd61ea7b21104ad9e&amp;imgrefurl=https%3A%2F%2Fwww.aftonbladet.se%2Flokala-nyheter%2F3jqvWM%40ablokal&amp;docid=U5Brupb0VOf7OM&amp;tbnid=txD70LJDFRfqlM&amp;vet=12ahUKEwjT_v7loOWLAxWaHxAIHfkcDnIQM3oECHUQAA..i&amp;w=1900&amp;h=2533&amp;hcb=2&amp;ved=2ahUKEwjT_v7loOWLAxWaHxAIHfkcDnIQM3oECHUQAA\"><div><div><div><img alt=\"MP-krav: Inför SL-kort på färjan till ...\" src=\"images-ee54732782fa71ba54ad8dbd36b07c6455e77a7c.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om fartyg: gå in i en hamn och lägga till för ett kortare uppehåll",
+        "register": "fackspråklig, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Fartyget <font color=\"#3498db\">anlöpte</font> Marseilles hamn tidigt på morgonen.",
+        "etymologi": "Efter lagtyska anlopen, tyska anlaufen; samma rot som lopa."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Både SO och SAOL ger endast en betydelse, sjöfart: 'lägga till i hamn eller dylikt', med exempel 'fartyget anlöpte Marseilles hamn' - matchar kortet exakt. Register 'fackspråklig, sjöfart' stämmer med SAOL:s etikett 'sjö.'. Etymologin (lågtyska anlopen/tyska anlaufen, samma rot som 'lopa') stämmer med SO:s uppgift.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622142,
+      "ord": "autograf",
+      "facit": "signatur",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Namnteckning som en känd person skrivit för hand åt en beundrare",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Stjärnorna skrev <font color=\"#3498db\">autografer</font> för brinnande livet.",
+        "etymologi": "Grekiska autographos, till auto- 'sjalv' och graphein 'skriva'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger en enda betydelse: 'egenhändig namnteckning avsedd för samlare eller dylikt, särsk. av känd person'. Kortet fångar detta korrekt. Exempelmeningen är identisk med SO:s ('stjärnorna skrev autografer för brinnande livet') och etymologin (grekiska autographos, auto- + graphein) matchar exakt.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622148,
+      "ord": "eklatera",
+      "facit": "offentliggöra förlovning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Offentligt berätta att man har förlovat sig",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Paret <font color=\"#3498db\">eklaterade</font> sin förlovning på midsommarafton.",
+        "etymologi": "Franska éclater 'brista, krevera; bli allmant bekant'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en enda betydelse: 'tillkännage förlovning', explicit märkt 'något ålderdomligt' - matchar kortets register 'ngt ålderdomlig' och definition ordagrant. Etymologin (franska éclater 'brista, krevera; bli allmänt bekant') matchar SO exakt.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622208,
+      "ord": "singulär",
+      "facit": "ensam i sitt slag",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ensam i sitt slag: något som bara har inträffat en enda gång och som det inte finns något annat exempel på",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">singulär</font> händelse i historien, utan motstycke förr eller senare.",
+        "etymologi": "Franska singulier; samma rot som singularis."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse ('ensam i sitt slag') utan separat matematisk delbetydelse trots exemplet 'singulära värden' - dubbelkollade detta specifikt. Kortets definition matchar facit och SO:s huvuddefinition. Etymologin (franska singulier, samma rot som singularis) stämmer.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622154,
+      "ord": "spe",
+      "facit": "hån",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hån: att skratta ut någon för att visa att man ser ner på personen ; i uttrycket \"in spe\": blivande, ännu inte men snart",
+        "register": "neutral, negativ, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "hån"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick utstå spott och <font color=\"#3498db\">spe</font> av hela byn.",
+        "etymologi": "Fornsvenska spe, av lagtyska spe; beslaktat med spy. Uttrycket in spe ar daremot latin, till spes 'hopp'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Synonymen 'hån' är fel typ av belägg: i SO:s egen post är hån (liksom gäck) uttryckligen taggad 'JFR:cohyponym' - en jämförelseterm/närliggande begrepp, INTE en markerad synonym. Enligt kravet att ordboken själv ska peka ut synonymen (inte bara en lös associationslista) är detta en näst-synonym som presenteras som utbytbar, exakt den typ av distraktor HP-provets ORD-del straffar. Betydelserna i övrigt (hån/förlöjligande uttryck för förakt; 'in spe' = blivande) stämmer mot SO. Rätta: ta bort 'hån' ur synonymlistan eller lämna den tom.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622171,
+      "ord": "yttring",
+      "facit": "tillkännagivande, yttrande;&nbsp; uttryck, manifestation",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett uttalande där någon öppet talar om sin vilja eller sin åsikt ; något som visar sig utåt och avslöjar vad som pågår under ytan ; inom medicinen: ett symtom",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Alla <font color=\"#3498db\">yttringar</font> av rasism måste bekämpas.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två huvudbetydelser (tillkännagivande av mening/vilja, oftast i sammansättningar; samt uttryck för bakomliggande tillstånd/förlopp) plus en medicinsk specialbetydelse 'symtom'. Kortets tre betydelser täcker exakt detta, och exempelmeningen är identisk med SO:s egen ('alla yttringar av rasism måste bekämpas'). Ingen betydelse saknas.",
+      "granskning_turer_post": 23,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 23,
+  "granskning_kostnad_usd": 0.6167999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 9,
+      "turer": 23,
+      "turkrav": 5,
+      "kostnad_usd": 0.6167999
+    }
+  ]
+}

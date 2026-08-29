@@ -1,0 +1,484 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": null,
+ "poster": [
+  {
+   "noteId": 1780080622100,
+   "ord": "antecedentia",
+   "facit": "meritlista, förhistoria",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En persons tidigare liv och vad hen gjort dessförinnan",
+    "register": "formell, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "De jämförde sina <font color=\"#3498db\">antecedentia</font> och kom fram till att de omöjligt kunde ha träffats förut.",
+    "etymologi": "Latin antecedere 'gå före' — det som gick före i livet."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger endast betydelsen 'en persons förflutna', vilket kortet återger korrekt och fullständigt. Exempelmeningen matchar SO:s eget exempel nästan ordagrant, och etymologin ('till antecedere, gå före') stämmer. Facit 'meritlista, förhistoria' ryms inom denna betydelse.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622063,
+   "ord": "astenisk",
+   "facit": "kraftlös",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kraftlös och svag i själen ; förr om kroppsbyggnad: smal och tunn",
+    "register": "ngt ålderdomlig, neutral ; arkaisk, neutral",
+    "synonymer": [
+     "kraftlös"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han beskrevs som blek och <font color=\"#3498db\">astenisk</font> efter månaderna på sjukhuset.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO:s huvudbetydelse är 'som kännetecknas av själslig kraftlöshet om person', med en märkt historisk underbetydelse 'förr äv.: som har spenslig kroppsbyggnad'. Kortet återger båda korrekt, markerar den andra som 'förr'/arkaisk. Synonymen 'kraftlös' är i praktiken själva definitionsordet, inte en långsökt association, och är inte cirkulär (innehåller inte 'astenisk').",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622065,
+   "ord": "baldakin",
+   "facit": "takhimmel",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tak som hänger över en säng, tron eller predikstol",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Sängen stod under en tung <font color=\"#3498db\">baldakin</font> av rött sammet.",
+    "etymologi": "Efter Baldac, medeltidens namn på Bagdad, varifrån sidentyget kom."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO:s definition 'tak över (finare) säng, predikstol m.m.' matchar kortet väl, och kohyponymen 'tronhimmel' stödjer att 'tron' rimligen ingår i 'm.m.'. Synonymlistan är tom trots att facit anger 'takhimmel' -- kontrollerade att SO taggar takhimmel/sänghimmel/tronhimmel/päll som 'JFR:cohyponym', dvs jämförelseord, INTE synonymer, så den tomma listan är korrekt snarare än en brist. Etymologin (Baldac/Bagdad, sidentyg) stämmer mot SO och hjälper minnet.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622069,
+   "ord": "basa",
+   "facit": "vara chef",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Vara den som bestämmer och leder arbetet ; rusa iväg okontrollerat ; mjuka upp trä genom att hetta upp det",
+    "register": "vardaglig, neutral ; vardaglig, neutral ; fackspråklig, neutral, teknik",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Hon <font color=\"#3498db\">basar</font> för ett gäng på hundrafemtio man.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO ger exakt tre betydelser för verbet 'basa': 'utöva förmanskap...', 'rusa (iväg) okontrollerat' (uttryckligen taggad 'vardagligt') och 'mjuka upp genom upphettning... trädetaljer'. Kortet matchar alla tre och exempelmeningen är nästan identisk med SO:s egen syntex ('hon basar för ett ambitiöst gäng'/'150 man').",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622028,
+   "ord": "bebådelse",
+   "facit": "förutsägelse om Jesu födelse",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ängelns budskap till Maria om att hon ska föda Jesus",
+    "register": "högtidlig, neutral, religion",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Kyrkan firar Jungfru Marie <font color=\"#3498db\">bebådelse</font> i slutet av mars.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO:s definition är ordagrant 'förutsägelse om Jesu födelse', samma som facit. Kortets 'Ängelns budskap till Maria om att hon ska föda Jesus' är en sakligt korrekt konkretisering av samma händelse (bebådelsen firas enligt SO:s exempel som 'Jungfru Marie bebådelse', vilket kortets exempelmening återger korrekt inklusive tidpunkten slutet av mars).",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622105,
+   "ord": "bettlare",
+   "facit": "tiggare",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Person som tigger",
+    "register": "ngt ålderdomlig, neutral",
+    "synonymer": [
+     "tiggare"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Utanför kyrkporten satt en <font color=\"#3498db\">bettlare</font> med mössan i handen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s enda betydelse 'person som ägnar sig åt (vanemässigt) tiggande', något ålderdomligt, stämmer med kortet. Synonymen 'tiggare' är själva definitionsordet i SO. Exempelmeningen illustrerar korrekt och registret matchar SO:s bruklighetskommentar.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622103,
+   "ord": "bidé",
+   "facit": "tvättfat för underlivet",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Låg tvättskål som man tvättar underlivet i",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Badrummet i hotellet hade både badkar och <font color=\"#3498db\">bidé</font>.",
+    "etymologi": "Franska bidet 'liten häst' — man sitter grensle över den."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s definition 'lågt tvättställ för tvättning av underlivet'. Etymologin stämmer med SO (franska bidet, 'liten häst'), och tillägget om att man sitter grensle är en rimlig, vedertagen förklaring till namnbytet som hjälper minnet.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622072,
+   "ord": "bronkit",
+   "facit": "luftrörsinflammation",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Sjukdom där luftrören blir svullna och irriterade",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "luftrörskatarr"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Rökningen hade gett honom kronisk <font color=\"#3498db\">bronkit</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s enda betydelse är en direkt hänvisning till 'luftrörskatarr', vilket kortet både förklarar korrekt i egna ord och anger som synonym (SO:s eget definitionsord). Exempelmeningen är sakligt rimlig och registret stämmer.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622025,
+   "ord": "bylte",
+   "facit": "knyte<br><a href=\"https://www.google.com/imgres?q=knyte&amp;imgurl=https%3A%2F%2Fcollections.smvk.se%2Fcarlotta-em%2Fweb%2Fimage%2Fzoom%2F3554186%2F2005.01.0001_alt.jpg&amp;imgrefurl=https%3A%2F%2Fwww.kringla.nu%2Fkringla%2Fobjekt%3Freferens%3DSMVK-EM%2Fobjekt%2F1198436&amp;docid=ofHDCVIx6bjYcM&amp;tbnid=MTkpdTgb-azY-M&amp;vet=12ahUKEwinioLcwc6LAxXEYPEDHRCcJjoQM3oECBgQAA..i&amp;w=1000&amp;h=756&amp;hcb=2&amp;ved=2ahUKEwinioLcwc6LAxXEYPEDHRCcJjoQM3oECBgQAA\"><div><div><div><img alt=\"Kringla - ritualföremål, knyte\" src=\"paste-b1caa355f1ab4524f5edf96773f6901754e4b218.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Stort klumpigt knyte av saker som buntats ihop",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Ur <font color=\"#3498db\">byltet</font> stack ett litet babyansikte fram.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO:s definition 'större, oformligt paket... för transport... eller sammanhållning av flera föremål' matchar kortet väl, och exempelmeningen är identisk med SO:s egen syntex. Kontrollerade att 'knyte' och 'packe' i SO är taggade 'JFR:cohyponym', inte synonym, så den tomma synonymlistan är korrekt (kravet att ordboken själv ska peka ut en synonym är inte uppfyllt här).",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622089,
+   "ord": "bålverk",
+   "facit": "försvarsverk",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kraftigt hinder byggt till försvar ; bildligt: ett starkt skydd mot något",
+    "register": "neutral, neutral, historia ; neutral, positiv",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "FN beskrevs som ett <font color=\"#3498db\">bålverk</font> mot ett nytt storkrig.",
+    "etymologi": "Lågtyska bolwerk, till bole 'planka' — samma ord som boulevard."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO väl: grundbetydelsen är markerad 'historiskt' i SO, vilket kortets register 'historia' fångar korrekt, och den bildliga betydelsen 'starkt försvar' återges med ett exempel som speglar SO:s eget (FN som bålverk). Etymologin stämmer exakt med SO, inklusive kopplingen till boulevard.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622081,
+   "ord": "deformation",
+   "facit": "vanställning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Att formen ändras till det sämre",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Plåten hade fått en tydlig <font color=\"#3498db\">deformation</font> efter smällen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s 'oönskad ändring av den ursprungliga formen hos något föremål'. Exempelmeningen liknar SO:s eget exempel om plåt. Den bildliga underbetydelsen (t.ex. känslomässig deformation) är i SO bara en outtalad utvidgning under samma huvudbetydelse, inte en egen betydelse, så det är inget krav att kortet nämner den separat.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622101,
+   "ord": "diametral",
+   "facit": "rakt motsatt",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Rakt motsatt i varenda del",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "De två utredningarna kom till <font color=\"#3498db\">diametralt</font> motsatta slutsatser.",
+    "etymologi": "Till diameter — de ligger på var sin ände av samma linje."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s enda betydelse 'i alla avseenden motsatt'. Exempelmeningen liknar SO:s egen ('diametralt motsatta ståndpunkter'/'slutsatser'). Etymologiförklaringen (motsatta ändar av samma diameter) är sakligt rimlig och pedagogisk, även om SO inte anger någon egen etymologi för ordet.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622102,
+   "ord": "diskrepans",
+   "facit": "skillnad",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Skillnad mellan två saker som borde stämma överens",
+    "register": "formell, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Det fanns en <font color=\"#3498db\">diskrepans</font> mellan vad han sa och vad han gjorde.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s 'störande brist på överensstämmelse t.ex. mellan teori och praktik'. Kortet har korrekt ingen synonymlista och har därmed inte fallit i fällan att lista SO:s cohyponymer (diskordans, disproportion) som synonymer.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622108,
+   "ord": "ektomi",
+   "facit": "medicinsk bortskärning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Operation där ett organ helt eller delvis tas bort",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Ändelsen <font color=\"#3498db\">ektomi</font> visar att något har opererats bort.",
+    "etymologi": "Grekiska ektome 'utskärning'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s definition ('operativt ingrepp varvid ett organ helt eller delvis avlägsnas') och etymologi ('grekiska ektome, utskärning') nästan ordagrant. Exempelmeningen förklarar korrekt att -ektomi är en ändelse (jfr SO:s morfex hysterektomi m.fl.).",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622090,
+   "ord": "enahanda",
+   "facit": "enformig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tråkigt likadant gång på gång, utan omväxling",
+    "register": "formell, negativ",
+    "synonymer": [
+     "enformig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Dagarna vid det löpande bandet var grå och <font color=\"#3498db\">enahanda</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s grundbetydelse är 'helt igenom likadan', med en underbetydelse (ofta med negativ bibetydelse) 'tröttande eller tråkigt lika'. Kortet fångar den vanliga, negativt färgade användningen väl, registret 'negativ' matchar SO:s bibetydelseanteckning, och exempelmeningen liknar SO:s egna exempel ('dagarna var grå och enahanda').",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622035,
+   "ord": "erinring",
+   "facit": "påminnelse",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Påminnelse om något ; mild tillsägelse",
+    "register": "formell, neutral ; formell, neutral, juridik",
+    "synonymer": [
+     "erinran"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han fick en <font color=\"#3498db\">erinring</font> av chefen men slapp varning.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO definierar erinring som just 'erinran' (via direkt SE:se-hänvisning), som i sin tur har två betydelser: påminnelse, och formell anmärkning -- vilket kortet återger korrekt som två betydelser. Synonymen 'erinran' är alltså själva SO-definitionen, inte en lös cohyponym. Exemplet illustrerar bra att en erinring är ett mildare steg än en formell varning.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622070,
+   "ord": "espri",
+   "facit": "kvicktänkthet",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Snabb och lekfull kvickhet i tanke och tal",
+    "register": "formell, positiv",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Hennes tal sprudlade av <font color=\"#3498db\">espri</font> och fick hela salen att skratta.",
+    "etymologi": "Franska esprit 'ande, kvickhet' — samma ord som i sprit."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s 'kvicktänkthet och spiritualitet'. Etymologin stämmer exakt med SO (franska esprit, kopplingen till sprit via latinets spiritus). Cohyponymen 'spiritualitet' har korrekt INTE listats som synonym på kortet.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622013,
+   "ord": "farin",
+   "facit": "råsocker<br><a href=\"https://commons.wikimedia.org/wiki/File:Sugar_Brown.jpg\"><img alt=\"Farinsocker\" src=\"250px-sugar_brown.webp\"></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Gulbrunt råsocker",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Receptet krävde både strösocker och <font color=\"#3498db\">farin</font>.",
+    "etymologi": "Franska farine, latin farina 'mjöl'."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s 'råsocker med gulbrun färg' och etymologin ('franska farine, latin farina, mjöl') exakt.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622071,
+   "ord": "fägnas",
+   "facit": "glädjas",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Bli glad åt något",
+    "register": "högtidlig, positiv",
+    "synonymer": [
+     "glädjas"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Vi <font color=\"#3498db\">fägnades</font> av att så många ville hjälpa till.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO har ingen egen artikel för deponensformen 'fägnas' utan endast för aktivformen 'fägna' ('glädja', något högtidligt); 'fägnas' listas i böjningstabellen som presens passiv. Detta noteras som en begränsning i uppslagningen, men betydelseglidningen aktiv->deponens ('glädja någon' -> 'bli glad åt något'/'glädjas') är regelbunden och välbelagd svenska, och matchar facit och exempelmeningen grammatiskt och sakligt.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622049,
+   "ord": "fästa avseende vid",
+   "facit": "lägga vikt på, beakta, bry sig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Bry sig om något och låta det spela roll",
+    "register": "formell, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Domstolen <font color=\"#3498db\">fäste inget avseende vid</font> hans tidigare löften.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Bekräftas av SAOL, där 'fästa avseende vid' parafraseras exakt som 'lägga vikt vid', och av SO:s artikel om 'avseende' som har samma uttryck i sitt eget exempel ('han fäster inget avseende vid vad tidningarna skriver'). Kortets betydelse, register och exempelmening stämmer väl överens med detta.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622032,
+   "ord": "gluten",
+   "facit": "protein i mjöl",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ämne i vete, råg och korn som gör degen seg",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Hon undvek bröd eftersom hon inte tålde <font color=\"#3498db\">gluten</font>.",
+    "etymologi": "Latin gluten 'lim, klister' — samma rot som i agglutinera."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s 'typ av protein som förekommer i de vanliga sädesslagen ... underlättar jäsningen vid bakning'. Kortet skriver 'ämne' i stället för 'protein', en mindre precisionsförlust, men huvudbetydelsen (var det finns, vad det gör med degen) är korrekt och etymologin stämmer med SO.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622023,
+   "ord": "greve",
+   "facit": "högadel",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Man med en av de högsta adliga titlarna",
+    "register": "neutral, neutral, historia",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Godset hade gått i arv inom samma <font color=\"#3498db\">greve</font>familj i tre sekler.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Matchar SO:s '(titel för) manlig medlem av högsta adelsgruppen', med registret 'historia' som korrekt speglar SO:s bruklighetskommentar 'mest vid beskrivning av äldre förhållanden'.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622097,
+   "ord": "grums",
+   "facit": "bottensats",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Smuts och små partiklar som lagt sig i en vätska",
+    "register": "neutral, neutral",
+    "synonymer": [],
+    "synonym_groups": null,
+    "exempelmening": "Det blev en massa <font color=\"#3498db\">grums</font> i vattnet när de bytte rör.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "OMGRANSKAD efter rattelse: SO:s enda betydelse 'fällning av (oönskade) småpartiklar i vätska' matchar kortet, och exempelmeningen är nästan ordagrant SO:s egen syntex. Kontrollerade att bottensats/drägg/slam i SO är taggade 'JFR:cohyponym' (inte synonym), så den tomma synonymlistan trots facit 'bottensats' är korrekt hantering, inte en brist.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622058,
+   "ord": "gumse",
+   "facit": "fårhanne<br><a href=\"https://www.google.com/imgres?q=f%C3%A5rhanne&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F26%2FBigHorn_Sheep_in_Alberta_CA.jpg%2F1200px-BigHorn_Sheep_in_Alberta_CA.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FF%25C3%25A5r&amp;docid=Z5DO1cPY2tqxRM&amp;tbnid=aA_LYY8krLGB-M&amp;vet=12ahUKEwj007G0oeWLAxXzi8MKHeo5JecQM3oECBMQAA..i&amp;w=1200&amp;h=1202&amp;hcb=2&amp;ved=2ahUKEwj007G0oeWLAxXzi8MKHeo5JecQM3oECBMQAA\"><div><div><div><img alt=\"Får – Wikipedia\" src=\"paste-b953417f7875aac70b47fb56af95fb235350176a.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Hanne av får",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "bagge"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "En stor <font color=\"#3498db\">gumse</font> med krokiga horn vaktade flocken.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO definierar gumse direkt som 'bagge' (definitionsordet, inte en lös cohyponym), vilket är exakt kortets synonym och huvudbetydelse. Att etymologi utelämnats är korrekt bedömt eftersom SO själv anger 'av okänt ursprung' -- oanvändbar trivia som med rätta strukits.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  },
+  {
+   "noteId": 1780080622110,
+   "ord": "honnett",
+   "facit": "hederlig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Hederlig och som sköter sig",
+    "register": "ngt ålderdomlig, positiv",
+    "synonymer": [
+     "hederlig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han var i alla stycken en <font color=\"#3498db\">honnett</font> affärsman.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Ordet finns bara i SAOL (inte i SO), definierat som 'hederlig, anständig' -- vilket stämmer med kortets huvudbetydelse och med det ålderdomliga registret (ordet saknas i den moderna SO helt, låg popularitet i SAOL). Synonymen 'hederlig' är själva SAOL-definitionen.",
+   "granskning_turer_post": 38,
+   "granskning_turkrav_post": 6
+  }
+ ],
+ "granskare": "claude-cli-blind",
+ "granskning_turer": 38,
+ "granskning_kostnad_usd": 1.7606513999999995,
+ "granskning_turkrav": 6,
+ "granskning_korningar": [
+  {
+   "poster": 25,
+   "turer": 38,
+   "turkrav": 6,
+   "kostnad_usd": 1.7606513999999995
+  }
+ ]
+}

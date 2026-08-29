@@ -1,0 +1,382 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622386,
+      "ord": "glossarium",
+      "facit": "ordförteckning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ordlista där svåra eller främmande ord förklaras eller översätts, ofta sist i en bok",
+        "register": "neutral, neutral, litteraturvetenskap",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Utgåvan har ett <font color=\"#3498db\">glossarium</font> över alla fornsvenska ord.",
+        "etymologi": "Medeltidslatin glossarium; till glosa."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse: 'ordsamling med översättningar eller förklaringar särsk. om äldre ordsamling som innehåller sällsynta el. föråldrade ord'. Kortets huvudbetydelse täcker detta korrekt, exempelmeningen illustrerar rätt, etymologin (medeltidslatin glossarium, till glosa) stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622392,
+      "ord": "skolios",
+      "facit": "snedhet hos rygg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjuklig krökning av ryggraden åt sidan",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "snedrygg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon opererades för svår <font color=\"#3498db\">skolios</font> som tonåring.",
+        "etymologi": "Grekiska skolios 'krokig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sjuklig krökning i sidled av ryggraden', synonym 'snedrygg' bekräftad av SO. En betydelse, korrekt återgiven, exempelmening och etymologi (grek. skolios 'krokig') stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622401,
+      "ord": "bokstavstrogen",
+      "facit": "ordagrann",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som följer förlagan ord för ord ; om en tolkning av en helig skrift: som tar texten precis som den står, utan att tolka den bildligt",
+        "register": "neutral, neutral, allmän ; neutral, neutral, religion",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">bokstavstrogen</font> översättning som offrar flytet för exaktheten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: (1) 'som ord för ord överensstämmer med förlaga om text' och (2) 'präglad av bokstavstro' (ex. bibelsyn). Kortet täcker båda korrekt separerade med ';', leder med den mer allmänna/vanligare betydelsen. Exempelmeningen illustrerar bet. 1 korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622403,
+      "ord": "camembert",
+      "facit": "vitmögelost",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mjuk fransk dessertost med vit mögelhinna på utsidan",
+        "register": "neutral, neutral, matlagning",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En mogen <font color=\"#3498db\">camembert</font> som rinner ut på tallriken.",
+        "etymologi": "Franska camembert, efter Camembert, en stad i Normandie."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'en fransk dessertost av vitmögeltyp'. En betydelse, matchar kortet exakt. Etymologi (efter staden Camembert) korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622387,
+      "ord": "klenod",
+      "facit": "något värdefullt, dyrgrip",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Föremål som är så värdefullt att man vaktar det ; bildligt om en person som är ovärderlig för sin omgivning",
+        "register": "neutral, positiv, allmän ; neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Familjebibeln var den förnämsta <font color=\"#3498db\">klenoden</font> i dödsboet.",
+        "etymologi": "Fornsvenska klenodh 'smycke'; av lågtyska kleinode, till kleine i betydelsen 'fin, sirlig'; samma rot som klen."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'särskilt värdefullt föremål ofta med stort affektionsvärde', samt bildlig användning om person ('hans gamla hushållerska var en verklig klenod'). Kortets två betydelser matchar. Exempelmeningen är hämtad rakt av från SO:s eget exempel. Etymologi stämmer (fsv. klenodh, lty. kleinode, klen).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622391,
+      "ord": "klåfingrig",
+      "facit": "som petar på allt<br><br><i>klåfingriga barnungar</i>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som inte kan låta bli att peta på saker ; bildligt: som inte kan låta bli att ändra och lägga sig i sådant som inte angår en",
+        "register": "neutral, lätt negativ, allmän ; neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">klåfingrig</font> lärare som rättade alldeles för mycket i uppsatserna.",
+        "etymologi": "Till klå 'klia' och finger — fingrarna som kliar av lust att röra."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en huvuddefinition ('som inte kan låta bli att peta på allt') men visar bildlig användning i exemplet 'en klåfingrig lärare som rättade alldeles för mycket' -- exakt det kortets andra betydelse beskriver. Innehållet är sakligt korrekt, exempelmeningen matchar SO:s egen bildliga användning. Etymologi (klå + finger) stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622393,
+      "ord": "kuperad",
+      "facit": "backig<br><a href=\"https://www.google.com/imgres?q=kuperad&amp;imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2017%2F08%2F02%2F15%2F50%2Fhilly-2572197_1280.jpg&amp;imgrefurl=https%3A%2F%2Fpixabay.com%2Fsv%2Fimages%2Fsearch%2Fkuperad%2F&amp;docid=w0lwahhRUfP7gM&amp;tbnid=oaFjTveiGTEtfM&amp;vet=12ahUKEwjs5duDkO-LAxVrLhAIHalbNJEQM3oECE4QAA..i&amp;w=1280&amp;h=664&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjs5duDkO-LAxVrLhAIHalbNJEQM3oECE4QAA\"><div><div><div><img alt=\"bilder med Kuperad och Natur ...\" src=\"paste-a3966879c9fc16743922fbdd13f7070ff88a36b2.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om landskap: fullt av höjder och dalar ; om djur: som fått en stor del av svansen eller öronen avskurna ; om kortlek: delad i två högar innan korten delas ut ; inom vården: om ett sjukdomsförlopp som avbrutits i tid",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; neutral, neutral, allmän ; fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En boxer med <font color=\"#3498db\">kuperad</font> svans.",
+        "etymologi": "Franska couper 'skära av'; samma rot som kupé och kupp."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s eget adjektivuppslag för 'kuperad' har bara terrängbetydelsen (synonymer backig, kullig; facit 'backig' bekräftar detta), medan djur-, kortleks- och sjukdomsbetydelserna i SO ligger under verbet 'kupera' i perfekt particip-form. Kortets fyra betydelser är dock var för sig sakligt korrekt svenska och vanligt förekommande användning av just ordformen 'kuperad' (t.ex. 'kuperad svans'), leder med den vanligaste (terräng), och exemplet är korrekt highlightat. Gränsfall men inget sakfel.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622398,
+      "ord": "pascha",
+      "facit": "uppassad person",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förr i Osmanska riket: titel för en hög ämbetsman ; i dag nästan alltid bildligt: person som låter andra passa upp på sig",
+        "register": "neutral, neutral, historia ; neutral, nedsättande, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Sedan han blev avdelningschef har han blivit en riktig <font color=\"#3498db\">pascha</font>.",
+        "etymologi": "Turkiska pasha."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: historisk ämbetsmannatitel + numera bildligt nedsättande om person som vill bli uppassad. Kortets två betydelser matchar SO exakt och är rätt ordnade och separerade. Etymologi (turkiska pasha) stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622404,
+      "ord": "selektiv",
+      "facit": "utväljande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som bygger på ett noggrant urval i stället för att ta allt ; ironiskt om vad någon kommer ihåg eller uppfattar: bara det som passar en själv",
+        "register": "fackspråklig, neutral, allmän ; neutral, ironisk, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han har ett påfallande <font color=\"#3498db\">selektivt</font> minne när det gäller egna löften.",
+        "etymologi": "Till selektion; av latin seligere 'välja ut'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SO har TRE betydelser: (1) allmän 'grundas på noggrant utväljande', (2) fackspråklig elektronik/psykologi: 'utväljande baserat på välbestämda, mätbara egenskaper' (t.ex. 'selektiv förstärkare', 'selektiv perception'), (3) ironiskt om t.ex. minne. Kortet tar bara med (1) och (3) -- en hel betydelse (den fackspråkliga elektronik/psykologi-betydelsen) saknas helt och bör läggas till som en tredje, skild betydelse.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622397,
+      "ord": "adonis",
+      "facit": "vacker yngling<br><a href=\"https://www.google.com/imgres?q=adonis%20mythology&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F9a%2FStatue_of_an_Athlete_so-called_Adonis-Uffizi.jpg%2F220px-Statue_of_an_Athlete_so-called_Adonis-Uffizi.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAdonis&amp;docid=0WSpBR9YtYnTsM&amp;tbnid=u_iHZHvv7t-orM&amp;vet=12ahUKEwi8rpS33PeLAxV2PhAIHS5DLY0QM3oECGgQAA..i&amp;w=220&amp;h=391&amp;hcb=2&amp;ved=2ahUKEwi8rpS33PeLAxV2PhAIHS5DLY0QM3oECGgQAA\"><div><div><div><img alt=\"Adonis - Wikipedia\" src=\"paste-8d60bb08c4aa338bc253446b4b1c80cab7126d42.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ovanligt vacker ung man ; ibland nedsättande om en man som är mån om sitt utseende och charmar kvinnor ; en växt i ranunkelsläktet",
+        "register": "högtidlig, positiv, allmän ; neutral, nedsättande, allmän ; fackspråklig, neutral, biologi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han såg ut som en <font color=\"#3498db\">adonis</font> men hade ingenting att säga.",
+        "etymologi": "Efter Adonis, i grekisk myt en skön yngling som älskades av Afrodite."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'bildskön yngling' (högtidligt, ibland nedsättande motsv. pigtjusare) samt växtbetydelse (ranunkelväxt). Kortets tre betydelser (skön yngling / nedsättande fåfäng man / växt) täcker samma sakinnehåll som SO, bara mer finfördelat. Etymologi (efter myten om Adonis) stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622394,
+      "ord": "apologi",
+      "facit": "försvarstal",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skrift eller tal som argumenterar till försvar för en person, en lära eller ett handlande",
+        "register": "formell, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hennes memoarer är egentligen en enda lång <font color=\"#3498db\">apologi</font>.",
+        "etymologi": "Grekiska apologia 'försvarstal'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'argumenterande försvar' särsk. för kristendomen, med utvidgad användning (SO:s eget exempel: 'hennes memoarer är egentligen en enda lång apologi', vilket kortet återanvänder rakt av). Kortets enda, generella betydelse ('försvar för en person, en lära eller ett handlande') täcker SO:s innehåll korrekt. Etymologi (grek. apologia) stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622405,
+      "ord": "astigmatism",
+      "facit": "brytningsfel, t.ex i ögat<br><a href=\"https://www.google.com/imgres?q=astigmatism&amp;imgurl=https%3A%2F%2Ffiles.cdn-files-a.com%2Fuploads%2F4085345%2Fnormal_61472f017ca3c.png&amp;imgrefurl=https%3A%2F%2Fwww.lophtalmo.lu%2Fastygmatism&amp;docid=Y6MtzgyPpWHmgM&amp;tbnid=mJbAgsnwEoiCbM&amp;vet=12ahUKEwishvrKmvCLAxVmFRAIHRcUHMAQM3oECBwQAA..i&amp;w=1588&amp;h=978&amp;hcb=2&amp;ved=2ahUKEwishvrKmvCLAxVmFRAIHRcUHMAQM3oECBwQAA\"><div><div><div><img alt=\"Visual Defect Astigmatism | Luxembourg ...\" src=\"paste-8b7b5d622c6b3054bb3356d640f39ac4b1630ca5.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fel i en lins som gör att bilden blir suddig, vanligast som ett fel i ögats hornhinna",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Konstnären El Greco tros ha lidit av <font color=\"#3498db\">astigmatism</font>.",
+        "etymologi": "Grekiska a- 'icke' och stigme 'punkt' — strålarna samlas inte i en punkt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'avbildningsfel hos en lins eller en spegel... särsk. hos ögat'. Kortet nämner bara lins (ej spegel) men det är samma enda betydelse, inte en utelämnad betydelse. Exempelmeningen om El Greco är hämtad rakt av från SO. Etymologin (grek. a- + stigme 'punkt') är korrekt och pedagogiskt relevant.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622402,
+      "ord": "damejeanne",
+      "facit": "stor korgflaska<br><img alt=\"webp image\" src=\"paste_1759698164694.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stor glasflaska med vid, rundad kropp, ofta klädd i flätad korg för att tåla transport",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vinet jäste i en <font color=\"#3498db\">damejeanne</font> i källaren.",
+        "etymologi": "Franska dame-jeanne, troligen skämtsamt 'fru Johanna' — flaskans form liknades vid en bastant kvinna."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stor bukig glasflaska ofta innesluten i korgliknande anordning; anv. för förvaring av t.ex. vin'. Matchar kortet väl, en betydelse. Exempelmeningen om vin i källaren stämmer med SO:s användningsområde. Etymologi (fr. dame-jeanne, 'fru Johanna') korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622388,
+      "ord": "expropriera",
+      "facit": "tvångsinköpa egendom",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvinga en ägare att sälja sin mark eller egendom till staten eller kommunen, mot ersättning",
+        "register": "fackspråklig, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Gården <font color=\"#3498db\">exproprierades</font> på 1960-talet och nu går motorvägen tvärs över ägorna.",
+        "etymologi": "Till latin ex 'från' och proprius 'egen, tillhörig någon privat'; samma rot som proper."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'utföra expropriation av' -- tvångsöverta egendom, vanligen för allmänt ändamål. Kortets definition (tvinga ägare sälja mot ersättning till stat/kommun) stämmer med svensk expropriationsrätt. Exempelmeningen är hämtad rakt av från SO. Etymologi (lat. ex + proprius) korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622395,
+      "ord": "försynt",
+      "facit": "hänsynsfull, blygsam, diskret",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som håller sig i bakgrunden och inte tar plats på andras bekostnad ; också om en handling som görs på det sättet",
+        "register": "neutral, positiv, allmän ; neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ett <font color=\"#3498db\">försynt</font> påpekande som ingen behövde ta illa upp av.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som tonar ner den egna personligheten på ett tilltalande sätt', med exempel som täcker både person ('han är försynt') och handling ('ett försynt påpekande', 'en försynt knackning'). Kortets uppdelning i person/handling motsvarar SO:s egna exempel, och kortets exempelmening om påpekandet är hämtad rakt av från SO.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622399,
+      "ord": "lapidarstil",
+      "facit": "stenstil",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den knappa stil som användes i inskrifter huggna i sten ; kortfattat men träffande sätt att uttrycka sig",
+        "register": "fackspråklig, neutral, historia ; neutral, positiv, litteraturvetenskap",
+        "synonymer": [
+          "stenstil"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han skrev i en <font color=\"#3498db\">lapidarstil</font> där varje mening bar sin egen tyngd.",
+        "etymologi": "Till latin lapis 'sten'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: 'stil på inskrift i sten' och 'kortfattat men träffande uttryckssätt' (synonym stenstil). Kortet täcker båda, i samma ordning som SO, med korrekt synonym. Etymologi (lat. lapis 'sten') stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622406,
+      "ord": "manipulera",
+      "facit": "påverka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hantera ett föremål eller en apparat med skickliga händer ; styra människor i en riktning de inte märker, med dolda knep",
+        "register": "neutral, neutral, allmän ; neutral, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Väljarna <font color=\"#3498db\">manipuleras</font> lätt av smarta politiker.",
+        "etymologi": "Franska manipuler 'bearbeta, hantera'; till latin manipulus 'handfull', till manus 'hand'; samma rot som manikyr."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: fysisk hantering ('hantera apparat känsligt') och otillbörlig psykologisk styrning. Kortet täcker båda korrekt. Exempelmeningen om väljare är hämtad rakt av från SO:s eget exempel. Etymologi (fr. manipuler, lat. manipulus/manus, jfr manikyr) stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622400,
+      "ord": "meander",
+      "facit": "flodslinga<br><a href=\"https://www.google.com/imgres?q=meander&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F74%2FRio-cauto-cuba.JPG%2F220px-Rio-cauto-cuba.JPG&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMeander&amp;docid=DxpAhJXflapO6M&amp;tbnid=oe0nVcl9RMgKDM&amp;vet=12ahUKEwjRsv6Wy-GLAxV-IxAIHaJKATQQM3oECHEQAA..i&amp;w=220&amp;h=165&amp;hcb=2&amp;ved=2ahUKEwjRsv6Wy-GLAxV-IxAIHaJKATQQM3oECHEQAA\"><div><div><div><img alt=\"Meander - Wikipedia\" src=\"paste-2f1dbf629091402d9d40dbc33d8c1d7733a85b9c.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kraftig slinga i ett vattendrag, som floden själv format genom att skölja bort jord i ytterkurvan ; mönsterrand i form av ett labyrintliknande band, känd från grekisk konst",
+        "register": "fackspråklig, neutral, geologi ; fackspråklig, neutral, konst",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Floden slingrar sig i breda <font color=\"#3498db\">meandrar</font> över slätten.",
+        "etymologi": "Efter Maiandros, grekiskt namn på en starkt slingrande flod i Mindre Asien."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två betydelser: flodslinga och ornamentalt labyrintband (grekisk konst). Kortet täcker båda korrekt, med en sakligt riktig tilläggsdetalj om erosionsprocessen. Etymologi (floden Maiandros) stämmer. Att synonymen 'alagreck' inte tas med är inget fel -- tom synonymlista är aldrig ett fel.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622396,
+      "ord": "sekretess",
+      "facit": "tystnadsplikt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att uppgifter enligt beslut eller lag inte får lämnas ut ; skyldigheten för den som fått veta något att inte föra det vidare",
+        "register": "fackspråklig, neutral, juridik ; fackspråklig, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Kuratorn ålades <font color=\"#3498db\">sekretess</font> om allt som sagts i rummet.",
+        "etymologi": "Äldre franska secretesse, till secret 'hemlig'; samma rot som sekret och sekretion."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'påbjudet hemlighållande av något... särsk. staten', med not om att ordet ibland används synonymt med tystnadsplikt (SO:s eget exempel: 'kuratorn ålades sekretess', som kortet återanvänder). Kortets två betydelser täcker exakt detta. Etymologi (fr. secretesse, secret) korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622389,
+      "ord": "spinal",
+      "facit": "har att göra med ryggrad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har med ryggmärgen eller ryggraden att göra",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Spinal</font> muskelatrofi är en ärftlig sjukdom i ryggmärgen.",
+        "etymologi": "Latin spina 'ryggrad, tagg'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som har att göra med ryggmärg eller ryggrad'. Matchar kortet exakt, en betydelse. Exempelmeningen (spinal muskelatrofi) är hämtad rakt av från SO. Etymologi (lat. spina) korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 25,
+  "granskning_kostnad_usd": 0.8732180999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 25,
+      "turkrav": 5,
+      "kostnad_usd": 0.8732180999999999
+    }
+  ]
+}

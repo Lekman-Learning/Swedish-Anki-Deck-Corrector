@@ -291,8 +291,17 @@ def _hamta_ratt(url, forsok=4):
 # HTML i svaret, så en vanlig GET räcker -- till skillnad från svenska.se, som
 # bara skickar ett tomt skal. Innehållet ligger i numrerade block med den här
 # klassen; varje block är en avdelning på sidan.
+# 2026-08-29: klassen matchades tidigare som "px-6 py-3 border-b". Sajten
+# bytte markup och skriver numera "py-3 border-b border-border
+# last:border-none" -- utan px-6. Monstret slutade traffa HELT, och
+# funktionen returnerade `finns: false` for VARJE ord i stallet for att
+# larma. Foljden: 910 av 4 735 kort (19 %) star utan synonym, inte for att
+# orden saknar synonymer utan for att kallan tystnade.
+#
+# Prefixet ar darfor borttaget ur monstret och `px-6` behovs inte langre.
+# Se ocksa `_syn_sanity()` nedan: en tyst nollstallning far inte upprepas.
 _SYN_BLOCK = re.compile(
-    r'<div class="px-6 py-3 border-b[^"]*"[^>]*>(.*?)</div>', re.DOTALL)
+    r'<div class="[^"]*py-3 border-b[^"]*"[^>]*>(.*?)</div>', re.DOTALL)
 _SYN_H2 = re.compile(r"<h2[^>]*>(.*?)</h2>", re.DOTALL)
 _TAGGAR = re.compile(r"<[^>]+>")
 _KOMMENTARER = re.compile(r"<!--.*?-->", re.DOTALL)
@@ -317,6 +326,21 @@ _WIDGET_INLEDNING = ("vad betyder", "läs mer", "förklaring", "se även",
 _EJ_SYNONYM = ("tillbaka i grottekvarnen", "motsatsord", "användarnas bidrag",
                "synonymer", "synonymer till", "andra ord", "korsord",
                "föreslå synonym", "alla synonymer")
+
+
+# Gransssnittstext som sajten blandar in bland orden. "Visa fler" ar en
+# knapp, inte en synonym (2026-08-29).
+_UI_TEXT = {"visa fler", "visa farre", "visa mindre", "subst.", "äv.", "verb",
+            "adj.", "adv.", "vard.", "bildl.", "ngt högt.", "högt.", "åld.",
+            "ngt åld."}
+# Sektionsrubriker och exempelinledningar som sajten renderar mellan orden.
+# Till skillnad fran _UI_TEXT ar de INLEDNINGAR, inte hela strangen -- t.ex.
+# "Uttryck som innehaller lappkast" eller "Betydelse: gora en helomvandning".
+# Hittade 2026-08-29 pa lappkast, utarmad och "i tid och otid".
+_UI_INLEDNING = ("uttryck som innehåller", "uttryck med betydelsen",
+                 "betydelse:", "exempel:", "läs mer", "vad betyder",
+                 "förklaring:", "göra ett", "göra en", "hur används",
+                 "liknande ord", "nästkommande ord", "rösta på")
 
 
 def _ar_synonym(t):
@@ -390,7 +414,18 @@ def hamta_synonymer(ord_):
         blocktext = " ".join(_TAGGAR.sub(" ", block).split()).lower()
         if any(blocktext.startswith(p) for p in _WIDGET_INLEDNING):
             continue
+        # 2026-08-29: rubriken far bara tros pa om h2:n star FORE ordlistan.
+        # synonymer.se lagger nasta sektions rubrik (t.ex. "motsatsord")
+        # inuti det foregaende blocket, sa en h2 som star EFTER <ol> hor till
+        # nasta avsnitt -- inte till orden ovanfor. Utan kontrollen etiketteras
+        # despots synonymer (forfattare, diktator, tyrann...) som MOTSATSORD,
+        # och en massifyllning skulle stoppa in motsatser i synonymfaltet.
         h2 = _SYN_H2.search(block)
+        listpos = block.find("<ol")
+        if listpos == -1:
+            listpos = block.find('<a href="/sv-syn/')
+        if h2 and listpos != -1 and h2.start() > listpos:
+            h2 = None
         rubrik = _TAGGAR.sub("", h2.group(1)).strip() if h2 else "synonymer"
         kropp = _SYN_H2.sub("", block)
         # Taggarna byts mot en AVGRÄNSARE, inte mot ingenting. Varje synonym
@@ -406,7 +441,9 @@ def hamta_synonymer(ord_):
         # "detektiv" eller "ombud" vid jämförelse.
         ord_lista = [t.strip() for t in re.split(r"[,|;]", text) if t.strip()]
         ord_lista = [t for t in ord_lista
-                     if t.lower() != ord_.lower() and _ar_synonym(t)]
+                     if t.lower() != ord_.lower() and _ar_synonym(t)
+                     and t.lower() not in _UI_TEXT
+                     and not t.lower().startswith(_UI_INLEDNING)]
         if ord_lista:
             avdelningar.setdefault(rubrik, []).extend(ord_lista[:20])
     saknas = "hittade tyvärr" in html or "inga synonymer" in html

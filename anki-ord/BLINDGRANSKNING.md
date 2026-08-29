@@ -59,7 +59,23 @@ artikel för **kok**, `av hävd` under **hävd**.
 1. Är **huvudbetydelsen** riktig — och **saknas någon betydelse** som SO har?
    Det här är den vanligaste bristen. Leta särskilt efter bildliga bruk och
    fackbetydelser.
-2. Är varje **synonym** verkligen utbytbar, och står den i en källa?
+2. Är varje **synonym** ett ord som HP:s ORD-delprov skulle kunna ge som rätt
+   svar — alltså det vanligaste ordet som ligger NÄRMAST i betydelse — och
+   står den i en källa?
+
+   ⚠️ **Kravet är INTE längre "utbytbar åt båda hållen" (ändrat 2026-08-29,
+   Adams beslut om vad fältet är till för).** ORD-uppgiften går ut på att
+   *"välja vilket av fem svarsalternativ som betyder samma sak (eller ligger
+   närmast i betydelse)"*. Ett ord som ligger nära utan att vara ett exakt
+   utbyte är alltså precis vad fältet ska innehålla, och ska GODKÄNNAS.
+   Under den gamla regeln underkändes `bemärkt`/framstående,
+   `singulär`/säregen och `spe`/hån — alla tre står nu med TOMT synonymfält,
+   vilket är sämre kort, inte bättre.
+
+   Underkänn en synonym bara när den pekar på **fel betydelse**
+   (`tertial`/kvartal — 4 månader mot 3; `jour`/vikariat — två skilda
+   anställningsformer) eller **saknar källa**. Ett tomt synonymfält är
+   numera en brist att anmärka på, inte ett godtagbart utfall.
 3. Stämmer **registret** (formell/vardaglig/negativ osv.) med hur källorna
    märker ordet? En etikett ingen källa stöder är ett fel.
 4. Visar **exempelmeningen** hur ordet faktiskt används — och beskriver den

@@ -1,0 +1,70 @@
+[
+  {
+    "noteId": 1780080622404,
+    "ord": "selektiv",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "utväljande",
+        "sållande",
+        "särskiljande"
+      ],
+      "definitioner": [
+        "Grundas på noggrant utväljande av specifika element.",
+        "Påverkar eller gäller endast vissa grupper eller kategorier."
+      ],
+      "exempelmening": "<font color=\"#3498db\">Selektivt</font> kulturstöd.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "utväljande",
+    "har_old_facit": true,
+    "riskflaggor": [
+      {
+        "flagga": "fragment_exempel",
+        "allvar": "lag",
+        "forklaring": "Exempelmeningen är en fras, inte en mening: 'Selektivt kulturstöd.'"
+      }
+    ],
+    "hogsta_allvar": "lag",
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=selektiv https://www.synonymer.se/sv-syn/selektiv https://sv.wiktionary.org/wiki/selektiv",
+      "slutsats": "SO: 'som grundas pa noggrant utvaljande', med underbetydelserna 'spec. av. i fraga om utvaljande som grundar sig pa valbestamda (matbara) egenskaper' och 'ibland ironiskt, med antydan om att utvaljandet styrs av nagons egna syften' (SO:s exempel: ett selektivt minne). Den ironiska ar en egen betydelse med egen laddning och ar med; den mattekniska underbetydelsen ar samma sak som huvudbetydelsen med en precisering och ar inte skild ut. SO markerar generell som MOTSATS, alltsa antonym. SAOL:s 'utvaljande; sarskiljande' ar inte upptaget som synonym -- de ar particip av verbet, inte utbytbara mot adjektivet. OLD-facit sa just 'utvaljande'. RATTAT efter blindgranskning: den fackspraliga betydelsen ar nu en EGEN tredje betydelse. Jag skrev uttryckligen i sokkollen ovan att jag slog ihop den med huvudbetydelsen, med motiveringen att den ar 'samma sak med en precisering'. Det ar den inte -- SO markerar den 'spec. elektronik, psykologi', och en selektiv forstarkare valjer inte 'noggrant' utan efter en MATBAR grans. FEMTE gangen i dag som jag slog ihop en betydelse OCH dokumenterade hopslagningen. Regeln star redan i skriptets docstring; felet var att jag anda vagde ordbokens uppdelning mot min egen bedomning i stallet for att folja den."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som bygger på ett noggrant urval i stället för att ta allt ; inom teknik och psykologi: som väljer ut efter bestämda, mätbara egenskaper — som en förstärkare vilken släpper igenom en enda radiokanal ; ironiskt om vad någon kommer ihåg eller uppfattar: bara det som passar en själv",
+      "register": "neutral, neutral, allmän ; fackspråklig, neutral, teknik ; neutral, ironisk, allmän",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Han har ett påfallande <font color=\"#3498db\">selektivt</font> minne när det gäller egna löften.",
+      "etymologi": "→ Till selektion; av latin seligere 'välja ut'."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "confidence": 9,
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 21 ord i en betydelse -- korta ner: 'inom teknik och psykologi: som väljer ut efter bes'",
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'ironiskt om vad någon kommer ihåg eller uppfattar:'"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
+  }
+]

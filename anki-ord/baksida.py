@@ -75,9 +75,71 @@ _REGISTER_INDENT_SCALE = 1.5
 _ETY_UNWRAP_RE = re.compile(r'^<font color="#[0-9a-fA-F]{3,6}">(.*)</font>$', re.DOTALL)
 _ETY_AVSKALNING_RE = re.compile(r"^\s*(?:→|->|&rarr;)\s*")
 
+# --- Numrerad layout för många betydelser (beslutat 2026-08-29) ---
+#
+# &nbsp;-justeringen ovanför förutsätter att fetstilsraden och registerraden
+# ligger på VARSIN ENDA rad -- indraget räknas i tecken framåt från radens
+# början. Det håller upp till två betydelser, som var vad den designades och
+# testades för (se docstringen: exemplet visar två). Vid fler bryts
+# fetstilsraden över flera rader i Anki medan registerraden bryts på andra
+# ställen, och paddingen pekar då på en position som inte finns kvar.
+#
+# Mätt på 'docka' (5 betydelser, 287 tecken fetstil): 251 &nbsp; och fem
+# register som hamnade slumpmässigt. Ingen konstant kan rätta det -- felet är
+# inte att offseten är fel beräknad utan att referenspunkten har flyttat.
+#
+# Från NUMRERAD_FRAN betydelser och uppåt renderas därför en numrerad stapel
+# där varje betydelse bär sitt eget register direkt efter sig. Ingen
+# justering behövs, alltså kan ingen justering gå sönder. Adam valde
+# layouten 2026-08-29 efter att ha sett 'docka' i sin kö.
+#
+# Fördelningen som satte tröskeln (4 735 v2-kort, mätt samma dag):
+#   1 betydelse  3 616 (76,4 %)   2 betydelser 954 (20,1 %)
+#   3 betydelser   137 ( 2,9 %)   4-6           28 ( 0,6 %)
+# 96,5 % av decket går alltså kvar på den gamla vägen och ändras inte alls.
+NUMRERAD_FRAN = 3
+
+# Modellen är oförändrad: huvudbetydelse och register lagras även i den här
+# layouten som " ; "-separerade strängar. Numren och gråfärgen läggs på i
+# build() och plockas av igen i parse(), precis som etymologins pil och färg
+# -- annars skulle nästa parse->build baka in "1." i betydelsetexten och
+# dubbla den för varje körning.
+_NUMRERAD_RE = re.compile(
+    r"<b>\s*\d+\.\s*(?P<bet>.*?)</b>\s*"
+    rf'<font color="{re.escape(config.REGISTER_COLOR)}">'
+    r"\((?P<reg>[^)]*)\)</font>\s*<br>",
+    re.DOTALL,
+)
+_SYN_EX_RE = re.compile(
+    rf'<font color="{re.escape(config.SYNONYM_COLOR)}">(?P<syn>.*?)</font>'
+    r"\s*<br>\s*<br>\s*<i>(?P<ex>.*?)</i>",
+    re.DOTALL,
+)
+
+
+def _parse_numrerad(baksida_html):
+    """Läser den numrerade layouten tillbaka till modellen.
+
+    Returnerar (huvudbetydelse, register, match) där match bär grupperna
+    'syn' och 'ex' och slutar där exempelmeningen slutar -- alltså samma
+    kontrakt som _MAIN_RE ger, så att resten av parse() kan dela kod.
+    Returnerar None när kortet inte är skrivet i den här layouten; då tar
+    den gamla vägen över helt oförändrad.
+    """
+    par = list(_NUMRERAD_RE.finditer(baksida_html))
+    if len(par) < 2:
+        return None
+    syn_ex = _SYN_EX_RE.search(baksida_html, par[-1].end())
+    if not syn_ex:
+        return None
+    huvud = " ; ".join(m.group("bet").strip() for m in par)
+    register = " ; ".join(m.group("reg").strip() for m in par)
+    return huvud, register, syn_ex
+
 
 def parse(baksida_html):
-    match = _MAIN_RE.search(baksida_html)
+    numrerad = _parse_numrerad(baksida_html)
+    match = numrerad[2] if numrerad else _MAIN_RE.search(baksida_html)
     if not match:
         return {
             "huvudbetydelse": "",
@@ -89,9 +151,12 @@ def parse(baksida_html):
             "synonym_groups": None,
         }
 
-    huvudbetydelse = match.group("huvud").strip()
-    register_lines = [r.strip() for r in _REGISTER_LINE_RE.findall(match.group("register_block") or "")]
-    register = " ; ".join(register_lines) if register_lines else None
+    if numrerad:
+        huvudbetydelse, register = numrerad[0], numrerad[1]
+    else:
+        huvudbetydelse = match.group("huvud").strip()
+        register_lines = [r.strip() for r in _REGISTER_LINE_RE.findall(match.group("register_block") or "")]
+        register = " ; ".join(register_lines) if register_lines else None
 
     raw = match.group("syn")
     synonym_groups = None
@@ -149,7 +214,34 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
 
     if register:
         reg_parts = [r.strip() for r in register.split(";")]
-        if len(reg_parts) > 1:
+        meningar = huvudbetydelse.split(" ; ") if huvudbetydelse else []
+        if len(reg_parts) >= NUMRERAD_FRAN and len(reg_parts) == len(meningar):
+            # Numrerad stapel: varje betydelse bär sitt register direkt efter
+            # sig, så ingenting behöver justeras in under någonting annat.
+            # Kravet att antalen är LIKA är avsiktligt -- går de isär vet vi
+            # inte vilket register som hör till vilken betydelse, och då är
+            # den gamla vägen ärligare än en numrering som ljuger.
+            #
+            # OBS -- versaliseringen nedan ÄNDRAR MODELLEN, en gång. Den
+            # gamla vägen versaliserar bara första tecknet i hela strängen,
+            # så betydelse 2+ lagras gement ("... ; anläggning vid ..."). I
+            # en numrerad lista ser "2. anläggning" fel ut, så varje rad får
+            # stor bokstav -- och eftersom parse() läser tillbaka det som står
+            # på kortet vandrar versalen in i modellen vid första rundturen.
+            # Det är avsiktligt och det är STABILT: andra rundturen ger
+            # identisk sträng (verifierat 2026-08-29). Alternativet, att
+            # gissa bort versalen i parse(), skulle inte gå att skilja från
+            # en betydelse som var versaliserad från början.
+            rader = []
+            for i, (m, reg) in enumerate(zip(meningar, reg_parts), 1):
+                m = m.strip()
+                m = (m[0].upper() + m[1:]) if m else m
+                rader.append(f"<b>{i}. {m}</b> "
+                             f'<font color="{config.REGISTER_COLOR}">'
+                             f"({reg})</font><br>")
+            huvud_html = "".join(rader)
+            register_html = ""
+        elif len(reg_parts) > 1:
             # Flera betydelser med olika register (beslutat 2026-08-05, se
             # style_guide.md "Register per bibetydelse"): en rad, varje
             # register indraget till ungefär under SIN betydelses startpunkt

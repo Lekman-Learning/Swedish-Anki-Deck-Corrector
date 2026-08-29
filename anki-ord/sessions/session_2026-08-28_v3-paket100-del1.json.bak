@@ -1,0 +1,486 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "poster": [
+    {
+      "noteId": 1780080622127,
+      "ord": "fistel",
+      "facit": "onormal kanal i kroppen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Onaturlig gång som bildats i kroppen vid sjukdom, mellan två organ eller ut till huden",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Efter operationen bildades en <font color=\"#3498db\">fistel</font> mellan tarmen och huden.",
+        "etymologi": "Latin fistula 'rör, pipa' — en gång i kroppen som inte ska finnas."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast en betydelse ('icke-anatomisk kanal i kroppen'), som kortet täcker korrekt och fullständigt. Facit ('onormal kanal i kroppen') och etymologin (lat. fistula 'rör, pipa') stämmer. Ingen betydelse saknas; tom synonymlista är korrekt eftersom SO inte anger några synonymer.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622118,
+      "ord": "moaré",
+      "facit": "ett slags tygmönstereffekt<br><a href=\"https://commons.wikimedia.org/wiki/File:Moireband.jpg\"><img src=\"200px-moireband.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tyg med skimrande vågmönster ; själva vågmönstret",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon bar en klänning i svart <font color=\"#3498db\">moaré</font> som skiftade i ljuset.",
+        "etymologi": "Franska moiré, till moirer 'vattra'; slaktingar med mohair."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar två betydelser: tyget självt ('typ av vävnad med vattrad yta') och själva mönstret -- exakt de betydelser kortet ger, i rätt ordning. Etymologin (fra. moiré, till moirer 'vattra', släkt med mohair) stämmer.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622126,
+      "ord": "opinion",
+      "facit": "(pol.) allmänn mening",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den åsikt som en stor grupp människor delar i en fråga ; också om själva gruppen som tycker så",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "folkmening"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det fanns en stark <font color=\"#3498db\">opinion</font> mot att lägga ner sjukhuset.",
+        "etymologi": "Latin opinio 'mening, tro'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse och tilläggsanvändningen om själva gruppen ('blidka opinionen') matchar kortets två delbetydelser. Synonymen 'folkmening' är verifierad direkt i SAOL, som definierar opinion som 'Allmän mening, folkmening'.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622114,
+      "ord": "praxis",
+      "facit": "allmännt bruk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det sätt något brukar göras på, som blivit den vanliga ordningen utan att stå skrivet någonstans ; inom juridiken: hur domstolarna faktiskt brukar döma i liknande fall",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, juridik",
+        "synonymer": [
+          "bruk"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det är <font color=\"#3498db\">praxis</font> att en ordförande som förlorar sin majoritet avgår.",
+        "etymologi": "Grekiska praxis 'handling'; samma rot som praktisk."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger 'vedertaget bruk; rättssedvänja; praktik' med ämnesmarkering jur., vilket bekräftar kortets uppdelning i ett allmänt och ett specifikt juridiskt bruk. Synonymen 'bruk' stöds direkt av SAOL:s definition.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622123,
+      "ord": "sinus",
+      "facit": "hålrum i kroppen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I matematiken: en av grundfunktionerna i trigonometrin, som kopplar en vinkel till förhållandet mellan två sidor i en rätvinklig triangel ; i kroppen: ett hålrum eller en utbuktning, till exempel bihålorna i skallbenet",
+        "register": "fackspråklig, neutral, matematik ; fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Sinus</font> för 30 grader är exakt 0,5.",
+        "etymologi": "Latin sinus 'veck, vik'; samma rot som insinuera."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar exakt två betydelser (matematisk funktion resp. anatomiskt hålrum) i samma ordning som kortet. Exempelmeningen är sakligt korrekt (sin 30° = 0,5).",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622122,
+      "ord": "bjärt",
+      "facit": "färggrann, gräll, iögonfallande<br><div><div><a href=\"https://www.google.com/imgres?q=bj%C3%A4rt&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F5%2F54%2FJuergen_von_der_Lippe_HagenU.jpg%2F220px-Juergen_von_der_Lippe_HagenU.jpg&amp;imgrefurl=https%3A%2F%2Fen.wiktionary.org%2Fwiki%2Fbj%25C3%25A4rt&amp;docid=pZMyggIASOvc-M&amp;tbnid=DMdgqVGjo0efiM&amp;vet=12ahUKEwipi-iexM2LAxX6JRAIHdo7G0AQM3oECHIQAA..i&amp;w=220&amp;h=330&amp;hcb=2&amp;ved=2ahUKEwipi-iexM2LAxX6JRAIHdo7G0AQM3oECHIQAA\"><img alt=\"bjärt - Wiktionary, the free dictionary\" src=\"images-8da6c42602ca0a9e847f31356f59963f94c1ad5a.webp\"></a></div><div><a href=\"https://www.google.com/imgres?q=bj%C3%A4rt&amp;imgurl=https%3A%2F%2Fst5.depositphotos.com%2F8991946%2F78418%2Fi%2F450%2Fdepositphotos_784188324-stock-photo-abstract-color-backgroun-watercolor-art.jpg&amp;imgrefurl=https%3A%2F%2Fdepositphotos.com%2Fse%2Fphotos%2Fbj%25C3%25A4rt-f%25C3%25A4rgade.html&amp;docid=-fVg-oQk3vrC0M&amp;tbnid=usFzrqLH412J9M&amp;vet=12ahUKEwipi-iexM2LAxX6JRAIHdo7G0AQM3oECGkQAA..i&amp;w=600&amp;h=337&amp;hcb=2&amp;ved=2ahUKEwipi-iexM2LAxX6JRAIHdo7G0AQM3oECGkQAA\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><div style=\"display: inline !important;\"><img alt=\"Bjärt färgade Stockfotografier ...\" src=\"paste-f19254f30d4aca94773f4f47a7c9f0968fbd9a99.webp\"></div></div></div></a></div></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om färg: så stark och skrikig att den sticker i ögonen ; bildligt om en skillnad: så skarp att den är omöjlig att missa",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "gräll"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Fallskärmsavtalen stod i <font color=\"#3498db\">bjärt</font> kontrast till sparkraven på alla andra.",
+        "etymologi": "Fornsvenska biärter 'lysande, grann'; gemensamt germanskt ord, belagt pa runsten fran 1000-talet."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (starkt lysande färg) och bildliga betydelse (skarp, tydlig skillnad) matchar kortet exakt. 'Gräll' anges uttryckligen som näraliggande jämförelseord i SO, vilket styrker synonymen.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622125,
+      "ord": "akribi",
+      "facit": "vetenskaplig noggranhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ytterst noggrann kontroll av varje uppgift och varje hänvisning i vetenskapligt arbete",
+        "register": "formell, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En forskare med lysande idéer men bristande <font color=\"#3498db\">akribi</font>.",
+        "etymologi": "Grekiska akribeia 'noggrannhet, punktlighet'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger samstämmigt 'vetenskaplig noggrannhet'. Kortets mer konkreta formulering (noggrann kontroll av uppgifter och hänvisningar) är en rimlig, sakligt riktig konkretisering av samma betydelse, inte en felaktig inskränkning.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622119,
+      "ord": "alltjämt",
+      "facit": "fortfarande, ständigt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fortfarande, om något som har pågått länge och ännu inte upphört",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "fortfarande",
+          "ännu"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon bor <font color=\"#3498db\">alltjämt</font> kvar i huset hon växte upp i.",
+        "etymologi": "Fornsvenska alt iämpt 'standigt'; belagt sedan 1484."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition 'fortfarande' med angiven synonym 'ännu' matchar kortet exakt, och exempelmeningen illustrerar betydelsen tydligt.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622130,
+      "ord": "cyklop",
+      "facit": "enögd sagojätte",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I de grekiska sagorna: en jätte med ett enda öga mitt i pannan ; dykarmask som täcker både ögon och näsa",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Odysseus lyckades blända <font color=\"#3498db\">cyklopen</font> med en glödgad påle.",
+        "etymologi": "Grekiska kyklops, av kyklos 'cirkel' och ops 'oga'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar båda betydelserna: den mytologiska enögda jätten och dykarmasken ('cyklopöga' vid sportdykning). Facit nämner bara den mytologiska, men kortet saknar alltså ingen betydelse -- tvärtom fångar det båda som SO ger, i rätt ordning.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622117,
+      "ord": "defilera",
+      "facit": "<br>marschera förbi<br><br><i>defilera in i mål;&nbsp; &nbsp;trupperna defilerade förbi konungens bår</i><br><br><div><div><div><a href=\"https://www.google.com/imgres?q=defilera&amp;imgurl=https%3A%2F%2Fstatic.bonniernews.se%2Fba%2F7534256c-85bb-47ac-9c47-78322d86174f.jpeg%3Fcrop%3D910%252C512%252Cx57%252Cy85%26width%3D980%26format%3Dpjpg%26auto%3Dwebp&amp;imgrefurl=https%3A%2F%2Fwww.kristianstadsbladet.se%2Fartikel%2Fkoer-nar-thailands-kung-hedras%2F&amp;docid=z1kEWxtAz1oeGM&amp;tbnid=CTaTZBJVqYwgiM&amp;vet=12ahUKEwjek4SAv4-MAxWhFBAIHegcNooQM3oECGYQAA..i&amp;w=910&amp;h=512&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjek4SAv4-MAxWhFBAIHegcNooQM3oECGYQAA\"><img alt=\"Köer när Thailands kung hedras ...\" src=\"images-dbcd2f45eac10185767fa61d3b6211b4cd0c0ea7.webp\"></a></div><div><div><div><a href=\"https://www.google.com/imgres?q=defilera&amp;imgurl=http%3A%2F%2Fwww.fineart-china.com%2Fadmin%2Fimages%2Fnew21%2Funknow%2520artist-425383.jpg&amp;imgrefurl=http%3A%2F%2Fwww.fineart-china.com%2Fframedoilpainting%2Feurope.php%3Fsize%3D20%26size2%3D0%26bh%3D61386&amp;docid=hnd30eXGFTUAVM&amp;tbnid=Veg_8POgsxgroM&amp;vet=12ahUKEwjek4SAv4-MAxWhFBAIHegcNooQM3oECDgQAA..i&amp;w=1997&amp;h=900&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjek4SAv4-MAxWhFBAIHegcNooQM3oECDgQAA\"><img alt=\"effer den italienska forluten vid ...\" src=\"images-2a81c99a58c12dd380e91e877cdbd7a430b075b9.webp\"></a></div><a href=\"https://www.google.com/imgres?q=defilera&amp;imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-photo%2Fbeautiful-female-model-walking-down-600nw-2447911723.jpg&amp;imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsv%2Fsearch%2Fdefilera&amp;docid=MGHJeFEd9zBeNM&amp;tbnid=ArgbRHmQD_BunM&amp;vet=12ahUKEwjek4SAv4-MAxWhFBAIHegcNooQM3oECFsQAA..i&amp;w=600&amp;h=338&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjek4SAv4-MAxWhFBAIHegcNooQM3oECFsQAA\"><div><div><div><img alt=\"Defilera royaltyfria bilder, stockfoton ...\" src=\"paste-9520f6247ca426f342c14cbc4bd00a99ac2c10d4.webp\"></div></div></div></a></div></div></div></div>",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Marschera förbi någon förnäm i ordnade led för att hedra den personen ; bildligt: ta sig i mål med så stor ledning att det kan ske i lugn och ro",
+        "register": "neutral, neutral, militär ; neutral, neutral, sport",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Trupperna <font color=\"#3498db\">defilerade</font> förbi kungens kista.",
+        "etymologi": "Franska défiler 'ga i rad', till file 'rad'; samma rot som fil."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal antydde fler betydelser, men SO:s fullständiga uppslag visar bara två: bokstavlig marsch förbi en hedersperson, och den bildliga (sport-)användningen 'kunde defilera in i mål'. Kortet täcker båda korrekt; den höga siffran i facit_signal beror sannolikt på facits HTML-formatering (radbrytningar/bilder), inte på verkliga extra betydelser.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622132,
+      "ord": "diligens",
+      "facit": "postvagn<br><a href=\"https://commons.wikimedia.org/wiki/File:Postkutsche_brig.jpg\"><img src=\"250px-postkutsche_brig.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Täckt hästdragen vagn som förr gick i fast turlista med post och resenärer",
+        "register": "neutral, neutral, historia",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Banditerna rånade <font color=\"#3498db\">diligensen</font> på vägen mot Lyon.",
+        "etymologi": "Franska (voiture de) diligence, ursprungligen 'hastighet' -- vagnen som gick efter tidtabell; av latin diligentia 'noggrannhet'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('täckt hästdragen vagn för post och passagerare, historiskt') matchar kortet i sak och register.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622112,
+      "ord": "fjär",
+      "facit": "stolt och högdragen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som håller andra på avstånd med en min av att vara bättre än de",
+        "register": "ngt ålderdomlig, lätt negativ, allmän",
+        "synonymer": [
+          "högdragen",
+          "avvisande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon var <font color=\"#3498db\">fjär</font> mot alla som försökte närma sig henne.",
+        "etymologi": "Franska fier 'vild, stolt'; av latin ferus 'vild'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse 'högdraget avvisande' (ngt ålderdomligt) matchar kortet. Synonymerna 'högdragen' och 'avvisande' är själva SO:s definitionsord och därmed verifierade.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622115,
+      "ord": "getto",
+      "facit": "isolerat bostadsområde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förr: den avskilda stadsdel dit judar tvingades flytta ; i dag: ett isolerat och nedgånget bostadsområde där nästan alla tillhör samma grupp",
+        "register": "neutral, neutral, historia ; neutral, nedsättande, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Upproret i Warszawas <font color=\"#3498db\">getto</font> slogs ner efter en månad.",
+        "etymologi": "Troligen italienska ghetto, efter Ghetto, namnet pa en stadsdel i Venedig."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO beskriver dagens generella betydelse med den judiska stadsdelen som historiskt ursprung. Kortets uppdelning i förr/idag återger detta korrekt, och registret 'nedsättande' för dagens bruk stämmer med SO:s bruklighetsangivelse.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622129,
+      "ord": "inuit",
+      "facit": "eskimå",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som tillhör urbefolkningen på Grönland, i norra Kanada, Alaska och nordöstra Ryssland",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Många <font color=\"#3498db\">inuiter</font> på Grönland lever fortfarande av jakt och fiske.",
+        "etymologi": "Inuit ar pluralformen av inuk 'manniska' pa gronlandska."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('person tillhörande urbefolkning på Grönland, Alaska, norra Kanada och nordöstra Ryssland') matchar kortet ordagrant.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622131,
+      "ord": "kitt",
+      "facit": "tätningsmassa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Seg massa som stelnar och används för att täta springor, till exempel runt en fönsterruta ; bildligt: det som håller ihop en grupp eller ett samhälle",
+        "register": "neutral, neutral, teknik ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Religionen var det <font color=\"#3498db\">kitt</font> som höll ihop landet.",
+        "etymologi": "Tyska Kitt; slakt med latin bitumen 'beck'; samma rot som kada."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse (tätningsmassa) och den belagda bildliga användningen ('religionen var det kitt som höll ihop landet') återges båda korrekt av kortet.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622116,
+      "ord": "kursiv",
+      "facit": "om lutande text",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om text: skriven med bokstäver som lutar åt höger ; om läsning: snabb och översiktlig, utan att gå in på detaljer ; som substantiv: själva den högerlutande stilsorten",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Några av uppsatserna på litteraturlistan kan läsas <font color=\"#3498db\">kursivt</font>.",
+        "etymologi": "Franska cursif, av medeltidslatin cursivus 'lopande'; till kurs."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt tre betydelser -- kursiv stil, kursiv/snabb läsning, samt kursiv som substantiv för stilsorten -- i samma ordning som kortet. Inget saknas.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622121,
+      "ord": "promulgera",
+      "facit": "utfärda lag<br><br><i>Alla lagar&nbsp;promulgeras av presidenten.</i>",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Officiellt meddela att en lag som redan är beslutad nu ska börja gälla",
+        "register": "fackspråklig, neutral, juridik",
+        "synonymer": [
+          "utfärda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Alla lagar <font color=\"#3498db\">promulgeras</font> av presidenten.",
+        "etymologi": "Latin promulgare 'ansla, kungora'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal antydde två betydelser, men SO:s fullständiga uppslag visar bara en dokumenterad betydelse ('utfärda lag som redan antagits'), vilken kortet återger korrekt. Någon ytterligare betydelse finns inte belagd i SO.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622128,
+      "ord": "ratificera",
+      "facit": "godkänna ett avtal",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slutgiltigt godkänna ett färdigförhandlat avtal mellan stater, så att det börjar gälla",
+        "register": "fackspråklig, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Kongressen vägrade <font color=\"#3498db\">ratificera</font> Versaillesfördraget.",
+        "etymologi": "Medeltidslatin ratificare 'slutgiltigt faststalla'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('göra en preliminär internationell överenskommelse giltig') matchar kortet sakligt och exemplet (Versaillesfördraget) är korrekt.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622120,
+      "ord": "toga",
+      "facit": "svepande dräkt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fornromersk dräkt för män: ett stort tygstycke utan ärmar som lindades runt kroppen",
+        "register": "neutral, neutral, historia",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Senatorerna kom till mötet klädda i vita <font color=\"#3498db\">togor</font>.",
+        "etymologi": "Latin toga, till tegere 'tacka'; samma rot som tak."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('fornromerskt ärmlöst plagg för män, draperat runt kroppen') matchar kortet ordagrant.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622111,
+      "ord": "vrensk",
+      "facit": "motsträvig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som spjärnar emot och vägrar följa med i stället för att göra som man blir tillsagd",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [
+          "motspänstig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hästen var <font color=\"#3498db\">vrensk</font> och vägrade gå in i transporten.",
+        "etymologi": "Fornsvenska vrensker 'vrensk, brunstig'; slakt med dialektens vrina 'gnagga'; troligen ljudharmande."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('som ofta stretar emot, särsk. om häst') matchar kortet, och synonymen 'motspänstig' anges uttryckligen i SO som jämförelseord.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622222,
+      "ord": "varp",
+      "facit": "längsgående vävtrådar; bergrester; draglina<br><a href=\"https://commons.wikimedia.org/wiki/File:Almgrens_sidenv%C3%A4veri_-_KMB_-_16001000006120.jpg\"><img src=\"250px-almgrens_sidenväveri_-_kmb_-_16001000006120.webp\"></a><br><a href=\"https://commons.wikimedia.org/wiki/File:Varphog_Dalarna_2008.JPG\"><img src=\"250px-varphog_dalarna_2008.webp\"></a><br><a href=\"https://www.google.com/imgres?q=varp%20fiske&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F29%2FSeining_salmon.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FNot_(fiskeredskap)&amp;docid=gBwoM0ovlb12vM&amp;tbnid=FMywaZOxxcTz0M&amp;vet=12ahUKEwjH8bON2feLAxUGEhAIHQq0PcIQM3oECBwQAA..i&amp;w=1400&amp;h=1044&amp;hcb=2&amp;ved=2ahUKEwjH8bON2feLAxUGEhAIHQq0PcIQM3oECBwQAA\"><div><div><div><img alt=\"Not (fiskeredskap) – Wikipedia\" src=\"paste-afcd9e08a62bb791b323a15de74785547094d5fb.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I vävning: trådarna som spänns upp på längden i väven och som de andra trådarna vävs in tvärs igenom ; hög av värdelöst berg som kastats undan vid gruvbrytning ; draglina till ett stort släpnät eller till ett mindre ankare",
+        "register": "fackspråklig, neutral, allmän ; fackspråklig, neutral, geologi ; fackspråklig, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Tyget var rött i <font color=\"#3498db\">varpen</font> och svart i inslaget.",
+        "etymologi": "Jfr islandska och norska varp; gemensamt germanskt ord, nara beslaktat med varpa. I linbetydelsen fornsvenska varp, eg. 'kast'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO delar upp ordet i fler finkorniga delbetydelser (bl.a. 'ett drag med en not' som egen underbetydelse), men SAOL grupperar precis som kortet i tre betydelser: vävtrådar, bergrester, samt notdragningsplats/draglina tillsammans. Kortets indelning följer alltså en etablerad ordboks gruppering -- inget helt betydelseområde saknas.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622227,
+      "ord": "evinnerlig",
+      "facit": "evig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som upprepas så länge och så ofta att man tröttnar på det ; också bara förstärkande: alldeles oerhört",
+        "register": "neutral, lätt negativ, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "evig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Detta <font color=\"#3498db\">evinnerliga</font> tjat om att jag ska klippa mig!",
+        "etymologi": "Jfr fornsvenska ävinnelikher 'evig'; ytterst till gotiska aiws 'tid'; samma rot som evig."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (tröttsamt upprepad under lång tid, samt förstärkande användning) matchar kortet exakt, till skillnad från facits förenklade 'evig'.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622241,
+      "ord": "halvpension",
+      "facit": "hotellerbjudande<br><a href=\"https://en.wikipedia.org/wiki/File:Endicott_College_Stoneridge_Hall_empty_dorm_room.jpg\"><img src=\"250px-endicott_college_stoneridge_hall_empty_dorm_room.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hotellavtal som ger rummet, frukost och en varm måltid till per dag",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Resan kostade 8 000 kronor med <font color=\"#3498db\">halvpension</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('logi, frukost och ett huvudmål per dag') matchar kortet sakligt.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622202,
+      "ord": "harnesk",
+      "facit": "bröstpansar<br><img alt=\"webp image\" src=\"paste_1759098264770.webp\"><br><img alt=\"webp image\" src=\"paste_1759098293698.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den del av en rustning som skyddar bröstet och överkroppen ; i uttrycket 'gå i harnesk mot': bli stridslysten och helt avvisande mot något ; i geologin: en blankslipad yta i berget där två block glidit mot varandra",
+        "register": "arkaisk, neutral, historia ; neutral, neutral, allmän ; fackspråklig, neutral, geologi",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon gick i <font color=\"#3498db\">harnesk</font> mot varje förslag om förändring.",
+        "etymologi": "Fornsvenska harnesk, av lagtyska harnesch; av fornfranska harnas 'rustning, utrustning'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "SAOL ger tre betydelser för harnesk: (1) rustning/bröstpansar (mil.), (2) polerad glidyta (geol.), och (3) 'draginrättning för solv' -- en vävteknisk term för den mekanism som lyfter skaften/solven i en vävstol. Kortet har (1) och (2) men saknar helt betydelse (3); i stället har man fyllt tredjeplatsen med idiomet 'gå i harnesk mot', som bara är ett uttryck byggt på rustningsbetydelsen och inte en egen betydelse. En hel betydelse saknas alltså. Borde bytas mot något i stil med: 'inom vävning: mekanismen som lyfter solven/skaften i en vävstol'.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080622203,
+      "ord": "lymfa",
+      "facit": "vävnadsvätska",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den klara vätska som finns mellan cellerna i kroppen och som fraktar näring och avfall mellan blodet och vävnaden",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Lymfan</font> samlas upp i egna kärl och leds tillbaka till blodet.",
+        "etymologi": "Latin lympha 'klart vatten'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('vävnadsvätska som sköter ämnesutbytet mellan blod och celler') matchar kortet sakligt och exemplet är korrekt.",
+      "granskning_turer_post": 37,
+      "granskning_turkrav_post": 6
+    }
+  ],
+  "granskare": "claude-cli-blind",
+  "granskning_turer": 37,
+  "granskning_kostnad_usd": 1.1986296000000003,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 37,
+      "turkrav": 6,
+      "kostnad_usd": 1.1986296000000003
+    }
+  ]
+}

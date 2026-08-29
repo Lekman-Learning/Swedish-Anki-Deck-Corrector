@@ -1,0 +1,90 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622252,
+      "ord": "krum",
+      "facit": "böjd och krokig<div><img src=\"paste-1e280c0c847844bf0788615859233d86b74090b7.webp\"><br></div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om kropp eller rygg: krökt framåt av ålder, sjukdom eller tungt arbete ; också om växter: krokvuxen ; som substantiv: själva kröken — \"med ryggen i krum\"",
+        "register": "neutral, neutral, allmän ; neutral, neutral, biologi ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han stod med ryggen <font color=\"#3498db\">krum</font> över arbetsbänken.",
+        "etymologi": "Lagtyska krum; beslaktat med kramp och krympa."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat mot SO/SAOL: adjektivet har huvudbetydelsen 'böjd ofta till följd av sjukdom; om (del av) kropp' med undermoment 'äv. om växt' (ex. 'krumma träd') samt ett substantiv 'böjd form' i uttryck ('med ryggen i krum'). Kortets tre delbetydelser (kropp/rygg, växt/krokvuxen, substantivet självt) täcker alla belagda betydelser -- ingen saknas. Exempelmeningen matchar SO:s eget exempel och ordet är highlightat. Register och etymologi (lågtyska, släkt med kramp/krympa) stämmer i sak. Enda anmärkning: etymologitexten saknar diakritiska tecken ('Lagtyska', 'beslaktat' bör vara 'Lågtyska', 'besläktat') -- ren stavning, påverkar inte sakinnehållet, ej diskvalificerande.",
+      "granskning_turer_post": 17,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622288,
+      "ord": "subtil",
+      "facit": "knappt märkbar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så fin att den knappt märks — man måste vara uppmärksam för att uppfatta den ; om ett resonemang eller ett sätt att uttrycka sig: förfinat och skarpsinnigt, med antydningar i stället för raka besked",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det är en <font color=\"#3498db\">subtil</font> skillnad mellan de två orden.",
+        "etymologi": "Latin subtilis 'fin, harfin, skarpsinnig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger huvudbetydelsen 'mycket fin ibland på gränsen till omärklig' med ett eget exempel om att tala subtilt 'med antydningar'; SAOL preciserar med 'fin, hårfin; sofistikerad, spetsfundig' och exemplet 'ett subtilt resonemang'. Kortets tvådelning (allmän finhet / förfinat resonemang med antydningar) är väl förankrad i båda källorna och ingen betydelse saknas. Exempelmeningen ('en subtil skillnad') är hämtad rakt av från SO, korrekt highlightad och grammatiskt riktig. Etymologin (lat. subtilis 'fin, hårfin, skarpsinnig') stämmer i sak, men stavas 'harfin' i kortet (saknar å) -- litet korrekturfel, inte sakfel.",
+      "granskning_turer_post": 17,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622259,
+      "ord": "notabel",
+      "facit": "anmärkningsvärd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Värd att lägga märke till — tillräckligt ovanlig för att nämnas ; om en person: framstående och av hög samhällsställning",
+        "register": "formell, neutral, allmän ; formell, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Notabelt</font> är det höga oddset på trean.",
+        "etymologi": "Franska notable, latin notabilis; till notera."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda moment är 'värd att lägga märke till p.g.a. någon spec. egenskap'; SAOL preciserar med 'märklig; bemärkt, förnäm', vilket stöder kortets andra betydelse om en person av hög samhällsställning -- en äkta, källbelagd nyans, inte påhittad. Ordning (allmän betydelse först, personbetydelse sedan) matchar källornas prioritet. Registret 'formell' stämmer med SO:s markering, och 'positiv' valör för personbetydelsen är rimlig givet 'förnäm'. Exempelmeningen är hämtad ordagrant från SO och korrekt highlightad. Etymologin stämmer med SO (franska notable, lat. notabilis, besläktat med notera).",
+      "granskning_turer_post": 17,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622260,
+      "ord": "tabelras",
+      "facit": "fullständig förödelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fullständig förödelse: att allt jämnas med marken och ingenting lämnas kvar",
+        "register": "ngt ålderdomlig, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Efter branden var det <font color=\"#3498db\">tabelras</font> i hela kvarteret.",
+        "etymologi": "Franska table rase 'rent bord'; av latin tabula rasa '(vax)tavla med utplanad skrift' -- samma rot som tavla."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Ordet finns i SO (ej i vanlig sammansatt stavning 'tabellras', som inte gav träff) med enda betydelsen 'total förstörelse', mindre brukligt, belagt sedan 1838 -- matchar både facit och kortets 'fullständig förödelse'. Ingen betydelse saknas eftersom SO bara har ett moment. Exempelmeningen är grammatiskt korrekt och sakligt rimlig, ordet highlightat. Etymologin (franska table rase / lat. tabula rasa, släkt med tavla) stämmer i sak med SO, men kortet skriver 'utplanad skrift' där SO har 'utplånad skrift' (saknar å) -- ett stavfel som gör ordet till ett annat, mindre passande ord, men det är en isolerad korrekturmiss i en frivillig etymologirad, inte ett fel i själva betydelsen eller definitionen.",
+      "granskning_turer_post": 17,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 17,
+  "granskning_kostnad_usd": 0.6612849999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 4,
+      "turer": 17,
+      "turkrav": 5,
+      "kostnad_usd": 0.6612849999999999
+    }
+  ]
+}

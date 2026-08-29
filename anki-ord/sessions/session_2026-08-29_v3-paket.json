@@ -1,0 +1,380 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622423,
+      "ord": "balk",
+      "facit": "grundbjälke<br><a href=\"https://www.google.com/imgres?q=balk&amp;imgurl=https%3A%2F%2Fcdn.starwebserver.se%2Fshops%2Fvelltra-se%2Ffiles%2Fhea-balk-velltra.png&amp;imgrefurl=https%3A%2F%2Fwww.velltra.se%2Fproduct%2Fhea-240-balk-s355j2-151m&amp;docid=tv838m33rxhC4M&amp;tbnid=DOrgIbywKkN7OM&amp;vet=12ahUKEwjr39_6y86LAxWvB9sEHestEhwQM3oECGcQAA..i&amp;w=800&amp;h=800&amp;hcb=2&amp;ved=2ahUKEwjr39_6y86LAxWvB9sEHestEhwQM3oECGcQAA\"><div><div><div><img alt=\"HEA 240 Balk S355J2 15,1m\" src=\"paste-382683332f8e1871190ed1462591d50a3b0c0e34.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lång bärande del i en byggnad som tar upp tyngd ; i vapensköldar: brett snedställt band från övre högra hörnet till nedre vänstra ; huvudavdelning av den svenska lagen, som brottsbalken",
+        "register": "neutral, neutral, teknik ; fackspråklig, neutral, historia ; fackspråklig, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Bestämmelsen finns i tredje kapitlet i <font color=\"#3498db\">balken</font>.",
+        "etymologi": "Fornsvenska balker 'bjälke, avbalkning'; germanskt ord, besläktat med bjälke."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt tre betydelser (bärande byggnadsdel, heraldiskt snedband, lagavdelning) som alla tre finns med, korrekt separerade med ' ; '. Exempelmeningen illustrerar lagbetydelsen korrekt och är highlightad. Etymologin stämmer ordagrant mot SO.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622431,
+      "ord": "docka",
+      "facit": "hamnbassäng<br><br>(eng) dock<br><a href=\"https://www.google.com/imgres?q=docka%20hamn&amp;imgurl=https%3A%2F%2Fstatic.bonniernews.se%2Fba%2F49d122ae-586a-4e2c-a87b-13e84fbd2584.jpeg%3Fcrop%3D4000%252C2250%252Cx0%252Cy0%26width%3D980%26format%3Dpjpg%26auto%3Dwebp&amp;imgrefurl=https%3A%2F%2Fwww.sydsvenskan.se%2F2024-10-28%2Fdockan-ska-byggas-ut-kan-hota-havsutsikten-for-boende%2F&amp;docid=tjWhsfMU-04e3M&amp;tbnid=JYcvXxle1KrGLM&amp;vet=12ahUKEwjvodiA7uSLAxVKIxAIHdZiGL0QM3oECG0QAA..i&amp;w=980&amp;h=551&amp;hcb=2&amp;ved=2ahUKEwjvodiA7uSLAxVKIxAIHdZiGL0QM3oECG0QAA\"><div><div><div><img alt=\"Dockan ska byggas ut – kan hota ...\" src=\"paste-c5832857a2f474c5586441ae6cb27b7aab7f7c1d.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Leksak i form av en människofigur ; anläggning vid vattnet där ett fartyg kan torrläggas för reparation ; maskindel som håller upp arbetsstycket, till exempel i en svarv ; som verb: ta in ett fartyg i en sådan anläggning, eller själv gå in i den ; som verb: koppla ihop två rymdfarkoster",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, sjöfart ; fackspråklig, neutral, teknik ; fackspråklig, neutral, sjöfart ; fackspråklig, neutral, teknik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Fartyget låg i <font color=\"#3498db\">docka</font> för att få skrovet lagat.",
+        "etymologi": "Leksaksbetydelsen fornsvenska dokka, troligen ursprungligen 'hopvriden garnbunt'. Hamnbetydelsen av lågtyska docke, engelska dock — ett helt annat ord som fallit ihop i stavning."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar fem betydelser (leksak, torrdocka i hamn, maskindel, verb 'docka in fartyg', verb 'docka rymdfarkoster') och samtliga fem finns med på kortet, korrekt separerade. Etymologin om att leksaks- och hamnbetydelsen har helt olika ursprung som råkat få samma stavning stämmer och hjälper minnet. Exempelmeningen illustrerar hamnbetydelsen korrekt.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622427,
+      "ord": "moarera",
+      "facit": "göra brokig<br><a href=\"https://www.google.com/imgres?q=moar%C3%A9&amp;imgurl=https%3A%2F%2Fcdn.starwebserver.se%2Fshops%2Fbyggnadsvardsbutiken%2Ffiles%2Fmoare.jpg&amp;imgrefurl=https%3A%2F%2Fwww.byggnadsvardsbutiken.se%2Fproduct%2Ftapet-moar&amp;docid=UDGgacjZXdpkWM&amp;tbnid=QNtsNovADHuqVM&amp;vet=12ahUKEwixh-uOkOSLAxUBGRAIHUVOJDgQM3oFCIcBEAA..i&amp;w=1512&amp;h=2016&amp;hcb=2&amp;ved=2ahUKEwixh-uOkOSLAxUBGRAIHUVOJDgQM3oFCIcBEAA\"><div><div><div><img alt=\"Tapet Moaré\" src=\"paste-fbe0f9d800843359ed6fe8bed4d303824d4a984e.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge tyg ett skimrande vågmönster",
+        "register": "fackspråklig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Sidenet var <font color=\"#3498db\">moarerat</font> så att ljuset gick i vågor över tyget.",
+        "etymologi": "Till moaré; av franska moirer 'vattra'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Ordet saknas helt i SO och SAOL (0 träffar, ej ens som stavningsvariant) -- misslyckad uppslagning i huvudkällorna, noteras här som instruktionen kräver. Bekräftat istället i SAOB: 'ge vattrad yta åt (ngt), vattra (ngt)', med exempel om just sidentyger, vilket matchar kortets 'Ge tyg ett skimrande vågmönster'. Etymologin ('franska moirer') stämmer ordagrant med SAOB.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622419,
+      "ord": "motvalls",
+      "facit": "som går mot strömmen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som alltid säger emot och gör tvärtom",
+        "register": "vardaglig, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det sägs ofta att britter är ett <font color=\"#3498db\">motvalls</font> släkte.",
+        "etymologi": "Motvall, bildat till mot i analogi med efternamn som Ekvall och Sandvall."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet exakt som 'som alltid säger emot el. krånglar', vardagligt -- matchar kortets huvudbetydelse och register nästan ordagrant. Etymologin om bildning i analogi med efternamn som Ekvall och Sandvall bekräftas ordagrant av SO:s etymologifält. Exempelmeningen är identisk med SO:s eget exempel.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622429,
+      "ord": "nutrition",
+      "facit": "näringslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tillförsel av näring till kroppen ; läran om näring och hur kroppen tar upp den",
+        "register": "fackspråklig, neutral, medicin ; fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Patienten fick <font color=\"#3498db\">nutrition</font> genom sond under hela vårdtiden.",
+        "etymologi": "Till latin nutrire 'amma, nära'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger primärbetydelsen '(tillförsel av) näring' samt anger 'näringslära' som en etablerad utvidgad användning -- kortets två betydelser täcker båda utan att någon saknas.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622433,
+      "ord": "redning",
+      "facit": "grund till sås<br><a href=\"https://commons.wikimedia.org/wiki/File:Thickening.jpg\"><img src=\"250px-thickening.webp\"></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att göra en sås eller soppa tjockare ; också om själva blandningen av mjöl och vätska som används till det",
+        "register": "neutral, neutral, matlagning ; neutral, neutral, matlagning",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Smält smöret och vispa i mjölet till en jämn <font color=\"#3498db\">redning</font>.",
+        "etymologi": "Till reda i betydelsen 'göra i ordning'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse: 'avredning av en vätska ... för att ge sås, soppa, stuvning etc. tjockare konsistens'. Kortets uppdelning i handling/substans är en rimlig parafrasering av samma betydelse, ingen betydelse saknas. Exempelmeningen är nästan identisk med SO:s eget exempel.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622424,
+      "ord": "rättmätig",
+      "facit": "lagenlig, befogad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som stämmer med vad man känner är rättvist ; som enligt lagen är den rätte — den rättmätige ägaren",
+        "register": "neutral, positiv, allmän ; fackspråklig, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Stöldgodset återlämnades till den <font color=\"#3498db\">rättmätige</font> ägaren.",
+        "etymologi": "Efter lågtyska rechtmetich; samma rötter som rätt och mått."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser (allmän rättvisekänsla; juridiskt 'den rätte ägaren') som båda finns med, korrekt separerade och med korrekt register (allmän/juridik). Exempelmeningen är identisk med SO:s eget exempel på den juridiska betydelsen.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622415,
+      "ord": "småskuren",
+      "facit": "trångsynt",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som bara ser till småsaker och saknar förmåga att se det stora",
+        "register": "neutral, nedsättande, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">småskuren</font> anmärkning som ingen brydde sig om.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'trångsynt, om person, handling och dylikt' -- matchar kortet. Exempelmeningen ligger mycket nära SO:s eget exempel ('en småskuren anmärkning').",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622416,
+      "ord": "anekdot",
+      "facit": "kort roande historia",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kort och roande historia, ofta om en verklig person",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det finns många mer eller mindre sanna <font color=\"#3498db\">anekdoter</font> om Bellman.",
+        "etymologi": "Via latin och franska av grekiska anekdoton, eg. 'något outgivet' — historier som inte tryckts utan gått muntligt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'kortare roande historia, ofta med avslutande poäng' -- matchar kortet väl. Exempelmening och etymologi stämmer ordagrant med SO.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622422,
+      "ord": "argot",
+      "facit": "slang (ofta kriminellt)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slangspråk inom en sluten grupp, ursprungligen tjuvarnas eget språk",
+        "register": "fackspråklig, neutral, lingvistik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Flera ord kom in i svenskan via de kriminellas <font color=\"#3498db\">argot</font>.",
+        "etymologi": "Franska argot 'slang, tjuvspråk'; ursprunget är okänt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'speciell form av slangspråk som används inom subkulturer, ofta inom kriminella kretsar' -- matchar kortet. Etymologi stämmer ordagrant. SO har ingen explicit bruklighetsmarkering, men klassificeringen som fackspråkligt/lingvistiskt är en rimlig tolkning, inget sakfel.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622420,
+      "ord": "brushuvud",
+      "facit": "hetsporre",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som brusar upp och tappar behärskningen vid minsta anledning",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Ett par unga <font color=\"#3498db\">brushuvuden</font> på kadettskolan ville duellera.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person med minimal självkontroll vilket lätt leder till vredesutbrott, obetänksamt agerande och dylikt' -- matchar kortet väl. Exempelmeningen är identisk med SO:s.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622434,
+      "ord": "drivbänk",
+      "facit": "liten inglasad odling<br><a href=\"https://www.google.com/imgres?q=drivb%C3%A4nk&amp;imgurl=https%3A%2F%2Fwww.byggmax.se%2Fmedia%2Fwysiwyg%2Fcommon%2FDIY%2FInspiration%2FBygg-en-drivbank-Byggmax.jpg&amp;imgrefurl=https%3A%2F%2Fwww.byggmax.se%2Fbygg-en-drivb%25C3%25A4nk&amp;docid=BE-53GP-a2y0AM&amp;tbnid=89_jHsF9JvX2SM&amp;vet=12ahUKEwjmp_y688GLAxUDKRAIHSQIAqYQM3oECB4QAA..i&amp;w=510&amp;h=580&amp;hcb=2&amp;ved=2ahUKEwjmp_y688GLAxUDKRAIHSQIAqYQM3oECB4QAA\"><div><div><div><img alt=\"Bygg en drivbänk - Följ en enkel guide ...\" src=\"paste-43bc12d1144e7e80c7275dc4dfee1c5d6948ca2c.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Låg låda av brädor med glasfönster över, där man driver upp plantor tidigt på våren",
+        "register": "neutral, neutral, jordbruk",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De odlade gurkor i <font color=\"#3498db\">drivbänk</font> redan i mars.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'karm av bräder eller dylikt som kan täckas med fönster av glas eller plast för att skydda eller driva upp växter i en odlingsbädd' -- matchar kortet nästan ordagrant.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622408,
+      "ord": "gisslare",
+      "facit": "självplågare; hård kritiker",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som piskar sig själv som religiöst straff för sina synder ; bildligt: skoningslös kritiker",
+        "register": "fackspråklig, neutral, religion ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon har gjort sig känd som en av regeringens främsta <font color=\"#3498db\">gisslare</font>.",
+        "etymologi": "Till gissla 'piska'; av fornsvenska gisl 'piska, spö'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger exakt två betydelser (självplågare; bildligt: hård kritiker) som båda finns med på kortet, korrekt separerade. Exempelmeningen är identisk med SO:s exempel på den bildliga betydelsen.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622428,
+      "ord": "mortalitet",
+      "facit": "dödlighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hur många som dör i en befolkning under en viss tid, räknat i förhållande till hur många som lever där",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "dödlighet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Mortaliteten</font> i Sverige sjönk kraftigt under 1900-talet.",
+        "etymologi": "Franska mortalité; till latin mors, genitiv mortis, 'död'; samma rot som mord och amortera."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'relativt antal avlidna under viss tid, i procent av någon population' -- matchar kortet väl, och SO listar faktiskt 'dödlighet' som verklig synonym, vilket bekräftar synonymen på kortet. Exempelmeningen är identisk med SO:s.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622426,
+      "ord": "portiär",
+      "facit": "dörrförhänge<br><img src=\"paste-659738a4a1e3307330d21616353881b4ac25a6f7.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tygdraperi som hängs framför en dörröppning i stället för en dörr",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En tung <font color=\"#3498db\">portiär</font> av sammet skilde salongen från hallen.",
+        "etymologi": "Franska portière; till porte 'dörr'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(dörr)förhänge' -- matchar kortet exakt. Etymologi stämmer.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622435,
+      "ord": "sampel",
+      "facit": "stickprov",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Den grupp man faktiskt undersöker, utvald för att spegla en större helhet",
+        "register": "fackspråklig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Man kan inte dra några slutsatser eftersom <font color=\"#3498db\">samplet</font> är skevt.",
+        "etymologi": "Engelska sample; av fornfranska essample 'exempel' — samma ord som exempel."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stickprov för statistisk undersökning slumpvis utvalt ur någon större grupp'. Kortet fångar kärnan ('utvald för att spegla en större helhet') men nämner inte uttryckligen att urvalet är slumpmässigt -- en mindre nyansskillnad, inte ett sakfel som gör kortet missvisande.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622430,
+      "ord": "slabbig",
+      "facit": "slaskig, smutsig<br><a href=\"https://www.google.com/imgres?q=slabbig&amp;imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fslabbig-typ-och-potatischiper-26708161.jpg&amp;imgrefurl=https%3A%2F%2Fse.dreamstime.com%2Froyaltyfri-foto-slabbig-typhamburgare-och-%25C3%25B6l-image26281125&amp;docid=9-9ZDXvMrJZ4uM&amp;tbnid=INS0f1TpUn2TPM&amp;vet=12ahUKEwjHsPj21fKLAxX-KRAIHarSD4QQM3oECEwQAA..i&amp;w=800&amp;h=532&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwjHsPj21fKLAxX-KRAIHarSD4QQM3oECEwQAA\"><div><div><div><img alt=\"Slabbig Typhamburgare Och öl ...\" src=\"paste-776b22b095317448f3dad28a9a45676682b62a35.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Blöt och kladdig på ett osnyggt sätt",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">slabbig</font> portion pasta och tomatsås.",
+        "etymologi": "Svensk dialekt slabbig; till slabba 'söla med vatten'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'våt och sölig' -- matchar kortets 'Blöt och kladdig på ett osnyggt sätt' tillräckligt väl. Exempelmeningen är identisk med SO:s.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622407,
+      "ord": "snusmumrik",
+      "facit": "snusgubbe",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gubbe som snusar",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En gammal <font color=\"#3498db\">snusmumrik</font> satt och halvsov på bänken.",
+        "etymologi": "Till snus och mumrik."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar ordet som 'snusgubbe' (vardagligt), och snusgubbe i sin tur som 'gubbe som ofta nyttjar snus' -- matchar kortet exakt inklusive register (vardaglig).",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622413,
+      "ord": "ta reson",
+      "facit": "bli förnuftig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ta sitt förnuft till fånga och ge med sig",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Till slut fick de honom att <font color=\"#3498db\">ta reson</font> och gå med på förlikning.",
+        "etymologi": "Franska raison 'förnuft'; av latin ratio 'plan, eftertanke'; samma rot som ranson och rationell."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO listar under uppslagsordet 'reson' idiomet 'ta reson' = 'använda sitt förnuft', med exempel om att få någon att ge med sig -- matchar kortets 'Ta sitt förnuft till fånga och ge med sig'. Exempelmeningen ligger nära SO:s eget.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622409,
+      "ord": "verv",
+      "facit": "livfullhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kraft och glöd i det man gör eller berättar",
+        "register": "arkaisk, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han berättade med <font color=\"#3498db\">verv</font> om sina ungdomsår på sjön.",
+        "etymologi": "Franska verve 'entusiasm'; troligen av latin verba 'ord'; samma rot som verb."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'kraft och livfullhet', bruklighet 'ålderdomligt' -- matchar kortet exakt, inklusive registret 'arkaisk'. Exempelmeningen är identisk med SO:s eget exempel, och etymologin stämmer ordagrant.",
+      "granskning_turer_post": 40,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 40,
+  "granskning_kostnad_usd": 1.2772880999999998,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 40,
+      "turkrav": 5,
+      "kostnad_usd": 1.2772880999999998
+    }
+  ]
+}

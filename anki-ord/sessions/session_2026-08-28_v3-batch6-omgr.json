@@ -1,0 +1,65 @@
+[
+  {
+    "noteId": 1780080622367,
+    "ord": "aktualisera",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "uppdatera",
+        "föra",
+        "ajourföra"
+      ],
+      "definitioner": [
+        "Göra något aktuellt eller relevant för tillfället.",
+        "Förändra något så det stämmer överens med senaste information."
+      ],
+      "exempelmening": "Storbranden <font color=\"#3498db\">aktualiserar</font> personalbristen inom brandförsvaret.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "göra aktuell",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=aktualisera https://www.synonymer.se/sv-syn/aktualisera https://sv.wiktionary.org/wiki/aktualisera",
+      "slutsats": "SO:s hela definition ar 'gora aktuell' -- ett facit som bygger pa uppslagsordets egen stam och darfor ar utskrivet enligt Adam-tal. SAOL ger 'gora aktuell, uppdatera' med KOMMA, inte semikolon: det ar tva glosor for samma betydelse, inte tva betydelser, sa kortet har bara en. Ingen synonym ar upptagen: uppdatera galler en uppgift som blivit foraldrad, aktualisera galler en fraga som blivit angelagen igen. OLD-facit sa 'gora aktuell' och forklarar ingenting. RATTAT efter blindgranskning: mitt facit sa 'bli viktig IGEN sa att den MASTE tas upp'. Bada de orden ar pahittade -- varken SO eller SAOL sager nagot om aterkomst eller tvang. Granskaren pekar pa SO:s eget exempel: 'kidnappningen aktualiserar fragan om organiserad brottslighet' forutsatter inte att fragan varit viktig forut och sedan glomts bort. Skillnaden mot dagens ovriga fel ar att det HAR inte var en hopslagning eller en synonym utan ett rent tillagg av innehall som ingen kalla bar -- samma sak som fallde bebadelse och anlopa."
+    },
+    "proposed": {
+      "huvudbetydelse": "Göra att något blir aktuellt och angeläget nu, så att det bör tas upp",
+      "register": "neutral, neutral, allmän",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Storbranden <font color=\"#3498db\">aktualiserar</font> personalbristen inom brandförsvaret.",
+      "etymologi": "→ Franska actualiser; till aktuell."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "confidence": 9,
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'Göra att något blir aktuellt och angeläget nu, så '"
+    ],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
+  }
+]

@@ -1,0 +1,198 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622353,
+      "ord": "förmäten",
+      "facit": "övermodig;&nbsp; &nbsp;anspråksfull",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som ställer krav långt över vad man har täckning för ; också om själva kravet eller handlingen",
+        "register": "neutral, negativ, allmän ; neutral, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han är <font color=\"#3498db\">förmäten</font> nog att tro att han kan bestämma över dem.",
+        "etymologi": "Lågtyska vormeten, eg. particip av sik vormeten 'överskatta sig' -- ordagrant 'mäta fel'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger båda en enda betydelse ('som framför alltför oblyga krav/anspråk'; SAOL: 'övermodig, dryg, skamlös') -- facit_signal om 4 betydelser besannas inte (troligen artefakt av &nbsp;-tecknen i facit-strängen). Kortets uppdelning 'krav ... ; också om kravet/handlingen' motsvarar SO:s exempel 'deras förmätna krav', inte en extra betydelse. Exempelmeningen är nästan ordagrant SO:s eget exempel, korrekt och highlightad. Etymologin (lågtyska vormeten, 'mäta fel') stämmer och hjälper minnet. Tom synonymlista är inget fel.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622327,
+      "ord": "gerilla",
+      "facit": "motståndsrörelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Väpnad grupp utanför den reguljära armén som slåss i små enheter med snabba överfall",
+        "register": "neutral, neutral, militär",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Gerillan</font> gjorde en hastig attack och försvann sedan spårlöst.",
+        "etymologi": "Spanska guerilla, diminutiv till guerra 'krig' -- alltså 'litet krig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'icke-reguljära militära trupper... ofta i det fördolda mot förtryckande regim'; SAOL: 'förband som för partisankrig'. Kortets 'väpnad grupp utanför reguljära armén ... med snabba överfall' fångar kärnan (icke-reguljär, småenheter, taktik) men nämner inte uttryckligen att gerillan strider mot en ockupationsmakt/regim, vilket ligger nära facit 'motståndsrörelse' -- en mindre nyansförlust, inget sakfel. Exempelmeningen är SO:s eget exempel, korrekt och highlightad. Etymologin (spanska guerrilla, diminutiv av guerra) stämmer och hjälper minnet.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622315,
+      "ord": "gourmet",
+      "facit": "finsmakare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som är kunnig om mat och lägger stor vikt vid kvalitet och smak",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">gourmet</font> som reser långt för en enda måltid.",
+        "etymologi": "Franska gourmet; av fornfranska gromet 'vinhandlardräng'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som lägger stor vikt vid god mat'; kortets 'kunnig om mat, lägger vikt vid kvalitet och smak' är en rimlig, sakligt korrekt utvidgning, ingen betydelse saknas. Facit 'finsmakare' är SO:s egen korsreferens. Exempelmening illustrerar begreppet korrekt och ordet är highlightat. Etymologin (fornfranska gromet 'vinhandlardräng') matchar SO. Tom synonymlista (SO nämner 'läckergom') är inget fel i sig enligt regelverket.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622303,
+      "ord": "hälare",
+      "facit": "tjuvgodsköpare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som köper stöldgods och säljer det vidare",
+        "register": "neutral, negativ, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Hälaren</font> dömdes hårdare än tjuven som utfört inbrottet.",
+        "etymologi": "Tyska Hehler, till hehlen 'dölja, gömma'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som gjort sig skyldig till häleri', vilket kortet konkretiserar korrekt som 'köper stöldgods och säljer det vidare' -- matchar facit 'tjuvgodsköpare'. Endast en betydelse i SO, inget saknas. Exempelmeningen är en rimlig, grammatiskt korrekt illustration (ett enskilt scenario, ingen orimlig generalisering). Register 'juridik' stämmer. Etymologin (tyska Hehler/hehlen 'dölja') är korrekt.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622363,
+      "ord": "ity att",
+      "facit": "därför att, eftersom",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Därför att — ett gammalt sätt att inleda en förklaring",
+        "register": "arkaisk, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon avstod från att uppträda <font color=\"#3498db\">ity att</font> hennes sångröst var minimal.",
+        "etymologi": "Till ty i den äldre betydelsen 'därför'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger konjunktionen 'ity att' = 'därför att', märkt ålderdomlig -- exakt vad kortet anger ('Därför att -- ett gammalt sätt att inleda en förklaring', register arkaisk). Exempelmeningen är grammatiskt korrekt och ordet highlightat. Etymologin kopplar till 'ty' i äldre betydelsen 'därför', vilket stämmer och hjälper minnet genom kopplingen till dagens 'ty'.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622311,
+      "ord": "katamaran",
+      "facit": "tvådelad båt<br><a href=\"https://commons.wikimedia.org/wiki/File:Polynesian_canoe_replica_2_(cropped).jpg\"><img alt=\"\" src=\"131px-polynesian_canoe_replica_2_(cropped).webp\"></a><br><img src=\"paste-748aad7a76159ea581b1e44e19c8bf49beba02a2.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Båt med två smala skrov som sitter ihop ovanför vattenytan",
+        "register": "neutral, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Katamaranen</font> går snabbare än en enskrovsbåt av samma storlek.",
+        "etymologi": "Via engelskan av tamil kattumaram, till kattu 'binda' och maram 'trädstam' -- hopbundna trädstammar."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'båt som består av två smala skrov som är parallellt förbundna över vattenlinjen' -- kortets formulering är en korrekt parafras, matchar facit 'tvådelad båt'. Endast en betydelse. Exempelmeningen är sakligt rimlig (katamaraner är generellt snabbare än enskrovsbåtar) och grammatiskt korrekt. Etymologin (tamil kattu 'binda' + maram 'trädstam') matchar SO och förklarar ordet på ett minnesstödjande sätt.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622354,
+      "ord": "nitid",
+      "facit": "prydlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten, prydlig och tydlig — särskilt om handstil",
+        "register": "ngt ålderdomlig, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon skrev med en <font color=\"#3498db\">nitid</font> handstil som gick att läsa på långt håll.",
+        "etymologi": "Latin nitidus 'blank, glänsande'; samma rot som netto och nätt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'liten och prydlig (om handstil, tryck o.d.)', SAOL: 'prydlig och tydlig' -- kortets 'liten, prydlig och tydlig, särskilt om handstil' kombinerar båda källorna korrekt, 'tydlig' är alltså belagt (i SAOL), inte en påhittad tillägg. Facit 'prydlig' stämmer. Register 'ngt ålderdomlig' är rimligt givet SO:s 'mindre brukligt' och SAOL:s låga popularitet (2). Etymologin (latin nitidus 'blank, glänsande'; samma rot som netto och nätt) stämmer och är genuint minnesstödjande.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622352,
+      "ord": "struma",
+      "facit": "sjukdom i sköldkörtlen<br>(eng) goitre<br><a href=\"https://www.google.com/imgres?q=struma&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F43%2FKone_med_stor_struma.jpg%2F210px-Kone_med_stor_struma.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FStruma&amp;docid=8gwTkJLtnwrteM&amp;tbnid=MXkz_JQBObCuNM&amp;vet=12ahUKEwiokqzNw82LAxXPLhAIHd1DAHAQM3oECGcQAA..i&amp;w=210&amp;h=291&amp;hcb=2&amp;ved=2ahUKEwiokqzNw82LAxXPLhAIHd1DAHAQM3oECGcQAA\"><div><div><div><img alt=\"Struma – Wikipedia\" src=\"paste-adac13bca3b93dad749fef88b994cc45550482db.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjuklig förstoring av sköldkörteln",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vissa former av <font color=\"#3498db\">struma</font> förebyggs genom att jod tillsätts i salt.",
+        "etymologi": "Latin struma 'körtelsvulst'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'förstoring av sköldkörteln p.g.a. inflammation, tumör eller brist på jod' -- kortets 'sjuklig förstoring av sköldkörteln' är en korrekt, koncis parafras, matchar facit. Endast en betydelse. Exempelmeningen är nästan ordagrant SO:s eget exempel, sakligt korrekt och highlightad. Etymologin (latin struma 'körtelsvulst') matchar SO exakt.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622339,
+      "ord": "transversal",
+      "facit": "tvärgående<br><a href=\"https://www.google.com/imgres?q=transversal&amp;imgurl=https%3A%2F%2Fwww.mathplanet.com%2FOldsite%2Fmedia%2F43423%2Ftransversal.jpg&amp;imgrefurl=https%3A%2F%2Fwww.mathplanet.com%2Feducation%2Fgeometry%2Fperpendicular-and-parallel%2Fangles-parallel-lines-and-transversals&amp;docid=kY2-wEOQlRX4yM&amp;tbnid=0AB-DH1HwcUTjM&amp;vet=12ahUKEwjxtLTNwPeLAxVEKRAIHay9IAUQM3oECBsQAA..i&amp;w=450&amp;h=200&amp;hcb=2&amp;ved=2ahUKEwjxtLTNwPeLAxVEKRAIHay9IAUQM3oECBsQAA\"><div><div><div><img alt=\"Angles, parallel lines and transversals ...\" src=\"paste-6dabe27100c08e0969899362ea50a91da06c8324.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I matematiken: linje som skär två eller flera andra linjer ; som adjektiv: tvärgående",
+        "register": "fackspråklig, neutral, matematik ; fackspråklig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Transversalen</font> skär de båda parallella linjerna i var sin punkt.",
+        "etymologi": "Till latin transversus 'vänd på tvären'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två homografer: substantiv ('linje som skär två eller flera andra linjer', matematik) och adjektiv ('transversell'/tvärgående, mindre brukligt) -- kortet fångar båda korrekt separerade med ' ; '. Exempelmeningen illustrerar den matematiska betydelsen korrekt och är highlightad. Etymologin (latin transversus 'vänd på tvären') matchar SO och kopplar tydligt till 'tvärgående'. Registret för adjektivbetydelsen ('fackspråklig, allmän') är en rimlig tolkning av att ordet används tekniskt inom flera fält snarare än ett specifikt.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622356,
+      "ord": "åthävor",
+      "facit": "manér, later; gester<br><br>överdrivna gester",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Synliga gester och rörelser i sättet att uppträda ; ofta om ett sätt som märks alltför mycket",
+        "register": "neutral, neutral, allmän ; neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han lämnade mötet under stora <font color=\"#3498db\">åthävor</font>.",
+        "etymologi": "Fornsvenska athäva 'uppförande, beteende', till hava sik at 'bete sig'; samma rot som ha och hävd."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'iakttagbart sätt att bete sig vid utförandet av viss handling', med tillägget att ordet ofta används om 'alltför märkbart sätt att bete sig' -- kortets tvådelade formulering ('synliga gester ... ; ofta om ett sätt som märks alltför mycket') fångar exakt denna nyans och matchar facit ('manér, later; gester' / 'överdrivna gester'). Exempelmeningen är ordagrant SO:s eget exempel, korrekt och highlightad. Etymologin (fornsvenska athäva, till hava sik at 'bete sig'; koppling till ha/hävd) stämmer och hjälper minnet.",
+      "granskning_turer_post": 20,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 20,
+  "granskning_kostnad_usd": 0.6424041,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 10,
+      "turer": 20,
+      "turkrav": 5,
+      "kostnad_usd": 0.6424041
+    }
+  ]
+}

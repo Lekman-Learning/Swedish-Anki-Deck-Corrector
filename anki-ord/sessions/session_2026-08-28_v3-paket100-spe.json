@@ -1,0 +1,36 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622154,
+      "ord": "spe",
+      "facit": "hån",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hån: att skratta ut någon för att visa att man ser ner på personen ; i uttrycket \"in spe\": blivande, ännu inte men snart",
+        "register": "neutral, negativ, allmän ; neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han fick utstå spott och <font color=\"#3498db\">spe</font> av hela byn.",
+        "etymologi": "Fornsvenska spe, av lagtyska spe; beslaktat med spy. Uttrycket in spe ar daremot latin, till spes 'hopp'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kontrollerat mot SO och SAOL. SO ger 'spe' (subst.) = 'illvilligt och förlöjligande uttryck för förakt' samt uttrycket 'in spe' = 'blivande' (av lat. spes 'hopp'); SAOL ger 'hån, gyckel' respektive 'blivande'. Kortet täcker båda dessa betydelser och skiljer dem korrekt med ' ; '. Huvudbetydelsens förklaring ('att skratta ut någon för att visa att man ser ner på personen') är en rimlig, inte missvisande, omskrivning av SO:s 'förlöjligande uttryck för förakt' (jfr SO:s förlöjliga = 'göra sig lustig över'/'skratta åt'). Facit 'hån' bekräftas som primär betydelse. Tom synonymlista är korrekt -- SO ger inga egentliga synonymer, bara kohyponymerna 'gäck' och 'hån' samt frasen 'spott och spe', som kortets exempelmening också använder (ordet highlightat, grammatiskt korrekt, illustrerar rätt betydelse). Etymologin stämmer mot SO (fornsvenska/lågtyska spe, besläktat med spy; in spe av lat. spes) och hjälper förståelsen av varför 'in spe' betyder 'blivande'. Registerangivelserna är rimliga. Ingen betydelse saknas, inga sakfel eller formfel hittade.",
+      "granskning_turer_post": 10,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 10,
+  "granskning_kostnad_usd": 0.32831210000000005,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 1,
+      "turer": 10,
+      "turkrav": 5,
+      "kostnad_usd": 0.32831210000000005
+    }
+  ]
+}

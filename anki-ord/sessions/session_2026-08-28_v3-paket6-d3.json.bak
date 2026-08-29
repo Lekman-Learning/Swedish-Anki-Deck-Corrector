@@ -1,0 +1,378 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": null,
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080622300,
+      "ord": "fotogenisk",
+      "facit": "som blir bra på bild",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som tar sig bra ut på bild, även när personen inte är särskilt vacker i verkligheten",
+        "register": "vardaglig, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon är inte särskilt söt men hon har ett <font color=\"#3498db\">fotogeniskt</font> utseende.",
+        "etymologi": "Till foto och grekiskans -genes 'som ger upphov till'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger endast betydelsen 'som tar sig bra ut på fotografier'. Kortet stämmer med detta, exempelmeningen är korrekt och etymologin (foto + grekiskans -genes) håller.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622353,
+      "ord": "förmäten",
+      "facit": "övermodig;&nbsp; &nbsp;anspråksfull",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Som ställer krav långt över vad man har täckning för ; också om själva kravet eller handlingen",
+        "register": "neutral, negativ, allmän ; neutral, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han är <font color=\"#3498db\">förmäten</font> nog att tro att han kan bestämma över dem.",
+        "etymologi": "Lagtyska vormeten, eg. particip av sik vormeten 'overskatta sig' -- ordagrant 'mata fel'."
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Sakfel i etymologin: kortet skriver 'ordagrant \"mata fel\"' men SO:s uppslag visar att lågtyskans 'sik vormeten' (eg. particip) hör ihop med att MÄTA (överskatta sig, 'mäta fel'), inte att MATA (ge mat). 'Mata' och 'mäta' är helt olika ord och etymologin blir därmed missvisande och obegriplig i stället för klargörande. Betydelsen i övrigt (att ställa orimliga krav, även om själva kravet/handlingen) stämmer väl med SO:s enda uppslag.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622327,
+      "ord": "gerilla",
+      "facit": "motståndsrörelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Väpnad grupp utanför den reguljära armén som slåss i små enheter med snabba överfall",
+        "register": "neutral, neutral, militär",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Gerillan</font> gjorde en hastig attack och försvann sedan spårlöst.",
+        "etymologi": "Spanska guerilla, diminutiv till guerra 'krig' -- alltsa 'litet krig'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Matchar SO:s definition (icke-reguljära trupper i små enheter, ofta mot en regim). Enda betydelsen, ingen lucka. Etymologi och exempel stämmer.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622315,
+      "ord": "gourmet",
+      "facit": "finsmakare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som är kunnig om mat och lägger stor vikt vid kvalitet och smak",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">gourmet</font> som reser långt för en enda måltid.",
+        "etymologi": "Franska gourmet; av fornfranska gromet 'vinhandlardrang'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som lägger stor vikt vid god mat', enda betydelsen, matchar kortet. Tom synonymlista är inget fel i sig (SO ger visserligen 'läckergom' men det räcker inte att underkänna för).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622303,
+      "ord": "hälare",
+      "facit": "tjuvgodsköpare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som köper stöldgods och säljer det vidare",
+        "register": "neutral, negativ, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Hälaren</font> dömdes hårdare än tjuven som utfört inbrottet.",
+        "etymologi": "Tyska Hehler, till hehlen 'dolja, gomma'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'person som gjort sig skyldig till häleri'. Kortets 'köper stöldgods och säljer vidare' fångar den centrala, vardagliga innebörden. Etymologi och exempel korrekta.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622363,
+      "ord": "ity att",
+      "facit": "därför att, eftersom",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Därför att — ett gammalt sätt att inleda en förklaring",
+        "register": "arkaisk, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon avstod från att uppträda <font color=\"#3498db\">ity att</font> hennes sångröst var minimal.",
+        "etymologi": "Till ty i den aldre betydelsen 'darfor'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'ity (att)' = 'av den anledningen (att)', arkaisk. Kortets 'därför att, gammalt sätt att inleda en förklaring' matchar, liksom registret 'arkaisk'.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622345,
+      "ord": "jokk",
+      "facit": "fjällbäck<br><a href=\"https://www.google.com/imgres?q=jokk&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F97%2FViejevagge-viejej%25C3%25A5kh%25C3%25A5.jpg%2F800px-Viejevagge-viejej%25C3%25A5kh%25C3%25A5.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FJokk&amp;docid=COma_A_sZ4f7fM&amp;tbnid=k69obZwZ_H6apM&amp;vet=12ahUKEwiA0YTX99-LAxUHFRAIHRfIBqAQM3oECB0QAA..i&amp;w=800&amp;h=532&amp;hcb=2&amp;ved=2ahUKEwiA0YTX99-LAxUHFRAIHRfIBqAQM3oECB0QAA\"><div><div><div><img alt=\"Jokk – Wikipedia\" src=\"paste-374cf38c8e8b0f25afa5bf2d1c786165f2f5ab87.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bäck eller å i fjällen",
+        "register": "dialektal, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "De vadade över <font color=\"#3498db\">jokken</font> där vattnet gick till knäna.",
+        "etymologi": "Samiska jokk 'forsande vattendrag'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'fjällbäck', enda betydelsen. Matchar kortet och facit. Etymologi (samiska jokk) korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622311,
+      "ord": "katamaran",
+      "facit": "tvådelad båt<br><a href=\"https://commons.wikimedia.org/wiki/File:Polynesian_canoe_replica_2_(cropped).jpg\"><img alt=\"\" src=\"131px-polynesian_canoe_replica_2_(cropped).webp\"></a><br><img src=\"paste-748aad7a76159ea581b1e44e19c8bf49beba02a2.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Båt med två smala skrov som sitter ihop ovanför vattenytan",
+        "register": "neutral, neutral, sjöfart",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Katamaranen</font> går snabbare än en enskrovsbåt av samma storlek.",
+        "etymologi": "Via engelskan av tamil kattumaram, till kattu 'binda' och maram 'tradstam' -- hopbundna tradstammar."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: båt med två smala skrov förbundna ovanför vattenlinjet. Kortet återger detta korrekt (den preciserande notisen om segelbåtar i SO är inte en egen betydelse och behöver inte tas med).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622331,
+      "ord": "kommissionär",
+      "facit": "ombud, mellanhand",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person eller firma som köper och säljer i eget namn men för någon annans räkning ; tjänsteman som mot betalning utför ärenden åt allmänheten ; ledamot av EU-kommissionen",
+        "register": "fackspråklig, neutral, ekonomi ; fackspråklig, neutral, juridik ; neutral, neutral, politik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Sveriges <font color=\"#3498db\">kommissionär</font> fick ansvaret för handelsfrågor.",
+        "etymologi": "Franska commissionnaire; till kommission."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två uppslag (ombud/firma som köper-säljer å annans vägnar; avgiftstjänsteman - med särskild notering om EU-kommissionär under den andra). Kortets tre delbetydelser täcker detta fullständigt och i rimlig ordning (vanligaste först, i linje med SO).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622343,
+      "ord": "kräslig",
+      "facit": "vacker, utsökt, överdådig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överdådigt läcker och riklig, om mat eller ett liv i lyx",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">kräslig</font> måltid med sju rätter och vin till varje.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'läcker; överdådig' (SO saknar träff). Kortets 'överdådigt läcker och riklig, om mat eller ett liv i lyx' matchar väl, enda betydelsen.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622373,
+      "ord": "memoarer",
+      "facit": "nedtecknade levn.minnen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Samlade nedtecknade minnen från någons eget liv",
+        "register": "neutral, neutral, litteraturvetenskap",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han satt i tio år och skrev sina <font color=\"#3498db\">memoarer</font>.",
+        "etymologi": "Franska mémoire 'minne'; av latin memoria; samma rot som memorera och promemoria."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO (uppslag 'memoar', vanl. plur.): 'samlade levnadsminnen'. Matchar kortet exakt, enda betydelsen.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622304,
+      "ord": "måndagsexemplar",
+      "facit": "dålig vara",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Exemplar av en vara som råkat bli slarvigt tillverkat",
+        "register": "vardaglig, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hans nya bil verkade vara ett <font color=\"#3498db\">måndagsexemplar</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'slarvigt tillverkat exemplar av masstillverkad vara'. Kortet stämmer i sak, enda betydelsen.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622354,
+      "ord": "nitid",
+      "facit": "prydlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten, prydlig och tydlig — särskilt om handstil",
+        "register": "ngt ålderdomlig, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon skrev med en <font color=\"#3498db\">nitid</font> handstil som gick att läsa på långt håll.",
+        "etymologi": "Latin nitidus 'blank, glansande'; samma rot som netto och natt."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'liten och prydlig, om handstil, tryck o.dyl.', mindre brukligt. Kortet matchar detta (tillägget 'tydlig' ligger nära till hands för prydlig handstil och är inte ett sakfel).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622384,
+      "ord": "odör",
+      "facit": "lukt, stank",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lukt, oftast obehaglig",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det förekom ofta en svag <font color=\"#3498db\">odör</font> av sopor i trapphuset.",
+        "etymologi": "Franska odeur 'lukt, doft'; av latin odor; samma rot som deodorant."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(otrevlig) lukt'. Matchar kortet och facit exakt, enda betydelsen.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622332,
+      "ord": "preciös",
+      "facit": "tillgjord, konstlad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överdrivet förfinad och tillgjord i sitt sätt eller sitt språk ; historiskt: medlem av en fransk litterär krets under barocken som odlade en sådan förfining",
+        "register": "ngt ålderdomlig, lätt negativ, allmän ; fackspråklig, neutral, litteraturvetenskap",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Uppsatsen var något <font color=\"#3498db\">preciös</font> och omständlig.",
+        "etymologi": "Franska précieux 'dyrbar'; samma rot som preciosa."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två homografer: adjektiv ('överdrivet förfinad') och substantiv (medlem av fransk litterär barockkrets). Kortet återger båda korrekt och i rätt ordning (vanligaste, adjektivet, först).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622352,
+      "ord": "struma",
+      "facit": "sjukdom i sköldkörtlen<br>(eng) goitre<br><a href=\"https://www.google.com/imgres?q=struma&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F43%2FKone_med_stor_struma.jpg%2F210px-Kone_med_stor_struma.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FStruma&amp;docid=8gwTkJLtnwrteM&amp;tbnid=MXkz_JQBObCuNM&amp;vet=12ahUKEwiokqzNw82LAxXPLhAIHd1DAHAQM3oECGcQAA..i&amp;w=210&amp;h=291&amp;hcb=2&amp;ved=2ahUKEwiokqzNw82LAxXPLhAIHd1DAHAQM3oECGcQAA\"><div><div><div><img alt=\"Struma – Wikipedia\" src=\"paste-adac13bca3b93dad749fef88b994cc45550482db.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sjuklig förstoring av sköldkörteln",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vissa former av <font color=\"#3498db\">struma</font> förebyggs genom att jod tillsätts i salt.",
+        "etymologi": "Latin struma 'kortelsvulst'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'förstoring av sköldkörteln'. Matchar kortet exakt, enda betydelsen.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622328,
+      "ord": "teknikalitet",
+      "facit": "detalj; formalitet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Teknisk detalj inom ett fackområde ; också om en ren regeldetalj som avgör en sak trots att den saknar betydelse i sak",
+        "register": "neutral, neutral, allmän ; neutral, neutral, juridik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Vi kan inte här gå in på alla lagstiftningens <font color=\"#3498db\">teknikaliteter</font>.",
+        "etymologi": "Efter engelska technicality; till teknik."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en generell definition ('fackmässig finess') men exemplifierar just med lagstiftningens teknikaliteter, vilket stödjer kortets uppdelning i allmän facktermsbetydelse och juridisk/formell betydelse. Ingen sakfel.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622339,
+      "ord": "transversal",
+      "facit": "tvärgående<br><a href=\"https://www.google.com/imgres?q=transversal&amp;imgurl=https%3A%2F%2Fwww.mathplanet.com%2FOldsite%2Fmedia%2F43423%2Ftransversal.jpg&amp;imgrefurl=https%3A%2F%2Fwww.mathplanet.com%2Feducation%2Fgeometry%2Fperpendicular-and-parallel%2Fangles-parallel-lines-and-transversals&amp;docid=kY2-wEOQlRX4yM&amp;tbnid=0AB-DH1HwcUTjM&amp;vet=12ahUKEwjxtLTNwPeLAxVEKRAIHay9IAUQM3oECBsQAA..i&amp;w=450&amp;h=200&amp;hcb=2&amp;ved=2ahUKEwjxtLTNwPeLAxVEKRAIHay9IAUQM3oECBsQAA\"><div><div><div><img alt=\"Angles, parallel lines and transversals ...\" src=\"paste-6dabe27100c08e0969899362ea50a91da06c8324.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "I matematiken: linje som skär två eller flera andra linjer ; som adjektiv: tvärgående",
+        "register": "fackspråklig, neutral, matematik ; fackspråklig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Transversalen</font> skär de båda parallella linjerna i var sin punkt.",
+        "etymologi": "Till latin transversus 'vand pa tvaren'."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har två uppslag: substantiv (matematisk linje) och adjektiv ('mindre brukligt', = transversell/tvärgående). Kortet återger båda i rätt inbördes ordning (vanligaste först).",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622335,
+      "ord": "tålig",
+      "facit": "motståndskraftig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om en person: som uthärdar smärta eller besvär utan att klaga ; som står ut med besvärliga människor utan att bli irriterad ; om ett material eller en sak: som klarar påfrestningar utan att ta skada",
+        "register": "neutral, positiv, allmän ; neutral, positiv, allmän ; neutral, neutral, teknik",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon var <font color=\"#3498db\">tålig</font> och rörde inte en min trots smärtorna.",
+        "etymologi": "Fornsvenska tholugher; till tala."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger flera nyanser: uthärda påfrestning/smärta utan att klaga; tolerera besvärliga personer/situationer utan irritation; material som motstår påfrestning utan skada. Kortets tre delbetydelser täcker detta fullständigt och korrekt.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080622356,
+      "ord": "åthävor",
+      "facit": "manér, later; gester<br><br>överdrivna gester",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Synliga gester och rörelser i sättet att uppträda ; ofta om ett sätt som märks alltför mycket",
+        "register": "neutral, neutral, allmän ; neutral, lätt negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han lämnade mötet under stora <font color=\"#3498db\">åthävor</font>.",
+        "etymologi": "Fornsvenska athäva 'uppforande, beteende', till hava sik at 'bete sig'; samma rot som ha och havd."
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'iakttagbart sätt att bete sig vid utförande av viss handling', med tillägget att det ofta syftar på ett alltför iögonfallande sätt. Kortets huvudbetydelse plus den negativa nyansen matchar detta väl.",
+      "granskning_turer_post": 25,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 25,
+  "granskning_kostnad_usd": 0.6773631000000001,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 20,
+      "turer": 25,
+      "turkrav": 5,
+      "kostnad_usd": 0.6773631000000001
+    }
+  ]
+}

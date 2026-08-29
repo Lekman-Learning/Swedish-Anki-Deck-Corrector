@@ -118,12 +118,32 @@ kan härleda betydelsen istället för att minnas den.
   som resten av kortet: den ska stå i den källa sökkollen loggar, inte
   komma ur minnet. Hellquists *Svensk etymologisk ordbok*
   (runeberg.org/svetym) är förstahandskällan, se "Källor för faktakoll".
+- **Synonymraden finns för HP:s ORD-delprov (fastställt 2026-08-29 av Adam):**
+  *"målet med synonymerna är att ha de vanligaste synonymerna inför ORD."*
+  ORD ger ett ord och fem alternativ, och uppgiften är att välja det som
+  *betyder samma sak eller ligger närmast i betydelse*. Fältet ska alltså
+  bära **det vanligaste ordet som ligger närmast** — inte nödvändigtvis ett
+  ord som är utbytbart åt båda hållen.
+
+  🔴 **Detta upphäver den strängare regeln som gällde 27–28 augusti.** Den
+  krävde utbytbarhet åt båda hållen och uteslöt allt SO JFR-markerar, vilket
+  fick blindgranskningen att underkänna `bemärkt`/framstående,
+  `singulär`/säregen och `spe`/hån. Alla tre står nu med tomt synonymfält.
+  Mätt 2026-08-29: **911 av 4 735 v2-kort (19 %) har en tom synonymrad** —
+  varje ett av dem är ett kort som inte gör det jobb fältet finns för.
+
+  Gränsen går fortfarande vid **fel betydelse**: `tertial`/kvartal (4 månader
+  mot 3) och `jour`/vikariat (två skilda anställningsformer) är riktiga fel,
+  för de lär in något osant. Ett närliggande ord är inte samma sak som ett
+  felaktigt ord.
+
 - **Inget fast antal synonymer.** Målet är snabb inlärning av 10 000 ord —
   varje extra synonym är en sak till att minnas, så ta bara med det som
-  faktiskt hjälper. En synonym räcker om ordet bara har en riktigt utbytbar.
-  Noll är okej om ordet saknar äkta synonym. Fler än 3 är okej om de är
-  genuint distinkta och nyttiga. Tvinga aldrig fram konstlade extra
-  synonymer för att nå ett målantal — hellre för få än för många.
+  faktiskt hjälper. Ett välvalt ord slår tre medelmåttiga. Fler än 3 är okej
+  om de är genuint distinkta och nyttiga. Tvinga aldrig fram konstlade extra
+  synonymer för att nå ett målantal — men **noll är numera ett underbetyg,
+  inte ett godtagbart utfall**: saknas ett ord helt ska kortet flaggas för
+  påfyllning, inte släppas som färdigt.
 
 ## Idiom och flerordsuttryck (beslutat 2026-08-24, Adams fynd)
 

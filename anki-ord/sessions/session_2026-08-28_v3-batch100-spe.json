@@ -1,0 +1,63 @@
+[
+  {
+    "noteId": 1780080622154,
+    "ord": "spe",
+    "spar": "nya",
+    "prio": false,
+    "redan_i_kon": false,
+    "nuvarande_format": "legacy",
+    "legacy": {
+      "synonymer": [
+        "hån",
+        "gyckel",
+        "åtlöje"
+      ],
+      "definitioner": [
+        "Illvilligt och förlöjligande uttryck för förakt.",
+        "Behandling av något med nedvärdering och avsky."
+      ],
+      "exempelmening": "Hans <font color=\"#3498db\">spe</font> mot motståndaren var både grym och oprovocerad.",
+      "etymologi": null,
+      "bild_html": null,
+      "synonym_groups": null
+    },
+    "old_facit": "hån",
+    "har_old_facit": true,
+    "riskflaggor": [],
+    "hogsta_allvar": null,
+    "adamtal_krav": [
+      "tom_exempelmening",
+      "saknar_highlight",
+      "avslutande_skiljetecken_hb",
+      "semikolon_utan_mellanslag",
+      "formatering_i_hb",
+      "html_skrap",
+      "tom_synonym",
+      "tom_synonymgrupp",
+      "grupper_matchar_ej_betydelser",
+      "cirkular_synonym",
+      "fler_register_an_betydelser"
+    ],
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=spe https://www.synonymer.se/sv-syn/spe https://sv.wiktionary.org/wiki/spe",
+      "slutsats": "SO ger tva betydelser under samma uppslag: 'illvilligt och forlojligande uttryck for forakt' och 'blivande'. VIKTIGT: det ar tva helt skilda ord med olika ursprung -- det forsta germanskt, det andra latinets spes 'hopp' i frasen in spe ('svager in spe'). Bada ar med men halls isar i facit, eftersom den som bara lart sig det ena garanterat lasar fel pa det andra. Synonymerna han och gyckel ar SAOL:s definitionstext; SO:s JFR (gack, han, spott) raknas inte som belagg. RATTAT efter blindgranskning: synonymen gyckel ar STRUKEN, han ar kvar. Gyckel ar skamt och retande och kan vara godmodigt; spe innebar alltid forakt. Granskaren noterar att det ar precis den sortens narsynonym HP-provet bygger sina distraktorer av. Tredje fallet av samma glosfel i samma batch (se bemarkt). ANDRA RATTELSEN: aven han ar nu struket, och kortet har INGA synonymer. Granskaren pekar ut att han och gack bada ar JFR:cohyponym-markta i SO -- de star visserligen ocksa i SAOL:s definitionstext ('han, gyckel'), sa de klarade min regel, men nar SO uttryckligen har markt dem som jamforelseord vager den markningen tyngre an en SAOL-glosa. Kortet foll tre ganger i rad pa synonymfaltet (gyckel, sedan han). Nar tva oberoende forsok bada underkanns ar ratt slutsats att ordet inte HAR nagon utbytbar synonym: spe ar smalare an han och baddat i ett fast uttryck (spott och spe). Huvudbetydelsen forklarar ordet utan dem."
+    },
+    "proposed": {
+      "huvudbetydelse": "Hån: att skratta ut någon för att visa att man ser ner på personen ; i uttrycket \"in spe\": blivande, ännu inte men snart",
+      "register": "neutral, negativ, allmän ; neutral, neutral, allmän",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Han fick utstå spott och <font color=\"#3498db\">spe</font> av hela byn.",
+      "etymologi": "→ Fornsvenska spe, av lagtyska spe; beslaktat med spy. Uttrycket in spe ar daremot latin, till spes 'hopp'."
+    },
+    "approved": true,
+    "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
+    "confidence": 9,
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'Hån: att skratta ut någon för att visa att man ser'"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
+  }
+]
