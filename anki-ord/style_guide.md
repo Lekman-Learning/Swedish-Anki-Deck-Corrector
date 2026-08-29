@@ -741,6 +741,26 @@ andra (den äldre betydelsen).
   lämnade orörda, men flagga gärna om något av dem känns fel vid
   granskning.
 
+### `≈` binder till ETT ord, och det ordet star forst (2026-08-29)
+
+Adams fraga: *"vid ljuster ar = tecknet for bade treudd, harpun eller bara
+treudd?"* Notationen svarade olika beroende pa vem som last den:
+
+```
+Sa renderades raden :  ≈ treudd, harpun
+Sa tolkade koden    :  ['≈ treudd', 'harpun']
+```
+
+Koden binder `≈` till nasta ord; ogat laser det som att det galler hela
+raden. **Regeln ar darfor: ett ord efter `≈`.** Ar narmaste ord anda
+ungefarligt tillfor ett andra ungefarligt ord brus, inte precision -- och
+det ar just det andra ordet som gor raden dubbeltydig.
+
+Undantaget ar per BETYDELSE, inte per kort. `cyklop` far behalla
+`≈ jätte ; undervattensmask`: en enogd jatte ar bara ungefar en "jatte",
+men en cyklop AR en dykarmask. Dar ar den forsta betydelsen ungefarlig och
+den andra exakt, och ` ; ` haller isar dem.
+
 ## Highlight av ordet i exempelmeningen
 
 Ordet (eller böjningen av det) i exempelmeningen ska ALLTID märkas med

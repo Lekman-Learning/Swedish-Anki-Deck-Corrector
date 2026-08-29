@@ -78,6 +78,9 @@ def fyll(val, torrkorning=False):
             call("updateNoteFields",
                  note={"id": nid, "fields": {"Baksida": ny}})
             tagg = "synonym::narmaste" if "≈" in syn else "synonym::akta"
+            # Ett raddat kort far INTE behalla synonym::saknas -- annars
+            # rapporterar taggrakningen bade som tomt och som ifyllt.
+            call("removeTags", notes=[nid], tags="synonym::saknas")
             call("addTags", notes=[nid], tags=tagg)
         gjorda += 1
         print("  %-18s %s" % (o, syn))
