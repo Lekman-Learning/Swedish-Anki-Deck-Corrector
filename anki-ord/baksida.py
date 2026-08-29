@@ -110,6 +110,15 @@ _NUMRERAD_RE = re.compile(
     r"\((?P<reg>[^)]*)\)</font>\s*<br>",
     re.DOTALL,
 )
+# Numrerade rader UTAN register per rad. Behovs for kort som har >=3
+# betydelser men ETT gemensamt register -- 94 sadana fanns 2026-08-29. De
+# foll tidigare tillbaka pa den gamla enradiga vagen och behöll darmed
+# precis det problem numreringen finns for: fetstilsraden bryts till tva
+# rader. Registret star da kvar pa egen rad under stapeln, som forut.
+_NUMRERAD_UTAN_REG_RE = re.compile(
+    r"<b>\s*\d+\.\s*(?P<bet>.*?)</b>\s*<br>",
+    re.DOTALL,
+)
 _SYN_EX_RE = re.compile(
     rf'<font color="{re.escape(config.SYNONYM_COLOR)}">(?P<syn>.*?)</font>'
     r"\s*<br>\s*<br>\s*<i>(?P<ex>.*?)</i>",
@@ -127,12 +136,21 @@ def _parse_numrerad(baksida_html):
     den gamla vägen över helt oförändrad.
     """
     par = list(_NUMRERAD_RE.finditer(baksida_html))
-    if len(par) < 2:
-        return None
+    if len(par) >= 2:
+        gemensamt_register = None
+    else:
+        # Utan register per rad: registret star pa egen rad under stapeln.
+        par = list(_NUMRERAD_UTAN_REG_RE.finditer(baksida_html))
+        if len(par) < 2:
+            return None
+        m_reg = _REGISTER_LINE_RE.search(baksida_html, par[-1].end())
+        gemensamt_register = m_reg.group(1).strip() if m_reg else None
     syn_ex = _SYN_EX_RE.search(baksida_html, par[-1].end())
     if not syn_ex:
         return None
     huvud = " ; ".join(m.group("bet").strip() for m in par)
+    if gemensamt_register is not None:
+        return huvud, gemensamt_register, syn_ex
     register = " ; ".join(m.group("reg").strip() for m in par)
     return huvud, register, syn_ex
 
@@ -241,6 +259,27 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
                              f"({reg})</font><br>")
             huvud_html = "".join(rader)
             register_html = ""
+        elif len(meningar) >= NUMRERAD_FRAN and len(reg_parts) == 1:
+            # Samma numrering, men ETT gemensamt register for alla
+            # betydelser -- det star kvar pa egen rad under stapeln.
+            #
+            # 94 kort hade det har lagets 2026-08-29 (t.ex. `evakuera`: tre
+            # betydelser, registret "formell, neutral" en enda gang). De
+            # foll tidigare pa villkoret len(reg_parts) == len(meningar) och
+            # renderades enradigt -- alltsa med kvar precis det problem
+            # numreringen finns for: fetstilsraden bryts till tva rader.
+            #
+            # Registret DUBBLERAS medvetet INTE ut per rad. Det hade gjort
+            # modellen "formell ; formell ; formell" vid nasta rundtur och
+            # blast upp varje matning som raknar registerandelar -- och en
+            # sadan matning ar nasta steg i planen.
+            rader = []
+            for i, m in enumerate(meningar, 1):
+                m = m.strip()
+                m = (m[0].upper() + m[1:]) if m else m
+                rader.append(f"<b>{i}. {m}</b><br>")
+            huvud_html = "".join(rader)
+            register_html = f"({reg_parts[0]})<br>"
         elif len(reg_parts) > 1:
             # Flera betydelser med olika register (beslutat 2026-08-05, se
             # style_guide.md "Register per bibetydelse"): en rad, varje
