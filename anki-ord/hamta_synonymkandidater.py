@@ -24,6 +24,8 @@ import time
 
 import slaupp
 
+# Utdatafil kan overridas med 4:e argumentet, sa flera strommar kan kora
+# parallellt utan att skriva over varandras JSON. Slas ihop efterat.
 UT = "sessions/synonymkandidater.json"
 LARM_FONSTER = 25
 LARM_GRANS = 0.40
@@ -58,6 +60,9 @@ def main():
     fran = int(sys.argv[2]) if len(sys.argv) > 2 else 0
     antal = int(sys.argv[3]) if len(sys.argv) > 3 else len(ord_lista)
     ord_lista = ord_lista[fran:fran + antal]
+    global UT
+    if len(sys.argv) > 4:
+        UT = sys.argv[4]
 
     try:
         klara = json.load(io.open(UT, encoding="utf-8"))
