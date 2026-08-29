@@ -741,6 +741,38 @@ andra (den äldre betydelsen).
   lämnade orörda, men flagga gärna om något av dem känns fel vid
   granskning.
 
+### Tre nivaer av synonym: inget tecken, `≈`, `≈≈` (2026-08-29)
+
+| Tecken | Betyder | Kraver |
+|---|---|---|
+| *(inget)* | Utbytbart ord | Kalla |
+| `≈` | Narmaste ord som finns | Kalla |
+| `≈≈` | **Kategorin ordet tillhor** | **Bara kortets egen definition** |
+
+Den tredje nivan kom ur Adams fraga *"kan du losa detta med 2 avrundnings
+tecken?"* efter att 183 kort blivit staende utan synonym.
+
+**Varfor `≈≈` far sattas utan kalla, till skillnad fran `≈`:** en kategori
+ar inte ett pastaende om betydelselikhet, utan en KOMPRIMERING av
+definitionen som redan star i fetstil pa samma kort och redan ar granskad.
+`balalajka` sager sjalvt *"ryskt stranginstrument"* -- att lyfta ut det
+ordet ar extraktion, inte gissning, och kan inte bli fel pa det satt
+`tertial ≈ kvartal` blev fel.
+
+**Matningen som gjorde nivan nodvandig:** av de 115 enskilda orden utan
+synonym hade 63 nagon kalltext -- men den texten var DEFINITIONEN igen,
+inte ett annat ord. Kallorna hade alltsa inget bredare ord att ge. Utan
+`≈≈` hade de 115 forblivit tomma for alltid.
+
+**Vad som INTE far kategori:** idiom och ordled. Dar ar hela uttrycket
+betydelsebararen och en kategori sager ingenting -- 68 kort star darfor
+fortfarande med tom rad, och det ar ratt svar.
+
+**Bonusen:** kategorin loser tre kort som hade ANDRA problem. `tertial`
+kunde inte fa `kvartal` (3 mot 4 manader) men kan fa `≈≈ tidsperiod`, som
+ar sant. `grav` och `polyp` bar tva betydelser dar kallan bara tackte den
+ena -- med kategori far varje betydelse sin egen.
+
 ### `≈` binder till ETT ord, och det ordet star forst (2026-08-29)
 
 Adams fraga: *"vid ljuster ar = tecknet for bade treudd, harpun eller bara

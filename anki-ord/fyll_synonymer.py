@@ -77,7 +77,19 @@ def fyll(val, torrkorning=False):
         if not torrkorning:
             call("updateNoteFields",
                  note={"id": nid, "fields": {"Baksida": ny}})
-            tagg = "synonym::narmaste" if "≈" in syn else "synonym::akta"
+            # "≈≈" ar en tredje niva, beslutad av Adam 2026-08-29: KATEGORIN
+            # ordet tillhor, last ur kortets EGEN definition. Skiljer sig fran
+            # "≈" i vad den kraver: ett narmaste ord ar ett nytt pastaende och
+            # behover kalla, medan en kategori bara komprimerar en definition
+            # som redan ar granskad. Darfor kan den satta pa ord dar ingen
+            # kalla gav nagot -- 63 av 115 hade bara en omskrivning av
+            # definitionen, inte ett ord.
+            if "≈≈" in syn:
+                tagg = "synonym::kategori"
+            elif "≈" in syn:
+                tagg = "synonym::narmaste"
+            else:
+                tagg = "synonym::akta"
             # Ett raddat kort far INTE behalla synonym::saknas -- annars
             # rapporterar taggrakningen bade som tomt och som ifyllt.
             call("removeTags", notes=[nid], tags="synonym::saknas")
