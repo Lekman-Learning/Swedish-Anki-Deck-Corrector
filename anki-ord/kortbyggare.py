@@ -38,7 +38,7 @@ import baksida
 import config
 import riskflaggor
 from ankiconnect import invoke
-from queue_lib import fetch_cards_sorted_by_due
+from queue_lib import fetch_cards_sorted_by_due, fetch_cards_sorted_by_ivl
 from snabbkoll2 import build_old_lookup
 
 ALLVAR_ORDNING = {"hog": 0, "medel": 1, "lag": 2, None: 3}
@@ -143,7 +143,25 @@ KO_FILTER = {
 }
 
 
-def hamta_pool(antal, spar, ko="bada"):
+# Ordning. `due` = den ordning korten kommer till Adam i Anki. `mognad` =
+# mognast forst (Adams regel 2026-08-30: borja i det han redan kan).
+#
+# Filtret ar inte kosmetika: `interval` ar DAGAR for repetitionskort men
+# SEKUNDER for inlarningskort, och 0 for nya. Utan `prop:ivl>=1` hamnar ett
+# kort i 10-minuterssteget (interval 600) overst, fore varje riktigt moget
+# kort -- exakt tvartemot vad ordningen ska gora.
+ORDNINGS_FILTER = {
+    "due": "",
+    "mognad": " prop:ivl>=1",
+}
+
+ORDNINGSHAMTARE = {
+    "due": fetch_cards_sorted_by_due,
+    "mognad": fetch_cards_sorted_by_ivl,
+}
+
+
+def hamta_pool(antal, spar, ko="bada", ordning="due"):
     """Prio-märkta kort först, därefter due-ordning (= Adams egen ordning).
 
     Förturen måste ligga i URVALET, inte bara i sorteringen av det som
@@ -154,12 +172,13 @@ def hamta_pool(antal, spar, ko="bada"):
     prio-hämtningen dragit in repetitionskort även vid `--ko nya` och ätit
     upp platserna innan de nya korten ens övervägdes.
     """
-    bas = POOL_FRAGA[spar] + KO_FILTER[ko]
-    prio = fetch_cards_sorted_by_due(f"{bas} tag:{config.PRIO_TAG_HOG}", antal)
+    bas = POOL_FRAGA[spar] + KO_FILTER[ko] + ORDNINGS_FILTER[ordning]
+    hamta = ORDNINGSHAMTARE[ordning]
+    prio = hamta(f"{bas} tag:{config.PRIO_TAG_HOG}", antal)
     kvar = antal - len(prio)
     if kvar <= 0:
         return prio
-    return prio + fetch_cards_sorted_by_due(f"{bas} -tag:{config.PRIO_TAG_HOG}", kvar)
+    return prio + hamta(f"{bas} -tag:{config.PRIO_TAG_HOG}", kvar)
 
 
 def hamta_ids(kort_ids):
@@ -230,6 +249,12 @@ def main():
                         "för (is:new), 'repetition' = kort han redan sett. "
                         "Utan detta sorterar repetitionskorten alltid först och "
                         "de nya korten kommer aldrig med.")
+    p.add_argument("--ordning", choices=["due", "mognad"], default="due",
+                   help="urvalsordning INOM kösegmentet. 'due' = Adams egen "
+                        "köordning. 'mognad' = mognast först (högst intervall), "
+                        "dvs de kort han redan kan. Sätter automatiskt "
+                        "prop:ivl>=1 -- nya kort saknar intervall och kan inte "
+                        "mognadsordnas.")
     p.add_argument("--dump", action="store_true", help="skriv även en läsbar .txt")
     p.add_argument("--ids-fil", metavar="FIL",
                    help="JSON-lista från v3_urgency.py: ta exakt dessa kort, i "
@@ -240,6 +265,14 @@ def main():
 
     antal = args.antal if args.antal is not None else (
         config.DAGSBATCH_STORLEK if args.spar == "nya" else config.OMGRANSKNING_STORLEK)
+
+    if args.spar == "nya" and args.ordning == "mognad":
+        # Spår A är suspenderade legacy-kort som aldrig visats -- de har
+        # intervall 0 allihop, så prop:ivl>=1 tömmer poolen tyst. Mätt
+        # 2026-08-30: spår B har 393 kort med ivl>=21 och 628 med 14-20,
+        # spår A har noll.
+        p.error("--ordning mognad gäller bara --spar omgranskning "
+                "(spår A:s kort har aldrig visats och saknar intervall)")
 
     if args.spar == "nya" and args.ko != "bada":
         # Spår A är per definition suspenderat och därmed varken nytt eller
@@ -265,7 +298,7 @@ def main():
         print(f"Läste {len(cards)} kort ur {args.ids_fil} "
               f"(poäng {rankade[0]['poang']} ned till {rankade[-1]['poang']}).")
     else:
-        cards = hamta_pool(antal, args.spar, args.ko)
+        cards = hamta_pool(antal, args.spar, args.ko, args.ordning)
     if not cards:
         print(f"Poolen för spår '{args.spar}' (kö: {args.ko}) är tom.")
         return
@@ -291,6 +324,8 @@ def main():
     stam = "v3-batch" if args.spar == "nya" else "v3-omgranskning"
     if args.ko != "bada":
         stam += f"-{args.ko}"
+    if args.ordning != "due":
+        stam += f"-{args.ordning}"
     sokvag = os.path.join(katalog, f"session_{idag}_{stam}.json")
     n = 2
     while os.path.exists(sokvag):

@@ -4511,3 +4511,57 @@ Vard att fixa i koden nar det finns tid: lat taggdatumet folja Ankis dygn
 (kalenderdatum minus en dag om klockan ar fore 04:00) i stallet for
 kalenderdatum. Da stammer tagg och Anki-dag overens per konstruktion i stallet
 for att behova kommas ihag.
+
+## `--ordning mognad` (2026-08-30): v3-omgångar börjar i det Adam redan kan
+
+**Adams regel, ordagrant:** *"angående framtida full v3 kort vi ska köra så
+börjar vi med de som är mature eller närmast mature. på detta börjar vi
+repetera kort som redan är relativt lärda."*
+
+**Mätningen som ger regeln rätt.** Spår B (omgranskning), samma dag:
+
+| Band | Kort |
+|---|---|
+| mature, `prop:ivl>=21` | **393** |
+| nära mature, 14–20 d | **628** |
+| 7–13 d | 198 |
+| 1–6 d | 1 042 |
+| `is:new` | 220 |
+| **`-is:suspended`** | **0** |
+
+Alltså: **1 021 kort som Adam bevisligen kan** (14+ dagars intervall) ligger
+suspenderade och väntar på v3-rättning. Samtidigt matade pipelinen honom
+`is:new`-kort ur spår A. Deckets repetitionsskuld var 1 166 samma dag.
+
+🎯 **Skillnaden är riktningen på kostnaden.** Ett moget kort kommer tillbaka i
+repetition oavsett om vi rör det eller inte — rättar vi det lagar vi ett fel
+han redan har lärt sig, gratis. Ett `is:new`-kort måste först *läras in* för
+att bli nyttigt, och lägger en ny post i skulden för att göra det.
+
+**Implementation:** `queue_lib.fetch_cards_sorted_by_ivl()` (intervall
+fallande) + `ORDNINGS_FILTER`/`ORDNINGSHAMTARE` + `--ordning {due,mognad}`
+(default `due`). Ordningen läggs på **urvalet**, samma lärdom som `--ko`:
+sortera efter hämtning hade bara ordnat om de kort som råkade komma med.
+
+    python kortbyggare.py --spar omgranskning --ordning mognad --antal 50
+
+⚠️ **`prop:ivl>=1` sätts automatiskt och är inte kosmetika.** AnkiConnects
+`interval` är DAGAR för repetitionskort men SEKUNDER för inlärningskort. Utan
+filtret sorterar ett kort i 10-minuterssteget (`interval` 600) överst, före
+varje verkligt moget kort — precis tvärtemot vad flaggan ska göra.
+
+**Avvisas för `--spar nya`:** spår A är suspenderade legacy-kort som aldrig
+visats, alla med intervall 0. `prop:ivl>=1` hade tömt poolen tyst — samma
+tysta-tom-pool-fälla som `-is:suspended` orsakade 2026-08-11.
+
+**Verifierat** (`test_mognadsordning.py`, torrkörning på 25 kort):
+
+| Ordning | Intervallspann | Mature i urvalet |
+|---|---|---|
+| `due` | 10 → 1 d | **0 av 25** |
+| `mognad` | **394 → 212 d** | **25 av 25** |
+
+⚠️ **Vad flaggan INTE styr:** batchens interna ordning. `main()` sorterar om
+posterna på prio/allvar/ord efteråt, precis som förut. Flaggan bestämmer
+*vilka* kort som kommer med, inte i vilken ordning de skrivs — och det är
+urvalet som var problemet. Prio-taggen går fortfarande före allt annat.

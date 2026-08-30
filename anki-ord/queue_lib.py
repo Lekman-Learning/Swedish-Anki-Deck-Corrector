@@ -25,6 +25,31 @@ def fetch_cards_sorted_by_due(query, limit):
     return cards_info[:limit]
 
 
+def fetch_cards_sorted_by_ivl(query, limit):
+    """Hämtar kort matchande query, sorterat efter Ankis intervall FALLANDE --
+    mognast först.
+
+    Adams regel 2026-08-30: en full v3-omgång ska börja i det han faktiskt
+    redan kan. Ett kort med 20 dagars intervall har han svarat rätt på flera
+    gånger; ett fel i det kortet är därför ett fel han har lärt sig, och
+    kortet kommer tillbaka i repetition oavsett om vi rör det eller inte.
+    Ett `is:new`-kort han aldrig sett kostar i stället en ny post i
+    repetitionsskulden (1 166 den 30/8) för att bli nyttigt.
+
+    Anropare måste själv begränsa frågan till kort som HAR ett intervall
+    (`prop:ivl>=1`) -- se ORDNINGS_FILTER i kortbyggare.py. `interval` är
+    dagar för repetitionskort men sekunder för inlärningskort, så en
+    osorterad blandning ger en meningslös ordning där ett kort i
+    10-minuterssteget ser mognare ut än ett med 20 dagars intervall.
+    """
+    card_ids = invoke("findCards", query=query)
+    if not card_ids:
+        return []
+    cards_info = invoke("cardsInfo", cards=card_ids)
+    cards_info.sort(key=lambda c: -c["interval"])
+    return cards_info[:limit]
+
+
 def fetch_cards_prioritized(query, limit):
     """Som fetch_cards_sorted_by_due, men kort Adam redan sett (learning/
     review/relearning, dvs `-is:new`) kommer alltid före aldrig visade kort
