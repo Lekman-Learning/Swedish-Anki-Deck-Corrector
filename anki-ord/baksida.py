@@ -332,18 +332,18 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
         # Platshallaren rendererades tidigare rakt ut pa kortet ("ackord ; — ; —")
         # och lastes som om strecket vore en synonym. Adam 2026-08-30.
         rensade = [[x for x in g if _ar_riktig(x)] for g in synonym_groups]
-        if any(g for g in rensade) and any(not g for g in rensade):
-            # Lucka i serien: numrera de som finns, annars tappas kopplingen
-            # mellan synonym och betydelse nar tomma slots faller bort.
-            # ';' MASTE vara avgransaren aven har -- parse() delar pa ';' och
-            # ','. En egen avgransare ('·') gjorde rundturen asymmetrisk och
-            # korrumperade datat: ["2. vrede", "bitterhet · 3. ledsvulst"].
-            # Fangat av blindgranskaren pa kortet 'galla' 2026-08-30.
-            synonym_text = " ; ".join(
-                "%d. %s" % (i + 1, ", ".join(g))
-                for i, g in enumerate(rensade) if g)
-        else:
-            synonym_text = " ; ".join(", ".join(g) for g in rensade if g)
+        # INGEN NUMRERING. Adams besked 2026-08-30, efter att kortet `agnat`
+        # visade "1. slakting pa manssidan": *"inga synonymer ska vara
+        # numrerade"*.
+        #
+        # Numreringen fanns for att en betydelse utan synonym annars faller
+        # bort tyst, sa att kopplingen synonym->betydelse gar forlorad
+        # ([["x"], []] pa ett tvabetydelsekort ser ut som en ensam synonym
+        # till bada). Den kopplingen offras nu med flit: ett siffertecken i
+        # synonymfaltet lases som en del av synonymen, och en synonym som
+        # bara ser konstig ut ar samre an en synonym som saknar sin adress.
+        # Registerraden bar fortfarande betydelserna positionellt.
+        synonym_text = " ; ".join(", ".join(g) for g in rensade if g)
     else:
         synonym_text = ", ".join(
             x for x in (synonymer or []) if _ar_riktig(x))
