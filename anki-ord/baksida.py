@@ -179,10 +179,20 @@ def parse(baksida_html):
     raw = match.group("syn")
     synonym_groups = None
     if ";" in raw:
-        synonym_groups = [[s.strip() for s in g.split(",")] for g in raw.split(";")]
+        # '1. ' / '3. '-prefixen som build() satter nar en betydelse saknar
+        # synonym ar presentation, inte data -- de maste bort igen har.
+        synonym_groups = [[re.sub(r"^\d+\.\s*", "", s.strip())
+                           for s in g.split(",")] for g in raw.split(";")]
         synonymer = [s for g in synonym_groups for s in g]
     else:
-        synonymer = [s.strip() for s in raw.split(",") if s.strip()]
+        # Ett enda 'N. '-prefix utan ';' betyder att build() numrerade EN
+        # kvarvarande grupp (ovriga betydelser saknade synonym). Prefixet ar
+        # da beviset for att detta ar en grupp, inte en flat lista.
+        numrerad = re.match(r"^\s*(\d+)\.\s*", raw)
+        putsad = re.sub(r"^\s*\d+\.\s*", "", raw)
+        synonymer = [s.strip() for s in putsad.split(",") if s.strip()]
+        if numrerad and synonymer:
+            synonym_groups = [list(synonymer)]
 
     exempelmening = match.group("ex").strip()
 
@@ -325,7 +335,11 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
         if any(g for g in rensade) and any(not g for g in rensade):
             # Lucka i serien: numrera de som finns, annars tappas kopplingen
             # mellan synonym och betydelse nar tomma slots faller bort.
-            synonym_text = " · ".join(
+            # ';' MASTE vara avgransaren aven har -- parse() delar pa ';' och
+            # ','. En egen avgransare ('·') gjorde rundturen asymmetrisk och
+            # korrumperade datat: ["2. vrede", "bitterhet · 3. ledsvulst"].
+            # Fangat av blindgranskaren pa kortet 'galla' 2026-08-30.
+            synonym_text = " ; ".join(
                 "%d. %s" % (i + 1, ", ".join(g))
                 for i, g in enumerate(rensade) if g)
         else:
