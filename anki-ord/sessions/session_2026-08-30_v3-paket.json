@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080622512,
@@ -18,8 +18,10 @@
         "exempelmening": "Kyrkan byggdes <font color=\"#3498db\">anno</font> 1734, och tornet rasade två gånger innan det stod.",
         "etymologi": "Böjningsform av latin annus 'år' — samma rot som i annaler och decennium."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO bekräftar betydelsen ('år i förbindelse med visst årtal', något ålderdomlig) och etymologin (latin annus). Endast en betydelse i SO, ingen saknas. Synonymen 'år' hämtas direkt ur SO:s egen definitionstext. Exempelmeningen är korrekt och ordet highlightat.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622505,
@@ -37,8 +39,10 @@
         "exempelmening": "Hotellet var vackert men <font color=\"#3498db\">bedagat</font>, med fläckar i mattan och kranar som droppade.",
         "etymologi": "Efter tyska betagt, till Tag 'dag' — bokstavligen 'som fått många dagar på sig'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(något) till åren kommen och därför inte längre fräsch, vacker eller dylikt', nedsättande, ord för ord i linje med kortet. 'till åren kommen' är hämtat direkt ur SO:s definition, 'åldrad' är en rimlig näraliggande synonym. Exempelmeningen matchar SO:s egen ('vackert men lätt bedagat hotell'). Register och etymologi (tyska betagt/Tag) stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622564,
@@ -61,8 +65,10 @@
         "exempelmening": "Den armeniska <font color=\"#3498db\">diasporan</font> i Frankrike är äldre än de flesta tror.",
         "etymologi": "Grekiska diaspora 'spridning', av diaspeirein 'strö omkring' — bilden är utsäde som kastas ut över ett fält."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsetäckning och exempel är fine, men synonymerna 'landsflykt' och 'exil' är inte styrkta av SO (inget syn- eller jfr-fält alls) och är sakligt missvisande: landsflykt/exil beskriver en enskild persons förvisning/tillstånd, medan diaspora specifikt betecknar en spridd folkgrupp/kollektiv. 'Den armeniska diasporan' kan inte bytas mot 'den armeniska landsflykten' med samma betydelse. Synonymfältet borde antingen vara tomt eller innehålla ett ord som verkligen syftar på en spridd folkgrupp, inte på exiltillståndet hos en individ.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622549,
@@ -80,8 +86,10 @@
         "exempelmening": "Läkaren satte honom på strikt <font color=\"#3498db\">diet</font> efter provsvaren.",
         "etymologi": "Grekiska diaita 'levnadssätt' — ordet gällde först hela livsföringen, inte bara maten."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'sammansättning av kost under längre period särsk. sådan som är fastställd av medicinska skäl' - matchar kortet väl, ingen betydelse saknas. 'Kosthållning'/'matordning' är vardagliga, väletablerade utbytbara ord för diet. Exempelmeningen matchar SO:s eget exempel ('hålla sträng diet'). Etymologi (grek. diaita) stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622538,
@@ -108,8 +116,10 @@
         "exempelmening": "Kungens <font color=\"#3498db\">drabant</font> stod vakt vid dörren hela natten.",
         "etymologi": "Lågtyska dravant — samma ord som i Trabant, östtyska bilen som fick namn efter Sputnik."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Båda betydelserna (livvakt; himlakropp) finns i SO och är korrekt beskrivna, men för himlakroppsbetydelsen anger SO synonym (SYN) bara 'måne' - 'satellit' är enbart en jämförelsehänvisning (JFR:cohyponym), inte en synonym. Kortet listar felaktigt 'satellit' som likvärdig synonym till 'måne'. Det är precis den typ av nära-men-inte-utbytbart-ord som HP-provets ORD-del straffar. Ta bort 'satellit' ur synonymlistan eller flytta den till en jämförelse-notering.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622557,
@@ -126,8 +136,10 @@
         "exempelmening": "De promenerade längs <font color=\"#3498db\">esplanaden</font> tills löven började falla.",
         "etymologi": "Franska esplanade, ur latin explanare 'jämna ut' — en yta man först röjt fri."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen stämmer med SO ('bred [träd]planterad gata'), men varken SO eller SAOL anger 'promenadstråk' som synonym - SO:s enda näraliggande ord (JFR:cohyponym) är allé, aveny och boulevard. 'Promenadstråk' är dessutom sakligt oprecist: en esplanad måste per definition vara en gata, medan ett promenadstråk inte behöver vara det (kan lika gärna vara en gångväg i en park eller längs en strand, utan trädrader eller trafik). Byt till t.ex. 'aveny' eller 'boulevard', som ordboken faktiskt kopplar till ordet.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622530,
@@ -154,8 +166,10 @@
         "exempelmening": "Kritikerna spydde <font color=\"#3498db\">galla</font> över föreställningen redan innan andra akten.",
         "etymologi": "Gemensamt germanskt ord, besläktat med grekiska khole — samma rot som i melankoli, 'svart galla'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Kortet anger 'Bildligt om uppdämd ilska och bitterhet' som en egen, fristående betydelse med eget register och egna synonymer (vrede, bitterhet). Men i SO existerar ingen sådan fristående betydelse - det bildliga ilske-innehållet förekommer enbart inuti den specifika idiomatiska frasen 'spy/ösa galla över någon/något' ('klaga mycket på'), inte som en användning av substantivet 'galla' i sig. Kortet gör alltså en idiom-kollokation till en påhittad tredje betydelse. Dessutom saknas SO:s faktiska sekundära betydelse: 'galla' används även (äv.) om själva gallblåsan. Rätta genom att antingen ta bort ilske-betydelsen som eget moment och istället visa den som exempel/idiom under huvudbetydelsen, samt lägga till gallblåse-betydelsen.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622572,
@@ -173,8 +187,10 @@
         "exempelmening": "Han var en <font color=\"#3498db\">inbiten</font> ungkarl och tänkte inte ändra på det vid sextiofem.",
         "etymologi": "Egentligen 'som bitit sig fast', till inbita sig 'rota sig fast'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som knappast kan upphöra med viss vana eller dylikt' - matchar kortet. SO hänvisar själv till 'orubblig' som motsvarande betydelse, och 'ingrodd' är en etablerad näraliggande synonym (ingrodd vana). Exempelmeningen matchar SO:s eget exempel (en inbiten ungkarl/resenär). Etymologi stämmer (inbita sig).",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622516,
@@ -191,8 +207,10 @@
         "exempelmening": "Det uppstod total <font color=\"#3498db\">språkförbistring</font> när tre av montörerna bara talade polska.",
         "etymologi": "Till äldre förbistra 'förvirra' — bilden kommer från Babels torn i Första Moseboken."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen matchar SO:s definition av 'förbistring' ('svårighet att meddela sig p.g.a. att deltagarna talar olika språk') väl, och exemplet är bra. Men synonymen 'babylonisk förbistring' är i SO uttryckligen ett idiom, inte en synonym, och SO definierar idiomet som 'allvarlig språklig förvirring' - en starkare/intensifierad betydelse än den vardagliga kommunikationssvårighet kortet själv beskriver. Att presentera ett idiom med förstärkt betydelse som en vanlig utbytbar synonym är missvisande; ta bort synonymen eller markera den tydligt som idiomatiskt uttryck.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622571,
@@ -209,8 +227,10 @@
         "exempelmening": "Genom <font color=\"#3498db\">stratigrafi</font> kunde de datera bosättningen till bronsåldern.",
         "etymologi": "Latin stratum 'lager' + grekiska graphein 'skriva' — bokstavligen 'lagerbeskrivning'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'Gren av geologin som utforskar ordningsföljden och samhörigheten mellan olika bergartslager i jordskorpan' - matchar kortets 'hur lager i marken ligger på varandra och vad ordningen säger om ålder'. Endast en betydelse, ingen saknas. 'Lagerföljdslära' är en rimlig beskrivande svensk term. Exempel och etymologi (latin stratum + grek. graphein) stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622543,
@@ -228,8 +248,10 @@
         "exempelmening": "Fartyget gick på <font color=\"#3498db\">traden</font> London–Fjärran Östern i tolv år.",
         "etymologi": "Engelska trade 'handel' — samma ord som gav långtradare."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(sjö)trafikled', preciserat som 'handelsled till sjöss', med exakt samma exempel som kortet (London-Fjärran Östern). 'Sjötrafikled' och 'handelsväg' ligger mycket nära SO:s egen ordalydelse. Register (fackspråklig, sjöfart) och etymologi (eng. trade) stämmer.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622508,
@@ -246,8 +268,10 @@
         "exempelmening": "Han försökte <font color=\"#3498db\">besticka</font> tjänstemannen med en resa till Mallorca.",
         "etymologi": "Tyska bestechen, ursprungligen 'sticka i något' — man stack åt någon något i smyg."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger 'locka till svekfullt handlande genom (löften om) förmåner', matchar kortet väl. SO klassar visserligen 'muta' bara som JFR:cohyponym, men SAOL definierar besticka direkt som 'muta' (jur.) - ordboken själv likställer dem alltså. Register (formell, juridik) och etymologi (tyska bestechen) stämmer, exempelmeningen är korrekt och naturlig.",
+      "granskning_turer_post": 29,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622521,
@@ -1060,6 +1084,17 @@
       },
       "verdikt": null,
       "anmarkning": null
+    }
+  ],
+  "granskning_turer": 29,
+  "granskning_kostnad_usd": 0.9872011999999999,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 12,
+      "turer": 29,
+      "turkrav": 5,
+      "kostnad_usd": 0.9872011999999999
     }
   ]
 }
