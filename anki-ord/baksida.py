@@ -218,6 +218,14 @@ def parse(baksida_html):
     }
 
 
+PLATSHALLARE = {"—", "–", "-", "?", "n/a", "saknas"}
+
+
+def _ar_riktig(s):
+    """Sant om strangen ar en verklig synonym, inte tom eller en platshallare."""
+    return bool((s or "").strip()) and (s or "").strip() not in PLATSHALLARE
+
+
 def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_html=None, synonym_groups=None, etymologi=None):
     """register: sträng typ "formell" / "lätt negativ" / "formell, lätt negativ".
     Obligatoriskt i praktiken (style_guide.md, beslutat 2026-08-04) — minst en
@@ -310,9 +318,21 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
         register_html = ""
 
     if synonym_groups:
-        synonym_text = " ; ".join(", ".join(g) for g in synonym_groups)
+        # En betydelse utan synonym kodas som TOM grupp -- aldrig som "—".
+        # Platshallaren rendererades tidigare rakt ut pa kortet ("ackord ; — ; —")
+        # och lastes som om strecket vore en synonym. Adam 2026-08-30.
+        rensade = [[x for x in g if _ar_riktig(x)] for g in synonym_groups]
+        if any(g for g in rensade) and any(not g for g in rensade):
+            # Lucka i serien: numrera de som finns, annars tappas kopplingen
+            # mellan synonym och betydelse nar tomma slots faller bort.
+            synonym_text = " · ".join(
+                "%d. %s" % (i + 1, ", ".join(g))
+                for i, g in enumerate(rensade) if g)
+        else:
+            synonym_text = " ; ".join(", ".join(g) for g in rensade if g)
     else:
-        synonym_text = ", ".join(synonymer or [])
+        synonym_text = ", ".join(
+            x for x in (synonymer or []) if _ar_riktig(x))
     synonym_html = f'<font color="{config.SYNONYM_COLOR}">{synonym_text}</font><br>'
 
     example_html = f"<i>{exempelmening}</i>"
@@ -355,6 +375,7 @@ ADAMTAL_HARDA = (
     "tom_exempelmening", "saknar_highlight", "avslutande_skiljetecken_hb",
     "semikolon_utan_mellanslag", "formatering_i_hb", "html_skrap",
     "tom_synonym", "tom_synonymgrupp", "grupper_matchar_ej_betydelser",
+    "platshallare_i_synonym",
     # Hård sedan 2026-08-12 på Adams beslut. Var mjuk, och mjukheten kostade:
     # i EN batch om 100 kort skrev jag själv in sju cirkulära synonymer
     # (märlkräfta åt märla, bruttobelopp åt brutto, ljusmanschett åt
@@ -474,12 +495,18 @@ def validate_adamtal(huvudbetydelse, synonymer=None, synonym_groups=None,
             if len(st) >= 4 and st in s.lower().replace(" ", ""):
                 lagg("cirkular_synonym", f"{s!r} innehåller uppslagsordet -- avslöjar svaret")
     if synonym_groups:
-        if any(not [x for x in g if (x or "").strip()] for g in synonym_groups):
-            lagg("tom_synonymgrupp", "tom grupp ger ett '; '-artefakt på kortet")
+        platsh = [x for g in synonym_groups for x in g
+                  if (x or "").strip() in PLATSHALLARE]
+        if platsh:
+            lagg("platshallare_i_synonym",
+                 f"{platsh[0]!r} är en platshållare, inte en synonym -- "
+                 "lämna gruppen tom i stället")
+        if not any([x for x in g if _ar_riktig(x)] for g in synonym_groups):
+            lagg("tom_synonymgrupp", "ingen enda riktig synonym i någon grupp")
         if len(synonym_groups) != len(ms):
             lagg("grupper_matchar_ej_betydelser",
                  f"{len(synonym_groups)} synonymgrupper mot {len(ms)} betydelser")
-        storlekar = [len([x for x in g if (x or "").strip()]) for g in synonym_groups]
+        storlekar = [len([x for x in g if _ar_riktig(x)]) for g in synonym_groups]
         if storlekar and max(storlekar) - min(storlekar) >= 2:
             lagg("osymmetriska_grupper", f"gruppstorlekar {storlekar} -- sikta symmetriskt")
 

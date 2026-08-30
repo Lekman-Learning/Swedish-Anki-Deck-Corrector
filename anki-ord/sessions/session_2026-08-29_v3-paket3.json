@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080622468,
@@ -36,8 +36,10 @@
         "exempelmening": "Begagnade elcyklar är en <font color=\"#3498db\">kurant</font> vara, medan gamla faxar knappt går att ge bort.",
         "etymologi": "Franska courant 'löpande' — det som är i omlopp och rör sig, alltså går åt."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger tre betydelser (handelsvara/lättsåld, allmänt bruk om t.ex. mynt/uttryck, frisk efter sjukdom) i samma ordning som kortet, och alla tre återges korrekt. Synonymgrupperna (lättsåld/säljbar, gängse/gångbar, kry/pigg) stämmer med SO -- gängse och gångbar anges uttryckligen av SO. Etymologin (fra. courant 'löpande') är korrekt och hjälper förståelsen. Exemplet illustrerar handelsvarubetydelsen tydligt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622477,
@@ -52,8 +54,10 @@
         "exempelmening": "Efter en vecka i blåsten var läpparna så trasiga att han sov med <font color=\"#3498db\">cerat</font> på.",
         "etymologi": "Latin cera 'vax' — salvan är i grunden just vax."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO har bara en betydelse, 'vaxhaltig salva som motverkar sprickor på läpparna', som kortet återger korrekt. Tom synonymlista är inget fel eftersom SO inte anger några. Etymologin (lat. cera 'vax') stämmer och förklarar ordet bra.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622498,
@@ -71,8 +75,10 @@
         "exempelmening": "De grälade i en timme innan de märkte att de använde olika <font color=\"#3498db\">definition</font> av ordet rättvisa.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('avgränsning och bestämning av betydelse hos ord el. annat språkligt uttryck') motsvaras väl av kortets formulering. Synonymerna begreppsbestämning/precisering är rimliga parafraser, exemplet är sakligt korrekt och begripligt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622470,
@@ -89,8 +95,10 @@
         "exempelmening": "Studietiden var <font color=\"#3498db\">knaper</font> — han räknade kronor för att få mjölken att gå ihop.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Både SO och SAOL ger bara en betydelse ('inte fullt tillräcklig, särsk. om föda el. inkomst'/'knapp, torftig'), och SAOL märker ordet just 'vardagligt' -- precis som kortets register anger. Facit_signal om tre betydelser höll alltså inte vid uppslagning; det rör sig om nästan-synonymer (knapp, torftig), inte skilda betydelser. Synonymen torftig bekräftas av båda källorna.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622478,
@@ -121,8 +129,10 @@
         "exempelmening": "Grävningen lades ut på <font color=\"#3498db\">beting</font>, så laget fick lika mycket betalt vare sig det tog tre dagar eller sju.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Kortet fångar korrekt båda SO:s homografer (betald arbetsuppgift/uppgiften själv, samt sjötermen för fördäcksstolpen). Men synonymgruppen ackord/entreprenad brister: SO definierar entreprenad som 'åtagande att mot viss ersättning utföra STÖRRE arbetsuppgift', ofta efter konkurrensutsättning -- alla entreprenader är betingsliknande arbeten, men inte alla betingsjobb är entreprenader, så orden är inte fritt utbytbara. Ta bort entreprenad eller byt mot t.ex. ackordsarbete.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622503,
@@ -140,8 +150,10 @@
         "exempelmening": "Siffrorna tog en <font color=\"#3498db\">betänklig</font> vändning i mars, och styrelsen kallade till extra möte.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Både SO och SAOL ger bara en betydelse ('som ger anledning till oro eller kritik'); ingen separat betydelse motsvarande 'vågad' finns i någon av källorna, så facit_signal om fem betydelser är en felsignal snarare än ett faktiskt fel (facit blandar bara synonymer och exempel). Kortets formulering och synonymen oroväckande stämmer med SO.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622451,
@@ -156,8 +168,10 @@
         "exempelmening": "Hon ställde ut på <font color=\"#3498db\">biennal</font> i Venedig och kom hem med tre nya beställningar.",
         "etymologi": "Latin biennalis 'tvåårig' — bi 'två' + annus 'år'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL bekräftar att biennal specifikt är en konstterm ('utställning som återkommer vartannat år', markerad konst), så kortets 'stor konstutställning' är korrekt och inte felaktigt förenklat. Etymologin (lat. bi+annus) stämmer och hjälper minnet.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622461,
@@ -175,8 +189,10 @@
         "exempelmening": "Bakverken var <font color=\"#3498db\">deliciös</font>, och hon åt tre innan hon kom på att räkna.",
         "etymologi": "Franska délicieux, av latin delicia 'nöje'."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Betydelse ('helt utsökt'), register (SO anger 'något högtidligt', kortet 'högtidlig') och synonymen utsökt (=facit) är korrekta. Men exempelmeningen har ett grammatikfel: 'Bakverken var deliciös' -- plural subjekt (bakverken) kräver plural adjektivform, det ska vara 'Bakverken var deliciösa'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622453,
@@ -203,8 +219,10 @@
         "exempelmening": "Målvakten var <font color=\"#3498db\">eminent</font> hela matchen och släppte inte in ett enda skott.",
         "etymologi": "Latin eminere 'höja sig' — den som sticker upp över de andra."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse ('skicklig/framstående inom visst område') och underbetydelsen om hög grad ('i eminent grad smittsamt') återges korrekt som kortets två betydelser, i rätt ordning. Synonymen framstående matchar facit, lysande är rimligt. Etymologin (lat. eminere 'höja sig') stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622492,
@@ -222,8 +240,10 @@
         "exempelmening": "Kungen styrde <font color=\"#3498db\">enväldig</font> i fyrtio år och kallade aldrig in riksdagen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen ('som ensam har all makt att besluta') är korrekt återgiven, och enrådig är en godtagbar synonym. Men oinskränkt är fel: SO definierar det som 'vars omfattning inte är begränsad av lagar el. dylikt', dvs. maktens OMFATTNING -- inte att man är ENSAM om makten (SO:s eget exempel handlar om en presidents maktbefogenheter, inte om ensamvälde). Man kan ha oinskränkt makt utan att vara enväldig, och tvärtom. Byt ut oinskränkt mot t.ex. despotisk eller egenmäktig.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622447,
@@ -241,8 +261,10 @@
         "exempelmening": "Hon gick över isen lika <font color=\"#3498db\">graciös</font> som om hon aldrig behövt lära sig.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('som karakteriseras av skönhet och lätthet i rörelse eller linje') matchar kortets 'rör sig vackert och lätt, utan att det ser ansträngt ut'. Synonymen behagfull matchar facit exakt, elegant är en rimlig tillägg.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622456,
@@ -260,8 +282,10 @@
         "exempelmening": "Det <font color=\"#3498db\">ihållande</font> regnet i augusti gjorde att skörden ruttnade på fälten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('som fortgår länge och oavbrutet') matchar kortet nästan ordagrant. Synonymen långvarig bekräftas av SO; oavbruten är en rimlig parafras av definitionens eget 'oavbrutet'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622457,
@@ -292,8 +316,10 @@
         "exempelmening": "Protokollet var inte <font color=\"#3498db\">justerat</font> än, och därför gällde inga av besluten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger tre betydelser (ställa in i rätt läge, godkänna/underteckna protokoll, tillfoga lättare skada i idrott -- vardagligt) som alla återges korrekt på kortet, med rätt registerangivelser (fackspråklig för protokoll, vardaglig för idrottsbetydelsen). Exemplet illustrerar protokollbetydelsen träffsäkert och begripligt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622499,
@@ -322,8 +348,10 @@
         "exempelmening": "Landskapet blev allt <font color=\"#3498db\">kargare</font> ju längre norrut de kom, till slut bara sten och mossa.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse ('kalt och ofruktsamt om landskap') och den bildliga betydelsen om en person ('inbunden, avmätt' -- ordagrant SO:s egen formulering) återges korrekt som kortets två betydelser. Synonymerna ofruktbar/mager och inbunden/avmätt stämmer väl.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622487,
@@ -341,8 +369,10 @@
         "exempelmening": "Föreställningen var <font color=\"#3498db\">märglös</font> — skådespelarna sa rätt repliker men ingen trodde på dem.",
         "etymologi": "Märgen är det mjuka inuti benen; utan den finns ingen inre kraft kvar."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('saknar inre kraft och uttrycksfullhet') matchar kortets formulering väl. Synonymerna kraftlös och slapp finns båda i facit. Etymologin om märgen som kroppens inre kraft är en rimlig och hjälpsam minnesbild.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622450,
@@ -360,8 +390,10 @@
         "exempelmening": "Gatorna låg tomma under <font color=\"#3498db\">siestan</font> och butikerna öppnade först vid fyra.",
         "etymologi": "Latin sexta hora 'den sjätte timmen' — räknat från soluppgången, alltså mitt på dagen."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('vila mitt på dagen, allmänt förekommande i varma länder') matchar kortet, och exemplet liknar SO:s eget ('gatorna var tomma under siestan'). Synonymen middagsvila matchar facit; tupplur är en rimlig extra synonym. Etymologin (lat. sexta hora) stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622452,
@@ -379,8 +411,10 @@
         "exempelmening": "En av domarna hade en <font color=\"#3498db\">skiljaktig</font> mening och skrev ner sina skäl sist i domen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('som inte sammanfaller om åsikter e.d.') matchar kortet, och exemplet om en 'skiljaktig mening' i en dom motsvarar nästan ordagrant SO:s eget exempel. Synonymerna avvikande och olik är precis de SO anger.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622475,
@@ -395,8 +429,10 @@
         "exempelmening": "De kunde inte gräva förrän i maj, eftersom <font color=\"#3498db\">tjälen</font> satt kvar en halvmeter ner.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s enda betydelse ('hård och fast skorpa av jord och is från markytan och ett stycke nedåt') återges nästan ordagrant korrekt på kortet, exemplet är sakligt rimligt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622504,
@@ -421,8 +457,10 @@
         "exempelmening": "Ordet rättvisa är en <font color=\"#3498db\">abstraktion</font> — ingen har någonsin sett den, men alla bråkar om den.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser (själva handlingen att abstrahera, samt en företeelse som inte kan uppfattas med sinnena), och kortet fångar båda korrekt. Synonymen tankeskapelse matchar facit, och exemplet ('rättvisa är en abstraktion') liknar SO:s eget exempel med 'frihet'.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622496,
@@ -437,8 +475,10 @@
         "exempelmening": "En <font color=\"#3498db\">alligator</font> har bredare nos än en krokodil, och tänderna syns inte när gapet är stängt.",
         "etymologi": "Spanska el lagarto 'ödlan' — vägen gick via engelskan."
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('krokodilliknande kräldjur med bred, platt nos', förekommer i Kina och sydöstra USA) matchar kortet väl -- 'trubbig' och SO:s 'platt' beskriver samma nosform. Etymologin (spanska el lagarto 'ödlan') stämmer.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622497,
@@ -456,8 +496,10 @@
         "exempelmening": "Branden spred sig till de <font color=\"#3498db\">angränsande</font> fastigheterna innan brandkåren hann fram.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse ('belägen närmast intill viss yta el. utrymme') återges korrekt, och exemplet om branden liknar SO:s eget nästan ordagrant. Synonymerna intilliggande och närliggande är exakt SO:s egna förslag. Den bildliga användningen (angränsande branscher) är en förutsägbar utvidgning av samma betydelse, ingen egen betydelse som saknas.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622489,
@@ -475,8 +517,10 @@
         "exempelmening": "Efter tjugo år i yrket var han <font color=\"#3498db\">avtrubbad</font> och kunde äta lunch mitt i eländet.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('minska känslighet hos sinnen, psyke e.d.') matchar kortets formulering väl. Förslöa bekräftas av SO som närbesläktat ord; bedöva är en rimlig tilläggssynonym. Exemplet är sakligt och grammatiskt korrekt.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622467,
@@ -494,8 +538,10 @@
         "exempelmening": "Hallen var <font color=\"#3498db\">belamrad</font> med kartonger, och man fick gå i sicksack för att komma till dörren.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen ('fylla utrymme med skrymmande el. hindrande föremål') återges korrekt och proppa full är en bra synonym. Men skrymma är fel: SO definierar skrymma som intransitivt 'ta upp (onödigt) stort utrymme' -- det beskriver att ETT FÖREMÅL i sig är otympligt stort, inte handlingen att fylla en plats med saker. Man kan inte säga 'hallen var skrymd med kartonger'. Ta bort skrymma eller byt mot t.ex. överlasta.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622484,
@@ -513,8 +559,10 @@
         "exempelmening": "Hon fick en <font color=\"#3498db\">blemma</font> på hakan kvällen innan fotograferingen.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s betydelse ('liten blåsa i huden') matchar kortet. Kvissla definieras av SO självt som 'liten finne', så både kvissla och finne är rimliga, nära besläktade ord för samma typ av hudförändring.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622472,
@@ -543,8 +591,10 @@
         "exempelmening": "Bryggan var så <font color=\"#3498db\">bräcklig</font> att de gick över en i taget.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelser (föga hållfast om material/föremål; samt klen/svag om levande varelser och hälsa) återges korrekt som kortets två betydelser. Synonymerna skör/spröd och klen/skröplig finns uttryckligen i SO:s lista över besläktade ord.",
+      "granskning_turer_post": 36,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622476,
@@ -975,6 +1025,17 @@
       },
       "verdikt": null,
       "anmarkning": null
+    }
+  ],
+  "granskning_turer": 36,
+  "granskning_kostnad_usd": 1.2572019,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 36,
+      "turkrav": 6,
+      "kostnad_usd": 1.2572019
     }
   ]
 }
