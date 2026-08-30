@@ -142,6 +142,40 @@ SKRIPTMARKOR = re.compile(
 SKRIPT_KALLA = re.compile(r"svenska\.se/api/msearch\?ord=(.+)$")
 
 _URL_RE = re.compile(r"https?://[^\s\"'<>,;)\]]+")
+_URL_START = re.compile(r"https?://")
+
+
+def _urler_ur_kalla(kalla):
+    """URL:erna i en `kalla`-strang -- aven de som innehaller MELLANSLAG.
+
+    `_URL_RE` stannar vid forsta blanksteget, vilket ar ratt for text men fel
+    har: uppslagsordet ligger i URL:en, och ett uppslagsord kan besta av flera
+    ord. `https://svenska.se/api/msearch?ord=creme de la creme` kapades till
+    `...?ord=creme`, som aldrig matchade beviset -- och eftersom bevisnyckeln
+    byggs av samma okodade ord (se samla_bevis) foll BARA flerordsuttrycken.
+
+    Matt 2026-08-30: 7 av 100 kort i en omgang stoppades av detta, alla
+    flerordsuttryck (crème de la crème, i allo, se tiden an, pa kuppen,
+    blommor och bin, grunda sig pa, ga tretton pa dussinet). Felet var inte
+    slumpmassigt utan systematiskt -- INGET flerordsuttryck kunde nagonsin
+    passera sokkollen.
+
+    Segmenten delas vid nasta `http`, inte vid blanksteg. Den kapade formen
+    laggs till som extra kandidat, sa att en kalla med efterfoljande brodtext
+    fortfarande kan matcha.
+    """
+    starter = [m.start() for m in _URL_START.finditer(kalla or "")]
+    ut = []
+    for i, start in enumerate(starter):
+        slut = starter[i + 1] if i + 1 < len(starter) else len(kalla)
+        bit = kalla[start:slut].strip()
+        if bit:
+            ut.append(bit)
+    for u in _URL_RE.findall(kalla or ""):
+        if u not in ut:
+            ut.append(u)
+    return ut
+
 
 
 def _transkriptkatalog():
@@ -337,7 +371,7 @@ def granska_kalla(kalla, bevis):
     if not kalla:
         return False, "kalla saknas"
 
-    urler = _URL_RE.findall(kalla)
+    urler = _urler_ur_kalla(kalla)
     if not urler:
         return False, ("kalla saknar URL — fri text duger inte längre, "
                        "se sokkoll_verifiering.py")
