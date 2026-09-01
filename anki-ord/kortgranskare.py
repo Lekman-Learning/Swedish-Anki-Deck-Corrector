@@ -469,6 +469,18 @@ def kontrollera_slappbar(note_ids):
         for krav in config.SLAPP_KRAVER_TAGGAR:
             if not any(t == krav or t.startswith(f"{krav}::") for t in taggar):
                 skal.append(f"saknar {krav}")
+        # Ett kort som blindgranskningen UNDERKANT far aldrig slappas, hur
+        # kompletta ovriga taggar an ar. Hittat 2026-09-01: `verdikt` suspenderar
+        # underkanda kort (rad ~437), men INGEN avsuspenderingsvag kande till
+        # taggen -- sa nasta batch som rorde kortet slappte ut det igen. Tio kort
+        # med kanda, dokumenterade fel lag darfor levande i Adams ko, ett av dem
+        # med en betydelse som varken SO eller SAOL har belagg for.
+        #
+        # Kravet star HAR och inte i SLAPP_KRAVER_TAGGAR, eftersom det ar ett
+        # NEGATIVT villkor: listan raknar taggar som maste FINNAS.
+        if any(t == "v3_underkand" or t.startswith("v3_underkand::")
+               for t in taggar):
+            skal.append("underkand i blindgranskningen -- maste goras om")
         p = baksida.parse(n["fields"][config.FIELD_BAKSIDA]["value"])
         if not p["huvudbetydelse"]:
             skal.append("ej v2-format")
