@@ -144,7 +144,22 @@ def _tagga(par, kalla, torr):
         print("TORRKORNING -- inget skrivet till Anki.")
     elif lagg:
         invoke("addTags", notes=lagg, tags=config.PRIO_TAG_SENARE)
+        # SUSPENDERA ocksa (Adams regel 2026-09-02: "utav de som inte gar att
+        # enkelt full v3-granska satter du i suspens med tagg att de far full
+        # v3-granskas i framtiden").
+        #
+        # Taggen ensam raknade med att kortet redan lag suspenderat, vilket
+        # galler spar B men INTE spar A eller kort som redan slappts. Ett
+        # undanlagt kort som ligger kvar i kon ar det samsta utfallet: Adam
+        # pluggar det varje dag i sin ogranskade form, och skalet till att det
+        # lades undan var just att formen inte gick att lita pa.
+        kort_ids = []
+        for nid in lagg:
+            kort_ids += invoke("findCards", query="nid:%d" % nid)
+        if kort_ids:
+            invoke("suspend", cards=kort_ids)
         _logga(rader)
+        print("Suspenderade %d kort." % len(kort_ids))
     for r in rader:
         print("  %-24s %s" % (r["ord"], r["skal"]))
     if saknas:
