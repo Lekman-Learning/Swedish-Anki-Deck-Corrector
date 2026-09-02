@@ -98,9 +98,15 @@ def etym(o):
 
 
 def kallor(o):
-    """URLerna ur uppslaget, sa de inte kan skrivas fel."""
-    u = _u(o)
-    return dict((u or {}).get("urler") or {})
+    """URLerna ur uppslaget som EN STRANG, sa de inte kan skrivas fel.
+
+    Strang, inte dict: sokkoll_verifiering._urler_ur_kalla() kor en regex
+    over faltet och kraschar pa allt annat. Uppslagets `urler` ar en dict,
+    sa den maste plattas ut har -- annars gar felet inte att se forran
+    `applicera` avbryter mitt i en 100-kortsbatch.
+    """
+    u = _u(o) or {}
+    return " ".join(str(v) for v in (u.get("urler") or {}).values())
 
 
 def visa(orden):

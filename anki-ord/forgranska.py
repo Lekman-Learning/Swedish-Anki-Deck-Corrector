@@ -72,6 +72,23 @@ HARDA = (
     "synonym_utan_stod",
     "synonym_utan_ordboksbelagg",
     "register_motsager_markning",
+    # Adams regel, patalad 2026-09-02: "full v3 inkluderar synonymskrivningen
+    # med avrundningstecken och alla kort ska ha minst 1 synonym eller en
+    # avrundad eller dubbelavrundad synonym."
+    #
+    # Regeln fanns REDAN i style_guide.md sedan 2026-08-29 (avsnittet "Tre
+    # nivaer av synonym"), men bara som prosa -- och den foljdes darfor inte:
+    # samma dag skrevs 30 kort i formiddagens batch och 26 i eftermiddagens
+    # med tom synonymrad, 56 stycken, alla motiverade med att "tom lista ar
+    # godkant". Den formuleringen kom ur _pool.py:s docstring, som pastod att
+    # tom lista var normalfallet (69 %). Styleguiden sager tvartom att tom rad
+    # ar ratt svar BARA for idiom och ordled -- 68 kort -- och att enskilda
+    # ord ska fa `≈≈ kategori`, just for att de annars "hade forblivit tomma
+    # for alltid".
+    #
+    # Tredje gangen i dag att en regel som bara var prosa inte foljdes. Den
+    # ar darfor en kontroll nu.
+    "synonymrad_tom",
 )
 MJUKA = (
     "doman_utan_stod",
@@ -609,6 +626,21 @@ def granska_post(p):
                     f"{', '.join(vis)}{mer} -- glosor kan höra till fel ord"))
 
     # 3. SO har fler betydelser än kortet.
+    # 3b. Synonymraden far inte vara tom (Adams regel, se HARDA ovan).
+    #
+    # Undantaget ar FLERORDSUTTRYCK -- idiom och ordled. Dar ar hela
+    # uttrycket betydelsebararen och en kategori sager ingenting, vilket
+    # style_guide.md slar fast: "68 kort star darfor fortfarande med tom rad,
+    # och det ar ratt svar." Undantaget avgors pa formen, inte pa kansla, sa
+    # det inte kan aberopas godtyckligt.
+    syn = [x for x in (pr.get("synonymer") or []) if str(x).strip()]
+    if not syn and " " not in ord_:
+        fel.append(("synonymrad_tom",
+                    "inga synonymer. Enskilda ord ska ha minst en -- exakt, "
+                    "`≈ narmaste ord` (kraver kalla) eller `≈≈ kategori` "
+                    "(far tas ur kortets egen definition). Tom rad ar ratt "
+                    "svar bara for idiom och ordled."))
+
     antal_so = len(_so(u, "def")) + len(_riktiga_underbetydelser(u))
     antal_kort = len(baksida.betydelser(pr.get("huvudbetydelse") or ""))
     if antal_so and antal_kort and antal_so > antal_kort:
@@ -616,11 +648,26 @@ def granska_post(p):
                     f"SO har {antal_so} betydelser/underbetydelser, kortet har "
                     f"{antal_kort}"))
 
+    # 4-serien kontrollerar bara EXAKTA synonymer och `≈`-nivån. `≈≈` är
+    # undantaget, och undantaget är dokumenterat: en kategori är inte ett
+    # påstående om betydelselikhet utan en KOMPRIMERING av definitionen som
+    # redan står på kortet och redan är granskad (style_guide.md, "Tre nivåer
+    # av synonym", 2026-08-29). Att kräva ordboksbelägg för den vore att
+    # kräva källa för något kortet självt säger.
+    #
+    # Utan det här undantaget blev regeln ogenomförbar i praktiken: när de 28
+    # tomma synonymraderna i dagens batch fylldes med `≈≈ kategori` gav
+    # förgranskningen 30 hårda anmärkningar — alltså straffade den exakt det
+    # styleguiden föreskriver. `≈` däremot KRÄVER källa och går igenom
+    # kontrollerna som vanligt, sedan tecknet strippats.
+    exakta = [x for x in (pr.get("synonymer") or [])
+              if not str(x).strip().startswith("≈≈")]
+
     # 4a. Synonym som SO uttryckligen taggar som NÅGOT ANNAT än synonym.
     #     Starkaste kontrollen i hela filen: ordboken har redan sagt att orden
     #     inte är utbytbara, med ord.
     rel = so_relationer(u)
-    for s in (pr.get("synonymer") or []):
+    for s in exakta:
         nyckel = re.sub(r"<[^>]+>", "", str(s or "")).strip().lower()
         typ = rel.get(nyckel)
         if typ in RELATION_FEL:
@@ -630,7 +677,7 @@ def granska_post(p):
     # 4b. Synonymer utan stöd i något hämtat underlag.
     kallpase, kalltext = _kallord(u)
     if kallpase:
-        utan = [s for s in (pr.get("synonymer") or []) if not _har_stod(s, kallpase, kalltext)]
+        utan = [s for s in exakta if not _har_stod(s, kallpase, kalltext)]
         if utan:
             fel.append(("synonym_utan_stod",
                         f"saknar stöd i hämtad källa: {', '.join(map(str, utan))}"))
@@ -638,13 +685,15 @@ def granska_post(p):
     # 4c. Synonymer som bara syn.se/wiktionary stöder -- ordboken själv säger
     #     ingenting. Tom lista passerar tyst: det är normalfallet (69 %).
     belagg = _ordboksbelagg(u, ord_)
-    obelagda = [s for s in (pr.get("synonymer") or [])
+    obelagda = [s for s in exakta
                 if not _har_ordboksbelagg(s, belagg)]
     if obelagda:
         fel.append(("synonym_utan_ordboksbelagg",
                     f"{', '.join(map(str, obelagda))} -- varken SO:s SYN:synonym "
                     f"eller SO/SAOL:s definitionstext säger att ordet är en synonym. "
-                    f"Stryk det; tom synonymlista är godkänt"))
+                    f"Stryk det — eller sätt `≈≈ kategori`, som får hämtas ur kortets "
+                    f"egen definition. Tom rad är rätt svar bara för idiom "
+                    f"och ordled (se synonymrad_tom)."))
 
     # 4d. SPEGELN till 4c, tillagd 2026-08-24. Adam upptäckte att 321 av 1 432
     #     full v3-kort hade tomt synonymfält, och att andelen gick från 0 % den

@@ -5,7 +5,19 @@ Byggd pa forgranskas egna funktioner, inte pa en kopia av reglerna -- annars
 kan verktyget och kontrollen glida isar. Mott 2026-09-02: forsta batchen om 18
 kort fick synonym_utan_ordboksbelagg pa 13 av 18 eftersom synonymerna togs fran
 synonymer.se, som INTE ar ordboksbelagg. Bara SO:s SYN-falt och SO/SAOL:s
-definitionstext raknas. Tom lista ar godkant och ar normalfallet (69 %).
+definitionstext raknas.
+
+⚠ RATTAT 2026-09-02. Har stod tidigare "Tom lista ar godkant och ar
+normalfallet (69 %)". Det var fel och kostade 56 kort samma dag. Tom POOL ar
+vanligt -- det ar vad 69 % beskriver -- men en tom SYNONYMRAD pa kortet ar
+ratt bara for idiom och ordled. For enskilda ord sager style_guide.md ("Tre
+nivaer av synonym", 2026-08-29) att raden ska fyllas med `≈ narmaste ord`
+(kraver kalla) eller `≈≈ kategori` (far tas ur kortets egen definition,
+eftersom en kategori ar en komprimering av en redan granskad text och inte ett
+pastaende om betydelselikhet).
+
+En tom pool ar alltsa en anvisning att ga till `≈≈`, inte ett besked att
+lamna raden tom. forgranska.py:s `synonymrad_tom` haller nu isar de tva.
 
 Skriver ocksa antalet SO-betydelser, eftersom betydelse_kan_saknas ar ett hart
 fel som kraver antingen fler betydelser pa kortet eller en skriven motivering
