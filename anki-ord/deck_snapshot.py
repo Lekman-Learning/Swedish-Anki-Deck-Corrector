@@ -33,6 +33,7 @@ MATT = [
     ("v3_granskad",       f"tag:{config.V3_TAG_PREFIX}::*"),
     ("oberoende",         f"tag:{config.OBEROENDE_TAG_PREFIX}::*"),
     ("prio_hog",          f"tag:{config.PRIO_TAG_HOG}"),
+    ("prio_senare",       f"tag:{config.PRIO_TAG_SENARE}"),
     ("flagga_rod",        f"flag:{config.FLAG_ROD}"),
     ("flagga_gul",        f"flag:{config.FLAG_GUL}"),
     ("flagga_gron",       f"flag:{config.FLAG_GRON}"),

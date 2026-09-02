@@ -161,8 +161,15 @@ ORDNINGSHAMTARE = {
 }
 
 
-def hamta_pool(antal, spar, ko="bada", ordning="due"):
+def hamta_pool(antal, spar, ko="bada", ordning="due", senare=False):
     """Prio-märkta kort först, därefter due-ordning (= Adams egen ordning).
+
+    `senare=False` (normalfallet) UTESLUTER kort märkta v3_prio::senare --
+    de som visat sig kosta mer än de ger på första försöket. Uteslutningen
+    måste ligga i urvalet av samma skäl som förturen gör det: annars ligger
+    de kvar på sina platser i due-ordningen och blockerar precis de luckor
+    de skulle lämna efter sig. `senare=True` vänder på filtret och hämtar
+    BARA dem, för den dag de ska betas av.
 
     Förturen måste ligga i URVALET, inte bara i sorteringen av det som
     råkade hämtas: med 3 000+ kort i spår B hade ett prio-kort längre bak i
@@ -173,6 +180,7 @@ def hamta_pool(antal, spar, ko="bada", ordning="due"):
     upp platserna innan de nya korten ens övervägdes.
     """
     bas = POOL_FRAGA[spar] + KO_FILTER[ko] + ORDNINGS_FILTER[ordning]
+    bas += f" tag:{config.PRIO_TAG_SENARE}" if senare else f" -tag:{config.PRIO_TAG_SENARE}"
     hamta = ORDNINGSHAMTARE[ordning]
     prio = hamta(f"{bas} tag:{config.PRIO_TAG_HOG}", antal)
     kvar = antal - len(prio)
@@ -255,6 +263,10 @@ def main():
                         "dvs de kort han redan kan. Sätter automatiskt "
                         "prop:ivl>=1 -- nya kort saknar intervall och kan inte "
                         "mognadsordnas.")
+    p.add_argument("--senare", action="store_true",
+                   help="hämta BARA korten märkta v3_prio::senare (de som "
+                        "lagts undan för att de kostar mer än de ger på "
+                        "första försöket). Utan flaggan utesluts de.")
     p.add_argument("--dump", action="store_true", help="skriv även en läsbar .txt")
     p.add_argument("--ids-fil", metavar="FIL",
                    help="JSON-lista från v3_urgency.py: ta exakt dessa kort, i "
@@ -298,7 +310,7 @@ def main():
         print(f"Läste {len(cards)} kort ur {args.ids_fil} "
               f"(poäng {rankade[0]['poang']} ned till {rankade[-1]['poang']}).")
     else:
-        cards = hamta_pool(antal, args.spar, args.ko, args.ordning)
+        cards = hamta_pool(antal, args.spar, args.ko, args.ordning, args.senare)
     if not cards:
         print(f"Poolen för spår '{args.spar}' (kö: {args.ko}) är tom.")
         return

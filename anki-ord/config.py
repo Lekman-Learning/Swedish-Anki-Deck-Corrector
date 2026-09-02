@@ -225,6 +225,20 @@ V3_TAG_PREFIX = "v3_granskad"                  # v3_granskad::YYYY-MM-DD
 # märkta. Därför hämtar hamta_pool() prio-korten först och fyller bara på
 # med den vanliga poolen om det finns plats kvar.
 PRIO_TAG_HOG = "v3_prio::hog"
+
+# Motsatsen till prio::hog (2026-09-02, Adams regel). Kort som INTE gar att
+# skriva klart pa forsta forsoket -- for manga betydelser, ingen SO-artikel,
+# underkant i blindgranskningen -- flyttas hit i stallet for att rattas pa
+# plats. Skalet ar matt pa 2/9-batchen: kort med 5+ SO-betydelser underkandes
+# i 44 % av fallen mot 8 % for kort med 1-2 betydelser, och en omskrivning
+# kostar en hel granskningsomgang (~1,15 USD / 25 kort). Att gora de enkla
+# forst ger alltsa fler fardiga kort per krona.
+#
+# Samma princip som prio::hog: taggen maste andra URVALET. hamta_pool()
+# utesluter den darfor ur bada hamtningarna -- annars ligger de svara korten
+# kvar i due-ordningen och blockerar exakt de platser de skulle lamna.
+# De hamtas i stallet medvetet, med `--senare`, nar det finns tid for dem.
+PRIO_TAG_SENARE = "v3_prio::senare"
 DAGSBATCH_STORLEK = 125                        # spår A: legacy -> v2, per dag
 OMGRANSKNING_STORLEK = 25                      # spår B: redan släppta v2-kort, per dag
 # Spår B är kort Adam pluggar JUST NU och som skrevs under den gamla
