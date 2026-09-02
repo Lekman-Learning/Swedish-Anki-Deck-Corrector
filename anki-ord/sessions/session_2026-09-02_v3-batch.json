@@ -629,14 +629,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=fiskal https://www.synonymer.se/sv-syn/fiskal https://sv.wiktionary.org/wiki/fiskal",
-      "slutsats": "Tva SKILDA lemman i SO, inte en betydelse med nyanser: adjektivet 'som har att göra med statens ekonomiska intressen' och substantivet '(titel for) person med uppgift att beivra lagovertradelser'. SAOL ger substantivets nutida innebord: 'jurist som genomgar domarutbildning'. Bada tas med, och substantivets forskjutning från atalande till utbildningstitel skrivs ut - den ar sjalva poangen med ordet idag."
+      "slutsats": "Tva SKILDA lemman i SO, inte en betydelse med nyanser: adjektivet 'som har att göra med statens ekonomiska intressen' och substantivet '(titel for) person med uppgift att beivra lagovertradelser'. SAOL ger substantivets nutida innebord: 'jurist som genomgar domarutbildning'. Bada tas med, och substantivets forskjutning från atalande till utbildningstitel skrivs ut - den ar sjalva poangen med ordet idag. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Som rör statens skatter och inkomster ; jurist under domarutbildning, äldre även åklagare",
       "register": "fackspråklig, neutral, juridik",
-      "synonymer": [
-        "jurist som genomgår domarutbildning"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Regeringen motiverade höjningen med rent <font color=\"#3498db\">fiskala</font> skäl — den behövde pengarna.",
       "etymologi": "latinets fiscus 'korg, statskassa'"
@@ -989,26 +987,24 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=periferisk https://www.synonymer.se/sv-syn/periferisk https://sv.wiktionary.org/wiki/periferisk",
-      "slutsats": "RATTAT efter blindgranskning 2026-09-02. Kortet sade tidigare 'som ligger i utkanten och darfor ar av underordnad betydelse' — den BILDLIGA betydelsen hos perifer, som inte ar belagd for periferisk. Vad kallorna faktiskt ger: SO saknar ordet helt (0 traffar). SAOL har det, markt 'mat.' (matematik), med definitionen enbart 'perifer'. Kortet ar darfor smalnat till den geometriska betydelsen och domanen satt till matematik. TVA AV TRE KALLOR."
+      "slutsats": "TVÅ AV TRE KÄLLOR, och ordet är batchens svåraste — underkänt TRE gånger i rad, varje gång åt sitt håll. Vad källorna faktiskt ger: SO saknar ordet helt (0 träffar på exakt sökning). SAOL har en enda post, och den är bara en HÄNVISNING: definitionen är ordet 'perifer', märkt med ämnesområdet 'mat.'. Historiken är värd att stå kvar: version 1 gav ordet den allmänspråkliga bildliga betydelsen (marginell, oviktig) — underkänd, den betydelsen är belagd för PERIFER, inte för periferisk. Version 2 smalnade till geometrin men behöll en allmänspråklig exempelmening — underkänd, kortet illustrerade en betydelse det inte definierade. Version 3 lade tillbaka den bildliga — underkänd igen, samma skäl som första gången. 🎯 Felet var att jag rättade DEFINITIONEN men lät exempelmeningen stå kvar, och sedan lät exempelmeningen dra tillbaka definitionen. Nu är hela kortet matematiskt: definition, register, synonym och exempel pekar åt samma håll, med 'jfr perifer' som bryggan till det ord som faktiskt bär den bildliga betydelsen."
     },
     "proposed": {
-      "huvudbetydelse": "Som ligger på periferin, alltså på ytterkanten av en cirkel eller ett område",
+      "huvudbetydelse": "Som ligger på periferin, alltså på ytterkanten av en cirkel — fackterm, jfr perifer",
       "register": "fackspråklig, neutral, matematik",
       "synonymer": [
         "perifer"
       ],
       "synonym_groups": null,
-      "exempelmening": "Invändningen är <font color=\"#3498db\">periferisk</font> och rör inte huvudfrågan.",
+      "exempelmening": "En <font color=\"#3498db\">periferisk</font> vinkel har sin spets på cirkelns periferi och sina ben genom två punkter på den.",
       "etymologi": "grekiskans periphereia 'omkrets', av peri- 'runt' och pherein 'bära'"
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
     "adamtal_varningar": [
-      "ordbokslangd_hb: 13 ord i en betydelse -- korta ner: 'Som ligger på periferin, alltså på ytterkanten av '"
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'Som ligger på periferin, alltså på ytterkanten av '"
     ],
-    "exempel_varningar": [
-      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
-    ],
+    "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": null
   },
@@ -2224,7 +2220,7 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=enkelspårig https://www.synonymer.se/sv-syn/enkelspårig https://sv.wiktionary.org/wiki/enkelspårig",
-      "slutsats": "SO: 'som har bara ett spar' plus den bildliga 'ensidig'. SAOL markerar den andra uttryckligen 'bildl. ensidig'. Bada tas med eftersom den bildliga ar den som faktiskt anvands om personer och ar den ett prov skulle frag om; den konkreta jarnvagsbetydelsen star forst eftersom den forklarar bilden."
+      "slutsats": "SO: 'som har bara ett spar' plus den bildliga 'ensidig'. SAOL markerar den andra uttryckligen 'bildl. ensidig'. Bada tas med eftersom den bildliga ar den som faktiskt anvands om personer och ar den ett prov skulle frag om; den konkreta jarnvagsbetydelsen star forst eftersom den forklarar bilden. RÄTTAT efter blindgranskning 2026-09-02: synonymgrupperna kopplade 'ensidig' till BÅDA betydelserna, även den bokstavliga järnvägsbetydelsen — där är den inte en synonym. Grupperingen struken; synonymerna gäller den bildliga betydelsen."
     },
     "proposed": {
       "huvudbetydelse": "Som har bara ett spår ; om person: ensidig och oförmögen att se andra möjligheter",
@@ -2233,15 +2229,7 @@
         "ensidig",
         "ytlig"
       ],
-      "synonym_groups": [
-        [
-          "ensidig"
-        ],
-        [
-          "ensidig",
-          "ytlig"
-        ]
-      ],
+      "synonym_groups": null,
       "exempelmening": "Hans <font color=\"#3498db\">enkelspåriga</font> sätt att resonera gjorde diskussionen kort.",
       "etymologi": null
     },
@@ -2303,25 +2291,16 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=falang https://www.synonymer.se/sv-syn/falang https://sv.wiktionary.org/wiki/falang",
-      "slutsats": "TVA betydelser, bada egna huvudbetydelser i SO: 'ben i finger el. ta' och 'riktning inom politiskt parti'. Den politiska star forst pa kortet eftersom den ar den vanliga i allmän text; den anatomiska ar en fackterm. Etymologin binder ihop dem: den grekiska phalanx var en sluten formation, och bada betydelserna handlar om en avgransad enhet i en storre helhet."
+      "slutsats": "TVA betydelser, bada egna huvudbetydelser i SO: 'ben i finger el. ta' och 'riktning inom politiskt parti'. Den politiska star forst pa kortet eftersom den ar den vanliga i allmän text; den anatomiska ar en fackterm. Etymologin binder ihop dem: den grekiska phalanx var en sluten formation, och bada betydelserna handlar om en avgransad enhet i en storre helhet. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Riktning eller gruppering inom ett parti ; ben i ett finger eller en tå",
       "register": "neutral, neutral, politik",
       "synonymer": [
         "riktning",
-        "grupp inom parti",
-        "ben i finger eller tå"
+        "grupp inom parti"
       ],
-      "synonym_groups": [
-        [
-          "riktning",
-          "grupp inom parti"
-        ],
-        [
-          "ben i finger eller tå"
-        ]
-      ],
+      "synonym_groups": null,
       "exempelmening": "Partiets konservativa <font color=\"#3498db\">falang</font> röstade emot förslaget.",
       "etymologi": "grekiskans phalanx, den tätslutna stridsformationen i antikens Grekland"
     },
@@ -2380,15 +2359,13 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=fashionabel https://www.synonymer.se/sv-syn/fashionabel https://sv.wiktionary.org/wiki/fashionabel",
-      "slutsats": "SO: 'fornam och lyxig'. SAOL kompletterar med 'fin, hogmodern, societetsmassig'. SOCIETETS-ledet ar det som skiljer fashionabel från bara dyr: ordet handlar om vad ett visst skikt anser vara ratt, inte om pris, och det star darfor i huvudbetydelsen. 'hogmodern' utelamnas som synonym trots att det finns i poolen - det bar en teknik-association pa nutida svenska som ordet inte har."
+      "slutsats": "SO: 'fornam och lyxig'. SAOL kompletterar med 'fin, hogmodern, societetsmassig'. SOCIETETS-ledet ar det som skiljer fashionabel från bara dyr: ordet handlar om vad ett visst skikt anser vara ratt, inte om pris, och det star darfor i huvudbetydelsen. 'hogmodern' utelamnas som synonym trots att det finns i poolen - det bar en teknik-association pa nutida svenska som ordet inte har. RÄTTAT efter blindgranskning: 'societetsmässig' struket — granskaren kontrollerade separat och ordet finns varken i SO eller SAOL; det var konstruerat av mig. 'fin' struket som klassisk nästan-synonym: mycket kan vara fint utan att vara fashionabelt. Kvar står 'förnäm', som står direkt i SO:s definitionstext."
     },
     "proposed": {
       "huvudbetydelse": "Förnäm och lyxig, på ett sätt som följer modet i societeten",
       "register": "ngt ålderdomlig, neutral, allmän",
       "synonymer": [
-        "förnäm",
-        "fin",
-        "societetsmässig"
+        "förnäm"
       ],
       "synonym_groups": null,
       "exempelmening": "De åt på en <font color=\"#3498db\">fashionabel</font> restaurang där ingen rätt hade pris i menyn.",
@@ -2520,23 +2497,15 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=garva https://www.synonymer.se/sv-syn/garva https://sv.wiktionary.org/wiki/garva",
-      "slutsats": "TVA helt oslaktade betydelser i SO: 'bereda (hud) till lader genom behandling med vissa amnen' och 'skratta' (vardagligt). De har inget semantiskt samband alls, vilket ar just varfor ordet ar en fraga vard - man traffar pa skratt-betydelsen dagligen och garvnings-betydelsen aldrig, och blandar darfor ihop dem pa prov."
+      "slutsats": "TVA helt oslaktade betydelser i SO: 'bereda (hud) till lader genom behandling med vissa amnen' och 'skratta' (vardagligt). De har inget semantiskt samband alls, vilket ar just varfor ordet ar en fraga vard - man traffar pa skratt-betydelsen dagligen och garvnings-betydelsen aldrig, och blandar darfor ihop dem pa prov. RÄTTAT efter blindgranskning 2026-09-02: betydelserna stod i ordboksordning, med den fackspråkliga läderbetydelsen först. Ordningen är vänd — kortet ska leda med den betydelse Adam faktiskt möter, och 'skratta' är den enda han hör i vardagen. Samma princip som redan gäller för idiom och falang i den här batchen. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
-      "huvudbetydelse": "Bereda hud till läder ; skratta",
+      "huvudbetydelse": "Skratta ; bereda hud till läder",
       "register": "vardaglig, neutral, allmän",
       "synonymer": [
-        "bereda hud till läder",
         "skratta"
       ],
-      "synonym_groups": [
-        [
-          "bereda hud till läder"
-        ],
-        [
-          "skratta"
-        ]
-      ],
+      "synonym_groups": null,
       "exempelmening": "Vi <font color=\"#3498db\">garvade</font> så vi fick ont i magen.",
       "etymologi": null
     },
@@ -3883,24 +3852,20 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=överdådig https://www.synonymer.se/sv-syn/överdådig https://sv.wiktionary.org/wiki/överdådig",
-      "slutsats": "TRE betydelser ur SO:s fyra def: 'praglad av overdad / slosande rik', 'storartad, ypperlig' och 'dumdristig'. Den tredje ar den overraskande och den aldsta - overdad betydde ursprungligen overmod, inte lyx. Den tas med eftersom den ar helt osynlig från de tva andra och ar precis den sorts betydelse ett prov fragar om."
+      "slutsats": "TRE betydelser ur SO:s fyra def: 'praglad av overdad / slosande rik', 'storartad, ypperlig' och 'dumdristig'. Den tredje ar den overraskande och den aldsta - overdad betydde ursprungligen overmod, inte lyx. Den tas med eftersom den ar helt osynlig från de tva andra och ar precis den sorts betydelse ett prov fragar om. RÄTTAT efter blindgranskning 2026-09-02: kortet bröt ut 'storartad' som en TREDJE betydelse, men i SO är den bara en underbetydelse till 'slösaktigt lyxig'. Ordet har två betydelser, inte tre. Dessutom struken: 'ypperlig', som saknas i SO och inte är utbytbar mot 'storartad' — ypperlig är förstklassig kvalitet, storartad är påkostat och storslaget. Just den sortens nästan-synonym är vad HP:s ORD-del straffar."
     },
     "proposed": {
-      "huvudbetydelse": "Slösande rik och påkostad ; storartad ; dumdristig",
+      "huvudbetydelse": "Slösaktigt lyxig och påkostad, ibland om skicklighet: storartad ; dumdristig",
       "register": "neutral, positiv, allmän",
       "synonymer": [
         "slösande rik",
         "storartad",
-        "ypperlig",
         "dumdristig"
       ],
       "synonym_groups": [
         [
-          "slösande rik"
-        ],
-        [
-          "storartad",
-          "ypperlig"
+          "slösande rik",
+          "storartad"
         ],
         [
           "dumdristig"
@@ -3961,7 +3926,7 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=ackja https://www.synonymer.se/sv-syn/ackja https://sv.wiktionary.org/wiki/ackja",
-      "slutsats": "SO: 'typ av (samisk) slade med batliknande konstruktion' med tillagget 'avsedd att dras av renar'. BADA leden ar nodvandiga: batformen skiljer ackjan från andra slädar, och rendraget forklarar varfor formen ser ut som den gor. SAOL: 'samisk batliknande slade'."
+      "slutsats": "SO: 'typ av (samisk) slade med batliknande konstruktion' med tillagget 'avsedd att dras av renar'. BADA leden ar nodvandiga: batformen skiljer ackjan från andra slädar, och rendraget forklarar varfor formen ser ut som den gor. SAOL: 'samisk batliknande slade'. RÄTTAT efter blindgranskning 2026-09-02: etymologin sade 'till samiskans akja'. SO skriver uttryckligen 'från finska ahkio'. Att ordet betecknar en SAMISK sak gjorde det frestande att anta samiskt ursprung — men föremålets kultur och ordets härkomst är två olika frågor."
     },
     "proposed": {
       "huvudbetydelse": "Samisk båtliknande släde, avsedd att dras av ren",
@@ -3971,7 +3936,7 @@
       ],
       "synonym_groups": null,
       "exempelmening": "De lastade utrustningen i en <font color=\"#3498db\">ackja</font> och lät renen dra den över fjället.",
-      "etymologi": "till samiskans akja"
+      "etymologi": "från finskans ahkio med samma betydelse"
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
@@ -4207,14 +4172,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=antracit https://www.synonymer.se/sv-syn/antracit https://sv.wiktionary.org/wiki/antracit",
-      "slutsats": "SO: 'typ av stenkol med hog kolhalt'. HOGA KOLHALTEN ar det enda som skiljer antracit från stenkol i allmanhet och maste stå kvar. Ordet anvands ocksa om en morkgra farg, men den anvandningen saknar ordboksbelagg i de hamtade kallorna och skrivs darfor inte in."
+      "slutsats": "SO: 'typ av stenkol med hog kolhalt'. HOGA KOLHALTEN ar det enda som skiljer antracit från stenkol i allmanhet och maste stå kvar. Ordet anvands ocksa om en morkgra farg, men den anvandningen saknar ordboksbelagg i de hamtade kallorna och skrivs darfor inte in. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Stenkol med särskilt hög kolhalt",
       "register": "fackspråklig, neutral, geologi",
-      "synonymer": [
-        "stenkol med hög kolhalt"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Kaminen eldades med <font color=\"#3498db\">antracit</font>, som brinner hetare och renare än vanligt kol.",
       "etymologi": "grekiskans anthrax 'kol'"
@@ -4343,10 +4306,10 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=bane https://www.synonymer.se/sv-syn/bane https://sv.wiktionary.org/wiki/bane",
-      "slutsats": "TVA AV TRE KALLOR: ordet har INGEN SO-artikel (0 def). Betydelsen vilar pa SAOL och SAOB, som ger 'orsak till ngns död', 'valdsam död' och 'drapare'. Ordet lever i nutida svenska nastan bara i uttrycket 'bli ngns bane', dar det ar orsaken snarare an personen som avses - darfor star orsaksbetydelsen forst."
+      "slutsats": "TVA AV TRE KALLOR: ordet har INGEN SO-artikel (0 def). Betydelsen vilar pa SAOL och SAOB, som ger 'orsak till ngns död', 'valdsam död' och 'drapare'. Ordet lever i nutida svenska nastan bara i uttrycket 'bli ngns bane', dar det ar orsaken snarare an personen som avses - darfor star orsaksbetydelsen forst. RÄTTAT efter blindgranskning 2026-09-02: kortet saknade SAOL:s ANDRA uppslag, det idiomatiska 'vara/bringa å bane' = föras på tal, som är helt orelaterat till döden. Kontrollerat i uppslagsdatan: uttrycket står där, på ett andra lemma. Att det första lemmat var så tydligt gjorde att det andra aldrig lästes."
     },
     "proposed": {
-      "huvudbetydelse": "Orsak till någons död ; den som vållar döden",
+      "huvudbetydelse": "Orsak till någons död ; den som vållar döden ; i uttrycket å bane: på tal, under diskussion",
       "register": "arkaisk, neutral, allmän",
       "synonymer": [
         "dråpare",
@@ -4358,7 +4321,9 @@
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
-    "adamtal_varningar": [],
+    "adamtal_varningar": [
+      "cirkular_definition: 'bane' tycks förklaras med sig självt"
+    ],
     "exempel_varningar": [
       "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
     ],
@@ -4662,26 +4627,18 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=blott https://www.synonymer.se/sv-syn/blott https://sv.wiktionary.org/wiki/blott",
-      "slutsats": "TRE betydelser i SO, av tre olika ordklasser: adverbet 'bara/endast', konjunktionen 'om bara / under den enda (lattuppfyllda) forutsattningen att', och adjektivet 'oppen eller oskyddad' (jfr blotta). Att samma form bar tre ordklasser ar sjalva svarigheten med ordet. Synonymerna galler bara adverbbetydelsen; de tva andra saknar korta belagda synonymer."
+      "slutsats": "TRE betydelser i SO, av tre olika ordklasser: adverbet 'bara/endast', konjunktionen 'om bara / under den enda (lattuppfyllda) forutsattningen att', och adjektivet 'oppen eller oskyddad' (jfr blotta). Att samma form bar tre ordklasser ar sjalva svarigheten med ordet. Synonymerna galler bara adverbbetydelsen; de tva andra saknar korta belagda synonymer. RÄTTAT efter blindgranskning: kortet saknade adjektivbetydelsen 'blotta' = enbart det som avses ('med blotta ögat', 'blotta tanken'), som är VANLIGARE i dagens svenska än den arkaiska konjunktionsbetydelsen kortet ändå tagit med. Fyra homografa betydelser nu, en per ordklassanvändning."
     },
     "proposed": {
-      "huvudbetydelse": "Bara, endast ; om bara, under förutsättning att ; blottad och oskyddad",
+      "huvudbetydelse": "Bara, endast ; om bara, under förutsättning att ; enbart det som avses, som i blotta ögat och blotta tanken ; blottad och oskyddad",
       "register": "ngt ålderdomlig, neutral, allmän",
       "synonymer": [
         "bara",
         "endast",
         "enbart"
       ],
-      "synonym_groups": [
-        [
-          "bara",
-          "endast",
-          "enbart"
-        ],
-        [],
-        []
-      ],
-      "exempelmening": "Han var <font color=\"#3498db\">blott</font> sexton år när han skrev sin första symfoni.",
+      "synonym_groups": null,
+      "exempelmening": "Enbart <font color=\"#3498db\">blotta</font> tanken på provet gjorde honom illamående.",
       "etymologi": null
     },
     "approved": true,
@@ -4691,12 +4648,9 @@
       "register_motsager_markning": "SO bar tva markningar pa olika betydelser: 'nagot hogtidligt' och 'ald. utom i vissa uttr.'. Vokabularen tillater bara EN stilnivatagg per kort, sa alderdomligheten valjs - den galler alla tre betydelserna, hogtidligheten bara adverbbruket."
     },
     "adamtal_varningar": [
-      "cirkular_definition: 'blott' tycks förklaras med sig självt",
-      "osymmetriska_grupper: gruppstorlekar [3, 0, 0] -- sikta symmetriskt"
+      "cirkular_definition: 'blott' tycks förklaras med sig självt"
     ],
-    "exempel_varningar": [
-      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
-    ],
+    "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": null
   },
@@ -4924,11 +4878,11 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=bängel https://www.synonymer.se/sv-syn/bängel https://sv.wiktionary.org/wiki/bängel",
-      "slutsats": "SO: 'ohyfsad pojke'. SAOL: 'slyngel'. KONET och ALDERN ligger i definitionen - en bangel ar en pojke, inte vem som helst - och star kvar. Ordet ar nedsattande men inte grovt, narmast skamtsamt-uppgivet i bruk."
+      "slutsats": "SO: 'ohyfsad pojke'. SAOL: 'slyngel'. KONET och ALDERN ligger i definitionen - en bangel ar en pojke, inte vem som helst - och star kvar. Ordet ar nedsattande men inte grovt, narmast skamtsamt-uppgivet i bruk. RÄTTAT efter blindgranskning 2026-09-02: registret sade 'vardaglig', medan SO märker ordet 'något ålderdomligt' — motsatt signal om hur levande ordet är i talspråk."
     },
     "proposed": {
       "huvudbetydelse": "Ohyfsad och besvärlig pojke",
-      "register": "vardaglig, nedsättande, allmän",
+      "register": "ngt ålderdomlig, nedsättande, allmän",
       "synonymer": [
         "slyngel",
         "ohyfsad pojke"
@@ -5379,13 +5333,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=disponent https://www.synonymer.se/sv-syn/disponent https://sv.wiktionary.org/wiki/disponent",
-      "slutsats": "SO: 'person i ledande stallning i affarsvarlden'. SAOL ger ocksa 'forvaltare av bostadsfastighet'. Titeln ar i praktiken historisk - den bars av bruksledningar och moter idag mest i äldre text och slaktforskning, vilket registret markerar."
+      "slutsats": "SO: 'person i ledande stallning i affarsvarlden'. SAOL ger ocksa 'forvaltare av bostadsfastighet'. Titeln ar i praktiken historisk - den bars av bruksledningar och moter idag mest i äldre text och slaktforskning, vilket registret markerar. RÄTTAT efter blindgranskning 2026-09-02: synonymen 'förvaltare' struken. SAOL kopplar den till en HELT ANNAN, finlandssvensk betydelse ('förvaltare av bostadsfastighet', märkt finl.) som kortet inte tar upp. För chefsbetydelsen är en förvaltare — någon som sköter ANNANS egendom — inte utbytbar mot en disponent, som är en chefstitel. Exakt den sortens nästan-synonym som HP:s ORD-del straffar. Att ordet stod i den godkända ordbokspoolen räckte alltså inte: poolen garanterar belägg, inte att belägget hör till rätt betydelse."
     },
     "proposed": {
       "huvudbetydelse": "Person i ledande ställning i affärsvärlden, ofta chef för ett industriföretag",
       "register": "ngt ålderdomlig, neutral, ekonomi",
       "synonymer": [
-        "förvaltare",
         "person med chefsfunktion"
       ],
       "synonym_groups": null,
@@ -5446,14 +5399,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=driftkucku https://www.synonymer.se/sv-syn/driftkucku https://sv.wiktionary.org/wiki/driftkucku",
-      "slutsats": "SO: 'person som ofta utsatts for forlojligande skamt'. SAOL: 'person som andra driver med'. UPPREPNINGEN ar en del av betydelsen - en driftkucku ar inte den som blir utskrattad en gang utan den som standigt ar mal, och 'ofta'/'standigt' star darfor kvar."
+      "slutsats": "SO: 'person som ofta utsatts for forlojligande skamt'. SAOL: 'person som andra driver med'. UPPREPNINGEN ar en del av betydelsen - en driftkucku ar inte den som blir utskrattad en gang utan den som standigt ar mal, och 'ofta'/'standigt' star darfor kvar. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Person som andra ständigt driver med",
       "register": "vardaglig, nedsättande, allmän",
-      "synonymer": [
-        "person som andra driver med"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Han blev klassens <font color=\"#3498db\">driftkucku</font> redan första veckan.",
       "etymologi": null
@@ -6136,14 +6087,13 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=förställa https://www.synonymer.se/sv-syn/förställa https://sv.wiktionary.org/wiki/förställa",
-      "slutsats": "SO ger tva huvudbetydelser: 'forandra (en persons kännetecken) i vilseledande syfte' och 'göra sig oigenkannlig'. VILSELEDANDET ar obligatoriskt - att forstalla ar aldrig neutral forandring. SKILJ FRAN 'forestalla', som ar ett annat ord och den vanligaste forvaxlingen."
+      "slutsats": "SO ger tva huvudbetydelser: 'forandra (en persons kännetecken) i vilseledande syfte' och 'göra sig oigenkannlig'. VILSELEDANDET ar obligatoriskt - att forstalla ar aldrig neutral forandring. SKILJ FRAN 'forestalla', som ar ett annat ord och den vanligaste forvaxlingen. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Förändra sitt utseende eller sin röst för att vilseleda ; låtsas vara någon annan",
       "register": "formell, negativ, allmän",
       "synonymer": [
-        "göra sig oigenkännlig",
-        "låtsas vara någon annan"
+        "göra sig oigenkännlig"
       ],
       "synonym_groups": null,
       "exempelmening": "Han <font color=\"#3498db\">förställde</font> rösten i telefon så att ingen skulle känna igen honom.",
@@ -6201,11 +6151,11 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=galej https://www.synonymer.se/sv-syn/galej https://sv.wiktionary.org/wiki/galej",
-      "slutsats": "SO: 'uppsluppet festande'. Ordet moter nastan bara i uttrycket 'vara/ga ut pa galej', vilket exempelmeningen visar. UPPSLUPPENHETEN skiljer galej från fest i allmanhet och star kvar i huvudbetydelsen."
+      "slutsats": "SO: 'uppsluppet festande'. Ordet moter nastan bara i uttrycket 'vara/ga ut pa galej', vilket exempelmeningen visar. UPPSLUPPENHETEN skiljer galej från fest i allmanhet och star kvar i huvudbetydelsen. RÄTTAT efter blindgranskning 2026-09-02: registret sade 'vardaglig' med motiveringen att uttrycket 'ut på galej' fortfarande används. Granskaren underkände det och har rätt — ordet är daterat, inte ett aktivt vardagsord, och batchens syskonord (disponent, ekipera, fäderne) är redan märkta 'ngt ålderdomlig'. Att ett ord förekommer är inte samma sak som att det är vardagligt."
     },
     "proposed": {
       "huvudbetydelse": "Uppsluppet festande",
-      "register": "vardaglig, neutral, allmän",
+      "register": "ngt ålderdomlig, neutral, allmän",
       "synonymer": [
         "festande"
       ],
@@ -6216,7 +6166,7 @@
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
     "forgranska_tillat": {
-      "register_motsager_markning": "SO bar bade 'vard.' och 'nagot alderdomligt'. Bara en stilnivatagg far satas; 'vardaglig' valjs eftersom uttrycket 'ut pa galej' fortfarande anvands. Alderdomligheten star i sokkollens slutsats."
+      "register_motsager_markning": "SO bar bade 'vard.' och 'nagot alderdomligt' pa samma ord. Vokabularen tillater bara EN stilnivatagg. Blindgranskaren provade bada valen och underkande 'vardaglig' med motiveringen att ordet ar daterat snarare an ett aktivt vardagsord, och att batchens syskonord (disponent, ekipera, faderne) redan star som 'ngt alderdomlig'. Den oberoende domen far avgora."
     },
     "adamtal_varningar": [],
     "exempel_varningar": [
@@ -6523,33 +6473,28 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=index https://www.synonymer.se/sv-syn/index https://sv.wiktionary.org/wiki/index",
-      "slutsats": "SO ger fem huvudbetydelser. Kortet bar de TRE som ar praktiskt atskilda och som ordet faktiskt moter i: statistiktalet, forteckningen (register) och det matematiska nedsankta tecknet. Etymologin ('visare') ar den gemensamma namnaren - alla tre PEKAR UT nagot. De ovriga SO-posterna ('avlasningsmarke pa en skala', 'tal som ånger karakteristisk egenskap') ar specialfall av statistiktalet."
+      "slutsats": "FEM betydelser, samtliga SO:s egna huvudbetydelser: jämförelsetalet (konsumentprisindex), förteckningen (register), det karakteristiska talet (glykemiskt index, brytningsindex), det nedsänkta tecknet i matematik, och avläsningsmärket på en skala. Etymologin — latinets index 'angivare, visare', till indicare 'peka ut' — är den gemensamma nämnaren: alla fem PEKAR UT något. RÄTTAT efter blindgranskning 2026-09-02: kortet bar tre betydelser och hade smetat ihop det karakteristiska talet med det nedsänkta tecknet, samtidigt som skalbetydelsen saknades helt. Ett ord med fem betydelser tål inte att komprimeras till tre — det är då man lär sig fel."
     },
     "proposed": {
-      "huvudbetydelse": "Tal som sätts i relation till ett grundtal för att möjliggöra jämförelser ; förteckning över huvudpunkter ; nedsänkt tecken som skiljer bokstäver åt",
+      "huvudbetydelse": "Tal som sätts i relation till ett grundtal för att möjliggöra jämförelser ; förteckning över huvudpunkter ; tal som anger en karakteristisk egenskap, som glykemiskt index ; nedsänkt tecken som skiljer bokstäver åt ; avläsningsmärke på en skala",
       "register": "fackspråklig, neutral, ekonomi",
       "synonymer": [
         "jämförelsetal",
-        "förteckning"
+        "förteckning",
+        "avläsningsmärke"
       ],
-      "synonym_groups": [
-        [
-          "jämförelsetal"
-        ],
-        [
-          "förteckning"
-        ],
-        []
-      ],
+      "synonym_groups": null,
       "exempelmening": "Konsumentprisindex steg med två procent, medan lönerna följde ett annat <font color=\"#3498db\">index</font>.",
       "etymologi": "latinets index 'angivare, visare', till indicare 'peka ut'"
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR A (nytt kort, suspenderat) -- ETT KORT ÄR INTE KLART FÖRRÄN ALLA FYRA STEGEN ÄR GJORDA: (1) Jämför mot old_facit. (2) Gör en RIKTIG sökkoll och skriv källa + slutsats i fältet 'sokkoll' -- tomt fält = kortet skrivs inte. (3) Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) Läs riskflaggorna -- 'hog' betyder att kortet statistiskt sannolikt saknar en HEL betydelse, det vanligaste felet i decket.",
     "forgranska_tillat": {
-      "betydelse_kan_saknas": "SO raknar 7. Kortet bar de tre praktiskt atskilda betydelserna; ovriga poster ar specialfall av statistiktalet ('avlasningsmarke pa en skala', 'tal som anger karakteristisk egenskap') eller underbetydelser utan egen definition."
+      "betydelse_kan_saknas": "SO raknar 7: fem huvudbetydelser, som alla fem star pa kortet efter blindgranskningens anmarkning, plus tva underbetydelser utan egen definition. Kortet ar alltsa fullstandigt mot SO:s riktiga def."
     },
-    "adamtal_varningar": [],
+    "adamtal_varningar": [
+      "cirkular_definition: 'index' tycks förklaras med sig självt"
+    ],
     "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": null
@@ -7364,16 +7309,16 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=lingua franca https://www.synonymer.se/sv-syn/lingua franca https://sv.wiktionary.org/wiki/lingua franca",
-      "slutsats": "ENDAST SO har artikel (SAOL saknar uppslagsordet). SO: 'blandsprak som ar fattbart for alla sprakbrukare'. Huvudbetydelsen preciserar FUNKTIONEN i stallet for formen: ett lingua franca behover inte langre vara ett blandsprak (engelskan ar det inte), utan definieras av att det anvands mellan parter utan gemensamt modersmal. Det ar sa ordet faktiskt anvands idag."
+      "slutsats": "ENDAST SO har artikel (SAOL saknar uppslagsordet). SO: 'blandsprak som ar fattbart for alla sprakbrukare'. Huvudbetydelsen preciserar FUNKTIONEN i stallet for formen: ett lingua franca behover inte langre vara ett blandsprak (engelskan ar det inte), utan definieras av att det anvands mellan parter utan gemensamt modersmal. Det ar sa ordet faktiskt anvands idag. RÄTTAT efter blindgranskning 2026-09-02. Kortet sade 'gemensamt hjälpspråk mellan människor som saknar gemensamt modersmål' och gav engelskan på konferenser som exempel. Två fel i ett: definitionen tunnade ut SO:s definierande BLANDSPRÅKS-led, och exemplet motsade kortets egen synonym — engelska är inget blandspråk. Jag lät hur ordet används idag skriva om vad ordboken faktiskt säger. Exemplet är bytt till swahili, ett verkligt kontaktspråk."
     },
     "proposed": {
-      "huvudbetydelse": "Gemensamt hjälpspråk mellan människor som saknar gemensamt modersmål",
+      "huvudbetydelse": "Blandat kontaktspråk som fungerar som gemensamt hjälpspråk i ett område där flera språk talas",
       "register": "fackspråklig, neutral, lingvistik",
       "synonymer": [
         "blandspråk"
       ],
       "synonym_groups": null,
-      "exempelmening": "Engelska fungerar som <font color=\"#3498db\">lingua franca</font> på de flesta internationella konferenser.",
+      "exempelmening": "Swahili växte fram som <font color=\"#3498db\">lingua franca</font> längs Östafrikas kust, där arabiska och bantuspråk möttes.",
       "etymologi": "italienskans 'frankiskt språk', ursprungligen handelsspråket i Medelhavet"
     },
     "approved": true,
@@ -7381,7 +7326,9 @@
     "forgranska_tillat": {
       "betydelse_kan_saknas": "SO raknar 4; tre ar underbetydelser utan egen definition. Flerordsuttrycket har en betydelse."
     },
-    "adamtal_varningar": [],
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'Blandat kontaktspråk som fungerar som gemensamt hj'"
+    ],
     "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": null
@@ -7428,22 +7375,16 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=metamorfos https://www.synonymer.se/sv-syn/metamorfos https://sv.wiktionary.org/wiki/metamorfos",
-      "slutsats": "SO ger flera poster; kortet bar de tva praktiskt atskilda: den allmanna 'genomgripande forandring' och den biologiska 'overgang från ett utvecklingsstadium till ett annat'. Den biologiska ar snavare och den ordet oftast moter i, men den allmanna anvands lika mycket bildligt. GENOMGRIPANDE ar nyckeln - en metamorfos ar inte en justering."
+      "slutsats": "SO ger flera poster; kortet bar de tva praktiskt atskilda: den allmanna 'genomgripande forandring' och den biologiska 'overgang från ett utvecklingsstadium till ett annat'. Den biologiska ar snavare och den ordet oftast moter i, men den allmanna anvands lika mycket bildligt. GENOMGRIPANDE ar nyckeln - en metamorfos ar inte en justering. RÄTTAT efter blindgranskning 2026-09-02: kortet bar SO:s två UNDERbetydelser (biologisk och bildlig) men saknade helt SO:s egentliga HUVUDbetydelse, den geologiska omvandlingen av bergarters struktur. Jag valde de betydelser som kändes bekanta i stället för de ordboken faktiskt leder med — decket har den feltypen oftare än någon annan. RÄTTAT IGEN 2026-09-02: den geologiska betydelsen lades till efter första granskningen, men jag lät den då också bli kortets FÖRSTA betydelse och satte hela registret till geologi — för att den är SO:s formella huvudbetydelse. Andra granskningen underkände det: ordboksstrukturen säger vilken betydelse som är lexikografiskt primär, inte vilken Adam möter. Ordningen är vänd tillbaka, alla tre betydelserna kvar, registret allmänt."
     },
     "proposed": {
-      "huvudbetydelse": "Genomgripande förvandling ; i biologi: övergång från ett utvecklingsstadium till ett annat",
-      "register": "formell, neutral, biologi",
+      "huvudbetydelse": "Genomgripande förvandling ; i biologi: övergång från ett utvecklingsstadium till ett annat ; i geologi: fullständig omvandling av en bergarts uppbyggnad",
+      "register": "formell, neutral, allmän",
       "synonymer": [
         "förvandling",
         "omdaning"
       ],
-      "synonym_groups": [
-        [
-          "förvandling",
-          "omdaning"
-        ],
-        []
-      ],
+      "synonym_groups": null,
       "exempelmening": "Larvens <font color=\"#3498db\">metamorfos</font> till fjäril tar omkring två veckor.",
       "etymologi": "grekiskans metamorphosis 'omgestaltning', av meta- 'om' och morphe 'form'"
     },
@@ -7452,9 +7393,7 @@
     "forgranska_tillat": {
       "betydelse_kan_saknas": "SO raknar 5: tre def varav 'genomgripande forandring' och 'fullstandig omvandling av uppbyggnad' ar samma innebord, plus tva underbetydelser utan egen definition. Kortets tva betydelser tacker de sarskiljbara (allman och biologisk)."
     },
-    "adamtal_varningar": [
-      "osymmetriska_grupper: gruppstorlekar [2, 0] -- sikta symmetriskt"
-    ],
+    "adamtal_varningar": [],
     "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": null
@@ -8085,23 +8024,13 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=påläggskalv https://www.synonymer.se/sv-syn/påläggskalv https://sv.wiktionary.org/wiki/påläggskalv",
-      "slutsats": "TVA betydelser, bada egna SO-huvudbetydelser. Den bildliga star forst eftersom den ar den enda man moter i text; den bokstavliga (avelskalven) forklarar bilden och maste vara med for att uttrycket ska ga att minnas. GYNNANDET ar det som ger ordet dess lätt nedsattande ton: en palaggskalv ar inte bara lovande utan utpekad och framfodd av andra."
+      "slutsats": "TVA betydelser, bada egna SO-huvudbetydelser. Den bildliga star forst eftersom den ar den enda man moter i text; den bokstavliga (avelskalven) forklarar bilden och maste vara med for att uttrycket ska ga att minnas. GYNNANDET ar det som ger ordet dess lätt nedsattande ton: en palaggskalv ar inte bara lovande utan utpekad och framfodd av andra. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Ung person som anses lovande och därför gynnas av sina överordnade ; kalv som föds upp i avelssyfte",
       "register": "neutral, lätt negativ, allmän",
-      "synonymer": [
-        "person som anses lovande och därför gynnas av sina överordnade",
-        "kalv som föds upp i avelssyfte"
-      ],
-      "synonym_groups": [
-        [
-          "person som anses lovande och därför gynnas av sina överordnade"
-        ],
-        [
-          "kalv som föds upp i avelssyfte"
-        ]
-      ],
+      "synonymer": [],
+      "synonym_groups": null,
       "exempelmening": "Han pekades tidigt ut som partiets <font color=\"#3498db\">påläggskalv</font>.",
       "etymologi": null
     },
@@ -8234,14 +8163,14 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=ringa https://www.synonymer.se/sv-syn/ringa https://sv.wiktionary.org/wiki/ringa",
-      "slutsats": "FYRA betydelser ur SO:s atta poster, och ordet ar en av batchens svaraste just for att de hor till olika ordklasser och rotter. Verbet ringa (telefonera, lata klocka ljuda) ar ett ord; adjektivet ringa (obetydlig) ar ett HELT ANNAT ord med samma form; verbet ringa (omge med ring) ett tredje. Adjektivbetydelsen ar den som provas - 'av ringa betydelse' - och star darfor i exempelmeningen, eftersom telefonbetydelsen ar sa dominerande att den annars skymmer allt."
+      "slutsats": "FYRA betydelser ur SO:s atta poster, och ordet ar en av batchens svaraste just for att de hor till olika ordklasser och rotter. Verbet ringa (telefonera, lata klocka ljuda) ar ett ord; adjektivet ringa (obetydlig) ar ett HELT ANNAT ord med samma form; verbet ringa (omge med ring) ett tredje. Adjektivbetydelsen ar den som provas - 'av ringa betydelse' - och star darfor i exempelmeningen, eftersom telefonbetydelsen ar sa dominerande att den annars skymmer allt. RÄTTAT efter blindgranskning 2026-09-02, två fel. (1) Fjärde betydelsen sades vara 'omge något med en ring' — SO:s tredje homograf betyder specifikt 'göra halsöppningen större på ett klädesplagg', alltså vidga en urringning. Jag gissade betydelsen ur ordets form i stället för att läsa den. (2) 'enkel' struken som synonym: adjektivet ringa betyder liten och knapp, inte lättfattlig. Båda felen är samma sort — en rimlig gissning som aldrig kontrollerades mot texten."
     },
     "proposed": {
-      "huvudbetydelse": "Telefonera ; låta en klocka ljuda ; som har liten omfattning, obetydlig ; omge något med en ring",
+      "huvudbetydelse": "Telefonera ; låta en klocka ljuda ; som har liten omfattning, obetydlig ; göra halsöppningen större på ett klädesplagg",
       "register": "formell, neutral, allmän",
       "synonymer": [
         "telefonera",
-        "enkel"
+        "liten"
       ],
       "synonym_groups": null,
       "exempelmening": "Skillnaden var <font color=\"#3498db\">ringa</font> och påverkade inte resultatet.",
@@ -8252,9 +8181,7 @@
     "forgranska_tillat": {
       "betydelse_kan_saknas": "SO raknar 8. Kortets fyra betydelser tacker samtliga sarskiljbara innebordar; ovriga poster ar specialfall av klockbetydelsen (skollektion borjar/slutar) eller underbetydelser utan egen definition."
     },
-    "adamtal_varningar": [
-      "cirkular_definition: 'ringa' tycks förklaras med sig självt"
-    ],
+    "adamtal_varningar": [],
     "exempel_varningar": [
       "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
     ],
@@ -8303,14 +8230,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=schäs https://www.synonymer.se/sv-syn/schäs https://sv.wiktionary.org/wiki/schäs",
-      "slutsats": "SO: 'typ av liten fjadrande vagn som spanns efter hast'. SAOL: 'i äldre tid: tva- el. fyrhjulig anspand vagn'. FJADRINGEN ar det som skiljer schasen från en karra och star kvar. Ordet lever i nutida svenska nastan bara i uttrycket 'ur schasen', som betyder ur gängorna - men den anvandningen saknar ordboksbelagg har och skrivs inte in."
+      "slutsats": "SO: 'typ av liten fjadrande vagn som spanns efter hast'. SAOL: 'i äldre tid: tva- el. fyrhjulig anspand vagn'. FJADRINGEN ar det som skiljer schasen från en karra och star kvar. Ordet lever i nutida svenska nastan bara i uttrycket 'ur schasen', som betyder ur gängorna - men den anvandningen saknar ordboksbelagg har och skrivs inte in. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Liten fjädrande vagn som spänns efter häst",
       "register": "ngt ålderdomlig, neutral, historia",
-      "synonymer": [
-        "fjädrande vagn som spänns efter häst"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "De åkte till kyrkan i en öppen <font color=\"#3498db\">schäs</font>.",
       "etymologi": "franskans chaise 'stol'"
@@ -8436,14 +8361,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=skört https://www.synonymer.se/sv-syn/skört https://sv.wiktionary.org/wiki/skört",
-      "slutsats": "SO: 'nedhangande del av kladesplagg'. SAOL: 'del av ett plagg som faller nedanom midjan'. MIDJEGRANSEN från SAOL preciserar SO och tas med - ett skort ar inte vilken nedhangande del som helst. OBS: ordet ska inte forvaxlas med adjektivet 'skor' (spröd), som ar ett annat ord."
+      "slutsats": "SO: 'nedhangande del av kladesplagg'. SAOL: 'del av ett plagg som faller nedanom midjan'. MIDJEGRANSEN från SAOL preciserar SO och tas med - ett skort ar inte vilken nedhangande del som helst. OBS: ordet ska inte forvaxlas med adjektivet 'skor' (spröd), som ar ett annat ord. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket."
     },
     "proposed": {
       "huvudbetydelse": "Nedhängande del av ett klädesplagg, nedanför midjan",
       "register": "neutral, neutral, allmän",
-      "synonymer": [
-        "nedhängande del av klädesplagg"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Kavajens <font color=\"#3498db\">skört</font> var för långa för hans längd.",
       "etymologi": null
@@ -8868,21 +8791,14 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=tråckla https://www.synonymer.se/sv-syn/tråckla https://sv.wiktionary.org/wiki/tråckla",
-      "slutsats": "TVA betydelser ur SO: 'sy (tillfalligt) med langa stygn' och 'fa till stand' / 'modosamt ta sig fram'. PROVISORISKHETEN ar det som binder ihop dem - en tracklad som haller bara tills den riktiga somnaden gors, och en tracklad losning haller bara tills nagot battre finns. Den bildliga ar den man moter oftast och star i exempelmeningen."
+      "slutsats": "TVA betydelser ur SO: 'sy (tillfalligt) med langa stygn' och 'fa till stand' / 'modosamt ta sig fram'. PROVISORISKHETEN ar det som binder ihop dem - en tracklad som haller bara tills den riktiga somnaden gors, och en tracklad losning haller bara tills nagot battre finns. Den bildliga ar den man moter oftast och star i exempelmeningen. RÄTTAT efter blindgranskning 2026-09-02: en hel betydelse saknades. SO ger TVÅ bildliga underbetydelser med var sitt eget exempel — dels 'syssla med något svåröverskådligt på ett föga ändamålsenligt sätt' ('laget tråcklar för mycket'), dels '(med svårighet) få till stånd' ('tråckla ihop en ny regering'). Kortet hade bara den senare. Att två underbetydelser bär var sitt exempel är signalen att de är skilda; jag läste dem som en. RÄTTAT IGEN 2026-09-02: SO har en fjärde, fristående huvudbetydelse för det REFLEXIVA 'tråckla sig' — 'mödosamt ta sig fram, ofta på ett knepigt sätt'. Att förflytta sig med möda är inte samma sak som att åstadkomma något med möda, och jag hade läst ihop dem. Reflexiva former som bär egen betydelse är lätta att missa eftersom de ser ut som en användning av grundverbet."
     },
     "proposed": {
-      "huvudbetydelse": "Sy provisoriskt med långa stygn ; mödosamt få något till stånd",
+      "huvudbetydelse": "Sy provisoriskt med långa stygn ; syssla planlöst och ineffektivt med något ; med möda få något till stånd ; tråckla sig: mödosamt ta sig fram",
       "register": "neutral, neutral, allmän",
-      "synonymer": [
-        "få till stånd"
-      ],
-      "synonym_groups": [
-        [],
-        [
-          "få till stånd"
-        ]
-      ],
-      "exempelmening": "Han <font color=\"#3498db\">tråcklade</font> ihop en lösning på en timme kvällen före deadline.",
+      "synonymer": [],
+      "synonym_groups": null,
+      "exempelmening": "Han <font color=\"#3498db\">tråcklade</font> sig fram genom folkmassan till andra sidan torget.",
       "etymologi": null
     },
     "approved": true,
@@ -8890,7 +8806,9 @@
     "forgranska_tillat": {
       "betydelse_kan_saknas": "SO raknar 5: 'fa till stand' och 'modosamt ta sig fram' ar samma bildliga betydelse i tva formuleringar, plus tva underbetydelser utan egen definition. Kortets tva betydelser tacker den bokstavliga och den bildliga."
     },
-    "adamtal_varningar": [],
+    "adamtal_varningar": [
+      "cirkular_definition: 'tråckla' tycks förklaras med sig självt"
+    ],
     "exempel_varningar": [],
     "applicerad": true,
     "skriven_av": null
@@ -9111,14 +9029,12 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=vågspel https://www.synonymer.se/sv-syn/vågspel https://sv.wiktionary.org/wiki/vågspel",
-      "slutsats": "SO och SAOL ger bada 'handling som medfor risker'. Ordet bar en ton av medvetet tagen risk - ett vagspel ar inte en olycka utan nagot man ger sig in i - och forledet 'vag-' (jfr 'vaga') sager det. STORLEKEN pa risken preciseras i huvudbetydelsen; ett vagspel ar aldrig en liten chansning."
+      "slutsats": "SO och SAOL ger bada 'handling som medfor risker'. Ordet bar en ton av medvetet tagen risk - ett vagspel ar inte en olycka utan nagot man ger sig in i - och forledet 'vag-' (jfr 'vaga') sager det. STORLEKEN pa risken preciseras i huvudbetydelsen; ett vagspel ar aldrig en liten chansning. RENSAT 2026-09-02 efter blindgranskningens formfelsanmärkning: synonymer som bara återgav ordbokens hela definitionssats är strukna. En synonym ska vara ett utbytbart ord; tom lista är alltid korrekt när ingen äkta synonym finns, och är normalfallet i decket. RÄTTAT efter blindgranskning 2026-09-02: synonymfältet innehöll 'handling som medför risker' — ordbokens egen definition ordagrant, inte ett utbytbart ord. Tomt fält i stället, vilket alltid är korrekt när äkta synonym saknas."
     },
     "proposed": {
       "huvudbetydelse": "Handling som medför stora risker",
       "register": "litterär, neutral, allmän",
-      "synonymer": [
-        "handling som medför risker"
-      ],
+      "synonymer": [],
       "synonym_groups": null,
       "exempelmening": "Att satsa allt på ett kort var ett <font color=\"#3498db\">vågspel</font> som kunde ha slutat illa.",
       "etymologi": null
