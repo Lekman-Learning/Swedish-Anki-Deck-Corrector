@@ -628,3 +628,31 @@ UNDANTAG = "(tag:v3_underkand::* OR tag:v3_pausad::*)"
 augusti och lever bara i Anki. Ett undantagsfilter som matchar wildcard mot
 odokumenterade taggar kommer fånga fel igen. Taggvokabulären bör stå i
 `config.py` och kontrolleras.
+
+## 2026-09-02: synonymregeln, och tva verktyg som gjorde resten mekanisk
+
+**Felet:** forsta batchen om 18 kort skrevs med synonymer fran synonymer.se.
+**13 av 18 fick `synonym_utan_ordboksbelagg`.** synonymer.se raknas INTE som
+ordboksbelagg -- bara SO:s `SYN:`-falt och SO/SAOL:s egen definitionstext gor
+det. Regeln star i forgranska.py 4c, och spegeln 4d (`synonym_saknas_trots_belagg`)
+sager rakt ut att **tom lista ar normalfallet, 69 % av korten**.
+
+**Nya verktyg (bada laser bara cache, inget nat):**
+
+- `_pool.py <ord>` -- skriver ut exakt vilka synonymer forgranska GODTAR, plus
+  antalet SO-betydelser. Anropar forgranskas egna funktioner (`_ordboksbelagg`,
+  `_so`, `_riktiga_underbetydelser`) i stallet for att aterimplementera regeln,
+  sa verktyget och kontrollen inte kan glida isar.
+- `_syn_etym.py` -- synonymer.se-avdelningarna och etymologin ur uppslag/,
+  som komplement till `visa_uppslag.py` (den visar bara SO/SAOL-definitioner).
+  OBS: syn.se-listan ar BAKGRUND, inte belagg -- valj alltid ur `_pool.py`.
+
+**Observation vard att atgarda:** `_riktiga_underbetydelser` slapper igenom
+rena grammatiska etiketter. `coupe` raknades som 3 betydelser dar tva var
+**"best. form"** och **"plural"**; `sakral` som 2 dar den andra var
+**"MOTSATS:antonym"**. Foljden ar att `betydelse_kan_saknas` -- ett HART fel --
+utloses pa brus och maste tystas med en skriven motivering per kort. Ett filter
+mot `best. form|plural|MOTSATS:|el.$|spec.$` skulle ta bort merparten.
+
+**Batch A klar: 18 kort, 0 harda anmarkningar.** Kvar: 113 (135 minus 18 minus
+de fyra pauskandidaterna).
