@@ -80,7 +80,44 @@ MJUKA = (
 )
 
 # Underbetydelselistan innehåller maskinmarkörer som inte är betydelser.
-_EJ_BETYDELSE = re.compile(r"^(SYN|JFR|ANT|SE):", re.I)
+_EJ_BETYDELSE = re.compile(r"^(SYN|JFR|ANT|SE|MOTSATS):", re.I)
+
+# En underbetydelse som BARA bestar av kvalificerare ar ingen betydelse.
+#
+# MATT 2026-09-02 over samtliga 2 502 underbetydelser i uppslag/: de fyra
+# vanligaste posterna ar "av." (287), "el." (195), "MOTSATS:antonym" (105)
+# och "spec." (59) -- alltsa 26 % av allt materialet, utan en enda stavelse
+# innehall. De rakandes anda som betydelser, vilket gjorde
+# `betydelse_kan_saknas` till en flagga som utloste pa nastan varje kort med
+# mer an en definition: i den forsta halvan av dagens spar B-batch slog den
+# pa 18 av 34 kort. En hard flagga som utloser pa halva materialet tvingar
+# fram 18 skrivna motiveringar for ingenting, och da slutar den att betyda
+# nagot -- exakt det som hande `synonym_saknas_trots_belagg` tidigare.
+#
+# Regeln ar medvetet konservativ och behaller allt som bar innehall:
+# "av. bildligt" (174 forekomster) signalerar en verklig bildlig betydelse
+# och rakas fortfarande, liksom "av. allmannare" och "av. om person".
+# Bara poster dar VARJE ord ar en kvalificerare eller en ren grammatisk
+# etikett faller bort.
+_KVALIFICERARE = {
+    "äv", "av", "el", "eller", "spec", "särsk", "sarsk", "ofta", "oftast",
+    "ibland", "vanligen", "numera", "mest", "någon", "nagon", "gång",
+    "gang", "ursprungligen", "i", "sht", "samt", "och",
+}
+_GRAMMATISK_ETIKETT = {
+    "best form", "bestämd form", "obest form", "obestämd form",
+    "plural", "singular", "pluralis", "singularis",
+}
+
+
+def _bara_kvalificerare(s):
+    """True om strangen inte bar nagot innehall utover markorer."""
+    ren = re.sub(r"[.,;:()\[\]]", " ", (s or "").lower()).strip()
+    if not ren:
+        return True
+    if re.sub(r"\s+", " ", ren) in _GRAMMATISK_ETIKETT:
+        return True
+    return all(t in _KVALIFICERARE for t in ren.split())
 
 # "neutral"/"allmän" påstår ingenting och kan aldrig motsäga en märkning.
 _NEUTRALA = {"neutral", "allmän", "allman", ""}
@@ -510,7 +547,8 @@ def _samma_uppslag(traff, ord_):
 
 def _riktiga_underbetydelser(u):
     return [x for x in _so(u, "underbetydelser")
-            if isinstance(x, str) and not _EJ_BETYDELSE.match(x.strip())]
+            if isinstance(x, str) and not _EJ_BETYDELSE.match(x.strip())
+            and not _bara_kvalificerare(x)]
 
 
 def granska_post(p):
