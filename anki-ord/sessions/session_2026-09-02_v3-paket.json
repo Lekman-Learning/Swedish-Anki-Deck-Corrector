@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? EN TOM SYNONYMLISTA ÄR ALDRIG ETT FEL och får aldrig ensam ge underkänt. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": null,
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080622598,
@@ -28,8 +28,10 @@
         "exempelmening": "Han <font color=\"#3498db\">absolverade</font> sin utbildning på tre år i stället för de normala fem.",
         "etymologi": "latinets absolvere 'lösa upp, frigöra', av ab- 'bort' och solvere 'lösa' — samma rot som i absolut"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger exakt två betydelser -- (1) avsluta/fullborda/avlägga examen, (2) ge syndaförlåtelse (relig.) -- och kortet täcker båda korrekt separerade med ' ; '. SO nämner även en nyans 'göra fri från skuld' som ligger nära betydelse 2 (befrielse från skuld/synd), inte en tydligt egen tredje betydelse. facit_signal (4 betydelser) stämmer inte med vad ordböckerna faktiskt ger.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622643,
@@ -44,8 +46,10 @@
         "exempelmening": "Han låg <font color=\"#3498db\">sanslös</font> på golvet i två minuter innan han vaknade.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger tre huvudbetydelser: medvetslös, förlorad behärskning, samt meningslös/tokigt -- alla tre finns med på kortet och är rätt separerade. Den vardagliga förstärkningsanvändningen ('sanslöst roligt') är en underbetydelse till behärsknings-sensen, inte en egen betydelse, så inget saknas. facit_signal (7 betydelser) är en falsk signal här.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622669,
@@ -60,8 +64,10 @@
         "exempelmening": "Den <font color=\"#3498db\">bylsiga</font> vinterjackan fick honom att se dubbelt så bred ut.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SAOL definierar ordet exakt så: 'om klädesplagg: oformligt och illasittande', vilket matchar kortets huvudbetydelse och register (vardaglig, lätt negativ) ordagrant.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622704,
@@ -79,8 +85,10 @@
         "exempelmening": "Till efterrätt blev det en <font color=\"#3498db\">coupe</font> med vaniljglass, hallon och grädde.",
         "etymologi": "franskans coupe 'bägare, skål', till couper 'skära'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Sakfel i etymologin. Franskans 'coupe' (skål/bägare, efterrättsskål) kommer av senlatinets 'cuppa' (samma rot som 'cup' och svenskans 'kopp') -- INTE av verbet 'couper' ('skära'). 'Couper' hör till ett annat, homografiskt franskt ord ('coupe' i betydelsen 'snitt/klippning'). Etymologin bör antingen tas bort eller korrigeras till '...av senlatinets cuppa, samma rot som ordet kopp'. Själva huvudbetydelsen (efterrätt i portionsglas) stämmer med SO.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622670,
@@ -98,8 +106,10 @@
         "exempelmening": "Bordet <font color=\"#3498db\">dignade</font> under skinkor, sillar och sju sorters kakor.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s grundbetydelse (sjunka ihop under tung börda, även bildligt t.ex. 'digna under skattetrycket') och den bildliga 'vara överlastad' (SO:s exempel: 'träden dignar av frukt') finns båda representerade. Mindre anmärkning: andra betydelsen är formulerad som 'om bord', vilket är snävare än ordbokens användning som även gäller t.ex. träd och hyllor -- hade kunnat skrivas mer generellt, men det är ingen saklig felformulering och exempelmeningen (om ett bord) är korrekt.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622723,
@@ -117,8 +127,10 @@
         "exempelmening": "Sköldkörteln är en <font color=\"#3498db\">endokrin</font> körtel och skickar sina hormoner rakt ut i blodet.",
         "etymologi": "grekiskans endon 'inuti' och krinein 'avskilja'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar ordet som 'inresekretorisk', dvs. körtlar vars hormoner går direkt ut i blodet -- exakt vad kortet säger. Synonymerna 'inresekretorisk' och 'insöndrande' är fackmässigt korrekta.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622633,
@@ -133,8 +145,10 @@
         "exempelmening": "Hela hans invändning kan kokas ned till en mening — det är <font color=\"#3498db\">essensen</font> av kritiken.",
         "etymologi": "latinets essentia 'väsen', bildat till esse 'vara'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser -- (1) det väsentligaste i något (abstrakt), (2) koncentrerad lösning av doft-/smakämnen -- båda finns med, rätt separerade med ' ; ', och exempelmeningen illustrerar korrekt den abstrakta betydelsen.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622606,
@@ -153,8 +167,10 @@
         "exempelmening": "Han fick ersättning för resan men fick själv stå för sina <font color=\"#3498db\">expenser</font>.",
         "etymologi": "latinets expensa 'utgift', till expendere 'väga upp, betala ut'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: '(smärre) omkostnader, särsk. i samband med visst uppdrag' -- matchar kortets huvudbetydelse och exempelmening väl.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622702,
@@ -171,8 +187,10 @@
         "exempelmening": "Regeringen motiverade höjningen med rent <font color=\"#3498db\">fiskala</font> skäl — den behövde pengarna.",
         "etymologi": "latinets fiscus 'korg, statskassa'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO/SAOL ger två homografer: adjektivet (rör statens ekonomi/finanser) och substantivet (jurist under domarutbildning, jur.). Kortet täcker båda korrekt. 'Äldre även åklagare' stöds av SO:s formulering om att beivra lagöverträdelser i den historiska användningen.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622597,
@@ -191,8 +209,10 @@
         "exempelmening": "Framförandet var <font color=\"#3498db\">habilt</font> men inte på något sätt överraskande.",
         "etymologi": "franskans habile 'skicklig', av latinets habilis 'lätthanterlig, duglig'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'duglig men föga självständig eller nyskapande', märkt 'ibland något nedsättande' -- matchar kortets betydelse och register (nedsättande) väl.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622692,
@@ -207,8 +227,10 @@
         "exempelmening": "Frågan är rent <font color=\"#3498db\">hypotetisk</font> — ingen har föreslagit att det faktiskt ska göras.",
         "etymologi": "grekiskans hypothesis 'antagande, grundval', av hypo- 'under' och tithenai 'sätta'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två nyanser -- grundar sig enbart på antaganden, samt gäller/är av vikt bara om vissa förutsättningar uppfylls -- båda finns med på kortet.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622579,
@@ -226,8 +248,10 @@
         "exempelmening": "Han bar sin <font color=\"#3498db\">kont</font> av näver på ryggen hela vägen upp till fäboden.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'enkel ryggsäck, vanligen av flätad näver', märkt som mest historiskt bruk -- matchar kortets betydelse och 'ngt ålderdomlig'-register.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622691,
@@ -245,8 +269,10 @@
         "exempelmening": "Han <font color=\"#3498db\">lismade</font> för chefen på ett sätt som fick hela rummet att titta bort.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'uppträda inställsamt på ett alltför tydligt sätt' -- matchar kortets 'uppträda inställsamt på ett alltför genomskinligt sätt' väl, liksom det nedsättande registret.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622653,
@@ -263,8 +289,10 @@
         "exempelmening": "Invändningen är <font color=\"#3498db\">periferisk</font> och rör inte huvudfrågan.",
         "etymologi": "grekiskans periphereia 'omkrets', av peri- 'runt' och pherein 'bära'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Sakligt tveksam huvudbetydelse. SO saknar ordet helt (ingen träff). SAOL har det, men enbart märkt 'mat.' (matematik) med definitionen helt enkelt 'perifer' -- dvs. ett fackuttryck (t.ex. 'periferisk vinkel' i geometri), inte ett allmänt, bildligt ord för 'av mindre betydelse'. Den bildliga betydelsen 'oväsentlig, marginell' hör enligt SO till ordet 'perifer', inte till 'periferisk'. Kortet presenterar ordet som allmänspråkligt ('ngt ålderdomlig, neutral, allmän') med en generell exempelmening ('Invändningen är periferisk...') som inte styrks av någon ordbok. Registret bör ändras till fackspråk/matematik, eller ordet bytas mot 'perifer' som faktiskt har den bildliga betydelsen belagd.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622638,
@@ -282,8 +310,10 @@
         "exempelmening": "Rummet hade en <font color=\"#3498db\">sakral</font> tystnad som ingen ville vara först med att bryta.",
         "etymologi": "latinets sacer 'helig, invigd'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'förknippad med gudstjänstliv och därför vördad, högtidlig' -- matchar kortets betydelse och exempel ('sakral konst/musik') väl.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622741,
@@ -301,8 +331,10 @@
         "exempelmening": "Hon avslutade friståendet med en <font color=\"#3498db\">saltomortal</font> och landade utan ett steg.",
         "etymologi": "italienskans salto mortale 'dödssprång', av salto 'hopp' och mortale 'dödlig'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s huvudbetydelse 'hopp med helomvändning i luften' matchar kortet. SO nämner även en bildlig användning ('en logisk saltomortal') som kortet inte tar upp, men det är en marginell utvidgning av grundbetydelsen, inte en central saknad betydelse.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622699,
@@ -317,8 +349,10 @@
         "exempelmening": "Läkaren gav honom <font color=\"#3498db\">serum</font> mot ormgiftet inom en timme efter bettet.",
         "etymologi": "latinets serum 'vassla, vattnig vätska'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en medicinsk betydelse (blodvätska, bl.a. som bas för motgift) och en kosmetisk betydelse (hudvårdsprodukt). Kortet delar upp den medicinska SO-betydelsen i två precisare delar (blodvätskan resp. läkemedlet gjort av den), vilket är en rimlig förtydligande uppdelning snarare än en felaktig lucka. Alla tre delar är sakligt korrekta.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622622,
@@ -338,8 +372,10 @@
         "exempelmening": "Vi satt och <font color=\"#3498db\">spisade</font> jazz till långt in på natten.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Betydelsen 'avvisa/avfärda' är felaktigt kopplad till uppslagsordet 'spisa'. Enligt SO hör den betydelsen ('avvisa på ett lättvindigt och sårande sätt') till det egna uppslaget 'spisa av' (=avspisa), inte till plain 'spisa', som enligt SO bara betyder 'äta' (ålderdomligt/skämtsamt) och, som underbetydelse, 'lyssna på musik' (vardagligt). Tredje betydelsen på kortet bör tas bort eller kortet skrivas om till att gälla uttrycket 'spisa av'.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622610,
@@ -356,8 +392,10 @@
         "exempelmening": "Blomman satt högst upp på en lång, tunn <font color=\"#3498db\">stängel</font>.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'stam på ört som bär en eller flera blommor (och högblad)' -- matchar kortets betydelse och exempelmening exakt.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622646,
@@ -372,8 +410,10 @@
         "exempelmening": "Ledningen <font color=\"#3498db\">talade med kluven tunga</font> — ett budskap till personalen, ett annat till ägarna.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO (under 'tunga'): 'lämna dubbla och motsägelsefulla budskap' -- matchar kortets 'säga en sak men mena en annan, eller säga olika saker till olika personer' väl, liksom exempelmeningens uppbyggnad (ett budskap till en grupp, ett annat till en annan).",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622652,
@@ -388,8 +428,10 @@
         "exempelmening": "Namnet Noël skrivs med <font color=\"#3498db\">trema</font> för att e:et inte ska smälta ihop med o:et.",
         "etymologi": "grekiskans trema 'hål, öppning'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger en enda betydelse, uttalstecken (två punkter över en vokal för att markera separat uttal, t.ex. franskans ë) -- matchar kortet exakt, inklusive exemplet med Noël.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622647,
@@ -416,8 +458,10 @@
         "exempelmening": "Han svarade <font color=\"#3498db\">vresigt</font> och gick därifrån utan att säga vad som var fel.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser -- (1) om träd/buske: låg och krokig stam, (2) irriterad och ovänlig, ofta pga outtalat missnöje -- båda finns med och är rätt separerade. Den adverbiella underanvändningen ('ett vresigt svar') är samma betydelse som (2), ingen egen. facit ('trumpen, butter; knotig') bekräftar också bara två betydelsegrupper, så facit_signal (4 betydelser) är här en falsk signal.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622712,
@@ -432,8 +476,10 @@
         "exempelmening": "Brevet kom i retur eftersom <font color=\"#3498db\">adressaten</font> hade flyttat.",
         "etymologi": "till adressera, av franskans adresser 'rikta'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser -- (1) person en försändelse är riktad till, (2) bildligt: den ett budskap riktar sig till -- båda finns med i kortets formulering.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622607,
@@ -460,8 +506,10 @@
         "exempelmening": "Beslutet är <font color=\"#3498db\">definitivt</font> och går inte att överklaga.",
         "etymologi": "latinets definitivus 'avgorande', till definire 'avgransa, bestamma'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "underkand",
+      "anmarkning": "Formfel i etymologin: orden saknar diakritiska tecken och blir felstavade svenska -- 'avgorande' ska vara 'avgörande' och 'avgransa, bestamma' ska vara 'avgränsa, bestämma'. Går inte att läsa högt som korrekt svenska utan att stapplas. Själva betydelserna (slutgiltig; det som verkligen är fallet) stämmer väl med SO:s två betydelser.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622596,
@@ -480,8 +528,10 @@
         "exempelmening": "Han fick tydliga <font color=\"#3498db\">direktiv</font> om vad rapporten skulle innehålla.",
         "etymologi": "latinets directivus, till dirigere 'rikta, styra'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'anvisning om sättet att utföra visst uppdrag från överordnad, myndighet eller dylikt' -- matchar kortets betydelse och exempelmening exakt.",
+      "granskning_turer_post": 38,
+      "granskning_turkrav_post": 6
     },
     {
       "noteId": 1780080622585,
@@ -2552,6 +2602,17 @@
       },
       "verdikt": null,
       "anmarkning": null
+    }
+  ],
+  "granskning_turer": 38,
+  "granskning_kostnad_usd": 1.319113,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 38,
+      "turkrav": 6,
+      "kostnad_usd": 1.319113
     }
   ]
 }
