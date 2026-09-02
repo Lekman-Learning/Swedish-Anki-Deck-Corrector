@@ -36,6 +36,8 @@ nu är det ett villkor maskinen vägrar släppa igenom utan.
 import argparse
 import json
 import os
+import shutil
+import datetime
 import re
 import sys
 
@@ -237,6 +239,12 @@ def applicera(sokvag, granskare=None):
 
 
 # -------------------------------------------------------------------- paket
+def _las_json(sokvag):
+    import json as _json
+    with io.open(sokvag, encoding="utf-8") as fh:
+        return _json.load(fh)
+
+
 def paket(sokvag):
     """Blind verifieringsfil. Tar med ENDAST ord, facit och färdigt kort."""
     poster = [e for e in _las(sokvag) if e.get("applicerad")]
@@ -286,6 +294,35 @@ def paket(sokvag):
         mal = f"{stam}_v3-paket.json"
     if os.path.abspath(mal) == os.path.abspath(sokvag):  # bältet och hängslena
         raise RuntimeError(f"vägrar skriva paketet över indatafilen {sokvag}")
+
+    # Ett paket med DOMAR far aldrig skrivas over tyst.
+    #
+    # 2026-09-02 rattades 16 underkanda kort, varefter `paket` kordes om for
+    # att bygga ett fart underlag. Den skrev over filen -- och med den de 84
+    # godkannanden som redan var betalda och som INTE fanns nagon annanstans:
+    # `verdikt` hade inte kort, sa oberoende_granskningar.jsonl var tom pa
+    # dem, och den senaste commiten var gjord mitt i granskningen.
+    #
+    # Domarna gar inte att skriva tillbaka for hand heller, och ska inte
+    # kunna det: kortskrivaren far inte fylla i den blinda granskarens
+    # omdomen, aven nar hen minns dem ratt. Priset blev en omgranskning av
+    # 84 kort som inte andrats -- ungefar 4 USD for information som redan
+    # var kopt.
+    #
+    # Arkiveringen ar darfor obligatorisk, inte en flagga: filen kopieras
+    # till <namn>.domar-<tidsstampel>.json innan den skrivs over.
+    if os.path.exists(mal):
+        try:
+            gammalt = _las_json(mal)
+        except Exception:
+            gammalt = None
+        domda = [p for p in ((gammalt or {}).get("poster") or [])
+                 if p.get("verdikt")]
+        if domda:
+            stamp = datetime.datetime.now().strftime("%Y%m%dT%H%M%S")
+            arkiv = f"{os.path.splitext(mal)[0]}.domar-{stamp}.json"
+            shutil.copyfile(mal, arkiv)
+            print(f"ARKIVERADE {len(domda)} befintliga domar -> {arkiv}")
     # skriven_av ligger UTANFÖR "poster": verdikt() behöver den för att kunna
     # vägra självgranskning, men granskaren ska döma korten, inte författaren.
     _skriv(mal, {
