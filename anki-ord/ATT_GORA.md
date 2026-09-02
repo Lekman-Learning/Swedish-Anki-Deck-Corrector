@@ -590,3 +590,41 @@ mellanslag (`urllib.parse.quote(ord, safe="")`) när uppslagsordet har fler
 än ett ord -- annars ser sökkollen ut att misslyckas trots en bevisligen
 gjord hämtning.
 bara för sakens skull.
+
+---
+
+## N. `v3_underkand*`-wildcarden fångar `v3_underkand_rensad` — fel håll
+
+**Hittat 2026-09-02** på Adams fråga *"hur kan ej suspenderade kort vara 5 fler
+än full v3-korten?"*
+
+`v3_invariant.py:53` undantar kort med
+
+```python
+UNDANTAG = "(tag:v3_underkand* OR tag:v3_pausad::*)"
+```
+
+Wildcarden matchar även **`v3_underkand_rensad::2026-08-26`**, som fem kort bär:
+`märgfull`, `apoplexi`, `förvärva`, `beskärm`, `alla taggar utåt`.
+
+**De ska inte undantas.** `_rensad` betyder att underkännandet är åtgärdat, och
+korten uppför sig därefter: alla fem är **blåflaggade** (full-v3-flaggan),
+**avsuspenderade**, bär **hela v3-tagguppsättningen**, och fyra har 2-dagars
+intervall — alltså omlärda kring 26 augusti.
+
+**Följd:** skriptet rapporterar `Full v3, ej undantagna: 2257` när det korrekta
+är **2262**, och listar fem aktivt använda kort som *"ska förbli röda+spärrade"*.
+Hade `--fixa` körts på undantagslistan hade de suspenderats — fem kort Adam
+pluggar dagligen.
+
+**Åtgärd:** byt till en pattern som inte fångar `_rensad`, t.ex.
+
+```python
+UNDANTAG = "(tag:v3_underkand::* OR tag:v3_pausad::*)"
+```
+
+⚠️ **Rotorsaken är större än den här taggen:** `v3_underkand_rensad` finns
+**ingenstans i koden eller i någon markdown-fil** — den sattes för hand 26
+augusti och lever bara i Anki. Ett undantagsfilter som matchar wildcard mot
+odokumenterade taggar kommer fånga fel igen. Taggvokabulären bör stå i
+`config.py` och kontrolleras.
