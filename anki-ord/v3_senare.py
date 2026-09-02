@@ -62,10 +62,45 @@ def betydelseantal(o):
 
 
 def bedom(o):
-    """-> (skjut_upp, skal). Enda stallet regeln finns uttryckt."""
+    """-> (skjut_upp, skal). Enda stallet regeln finns uttryckt.
+
+    FLERORDSUTTRYCK skjuts upp utan att raknas alls. svenska.se:s msearch har
+    inga uppslagsord for fraser: den matchar de INGAENDE ORDEN och returnerar
+    ett svar som ser fullt normalt ut. Mott 2026-09-02: `dra pa munnen` fick
+    SO:s artiklar for "dra till med" och "sele" (remtyg pa hast) med tre
+    definitioner och en etymologi, och `uppslagsordstraffar` sa 2 -- allt
+    sag ut som en lyckad hamtning. Foljden ar varre an en tom traff, for
+    `_ordboksbelagg` bygger da synonympoolen ur fel ord: for `dra pa munnen`
+    blev de godtagna synonymerna "ackordeon, drakskepp, handklaver, mane,
+    pjas, skadespel". Ett kort skrivet mot den poolen underkanns garanterat.
+    For enstaka ord fangas samma fel -- da skriver uppslaget "INGEN
+    UPPSLAGSORDSTRAFF" -- men for fraser gor det inte det.
+
+    Regeln ar medvetet trubbig: den skjuter upp aven fraser vars ovriga
+    kallor duger (`dra pa munnen` finns bade i synonymer.se och Wiktionary).
+    Skalet ar att det ar forgranskas SO/SAOL-baserade pool som avgor om
+    kortet gar igenom, och den ar forgiftad oavsett vad ovriga kallor sager.
+    Fraser ska darfor skrivas medvetet, mot en kalla som faktiskt har dem.
+
+    NOLL betydelser rakas hit tillsammans med "ingen fil", inte till de latta.
+    Forsta skarpa korningen 2026-09-02 slappte igenom tio ord -- vitkrage,
+    carpe diem, escargot, enigma m.fl. -- som hade en uppslagsfil men vars
+    innehall var `kallor_med_innehall: []` och `verifieringsgrund: SAKNAS`.
+    Regeln lat dem passera som latta eftersom 0 < 5. Bevislaget ar dock
+    identiskt med att artikeln saknas helt: det finns ingenting att skriva
+    kortet UR, och da hjalper det inte att antalet ar lagt. Ett tomt uppslag
+    ser bara ut som ett enkelt ord.
+    """
+    if " " in o.strip():
+        return True, ("flerordsuttryck -- SO:s msearch loser upp frasen i sina "
+                      "enskilda ord och rapporterar det som TRAFF, sa "
+                      "betydelseantalet galler ett annat ord")
     n, finns = betydelseantal(o)
     if not finns:
-        return True, "ingen SO-artikel i uppslag/ (50 %% underkanda i matningen)"
+        return True, "ingen SO-artikel i uppslag/ (50 % underkanda i matningen)"
+    if n == 0:
+        return True, ("uppslag finns men 0 SO-betydelser -- inget att skriva ur "
+                      "(samma bevislage som ingen artikel alls)")
     if n >= GRANS_BETYDELSER:
         return True, "%d SO-betydelser (5+ => 44 %% underkanda i matningen)" % n
     return False, "%d SO-betydelser" % n
