@@ -66,6 +66,48 @@ Nästa steg: fortsätt Fas 2 på session-04, kort för kort, applicera via
 `apply_updates.py` per godkänt kort. De två 08-03-filerna väntar tills
 Adam väljer att prioritera dem.
 
+### 🔴 2026-09-02: fyra regler som blev KOD, inte prosa
+
+Dagens genomgående lärdom, tre gånger på en dag: **en regel som bara står i
+en styleguide följs inte.** Alla fyra är nu kontroller.
+
+| Regel | Var den lever | Vad som utlöste den |
+|---|---|---|
+| **Varje enskilt ord ska ha minst en synonym** — exakt, `≈ närmaste ord` (kräver källa) eller `≈≈ kategori` (får tas ur kortets egen definition). Tom rad är rätt **bara** för idiom och ordled | `forgranska.HARDA` → `synonymrad_tom` | Regeln stod i `style_guide.md` sedan 29 aug och följdes inte: **56 kort** skrevs med tom rad samma dag |
+| **`≈≈` undantas från källkraven** och ska inte dömas som synonym | `forgranska` 4a/4b/4c + `VERIFIERARINSTRUKTION` | Utan undantaget gav 28 korrekt ifyllda rader **30 hårda anmärkningar** — förgranskningen straffade det styleguiden föreskriver |
+| **Svåra kort skjuts upp i stället för att rättas** — `v3_prio::senare` taggar **och suspenderar** | `config.PRIO_TAG_SENARE`, `v3_senare.py`, `kortbyggare --senare` | Mätt: 5+ SO-betydelser ⇒ 44 % underkända mot 8 % för 1–2. Taggen utesluts ur `hamta_pool()` — en tagg som bara syns i browsern ändrar ingenting |
+| **`paket()` arkiverar befintliga domar** innan den skriver över | `kortgranskare.paket()` | 84 betalda godkännanden skrevs över och gick inte att återskapa. Kostnad: ~4 USD |
+
+#### Två buggar i `forgranska` som fanns hela tiden
+
+- **`betydelse_kan_saknas` räknade markörer som betydelser.** Mätt över
+  samtliga 2 502 underbetydelser i `uppslag/`: `äv.` (287), `el.` (195),
+  `MOTSATS:antonym` (105), `spec.` (59) — **26 % utan en stavelse innehåll**.
+  Flaggan slog därför på halva materialet. Filtret behåller allt som bär
+  innehåll (`äv. bildligt`, 174 st). Räknade underbetydelser: 2 502 → 1 702.
+- **Screeningen mätte flerordsuttryck på fel ord.** svenska.se:s msearch har
+  inga uppslagsord för fraser — den matchar de ingående orden och rapporterar
+  TRÄFF. `dra på munnen` fick SO:s artiklar för *"dra till med"* och *"sele"*
+  (remtyg på häst), och synonympoolen blev "ackordeon, drakskepp, handklaver".
+  För enstaka ord fångas samma fel; för fraser inte.
+
+#### 🔬 Blindgranskningen är inte repeterbar — 15 %
+
+Samma **84 oförändrade kort** granskades två gånger. **13 (15 %) bytte dom.**
+Följden styr planeringen: **"0 underkända" går inte att nå genom att
+iterera** — rättar man 16 kort får man 13 nya, à ~4,5–5,3 USD per 100 kort
+och omgång.
+
+🎯 **Kör EN omgång. Lägg de underkända i `v3_prio::senare` i stället för att
+rätta och granska om.** Grinden är "inga underkända som betyder något", inte
+noll.
+
+Granskaren är ändå inte brus: 81 % av rättningarna höll och ingen invändning
+var sakligt felaktig — den hittade bl.a. att exempelmeningen till `algoritm`
+sade *"största gemensamma talet"* där det heter **delaren**.
+
+Full mätning: `Study Coach Ai/rapporter/2026-09-02-blindgranskningen-ar-inte-repeterbar.md`
+
 ## Mål — Hösten 2026
 
 Satt av Adam 2026-08-07. **Kvantitativt: mål 2.0, lägsta godtagbart 1.8.**

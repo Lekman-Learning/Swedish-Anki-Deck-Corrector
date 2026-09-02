@@ -768,6 +768,31 @@ inte ett annat ord. Kallorna hade alltsa inget bredare ord att ge. Utan
 betydelsebararen och en kategori sager ingenting -- 68 kort star darfor
 fortfarande med tom rad, och det ar ratt svar.
 
+### 🔴 SKARPT 2026-09-02: regeln ar en KONTROLL nu, inte prosa
+
+**Adam:** *"full v3 inkluderar synonymskrivningen med avrundningstecken och
+alla kort ska ha minst 1 synonym eller en avrundad eller dubbelavrundad
+synonym."*
+
+Avsnittet ovan har statt har sedan 2026-08-29 och foljdes anda inte. Matt
+samma dag Adam patalade det: **56 kort skrevs med tom synonymrad**, 30 i
+formiddagens batch och 26 i eftermiddagens, alla motiverade med att "tom
+lista ar godkant". Den formuleringen kom ur `_pool.py`:s docstring, som
+felaktigt pastod att tom rad var normalfallet (69 %) -- den siffran galler
+tom POOL, inte tom rad pa kortet.
+
+**Tre andringar sa det inte kan upprepas:**
+
+| Var | Vad |
+|---|---|
+| `forgranska.HARDA` | **`synonymrad_tom`** -- ett enskilt ord utan synonym stoppas. Flerordsuttryck undantas pa FORMEN, inte pa kansla |
+| `forgranska` 4a/4b/4c | `≈≈` undantas fran kallkraven. Utan det straffade forgranskningen exakt det styleguiden foreskriver -- 28 fyllda rader gav 30 harda anmarkningar |
+| `kortgranskare.VERIFIERARINSTRUKTION` | Blindgranskaren far nu veta att de tre nivaerna finns. Den sade tidigare *"EN TOM SYNONYMLISTA AR ALDRIG ETT FEL"* -- raka motsatsen till regeln -- och underkande `moran ≈≈ jordart` for att kategorin var **overordnad**, vilket ar precis vad nivan betyder |
+
+🎯 **Lardomen ar generell och galler hela projektet: en regel som bara ar
+prosa foljs inte.** Tre ganger samma dag foll samma sak -- registret
+(2026-08-12), `betydelse_kan_saknas` (2026-08-24) och nu synonymraden.
+
 **Bonusen:** kategorin loser tre kort som hade ANDRA problem. `tertial`
 kunde inte fa `kvartal` (3 mot 4 manader) men kan fa `≈≈ tidsperiod`, som
 ar sant. `grav` och `polyp` bar tva betydelser dar kallan bara tackte den
