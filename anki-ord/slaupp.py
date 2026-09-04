@@ -542,13 +542,26 @@ def _har_riktig_traff(data, ord_):
     Utan den har kontrollen hade fallbacken gjort saken varre an den strikta
     sokningen -- den hade hittat grannord och rapporterat dem som belagg."""
     mal = ord_.lower().replace(" ", "")
+    # FRASER KRAVER EXAKT TRAFF. Prefixslapphetet nedan finns for bojda former
+    # (loafer -> loafers), men pa ett flerordsuttryck matchar den FORSTA ORDET:
+    # "dra pa munnen".startswith("dra") ar sant, sa SO:s artikel for *dra* (och
+    # for *sele*, remtyg pa hast) godtogs som belagg for frasen. Matt
+    # 2026-09-04: 8 av 10 fraser i en batch bar definitioner fran sina egna
+    # bestandsdelar -- "halla fanan hogt" gav hogtalare, "rott ore" gav svin,
+    # "vinna anklang" gav instinkt. svenska.se:s msearch har inga uppslagsord
+    # for fraser alls; den matchar orden och rapporterar TRAFF.
+    fras = " " in ord_.strip()
     for bok in INDEX:
         for t in (((data.get(bok) or {}).get("hits") or {}).get("hits") or []):
             s = t.get("_source", {})
             for nyckel in ("ortografi", "lemma", "grundform", "uppslagsord"):
                 v = _text(s.get(nyckel)).lower().replace(" ", "")
-                # bade exakt och bojd form godtas: loafer -> loafers
-                if v and (v == mal or v.startswith(mal) or mal.startswith(v)):
+                if not v:
+                    continue
+                if fras:
+                    if v == mal:
+                        return True
+                elif v == mal or v.startswith(mal) or mal.startswith(v):
                     return True
     return False
 
@@ -672,10 +685,24 @@ def main():
             fri, f_status, f_byte = hamta(o, exakt=False)
             if fri is not None and _har_riktig_traff(fri, o):
                 data, status, byte = fri, f_status, f_byte
+        # FRASSPARREN. Aven den STRIKTA sokningen ger komponenttraffar pa
+        # flerordsuttryck -- msearch har inga uppslagsord for fraser, sa den
+        # matchar de ingaende orden och rapporterar TRAFF. Utan den har
+        # kontrollen nadde definitioner for *hogtalare*, *svin* och *sele*
+        # fram till skrivsteget som belagg for "halla fanan hogt", "rott ore"
+        # och "dra pa munnen". Kontrollen lag bara pa fritext-fallbacken.
+        fras_utan_uppslagsord = False
+        if data is not None and " " in o.strip() and not _har_riktig_traff(data, o):
+            fras_utan_uppslagsord = True
+            print(f"FRAS_UTAN_UPPSLAGSORD {o} -- svenska.se-traffarna galler "
+                  f"bestandsdelarna, inte frasen. Kastas.")
+            data = None
         # ---- BEVISRADERNA. Skrivs av processen, inte av agenten. ----
         print(f"SVENSKA_SE_HAMTAD {o} HTTP {status} {byte}")
         if data is None:
-            post["svenska_se"] = {"FEL": f"HTTP {status}"}
+            post["svenska_se"] = ({"FRAS_UTAN_UPPSLAGSORD": True}
+                                  if fras_utan_uppslagsord
+                                  else {"FEL": f"HTTP {status}"})
         else:
             post["svenska_se"] = sammanfatta(data)
             # SAOB raknas med. Den avgor inte dagens betydelser -- men "finns
