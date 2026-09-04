@@ -4565,3 +4565,65 @@ tysta-tom-pool-fälla som `-is:suspended` orsakade 2026-08-11.
 posterna på prio/allvar/ord efteråt, precis som förut. Flaggan bestämmer
 *vilka* kort som kommer med, inte i vilken ordning de skrivs — och det är
 urvalet som var problemet. Prio-taggen går fortfarande före allt annat.
+
+
+## 🔴 2026-09-04: frasspärren — komponentdefinitioner godtogs som belägg i 86 % av fraserna
+
+CLAUDE.md dokumenterade felet **2026-09-02** med exemplet `dra på munnen`, som
+fick SO:s artiklar för *"dra till med"* och *"sele"* (remtyg på häst). Anteckningen
+slutade med *"för enstaka ord fångas samma fel; för fraser inte"* — och där låg
+det. **Ingen spärr byggdes.** I dag slog det till igen, i skala.
+
+### Mätningen
+
+| | |
+|---|---|
+| Flerordsuttryck i dagens batch om 150 | **28** |
+| Varav underlaget gällde **beståndsdelarna**, inte frasen | 🔴 **24 (86 %)** |
+
+**Vad SO faktiskt returnerade:**
+
+| Fras | Definition som kom tillbaka | Egentligen |
+|---|---|---|
+| `hålla fanan högt` | *"apparat som omvandlar elektriska signaler till ljud"* | **högtalare** |
+| `rött öre` | *"partåigt hovdjur med förlängt nosparti"* | **svin** |
+| `vara läns på` | *"museum med inriktning på ett läns historia"* | **länsmuseum** |
+| `vinna anklang` | *"inre drift som inte är viljestyrd"* | **instinkt** |
+| `dra på munnen` | *"remtyg som sätts på en häst"* | **sele** |
+
+`uppslagsordstraffar` rapporterade `["saol", "so"]` för samtliga. **Underlaget
+såg fullt belagt ut.**
+
+### Två hål, inte ett
+
+1. **`_har_riktig_traff` godtog prefix.** `mal.startswith(v)` fanns för böjda
+   former (*loafer → loafers*) — men på en fras matchar den **första ordet**:
+   `"dra på munnen".startswith("dra")` är sant. Fraser kräver nu exakt träff.
+2. 🔴 **Kontrollen låg bara på fritext-fallbacken.** Den **strikta**
+   sökningen gav samma komponentträffar och kontrollerades aldrig. Det var det
+   större hålet — fallbacken körs bara när strikt ger noll, alltså nästan
+   aldrig för fraser.
+
+Fraser utan eget uppslagsord får nu `FRAS_UTAN_UPPSLAGSORD` i stället för
+komponentdefinitioner, och raden skrivs ut i klartext.
+
+### 🔴 Vad det betyder bakåt — 180 släppta kort
+
+**180 av 2 393 full v3-kort (7,5 %) är flerordsuttryck.** De skrevs med
+uppslagningar som med stor sannolikhet bar komponentdefinitioner.
+
+⚠️ **Det betyder INTE att 180 kort är fel.** Skrivsteget läser även OLD-facit
+och legacy-innehållet, och en *"sele"*-definition under `dra på munnen` är
+uppenbart fel för den som läser. Blindgranskningen fångade sannolikt fler.
+
+🎯 **Men det är en avgränsad, identifierbar mängd som förtjänar en riktad
+granskning** — kör dem genom den fixade `slaupp.py` och jämför mot korten.
+Det är den billigaste kvalitetskontrollen som finns just nu: målgruppen är
+känd, felet är känt, och verktyget som hittar det är byggt.
+
+**Exempel ur de 180:** `bekväma sig`, `lägga sordin på`, `avbörda sig`,
+`leva i sus och dus`, `dra i långbänk`, `stålsätta sig`, `komma för`.
+
+🎯 **Lärdomen är samma som `--antal`-buggen samma dag och de fyra reglerna
+2 september: en brist som bara beskrivs i CLAUDE.md fortsätter kosta pengar
+tills den blir en kontroll.** Den här stod dokumenterad i två dagar.
