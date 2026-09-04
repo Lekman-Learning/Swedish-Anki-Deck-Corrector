@@ -607,7 +607,13 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("ord", nargs="*")
     p.add_argument("--fil", help="JSON-lista eller {relearn:[],ovriga:[]}")
-    p.add_argument("--antal", type=int, default=20)
+    # default=None, inte 20. "Inget angivet" betyder HELA listan; bara det
+    # losa ord-argumentet pa kommandoraden behaller den gamla taklosningen.
+    # Den gamla defaulten slog av TYST mitt i en fil: 23 ord in, 20 uppslagna,
+    # tre utan ett ord i utdatan (2026-08-11). Samma fel igen 2026-09-04 --
+    # 150 ord in, 20 uppslagna, 130 tappade. En grans som inte syns i utdatan
+    # ar samma sak som ingen grans alls, sa den skrivs nu ut nar den satts.
+    p.add_argument("--antal", type=int, default=None)
     p.add_argument("--hoppa", type=int, default=0)
     p.add_argument("--kompakt", action="store_true",
                    help="kort textsammandrag i stället för full JSON")
@@ -640,7 +646,14 @@ def main():
         if any(not isinstance(o, str) or not o for o in d):
             sys.exit(f"{a.fil}: posterna måste vara strängar eller objekt med 'ord'.")
         ord_ += d
-    ord_ = ord_[a.hoppa:a.hoppa + a.antal]
+    _fore = len(ord_)
+    _antal = a.antal if a.antal is not None else (len(ord_) if a.fil else 20)
+    ord_ = ord_[a.hoppa:a.hoppa + _antal]
+    # Skriv ALLTID ut nar listan kapas. Tyst kapning ar felet ovan.
+    if a.hoppa or len(ord_) < _fore:
+        print(f"URVAL {len(ord_)} av {_fore} ord "
+              f"(hoppa={a.hoppa}, antal={_antal}) -- "
+              f"{_fore - a.hoppa - len(ord_)} kvar efter denna körning")
     if not ord_:
         sys.exit("inga ord")
 
