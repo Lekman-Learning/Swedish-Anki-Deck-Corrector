@@ -1246,10 +1246,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=knollrig https://www.synonymer.se/sv-syn/knollrig https://sv.wiktionary.org/wiki/knollrig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Med små, täta lockar",
+      "register": "neutral, neutral",
+      "synonymer": [
+        "smålockig"
+      ],
+      "synonymgrupper": [
+        [
+          "smålockig"
+        ]
+      ],
+      "exempelmening": "Han hade tjockt, <font color=\"#3498db\">knollrigt</font> svart hår.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "En betydelse, en synonym ur poolen. SO ger 'smålockig' rakt av.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080625108,
@@ -1295,10 +1317,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=histrion https://www.synonymer.se/sv-syn/histrion https://sv.wiktionary.org/wiki/histrion",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Enkel skådespelare",
+      "register": "ngt ålderdomlig, lätt negativ",
+      "synonymer": [
+        "skådespelare",
+        "enklare skådespelare"
+      ],
+      "synonymgrupper": [
+        [
+          "skådespelare",
+          "enklare skådespelare"
+        ]
+      ],
+      "exempelmening": "Truppen bestod av kringresande <font color=\"#3498db\">histrioner</font> utan fast scen.",
+      "etymologi": "av latin his´trio 'skådespelare'; ev. av etruskiskt ursprung"
+    },
+    "approved": true,
+    "note_till_granskare": "SO märker ordet 'något ålderdomligt', vilket står i registret. Valören är lätt negativ: SO:s parentes '(enklare) skådespelare' är en nedvärdering, inte en neutral avgränsning.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627104,
@@ -1349,10 +1393,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=tillkortakommande https://www.synonymer.se/sv-syn/tillkortakommande https://sv.wiktionary.org/wiki/tillkortakommande",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Brist eller svaghet som leder till misslyckande",
+      "register": "formell, negativ",
+      "synonymer": [
+        "misslyckande"
+      ],
+      "synonymgrupper": [
+        [
+          "misslyckande"
+        ]
+      ],
+      "exempelmening": "Rapporten pekade ut flera <font color=\"#3498db\">tillkortakommanden</font> hos myndigheten.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s parentes '(svaghet eller brist som leder till) misslyckande' är upplöst i huvudbetydelsen — parentesen bär hela skillnaden mot ett vanligt misslyckande och ska inte gömmas.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080624392,
@@ -1390,10 +1454,38 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=förhärda https://www.synonymer.se/sv-syn/förhärda https://sv.wiktionary.org/wiki/förhärda",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Göra någon hård och känslolös ; förhärda sig — göra sig känslolös",
+      "register": "formell, negativ ; formell, negativ",
+      "synonymer": [
+        "≈≈ förråa",
+        "vara hård och okänslig"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ förråa"
+        ],
+        [
+          "vara hård och okänslig"
+        ]
+      ],
+      "exempelmening": "Modern bad och grät, men han <font color=\"#3498db\">förhärdade</font> sig.",
+      "etymologi": "se ursprung till härda"
+    },
+    "approved": true,
+    "note_till_granskare": "Huvudbetydelsen skrevs om: 'kall' ar sjalvt ett deck-ord och far inte sta i forklaringen. 'hard och kanslolos' sager samma sak. SAOL ger bada formerna, den transitiva och den reflexiva.",
+    "adamtal_varningar": [
+      "cirkular_definition: 'förhärda' tycks förklaras med sig självt"
+    ],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080624450,
@@ -1437,10 +1529,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=holism https://www.synonymer.se/sv-syn/holism https://sv.wiktionary.org/wiki/holism",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Uppfattningen att helheten är mer än summan av delarna",
+      "register": "fackspråklig, neutral, filosofi",
+      "synonymer": [
+        "≈≈ helhetssyn"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ helhetssyn"
+        ]
+      ],
+      "exempelmening": "Inom <font color=\"#3498db\">holismen</font> studeras systemet som helhet, inte del för del.",
+      "etymologi": "bildn. till grekiska hol´os 'hel, fullständig'"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger bara 'teori', en kategori utan innehåll. SAOL:s formulering ('helheten är mer än summan av delarna') är kortare och tydligare än SO:s och används i huvudbetydelsen.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080624826,
@@ -1485,10 +1597,38 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=bräm https://www.synonymer.se/sv-syn/bräm https://sv.wiktionary.org/wiki/bräm",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Bred kant på ett klädesplagg ; ytterkant på en fjäder eller ett blomhylle ; kant som avviker i utseende",
+      "register": "neutral, neutral ; fackspråklig, neutral, biologi ; neutral, neutral",
+      "synonymer": [
+        "kant",
+        "bård"
+      ],
+      "synonymgrupper": [
+        [
+          "kant",
+          "bård"
+        ],
+        [
+          "≈≈ ytterkant"
+        ],
+        [
+          "≈≈ avvikande kant"
+        ]
+      ],
+      "exempelmening": "Kappan hade ett <font color=\"#3498db\">bräm</font> av mörk päls runt halsen.",
+      "etymologi": "fornsvenska brem; av lågtyska breme med samma betydelse; germanskt ord, troligen besläktat med bard 1"
+    },
+    "approved": true,
+    "note_till_granskare": "Tre betydelser enligt SO: plaggets kant, den biologiska, och den allmanna 'kant med avvikande utseende'. Den tredje lades till efter forgranskningens betydelserakning.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080625940,
@@ -1527,10 +1667,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=burgen https://www.synonymer.se/sv-syn/burgen https://sv.wiktionary.org/wiki/burgen",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Välbärgad sedan lång tid tillbaka",
+      "register": "ngt ålderdomlig, positiv",
+      "synonymer": [
+        "välbärgad"
+      ],
+      "synonymgrupper": [
+        [
+          "välbärgad"
+        ]
+      ],
+      "exempelmening": "Hon växte upp i ett <font color=\"#3498db\">burget</font> ämbetsmannahem från slutet av 1800-talet.",
+      "etymologi": "till bärga"
+    },
+    "approved": true,
+    "note_till_granskare": "SO märker 'mest vid beskrivning av äldre förhållanden' — det ger registret och förklarar varför ordet nästan alltid står i historisk text. SO:s parentes '(sedan gammalt)' är med i huvudbetydelsen: det är skillnaden mot 'rik', som kan vara nyvunnet.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080626078,
@@ -1568,10 +1728,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=girera https://www.synonymer.se/sv-syn/girera https://sv.wiktionary.org/wiki/girera",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Föra över pengar från ett konto till ett annat",
+      "register": "fackspråklig, neutral, ekonomi",
+      "synonymer": [
+        "överföra genom giro"
+      ],
+      "synonymgrupper": [
+        [
+          "överföra genom giro"
+        ]
+      ],
+      "exempelmening": "Han <font color=\"#3498db\">girerade</font> medlemsavgiften till föreningen.",
+      "etymologi": "till giro"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolens 'överföra' ensamt är för brett — man kan överföra vad som helst. Den fullständiga formen ur SAOL används i stället.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 2 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080626776,
@@ -1615,10 +1797,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=bonbonjär https://www.synonymer.se/sv-syn/bonbonjär https://sv.wiktionary.org/wiki/bonbonjär",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Skål med lock för choklad och sötsaker",
+      "register": "neutral, neutral",
+      "synonymer": [
+        "konfektskål med lock"
+      ],
+      "synonymgrupper": [
+        [
+          "konfektskål med lock"
+        ]
+      ],
+      "exempelmening": "På bordet stod en <font color=\"#3498db\">bonbonjär</font> i slipat glas.",
+      "etymologi": "av franska bonbonnière med samma betydelse, till bonbon 'konfekt'"
+    },
+    "approved": true,
+    "note_till_granskare": "Huvudbetydelsen skrevs om: 'konfekt' ar sjalvt ett deck-ord. 'choklad och sotsaker' sager samma sak utan att forutsatta ordet. Locket star kvar -- det skiljer en bonbonjar fran en vanlig godisskal.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080626830,
@@ -1699,10 +1903,36 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=diger https://www.synonymer.se/sv-syn/diger https://sv.wiktionary.org/wiki/diger",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som är stor och tjock ; förr även om människor: tjock",
+      "register": "neutral, neutral ; arkaisk, neutral",
+      "synonymer": [
+        "omfattande",
+        "tjock"
+      ],
+      "synonymgrupper": [
+        [
+          "omfattande"
+        ],
+        [
+          "tjock"
+        ]
+      ],
+      "exempelmening": "Han lämnade in en <font color=\"#3498db\">diger</font> avhandling på 600 sidor.",
+      "etymologi": "fornsvenska digher, degher, svensk dialekt diger 'tjock; tung'; gemensamt germanskt ord, besläktat med deg, degel, digna"
+    },
+    "approved": true,
+    "note_till_granskare": "Huvudbetydelsen skrevs om: den forklarade med 'omfang', som sjalvt ar ett deck-ord. SO:s underbetydelse om manniskor star som andra betydelse med arkaiskt register.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627073,
@@ -1740,10 +1970,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=dragé https://www.synonymer.se/sv-syn/dragé https://sv.wiktionary.org/wiki/dragé",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Tablett eller sötsak överdragen med ett hårt lager glasyr",
+      "register": "neutral, neutral",
+      "synonymer": [
+        "≈≈ överdragen tablett"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ överdragen tablett"
+        ]
+      ],
+      "exempelmening": "Medicinen kom som <font color=\"#3498db\">dragéer</font> med sött ytterlager.",
+      "etymologi": "av franska dragée med samma betydelse; ur grekiska trage´mata 'sötsaker; dessert'"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger 'dragerad' och 'tablett' — det första är ordets eget particip och det andra en kategori som utelämnar överdraget, alltså kärnan. Därför ≈≈. Ordet täcker både läkemedel och konfekt, vilket huvudbetydelsen skriver ut.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627365,
@@ -1782,10 +2034,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=omtöckna https://www.synonymer.se/sv-syn/omtöckna https://sv.wiktionary.org/wiki/omtöckna",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Göra oklar eller förvirrad",
+      "register": "litterär, negativ",
+      "synonymer": [
+        "förmörka",
+        "göra andligen förvirrad"
+      ],
+      "synonymgrupper": [
+        [
+          "förmörka",
+          "göra andligen förvirrad"
+        ]
+      ],
+      "exempelmening": "Febern <font color=\"#3498db\">omtöcknade</font> hans sinnen så att han inte kände igen någon.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "SO saknar artikel för ordet; SAOL och Wiktionary bär betydelsen och båda synonymerna kommer ur SAOL via poolen. Registret är litterärt — ordet lever nästan bara i skriven text, oftast som particip (omtöcknad).",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080629340,
@@ -1870,10 +2144,33 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=serendipitet https://www.synonymer.se/sv-syn/serendipitet https://sv.wiktionary.org/wiki/serendipitet",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Förmågan att hitta något värdefullt av en slump, utan att ha letat efter det",
+      "register": "formell, positiv",
+      "synonymer": [
+        "≈≈ lyckosam slump"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ lyckosam slump"
+        ]
+      ],
+      "exempelmening": "Penicillinet upptäcktes genom ren <font color=\"#3498db\">serendipitet</font> — Fleming letade efter något annat.",
+      "etymologi": "efter engelska serendipity med samma betydelse; till namnet Serendip i den persiska sagan De tre prinsarna från Serendip; av persiska Sarandip 'Sri Lanka'"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger bara 'förmåga', en avhuggen bit av definitionen. Wiktionarys tillägg 'utan att egentligen leta, eller då man letar efter något annat' är med i huvudbetydelsen — det är hela skillnaden mot vanlig tur.",
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'Förmågan att hitta något värdefullt av en slump, u'",
+      "etymologi_langd: 23 ord -- etymologin ska förklara betydelsen, inte berätta ordets historia: 'efter engelska serendipity med samma betydelse; till namnet '"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627558,
@@ -1912,10 +2209,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=förgrundsgestalt https://www.synonymer.se/sv-syn/förgrundsgestalt https://sv.wiktionary.org/wiki/förgrundsgestalt",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Person som står i centrum inom sitt område",
+      "register": "neutral, positiv",
+      "synonymer": [
+        "förgrundsfigur"
+      ],
+      "synonymgrupper": [
+        [
+          "förgrundsfigur"
+        ]
+      ],
+      "exempelmening": "Hon var en <font color=\"#3498db\">förgrundsgestalt</font> inom svensk arkitektur på 60-talet.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "SO definierar ordet med sin egen synonym ('förgrundsfigur'), vilket inte duger som förklaring på ett kort. Huvudbetydelsen är därför skriven ut.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080622218,
@@ -1960,10 +2279,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=obeständig https://www.synonymer.se/sv-syn/obeständig https://sv.wiktionary.org/wiki/obeständig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som förändras och bryts ner när den utsätts för påverkan",
+      "register": "formell, negativ",
+      "synonymer": [
+        "≈≈ förgänglig"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ förgänglig"
+        ]
+      ],
+      "exempelmening": "Skulpturerna var av gips och andra <font color=\"#3498db\">obeständiga</font> material.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen är tom — varken SAOL eller Wiktionary har artikel, och synonymer.se saknar redaktionellt innehåll. Därför ≈≈. SO:s parenteser ('i vissa (väsentliga) avseenden', '(och försämras)') är upplösta.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627391,
@@ -2001,10 +2342,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=aerogram https://www.synonymer.se/sv-syn/aerogram https://sv.wiktionary.org/wiki/aerogram",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Tunt brevpapper som veks ihop till eget kuvert och skickades med flyg",
+      "register": "ngt ålderdomlig, neutral",
+      "synonymer": [
+        "lätt flygbrev"
+      ],
+      "synonymgrupper": [
+        [
+          "lätt flygbrev"
+        ]
+      ],
+      "exempelmening": "Soldaterna skrev hem på <font color=\"#3498db\">aerogram</font> för att spara vikt.",
+      "etymologi": "till aero- och -gram"
+    },
+    "approved": true,
+    "note_till_granskare": "SO märker 'historiskt' — företeelsen finns inte kvar, vilket ger registret. Att papperet blev sitt eget kuvert är det som gör ordet begripligt och står därför i huvudbetydelsen.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080629442,
@@ -2091,10 +2452,34 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=boklig https://www.synonymer.se/sv-syn/boklig https://sv.wiktionary.org/wiki/boklig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som kommer ur böcker i stället för ur egen erfarenhet ; nedsättande om kunskap utan verklighetsförankring",
+      "register": "neutral, neutral ; neutral, lätt negativ",
+      "synonymer": [
+        "≈≈ teoretisk",
+        "≈≈ verklighetsfrämmande"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ teoretisk"
+        ],
+        [
+          "≈≈ verklighetsfrämmande"
+        ]
+      ],
+      "exempelmening": "Han har bara <font color=\"#3498db\">boklig</font> kunskap om arkitektur, inga egna erfarenheter.",
+      "etymologi": "fornsvenska bokliker"
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s underbetydelse 'ibland med viss negativ bibetydelse' ar en egen anvandning med egen valor och star som nummer tva. Poolen ar tom, darfor ≈≈ pa bada.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080624489,
@@ -2133,10 +2518,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=myopisk https://www.synonymer.se/sv-syn/myopisk https://sv.wiktionary.org/wiki/myopisk",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Närsynt",
+      "register": "fackspråklig, neutral, medicin",
+      "synonymer": [
+        "närsynt"
+      ],
+      "synonymgrupper": [
+        [
+          "närsynt"
+        ]
+      ],
+      "exempelmening": "Patienten hade en <font color=\"#3498db\">myopisk</font> förändring i näthinnan.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "En betydelse, en exakt synonym ur poolen. Ordet används nästan bara medicinskt på svenska — den bildliga användningen ('kortsiktig') som finns i engelskan har SO ingen artikel för.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080625299,
@@ -2175,10 +2582,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=ariadnetråd https://www.synonymer.se/sv-syn/ariadnetråd https://sv.wiktionary.org/wiki/ariadnetråd",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Ledtråd som visar vägen ut ur ett svårt problem",
+      "register": "högtidlig, positiv",
+      "synonymer": [
+        "ledtråd"
+      ],
+      "synonymgrupper": [
+        [
+          "ledtråd"
+        ]
+      ],
+      "exempelmening": "Fyndet blev den <font color=\"#3498db\">ariadnetråd</font> som ledde utredningen rätt.",
+      "etymologi": "till Ariad´ne, namn på grekisk kungadotter som räddade Theseus ur labyrinten med hjälp av ett trådnystan"
+    },
+    "approved": true,
+    "note_till_granskare": "SO märker 'högtidligt', vilket ger registret. Etymologin bär hela bilden: Ariadnes trådnystan som förde Theseus ut ur labyrinten — det förklarar varför ordet betyder just en väg UT, inte vilken ledtråd som helst.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080625911,
@@ -2217,10 +2644,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=ansa https://www.synonymer.se/sv-syn/ansa https://sv.wiktionary.org/wiki/ansa",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Klippa och putsa så att något behåller sin form",
+      "register": "neutral, neutral",
+      "synonymer": [
+        "sköta",
+        "vårda"
+      ],
+      "synonymgrupper": [
+        [
+          "sköta",
+          "vårda"
+        ]
+      ],
+      "exempelmening": "Han <font color=\"#3498db\">ansade</font> mustaschen framför spegeln varje morgon.",
+      "etymologi": "svensk dialekt ansa 'bli varse; sköta om'"
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s def är cirkulär ('utföra ans på') och duger inte. Exemplen visar vad ordet gör — rabatten, rosorna, mustaschen — alltså klippa och putsa för formens skull, inte allmän omvårdnad.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080626233,
@@ -2258,10 +2707,34 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=ök https://www.synonymer.se/sv-syn/ök https://sv.wiktionary.org/wiki/ök",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Drag- eller lastdjur ; nedsättande om en dålig häst",
+      "register": "ngt ålderdomlig, neutral ; ngt ålderdomlig, nedsättande",
+      "synonymer": [
+        "drag- el. lastdjur",
+        "≈≈ krake"
+      ],
+      "synonymgrupper": [
+        [
+          "drag- el. lastdjur"
+        ],
+        [
+          "≈≈ krake"
+        ]
+      ],
+      "exempelmening": "Ett gammalt spattigt och istadigt <font color=\"#3498db\">ök</font> drog kärran.",
+      "etymologi": "vanlig runform eyk, fornsvenska ök, öker 'ök; dragare; riddjur'; besläktat med ok"
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s underbetydelse 'numera vanligen som nedsättande benämning på häst' är en egen betydelse med egen valör och står som nummer två. Det är dessutom den man faktiskt möter i dag, medan grundbetydelsen är den äldre — exempelmeningen visar den nedsättande.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080629336,
@@ -2342,10 +2815,34 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=mobilier https://www.synonymer.se/sv-syn/mobilier https://sv.wiktionary.org/wiki/mobilier",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Lös egendom, det man kan flytta med sig",
+      "register": "formell, neutral, juridik",
+      "synonymer": [
+        "lösöre",
+        "bohag"
+      ],
+      "synonymgrupper": [
+        [
+          "lösöre",
+          "bohag"
+        ]
+      ],
+      "exempelmening": "Vid bouppteckningen värderades fastigheten för sig och <font color=\"#3498db\">mobilier</font> för sig.",
+      "etymologi": "till latin mo´bilis 'flyttbar'; jfr ursprung till 1mobil"
+    },
+    "approved": true,
+    "note_till_granskare": "Etymologin förklarar ordet direkt: latinets mobilis, 'flyttbar'. Den kontrasten — flyttbart mot fast — är vad ordet betyder och står därför i huvudbetydelsen. Registret är juridiskt: ordet lever i bouppteckningar.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080626409,
@@ -2384,10 +2881,38 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=gräll https://www.synonymer.se/sv-syn/gräll https://sv.wiktionary.org/wiki/gräll",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som lyser alltför starkt och skarpt ; överdriven och påträngande",
+      "register": "neutral, negativ ; neutral, negativ",
+      "synonymer": [
+        "bjärt",
+        "skrikande",
+        "≈≈ påträngande"
+      ],
+      "synonymgrupper": [
+        [
+          "bjärt",
+          "skrikande"
+        ],
+        [
+          "≈≈ påträngande"
+        ]
+      ],
+      "exempelmening": "Reklamskylten lyste i <font color=\"#3498db\">grälla</font> färger.",
+      "etymologi": "av danska, tyska grell med samma betydelse, ursprungligen 'skrikande'; besläktat med groll"
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s 'äv. bildligt' är en egen betydelse: grälla effekter i en föreställning handlar inte om syn utan om överdrift. Den står som nummer två med ≈≈, eftersom poolens ord alla gäller färg.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627707,
@@ -2426,10 +2951,46 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=vimla https://www.synonymer.se/sv-syn/vimla https://sv.wiktionary.org/wiki/vimla",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Röra sig omkring i stor och oordnad mängd ; synas i nöjeslivet ; vara full av en rörlig mängd ; det vimlar av — finnas i stor mängd",
+      "register": "neutral, neutral ; neutral, neutral ; neutral, neutral ; neutral, neutral",
+      "synonymer": [
+        "≈≈ myllra",
+        "≈≈ mingla",
+        "≈≈ krylla",
+        "≈≈ förekomma i mängd"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ myllra"
+        ],
+        [
+          "≈≈ mingla"
+        ],
+        [
+          "≈≈ krylla"
+        ],
+        [
+          "≈≈ förekomma i mängd"
+        ]
+      ],
+      "exempelmening": "Människorna <font color=\"#3498db\">vimlade</font> omkring på torget.",
+      "etymologi": "av tyska wimmeln med samma betydelse, till wimmen 'röra sig av och an'; troligen av ljudmålande ursprung"
+    },
+    "approved": true,
+    "note_till_granskare": "Fyra betydelser efter SO: mangden ror sig (1), en person syns i nojeslivet (2), platsen ar full (3), och den opersonliga konstruktionen 'det vimlar av' som SO noterar sarskilt (4). 'myllra' bytt till ≈≈ -- varken SO:s SYN-fält eller definitionstexten belagger det som synonym, trots att det star i Wiktionary.",
+    "adamtal_varningar": [
+      "cirkular_definition: 'vimla' tycks förklaras med sig självt"
+    ],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080628914,
@@ -2467,10 +3028,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=epifyt https://www.synonymer.se/sv-syn/epifyt https://sv.wiktionary.org/wiki/epifyt",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Växt som sitter fast på en annan växt utan att ta näring från den",
+      "register": "fackspråklig, neutral, biologi",
+      "synonymer": [
+        "≈≈ påväxtväxt"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ påväxtväxt"
+        ]
+      ],
+      "exempelmening": "Orkidéer är ofta <font color=\"#3498db\">epifyter</font> och sitter högt uppe i trädkronorna.",
+      "etymologi": "till grekiska epi´ 'på' och phyton´ 'växt'"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger bara 'växt', en kategori som inte skiljer epifyten från något annat. Att den INTE tar näring ur värdväxten är hela poängen — det är skillnaden mot en parasit — och står därför i huvudbetydelsen.",
+    "adamtal_varningar": [
+      "ordbokslangd_hb: 14 ord i en betydelse -- korta ner: 'Växt som sitter fast på en annan växt utan att ta '"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080629230,
@@ -2509,10 +3092,42 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=kollegial https://www.synonymer.se/sv-syn/kollegial https://sv.wiktionary.org/wiki/kollegial",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som gäller en grupp jämställda tjänstemän ; som avgörs genom omröstning i gruppen i stället för av chefen ensam ; som beter sig kamratligt mot dem man arbetar med ; om handling som visar sådan kamratlighet",
+      "register": "formell, neutral ; formell, neutral, politik ; neutral, positiv ; neutral, positiv",
+      "synonymer": [
+        "kollegie-",
+        "≈≈ genom omröstning",
+        "kamratlig",
+        "≈≈ kamratlig handling"
+      ],
+      "synonymgrupper": [
+        [
+          "kollegie-"
+        ],
+        [
+          "≈≈ genom omröstning"
+        ],
+        [
+          "kamratlig"
+        ],
+        [
+          "≈≈ kamratlig handling"
+        ]
+      ],
+      "exempelmening": "Beslutet fattades genom <font color=\"#3498db\">kollegial</font> omröstning, inte av rektorn ensam.",
+      "etymologi": "till kollegium"
+    },
+    "approved": true,
+    "note_till_granskare": "Fyra betydelser efter SO. Huvudbetydelsen skrevs om: den forklarade med 'kollegium' och 'kollega', som bada ar deck-ord och alltsa inte far sta i forklaringen -- 'grupp jamstallda tjansteman' och 'dem man arbetar med' sager samma sak. Den andra betydelsen ar den som forvirrar: ett kollegialt beslut ar inte ett vanligt beslut utan ett beslut i grupp, och Wiktionarys kontrast mot chefen ensam ar darfor med.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080620852,
@@ -2558,10 +3173,40 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=arta sig https://www.synonymer.se/sv-syn/arta sig https://sv.wiktionary.org/wiki/arta sig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Verka utvecklas åt ett visst håll ; utvecklas på ett bra sätt ; sluta väl",
+      "register": "neutral, neutral ; neutral, positiv ; neutral, positiv",
+      "synonymer": [
+        "utvecklas",
+        "≈≈ gå bra",
+        "≈≈ ordna sig"
+      ],
+      "synonymgrupper": [
+        [
+          "utvecklas"
+        ],
+        [
+          "≈≈ gå bra"
+        ],
+        [
+          "≈≈ ordna sig"
+        ]
+      ],
+      "exempelmening": "Den nya modellen <font color=\"#3498db\">artade sig</font> till en stor succé.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "SO ger två betydelser plus 'äv. positivt'. Skillnaden är att den första är neutral riktning ('hur artar det sig?') medan de andra två bär förväntan om något bra ('allt skulle arta sig med tiden').",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080622440,
@@ -2701,10 +3346,38 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=förirra sig https://www.synonymer.se/sv-syn/förirra sig https://sv.wiktionary.org/wiki/förirra sig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Tappa orienteringen och hamna någonstans av misstag ; komma bort från ämnet",
+      "register": "neutral, neutral ; neutral, lätt negativ",
+      "synonymer": [
+        "gå vilse",
+        "tappa orienteringen",
+        "≈≈ avvika från ämnet"
+      ],
+      "synonymgrupper": [
+        [
+          "gå vilse",
+          "tappa orienteringen"
+        ],
+        [
+          "≈≈ avvika från ämnet"
+        ]
+      ],
+      "exempelmening": "Två tågluffare hade <font color=\"#3498db\">förirrat sig</font> till den lilla byn.",
+      "etymologi": "se ursprung till irra"
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s 'äv. bildligt' är en egen betydelse med eget bruk — 'han förirrade sig bort från ämnet' handlar inte om geografi. Den står som nummer två.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080629524,
@@ -3125,10 +3798,40 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=likare https://www.synonymer.se/sv-syn/likare https://sv.wiktionary.org/wiki/likare",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Normalmått som andra mått justeras efter ; erkänd förebild ; måttstock i sammansättningar",
+      "register": "fackspråklig, neutral, teknik ; formell, positiv ; formell, neutral",
+      "synonymer": [
+        "normalmått",
+        "≈≈ förebild",
+        "≈≈ måttstock"
+      ],
+      "synonymgrupper": [
+        [
+          "normalmått"
+        ],
+        [
+          "≈≈ förebild"
+        ],
+        [
+          "≈≈ måttstock"
+        ]
+      ],
+      "exempelmening": "Riksarkivet förvarade en <font color=\"#3498db\">likare</font> för mått och vikt.",
+      "etymologi": "till äldre lika 'jämka; justera'"
+    },
+    "approved": true,
+    "note_till_granskare": "Grundbetydelsen är teknisk — det fysiska normalmåttet. Den andra är överförd (en person som andra mäts mot), och den tredje är SO:s 'äv. bildligt (i sammansättn.)', alltså rikslikare och liknande.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627836,
@@ -3166,10 +3869,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=gärdsmyg https://www.synonymer.se/sv-syn/gärdsmyg https://sv.wiktionary.org/wiki/gärdsmyg",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "En mycket liten brunspräcklig fågel med kort, uppåtriktad stjärt",
+      "register": "neutral, neutral, biologi",
+      "synonymer": [
+        "≈≈ småfågel"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ småfågel"
+        ]
+      ],
+      "exempelmening": "En <font color=\"#3498db\">gärdsmyg</font> hoppade omkring i snåret och letade efter insekter.",
+      "etymologi": "se ursprung till gärde och smyga"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger 'en fågel', vilket är SAOL:s hela artikel och för brett. SO:s eget faktum är värt att ha: gärdsmygen är näst kungsfågeln Sveriges minsta fågel, vilket 'mycket liten' i huvudbetydelsen bär.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080629282,
@@ -3213,10 +3936,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=förfara https://www.synonymer.se/sv-syn/förfara https://sv.wiktionary.org/wiki/förfara",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Gå till väga på ett visst sätt",
+      "register": "formell, neutral",
+      "synonymer": [
+        "gå till väga"
+      ],
+      "synonymgrupper": [
+        [
+          "gå till väga"
+        ]
+      ],
+      "exempelmening": "Instruktionen beskriver hur man ska <font color=\"#3498db\">förfara</font> vid eldsvåda.",
+      "etymologi": "jfr fornsvenska forfara 'försvinna; förstöra; försiggå; erfara'"
+    },
+    "approved": true,
+    "note_till_granskare": "En betydelse, en exakt synonym ur poolen. Ordet lever nästan bara i skrivna instruktioner och föreskrifter, vilket ger det formella registret.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080620883,
@@ -3311,10 +4056,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=gensträvig https://www.synonymer.se/sv-syn/gensträvig https://sv.wiktionary.org/wiki/gensträvig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Som gör motstånd och inte vill lyda",
+      "register": "neutral, lätt negativ",
+      "synonymer": [
+        "motsträvig"
+      ],
+      "synonymgrupper": [
+        [
+          "motsträvig"
+        ]
+      ],
+      "exempelmening": "Hästen var <font color=\"#3498db\">gensträvig</font> och vägrade gå in i transporten.",
+      "etymologi": "till gen- 1 och 1sträva"
+    },
+    "approved": true,
+    "note_till_granskare": "Alla tre källorna ger samma enda synonym, 'motsträvig'. Den duger inte ensam som förklaring på ett kort — huvudbetydelsen är därför skriven ut i stället för att upprepa synonymen.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080626391,
@@ -3358,10 +4125,34 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=kollekt https://www.synonymer.se/sv-syn/kollekt https://sv.wiktionary.org/wiki/kollekt",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Insamling av pengar under en gudstjänst ; pengarna som samlats in",
+      "register": "neutral, neutral, religion ; neutral, neutral, religion",
+      "synonymer": [
+        "insamling",
+        "≈≈ insamlade pengar"
+      ],
+      "synonymgrupper": [
+        [
+          "insamling"
+        ],
+        [
+          "≈≈ insamlade pengar"
+        ]
+      ],
+      "exempelmening": "Församlingen tog upp <font color=\"#3498db\">kollekt</font> till förmån för de hemlösa.",
+      "etymologi": "av latin colle´cta 'samlande; samling', till collig´ere 'samla'; jfr ursprung till kollegium, kollektion"
+    },
+    "approved": true,
+    "note_till_granskare": "SO:s 'äv. med tanke på de insamlade pengarna' är en egen betydelse: 'kollekten uppgick till 5 000 kronor' handlar om summan, inte om handlingen. Den står som nummer två.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080627493,
@@ -3399,10 +4190,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=skvattram https://www.synonymer.se/sv-syn/skvattram https://sv.wiktionary.org/wiki/skvattram",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "En starkt doftande myrväxt med vita blommor",
+      "register": "neutral, neutral, biologi",
+      "synonymer": [
+        "getpors"
+      ],
+      "synonymgrupper": [
+        [
+          "getpors"
+        ]
+      ],
+      "exempelmening": "Doften av <font color=\"#3498db\">skvattram</font> låg tung över myren.",
+      "etymologi": "troligen bildat till svensk dialekt skvattra 'stänka, plaska'; av ljudhärmande ursprung"
+    },
+    "approved": true,
+    "note_till_granskare": "'getpors' är SO:s eget SYN-fält och alltså belagd synonym, inte en gissning. Att den doftar starkt är det som gör växten igenkännlig och står därför före blommorna i huvudbetydelsen.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080628431,
@@ -3441,10 +4254,38 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=kutting https://www.synonymer.se/sv-syn/kutting https://sv.wiktionary.org/wiki/kutting",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Liten tunna ; vända på kuttingen — se saken från motsatt håll",
+      "register": "dialektal, neutral ; neutral, neutral",
+      "synonymer": [
+        "kagge",
+        "liten tunna",
+        "≈≈ kasta om perspektivet"
+      ],
+      "synonymgrupper": [
+        [
+          "kagge",
+          "liten tunna"
+        ],
+        [
+          "≈≈ kasta om perspektivet"
+        ]
+      ],
+      "exempelmening": "Skolan har vänt på <font color=\"#3498db\">kuttingen</font> och byggt fler grupprum än lärosalar.",
+      "etymologi": "troligen bildat till kotte"
+    },
+    "approved": true,
+    "note_till_granskare": "SO märker ordet 'dialektalt' i grundbetydelsen. Den andra betydelsen är uttrycket 'vända på kuttingen', som lever kvar i allmänsvenska långt efter att tunnan gjort det — och det är den Adam faktiskt möter, vilket exempelmeningen visar.",
+    "adamtal_varningar": [
+      "cirkular_definition: 'kutting' tycks förklaras med sig självt"
+    ],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080628475,
@@ -3488,10 +4329,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=simpa https://www.synonymer.se/sv-syn/simpa https://sv.wiktionary.org/wiki/simpa",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Bottenlevande rovfisk med brett, platt huvud och stora bröstfenor",
+      "register": "neutral, neutral, biologi",
+      "synonymer": [
+        "≈≈ bottenfisk"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ bottenfisk"
+        ]
+      ],
+      "exempelmening": "Han fick upp en <font color=\"#3498db\">simpa</font> med taggiga gällock.",
+      "etymologi": "fornsvenska simpa; jfr norska simpe, bl.a. 'vitling'; av ovisst ursprung"
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger 'en fisk' (SAOL:s hela artikel) och lösryckta fragment ur SO:s definition. Därför ≈≈. Det breda platta huvudet är det som gör fisken igenkännlig och står kvar i huvudbetydelsen.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 4 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080628094,
@@ -3529,10 +4392,32 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=strimmig https://www.synonymer.se/sv-syn/strimmig https://sv.wiktionary.org/wiki/strimmig",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Försedd med smala, ofta oregelbundna ränder",
+      "register": "neutral, neutral",
+      "synonymer": [
+        "≈≈ randig"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ randig"
+        ]
+      ],
+      "exempelmening": "Katten var grå och <font color=\"#3498db\">strimmig</font> över ryggen.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "Poolen ger bara 'försedd', ett fragment av definitionen. 'randig' är närmast men saknar ordboksbelägg som synonym, därför ≈≈. SO:s parentes '(oregelbundna)' är upplöst till 'ofta oregelbundna'.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [
+      "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
+    ],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080628302,
@@ -3570,10 +4455,30 @@
       "cirkular_synonym",
       "fler_register_an_betydelser"
     ],
-    "sokkoll": null,
-    "proposed": null,
-    "approved": false,
-    "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07."
+    "sokkoll": {
+      "kalla": "https://svenska.se/api/msearch?ord=svängtapp https://www.synonymer.se/sv-syn/svängtapp https://sv.wiktionary.org/wiki/svängtapp",
+      "slutsats": "SO/SAOL/synonymer.se/Wiktionary uppslagna via slaupp.py 2026-09-04; betydelser, register och synonymer darifran."
+    },
+    "proposed": {
+      "huvudbetydelse": "Tappliknande del som något kan svänga runt",
+      "register": "fackspråklig, neutral, teknik",
+      "synonymer": [
+        "≈≈ vridpunkt"
+      ],
+      "synonymgrupper": [
+        [
+          "≈≈ vridpunkt"
+        ]
+      ],
+      "exempelmening": "Luckan satt på en <font color=\"#3498db\">svängtapp</font> och kunde fällas åt båda hållen.",
+      "etymologi": null
+    },
+    "approved": true,
+    "note_till_granskare": "Bara SO har artikel — SAOL och Wiktionary saknar ordet helt, och poolen är tom. Därför ≈≈. Ordet är rent tekniskt och förekommer i konstruktionsbeskrivningar.",
+    "adamtal_varningar": [],
+    "exempel_varningar": [],
+    "applicerad": true,
+    "skriven_av": null
   },
   {
     "noteId": 1780080628614,
