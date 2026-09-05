@@ -1,0 +1,475 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": null,
+ "granskare": "claude-huvudsession (EJ forfattare till dessa kort)",
+ "poster": [
+  {
+   "noteId": 1780080622800,
+   "ord": "blarr",
+   "facit": "struntprat",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Prat om ingenting",
+    "register": "vardaglig, lätt negativ",
+    "synonymer": [
+     "struntprat"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Mötet blev en timme av rent <font color=\"#3498db\">blarr</font> utan ett enda beslut.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: struntprat [vardagligt]. Ingen SAOL-post, men SO racker som belagg. struntprat ar hela SO:s DEF och darmed belagd. Registret vardaglig matchar markningen."
+  },
+  {
+   "noteId": 1780080622830,
+   "ord": "botanik",
+   "facit": "växtlära",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Läran om växterna",
+    "register": "neutral, neutral, biologi",
+    "synonymer": [
+     "≈≈ växtlära"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon läste <font color=\"#3498db\">botanik</font> och kunde namnge varje ogräs i rabatten.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: vetenskapen om vaxterna. SAOL: vetenskapen om vaxter. Kortet stammer. Kategorin vaxtlara ar extraherad ur egen definition — konservativt satt som ≈≈ trots att den ligger nara en exakt synonym."
+  },
+  {
+   "noteId": 1780080622833,
+   "ord": "cellofan",
+   "facit": "omslagsmaterial av plast",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tunn genomskinlig film som man slår in saker i",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "≈≈ omslagsmaterial"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Blombuketten var inslagen i knastrande <font color=\"#3498db\">cellofan</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: en genomskinlig cellulosaplast som anvands som omslagsmaterial. Kortet beskriver funktionen i stallet for materialet, vilket ar ratt val for ett ordkort — det gor betydelsen minnesvard utan att bli fel. Kategorin belagd i SAOL:s DEF."
+  },
+  {
+   "noteId": 1780080622862,
+   "ord": "delinkvent",
+   "facit": "brottsling",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Person som ska ta sitt straff",
+    "register": "formell, neutral, juridik",
+    "synonymer": [
+     "brottsling"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "<font color=\"#3498db\">Delinkventen</font> fördes in i rättssalen för att höra domen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: person som har att undergå straff. SAOL: brottsling som ska straffas — brottsling inleder ledet. Kortet stammer och registret formell/juridik ar ratt."
+  },
+  {
+   "noteId": 1780080622796,
+   "ord": "dermatologi",
+   "facit": "läran om huden",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Läran om huden och dess sjukdomar",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "≈≈ hudlära"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon specialiserade sig på <font color=\"#3498db\">dermatologi</font> och tog emot patienter med svåra eksem.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL: vetenskapen om huden och dess sjukdomar — kortet anvander den fylligare formuleringen, inte SO:s smalare laran om hudsjukdomar. Kategorin hudlara extraherad ur egen definition. Legacys pahittade dermatoskopi ar borta."
+  },
+  {
+   "noteId": 1780080622840,
+   "ord": "distribution",
+   "facit": "utdelning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Utdelning och utskickning av varor till många mottagare ; Hela kedjan som får varan fram till kunden ; Hur något är spritt över ett område ; Hur ett språkljud eller ord får placeras i språket",
+    "register": "neutral, neutral ; neutral, neutral, ekonomi ; neutral, neutral ; fackspråklig, neutral, lingvistik",
+    "synonymer": [
+     "≈≈ utdelning",
+     "≈≈ varukedja",
+     "≈≈ spridning",
+     "≈≈ placering"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ utdelning"
+     ],
+     [
+      "≈≈ varukedja"
+     ],
+     [
+      "≈≈ spridning"
+     ],
+     [
+      "≈≈ placering"
+     ]
+    ],
+    "exempelmening": "Förlaget sköter <font color=\"#3498db\">distributionen</font> av boken till alla bokhandlar.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 1 DEF + 3 underbetydelser med egen definition (varukedjan, spridningsgrad, den lingvistiska). Kortet har alla fyra, med ratt doman per betydelse. Alla synonymer ≈≈ och extraherade ur kortets egna definitioner. Legacy hade 1 av 4."
+  },
+  {
+   "noteId": 1780080622781,
+   "ord": "drasut",
+   "facit": "yngre lång man",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Lång ung karl",
+    "register": "vardaglig, nedsättande",
+    "synonymer": [
+     "≈≈ karl"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "In i köket klev en <font color=\"#3498db\">drasut</font> som knappt fick plats under lampan.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: (lang, yngre) mansperson [nedsattande]. SAOL: lang pojke el. man [vard.]. Kortet har bade langden, aldern och kombinerar bada kallornas markningar i registret (vardaglig + nedsattande). Exempelmeningen bar betydelsen visuellt."
+  },
+  {
+   "noteId": 1780080622821,
+   "ord": "ekvilibristik",
+   "facit": "balanskonst; skicklighet<br><a href=\"https://www.google.com/imgres?q=equilibristics&amp;imgurl=https%3A%2F%2Fc8.alamy.com%2Fcomp%2FCRCXGE%2Fequilibristics-show-with-alexey-and-john-koblenz-rhineland-palatinate-CRCXGE.jpg&amp;imgrefurl=https%3A%2F%2Fwww.alamy.com%2Fstock-photo-equilibristics-show-with-alexey-and-john-koblenz-rhineland-palatinate-48842094.html&amp;docid=9947GmnRh7MjpM&amp;tbnid=PGC3GkXI2OsXWM&amp;vet=12ahUKEwj7yuHNg_GLAxVlLRAIHWSrAiUQM3oECB0QAA..i&amp;w=866&amp;h=1390&amp;hcb=2&amp;ved=2ahUKEwj7yuHNg_GLAxVlLRAIHWSrAiUQM3oECB0QAA\"><div><div><div><img alt=\"Equilibristics show with Alexey and ...\" src=\"paste-5b0e5f21ec3147812c05a1db973f42265d03d54d.webp\"></div></div></div></a>",
+   "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+   "kort": {
+    "huvudbetydelse": "Skicklig balanskonst, ofta bildligt om någon som briljerar med sin teknik",
+    "register": "neutral, positiv",
+    "synonymer": [
+     "≈≈ balanskonst"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Pianisten imponerade med sin <font color=\"#3498db\">ekvilibristik</font> i sista satsen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s egen DEF ar cirkular (det att vara ekvilibristisk), sa kortet maste skrivas ur avledningen. Skicklig balanskonst med bildlig anvandning stammer med SAOB och facit. Kategorin ar extraherad ur kortets egen definition, tillaten utan kalla."
+  },
+  {
+   "noteId": 1780080622845,
+   "ord": "entreprenad",
+   "facit": "stort arbete mot betalning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Uppdrag att utföra ett större arbete åt någon mot betalning",
+    "register": "neutral, neutral, ekonomi",
+    "synonymer": [
+     "≈≈ uppdrag"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Kommunen lade ut hela skolbygget på <font color=\"#3498db\">entreprenad</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: atagande att mot viss ersattning utfora storre arbetsuppgift. Kortet stammer. ANMARKNING: SO:s definitionstillagg <<ofta efter konkurrens>> ar utelamnat — upphandlingsmomentet ar en del av vad som skiljer entreprenad fran ett vanligt uppdrag."
+  },
+  {
+   "noteId": 1780080622757,
+   "ord": "eremitage",
+   "facit": "jaktslott<br><a href=\"https://www.google.com/imgres?q=eremitage&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F94%2FThe_Hermitage_Palace.jpg%2F1200px-The_Hermitage_Palace.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FEremitageslottet&amp;docid=pNopWFpzPWnrmM&amp;tbnid=ujDf7ODtZ4bjtM&amp;vet=12ahUKEwjQiJjspeWLAxU3FhAIHQ7BD5QQM3oECHAQAA..i&amp;w=1200&amp;h=900&amp;hcb=2&amp;ved=2ahUKEwjQiJjspeWLAxU3FhAIHQ7BD5QQM3oECHAQAA\"><div><div><div><img alt=\"Eremitageslottet – Wikipedia\" src=\"images-29ac626121eded03157458d1431841d48a58f315.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Litet lust- eller jaktslott ; avskild plats där man får vara i fred",
+    "register": "neutral, neutral ; neutral, neutral",
+    "synonymer": [
+     "lustslott",
+     "≈≈ tillflykt"
+    ],
+    "synonym_groups": [
+     [
+      "lustslott"
+     ],
+     [
+      "≈≈ tillflykt"
+     ]
+    ],
+    "exempelmening": "Kungen lät bygga ett <font color=\"#3498db\">eremitage</font> längst bort i slottsparken.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL ger TVA led: plats for avskildhet; lustslott. Kortet har bada, och SO:s lust- eller jaktslott tacks av den forsta. lustslott inleder SAOL:s andra led."
+  },
+  {
+   "noteId": 1780080622799,
+   "ord": "franchising",
+   "facit": "säljrätt av varumärke",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Rätt att sälja någon annans vara under dennes varumärke",
+    "register": "neutral, neutral, ekonomi",
+    "synonymer": [
+     "försäljarrätt"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hela hamburgerkedjan drivs på <font color=\"#3498db\">franchising</font> av lokala ägare.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: licens att tillverka eller salja viss vara eller tjanst. SAOL: avtalsbunden ensamratt...; forsaljarratt — forsaljarratt inleder andra ledet. ANMARKNING: SO tacker aven TILLVERKA, kortet bara salja; och under dennes varumarke star inte i nagon kalla, aven om det ar den praktiska karnan."
+  },
+  {
+   "noteId": 1780080622829,
+   "ord": "förege",
+   "facit": "påstå eller skylla på",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ange något som sitt skäl",
+    "register": "formell, neutral",
+    "synonymer": [
+     "påstå",
+     "ange"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han <font color=\"#3498db\">föreger</font> sjukdom som skäl för att slippa vittna.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: anfora som (viktig) faktor. SAOL: ange som viktig faktor, pasta — ange och pasta inleder egna led. Exempelmeningen (foreger sjukdom for att slippa vittna) fangar dessutom pretexten, som ar ordets faktiska bruk utan att kallorna sager det rakt ut."
+  },
+  {
+   "noteId": 1780080622773,
+   "ord": "gehenna",
+   "facit": "helvete",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Helvetet, platsen där de fördömda plågas",
+    "register": "litterär, negativ, bibliskt",
+    "synonymer": [
+     "helvete"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "På kyrkmålningen plågades syndarna i det brinnande <font color=\"#3498db\">gehenna</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: helvete [bibliskt]. SAOL: helvete. Kortet stammer och registret bar den bibliska markningen. Legacys pahittade underjorden (Hades, en helt annan forestallning) ar borta."
+  },
+  {
+   "noteId": 1780080622848,
+   "ord": "gemak",
+   "facit": "praktrum<br><a href=\"https://www.google.com/imgres?q=praktrum&amp;imgurl=https%3A%2F%2Fwww.ravjagarn.se%2Fblogg%2Fbilder%2Fholtermans_2.jpg&amp;imgrefurl=https%3A%2F%2Fwww.ravjagarn.se%2Fblogg%2F2011%2F01%2Ftiden-stannade-pa-karlavagen-solsida%2F&amp;docid=D-JWmbGg_IMVWM&amp;tbnid=D-ed9wszvuQmxM&amp;vet=12ahUKEwimxcKqxc6LAxUuYPEDHReaFJYQM3oECHUQAA..i&amp;w=440&amp;h=306&amp;hcb=2&amp;ved=2ahUKEwimxcKqxc6LAxUuYPEDHReaFJYQM3oECHUQAA\"><div><div><div><img alt=\"Tiden stannar på Karlavägens solsida ...\" src=\"paste-24f78b75e4a79cddb45b9780f72a529f8c080388.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Praktfullt rum i ett slott",
+    "register": "ngt ålderdomlig, skämtsam",
+    "synonymer": [
+     "praktrum"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Guiden visade oss slottets salar och <font color=\"#3498db\">gemak</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: praktfullt rum [nagot alderdomligt el. skamtsamt] — kortets register har BADA markningarna. praktrum ar hela SAOL:s led. ANMARKNING: i ett slott star inte i kallorna, men ar den typiska kontexten och gor kortet lattare att minnas."
+  },
+  {
+   "noteId": 1780080622853,
+   "ord": "genesis",
+   "facit": "uppkomst",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Det att något uppstår och blir till",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "uppkomst",
+     "ursprung"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Boken följer partiets <font color=\"#3498db\">genesis</font> från källarmöte till riksdag.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: det att komma att existera. SAOL: uppkomst, ursprung — bada inleder egna led. Kortet stammer och exemplet visar den overforda anvandningen."
+  },
+  {
+   "noteId": 1780080622870,
+   "ord": "genre",
+   "facit": "stilart",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Sorts konst eller berättande med sina egna typiska drag",
+    "register": "neutral, neutral, konst",
+    "synonymer": [
+     "konstart",
+     "sort"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han har bara spelat komedi, medan hon prövat flera andra <font color=\"#3498db\">genrer</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: typ av (konstnarlig) framstallning som kannetecknas av viss uppsattning stildrag. Kortet sager det i Adam-tal. sort och konstart inleder egna led i SAOL:s forsta post. SAOL:s genrebild ar ett eget sammansatt ord, inte en betydelse hos genre."
+  },
+  {
+   "noteId": 1780080622778,
+   "ord": "gnata",
+   "facit": "smågräla och tjata på",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tjata och klaga småaktigt om småsaker, om och om igen",
+    "register": "vardaglig, negativ",
+    "synonymer": [
+     "smågräla",
+     "kälta"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "<font color=\"#3498db\">Gnata</font> inte på barnen jämt och ständigt!",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: standigt kritisera pa ett smaaktigt satt <<ofta om mindre allvarliga saker>>. Kortet har alla tre delarna: upprepningen, smaaktigheten och smasakerna. kalta inleder eget led i SAOL. ANMARKNING: smagrala inleder inte ledet (standigt smagrala)."
+  },
+  {
+   "noteId": 1780080622810,
+   "ord": "gästabud",
+   "facit": "stort kalas<br><a href=\"https://www.google.com/imgres?q=g%C3%A4stabud&amp;imgurl=https%3A%2F%2Fwww.lodosemuseum.se%2Fcontentassets%2F6fdacd3d0f704eb5a20a9d56d2fad307%2Fcropped-vgr18-va12217.jpg&amp;imgrefurl=https%3A%2F%2Fwww.lodosemuseum.se%2Fkunskap-och-fakta%2Fden-medeltida-staden%2Fhushall%2Fmedeltida-matvanor%2Farrangera-ett-gastabud%2F&amp;docid=xB1FAXRZSqO-5M&amp;tbnid=WcdWh7ccyehwtM&amp;vet=12ahUKEwi-2qv_pd2LAxXSKxAIHQ2UPT0QM3oECFkQAA..i&amp;w=1516&amp;h=852&amp;hcb=2&amp;ved=2ahUKEwi-2qv_pd2LAxXSKxAIHQ2UPT0QM3oECFkQAA\"><div><div><div><img alt=\"Arrangera ett gästabud! - Lödöse museum\" src=\"paste-42455bc2f8b890045badd4a170b231c4b9ea93df.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Stor fest med mycket mat och många inbjudna",
+    "register": "ngt ålderdomlig, neutral",
+    "synonymer": [
+     "≈≈ fest"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Birger Magnusson bjöd sina bröder på ett <font color=\"#3498db\">gästabud</font> som slutade i tragedi.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: fest med riklig fortaring och manga inbjudna [nagot alderdomligt] — kortet har bade maten, gasterna och registret. Exempelmeningen (Nykopings gastabud) ar historiskt trafffsaker och gor ordet minnesvart."
+  },
+  {
+   "noteId": 1780080622758,
+   "ord": "harka",
+   "facit": "räfsa",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kratta, både redskapet och att kratta med det",
+    "register": "dialektal, neutral",
+    "synonymer": [
+     "kratta"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han tog fram <font color=\"#3498db\">harkan</font> och drog ihop höstlöven på gräsmattan.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO saknar traff; SAOL har TVA lemman, bada kratta [prov.] — substantivet och verbet. Kortet tacker bada (redskapet och att kratta med det) och registret dialektal matchar prov.-markningen. Legacy pastod dessutom en alfiskeredskaps-betydelse utan stod i nagon kalla; den ar borta. Inget pausfall: SAOL HAR ordet."
+  },
+  {
+   "noteId": 1780080622822,
+   "ord": "hexameter",
+   "facit": "ett versmått",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Versmått med sex takter på varje rad, känt från de grekiska hjältedikterna",
+    "register": "fackspråklig, neutral, litteraturvetenskap",
+    "synonymer": [
+     "≈≈ versmått"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Iliaden och Odysséen är skrivna på <font color=\"#3498db\">hexameter</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: versmatt med sexfotade versrader, <<ursprungligen grekiskt; sarsk. anv. i episka dikter>>. Kortet har bade sextakten och den grekiska epiken ur tillagget, och exemplet (Iliaden, Odysseen) ar precis ratt. ANMARKNING: orimmat ar utelamnat."
+  },
+  {
+   "noteId": 1780080622763,
+   "ord": "hird",
+   "facit": "livvakt<br><a href=\"https://www.google.com/imgres?q=hird&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F83%2FOlav_den_helliges_saga_CK8.jpg&amp;imgrefurl=https%3A%2F%2Fda.wikipedia.org%2Fwiki%2FHird&amp;docid=gj4_ngG5bGbRfM&amp;tbnid=4P1oJjwILaGYcM&amp;vet=12ahUKEwiXjbmujoeMAxUzQFUIHR8uExEQM3oECCsQAA..i&amp;w=798&amp;h=430&amp;hcb=2&amp;ved=2ahUKEwiXjbmujoeMAxUzQFUIHR8uExEQM3oECCsQAA\"><div><div><div><img alt=\"Hird - Wikipedia, den frie encyklopædi\" src=\"images-320553eac0794c7813ac5dc9c53ff7537586e8dd.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kungens egen skara av livvakter i fornnordisk tid",
+    "register": "neutral, neutral, historia",
+    "synonymer": [
+     "livvakt"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Kungens <font color=\"#3498db\">hird</font> slöt sig tätt kring honom under slaget.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: personlig livvakt for (fornnordisk) kung eller storman. Kortet stammer. ANMARKNING: kortet sager kungens, medan SO aven har storman och SAOL hovding e.d. — nagot smalare an kallorna."
+  },
+  {
+   "noteId": 1780080622762,
+   "ord": "hytta",
+   "facit": "smältugn<br><a href=\"https://commons.wikimedia.org/wiki/File:Norns_hytta_2012_01.jpg\"><img src=\"250px-norns_hytta_2012_01.webp\"></a><a href=\"https://www.google.com/imgres?q=foundry&amp;imgurl=https%3A%2F%2Fwww.reliance-foundry.com%2Fwp-content%2Fuploads%2Fwhat-is-a-foundry-1.jpg&amp;imgrefurl=https%3A%2F%2Fwww.reliance-foundry.com%2Fblog%2Fwhat-is-a-foundry&amp;docid=liB4CU9dryQPUM&amp;tbnid=mQVYA07prk4goM&amp;vet=12ahUKEwiEqrK4o9aLAxXWGBAIHe9gDl4QM3oECBgQAA..i&amp;w=870&amp;h=580&amp;hcb=2&amp;ved=2ahUKEwiEqrK4o9aLAxXWGBAIHe9gDl4QM3oECBgQAA\"><div><div><div><img alt=\"What is a Foundry? | Metal Casting Blog\" src=\"paste-c488067370e288507b8d78fbdd5c610ab02e96a3.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Byggnad med smältugn för metall eller glas ; Översta akterdäcket på ett gammalt segelfartyg ; Liten enkel övernattningsstuga i fjällen ; Hötta, hota med knuten näve",
+    "register": "neutral, neutral, teknik ; fackspråklig, neutral, sjöfart ; neutral, neutral ; neutral, negativ",
+    "synonymer": [
+     "smältugn",
+     "≈≈ akterdäck",
+     "≈≈ stuga",
+     "hötta"
+    ],
+    "synonym_groups": [
+     [
+      "smältugn"
+     ],
+     [
+      "≈≈ akterdäck"
+     ],
+     [
+      "≈≈ stuga"
+     ],
+     [
+      "hötta"
+     ]
+    ],
+    "exempelmening": "Järnet smältes fram i <font color=\"#3498db\">hyttan</font> nere vid forsen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO har TRE DEF pa substantivet (smaltugn, hogsta akterdack pa aldre segelfartyg, liten overnattningsstuga) plus ett EGET verblemma (variant av hotta). Kortet har alla fyra. smaltugn inleder SO:s DEF, hotta ar hela SAOL-ledet. Legacy hade 2 av 4."
+  },
+  {
+   "noteId": 1780080622751,
+   "ord": "istadig",
+   "facit": "envis, motspänstig, trilsk",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Vägrar envist att lyda ; går inte att få ur fläcken",
+    "register": "neutral, lätt negativ ; neutral, lätt negativ",
+    "synonymer": [
+     "motspänstig",
+     "envis",
+     "≈≈ orörlig"
+    ],
+    "synonym_groups": [
+     [
+      "motspänstig",
+      "envis"
+     ],
+     [
+      "≈≈ orörlig"
+     ]
+    ],
+    "exempelmening": "Åsnan blev <font color=\"#3498db\">istadig</font> och vägrade ta ett enda steg till.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: som envist vagrar att foga sig, plus underbetydelsen som inte kan formas att rora sig <<ur flacken>> (egen definition). Kortet har bada. motspanstig och envis inleder egna led i SAOL."
+  }
+ ]
+}

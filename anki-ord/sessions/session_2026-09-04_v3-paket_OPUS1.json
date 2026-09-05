@@ -1,0 +1,342 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": null,
+ "granskare": "opus-kontrollgranskare-1-2026-09-04",
+ "poster": [
+  {
+   "noteId": 1780080622854,
+   "ord": "sprätta",
+   "facit": "krafsa;&nbsp; fara iväg;&nbsp; stoltsera;&nbsp; skära upp",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Krafsa så att smått yr omkring ; stänka och yra iväg, om små partiklar ; stoltsera och visa upp sig ; skära upp något med kniv",
+    "register": "neutral, neutral ; neutral, neutral ; neutral, lätt negativ ; neutral, neutral",
+    "synonymer": [
+     "krafsa",
+     "riva",
+     "skvätta",
+     "≈≈ skryta",
+     "skära upp",
+     "öppna"
+    ],
+    "synonym_groups": [
+     [
+      "krafsa",
+      "riva"
+     ],
+     [
+      "skvätta"
+     ],
+     [
+      "≈≈ skryta"
+     ],
+     [
+      "skära upp",
+      "öppna"
+     ]
+    ],
+    "exempelmening": "Fettet <font color=\"#3498db\">sprätte</font> i stekpannan."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Alla fyra SO-betydelser med (krafsa; fara ivag om sma partiklar; visa upp sig overmodigt; skara upp med kniv el. dyl.). Definitionstillaggen <<om sma partiklar>> och <<med kniv eller dylikt>> ar med. Synonymgrupperna foljer SAOL:s led (krafsa, riva / skvatta / ... / skara upp, oppna). Register: bada axlarna i ratt ordning pa alla fyra delar. SO:s underbetydelser saknar egen definition = utvidgningar, raknas inte."
+  },
+  {
+   "noteId": 1780080622817,
+   "ord": "bastion",
+   "facit": "del av fästningsmur<br><a href=\"https://en.wikipedia.org/wiki/File:Bastion_(PSF).jpg\"><img src=\"220px-bastion_(psf).webp\"></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Utskjutande hörn på en fästningsmur, byggt för att skjuta längs muren",
+    "register": "neutral, neutral, historia",
+    "synonymer": [
+     "≈≈ befästning"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ befästning"
+     ]
+    ],
+    "exempelmening": "Kanonerna stod uppställda i den södra <font color=\"#3498db\">bastionen</font>.",
+    "bild_html": "<br><br><img src=\"220px-bastion_(psf).webp\" style=\"max-width:400px; border-radius:4px;\">"
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO har EN huvudbetydelse; den bildliga anvandningen ar en underbetydelse utan egen definition (utvidgning) och raknas inte. Definitionstillagget <<ofta forhojd, avsedd for flankeld mot anfallare>> ar aterget som 'byggt for att skjuta langs muren'. Register neutral, neutral, historia = stilniva + valor + doman i ratt ordning; SO:s bruklighetskommentar 'mest historiskt' motiverar domanen. Exempelmening korrekt bojd och highlightad."
+  },
+  {
+   "noteId": 1780080622813,
+   "ord": "buffert",
+   "facit": "reservförråd",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Stötdämpare i änden på en järnvägsvagn ; något som mildrar en yttre påfrestning",
+    "register": "neutral, neutral ; neutral, neutral",
+    "synonymer": [
+     "stötdämpare",
+     "≈≈ skydd"
+    ],
+    "synonym_groups": [
+     [
+      "stötdämpare"
+     ],
+     [
+      "≈≈ skydd"
+     ]
+    ],
+    "exempelmening": "Sparkontot är hans <font color=\"#3498db\">buffert</font> om något går sönder."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO:s enda underbetydelse MED egen definition ('foreteelse som mildrar effekten av ogynnsam yttre paverkan') finns pa kortet som andra betydelsen. Ovriga tre underbetydelser (oavsiktlig buffert, dataminne, kemisk buffertlosning - den sista bara i sammansattning) saknar egen definition och ar utvidgningar. 'stotdampare' inleder SAOL:s definitionsled = belagd synonym. Register i ratt axelordning pa bada delarna."
+  },
+  {
+   "noteId": 1780080622783,
+   "ord": "butter",
+   "facit": "trumpen",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tvär och ovänlig i sättet",
+    "register": "neutral, lätt negativ",
+    "synonymer": [
+     "vresig",
+     "sur"
+    ],
+    "synonym_groups": [
+     [
+      "vresig",
+      "sur"
+     ]
+    ],
+    "exempelmening": "Han svarade <font color=\"#3498db\">buttert</font> utan att titta upp."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'som (ofta) visar sig tvar och ovanlig' - kortets 'Tvar och ovanlig i sattet' tacker bada leden. Enda underbetydelsen (av. om handling) saknar egen definition = utvidgning; adverbialet 'buttert' star till och med som SO-exempel dar, sa exempelmeningen ar korrekt. sur och vresig star bada i SAOL:s definition. Register neutral + latt negativ = stilniva + valor."
+  },
+  {
+   "noteId": 1780080622756,
+   "ord": "edikt",
+   "facit": "bestämmelse",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Påbud från en härskare, utfärdat uppifrån utan diskussion",
+    "register": "formell, neutral, historia",
+    "synonymer": [
+     "påbud",
+     "kungörelse"
+    ],
+    "synonym_groups": [
+     [
+      "påbud",
+      "kungörelse"
+     ]
+    ],
+    "exempelmening": "Kungen utfärdade ett <font color=\"#3498db\">edikt</font> om att alla vapen skulle lämnas in."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622750,
+   "ord": "fiffla",
+   "facit": "intrigera",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Smussla och fuska med pengar eller regler i det lilla",
+    "register": "vardaglig, negativ",
+    "synonymer": [
+     "smussla"
+    ],
+    "synonym_groups": [
+     [
+      "smussla"
+     ]
+    ],
+    "exempelmening": "Han hade <font color=\"#3498db\">fifflat</font> med kvittona i flera år."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622864,
+   "ord": "funtad",
+   "facit": "beskaffenhet",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Skruvad på ett visst sätt i huvudet ; byggd eller gjord på ett visst sätt",
+    "register": "vardaglig, neutral ; vardaglig, neutral",
+    "synonymer": [
+     "beskaffad",
+     "≈≈ konstruerad"
+    ],
+    "synonym_groups": [
+     [
+      "beskaffad"
+     ],
+     [
+      "≈≈ konstruerad"
+     ]
+    ],
+    "exempelmening": "Hur är man <font color=\"#3498db\">funtad</font> om man tycker det där är kul?"
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622844,
+   "ord": "hurts",
+   "facit": "skrivbordsbyrå<br><a href=\"https://www.google.com/imgres?q=hurts%20skrivbord&amp;imgurl=https%3A%2F%2Fwww.luxi.se%2F5543%2Fmercat-mercat-hurts-i-vitt.jpg&amp;imgrefurl=https%3A%2F%2Fwww.luxi.se%2Fskrivbord%2F948-mercat-mercat-hurts-i-vitt.html&amp;docid=UmwH67x_uvxSBM&amp;tbnid=MNPDgnz02_tVXM&amp;vet=12ahUKEwjgq_ujw6OMAxUuAxAIHevMIosQM3oECH8QAA..i&amp;w=1000&amp;h=667&amp;hcb=2&amp;ved=2ahUKEwjgq_ujw6OMAxUuAxAIHevMIosQM3oECH8QAA\"><div><div><div><img alt=\"MERCAT - funktionell hurts i elegant ...\" src=\"paste-280dd7ca3c56494c0c8e2ab249e825861d0909e3.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Litet lådskåp som står under eller intill skrivbordet",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "sidoskåp",
+     "underskåp"
+    ],
+    "synonym_groups": [
+     [
+      "sidoskåp",
+      "underskåp"
+     ]
+    ],
+    "exempelmening": "Pennorna ligger i översta lådan i <font color=\"#3498db\">hurtsen</font>.",
+    "bild_html": "<br><br><img src=\"paste-280dd7ca3c56494c0c8e2ab249e825861d0909e3.webp\" style=\"max-width:400px; border-radius:4px;\">"
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622835,
+   "ord": "hysa",
+   "facit": "ha inombords",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ge någon tak över huvudet ; ha plats för ; placera något någonstans ; bära på en känsla inom sig",
+    "register": "neutral, neutral ; neutral, neutral ; neutral, neutral ; neutral, neutral",
+    "synonymer": [
+     "ge husrum",
+     "innesluta",
+     "rymma",
+     "≈≈ placera",
+     "känna",
+     "ha"
+    ],
+    "synonym_groups": [
+     [
+      "ge husrum"
+     ],
+     [
+      "innesluta",
+      "rymma"
+     ],
+     [
+      "≈≈ placera"
+     ],
+     [
+      "känna",
+      "ha"
+     ]
+    ],
+    "exempelmening": "Hon <font color=\"#3498db\">hyser</font> fortfarande ett agg mot honom."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622837,
+   "ord": "hägna",
+   "facit": "beskydda",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Sätta stängsel runt något ; utgöra själva avgränsningen ; skydda och värna",
+    "register": "neutral, ngt ålderdomlig",
+    "synonymer": [
+     "≈≈ stängsla",
+     "≈≈ avgränsa",
+     "skydda",
+     "värna"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ stängsla"
+     ],
+     [
+      "≈≈ avgränsa"
+     ],
+     [
+      "skydda",
+      "värna"
+     ]
+    ],
+    "exempelmening": "Föreningen vill <font color=\"#3498db\">hägna</font> om de sista strandängarna."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622775,
+   "ord": "hårklyveri",
+   "facit": "diskussion om småsaker",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Att gräla om en skillnad som är för liten för att spela roll",
+    "register": "neutral, lätt negativ",
+    "synonymer": [
+     "≈≈ pedanteri"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ pedanteri"
+     ]
+    ],
+    "exempelmening": "Diskussionen om kommatecknet blev rent <font color=\"#3498db\">hårklyveri</font>."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622812,
+   "ord": "logi",
+   "facit": "husrum",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tak över huvudet för en kortare tid",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "husrum"
+    ],
+    "synonym_groups": [
+     [
+      "husrum"
+     ]
+    ],
+    "exempelmening": "Priset inkluderar resa, mat och <font color=\"#3498db\">logi</font>."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622843,
+   "ord": "synkron",
+   "facit": "samtidig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Sker samtidigt ; går i exakt samma takt och fas",
+    "register": "neutral, neutral ; fackspråklig, neutral, fysik",
+    "synonymer": [
+     "samtidig",
+     "≈≈ i fas"
+    ],
+    "synonym_groups": [
+     [
+      "samtidig"
+     ],
+     [
+      "≈≈ i fas"
+     ]
+    ],
+    "exempelmening": "Ljudet låg inte <font color=\"#3498db\">synkront</font> med bilden."
+   },
+   "verdikt": null,
+   "anmarkning": null
+  }
+ ]
+}
