@@ -1,0 +1,525 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": null,
+ "granskare": "claude-huvudsession (EJ forfattare till dessa kort)",
+ "poster": [
+  {
+   "noteId": 1780080622759,
+   "ord": "jävig",
+   "facit": "inte opartisk",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Har egna intressen i saken och får därför inte vara med och avgöra den",
+    "register": "neutral, neutral, juridik",
+    "synonymer": [
+     "obehörig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Domaren anmälde sig som <font color=\"#3498db\">jävig</font> eftersom den åtalade var hans granne.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622805,
+   "ord": "kaplan",
+   "facit": "hjälppräst<br><a href=\"https://www.google.com/imgres?q=kaplan%20pr%C3%A4st&amp;imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F02%2F21%2F21%2F11%2Fchurch-1214315_640.jpg&amp;imgrefurl=https%3A%2F%2Fpixabay.com%2Fsv%2Fimages%2Fsearch%2Fkaplon%2F&amp;docid=APsa_zp7fTtcRM&amp;tbnid=6ASFivCkrE4wZM&amp;vet=12ahUKEwii06DpkPGLAxVTHxAIHdOGJ2cQM3oECBcQAA..i&amp;w=606&amp;h=640&amp;hcb=2&amp;itg=1&amp;ved=2ahUKEwii06DpkPGLAxVTHxAIHdOGJ2cQM3oECBcQAA\"><div><div><div><img alt=\"9+ kostnadsfria bilder med Kaplan och ...\" src=\"paste-d4139bea364e9b7a3e98252c7a49764f8bf6130d.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Präst som är anställd av ett företag, en förening eller en familj ; (förr) präst som hjälpte kyrkoherden",
+    "register": "neutral, neutral, religion ; arkaisk, neutral, religion",
+    "synonymer": [
+     "≈≈ präst",
+     "hjälppräst"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ präst"
+     ],
+     [
+      "hjälppräst"
+     ]
+    ],
+    "exempelmening": "Regementets <font color=\"#3498db\">kaplan</font> höll en kort andakt före utryckningen.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622858,
+   "ord": "kvistig",
+   "facit": "svår och knepig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Full av grenstumpar och därför ojämn ; (vardagligt) svår och krånglig",
+    "register": "neutral, neutral ; vardaglig, neutral",
+    "synonymer": [
+     "≈≈ ojämn",
+     "svår",
+     "brydsam"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ ojämn"
+     ],
+     [
+      "svår",
+      "brydsam"
+     ]
+    ],
+    "exempelmening": "Plankorna var <font color=\"#3498db\">kvistiga</font> och gick inte att hyvla jämna.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622825,
+   "ord": "kynne",
+   "facit": "(<i>folkligt</i>) sinnelag",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Den läggning och de drag som är typiska för någon",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "läggning",
+     "sinnelag"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Det svenska <font color=\"#3498db\">kynnet</font> märks när ingen vill skryta om sig själv.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622852,
+   "ord": "mättad",
+   "facit": "fylld",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Har tagit upp allt av ett ämne som får plats ; Om marknad: redan full av varan ; Om färg: djup och kraftig ; Full av något bra",
+    "register": "fackspråklig, neutral, kemi ; neutral, neutral, ekonomi ; neutral, neutral ; neutral, positiv",
+    "synonymer": [
+     "fylld",
+     "≈≈ full",
+     "≈≈ kraftig",
+     "≈≈ rik"
+    ],
+    "synonym_groups": [
+     [
+      "fylld"
+     ],
+     [
+      "≈≈ full"
+     ],
+     [
+      "≈≈ kraftig"
+     ],
+     [
+      "≈≈ rik"
+     ]
+    ],
+    "exempelmening": "Han rörde tills lösningen var <font color=\"#3498db\">mättad</font> och saltet la sig på botten.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 1 DEF + 3 underbetydelser MED egen definition (marknad, farg, val forsedd). Kortet har alla fyra och registren skiljer domanerna. fylld belagd i SAOL. ANMARKNING utan paverkan pa verdikt: SO:s definitionstillagg pa fargbetydelsen (<<ren, inte blandad med vitt el. svart>>) ar den tekniska karnan och hade gjort raden skarpare an djup och kraftig."
+  },
+  {
+   "noteId": 1780080622793,
+   "ord": "ornament",
+   "facit": "utsmyckning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Utsmyckning som följer och lyfter fram formen på ett föremål ; liten utsmyckning i en melodi",
+    "register": "neutral, neutral, konst ; neutral, neutral, musik",
+    "synonymer": [
+     "utsirning",
+     "≈≈ utsmyckning"
+    ],
+    "synonym_groups": [
+     [
+      "utsirning"
+     ],
+     [
+      "≈≈ utsmyckning"
+     ]
+    ],
+    "exempelmening": "Runstenens <font color=\"#3498db\">ornament</font> slingrade sig hela vägen runt kanten.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622770,
+   "ord": "papill",
+   "facit": "vårta<br><a href=\"https://www.google.com/imgres?q=papill&amp;imgurl=https%3A%2F%2Fdermnetnz.org%2Fassets%2FUploads%2Fsite-age-specific%2Fpapillitis1.jpg&amp;imgrefurl=https%3A%2F%2Fdermnetnz.org%2Ftopics%2Ftransient-lingual-papillitis&amp;docid=kirV4CJaHsJ6UM&amp;tbnid=oDdhw4IxdRs33M&amp;vet=12ahUKEwjH27jvsrqLAxXYGRAIHYCuJ8AQM3oECHUQAA..i&amp;w=640&amp;h=480&amp;hcb=2&amp;ved=2ahUKEwjH27jvsrqLAxXYGRAIHYCuJ8AQM3oECHUQAA\"><div><div><div><img alt=\"Transient lingual papillitis\" src=\"images-feaac481b06dd0e18023a750c312b361b6bc3c7c.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Liten vårtlik utväxt på ett organ, till exempel på tungan",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "≈≈ utväxt"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Tungans <font color=\"#3498db\">papiller</font> gör att ytan känns sträv.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622780,
+   "ord": "pava",
+   "facit": "flaska<br><a href=\"https://www.google.com/imgres?q=spritflaska&amp;imgurl=https%3A%2F%2Fecdn6.globalso.com%2Fupload%2Fp%2F749%2Fimage_other%2F2024-03%2F65e6c63c8783c85237.jpg&amp;imgrefurl=https%3A%2F%2Fwww.glassbottlesale.com%2Fsv%2F700ml-750ml-custom-liquor-luxury-liquor-box-bottle-luxury-crystal-750ml-liquor-bottle-product%2F&amp;docid=v8_q_jqbiunkQM&amp;tbnid=OMwTtOEQoWlqAM&amp;vet=12ahUKEwiA-9eAj_GLAxUmFBAIHfUHJtwQM3oECBcQAA..i&amp;w=800&amp;h=800&amp;hcb=2&amp;ved=2ahUKEwiA-9eAj_GLAxUmFBAIHfUHJtwQM3oECBcQAA\"><div><div><div><img alt=\"Grossistförsäljning 700ml 750ml ...\" src=\"paste-6a6943573753258992d90ebd833b4e19d39391e1.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Flaska, oftast med sprit i",
+    "register": "vardaglig, neutral",
+    "synonymer": [
+     "flaska"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han hade en <font color=\"#3498db\">pava</font> i innerfickan hela kvällen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: flaska <<sarsk. for sprit, med el. utan innehall>> [vardagligt]. SAOL: flaska sprit [vard.]. Kortet har BADE flaskan och spritnyansen ur definitionstillagget, och det vardagliga registret. flaska inleder bade SO:s och SAOL:s led."
+  },
+  {
+   "noteId": 1780080622818,
+   "ord": "rättrådig",
+   "facit": "hederlig, redbar",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Gör det som är rätt även när ingen ser på",
+    "register": "neutral, positiv",
+    "synonymer": [
+     "redlig",
+     "rättvis"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "En <font color=\"#3498db\">rättrådig</font> domare låter sig aldrig köpas.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622802,
+   "ord": "skral",
+   "facit": "dålig, svag och undermålig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ganska dålig och klen",
+    "register": "neutral, lätt negativ",
+    "synonymer": [
+     "dålig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Skörden blev <font color=\"#3498db\">skral</font> efter den torra sommaren.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622857,
+   "ord": "skröna",
+   "facit": "lögnaktig historia",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Påhittad historia som berättas för att roa",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "≈≈ historia"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Farfar drog samma <font color=\"#3498db\">skröna</font> om jättegäddan varje jul.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622809,
+   "ord": "summarisk",
+   "facit": "kortfattad",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tar bara upp huvuddragen ; sker förenklat och snabbt, utan den noggranna genomgång som annars krävs",
+    "register": "neutral, neutral ; neutral, neutral, juridik",
+    "synonymer": [
+     "sammandragen",
+     "kortfattad",
+     "≈≈ förenklad"
+    ],
+    "synonym_groups": [
+     [
+      "sammandragen",
+      "kortfattad"
+     ],
+     [
+      "≈≈ förenklad"
+     ]
+    ],
+    "exempelmening": "Rapporten gav bara en <font color=\"#3498db\">summarisk</font> bild av vad som hade hänt.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622819,
+   "ord": "tongivande",
+   "facit": "ledande, inflytelserik",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Den som andra rättar sig efter och tar efter",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "ledande"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon var <font color=\"#3498db\">tongivande</font> i debatten och de andra följde snart hennes linje.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622834,
+   "ord": "urskulda",
+   "facit": "försvara",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Försvara någon genom att peka på skäl som gör saken mindre allvarlig",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "rättfärdiga",
+     "ursäkta"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han försökte <font color=\"#3498db\">urskulda</font> sin son med att skolan hade svikit honom.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622755,
+   "ord": "ärbar",
+   "facit": "anständig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Som lever efter äldre tiders krav på sexuell moral",
+    "register": "ngt ålderdomlig, neutral",
+    "synonymer": [
+     "dygdig",
+     "sedesam"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "På den tiden skulle en <font color=\"#3498db\">ärbar</font> kvinna aldrig gå ut ensam på kvällen.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622856,
+   "ord": "ackuratess",
+   "facit": "noggrannhet",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Stor noggrannhet, gärna med elegans",
+    "register": "neutral, positiv",
+    "synonymer": [
+     "noggrannhet",
+     "elegans"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han vek varje skjorta med en <font color=\"#3498db\">ackuratess</font> som gränsade till besatthet.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622832,
+   "ord": "aktris",
+   "facit": "skådespelerska",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kvinna som spelar roller på scen eller film",
+    "register": "neutral, neutral, konst",
+    "synonymer": [
+     "skådespelerska"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Den franska <font color=\"#3498db\">aktrisen</font> tackade nej till rollen.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622850,
+   "ord": "alika",
+   "facit": "kaja<br><a href=\"https://www.google.com/imgres?q=kaja&amp;imgurl=https%3A%2F%2Fcdn.abicart.com%2Fshop%2F27646%2Fart46%2Fh1642%2F17181642-origpic-3c1447.jpg&amp;imgrefurl=https%3A%2F%2Fwww.wildlifegarden.com%2Fsv%2Flevande-tradgard%2Ffagelskola%2Fkaja&amp;docid=GRonPYPZbp_SYM&amp;tbnid=YeewamLvJRqXeM&amp;vet=12ahUKEwi-hYvmx82LAxUyQFUIHe03JfsQM3oECGoQAA..i&amp;w=500&amp;h=500&amp;hcb=2&amp;ved=2ahUKEwi-hYvmx82LAxUyQFUIHe03JfsQM3oECGoQAA\"><div><div><div><img alt=\"Kaja - Wildlife Garden\" src=\"paste-6ffc22937d51b1c834e5d1947e080626da7ada11.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Den lilla svartgrå kråkfågeln med ljusa ögon",
+    "register": "dialektal, neutral, biologi",
+    "synonymer": [
+     "kaja"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "En flock <font color=\"#3498db\">alikor</font> lyfte från kyrktornet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: kaja [dialektalt]. SAOL: kaja. Kortet beskriver ratt fagel, kaja ar belagd synonym och registret dialektal matchar SO:s brukelighetsmarkning. Legacy pastod berusad — helt fel ord. Ratt aterstallt."
+  },
+  {
+   "noteId": 1780080622867,
+   "ord": "anbringa",
+   "facit": "fästa eller placera",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Sätta fast något på rätt ställe",
+    "register": "formell, neutral",
+    "synonymer": [
+     "fästa",
+     "placera"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Skylten ska <font color=\"#3498db\">anbringas</font> väl synligt vid ingången.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622831,
+   "ord": "assonans",
+   "facit": "ett slags halvrim<br><a href=\"https://www.google.com/imgres?q=assonance&amp;imgurl=https%3A%2F%2Fwww.grammar-monster.com%2Fglossary%2Fpics%2Fassonance_example.webp&amp;imgrefurl=https%3A%2F%2Fwww.grammar-monster.com%2Fglossary%2Fassonance.htm&amp;docid=bI19hXHHdmQXqM&amp;tbnid=JTOmMBz6On-khM&amp;vet=12ahUKEwjEgPTc9N-LAxWfIxAIHUAWMJYQM3oECDYQAA..i&amp;w=611&amp;h=291&amp;hcb=2&amp;ved=2ahUKEwjEgPTc9N-LAxWfIxAIHUAWMJYQM3oECDYQAA\"><div><div><div><img alt=\"What Is Assonance?\" src=\"paste-2ecad97cdc87f185448fbff688b4a8e7e6a36d0d.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ofullständigt rim där bara vokalerna stämmer överens",
+    "register": "fackspråklig, neutral, litteraturvetenskap",
+    "synonymer": [
+     "halvrim"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Orden \"orm\" och \"harm\" bildar en <font color=\"#3498db\">assonans</font>.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622811,
+   "ord": "avhjälpa",
+   "facit": "<div><strong><span style=\"color: rgb(0, 170, 255);\">Def</span>.</strong>&nbsp;Avhjälpa innebär att rätta till eller åtgärda ett problem, särskilt för att lindra eller ta bort en brist eller skada.</div><div><br></div><div><strong><span style=\"color: rgb(0, 170, 255);\">Ex</span>.</strong>&nbsp;<i>Regeringen beslutade om åtgärder för att avhjälpa bostadsbristen i staden.</i></div><div><i><br></i></div><div><strong><span style=\"color: rgb(0, 170, 255);\">Ety</span>.</strong>&nbsp;Från fornsvenskans&nbsp;<em>afhiælpa</em>, sammansatt av&nbsp;<em>av-</em>&nbsp;och&nbsp;<em>hjälpa</em>, med betydelsen att hjälpa bort något negativt.</div><div><br></div><div><strong><span style=\"color: rgb(0, 170, 255);\">Syn</span>.</strong>&nbsp;Åtgärda, rätta till, avlägsna</div><div><strong><span style=\"color: rgb(0, 170, 255);\">Eng</span>.</strong>&nbsp;Remedy, rectify, alleviate</div>",
+   "facit_signal": "facit antyder 10 betydelse(r), kortet har 1 -- avgör om någon saknas",
+   "kort": {
+    "huvudbetydelse": "Få bort eller mildra ett fel eller en brist",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "avlägsna",
+     "lindra"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Felet gick att <font color=\"#3498db\">avhjälpa</font> på tio minuter.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: lindra eller avlagsna <<fel el. brist>>. Kortet har BADE verben och definitionstillagget (ett fel eller en brist) — precis det som brukar falla bort. avlagsna belagt i SAOL, lindra inleder SO:s led. Facit-signalen (10) var HTML-skrap."
+  },
+  {
+   "noteId": 1780080622764,
+   "ord": "avskräde",
+   "facit": "avfall, skräp",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Rester som man vill bli av med",
+    "register": "neutral, lätt negativ",
+    "synonymer": [
+     "avfall"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hinken med <font color=\"#3498db\">avskräde</font> stod och stank utanför dörren.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622808,
+   "ord": "befogenhet",
+   "facit": "rätt att göra något",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Rätt att fatta vissa beslut eller göra vissa saker",
+    "register": "neutral, neutral, juridik",
+    "synonymer": [
+     "rättighet",
+     "behörighet"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Rektorn hade inte <font color=\"#3498db\">befogenhet</font> att stänga av eleven på egen hand.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622789,
+   "ord": "besvärjelse",
+   "facit": "trollformel",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ordramsa som ska ha övernaturlig kraft ; själva ritualen där man manar fram eller driver bort andar",
+    "register": "neutral, neutral, religion ; neutral, neutral, religion",
+    "synonymer": [
+     "≈≈ ordramsa",
+     "≈≈ ritual"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ ordramsa"
+     ],
+     [
+      "≈≈ ritual"
+     ]
+    ],
+    "exempelmening": "Medicinmannen mumlade sina <font color=\"#3498db\">besvärjelser</font> över elden.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  },
+  {
+   "noteId": 1780080622795,
+   "ord": "bienn",
+   "facit": "tvåårig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Om en växt: lever i två år",
+    "register": "fackspråklig, neutral, biologi",
+    "synonymer": [
+     "tvåårig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Trädgårdsmästaren sådde både ettåriga och <font color=\"#3498db\">bienna</font> växter.",
+    "etymologi": null
+   },
+   "verdikt": null,
+   "anmarkning": null
+  }
+ ]
+}
