@@ -443,6 +443,28 @@ def verdikt(paketsokvag, granskare=None):
     for p in godkanda:
         invoke("addTags", notes=[p["noteId"]],
                tags=f"{config.OBEROENDE_TAG_PREFIX}::{idag}")
+        # `v3_underkand::*` MASTE tas bort nar kortet godkanns om. Taggen ar ett
+        # NEGATIVT slappvillkor (se _kontrollera_slappbara) och sattes for att
+        # underkanda kort inte skulle laka tillbaka ut i kon. Men ingenting tog
+        # bort den igen: ett kort som underkandes, lagades och godkandes av en ny
+        # fristaende granskare bar kvar domen och kunde ALDRIG slappas, hur
+        # kompletta ovriga taggar an var.
+        #
+        # Hittat 2026-09-05 pa `obandig`, som gick fyra granskningsrundor: alla
+        # fyra slappkraven uppfyllda plus en farsk godkannandedom, och kortet lag
+        # anda kvar suspenderat. Utan den har raden ar varje underkannande
+        # slutgiltigt -- vilket gor rattningsflodet meningslost.
+        #
+        # Taggen tas bort HAR och bara har: det kraver en godkannandedom fran
+        # `verdikt`, alltsa fran en fristaende granskare. Ingen annan vag ror den.
+        underkand_taggar = [t for t in (invoke("notesInfo", notes=[p["noteId"]])[0]
+                                        .get("tags") or [])
+                            if t == "v3_underkand" or t.startswith("v3_underkand::")]
+        if underkand_taggar:
+            invoke("removeTags", notes=[p["noteId"]],
+                   tags=" ".join(underkand_taggar))
+            print(f"  {p['ord']}: tog bort {', '.join(underkand_taggar)} "
+                  f"(godkand av {gr})")
         _logga_oberoende({
             "datum": idag, "noteId": p["noteId"], "ord": p["ord"],
             "granskare": gr, "skriven_av": skrivare,
