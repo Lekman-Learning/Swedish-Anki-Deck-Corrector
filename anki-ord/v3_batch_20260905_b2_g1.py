@@ -72,7 +72,7 @@ FIX = {
   hb="Talar nedsättande om något eller någon för att få det att verka sämre än det är",
   reg="neutral, negativ",
   grp=[["nedsättande"]],
-  ex="Han talade förklenande om kollegans insats, som om den inte betydde något." ,
+  ex="Han talade %s om kollegans insats, som om den inte betydde något." % B("förklenande"),
   sl="SO: 'nedsättande' -- hela definitionen är ordet 'nedsättande', som alltså inleder "
      "(=utgör) ledet och är fullt belagt. SAOL-artikeln som hittas ('med förtal "
      "förringa') hör till grundverbet 'förklena', inte till presensparticipet "
@@ -83,7 +83,7 @@ FIX = {
   hb="Känd av alla för att göra dåliga eller tvivelaktiga saker, om och om igen",
   reg="neutral, negativ",
   grp=[["ökänd"]],
-  ex="Han var en notorisk skolkare som aldrig dök upp på lektionerna.",
+  ex="Han var en %s skolkare som aldrig dök upp på lektionerna." % B("notorisk"),
   sl="SO: en betydelse, 'som uppmärksammas på grund av (moraliskt) tvivelaktiga "
      "handlingar eller egenskaper', underbetydelsen ('äv. om handling') saknar egen "
      "definition. SAOL skriver 'allbekant; otvivelaktig; ökänd' som TRE semikolon-"
@@ -96,7 +96,7 @@ FIX = {
   hb="Visa på fler fina skillnader i något, till exempel en beskrivning eller en känsla ; mjuka upp ett tidigare uttalande, oftast för att dämpa det",
   reg="neutral, neutral ; neutral, neutral",
   grp=[["≈ fördjupa"], ["förändra", "modifiera"]],
-  ex="Historikern nyanserade sin bild av kriget genom att lyfta fram flera perspektiv.",
+  ex="Historikern %s sin bild av kriget genom att lyfta fram flera perspektiv." % B("nyanserade"),
   sl="SO ger TVÅ under samma lemma 'nyansera': huvudbetydelsen 'åstadkomma finare "
      "skiftningar i <<någon framställning etc., särsk. med avseende på begrepp, "
      "känslor eller dylikt>>' (tillägget med) och underbetydelsen MED EGEN definition "

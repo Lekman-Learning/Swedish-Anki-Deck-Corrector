@@ -34,8 +34,8 @@ FIX = {
      "belagda som fullt utbytbara ord."),
 
 "fibromyalgi": dict(
-  hb="En kronisk sjukdom som ger ständig smärta i muskler och senor, vanligast "
-     "hos kvinnor i fertil ålder",
+  hb="En sjukdom som ger ständig smärta i muskler och senor, vanligast hos "
+     "kvinnor som kan få barn",
   reg="fackspråklig, neutral, medicin",
   grp=[["≈≈ sjukdom"]],
   ex="Hennes %s gjorde att hon vaknade öm i hela kroppen varje morgon." % B("fibromyalgi"),
@@ -50,7 +50,7 @@ FIX = {
   hb="Beskriva något i detalj i stället för bara ungefär ; i en räkning: ange "
      "exakt vad varje belopp gäller",
   reg="neutral, neutral ; neutral, neutral, ekonomi",
-  grp=[["≈ precisera"], ["ange"]],
+  grp=[["≈≈ beskrivning"], ["ange"]],
   ex="Han fick %s exakt vilka ändringar han ville ha i avtalet." % B("specificera"),
   sl="SO ger TVÅ: huvudbetydelsen 'ge närmare beskrivning av (något)' och en "
      "underbetydelse (typ 'spec.') med EGEN definition: 'ange vad olika belopp "
@@ -61,8 +61,8 @@ FIX = {
      "underbetydelse ordagrant och är alltså belagd för betydelse två. Inget "
      "ord inleder ett led för första betydelsen (SAOL har de framförställda "
      "orden 'noggrant'/'noga' först i sina led, inte glosan själv), så "
-     "'precisera' sätts som ≈ (närmaste ord, källbelagt men inte bevisat fullt "
-     "utbytbart i alla sammanhang)."),
+     "synonymen sätts som kategori (≈≈ beskrivning) ur kortets egen "
+     "definition för den betydelsen."),
 
 "utlåta": dict(
   ordfix="utlåta sig",
@@ -107,7 +107,7 @@ FIX = {
   hb="Kort sammanfattning av ett ämne, ofta för högskolestudier ; en "
      "kortfattad lärobok ; (på en kamera) skydd mot motljus",
   reg="neutral, neutral ; neutral, neutral ; fackspråklig, neutral, teknik",
-  grp=[["sammandrag"], ["≈ handbok"], ["motljusskydd"]],
+  grp=[["sammandrag"], ["≈≈ lärobok"], ["motljusskydd"]],
   ex="Han läste igenom hela %s kvällen före tentan." % B("kompendiet"),
   sl="SO: huvudbetydelsen 'sammandrag av utförlig framställning' med tillägget "
      "'särsk. i samband med (högre) undervisning', plus en underbetydelse "
@@ -117,8 +117,9 @@ FIX = {
      "handbok') OCH ger en tredje, HELT orelaterad betydelse: 'motljusskydd på "
      "filmkamera' -- en äkta homonym som saknades helt i legacy-innehållet. "
      "'sammandrag' inleder SAOL:s första led (belagd, betydelse 1). 'handbok' "
-     "föregås av 'kortfattad' i båda källorna, så den sätts som ≈ (närmaste "
-     "ord). 'motljusskydd' inleder SAOL:s tredje betydelse ordagrant (belagd, "
+     "föregås av 'kortfattad' i båda källorna (ingen egen synonymglosa), så "
+     "betydelse 2 får en kategori (≈≈ lärobok) ur kortets egen definition. "
+     "'motljusskydd' inleder SAOL:s tredje betydelse ordagrant (belagd, "
      "betydelse 3)."),
 }
 

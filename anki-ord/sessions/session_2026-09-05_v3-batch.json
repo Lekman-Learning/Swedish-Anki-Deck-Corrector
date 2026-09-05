@@ -184,7 +184,7 @@
    "slutsats": "SO: '(tillstånd av) kronisk smärta i muskler och senfästen' med tillägget 'som främst drabbar kvinnor i fertil ålder' -- båda med i huvudbetydelsen. SAOL: 'en sjukdom med bl.a. muskelvärk', samma betydelse. Inget enskilt ord i källorna inleder ett led som är utbytbart, så synonymen sätts som kategori (≈≈ sjukdom, ur SAOL:s eget 'en sjukdom'). Legacys 'tillstånd'/'muskelvärk'/'trötthet' är inte belagda som fulla synonymer."
   },
   "proposed": {
-   "huvudbetydelse": "En kronisk sjukdom som ger ständig smärta i muskler och senor, vanligast hos kvinnor i fertil ålder",
+   "huvudbetydelse": "En sjukdom som ger ständig smärta i muskler och senor, vanligast hos kvinnor som kan få barn",
    "register": "fackspråklig, neutral, medicin",
    "synonymer": [
     "≈≈ sjukdom"
@@ -252,18 +252,18 @@
   ],
   "sokkoll": {
    "kalla": "https://svenska.se/api/msearch?ord=specificera",
-   "slutsats": "SO ger TVÅ: huvudbetydelsen 'ge närmare beskrivning av (något)' och en underbetydelse (typ 'spec.') med EGEN definition: 'ange vad olika belopp i en uppställning utgör betalning för' -- en riktig andra betydelse, inte bara en utvidgning (samma princip som kompendium samma dag). SAOL: 'noggrant räkna upp el. förteckna, noga ange' (en betydelse, komma skiljer omformuleringar av samma sak). 'ange' inleder SO:s underbetydelse ordagrant och är alltså belagd för betydelse två. Inget ord inleder ett led för första betydelsen (SAOL har de framförställda orden 'noggrant'/'noga' först i sina led, inte glosan själv), så 'precisera' sätts som ≈ (närmaste ord, källbelagt men inte bevisat fullt utbytbart i alla sammanhang)."
+   "slutsats": "SO ger TVÅ: huvudbetydelsen 'ge närmare beskrivning av (något)' och en underbetydelse (typ 'spec.') med EGEN definition: 'ange vad olika belopp i en uppställning utgör betalning för' -- en riktig andra betydelse, inte bara en utvidgning (samma princip som kompendium samma dag). SAOL: 'noggrant räkna upp el. förteckna, noga ange' (en betydelse, komma skiljer omformuleringar av samma sak). 'ange' inleder SO:s underbetydelse ordagrant och är alltså belagd för betydelse två. Inget ord inleder ett led för första betydelsen (SAOL har de framförställda orden 'noggrant'/'noga' först i sina led, inte glosan själv), så synonymen sätts som kategori (≈≈ beskrivning) ur kortets egen definition för den betydelsen."
   },
   "proposed": {
    "huvudbetydelse": "Beskriva något i detalj i stället för bara ungefär ; i en räkning: ange exakt vad varje belopp gäller",
    "register": "neutral, neutral ; neutral, neutral, ekonomi",
    "synonymer": [
-    "≈ precisera",
+    "≈≈ beskrivning",
     "ange"
    ],
    "synonym_groups": [
     [
-     "≈ precisera"
+     "≈≈ beskrivning"
     ],
     [
      "ange"
@@ -523,14 +523,14 @@
   ],
   "sokkoll": {
    "kalla": "https://svenska.se/api/msearch?ord=kompendium",
-   "slutsats": "SO: huvudbetydelsen 'sammandrag av utförlig framställning' med tillägget 'särsk. i samband med (högre) undervisning', plus en underbetydelse (typ 'spec.') med EGEN definition: 'kortfattad läro- eller handbok' -- behandlad som riktig andra betydelse, samma princip som specificera samma dag. SAOL bekräftar samma tvådelning ('sammandrag; kortfattad handbok') OCH ger en tredje, HELT orelaterad betydelse: 'motljusskydd på filmkamera' -- en äkta homonym som saknades helt i legacy-innehållet. 'sammandrag' inleder SAOL:s första led (belagd, betydelse 1). 'handbok' föregås av 'kortfattad' i båda källorna, så den sätts som ≈ (närmaste ord). 'motljusskydd' inleder SAOL:s tredje betydelse ordagrant (belagd, betydelse 3)."
+   "slutsats": "SO: huvudbetydelsen 'sammandrag av utförlig framställning' med tillägget 'särsk. i samband med (högre) undervisning', plus en underbetydelse (typ 'spec.') med EGEN definition: 'kortfattad läro- eller handbok' -- behandlad som riktig andra betydelse, samma princip som specificera samma dag. SAOL bekräftar samma tvådelning ('sammandrag; kortfattad handbok') OCH ger en tredje, HELT orelaterad betydelse: 'motljusskydd på filmkamera' -- en äkta homonym som saknades helt i legacy-innehållet. 'sammandrag' inleder SAOL:s första led (belagd, betydelse 1). 'handbok' föregås av 'kortfattad' i båda källorna (ingen egen synonymglosa), så betydelse 2 får en kategori (≈≈ lärobok) ur kortets egen definition. 'motljusskydd' inleder SAOL:s tredje betydelse ordagrant (belagd, betydelse 3)."
   },
   "proposed": {
    "huvudbetydelse": "Kort sammanfattning av ett ämne, ofta för högskolestudier ; en kortfattad lärobok ; (på en kamera) skydd mot motljus",
    "register": "neutral, neutral ; neutral, neutral ; fackspråklig, neutral, teknik",
    "synonymer": [
     "sammandrag",
-    "≈ handbok",
+    "≈≈ lärobok",
     "motljusskydd"
    ],
    "synonym_groups": [
@@ -538,7 +538,7 @@
      "sammandrag"
     ],
     [
-     "≈ handbok"
+     "≈≈ lärobok"
     ],
     [
      "motljusskydd"
