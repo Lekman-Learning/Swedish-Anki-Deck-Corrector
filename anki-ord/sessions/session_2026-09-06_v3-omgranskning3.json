@@ -398,34 +398,38 @@
     ],
     "sokkoll": {
       "kalla": "https://svenska.se/api/msearch?ord=gillra",
-      "slutsats": "SO: 'sätta upp <<fälla för djur>>'. Definitionstillägget är obligatorisk kontext, inte en parentes (lärdomen från 80-kortsomgången 25 aug, där afficiera och negligera båda underkändes på just det fältet) -- 'för djur' är därför inskrivet i huvudbetydelsen. SYNONYM ÄNDRAD: legacy hade 'sätta upp en fälla', ordagrant kortets egen definition -- cirkulärt. REGISTER: 'vardaglig' saknar stöd i båda ordböckerna, ändrat till neutral. UNDANTAG (betydelse_kan_saknas), kontrollerat mot rastrukturen: SO: en huvudbetydelse plus TVA underbetydelser utan egen definition, alltsa utvidgningar. SAOL:s definition ar tom. En verklig betydelse."
+      "slutsats": "SO: 'sätta upp <<fälla för djur>>'. Definitionstillägget är obligatorisk kontext, inte en parentes (lärdomen från 80-kortsomgången 25 aug, där afficiera och negligera båda underkändes på just det fältet) -- 'för djur' är därför inskrivet i huvudbetydelsen. SYNONYM ÄNDRAD: legacy hade 'sätta upp en fälla', ordagrant kortets egen definition -- cirkulärt. REGISTER: 'vardaglig' saknar stöd i båda ordböckerna, ändrat till neutral. UNDANTAG (betydelse_kan_saknas), kontrollerat mot rastrukturen: SO: en huvudbetydelse plus TVA underbetydelser utan egen definition, alltsa utvidgningar. SAOL:s definition ar tom. En verklig betydelse. SAKNAD BETYDELSE, HITTAD I EFTERHAND 2026-09-06. Blindgranskaren underkande 'donera' for en betydelse min egen kontroll hade viftat bort. Orsaken var metodisk: jag raknade en underbetydelse som verklig bara om faltet 'definition' var ifyllt, och skrev annars av den som 'utvidgning'. Men SO lagger ofta betydelsen i faltet 'typ' i stallet, med exempel i 'syntex' -- och da ar definitionsfaltet tomt fast betydelsen ar helt verklig. Efter domen dumpades ALLA falt i varje definitionslos underbetydelse for de 18 ord jag hade undantagit i kvall; fem bar verkligt innehall. Det har ar ett av dem. SO har TVA utvidgningar utan definitionsfalt: typ='av. nagot utvidgat' (syntex 'man gillrade en falla for spionen', alltsa fallan for en manniska) och typ='av. bildligt i fraga om ostadigt arrangemang' (syntex 'buren gillrades upp pa tva plankor'). Den forsta ar samma betydelse med ett annat offer och tillfor inget. Den ANDRA ar en egen betydelse -- att rigga upp nagot vingligt har inget med fallor att gora -- och den saknades. UNDERKAND IGEN OCH OMSKRIVEN 2026-09-06. Jag hade RATT om att SO:s forsta utvidgning ('av. nagot utvidgat', syntex 'man gillrade en falla for spionen') inte ar en ny betydelse -- men fel om foljden. Den vidgar OBJEKTET, och min huvudbetydelse last det till 'for djur' medan SAOL bara sager 'gillra en falla' utan begransning. Definition OCH exempelmening (rattfalla) uteslot tillsammans den anvandning som ar vanligast i dag: att gillra en falla for NAGON. Kortet var alltsa for smalt pa forsta betydelsen samtidigt som det saknade den andra. Bada rattade; exempelmeningen visar nu personfallan, eftersom det var den som var utestangd."
     },
     "proposed": {
-      "huvudbetydelse": "Sätta upp en fälla för djur",
-      "register": "neutral, neutral, allmän",
+      "huvudbetydelse": "Sätta upp en fälla, för djur eller för en person ; rigga upp något ostadigt",
+      "register": "neutral, neutral, allmän ; vardaglig, neutral, allmän",
       "synonymer": [
-        "≈≈ förbereda en fälla"
+        "≈≈ förbereda en fälla",
+        "≈≈ rigga upp"
       ],
       "synonym_groups": [
         [
           "≈≈ förbereda en fälla"
+        ],
+        [
+          "≈≈ rigga upp"
         ]
       ],
-      "exempelmening": "De fick <font color=\"#3498db\">gillra</font> en råttfälla i källaren.",
+      "exempelmening": "Polisen <font color=\"#3498db\">gillrade</font> en fälla för langaren.",
       "bild_html": "<br><br><img src=\"paste-8be824d29f39560c6a184faca14dc12f2bac2b4f.webp\" style=\"max-width:400px; border-radius:4px;\">"
     },
     "approved": true,
     "note_till_granskare": "V3 SPÅR B (kort som REDAN ligger i Adams kö och som han pluggar just nu). Det här kortet skrevs under den gamla processen och har aldrig blindverifierats. Ett fel här gör skada varje dag, till skillnad från de suspenderade korten. (1) Jämför mot old_facit. (2) RIKTIG sökkoll, fyll i 'sokkoll'. (3) Bedöm om kortet behöver ändras -- är det redan korrekt och i Adam-tal, kopiera nuvarande innehåll oförändrat till 'proposed' och notera det i sokkoll-slutsatsen. Om det behöver ändras: Skriv i Adam-tal: vardagliga ord, kort nog att läsas högt och förstås direkt, aldrig ordboksprosa, aldrig ordet i sin egen definition, förklara inte svårt med svårt, konkret före abstrakt, bevara humor. FÖRKLARINGEN SKA LIGGA EN NIVÅ UNDER UPPSLAGSORDET (skärpt 2026-08-26 efter Adams invändning -- den gamla formuleringen 'förklara inte svårt med svårt' var för vag för att följas: 12 av 44 kort bröt mot den): inget ord i huvudbetydelsen får självt vara ett uppslagsord i decket. Kör 'python svarighetskoll.py <sessionsfil>' -- noll träffar är kravet, inte en ambition. Checken missar sammansättningar (efterskänkning, lystringssignal, hålighet), så läs igenom med egna ögon också. OCH: laga ALDRIG genom att byta det svåra ordet mot en enklare SYNONYM -- svenskan har nästan inga exakta synonymer, så bytet ändrar betydelsen ('yppig' -> 'frodig' tappar en nyans) och tränar precis det fel HP:s ORD-del straffar. Byt mot en KORT FRAS i stället: 'benägen' -> 'som lätt gör något', 'fäbod' -> 'gård i fjällen dit boskapen fördes på sommaren'. Någon stavelse längre, precisionen kvar. EN exempelmening med ordet i blått. Bara utbytbara synonymer, aldrig cirkulära. Skilda betydelser separeras med ' ; ' och synonymerna grupperas i samma ordning. ETYMOLOGI (valfri, från 2026-08-08): lägg till 'etymologi' i proposed BARA när ursprunget gör betydelsen lättare att förstå eller minnas -- t.ex. när ordet blir självförklarande av det ('rangera' av ty. rangieren, 'ordna i rad'). Aldrig som språkhistorisk trivia, aldrig bara för att ursprunget är känt. Max ~18 ord, ren text, hellre utelämnad än utfyllnad. De flesta kort ska INTE ha någon. (4) BEVARA bild_html oförändrat om kortet har en bild. (5) Riskflaggan 'hog' betyder sannolikt saknad betydelse -- det felet fanns på 34 kort i just den här poolen så sent som 2026-08-07.",
     "confidence": 9,
-    "forgranska_tillat": {
-      "betydelse_kan_saknas": "SO: en huvudbetydelse plus TVA underbetydelser utan egen definition (utvidgningar). SAOL:s definition ar tom."
-    },
     "adamtal_varningar": [],
     "exempel_varningar": [
       "exempelmeningen bär bara 3 innehållsord — för lite sammanhang för att skilja ordet från sina synonymer"
     ],
     "applicerad": true,
-    "skriven_av": "Claude Opus 5 (skrivare)"
+    "skriven_av": "Claude Opus 5 (skrivare)",
+    "forgranska_tillat": {
+      "betydelse_kan_saknas": "SO:s bada utvidgningar ar nu inarbetade: den forsta ('av. nagot utvidgat') genom att huvudbetydelsen inte langre begransar fallan till djur, den andra ('av. bildligt i fraga om ostadigt arrangemang') som eget led. Ingen betydelse kvar att lagga till."
+    }
   },
   {
     "noteId": 1780080628836,

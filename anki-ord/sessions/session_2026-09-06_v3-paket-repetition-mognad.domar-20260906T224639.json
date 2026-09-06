@@ -1,0 +1,645 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080629226,
+      "ord": "demolera",
+      "facit": "förstöra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slå sönder eller förstöra ett större föremål helt och hållet",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [
+          "förstöra",
+          "rasera",
+          "riva"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bilen blev helt <font color=\"#3498db\">demolerad</font> vid krocken.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Slog upp i SO ('helt förstöra större föremål', enda betydelse) och SAOL ('riva, rasera'). Kortets definition täcker betydelsen exakt och leder rätt. Synonymerna förstöra/rasera/riva är utbytbara och rasera+riva står ordagrant i SAOL. Exempelmening korrekt och highlightad. Ingen betydelse saknas.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625449,
+      "ord": "cyklisk",
+      "facit": "som upprepar sig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som upprepas regelbundet, moment för moment ; som bildar en sluten ring",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, kemi",
+        "synonymer": [
+          "≈≈ återkommande",
+          "kretsformig"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ återkommande"
+          ],
+          [
+            "kretsformig"
+          ]
+        ],
+        "exempelmening": "Årstiderna följer ett <font color=\"#3498db\">cykliskt</font> förlopp som upprepas år efter år.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: 'som regelbundet upprepas, moment för moment' och kemisk 'som bildar sluten ring'. Kortet har båda, rätt separerade med ';', rätt register (allmän resp. kemi). '≈≈ återkommande' är korrekt överordnad kategori (kräver ingen källa); 'kretsformig' är en rimlig omskrivning av ringbetydelsen. Exempel illustrerar upprepningsbetydelsen och är highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080627148,
+      "ord": "homofon",
+      "facit": "likljudande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ord som låter likadant som ett annat men stavas annorlunda och oftast betyder något annat ; om musik: har bara en ton i taget som bär melodin, med resten som stöd",
+        "register": "fackspråklig, neutral, lingvistik ; fackspråklig, neutral, musik",
+        "synonymer": [
+          "≈≈ likljudande ord",
+          "≈≈ musikstil"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ likljudande ord"
+          ],
+          [
+            "≈≈ musikstil"
+          ]
+        ],
+        "exempelmening": "Orden <font color=\"#3498db\">\"själ\", \"skäl\" och \"stjäl\"</font> är <font color=\"#3498db\">homofoner</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: substantiv 'ord som uttalas likadant men stavas/betyder annat' samt adjektiv i musikbetydelsen 'en melodiförande stämma, övriga ackompanjerar'. Kortet har båda betydelserna, rätt fackregister. Adjektivets 'likljudande'-användning är samma begrepp som substantivet. Exempel (själ/skäl/stjäl) är SO:s eget och korrekt highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080619539,
+      "ord": "koloss",
+      "facit": "jätte",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket stor staty ; något ovanligt stort och klumpigt, om person eller sak",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ jättestaty",
+          "bjässe"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ jättestaty"
+          ],
+          [
+            "bjässe"
+          ]
+        ],
+        "exempelmening": "Det var en <font color=\"#3498db\">koloss</font> av en man som stod framför oss.",
+        "etymologi": "av grekiska kolossos, en jättestaty -- Kolossen på Rhodos var en av antikens sju underverk"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'mycket stor staty', underbetydelse 'stor person/föremål'. Kortet har båda, leder med statybetydelsen. '≈≈ jättestaty' korrekt kategori; 'bjässe' utbytbart för personbetydelsen. Etymologin (grek. kolossos, Kolossen på Rhodos) är sann och stärker minnet. Exempel och highlight korrekta.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628631,
+      "ord": "sovel",
+      "facit": "\"riktig mat\" (proteiner)&nbsp;<i>förutom kolhyd.<br></i><img alt=\"webp image\" src=\"paste_1757680746774.webp\">",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Mat man äter till bröd eller potatis, särskilt det matiga som kött, fisk eller pålägg",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "smörgåspålägg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det var ont om <font color=\"#3498db\">sovel</font> till brödet den vintern.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: en betydelse, 'mat förutom bröd/potatis, t.ex. pålägg, kött, fisk'. SAOL: 'tilltugg till bröd el. potatis; smörgåspålägg' – synonymen 'smörgåspålägg' står alltså ordagrant i SAOL. facit_signal om två betydelser bekräftas inte av ordböckerna; ingen betydelse saknas. Register 'ngt ålderdomlig' rimligt. Exempel är SO:s eget och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626074,
+      "ord": "totem",
+      "facit": "kultföremål",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Djur, växt eller naturföreteelse som en grupp känner sig mystiskt förbunden med och ser som sin beskyddare ; avbildningen av den, som gruppens skyddstecken",
+        "register": "fackspråklig, neutral, religion ; fackspråklig, neutral, religion",
+        "synonymer": [
+          "≈≈ skyddsande",
+          "≈≈ kultföremål"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ skyddsande"
+          ],
+          [
+            "≈≈ kultföremål"
+          ]
+        ],
+        "exempelmening": "Örnen var stammens <font color=\"#3498db\">totem</font>, en symbol för styrka.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO betonar naturföreteelsen gruppen känner samhörighet med; SAOL betonar 'avbildning ... som kan betraktas som viss grupps skyddsande'. Kortet har båda leden, rätt separerade. '≈≈ skyddsande' står ordagrant i SAOL, '≈≈ kultföremål' är rimlig kategori. Exempel illustrerar betydelse 1 och är highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624195,
+      "ord": "avglans",
+      "facit": "återsken",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svagt ljus som speglas från något ; en svag antydan om något som en gång funnits",
+        "register": "ngt ålderdomlig, neutral, allmän ; högtidlig, neutral, allmän",
+        "synonymer": [
+          "återsken",
+          "≈≈ svag återstod"
+        ],
+        "synonym_groups": [
+          [
+            "återsken"
+          ],
+          [
+            "≈≈ svag återstod"
+          ]
+        ],
+        "exempelmening": "Dagens fest var bara en <font color=\"#3498db\">avglans</font> av forna tiders praktfulla baler.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'ljus som reflekteras från något' (synonym återsken, ålderdomlig), underbetydelse bildligt 'svag antydan'. Kortet har båda, rätt separerade och registermärkta. 'återsken' pekas ut av SO självt; '≈≈ svag återstod' rimlig kategori för bildbetydelsen. Exempel illustrerar bildbetydelsen och är highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625267,
+      "ord": "crescendo",
+      "facit": "stigande tonstyrka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Med växande tonstyrka ; avsnittet i ett stycke som ska spelas så",
+        "register": "fackspråklig, neutral, musik ; fackspråklig, neutral, musik",
+        "synonymer": [
+          "≈≈ stigande tonstyrka",
+          "≈≈ musikavsnitt"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ stigande tonstyrka"
+          ],
+          [
+            "≈≈ musikavsnitt"
+          ]
+        ],
+        "exempelmening": "Stråkarna spelade <font color=\"#3498db\">crescendo</font> tills hela salen skalv.",
+        "etymologi": "italienska crescendo 'växande', till crescere 'växa'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: adverb 'med växande tonstyrka' och substantiv 'del av musikstycke som spelas så'. Kortet har båda, rätt fackregister. '≈≈'-raderna är avsiktliga kategorier och prövas inte som synonymer. Etymologin (it. crescere 'växa') är sann och hjälper minnet. Exempel illustrerar adverbet och är highlightat. Den bildliga 'nå ett crescendo' är i SO en bildlig användning av substantivet, inte egen betydelse.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624704,
+      "ord": "deja vu",
+      "facit": "känsla av återupplevelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Känsla av att ha upplevt något förut",
+        "register": "neutral, neutral, psykologi",
+        "synonymer": [
+          "≈≈ igenkänningskänsla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon fick en stark känsla av <font color=\"#3498db\">deja vu</font> när hon återvände till sitt gamla klassrum.",
+        "etymologi": "franska déjà vu 'redan sett'"
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Definitionen ('känsla av att ha upplevt något förut') ligger i linje med SAOL ('känsla av att man tidigare har upplevt samma sak'), men EXEMPELMENINGEN är sakligt fel: att återvända till sitt EGET gamla klassrum och känna igen sig är verklig igenkänning, inte déjà vu. Fenomenet kräver att situationen objektivt är ny/obekant (jfr SO: 'något som man aldrig varit med om tidigare'). Byt exempel till en förstagångssituation som ändå känns bekant.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080623652,
+      "ord": "fiktiv",
+      "facit": "påhittad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Påhittad, men framställd som om den vore verklig",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "uppdiktad",
+          "inbillad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Strindbergs Giftas inleds med en <font color=\"#3498db\">fiktiv</font> intervju med författaren.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som inte är verklig men tänks vara det' (motsats autentisk, jfr uppdiktad). SAOL: 'inbillad; uppdiktad' – båda kortets synonymer står alltså ordagrant i SAOL. Kortets definition ('påhittad, men framställd som om den vore verklig') är korrekt. Exempel är SO:s eget (Strindbergs Giftas) och highlightat. En betydelse, inget saknas.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626936,
+      "ord": "glaukom",
+      "facit": "grön starr",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ögonsjukdom där trycket i ögat stiger och synen gradvis förstörs",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "grön starr"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Glaukom</font> kan leda till blindhet om det inte behandlas i tid.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'ögonsjukdom med synnedsättning till följd av ökat tryck i ögat', jfr starr. Kortets definition träffar rätt. 'grön starr' är den etablerade svenska folkliga termen för just glaukom (mot grå starr = katarakt) och är utbytbar. En betydelse, inget saknas. Exempel sakligt riktigt och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625117,
+      "ord": "kaputt",
+      "facit": "slut",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Helt trasig ; helt slut av trötthet",
+        "register": "vardaglig, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "förstörd",
+          "uttröttad"
+        ],
+        "synonym_groups": [
+          [
+            "förstörd"
+          ],
+          [
+            "uttröttad"
+          ]
+        ],
+        "exempelmening": "Det är inget att göra, kameran är helt <font color=\"#3498db\">kaputt</font>.",
+        "etymologi": "av tyska kaputt"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'helt förstörd' (vardaglig, endast predikativt), underbetydelse bildligt 'uttröttad'. Kortet har båda, rätt separerade, rätt register. 'förstörd' och 'uttröttad' motsvarar SO:s egna formuleringar. Exempel är SO:s eget och highlightat. Etymologin (ty. kaputt) är kort men sann.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626778,
+      "ord": "kardiologi",
+      "facit": "läran om hjärtat",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om hjärtat och dess funktion",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ läkarspecialitet"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Patienten remitterades till <font color=\"#3498db\">kardiologi</font> för utredning av sitt hjärtproblem.",
+        "etymologi": "grekiska kardia 'hjärta' och -logi 'lära'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'läran om hjärtat och dess funktioner' – kortets definition är i praktiken identisk. En betydelse. '≈≈ läkarspecialitet' är en saklig och korrekt överordnad kategori. Etymologin (grek. kardia + -logi) är sann och hjälper minnet. Exempel highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624425,
+      "ord": "kollaps",
+      "facit": "sammanbrott",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att något plötsligt faller ihop helt och slutar fungera ; att en lunga faller ihop",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, medicin",
+        "synonymer": [
+          "sammanbrott",
+          "≈≈ hopfallen lunga"
+        ],
+        "synonym_groups": [
+          [
+            "sammanbrott"
+          ],
+          [
+            "≈≈ hopfallen lunga"
+          ]
+        ],
+        "exempelmening": "Transportsystemet drabbades av <font color=\"#3498db\">kollaps</font> vid elavbrottet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL: 'sammanbrott; spec. hopfallande av lunga' – kortets två betydelser (allmänt sammanbrott ; lunga faller ihop) motsvarar exakt SAOL:s uppdelning, och SO:s 'fullständigt och plötsligt sammanbrott fysiskt el. psykiskt' fångas av synonymen 'sammanbrott'. Rätt separerade, rätt register. '≈≈ hopfallen lunga' rimlig kategori. Exempel är SO:s eget och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624345,
+      "ord": "kriterium",
+      "facit": "kännetecken;&nbsp; krav",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Avgörande kännetecken som avgör om något hör till en viss kategori ; travtävling för unghästar",
+        "register": "formell, neutral, allmän ; fackspråklig, neutral, sport",
+        "synonymer": [
+          "kännetecken",
+          "bevis",
+          "≈≈ hästtävling"
+        ],
+        "synonym_groups": [
+          [
+            "kännetecken",
+            "bevis"
+          ],
+          [
+            "≈≈ hästtävling"
+          ]
+        ],
+        "exempelmening": "Ett viktigt <font color=\"#3498db\">kriterium</font> för att komma in på läkarprogrammet var höga betyg i kemi.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO och SAOL ger båda två betydelser: 'kännetecken (för tillhörighet till kategori)' och 'travtävling för unghästar'. Kortet har båda. SAOL glossar ordet ordagrant som 'kännetecken, bevis', så synonymgruppen kännetecken/bevis är ordbokstäckt. '≈≈ hästtävling' rimlig kategori. facit_signal om tre betydelser bekräftas inte – ingen saknas. Exempel korrekt och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628382,
+      "ord": "kvittens",
+      "facit": "<i>(generellare än kvitto)&nbsp;&nbsp;</i>skriftlig betalnings- el. mottagningsbevis",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Skriftligt bevis på att en betalning eller leverans tagits emot",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "kvitto"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Butiken utfärdade en <font color=\"#3498db\">kvittens</font> när jag köpte kläderna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'skriftligt betalnings- eller mottagningsbevis'. SAOL: 'mottagnings- el. betalningsbevis, kvitto' – synonymen 'kvitto' står ordagrant i SAOL. Båda ordböckerna ger en betydelse; facit_signal om tre bekräftas inte, inget saknas. Kortets definition träffar rätt, exempel highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080627661,
+      "ord": "ombesörja",
+      "facit": "utföra viktig handling åt annan",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Se till att en uppgift blir gjord, ofta åt någon annan",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "ordna",
+          "åstadkomma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Utbildningen <font color=\"#3498db\">ombesörjdes</font> av de fackliga organisationerna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'utföra viktig handling, ofta för någon annan' (formellt). SAOL definierar ordet ordagrant som 'ordna, åstadkomma' – kortets båda synonymer är alltså exakt SAOL:s gloss. Kortets definition ('se till att en uppgift blir gjord, ofta åt någon annan') är korrekt. En betydelse. Exempel är SO:s eget och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625892,
+      "ord": "tiara",
+      "facit": "diadem",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Praktfullt huvudsmycke buret vid högtidliga tillfällen ; påvens höga, toppiga huvudbonad",
+        "register": "formell, neutral, allmän ; fackspråklig, neutral, religion",
+        "synonymer": [
+          "diadem",
+          "≈≈ värdighetstecken"
+        ],
+        "synonym_groups": [
+          [
+            "diadem"
+          ],
+          [
+            "≈≈ värdighetstecken"
+          ]
+        ],
+        "exempelmening": "Drottningen bar en glittrande <font color=\"#3498db\">tiara</font> vid ceremonin.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'hög kägelformad huvudbonad som värdighetstecken, särsk. påvens' samt 'praktfullt diadem'. Kortet har båda betydelserna, rätt separerade och registermärkta; det leder med diadembetydelsen, vilket är den idag klart vanligaste. 'diadem' står ordagrant i SO:s underbetydelse; '≈≈ värdighetstecken' korrekt kategori. Exempel highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080627097,
+      "ord": "titanisk",
+      "facit": "jättelik",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Oerhört stor eller kraftfull",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "jättelik",
+          "övermänsklig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det <font color=\"#3498db\">titaniska</font> segermonumentet reste sig över hela torget.",
+        "etymologi": "efter titanerna, jättarna i grekisk mytologi"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'oerhört stor om konkreta el. abstrakta företeelser' (ex. titaniskt segermonument, titaniska ansträngningar). Kortets definition ('oerhört stor eller kraftfull') träffar rätt. 'jättelik' motsvarar facit; 'övermänsklig' är utbytbart i ansträngnings-kollokationen. Etymologin (titanerna i grekisk mytologi) är sann och hjälper minnet. Exempel är SO:s eget och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626319,
+      "ord": "torsion",
+      "facit": "vridning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vridning av ett föremål när dess ändar vrids åt olika håll ; i medicin: att ett organ vridit sig om sin egen axel",
+        "register": "fackspråklig, neutral, fysik ; fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ vridning",
+          "≈≈ organvridning"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ vridning"
+          ],
+          [
+            "≈≈ organvridning"
+          ]
+        ],
+        "exempelmening": "Ingenjören beräknade axelns <font color=\"#3498db\">torsion</font> innan den sattes i drift.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'formförändring hos långsträckt kropp när ena änden vrids i förhållande till den andra' (fysik/teknik), med medicinskt specialfall (t.ex. torsion av navelsträngen). Kortet har fysik- och medicinbetydelsen, rätt separerade och registermärkta. '≈≈ vridning' (=facit) och '≈≈ organvridning' är korrekta kategorier. Exempel illustrerar fysikbetydelsen och är highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626463,
+      "ord": "utfärda",
+      "facit": "kungöra, tillkännage; iordningställa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Officiellt ställa ut ett dokument så att det blir giltigt ; formellt meddela något, utan att ett dokument krävs",
+        "register": "formell, neutral, juridik ; formell, neutral, allmän",
+        "synonymer": [
+          "≈≈ utställa",
+          "≈≈ kungöra"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ utställa"
+          ],
+          [
+            "≈≈ kungöra"
+          ]
+        ],
+        "exempelmening": "Polisen kunde <font color=\"#3498db\">utfärda</font> ett nytt pass inom en vecka.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: huvudbetydelse 'låta framställa (dokument) i lagligt bindande form' (utfärda pass, intyg) och utvidgat 'utfärda instruktioner/löfte'. Kortet har båda betydelserna, rätt separerade och registermärkta. '≈≈ utställa' och '≈≈ kungöra' är rimliga kategorier. Exempel (utfärda ett pass) är SO:s eget och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626783,
+      "ord": "vagel",
+      "facit": "inflammerad ögonlock",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Varig svullnad i kanten av ögonlocket ; sittstång för höns",
+        "register": "neutral, neutral, medicin ; ngt ålderdomlig, neutral, jordbruk",
+        "synonymer": [
+          "≈≈ ögoninflammation",
+          "≈≈ hönspinne"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ ögoninflammation"
+          ],
+          [
+            "≈≈ hönspinne"
+          ]
+        ],
+        "exempelmening": "Hon fick en <font color=\"#3498db\">vagel</font> i ögat efter förkylningen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: två betydelser, 'inflammation och varbildning i körtel i ögonlocket' samt 'sittstång för höns'. Kortet har båda, rätt separerade och registermärkta. '≈≈ ögoninflammation' och '≈≈ hönspinne' är rimliga kategorier. Exempel illustrerar ögonbetydelsen och är highlightat; 'efter förkylningen' är folkligt men inte ett klart sakfel.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080627043,
+      "ord": "vakuum",
+      "facit": "lufttomt utrymme",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rum helt utan luft ; tomrum där något som borde finnas saknas",
+        "register": "fackspråklig, neutral, fysik ; neutral, neutral, allmän",
+        "synonymer": [
+          "lufttomt rum",
+          "tomrum"
+        ],
+        "synonym_groups": [
+          [
+            "lufttomt rum"
+          ],
+          [
+            "tomrum"
+          ]
+        ],
+        "exempelmening": "Efter chefens avhopp uppstod ett <font color=\"#3498db\">vakuum</font> som ingen ville fylla.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'fullständigt tomrum särsk. med tanke på frånvaro av luft' plus bildlig användning (militärt/känslomässigt vakuum). Kortet har fysik- och bildbetydelsen, rätt separerade. 'lufttomt rum' och 'tomrum' är utbytbara och 'tomrum' står i SO:s egen definition. Exempel illustrerar bildbetydelsen och är highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625264,
+      "ord": "binokel",
+      "facit": "typ av glasögon, pincené<br><img src=\"paste-4c77614bab73b0b72c52aceb24263086c6bcd47d.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Glasögon utan skalmar som kläms fast på näsan",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "pincené"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon satte på sig <font color=\"#3498db\">binokeln</font> för att läsa den lilla texten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO definierar binokel ordagrant som 'pincené' (märkt mindre brukligt), även om lornjett. Kortets definition ('glasögon utan skalmar som kläms fast på näsan') beskriver just pincené korrekt, och synonymen 'pincené' är alltså ordbokstäckt. Register 'ngt ålderdomlig' motsvarar 'mindre brukligt'. Exempel rimligt och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628875,
+      "ord": "epidemisk",
+      "facit": "smittsam, härjande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som har med epidemier att göra eller kan orsaka en ; okontrollerat spridd, om något annat än sjukdom",
+        "register": "formell, neutral, medicin ; neutral, lätt negativ, allmän",
+        "synonymer": [
+          "≈≈ smittsam",
+          "≈≈ okontrollerad"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ smittsam"
+          ],
+          [
+            "≈≈ okontrollerad"
+          ]
+        ],
+        "exempelmening": "Kolera och pest är klassiska <font color=\"#3498db\">epidemiska</font> sjukdomar.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO: 'som har att göra med eller kan orsaka epidemier' samt bildligt 'okontrollerad' (sprider sig epidemiskt). Kortet har båda betydelserna, rätt separerade och registermärkta. '≈≈ smittsam' (jfr facit 'smittsam, härjande') och '≈≈ okontrollerad' (SO:s egen bildformulering) är korrekta kategorier. Exempel (kolera/pest) sakligt riktigt och highlightat.",
+      "granskning_turer_post": 39,
+      "granskning_turkrav_post": 6
+    }
+  ],
+  "granskning_turer": 39,
+  "granskning_kostnad_usd": 0.7607624000000001,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 39,
+      "turkrav": 6,
+      "kostnad_usd": 0.7607624000000001
+    }
+  ]
+}

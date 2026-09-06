@@ -1,0 +1,572 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080624361,
+      "ord": "banal",
+      "facit": "alldaglig och ointressant",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så vanlig och uttjatad att den inte säger något ; om sjukdom: så vanlig att den är ofarlig",
+        "register": "neutral, negativ, allmän ; neutral, neutral, medicin",
+        "synonymer": [
+          "alldaglig",
+          "sliten",
+          "platt",
+          "≈≈ ofarlig"
+        ],
+        "synonym_groups": [
+          [
+            "alldaglig",
+            "sliten",
+            "platt"
+          ],
+          [
+            "≈≈ ofarlig"
+          ]
+        ],
+        "exempelmening": "Han tyckte manuset var <font color=\"#3498db\">banalt</font> och fullt av utslitna klyschor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629180,
+      "ord": "fusionera",
+      "facit": "sammanslå",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slå samman två företag eller organisationer till ett",
+        "register": "formell, neutral, ekonomi",
+        "synonymer": [
+          "gå samman",
+          "slå samman",
+          "smälta samman"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De två bankerna beslutade att <font color=\"#3498db\">fusionera</font> nästa år.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629009,
+      "ord": "destillera",
+      "facit": "rena",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skilja en vätskas delar åt genom att koka och kyla ; få fram det väsentliga ur en stor mängd",
+        "register": "fackspråklig, neutral, kemi ; formell, neutral, allmän",
+        "synonymer": [
+          "≈≈ rena genom kokning",
+          "≈≈ renodla"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ rena genom kokning"
+          ],
+          [
+            "≈≈ renodla"
+          ]
+        ],
+        "exempelmening": "På destilleriet lärde hon sig att <font color=\"#3498db\">destillera</font> whisky.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629167,
+      "ord": "dramatisera",
+      "facit": "överdriva",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skriva om en berättelse till pjäs ; framställa något som mer omskakande än det var",
+        "register": "neutral, neutral, konst ; vardaglig, lätt negativ, allmän",
+        "synonymer": [
+          "omarbeta för teatern",
+          "göra stort nummer av"
+        ],
+        "synonym_groups": [
+          [
+            "omarbeta för teatern"
+          ],
+          [
+            "göra stort nummer av"
+          ]
+        ],
+        "exempelmening": "Tidningen valde att <font color=\"#3498db\">dramatisera</font> den redan spännande händelsen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625331,
+      "ord": "feromon",
+      "facit": "luktsignalmedel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Doftämne som djur av samma art skickar signaler med",
+        "register": "fackspråklig, neutral, biologi",
+        "synonymer": [
+          "≈≈ doftsignal"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Honan sänder ut ett <font color=\"#3498db\">feromon</font> som lockar till sig hannarna.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624787,
+      "ord": "fortskaffningsmedel",
+      "facit": "transportfordon",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Något man förflyttar sig med",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "transportmedel",
+          "färdmedel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Cykeln är ett hälsosamt <font color=\"#3498db\">fortskaffningsmedel</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625623,
+      "ord": "geografi",
+      "facit": "jordytslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vetenskapen om jordytan och hur människor använder den ; Någots utseende och rumsliga struktur ; Vardagligt: den omgivande terrängen",
+        "register": "neutral, neutral, allmän ; formell, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ jordytelära",
+          "≈≈ rumslig struktur",
+          "≈≈ terräng"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ jordytelära"
+          ],
+          [
+            "≈≈ rumslig struktur"
+          ],
+          [
+            "≈≈ terräng"
+          ]
+        ],
+        "exempelmening": "Han älskade <font color=\"#3498db\">geografi</font> och kunde namnge alla världens huvudstäder utantill.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627466,
+      "ord": "mycel",
+      "facit": "svamps underjordstrådar",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svampens nätverk av trådar i jorden eller veden",
+        "register": "formell, neutral, biologi",
+        "synonymer": [
+          "≈≈ svamptrådar"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Mycelet</font> sprider sig genom jorden och försörjer svampen med näring.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625970,
+      "ord": "språksam",
+      "facit": "pratglad",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som gärna tar till orda och håller igång ett samtal",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "pratsam"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hennes bordskavaljer var inte särskilt <font color=\"#3498db\">språksam</font> under middagen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628238,
+      "ord": "tjära",
+      "facit": "(eng) tar<br><a href=\"https://www.google.com/imgres?q=tar%20stock%20photo&amp;imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F02%2F53%2F53%2F07%2F360_F_253530764_QyzGZ0IlOUD5arWLLFGf6jRpuv6eBbIS.jpg&amp;imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522%2Btar%2522&amp;docid=JHGQX-IwDVBaTM&amp;tbnid=NrHJand7J6euBM&amp;vet=12ahUKEwj-nfGzwpmOAxU6ERAIHTxFKaQQM3oECBkQAA..i&amp;w=540&amp;h=360&amp;hcb=2&amp;ved=2ahUKEwj-nfGzwpmOAxU6ERAIHTxFKaQQM3oECBkQAA\"><div><div><div><img alt=\"Tar&quot; Images – Browse 142,062 Stock ...\" src=\"paste-c003880f1c451bea2bd64586fa331c99c01dd2f8.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svart trögflytande vätska ur trä eller kol ; pensla den vätskan på något",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ beckartad vätska",
+          "≈≈ bestryka"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ beckartad vätska"
+          ],
+          [
+            "≈≈ bestryka"
+          ]
+        ],
+        "exempelmening": "Fiskarna brukade <font color=\"#3498db\">tjära</font> båtarna varje vår.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625717,
+      "ord": "amöba",
+      "facit": "encelligt djur",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Encelligt urdjur som ändrar form hela tiden ; Bildligt om något oformligt och svåröverskådligt ; Bildligt om en slö person",
+        "register": "fackspråklig, neutral, biologi ; vardaglig, lätt negativ, allmän ; vardaglig, nedsättande, allmän",
+        "synonymer": [
+          "≈≈ urdjur",
+          "≈≈ formlöshet",
+          "≈≈ slöfock"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ urdjur"
+          ],
+          [
+            "≈≈ formlöshet"
+          ],
+          [
+            "≈≈ slöfock"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Amöban</font> rör sig genom att bukta ut sitt cellmembran.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628003,
+      "ord": "bärkraft",
+      "facit": "förmåga att bära<br><br>bärighet, hållbarhet; soliditet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förmåga att ta upp tyngd utan att brista ; att något håller vid närmare granskning eller står stadigt ekonomiskt",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ bärighet",
+          "hållbarhet"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ bärighet"
+          ],
+          [
+            "hållbarhet"
+          ]
+        ],
+        "exempelmening": "Isens <font color=\"#3498db\">bärkraft</font> räckte inte för att bära bilen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624104,
+      "ord": "diskotek",
+      "facit": "skivsamling; danslokal",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lokal där man dansar till inspelad musik ; en samling grammofonskivor",
+        "register": "neutral, neutral, allmän ; ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "≈≈ danslokal",
+          "skivsamling"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ danslokal"
+          ],
+          [
+            "skivsamling"
+          ]
+        ],
+        "exempelmening": "Ungdomarna gick på <font color=\"#3498db\">diskotek</font> varje fredag för att dansa till sent på natten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625410,
+      "ord": "donera",
+      "facit": "skänka bort",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge bort något större till ett gott ändamål ; lämna blod eller organ till någon som behöver det",
+        "register": "neutral, neutral, allmän ; neutral, neutral, medicin",
+        "synonymer": [
+          "skänka",
+          "ge till allmännyttigt ändamål",
+          "≈≈ ge av sin kropp"
+        ],
+        "synonym_groups": [
+          [
+            "skänka",
+            "ge till allmännyttigt ändamål"
+          ],
+          [
+            "≈≈ ge av sin kropp"
+          ]
+        ],
+        "exempelmening": "Hon <font color=\"#3498db\">donerade</font> hela sin porslinssamling till museet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625916,
+      "ord": "essentiell",
+      "facit": "nödvändig, väsentlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så viktig att det inte går utan ; livsnödvändig för kroppen",
+        "register": "formell, neutral, allmän ; fackspråklig, neutral, medicin",
+        "synonymer": [
+          "väsentlig",
+          "livsviktig"
+        ],
+        "synonym_groups": [
+          [
+            "väsentlig"
+          ],
+          [
+            "livsviktig"
+          ]
+        ],
+        "exempelmening": "De ställdes inför <font color=\"#3498db\">essentiella</font> frågor om liv och död.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624915,
+      "ord": "farmakologi",
+      "facit": "läran om läkemedel",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vetenskapen om hur läkemedel verkar i kroppen",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ läkemedelslära"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Farmakologi</font> studerar hur läkemedel tas upp och bryts ner i kroppen.",
+        "etymologi": "grekiska pharmakon 'läkemedel, gift' och -logi 'lära'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626657,
+      "ord": "galant",
+      "facit": "artig och hövisk; utmärkt<div><br>chevaleresk</div>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Mycket artig och uppvaktande, ofta med en flörtig ton ; utmärkt, alldeles utomordentligt",
+        "register": "ngt ålderdomlig, positiv, allmän ; ngt ålderdomlig, positiv, allmän",
+        "synonymer": [
+          "artig",
+          "utmärkt"
+        ],
+        "synonym_groups": [
+          [
+            "artig"
+          ],
+          [
+            "utmärkt"
+          ]
+        ],
+        "exempelmening": "Han bugade <font color=\"#3498db\">galant</font> och bjöd upp henne till dans.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624362,
+      "ord": "inflation",
+      "facit": "allmän prishöjning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att priserna stiger allmänt och pengarna blir mindre värda ; att något förekommer så ofta att det tappar värde",
+        "register": "fackspråklig, neutral, ekonomi ; neutral, lätt negativ, allmän",
+        "synonymer": [
+          "allmän prisstegring",
+          "penningvärdesförsämring",
+          "≈≈ urvattning"
+        ],
+        "synonym_groups": [
+          [
+            "allmän prisstegring",
+            "penningvärdesförsämring"
+          ],
+          [
+            "≈≈ urvattning"
+          ]
+        ],
+        "exempelmening": "Hög <font color=\"#3498db\">inflation</font> gör att sparade pengar tappar värde.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624097,
+      "ord": "journal",
+      "facit": "anteckningar, ex om patient",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Löpande anteckningar om ett förlopp ; en tidskrift",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "dagbok",
+          "liggare",
+          "tidskrift"
+        ],
+        "synonym_groups": [
+          [
+            "dagbok",
+            "liggare"
+          ],
+          [
+            "tidskrift"
+          ]
+        ],
+        "exempelmening": "Sjuksköterskan förde noggrann <font color=\"#3498db\">journal</font> över patientens tillstånd varje timme.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626613,
+      "ord": "layout",
+      "facit": "grafisk komposition",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hur text och bilder placeras ut på en sida",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ grafisk formgivning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Formgivaren la ner veckor på tidningens <font color=\"#3498db\">layout</font> innan tryckningen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627136,
+      "ord": "metabolism",
+      "facit": "ämnesomsättning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Alla kemiska processer som håller kroppen igång",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "ämnesomsättning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En hög <font color=\"#3498db\">metabolism</font> gör att kroppen förbränner kalorier snabbt.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628473,
+      "ord": "stigbygel",
+      "facit": "fotstöd;&nbsp; hörselben<br><a href=\"https://commons.wikimedia.org/wiki/File:Uhlans8SK581.JPG\"><img src=\"250px-uhlans8sk581.webp\"></a><br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Finfoomdjur.se%2FSvar%2FHorsel.html&amp;psig=AOvVaw1-Vylj0rXKC17cDcBDeYLJ&amp;ust=1757111719880000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBUQjRxqFwoTCJDj8bCVwI8DFQAAAAAdAAAAABAL\"><img alt=\"Öron, hörsel och balanssinne: människan och andra däggdjur - Info om djur\" src=\"stigbygeln.webp\"></a>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Metallbygel för foten på en sadel ; det minsta hörselbenet i mellanörat",
+        "register": "neutral, neutral, allmän ; fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ fotstöd",
+          "≈≈ hörselben"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ fotstöd"
+          ],
+          [
+            "≈≈ hörselben"
+          ]
+        ],
+        "exempelmening": "Hon satte foten i <font color=\"#3498db\">stigbygeln</font> och svingade sig upp på hästen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626369,
+      "ord": "subordinera",
+      "facit": "underordna",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Underordna något eller någon",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "underordna"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kolonialmakten <font color=\"#3498db\">subordinerade</font> den lokala kulturen under sin egen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625485,
+      "ord": "turbin",
+      "facit": "maskin som alstrar energi<br><a href=\"https://www.google.com/imgres?q=turbin&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F79%2FDampfturbine_Montage01.jpg%2F640px-Dampfturbine_Montage01.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FTurbin&amp;docid=XHODTda0N1s_0M&amp;tbnid=TRqwnWyWy4hbmM&amp;vet=12ahUKEwiYpKn2p7qLAxVVU1UIHfxxANUQM3oECBwQAA..i&amp;w=640&amp;h=765&amp;hcb=2&amp;ved=2ahUKEwiYpKn2p7qLAxVVU1UIHfxxANUQM3oECBwQAA\"><div><div><div><img alt=\"Turbin – Wikipedia\" src=\"paste-d9a63a709d1fd553bbc89db3279150262484cf82.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Maskin som gör strömmande vatten eller gas till rotation",
+        "register": "neutral, neutral, teknik",
+        "synonymer": [
+          "≈≈ kraftmaskin"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ingenjörerna fick trimma <font color=\"#3498db\">turbinerna</font> i kraftverket för att öka effekten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

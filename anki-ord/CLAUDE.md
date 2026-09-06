@@ -4768,3 +4768,211 @@ exempelmeningen, som nu står i nekande form.
 De sex `betydelse_kan_saknas` kontrollerades mot råstrukturen och var alla
 falsklarm: utvidgningar utan egen definition, plus fuzzy-lemman (`all`, `alle`
 för allé).
+
+
+## 🔴 2026-09-06 (natt): "utvidgning utan egen definition" var fel kriterium — SO lägger betydelsen i `typ`
+
+Sats 4 och 5 på spår B (`--ko repetition --ordning mognad`, Adams regel från
+2026-08-30 om att börja i det han redan kan). Utfallet står nedan, men det som
+gör kvällen värd att läsa är ett metodfel i min egen kontroll.
+
+### Felet
+
+`forgranska.py`s hårda `betydelse_kan_saknas` slog till 15 gånger över de två
+satserna. Jag kontrollerade var och en mot SO:s råstruktur — som regeln från
+batch 5 (2026-08-25) kräver — och avfärdade dem enligt en tumregel jag själv
+formulerade:
+
+> en underbetydelse räknas som verklig bara om fältet `definition` är ifyllt;
+> annars är den en *utvidgning* och tillför ingen betydelse.
+
+**Det kriteriet är fel.** SO lägger ofta betydelsen i fältet **`typ`**, med
+exempel i `syntex`, och lämnar `definition` tomt. Ett sådant fält ser ut som en
+tom utvidgning i varje verktyg som bara läser `definition` — och det gjorde
+både `visa_uppslag.py` och kontrollskriptet jag skrev i kväll.
+
+Blindgranskaren fångade det på `donera`:
+
+```
+typ    = "äv. allmännare, särsk. i medicinska sammanhang"
+syntex = ["donera blod", "donera organ"]
+```
+
+Kortet sa *"Ge bort något **större** till ett gott ändamål"* — en formulering som
+uttryckligen **utesluter** blod- och organdonation, alltså sannolikt ordets
+vanligaste moderna användning.
+
+### Vad omprövningen gav
+
+Efter domen dumpades **samtliga fält** i varje definitionslös underbetydelse för
+de 18 ord jag undantagit. **Fem av dem bar verkligt innehåll:**
+
+| Kort | `typ` | Betydelsen som saknades |
+|---|---|---|
+| `donera` | äv. allmännare, särsk. i medicinska sammanhang | donera blod, donera organ |
+| `gillra` | äv. bildligt i fråga om ostadigt arrangemang | rigga upp något vingligt |
+| `banal` | ibland med bibetydelse av lindrighet | "en banal förkylning" = ofarlig, **och valören vänder från negativ till neutral** |
+| `crescendo` | äv. bildligt | applåder som stiger till ett crescendo |
+| `geografi` | äv. om andra företeelsers utseende och struktur | "blodådrornas geografi" |
+
+De övriga tretton var äkta utvidgningar: samma betydelse i annan konstruktion
+(`vimla`: *"det vimlar av"*), samma betydelse med annat objekt (`gillra`s
+FÖRSTA utvidgning — en fälla för en spion är fortfarande en fälla), eller
+sammansättningsbruk (`turbin` → gasturbin).
+
+🎯 **Rätt kriterium är alltså inte "har `definition` innehåll?" utan "namnger
+`typ` en annan användning än huvudbetydelsen?"** — och det går inte att avgöra
+utan att läsa `typ` och `syntex`.
+
+**Fyra av de fem korten var redan släppta som full v3.** Verifieringen drogs
+tillbaka på alla fyra innan de skrevs om: `verdikt`s egen färskhetsspärr säger
+att *"ett verdikt är knutet till det innehåll som granskades, inte till kortets
+id"*, och den principen gäller lika mycket när kortskrivaren ändrar innehållet
+i efterhand som när en annan batch gör det.
+
+### Felklassen är projektets egen, för tredje gången i dag
+
+- `start.py` §7 pekade på fel katalog och rapporterade *"mappen finns inte"*.
+- `_las_json` kastade `NameError` som arkiveringens `except Exception` svalde.
+- Och nu: en kontroll som läste **fel fält** och därför konsekvent svarade
+  "ingen betydelse saknas".
+
+Alla tre svarade *något* — bara inte på frågan de skulle svara på. **Ett
+mätvärde som ser giltigt ut men mäter fel sak** är svårare att upptäcka än ett
+som fallerar.
+
+⚠️ **Att göra:** `visa_uppslag.py` skriver ut underbetydelser som
+*"(ingen egen definition -- utvidgning)"*. Den formuleringen är aktivt
+vilseledande — den påstår att posten är tom när den kan bära hela betydelsen.
+Den bör skriva ut `typ` och `syntex` i stället.
+
+### Utfall
+
+| Sats | Kort | Godkända | Underkänt | Kostnad |
+|---|---|---|---|---|
+| 4 (mogna, 23 av 25 prio-märkta) | 25 | 24 | 4 % (`deja vu`) | 0,76 USD |
+| 5 (mogna) | 25 | 24 | 4 % (`donera`) | 0,62 USD |
+
+`deja vu` underkändes på ett **begreppsfel**, inte ett språkligt: fenomenet
+kräver att situationen objektivt är **ny**. Kortets exempelmening (*"när hon
+återvände till sitt gamla klassrum"*) beskriver vanlig igenkänning — hon HADE
+varit där. Det var inte en svag illustration utan ett motexempel. SO:s
+formulering *"något som man aldrig varit med om tidigare"* fanns inte på kortet
+alls; den står nu i huvudbetydelsen, inte bara i exemplet.
+
+🎯 **Lärdomen där:** jag lämnade både definition och exempel orörda för att de
+"stämde med SAOL". SAOL:s korta glosa rymde inte det avgörande villkoret; SO:s
+gjorde det. **Att en källa inte säger emot är inte samma sak som att den
+bekräftar.**
+
+### Övriga fynd i innehållet
+
+- **kollaps** saknade SAOL:s andra semikolonled, *"spec. hopfallande av lunga"* —
+  en egen fackterm, inte en nyans.
+- **epidemisk** definierade i praktiken *smittsam*: SO utgår från förhållandet
+  till epidemier, inte från spridningshastighet. Saknade dessutom
+  underbetydelsen *"okontrollerad"*.
+- **totem**: SO beskriver väsendet, SAOL *avbildningen*. Kortet hade bara det
+  första; OLD-facit sa "kultföremål" och pekade rakt på luckan.
+- **bärkraft**s andra betydelse var enbart ekonomisk, men SO:s underbetydelse är
+  *"hållbarhet inför granskning"* — att ett resonemang håller när det prövas.
+- **diskotek** bar `ngt ålderdomlig` på **båda** betydelserna fast SO markerar
+  bara skivsamlingen. En bruklighetsmärkning som sprids till fel betydelse gör
+  kortet fel om hur ordet används.
+- **galant** tappade definitionstillägget *"och vanligen äv. flörtig"* — det är
+  flörtigheten som skiljer galant från artig — och bar `arkaisk` (= ur bruk) där
+  SO säger *"något ålderdomligt"*. Samma fel som `binokel`.
+- **fiktiv** tappade SO:s tillägg *"men tänks vara det"*, som är hela poängen;
+  kortets egen exempelmening (Strindbergs påhittade intervju) illustrerade
+  redan nyansen definitionen saknade.
+- **binokel** förklarade ordet med sin egen synonym (*"Pincené, glasögon för
+  närseende"*) — och "närseende" var fel: en pincené är en **konstruktion**,
+  glasögon utan skalmar som nyps fast på näsan.
+
+Ett dussin synonymrader var upprepningar av kortets egen definition
+(`läran om läkemedel`, `vetenskapen om jordytan`, `travtävling`), och `tjära`
+hade `bestryka med tjära` — uppslagsordet i sin egen synonymrad.
+
+**Tre av mina egna fel fångades av spärrarna:** påhittade domäner
+(`statsvetenskap`, `arkitektur`, `teater` finns inte i `REGISTER_DOMAN`), en
+bruksanmärkning skriven som ett eget betydelseled på `rött öre`, och synonymer
+hämtade ur **OLD-facit** för `utfärda` — OLD är facit för betydelser, aldrig
+belägg för synonymi.
+
+### Ett falsklarm värt att känna igen
+
+`kvittens` visade ett andra SAOL-lemma med definitionen *"frukt av en växt"*.
+Råstrukturen visar att det lemmat heter **`kvitten`** — busken med päronlika
+frukter — och är en fuzzy-träff. Hade den lagts till som andra betydelse vore
+det komponentkontamineringen från 2026-09-04, fast på ett enstaka ord i stället
+för en fras.
+
+### Sats 6 — första satsen skriven med det rättade verktyget
+
+`visa_uppslag.py` rättades mellan sats 5 och 6 (se ovan). Skillnaden syntes
+direkt: **sex av 23 kort saknade en betydelse**, mot ett eller två i tidigare
+satser, och ett hade rentav fel huvudbetydelse.
+
+- 🔴 **prisma** hade BARA utvidgningen. SO leder med den geometriska kroppen
+  (*"parallella, kongruenta basytor"*) och har den ljusbrytande som
+  `typ`-utvidgning. Kortet beskrev följden utan grunden — ett prisma bryter
+  ljus *därför att* det har den formen.
+- **reträtt** saknade SAOL:s andra lemma, *"samling för meditation i
+  avskildhet"* — i dag ordets vanligaste vardagsbetydelse.
+- **optik** saknade underbetydelsen *"ljusverkan"*.
+- **succession** saknade den juridiska betydelsen (träda in i någons
+  rättsförhållanden vid arv).
+- **sympati** hade ett led som blandade ihop SO:s två: uppskattning av en
+  *person* mot välvillig förståelse för en *sak*.
+- **permanent** saknade *"permanentat hår"* — resultatet, inte behandlingen.
+- **adjutant** gjorde två inskränkningar SO inte gör (*"oftast själv officer"*,
+  och chefen kan vara en kunglighet), och hade `officer` som synonym — en
+  överordnad term, samma hyperonymfel som farsot/pandemi i batch 2.
+
+## 🔴 Mönstret bakom nästan alla mina underkännanden: jag ERSÄTTER i stället för att LÄGGA TILL
+
+Åtta kort underkändes över sats 3–6. **Nästan alla gällde kort jag själv hade
+skrivit om**, och tre av dem hade exakt samma form:
+
+| Kort | Vad jag gjorde |
+|---|---|
+| `huttla med något` | Upptäckte att legacy hade SO:s betydelse 1 när uppslagsordet kräver betydelse 2 — och **bytte**. Halva felet löst, andra halvan skapad. |
+| `geografi` | **Ersatte** legacys terrängbetydelse med SO:s rumsliga struktur. Båda behövdes. |
+| `sympati` | Legacy sa *"varm förståelse OCH MEDKÄNSLA"*. När jag delade upp kortet i SO:s två betydelser skrev jag den första som *"varm uppskattning"* och **tog bort medkänslan**. |
+
+Och två till av samma familj: `gillra` och `hålla fanan högt`, där jag skrev en
+definition som var **smalare** än ordbokens (fälla *för djur*, kämpa *trots
+motgång*) och därmed stängde ute den vanligaste användningen.
+
+🎯 **Regeln som följer, och den är kontraintuitiv:** när ett kort visar sig ha
+*fel* betydelse är första impulsen att byta ut den. Den impulsen är fel i de
+flesta fall. **Ordböcker lägger till betydelser, de ersätter dem sällan** — och
+legacy-innehållet är oftare ofullständigt än felaktigt. Fyra av fem
+underkännanden i sats 4–6 gällde kort som var för SMALA; inget gällde ett kort
+som var för brett.
+
+## Belägg är ett golv, inte ett tak — `aktuell` visade gränsen
+
+`aktuell` underkändes på synonymen `giltig`. Ordet **inleder** SAOL:s definition
+(*"giltig el. av intresse just nu"*) och var därmed mekaniskt belagt enligt
+synonymspärrens inleder-krav. Men SAOL glossar två olika saker i samma rad, och
+bara den andra svarar mot kortets betydelse: *giltig* betyder gällande, inte
+uppmärksammad.
+
+Samma gräns som `gruva sig` visade 2026-08-24, där SAOL:s kommalista
+(*"oroa sig, ängslas"*) gav ett mekaniskt godkänt men icke utbytbart ord.
+**Inleder-regeln bevisar att ordet STÅR i ordboken, inte att det är utbytbart
+mot den betydelse kortet beskriver.**
+
+## Utfall sats 6
+
+| | |
+|---|---|
+| Kort | 23 (+ 2 omskrivna invikta) |
+| Godkända | 23 av 25 (8 % underkänt) |
+| Kostnad | 0,71 USD |
+
+**Kvällens totalsumma: full v3 2 657 → 2 763 (+106).** Spår B:s repetitionspool
+2 060 kvar. Två kort (`aktuell`, `sympati`) är omskrivna och väntar på en färsk
+granskning i nästa sats — de körs inte ensamma, eftersom ett `claude -p`-anrop
+drar ~25 000 tokens bara i uppstart.

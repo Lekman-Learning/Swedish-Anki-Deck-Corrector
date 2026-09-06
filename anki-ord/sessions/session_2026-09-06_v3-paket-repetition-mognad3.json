@@ -1,0 +1,686 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080627007,
+      "ord": "adjutant",
+      "facit": "biträde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Person som hjälper en militär chef eller en kunglighet med det praktiska",
+        "register": "formell, neutral, militär",
+        "synonymer": [
+          "≈≈ närmaste medhjälpare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Adjutanten</font> följde generalen på alla hans resor och skötte den dagliga planeringen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse ('person med uppgift att bistå militär chef, kunglig person e.d. i praktiska ting'), som kortet återger korrekt. Register militär/formell stämmer. '≈≈ närmaste medhjälpare' är en kategori och kräver ingen egen källa. Exempelmeningen är saklig och ordet är highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624365,
+      "ord": "aktuell",
+      "facit": "intressant, viktig, angelägen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som drar till sig uppmärksamhet här och nu ; Som finns i tankarna för tillfället ; Som planeras för närvarande",
+        "register": "neutral, neutral, allmän ; neutral, neutral, allmän ; neutral, neutral, allmän",
+        "synonymer": [
+          "giltig",
+          "≈≈ närvarande i medvetandet",
+          "≈≈ planerad"
+        ],
+        "synonym_groups": [
+          [
+            "giltig"
+          ],
+          [
+            "≈≈ närvarande i medvetandet"
+          ],
+          [
+            "≈≈ planerad"
+          ]
+        ],
+        "exempelmening": "Klimatfrågan är mer <font color=\"#3498db\">aktuell</font> än någonsin i årets valrörelse.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "De tre betydelserna motsvarar SO:s tre, men den otecknade (utbytbara) synonymen 'giltig' för betydelse 1 ('drar till sig uppmärksamhet här och nu') är sakligt fel — 'giltig' betyder gällande/valid, inte uppmärksammad, och SO ger inget stöd. Betydelse 1 saknar därmed en korrekt synonym; borde vara t.ex. '≈ angelägen' eller 'brännande'.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626160,
+      "ord": "autism",
+      "facit": "självförsjunkenhet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Funktionsnedsättning som bland annat gör socialt samspel svårt",
+        "register": "neutral, neutral, medicin",
+        "synonymer": [
+          "≈≈ funktionsnedsättning"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Autism</font> påverkar hur hjärnan hanterar social information.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse som kortet återger väl ('funktionsnedsättning som bl.a. innebär problem med social förmåga'). '≈≈ funktionsnedsättning' är rätt kategori. Exempelmeningen är nästan identisk med SO:s egen och ordet är highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080627552,
+      "ord": "grädda",
+      "facit": "baka; crème-de-la-crème",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tillaga i ugn eller stekpanna så ytan bryns ; Det finaste skiktet i samhället ; Om mjölk: sätta grädde på ytan",
+        "register": "neutral, neutral, matlagning ; vardaglig, neutral, allmän ; dialektal, neutral, allmän",
+        "synonymer": [
+          "≈≈ baka",
+          "elit",
+          "≈≈ skikta sig"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ baka"
+          ],
+          [
+            "elit"
+          ],
+          [
+            "≈≈ skikta sig"
+          ]
+        ],
+        "exempelmening": "Varje söndag brukade pappa <font color=\"#3498db\">grädda</font> pannkakor till hela familjen.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Alla tre betydelserna finns i SAOL (bereda i ugn/stekpanna; elit/översta skiktet; dialektalt 'avsätta grädde el. ishinna på ytan'). Kortet leder med den vanligaste. 'elit' stöds av ordboken (SO/SAOL, crème-de-la-crème). Separatorer och exempel ('grädda pannkakor') korrekta.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625460,
+      "ord": "kibbutz",
+      "facit": "(isr.) kollektivt jordbruk<br><img src=\"paste-5823f8c3616bc645c7c93cf0d4aa707d41d963c7.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Israelisk gård där en grupp bor och arbetar tillsammans",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ jordbrukskollektiv"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Flera nya <font color=\"#3498db\">kibbutzer</font> anlades i gränstrakterna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "En betydelse i SO ('israeliskt kollektivjordbruk baserat på kooperativa idéer'), som kortet återger. Exempelmeningen är i princip SO:s egen. '≈≈ jordbrukskollektiv' är rätt kategori och ordet är highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624526,
+      "ord": "limit",
+      "facit": "tillåtet gränsvärde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Övre eller undre gräns man måste hålla sig inom ; i poker: bestämd gräns för hur mycket man får satsa",
+        "register": "neutral, neutral, ekonomi ; fackspråklig, neutral, sport",
+        "synonymer": [
+          "≈≈ tak",
+          "≈≈ insatstak"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ tak"
+          ],
+          [
+            "≈≈ insatstak"
+          ]
+        ],
+        "exempelmening": "Banken höjde hans <font color=\"#3498db\">limit</font> på kreditkortet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har just de två betydelserna: övre/undre tillåten gräns (särsk. ekonomi) och pokertermen. Exempelmeningen ('banken höjde hans limit på kreditkortet') är SO:s egen och highlightad. ≈≈-synonymerna är rimliga kategorier; register 'sport' för poker är en petitess.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626917,
+      "ord": "mixtur",
+      "facit": "läkemedelsblandning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läkemedel i flytande form ; en blandstämma på en orgel",
+        "register": "fackspråklig, neutral, medicin ; fackspråklig, neutral, musik",
+        "synonymer": [
+          "≈≈ medicinblandning",
+          "≈≈ orgelstämma"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ medicinblandning"
+          ],
+          [
+            "≈≈ orgelstämma"
+          ]
+        ],
+        "exempelmening": "Barnet fick medicinen som <font color=\"#3498db\">mixtur</font> i stället för tablett.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s båda betydelser finns med (flytande läkemedel; blandstämma på orgel), rätt separerade med ' ; ' och med rätt fackregister. ≈≈-kategorierna stämmer. Exemplet illustrerar huvudbetydelsen och speglar SO:s eget exempel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625491,
+      "ord": "plektrum",
+      "facit": "sak för gitarrknäppning<br><a href=\"https://www.google.com/imgres?q=plectrum&amp;imgurl=http%3A%2F%2Fwww.ellieellie.co.uk%2Fcdn%2Fshop%2Fproducts%2Foriginal_personalised-name-guitar-plectrum-pick.jpg%3Fv%3D1620888037&amp;imgrefurl=https%3A%2F%2Fwww.ellieellie.co.uk%2Fproducts%2Fpersonalised-name-guitar-plectrum-pick&amp;docid=pp0kjZhGh06cGM&amp;tbnid=ahRQQQoxZ1dWMM&amp;vet=12ahUKEwij-9SVzoiNAxWaLBAIHaRjLScQM3oFCIgBEAA..i&amp;w=1024&amp;h=1024&amp;hcb=2&amp;ved=2ahUKEwij-9SVzoiNAxWaLBAIHaRjLScQM3oFCIgBEAA\"><div><div><div><img alt=\"Personalised Name Guitar Plectrum ...\" src=\"paste-9cea06a4f2f8de9804d64f148d966554cb018d5f.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten tunn skiva som man knäpper strängarna med",
+        "register": "neutral, neutral, musik",
+        "synonymer": [
+          "≈≈ knäppbricka"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Gitarristen tappade sitt <font color=\"#3498db\">plektrum</font> mitt i solot men fortsatte spela med fingrarna.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "En betydelse i SO ('liten, tunn skiva som strängarna knäpps med'), korrekt återgiven. '≈≈ knäppbricka' är en godtagbar, transparent kategori. Exempelmeningen är saklig och ordet är highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624430,
+      "ord": "amfibie",
+      "facit": "land- och vattendjur",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Djur som lever både på land och i vatten ; farkost som går både på land och i vatten",
+        "register": "neutral, neutral, biologi ; neutral, neutral, teknik",
+        "synonymer": [
+          "≈≈ groddjur",
+          "≈≈ land- och sjögående farkost"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ groddjur"
+          ],
+          [
+            "≈≈ land- och sjögående farkost"
+          ]
+        ],
+        "exempelmening": "Jättesalamandern är en av världens största <font color=\"#3498db\">amfibier</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser (djur som lever på land och i vatten; farkost för land och sjö) finns med, rätt separerade. Exempelmeningen är sakligt riktig (jättesalamandern hör till världens största groddjur). ≈≈-kategorierna stämmer.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080629061,
+      "ord": "astronomisk",
+      "facit": "väldigt stor",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som hör till astronomin ; ofattbart stor",
+        "register": "fackspråklig, neutral, fysik ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ stjärnkunskaps-",
+          "mycket stor"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ stjärnkunskaps-"
+          ],
+          [
+            "mycket stor"
+          ]
+        ],
+        "exempelmening": "Priserna på bostäder i innerstaden hade nått <font color=\"#3498db\">astronomiska</font> nivåer.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s två betydelser finns med (som rör astronomi; bildligt 'mycket stor'); 'mycket stor' är SO:s egen definitionsordalydelse och därmed belagd. Exemplet illustrerar den bildliga betydelsen. '≈≈ stjärnkunskaps-' är klumpig men inte sakligt fel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628059,
+      "ord": "belysning",
+      "facit": "ljus, dager;&nbsp; &nbsp;förklaring, synsätt",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 3 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Ljus från lampor i stället för från dagen ; Själva lamporna ; Det att göra ett sammanhang tydligt",
+        "register": "neutral, neutral, allmän ; vardaglig, neutral, allmän ; formell, neutral, allmän",
+        "synonymer": [
+          "≈≈ ljusförhållanden",
+          "≈≈ armatur",
+          "≈≈ klarläggande"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ ljusförhållanden"
+          ],
+          [
+            "≈≈ armatur"
+          ],
+          [
+            "≈≈ klarläggande"
+          ]
+        ],
+        "exempelmening": "Den svaga <font color=\"#3498db\">belysningen</font> i källaren gjorde det svårt att läsa.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal utredd: facit ('ljus, dager; förklaring, synsätt') anger två betydelser uttryckta som synonympar, inte fyra. Kortet täcker SO:s båda betydelser (artificiella ljusförhållanden; åskådligt klarläggande) plus delbetydelsen 'själva lamporna'. Ingen betydelse saknas. Exemplet ('svag belysning') är SO:s eget.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625204,
+      "ord": "deportera",
+      "facit": "förvisa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tvinga bort någon till en avlägsen plats, ofta en fånge eller oliktänkande",
+        "register": "formell, negativ, juridik",
+        "synonymer": [
+          "≈≈ förvisa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På 1800-talet <font color=\"#3498db\">deporterade</font> England förbrytare till Australien.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "En betydelse i SO ('tvångsmässigt förflytta brottsling eller politiskt misshaglig person till avlägsen plats'), exakt återgiven med rätt register. Exempelmeningen är SO:s egen. 'förvisa' (som SO själv anger som synonym) är försiktigt satt på ≈≈-nivå men inte fel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625130,
+      "ord": "exceptionell",
+      "facit": "ytterst ovanlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som är ett tydligt undantag från det vanliga, på gott eller ont",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "högst ovanlig",
+          "undantagsvis förekommande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon var en <font color=\"#3498db\">exceptionell</font> begåvning redan som barn.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse ('som utgör ett undantag på positivt el. negativt sätt'), väl återgiven inklusive valören 'på gott eller ont'. Synonymerna betyder 'mycket ovanlig', vilket ligger i linje med SO (besl. ord 'sällsynt') och facit ('ytterst ovanlig'). 'undantagsvis förekommande' är en klumpig formulering men inte sakligt fel.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624340,
+      "ord": "irreparabel",
+      "facit": "obotlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Omöjlig att laga eller ersätta",
+        "register": "formell, negativ, allmän",
+        "synonymer": [
+          "obotlig",
+          "ohjälplig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bilkrocken orsakade <font color=\"#3498db\">irreparabla</font> skador på motorn.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse ('omöjlig att reparera eller ersätta'), återgiven nästan ordagrant. 'obotlig' är en etablerad motsvarighet (även facit). 'ohjälplig' är svagare och inte fullt utbytbar med 'skador', men huvudsynonymen bär betydelsen och exemplet är korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080624868,
+      "ord": "optik",
+      "facit": "läran om ljuset",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Läran om hur ljuset beter sig ; Linssystemet i ett instrument ; Själva ljusverkan",
+        "register": "fackspråklig, neutral, fysik ; fackspråklig, neutral, teknik ; fackspråklig, neutral, fysik",
+        "synonymer": [
+          "≈≈ ljuslära",
+          "≈≈ linssystem",
+          "≈≈ ljusverkan"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ ljuslära"
+          ],
+          [
+            "≈≈ linssystem"
+          ],
+          [
+            "≈≈ ljusverkan"
+          ]
+        ],
+        "exempelmening": "Astronomen fick finjustera teleskopets <font color=\"#3498db\">optik</font> för att få en skarp bild av planeten.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kortet täcker SO:s båda betydelser (läran om ljuset – där SO även nämner 'ljusverkan'; samt linssystemet i ett instrument) och delar upp den första i två. Ingen betydelse saknas. ≈≈-kategorierna stämmer. Exemplet är SO:s eget för linssystem-betydelsen.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080627468,
+      "ord": "permanent",
+      "facit": "beständig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Gjord för att bestå ; Behandling som gör håret lockigt länge ; Själva det lockade håret",
+        "register": "neutral, neutral, allmän ; vardaglig, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "beständig",
+          "varaktig",
+          "≈≈ hårbehandling",
+          "≈≈ lockigt hår"
+        ],
+        "synonym_groups": [
+          [
+            "beständig",
+            "varaktig"
+          ],
+          [
+            "≈≈ hårbehandling"
+          ],
+          [
+            "≈≈ lockigt hår"
+          ]
+        ],
+        "exempelmening": "Efter flera års pendlande skaffade familjen sig äntligen en <font color=\"#3498db\">permanent</font> bostad.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Adjektivbetydelsen (beständig) och substantivbetydelsen (hårbehandling) finns med; 'beständig'/'varaktig' anges av SO själv som synonymer. Den tredje betydelsen (själva det lockiga håret) är vardaglig men förekommer och tillför inget fel. Exemplet illustrerar huvudbetydelsen.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625233,
+      "ord": "prisma",
+      "facit": "ljusbrytande glas",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kropp med två likadana parallella ändytor och raka sidor ; sådan kropp i glas, som bryter ljuset",
+        "register": "fackspråklig, neutral, matematik ; fackspråklig, neutral, fysik",
+        "synonymer": [
+          "≈≈ geometrisk kropp",
+          "≈≈ ljusbrytare"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ geometrisk kropp"
+          ],
+          [
+            "≈≈ ljusbrytare"
+          ]
+        ],
+        "exempelmening": "Spektroskopet använde ett <font color=\"#3498db\">prisma</font> för att dela upp ljuset i färger.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SAOL ger båda betydelserna (geometrisk kropp med parallella kongruenta basytor; ljusbrytande kropp av den formen). Genus 'ett prisma' är tillåtet (SAOL anger både en/ett). Exemplet är sakligt korrekt (prisma delar upp ljus i färger) och highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628683,
+      "ord": "pörte",
+      "facit": "finsk stuga med röklucka ist. f. skorsten<br><img alt=\"webp image\" src=\"paste_1760051632355.webp\"><br><img alt=\"webp image\" src=\"paste_1760051638114.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Stuga med eldstad och bara en röklucka i taket, utan skorsten",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "≈≈ rökstuga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ett gammalt <font color=\"#3498db\">pörte</font> stod kvar djupt inne i finnmarken.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse ('hus utan skorsten men med eldstad och röklucka'), som kortet återger väl. Exempelmeningen ligger nära SO:s egen ('ett gammalt pörte i finnmarken'). '≈≈ rökstuga' är rätt. Register 'ålderdomlig' rimligt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626810,
+      "ord": "ravin",
+      "facit": "brant bergsklyfta",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Djup och smal sänka med branta väggar, ofta med vatten i botten",
+        "register": "neutral, neutral, geologi",
+        "synonymer": [
+          "klyfta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vandrarna klättrade försiktigt ner i den uttorkade <font color=\"#3498db\">ravinen</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s definition ('djup, smal sänka med branta väggar, ofta med vattenflöde i botten') återges nästan ordagrant; en betydelse. 'klyfta' som otecknad synonym är ett gränsfall — SO har den bara bland besläktade ord — men betydelsen ligger nära och vilseleder inte. Exempel korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080626076,
+      "ord": "reträtt",
+      "facit": "återtåg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att dra sig tillbaka från strid eller från det man tyckt ; Plats dit man drar sig undan ; Några dagar i avskildhet för meditation",
+        "register": "formell, neutral, allmän ; neutral, neutral, allmän ; neutral, neutral, religion",
+        "synonymer": [
+          "återtåg",
+          "tillflyktsort",
+          "≈≈ meditationsvistelse"
+        ],
+        "synonym_groups": [
+          [
+            "återtåg"
+          ],
+          [
+            "tillflyktsort"
+          ],
+          [
+            "≈≈ meditationsvistelse"
+          ]
+        ],
+        "exempelmening": "Efter det oväntade bakhållet tvingades trupperna slå till <font color=\"#3498db\">reträtt</font>.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kortet täcker SO:s betydelser: militärt/bildligt tillbakadragande (med 'återtåg', som SO själv anger), tillflyktsort samt reträtt i religiös mening. Leder med den vanligaste. Exemplet ('slå till reträtt' efter bakhåll) följer SO:s eget uttryck.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625408,
+      "ord": "succession",
+      "facit": "efterträdande; följd",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ordningen för vem som tar över efter någon ; Obruten rad av något efter varandra ; Att ta över någon annans rättigheter och skyldigheter",
+        "register": "formell, neutral, allmän ; formell, neutral, allmän ; fackspråklig, neutral, juridik",
+        "synonymer": [
+          "efterträdande",
+          "tronföljd",
+          "följd",
+          "≈≈ rättsövergång"
+        ],
+        "synonym_groups": [
+          [
+            "efterträdande",
+            "tronföljd"
+          ],
+          [
+            "följd"
+          ],
+          [
+            "≈≈ rättsövergång"
+          ]
+        ],
+        "exempelmening": "Kunglig <font color=\"#3498db\">succession</font> reglerar vem som blir nästa monark.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kortet täcker efterträdandet/tronföljden, den obrutna följden (facit: 'följd') och den juridiska rättsövergången (SO:s specialbetydelse 'träda in i annans rättsförhållanden'). 'efterträdande'/'tronföljd' anges av SO. Exemplet illustrerar huvudbetydelsen.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625523,
+      "ord": "sympati",
+      "facit": "medkänsla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Varm uppskattning av någon ; välvillig förståelse och stöd för en sak",
+        "register": "neutral, positiv, allmän ; neutral, positiv, allmän",
+        "synonymer": [
+          "tillgivenhet",
+          "gillande",
+          "välvillig förståelse"
+        ],
+        "synonym_groups": [
+          [
+            "tillgivenhet",
+            "gillande"
+          ],
+          [
+            "välvillig förståelse"
+          ]
+        ],
+        "exempelmening": "Hans ärliga berättelse väckte <font color=\"#3498db\">sympati</font> hos hela publiken.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Betydelse 1 ('Varm uppskattning av någon') är för snäv. SO:s första betydelse rymmer även medkänsla/medlidande med någon som har det svårt (SO:s exempel 'en våg av sympati gentemot jordbävningsoffren'; facit glossar hela ordet som 'medkänsla'). Kortets två betydelser plus synonymerna 'tillgivenhet, gillande' fångar bara gillande/stöd. Betydelsen 'medkänsla' saknas och bör läggas till.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628047,
+      "ord": "utvikning",
+      "facit": "vika ut sig, visa sig (oft.) naken;&nbsp; &nbsp;avvikelse från ämnet, digression",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Det att vika ut sig naken i en tidning ; avstickare från det man egentligen talar om",
+        "register": "vardaglig, neutral, allmän ; formell, neutral, allmän",
+        "synonymer": [
+          "≈≈ nakenbild",
+          "avvikelse"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ nakenbild"
+          ],
+          [
+            "avvikelse"
+          ]
+        ],
+        "exempelmening": "Efter en lång <font color=\"#3498db\">utvikning</font> återgick han till föreläsningens ämne.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Facit_signal utredd: facit ('vika ut sig, visa sig naken; avvikelse från ämnet, digression') är två betydelser skrivna som synonympar, inte fyra. Kortet har SO:s båda betydelser (nakenutvikning; avstickare från ämnet). Exempelmeningen är nästan SO:s egen och ordet är highlightat.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080628575,
+      "ord": "gillra",
+      "facit": "sätta upp djurfälla<br><a href=\"https://www.google.com/imgres?q=gillra&amp;imgurl=https%3A%2F%2Fmedia.sporthalsa.se%2Fuploads%2Fsites%2F29%2F2019%2F01%2Ff%25C3%25A4lla.jpg&amp;imgrefurl=https%3A%2F%2Fmaria.sporthalsa.se%2F2019%2F01%2F06%2Fgillra-fallor%2F&amp;docid=qInNGXCh7Jb4pM&amp;tbnid=s7Q94o6SubC4dM&amp;vet=12ahUKEwi0ptfm-sKPAxVWHBAIHRkUDwUQM3oECCAQAA..i&amp;w=275&amp;h=183&amp;hcb=2&amp;ved=2ahUKEwi0ptfm-sKPAxVWHBAIHRkUDwUQM3oECCAQAA\"><div><div><div><img alt=\"Gillra fällor - Dubbelt Så Stark! - En ...\" src=\"paste-8be824d29f39560c6a184faca14dc12f2bac2b4f.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sätta upp en fälla, för djur eller för en person ; rigga upp något ostadigt",
+        "register": "neutral, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ förbereda en fälla",
+          "≈≈ rigga upp"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ förbereda en fälla"
+          ],
+          [
+            "≈≈ rigga upp"
+          ]
+        ],
+        "exempelmening": "Polisen <font color=\"#3498db\">gillrade</font> en fälla för langaren.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s innehåll täcks: sätta upp fälla (för djur, bildligt även för person) samt 'rigga upp något ostadigt'. Leder med den vanligaste. Exemplet ('gillrade en fälla för langaren') följer SO:s eget mönster och är grammatiskt korrekt.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    },
+    {
+      "noteId": 1780080625623,
+      "ord": "geografi",
+      "facit": "jordytslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vetenskapen om jordytan och hur människor använder den ; Någots utseende och rumsliga struktur ; Vardagligt: den omgivande terrängen",
+        "register": "neutral, neutral, allmän ; formell, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ jordytelära",
+          "≈≈ rumslig struktur",
+          "≈≈ terräng"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ jordytelära"
+          ],
+          [
+            "≈≈ rumslig struktur"
+          ],
+          [
+            "≈≈ terräng"
+          ]
+        ],
+        "exempelmening": "Han älskade <font color=\"#3498db\">geografi</font> och kunde namnge alla världens huvudstäder utantill.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Kortet täcker SO:s två betydelser (vetenskapen om natur-/kulturlandskapet; någots utseende och struktur) plus den vardagliga 'terrängen' ('for rätt ut i geografin'). ≈≈-kategorierna stämmer. Betydelse 1 är något förenklad men inte fel; exemplet speglar en skolmässig men vedertagen bild av ämnet.",
+      "granskning_turer_post": 33,
+      "granskning_turkrav_post": 6
+    }
+  ],
+  "granskning_turer": 33,
+  "granskning_kostnad_usd": 0.7081419999999998,
+  "granskning_turkrav": 6,
+  "granskning_korningar": [
+    {
+      "poster": 25,
+      "turer": 33,
+      "turkrav": 6,
+      "kostnad_usd": 0.7081419999999998
+    }
+  ]
+}
