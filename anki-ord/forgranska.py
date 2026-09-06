@@ -568,6 +568,24 @@ def _riktiga_underbetydelser(u):
             and not _bara_kvalificerare(x)]
 
 
+# Ord i en etymologirad som inte bar nagon betydelse -- sprakbeteckningar och
+# stavelser som star i nastan varje etymologi. Utan dem blir varje kort en traff.
+_ETY_STOPP = {
+    "till", "av", "med", "samma", "betydelse", "betydelsen", "ovisst", "ursprung",
+    "latin", "latinska", "grekiska", "tyska", "lagtyska", "lågtyska", "franska",
+    "engelska", "fornsvenska", "fornnordiska", "nederlandska", "italienska",
+    "ord", "ordet", "eller", "och", "som", "det", "den", "ett", "besläktat",
+    "beslaktat", "bildning", "egentligen", "urspr", "ursprungligen", "avledning",
+    "sannolikt", "trolig", "troligen", "efter", "genom", "sedan", "aven", "även",
+}
+
+
+def _innehallsord(s):
+    """Stammade innehallsord ur en strang -- for grov overlappsjamforelse."""
+    return {_stam(w)[:5] for w in re.findall(r"[a-zåäöéèü]{4,}", (s or "").lower())
+            if w not in _ETY_STOPP}
+
+
 def granska_post(p):
     """Returnerar lista med (regel, detalj) för en post.
 
@@ -754,6 +772,53 @@ def granska_post(p):
                 fel.append(("doman_utan_stod",
                             f"domän {doman!r} men popularitet {pop} och ingen "
                             f"märkning i SO/SAOL"))
+    # 7. Leder kortet med RATT betydelse?
+    #
+    # Tva fall, bada hittade av Adam 2026-09-06 pa kort som redan var fullt
+    # v3-granskade:
+    #
+    #   tracka: betydelse 1 var "sy provisoriskt", men exempelmeningen
+    #           demonstrerade betydelse 4 ("tracka sig fram"). Kortet larde
+    #           in en association dess egen rubrik motsade.
+    #   fortuna: betydelse 1 var tivolispelet, betydelse 2 "lycka eller ode" --
+    #           och etymologin ("namn pa lycko- och odesgudinna") beskriver
+    #           betydelse 2. En avledd, daterad specialbetydelse stod fore
+    #           originalet.
+    #
+    # ORD ar ett lasprov: huvudbetydelsen ska vara den som mots i SKRIFT.
+    # Bada kontrollerna ar indicier, inte bevis -- de pekar ut kort for
+    # manniskan att doma, de domer inte sjalva.
+    bet = baksida.betydelser(pr.get("huvudbetydelse") or "")
+    if len(bet) >= 2:
+        # 7a. Etymologin beskriver en SENARE betydelse battre an den forsta.
+        karna = _innehallsord(pr.get("etymologi"))
+        if karna:
+            tack = [len(karna & _innehallsord(b)) for b in bet]
+            if tack[0] == 0 and max(tack[1:]) >= 1:
+                i = tack.index(max(tack[1:]))
+                fel.append(("huvudbetydelse_mot_etymologi",
+                            f"etymologin beskriver betydelse {i+1} "
+                            f"({bet[i][:44]!r}) men inte betydelse 1 "
+                            f"({bet[0][:44]!r}) -- leder kortet med en avledd "
+                            f"betydelse?"))
+        # 7b. Exempelmeningen demonstrerar en SENARE betydelse.
+        ex = (pr.get("exempelmening") or "").lower()
+        if ex:
+            for i, b in enumerate(bet):
+                if i == 0:
+                    continue
+                m = re.match(r"([A-Za-zÅÄÖåäö]+)\s+"
+                             r"((?:sig|om|av|på|till|ut|upp|ihop|fram|undan|"
+                             r"bort|efter|ur|i)(?:\s+\w+)?)\s*:", b.strip())
+                if not m:
+                    continue
+                rot = m.group(1).lower()[:max(4, len(m.group(1)) - 2)]
+                if rot in ex and all(d in ex for d in m.group(2).lower().split()):
+                    fel.append(("exempel_visar_senare_betydelse",
+                                f"exempelmeningen anvander {m.group(0).strip(': ')!r} "
+                                f"= betydelse {i+1}, men kortet leder med "
+                                f"betydelse 1 ({bet[0][:40]!r})"))
+                    break
     return fel
 
 
