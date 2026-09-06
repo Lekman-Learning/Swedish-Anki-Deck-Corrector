@@ -23,6 +23,28 @@ decket i stallet for mot en byggsession:
 🔴 Bada ar INDICIER. Skriptet domer inte -- det pekar ut kort for granskning.
    Kor med --tagga for att markera dem, aldrig for att andra dem automatiskt.
 
+🔴 RATTAT 2026-09-06, samma dag. En flagga far ALDRIG resolveras med ett
+   resonemang -- den kraver `slaupp.py <ord>` och en last SO/SAOL-artikel.
+
+   Beviset ar fortuna sjalvt, kortet som gav upphov till indicium A. Jag
+   flyttade "lycka eller ode" till forstaplats med argumentet att etymologin
+   ("till latin Fortu'na, namn pa lycko- och odesgudinna") beskrev den
+   betydelsen. Uppslagningen samma dag visade:
+
+       SAOL: "ett spel med kulor..."          -- ENDA betydelsen
+       SO  : "ett spel med en metallkula..."  -- ENDA betydelsen, jfr flipperspel
+
+   Etymologin i SO forklarar var ORDET kommer ifran. Den ar inte en
+   betydelsedefinition. Indicium A pekar alltsa pa en FRAGA, inte pa ett svar
+   -- och den som resolverar fragan utan att sla upp ordet gor exakt det
+   felslut som indiciet finns for att fanga.
+
+   Kortet beholl lycka forst, men pa ett annat skal: Adam moter aldrig spelet
+   i en text. SO:s ordning och lasexponeringen pekar at olika hall har, och
+   det finns inget facit som avgor -- darfor bar kortet bada, med SO:s egen
+   jfr-hanvisning (flipperspel) som synonym sa spelbetydelsen anda ar
+   igenkannbar.
+
     python betydelseordning.py                # rapport
     python betydelseordning.py --tagga        # satt betydelseordning_granska
     python betydelseordning.py --alla         # aven suspenderade

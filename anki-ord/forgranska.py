@@ -788,6 +788,12 @@ def granska_post(p):
     # ORD ar ett lasprov: huvudbetydelsen ska vara den som mots i SKRIFT.
     # Bada kontrollerna ar indicier, inte bevis -- de pekar ut kort for
     # manniskan att doma, de domer inte sjalva.
+    #
+    # 🔴 RATTAT 2026-09-06: en 7a-flagga far inte resolveras med ett
+    # resonemang. Etymologin i SO forklarar var ORDET kommer ifran och ar
+    # INTE en betydelsedefinition -- fortuna har "lycko- och odesgudinna" i
+    # etymologin men SO/SAOL listar bara spelet som betydelse. Kor
+    # `python slaupp.py <ord>` och las artikeln innan ordningen andras.
     bet = baksida.betydelser(pr.get("huvudbetydelse") or "")
     if len(bet) >= 2:
         # 7a. Etymologin beskriver en SENARE betydelse battre an den forsta.
@@ -800,7 +806,7 @@ def granska_post(p):
                             f"etymologin beskriver betydelse {i+1} "
                             f"({bet[i][:44]!r}) men inte betydelse 1 "
                             f"({bet[0][:44]!r}) -- leder kortet med en avledd "
-                            f"betydelse?"))
+                            f"betydelse? SLA UPP: python slaupp.py {ord_}"))
         # 7b. Exempelmeningen demonstrerar en SENARE betydelse.
         ex = (pr.get("exempelmening") or "").lower()
         if ex:
