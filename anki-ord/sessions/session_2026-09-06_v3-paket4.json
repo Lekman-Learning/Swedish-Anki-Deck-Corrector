@@ -1,0 +1,299 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080625624,
+      "ord": "avpassa",
+      "facit": "rätta, anpassa<br><br><i>Avpassa saltet i soppan;&nbsp;Avpassa farten efter väglaget</i>",
+      "facit_signal": "facit antyder 3 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Ge något rätt storlek, mängd eller form för det den ska användas till",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "≈≈ anpassa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">avpassade</font> sina steg efter barnets.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628766,
+      "ord": "agn",
+      "facit": "(ofta plur.)&nbsp; fröskal, blomfjäll, skärmfjäll;&nbsp; lockbete vid fiske, bete, angel<br><img alt=\"webp image\" src=\"paste_1762621271333.webp\"><img alt=\"webp image\" src=\"paste_1762621165103.webp\">",
+      "facit_signal": "facit antyder 4 betydelse(r), kortet har 2 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "De torra skalen kring sädeskorn som skiljs bort när säden tröskas ; ätbart bete på kroken vid fiske",
+        "register": "neutral, neutral, jordbruk ; neutral, neutral, allmän",
+        "synonymer": [
+          "skärmfjäll",
+          "blomfjäll",
+          "bete"
+        ],
+        "synonym_groups": [
+          [
+            "skärmfjäll",
+            "blomfjäll"
+          ],
+          [
+            "bete"
+          ]
+        ],
+        "exempelmening": "Nu gäller det att skilja <font color=\"#3498db\">agnarna</font> från vetet.",
+        "etymologi": "fornsvenska aghn; gemensamt germanskt ord, besläktat med grekiska akhne 'agnar' och med ax"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625209,
+      "ord": "brösta",
+      "facit": "stoltsera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Brösta sig: göra sig stor och skryta ; Del av seldon som ligger mot hästens bringa och tar upp draget ; Brösta av: koppla loss en kanon från förställaren och göra den skjutklar ; Brösta av: skjuta i väg ett hårt skott, eller framföra något med stora gester",
+        "register": "vardaglig, lätt negativ ; fackspråklig, neutral, sport ; fackspråklig, neutral, militär ; vardaglig, neutral, sport",
+        "synonymer": [
+          "stoltsera",
+          "kråma sig",
+          "≈≈ seldel",
+          "≈≈ göra skjutklar",
+          "≈≈ skjuta"
+        ],
+        "synonym_groups": [
+          [
+            "stoltsera",
+            "kråma sig"
+          ],
+          [
+            "≈≈ seldel"
+          ],
+          [
+            "≈≈ göra skjutklar"
+          ],
+          [
+            "≈≈ skjuta"
+          ]
+        ],
+        "exempelmening": "Han <font color=\"#3498db\">bröstade</font> sig över segern som om han vunnit den ensam.",
+        "etymologi": "'brösta av' och seldelen hör till tyska Protz, italienska biroccio 'tvåhjulig vagn' -- förställaren som kanonen kopplas loss från"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628058,
+      "ord": "dager",
+      "facit": "dags­ljus; &nbsp; belysning, aspekt; &nbsp; ljus­effekt<br><br>(<i>naturligt</i>) ljus som inte ut­görs av direkt sol­strålning&nbsp;<i>gärna sparsamt el. skiftande<br><br>i öppen dager</i>",
+      "facit_signal": "facit antyder 6 betydelse(r), kortet har 4 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Naturligt ljus som inte är direkt solsken ; Ljust parti i en bild eller målning, motsatsen till skuggan — ofta i plural, dagrar ; Det intryck något ger, den dager något framstår i ; I öppen dager: så att alla kan se det",
+        "register": "neutral, neutral ; fackspråklig, neutral, konst ; neutral, neutral ; neutral, neutral",
+        "synonymer": [
+          "dagsljus",
+          "belysning",
+          "ljuseffekt",
+          "≈≈ intryck",
+          "≈≈ allmänt känt"
+        ],
+        "synonym_groups": [
+          [
+            "dagsljus"
+          ],
+          [
+            "belysning",
+            "ljuseffekt"
+          ],
+          [
+            "≈≈ intryck"
+          ],
+          [
+            "≈≈ allmänt känt"
+          ]
+        ],
+        "exempelmening": "Det var redan full <font color=\"#3498db\">dager</font> när hon vaknade.",
+        "etymologi": "fornsvenska dagher; samma ord som dag"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080622228,
+      "ord": "obetingad",
+      "facit": "förbehållslös",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som uppstår spontant och av sig själv, om en känsla eller egenskap ; helt utan villkor eller krav",
+        "register": "neutral, neutral ; neutral, neutral",
+        "synonymer": [
+          "≈≈ spontan",
+          "oinskränkt",
+          "förbehållslös"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ spontan"
+          ],
+          [
+            "oinskränkt",
+            "förbehållslös"
+          ]
+        ],
+        "exempelmening": "Barnets <font color=\"#3498db\">obetingade</font> tilltro till föräldrarna.",
+        "etymologi": "till o- och betinga"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627648,
+      "ord": "serendipitet",
+      "facit": "förmåga att göra lyckliga upp­täckter av en slump",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förmågan att göra lyckliga upptäckter av en ren slump",
+        "register": "neutral, positiv",
+        "synonymer": [
+          "≈≈ upptäckarförmåga"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Flemings <font color=\"#3498db\">serendipitet</font> gav världen penicillinet — han letade efter något helt annat.",
+        "etymologi": "efter engelska serendipity; till namnet Serendip i sagan De tre prinsarna från Serendip, av persiska Sarandip 'Sri Lanka'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625180,
+      "ord": "spont",
+      "facit": "sammanlänkande brädlist<br><a href=\"https://www.google.com/imgres?q=spont&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Ff%2Ffb%2FSpundwand.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FSpont&amp;docid=pbmKfcNvMGfdzM&amp;tbnid=4KF26sVSPQdvHM&amp;vet=12ahUKEwjkh8Kq6-SLAxVeHBAIHeo9JdgQM3oECB0QAA..i&amp;w=3456&amp;h=2304&amp;hcb=2&amp;ved=2ahUKEwjkh8Kq6-SLAxVeHBAIHeo9JdgQM3oECB0QAA\"><div><div><div><img alt=\"Spont – Wikipedia\" src=\"paste-4fd16dda987c595fbabf750aaf060cb0e9798f4a.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Utstående list på en bräda som passar in i ett spår på nästa bräda vid hopfogning ; själva spåret på en sådan bräda, eller fogen mellan två hopfogade brädor",
+        "register": "fackspråklig, neutral, teknik ; fackspråklig, neutral, teknik",
+        "synonymer": [
+          "kantlist",
+          "≈≈ fog"
+        ],
+        "synonym_groups": [
+          [
+            "kantlist"
+          ],
+          [
+            "≈≈ fog"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Sponten</font> på plankan passade perfekt in i spåret på nästa.",
+        "etymologi": "av lågtyska spunt 'sprund (i tunna); tapp; spont'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628155,
+      "ord": "näva",
+      "facit": "en växt,&nbsp; geranium<br><a href=\"https://commons.wikimedia.org/wiki/File:Geranium_sylvaticum.JPG\"><img alt=\"\" src=\"250px-geranium_sylvaticum.webp\"></a>",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Växt med oftast handflikiga blad och purpurröda blommor",
+        "register": "neutral, neutral, biologi",
+        "synonymer": [
+          "≈≈ ört"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "I skogsbrynet blommade <font color=\"#3498db\">näva</font> med sina purpurröda kronblad.",
+        "etymologi": "till svensk dialekt näv 'näsa; näbb' -- växten har näbbliknande frukter"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624826,
+      "ord": "bräm",
+      "facit": "ett slags knat, ytterkant (kläder, fåglars fjädrar, etc)<br><br><i>en skinnmösa fodrad med pälsbräm</i><br><a href=\"https://www.google.com/imgres?q=br%C3%A4m&amp;imgurl=https%3A%2F%2Fwww.slojdkommerlastad.se%2Fwp-content%2Fuploads%2F2021%2F02%2F1a.-fardiga-vantar.jpg&amp;imgrefurl=https%3A%2F%2Fwww.slojdkommerlastad.se%2Fproject%2Fbram-i-ullgarn%2F&amp;docid=Q2Yi8ViaWAJgDM&amp;tbnid=5nGtj4tqYFKhxM&amp;vet=12ahUKEwjjybad09OLAxXVFBAIHRCIL2QQM3oECBcQAA..i&amp;w=595&amp;h=600&amp;hcb=2&amp;ved=2ahUKEwjjybad09OLAxXVFBAIHRCIL2QQM3oECBcQAA\"><div><div><div><img alt=\"Bräm i ullgarn - Slöjd kommer lastad\" src=\"paste-df4f75c6ab5cc5347e768504d2fb8b51af49b854.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bred ytterkant på ett klädesplagg, av annat material än plagget i övrigt och oftast av päls ; Kant med avvikande utseende, eller kant i allmänhet ; Ytter- eller överkant på en fågelfjäder eller ett blomhylle",
+        "register": "neutral, neutral ; neutral, neutral ; fackspråklig, neutral, biologi",
+        "synonymer": [
+          "≈≈ pälskant",
+          "kant",
+          "bård",
+          "≈≈ fjäderkant"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ pälskant"
+          ],
+          [
+            "kant",
+            "bård"
+          ],
+          [
+            "≈≈ fjäderkant"
+          ]
+        ],
+        "exempelmening": "Kappan hade ett brett <font color=\"#3498db\">bräm</font> av mörk päls runt halsen.",
+        "etymologi": "fornsvenska brem; av lågtyska breme med samma betydelse"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629161,
+      "ord": "vittnesgill",
+      "facit": "giltig och trovärdig<br><br>giltig som vittne",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vars vittnesmål enligt lag är giltigt, om en person ; som går att lita på",
+        "register": "fackspråklig, neutral, juridik ; neutral, positiv",
+        "synonymer": [
+          "≈≈ behörig att vittna",
+          "trovärdig"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ behörig att vittna"
+          ],
+          [
+            "trovärdig"
+          ]
+        ],
+        "exempelmening": "Han är knappast <font color=\"#3498db\">vittnesgill</font> eftersom han inte var nykter när olyckan inträffade.",
+        "etymologi": "fornsvenska vitnis gilder"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629313,
+      "ord": "dimpa",
+      "facit": "falla pladask, ramla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Falla tungt och överraskande ; oväntat uppenbara sig",
+        "register": "vardaglig, neutral ; vardaglig, neutral",
+        "synonymer": [
+          "falla pladask",
+          "dyka upp"
+        ],
+        "synonym_groups": [
+          [
+            "falla pladask"
+          ],
+          [
+            "dyka upp"
+          ]
+        ],
+        "exempelmening": "Äpplet <font color=\"#3498db\">damp</font> ner från grenen och landade i gräset.",
+        "etymologi": "ljudhärmande; jfr svensk dialekt dumpa 'falla tungt; gå klumpigt'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

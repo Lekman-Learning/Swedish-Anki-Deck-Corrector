@@ -1,0 +1,162 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": "skrivare-a4-2026-09-05",
+ "granskare": "blindgranskare-nya-2026-09-06",
+ "poster": [
+  {
+   "noteId": 1780080622962,
+   "ord": "catering",
+   "facit": "färdigmatsleverans",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Leverans av färdiglagad mat, till exempel till fester eller flygresor",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "≈≈ matleverans"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Företaget ordnade <font color=\"#3498db\">catering</font> till bröllopet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'leverans av färdiglagad mat <<till passagerarflygplan, privata fester m.m.>>' — kortet bär både betydelsen och definitionstillägget ('till exempel till fester eller flygresor'), alltså just den kontext som gör betydelsen konkret. En betydelse i SO och SAOL, inget saknas. '≈≈ matleverans' är en korrekt kategori."
+  },
+  {
+   "noteId": 1780080622966,
+   "ord": "förrättning",
+   "facit": "tjänsteärende",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Arbetsuppgift som hör till en tjänst, särskilt inom det offentliga ; (om kroppen) naturlig funktion",
+    "register": "formell, neutral, juridik ; neutral, eufemistisk",
+    "synonymer": [
+     "tjänsteärende",
+     "tjänstegöromål",
+     "funktion"
+    ],
+    "synonym_groups": [
+     [
+      "tjänsteärende",
+      "tjänstegöromål"
+     ],
+     [
+      "funktion"
+     ]
+    ],
+    "exempelmening": "Lantmätaren var ute på <font color=\"#3498db\">förrättning</font> hela dagen för att mäta upp den nya tomtgränsen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO har huvudbetydelsen 'göromål som enligt bestämmelserna ingår i arbetsuppgifterna för viss tjänst <<särsk. om uppgift inom ramen för offentlig tjänst>>' OCH underbetydelsen 'funktion' (SO:s exempel: 'kroppens förrättningar') — kortet har båda, med definitionstillägget kvar och med eget register per betydelse (eufemistisk på kroppsbetydelsen, vilket är rätt). 'tjänsteärende' och 'tjänstegöromål' står ordagrant i SAOL; 'funktion' är SO:s egen underdefinition. Grupperingen stämmer."
+  },
+  {
+   "noteId": 1780080622978,
+   "ord": "heresi",
+   "facit": "utan rätta tron",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Uppfattning eller lära som avviker från den som anses rätt, till exempel inom vetenskapen",
+    "register": "neutral, negativ",
+    "synonymer": [
+     "kätteri",
+     "irrlära"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Att ifrågasätta den rådande teorin sågs av kollegorna som ren <font color=\"#3498db\">heresi</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'lära som avviker från den påbjudna', med bruklighetskommentaren 'i vetenskapliga sammanhang' — kortet bär både betydelsen och den kontexten ('till exempel inom vetenskapen'). 'kätteri' och 'irrlära' är SAOL:s hela definition och SO:s egna JFR-hänvisningar, alltså källbelagda och rätt betydelse. En betydelse i SO och SAOL, inget saknas. Valören 'negativ' stämmer med ordets fördömande bruk."
+  },
+  {
+   "noteId": 1780080622975,
+   "ord": "huckle",
+   "facit": "huvudsjal<br><a href=\"https://www.google.com/imgres?q=huckle&amp;imgurl=https%3A%2F%2Fwww.kurbits.nu%2Fwp-content%2Fuploads%2F2011%2F02%2Fwebb_folklig-grannl%25C3%25A5t1.jpg&amp;imgrefurl=https%3A%2F%2Fwww.kurbits.nu%2F2011%2F02%2F07%2Fhuvuddukens-granna-historia%2F&amp;docid=1Q-Rcqhft_Va1M&amp;tbnid=elI2QdEY7DxwNM&amp;vet=12ahUKEwih-dqf9MGLAxW8AxAIHTg4G7EQM3oECEYQAA..i&amp;w=700&amp;h=927&amp;hcb=2&amp;ved=2ahUKEwih-dqf9MGLAxW8AxAIHTg4G7EQM3oECEYQAA\"><div><div><div><img alt=\"Huvuddukens granna historia - Kurbits ...\" src=\"paste-287f5b4d0f22b87039af4b2f19e11e0d5d5716fd.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Enkel sjal som knyts runt huvudet",
+    "register": "ngt ålderdomlig, neutral",
+    "synonymer": [
+     "huvudduk",
+     "huvudkläde"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Gummorna hade <font color=\"#3498db\">huckle</font> på huvudet på väg till kyrkan.",
+    "etymologi": "Sammandragning av ordet 'huvudkläde', belagt sedan 1655."
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: '(enklare) sjal som knyts runt huvudet' — kortet återger det. Synonymerna 'huvudduk' och 'huvudkläde' är SAOL:s hela definition. Etymologin ('sammandragning av huvudkläde, belagt sedan 1655') står ordagrant i SO och är en äkta minneskrok — den förklarar själva ordet. En betydelse, inget saknas. Anmärkning utan underkännande: exempelmeningen ligger nära SO:s egen ('gummor i hucklen på väg till kyrkan') — korrekt och konkret, men värd att skriva om vid nästa beröring."
+  },
+  {
+   "noteId": 1780080622980,
+   "ord": "inkubationstid",
+   "facit": "tid smittad till sjuk",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tiden mellan att man smittas av något och att sjukdomen bryter ut",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "≈≈ tidsperiod"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Giftet sprider sig under en <font color=\"#3498db\">inkubationstid</font> på ungefär tolv dagar.",
+    "etymologi": null
+   },
+   "verdikt": "underkand",
+   "anmarkning": "EXEMPELMENINGEN MOTSÄGER KORTETS EGEN DEFINITION. Kortet definierar ordet som 'Tiden mellan att man SMITTAS av något och att SJUKDOMEN bryter ut', men exempelmeningen handlar om GIFT: 'Giftet sprider sig under en inkubationstid på ungefär tolv dagar.' Ett gift är ingen smitta och ger ingen sjukdom som 'bryter ut' — läser man kortet högt går definition och exempel isär (samma feltyp som spjälka/tyfon tidigare). Meningen är dessutom i praktiken ordagrant SO:s eget exempel ('giftet sprider sig under en inkubationstid av ca 12 dagar'), så den är både lånad och fel vald. Borde vara en mening om smitta, t.ex. 'Vattkoppor har en inkubationstid på ungefär två veckor innan utslagen bryter ut.' Definition, synonym och register är däremot korrekta."
+  },
+  {
+   "noteId": 1780080622981,
+   "ord": "trall",
+   "facit": "låt;&nbsp; gammal vana",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Enkel, glad melodi ; Invand vana som lätt blir slentrian ; Spjälgolv som lyfter fötterna ovanför ett vått golv",
+    "register": "neutral, neutral ; neutral, lätt negativ ; neutral, neutral",
+    "synonymer": [
+     "låt",
+     "visa",
+     "≈≈ vana",
+     "spjälgaller",
+     "spjälgolv"
+    ],
+    "synonym_groups": [
+     [
+      "låt",
+      "visa"
+     ],
+     [
+      "≈≈ vana"
+     ],
+     [
+      "spjälgaller",
+      "spjälgolv"
+     ]
+    ],
+    "exempelmening": "Han gnolade en enkel <font color=\"#3498db\">trall</font> medan han diskade.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Alla tre betydelserna i källorna står på kortet: SO:s första lemma har 'enkel, glad melodi' och 'invant sätt att gå tillväga eller bete sig <<ofta med bibetydelse av slentrian>>', SO:s andra lemma 'lös spjälbotten på golv som skyddar mot direkt kontakt med vatten'. Kortet återger även slentrian-nyansen och märker den 'lätt negativ'. Synonymerna står i SAOL ('melodi, låt, visa' / 'spjälgaller; spjälgolv') och är korrekt grupperade per betydelse. Rätt separator ' ; ' mellan de tre."
+  },
+  {
+   "noteId": 1780080622971,
+   "ord": "ökänd",
+   "facit": "ha dåligt rykte",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Känd av alla för att vara dålig, i moraliskt avseende",
+    "register": "neutral, negativ",
+    "synonymer": [
+     "beryktad",
+     "illa känd"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han var en <font color=\"#3498db\">ökänd</font> bedragare som lurat hundratals människor.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'allmänt känd för sina dåliga egenskaper <<i moraliskt el. liknande avseende>>' — kortet bär både betydelsen och definitionstillägget, vilket är just det som skiljer 'okänd/beryktad' från allmän berömmelse. 'beryktad' är SO:s egen SYN:synonym och står dessutom i SAOL tillsammans med 'illa känd'. En betydelse, inget saknas. Register neutral/negativ stämmer."
+  }
+ ]
+}

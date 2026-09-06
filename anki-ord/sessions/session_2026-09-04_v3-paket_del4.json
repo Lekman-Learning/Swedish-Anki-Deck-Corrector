@@ -1,0 +1,481 @@
+{
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": null,
+ "granskare": "claude-huvudsession (EJ forfattare till dessa kort)",
+ "poster": [
+  {
+   "noteId": 1780080622828,
+   "ord": "karisma",
+   "facit": "personlig utstrålning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Stark personlig utstrålning som drar till sig andra",
+    "register": "neutral, positiv",
+    "synonymer": [
+     "≈≈ utstrålning"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Talaren hade en <font color=\"#3498db\">karisma</font> som fick hela salen att tystna.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: stark personlig utstralning <<som ger formaga att paverka och fascinera andra>>. Kortet har BADE utstralningen och verkan pa andra ur definitionstillagget. Kategorin belagd i SAOL:s DEF."
+  },
+  {
+   "noteId": 1780080622772,
+   "ord": "kujon",
+   "facit": "ynkrygg",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Feg stackare som aldrig vågar stå upp för något",
+    "register": "ngt ålderdomlig, nedsättande",
+    "synonymer": [
+     "≈≈ fegis"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han var en <font color=\"#3498db\">kujon</font> som lät andra ta smällen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL: feg person. SO saknar traff, men SAOL racker som belagg. Kortet stammer. ANMARKNING: registret (ngt alderdomlig, nedsattande) ar en rimlig bedomning men har inget stod i nagon brukelighetsmarkning — SAOL ger ingen."
+  },
+  {
+   "noteId": 1780080622820,
+   "ord": "käpphäst",
+   "facit": "älsklingsidé<br><a href=\"https://www.google.com/imgres?q=k%C3%A4pph%C3%A4st&amp;imgurl=https%3A%2F%2Fborjes.se%2Fthumb%2F6111%2F1280x0%2F100150-ka-ppha-st-joline-1.jpg&amp;imgrefurl=https%3A%2F%2Fborjes.se%2Fkapphast-joline%2F&amp;docid=44rxCWnAlA_uTM&amp;tbnid=si9Aw8ANN74EXM&amp;vet=12ahUKEwjA0tmBhMyLAxW8QlUIHbHSCI0QM3oECB0QAA..i&amp;w=1280&amp;h=1280&amp;hcb=2&amp;ved=2ahUKEwjA0tmBhMyLAxW8QlUIHbHSCI0QM3oECB0QAA\"><div><div><div><img alt=\"Käpphäst Joline | borjes.se | Börjes ...\" src=\"paste-819e415573f2497df9b61f4372912b9a80b4317d.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Barnleksak: en pinne med hästhuvud på ; fråga som någon ständigt återkommer till",
+    "register": "neutral, neutral ; neutral, lätt negativ",
+    "synonymer": [
+     "≈≈ leksak",
+     "≈≈ favoritfråga"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ leksak"
+     ],
+     [
+      "≈≈ favoritfråga"
+     ]
+    ],
+    "exempelmening": "Pojken red runt på sin <font color=\"#3498db\">käpphäst</font> i trädgården.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger TVA DEF: leksaken och fragan nagon standigt aterkommer till. SAOL likaså. Kortet har bada. Legacys pahittade fix ide (tvangstanke) ar borta — det ar inte samma sak som ett favoritamne."
+  },
+  {
+   "noteId": 1780080622868,
+   "ord": "laborera",
+   "facit": "experimentera",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Utföra försök i ett laboratorium ; pröva sig fram med olika lösningar",
+    "register": "neutral, neutral ; neutral, neutral",
+    "synonymer": [
+     "≈≈ försök",
+     "experimentera"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ försök"
+     ],
+     [
+      "experimentera"
+     ]
+    ],
+    "exempelmening": "Kemistudenterna <font color=\"#3498db\">laborerade</font> med syror och baser hela förmiddagen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: utfora laboration, plus underbetydelsen gora prov, experimentera. Kortet har bada; experimentera inleder SAOL:s andra led. ANMARKNING: SAOL har ett tredje led, arbeta (laborera MED nagot), som bara delvis tacks av kortets prova sig fram."
+  },
+  {
+   "noteId": 1780080622792,
+   "ord": "legering",
+   "facit": "metallblandning",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Att smälta ihop metaller till ett enda material ; själva materialet som blir resultatet",
+    "register": "neutral, neutral, teknik ; neutral, neutral, teknik",
+    "synonymer": [
+     "≈≈ sammansmältning",
+     "metallblandning"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ sammansmältning"
+     ],
+     [
+      "metallblandning"
+     ]
+    ],
+    "exempelmening": "Brons är en <font color=\"#3498db\">legering</font> av koppar och tenn.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL delar exakt som kortet: det att legera; av. om resultatet. Kortet skiljer korrekt pa PROCESSEN och MATERIALET — en distinktion legacy saknade helt. metallblandning inleder SO:s DEF. Legacys pahittade amalgam ar borta."
+  },
+  {
+   "noteId": 1780080622814,
+   "ord": "markis",
+   "facit": "utfällbart solskyddstak; adelsman<br><div><div><div><a href=\"https://www.google.com/imgres?q=markis&amp;imgurl=https%3A%2F%2Fmarkis24.se%2Fwp-content%2Fuploads%2F2018%2F04%2Fproducts-FA_40_svart_1.jpg&amp;imgrefurl=https%3A%2F%2Fmarkis24.se%2Fprodukt%2Ffa-44-design%2F&amp;docid=1_SmfArNhif8YM&amp;tbnid=9R4LDKiVNTlivM&amp;vet=12ahUKEwjCrOKDvqOMAxW_FBAIHaPoG_gQM3oECFkQAA..i&amp;w=634&amp;h=457&amp;hcb=2&amp;ved=2ahUKEwjCrOKDvqOMAxW_FBAIHaPoG_gQM3oECFkQAA\"><img alt=\"FA 44 DESIGN - markis24.se - störst på ...\" src=\"paste-e1387ef879bdb8073277a29907230ceca75c11c9.webp\"></a></div><a href=\"https://www.google.com/imgres?q=marquis%20de%20sade&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F20%2FMarquis_de_sade.jpg%2F1200px-Marquis_de_sade.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMarquis_de_Sade&amp;docid=Azg7vMcC9PUKcM&amp;tbnid=nlF_BJmZ4nqbtM&amp;vet=12ahUKEwiFn8uJvqOMAxUzJBAIHeVFE5wQM3oECBcQAA..i&amp;w=1200&amp;h=1198&amp;hcb=2&amp;ved=2ahUKEwiFn8uJvqOMAxUzJBAIHeVFE5wQM3oECBcQAA\"><div><div><div><img alt=\"Marquis de Sade - Wikipedia\" src=\"paste-e350ec4c6a054a1edc918c861a8d33a88b7f7d0f.webp\"></div></div></div></a></div></div>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Adelsman med en av de högsta titlarna ; nedfällbart soltak av tyg över ett fönster",
+    "register": "neutral, neutral, historia ; neutral, neutral",
+    "synonymer": [
+     "≈≈ adelstitel",
+     "≈≈ soltak"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ adelstitel"
+     ],
+     [
+      "≈≈ soltak"
+     ]
+    ],
+    "exempelmening": "<font color=\"#3498db\">Markisen</font> ärvde godset efter sin far.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO och SAOL ger bada TVA betydelser: adelsmannen och solskyddet. Kortet har bada med skilda register. ANMARKNING utan paverkan pa verdikt: SO:s definitionstillagg <<mellan hertig och greve>> anger den exakta rangen; kortets en av de hogsta titlarna ar sant men vagare."
+  },
+  {
+   "noteId": 1780080622766,
+   "ord": "moatjé",
+   "facit": "kavaljer",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Den andra i ett par, den man är tillsammans med för kvällen",
+    "register": "ngt ålderdomlig, neutral",
+    "synonymer": [
+     "partner",
+     "motspelare"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han förde sin <font color=\"#3498db\">moatjé</font> till bordet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: andra parten i par <<spec. om nagons kavaljer respektive dam>>. partner och motspelare inleder egna led i SAOL. ANMARKNING: kortets for kvallen ar snavare an kallan — SO sager aven bildar en VARAKTIG enhet."
+  },
+  {
+   "noteId": 1780080622752,
+   "ord": "odisputabel",
+   "facit": "obestridlig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Så självklart att ingen kan säga emot",
+    "register": "högtidlig, neutral",
+    "synonymer": [
+     "obestridlig",
+     "oomtvistlig"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hennes insats den kvällen var av <font color=\"#3498db\">odisputabel</font> betydelse för laget.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: som man inte behover disputera om [nagot hogtidligt] — registret matchar. obestridlig och oomtvistlig inleder egna led i SAOL."
+  },
+  {
+   "noteId": 1780080622767,
+   "ord": "omlott",
+   "facit": "med kant över kant<br><a href=\"https://www.google.com/imgres?q=omlott&amp;imgurl=https%3A%2F%2Flotuseco.se%2Fwp-content%2Fuploads%2F2019%2F08%2Ftopp-omlott-langarmad-blapetrol.jpg&amp;imgrefurl=https%3A%2F%2Flotuseco.se%2Fshop%2Ftopp-omlott-langarmad-blapetrol%2F&amp;docid=5AmhZ_mX78dSPM&amp;tbnid=MxYm7RS50dXRlM&amp;vet=12ahUKEwiYv-fW0tOLAxUqAhAIHYRcIacQM3oECEoQAA..i&amp;w=1471&amp;h=2207&amp;hcb=2&amp;ved=2ahUKEwiYv-fW0tOLAxUqAhAIHYRcIacQM3oECEoQAA\"><div><div><div><img alt=\"Topp omlott långärmad blåpetrol - LotusEco\" src=\"paste-c8395746daf4f0bbda774405715c4893dabb2f65.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Så att den ena kanten ligger över den andra",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "≈≈ överlappande"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon knäppte kappan <font color=\"#3498db\">omlott</font> över bröstet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: med en kant nagot overskjutande en annan. Kortet stammer och exemplet (knappte kappan omlott) visar bruket. Legacys pahittade lott/foremal/delvis — helt orelaterade ord — ar borta."
+  },
+  {
+   "noteId": 1780080622859,
+   "ord": "otit",
+   "facit": "öroninflammation<br><a href=\"https://www.google.com/imgres?q=otitis&amp;imgurl=https%3A%2F%2Fcuidateplus.marca.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fratio_43%2Fpublic%2Fcms%2F2024-06%2Fotitis.jpg.webp%3Fitok%3DUgXAiddn&amp;imgrefurl=https%3A%2F%2Fcuidateplus.marca.com%2Fenfermedades%2Finfecciosas%2Fotitis.html&amp;docid=wV7E7_-GUyioHM&amp;tbnid=O2I0dDIHFGQodM&amp;vet=12ahUKEwi0_qTW0vqLAxVaLRAIHdVsJlIQM3oECHMQAA..i&amp;w=1200&amp;h=900&amp;hcb=2&amp;ved=2ahUKEwi0_qTW0vqLAxVaLRAIHdVsJlIQM3oECHMQAA\"><div><div><div><img alt=\"Otitis: Qué es, síntomas, tratamiento y ...\" src=\"paste-a10749de78a6d056af8c56520e55d9678ba45662.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "När det gör ont i örat för att det blivit infekterat",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "öroninflammation"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Barnet fick <font color=\"#3498db\">otit</font> och skrek av öronvärk hela natten.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO och SAOL: oroninflammation. Kortet beskriver det i Adam-tal utan att bli fel, synonymen ar belagd i bada kallorna."
+  },
+  {
+   "noteId": 1780080622782,
+   "ord": "patella",
+   "facit": "knäskål<br><img alt=\"webp image\" src=\"paste_1759097901803.webp\">",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Det lilla runda benet framför knäleden",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "knäskål"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han spräckte sin <font color=\"#3498db\">patella</font> i fallet nedför trappan.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO och SAOL: knaskal. Kortet sager det lilla runda BENET framfor knaleden — korrekt. Legacys pahittade synonym knaleden (leden, inte benet) ar borta."
+  },
+  {
+   "noteId": 1780080622849,
+   "ord": "påföra",
+   "facit": "skriva på räkningen",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Skriva upp en avgift eller en skuld på någon",
+    "register": "formell, neutral, ekonomi",
+    "synonymer": [
+     "föra upp"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Kommunen <font color=\"#3498db\">påförde</font> fastigheten nya avgifter.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO och SAOL sager bada fora upp pa skuldrakning for. Kortet sager skriva upp en avgift eller en skuld pa nagon — samma sak i Adam-tal. fora upp inleder ledet i bada kallorna. Exempelmeningen har highlight, vilket legacy saknade helt."
+  },
+  {
+   "noteId": 1780080622804,
+   "ord": "recitera",
+   "facit": "läsa upp högt",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Läsa upp en dikt högt och med känsla",
+    "register": "neutral, neutral, konst",
+    "synonymer": [
+     "deklamera"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon brukade <font color=\"#3498db\">recitera</font> Fröding för barnbarnen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: konstnarligt lasa upp <<skonlitterar text>>. deklamera inleder eget led i SAOL. Kortet stammer."
+  },
+  {
+   "noteId": 1780080622846,
+   "ord": "rehabilitera",
+   "facit": "träna upp efter skada",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ge upprättelse åt någon som blivit orättvist utpekad ; Träna upp någon till ett normalt liv efter sjukdom eller fängelse ; Ta revansch och tvätta bort en dålig insats",
+    "register": "neutral, positiv ; neutral, neutral, medicin ; neutral, neutral, sport",
+    "synonymer": [
+     "återupprätta",
+     "återanpassa",
+     "revanschera sig"
+    ],
+    "synonym_groups": [
+     [
+      "återupprätta"
+     ],
+     [
+      "återanpassa"
+     ],
+     [
+      "revanschera sig"
+     ]
+    ],
+    "exempelmening": "Många av offren för förtrycket kom senare att <font color=\"#3498db\">rehabiliteras</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL ger TRE led: ge upprattelse, ateruppratta; ateranpassa till arbetslivet; ta revansch, revanschera sig. Kortet har alla tre med skilda domaner — inklusive sportbetydelsen, som SO inte ens har. Alla tre synonymerna inleder egna led."
+  },
+  {
+   "noteId": 1780080622823,
+   "ord": "rådbråka",
+   "facit": "misshandla<br><a href=\"https://commons.wikimedia.org/wiki/File:Breaking_Wheel.jpg\"><img src=\"250px-breaking_wheel.webp\"></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tala eller skriva ett språk så illa att det knappt går att förstå ; Pressa hjärnan hårt ; Misshandla och slå sönder ; (historiskt) avrätta genom att krossa den dömde på ett hjul",
+    "register": "neutral, lätt negativ ; neutral, neutral ; neutral, negativ ; arkaisk, negativ, historia",
+    "synonymer": [
+     "förvränga",
+     "anstränga",
+     "mörbulta",
+     "≈≈ avrätta"
+    ],
+    "synonym_groups": [
+     [
+      "förvränga"
+     ],
+     [
+      "anstränga"
+     ],
+     [
+      "mörbulta"
+     ],
+     [
+      "≈≈ avrätta"
+     ]
+    ],
+    "exempelmening": "Turisten <font color=\"#3498db\">rådbråkade</font> svenskan så att ingen förstod vad han ville ha.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SAOL ger fem led: morbulta; misshandla; hart anstranga sin hjarna; forvranga ord; tala el. skriva ett sprak knaggligt. Kortet har fyra och slar ihop morbulta och misshandla — vilket SO sjalvt gor (utsatta nagons kropp for svara pafrestningar). Ordningen ar dessutom ratt satt: den sprakliga betydelsen forst, vilket ar den som faktiskt anvands i dag och den HP testar. forvranga, anstranga och morbulta inleder alla egna led."
+  },
+  {
+   "noteId": 1780080622847,
+   "ord": "sarkofag",
+   "facit": "stor stenkista",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Praktfull stenkista att lägga en död i",
+    "register": "neutral, neutral, historia",
+    "synonymer": [
+     "≈≈ stenkista"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "En grekisk inskription prydde sidan av <font color=\"#3498db\">sarkofagen</font>.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: fristaende, rikt utsmyckad gravkista <<ofta i sten>>. SAOL: praktfull likkista av sten. Kortet stammer, kategorin belagd i SAOL:s DEF."
+  },
+  {
+   "noteId": 1780080622784,
+   "ord": "sefyr",
+   "facit": "västanvind<br><a href=\"https://www.google.com/imgres?q=zephyr%20wind&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F77%2FZephyr%252C_Greek_god_of_the_west_wind.jpg%2F348px-Zephyr%252C_Greek_god_of_the_west_wind.jpg&amp;imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FZephyrus&amp;docid=WDlkQfG8t7F7dM&amp;tbnid=SbUoDu8Bpx4opM&amp;vet=12ahUKEwj_8uT6qN2LAxWADhAIHeeNDscQM3oFCIMBEAA..i&amp;w=348&amp;h=225&amp;hcb=2&amp;ved=2ahUKEwj_8uT6qN2LAxWADhAIHeeNDscQM3oFCIMBEAA\"><div><div><div><img alt=\"Zephyrus - Wikipedia\" src=\"paste-c3bedc5fe39d6ec6cce55f11575dcad0da3c76a0.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Mild vind från väster",
+    "register": "högtidlig, positiv",
+    "synonymer": [
+     "västanvind"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "En mild <font color=\"#3498db\">sefyr</font> drog in över trädgården vid solnedgången.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: vind fran vaster [nagot hogtidligt]. SAOL: vastanvind [hogt.] — belagd, och registret matchar. ANMARKNING: mild star inte i nagon kalla, aven om ordet konnoterar en len bris (av Zefyros)."
+  },
+  {
+   "noteId": 1780080622836,
+   "ord": "siren",
+   "facit": "lockande sjöjungfru",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Apparat som tjuter högt för att varna ; sagoväsen med kvinnohuvud och fågelkropp som lockade sjöfarare i döden",
+    "register": "neutral, neutral, teknik ; neutral, neutral, historia",
+    "synonymer": [
+     "≈≈ larmapparat",
+     "≈≈ sagoväsen"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ larmapparat"
+     ],
+     [
+      "≈≈ sagoväsen"
+     ]
+    ],
+    "exempelmening": "<font color=\"#3498db\">Sirenerna</font> tjöt över hela staden när larmet gick.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO ger TVA DEF: apparat for ljudsignaler, och sagovasen med kvinnas huvud och i ovrigt EN FAGELS KROPP. Kortet har bada och sager korrekt fagelkropp, inte fiskstjart. Bada synonymerna ar ≈≈ och extraherade ur kortets egen definition."
+  },
+  {
+   "noteId": 1780080622807,
+   "ord": "sistliden",
+   "facit": "senaste",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Som var senast, den nyss gångna",
+    "register": "högtidlig, neutral",
+    "synonymer": [
+     "≈≈ senaste"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Beslutet fattades den sjätte <font color=\"#3498db\">sistlidne</font> februari.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: narmast foregaende (i tiden) [nagot hogtidligt]. Kortet stammer och registret hogtidlig matchar markningen. ANMARKNING: ordfoljden i exempelmeningen (den sjatte sistlidne februari) ar stel — sistlidne februari eller den 6 februari sistlidne ar naturligare. Betydelsen ar dock ratt och meningen visar bruket, sa det faller inte kortet."
+  },
+  {
+   "noteId": 1780080622815,
+   "ord": "strass",
+   "facit": "glitterglas<br><a href=\"https://www.google.com/imgres?q=strass&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F2b%2FStrass.jpg&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FStrass&amp;docid=-mkiNaqN53mUqM&amp;tbnid=0t0ovn2eExOV7M&amp;vet=12ahUKEwjc152N4-yLAxWkQVUIHTFDNYQQM3oECB0QAA..i&amp;w=722&amp;h=480&amp;hcb=2&amp;ved=2ahUKEwjc152N4-yLAxWkQVUIHTFDNYQQM3oECB0QAA\"><div><div><div><img alt=\"Strass – Wikipedia\" src=\"paste-eb666ffa7bca839e19ac3052c606bdc82ac5e75c.webp\"></div></div></div></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Glittrande glas som får se ut som ädelstenar i smycken",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "≈≈ glitterglas"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Klänningen var besatt med <font color=\"#3498db\">strass</font> och paljetter.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: ett starkt brytande, blyhaltigt glas som anvands till smycken. Kortet valjer funktionen (far se ut som adelstenar) framfor materialet — inte i kallan ordagrant, men det ar vad strass ar till for och gor kortet begripligt."
+  },
+  {
+   "noteId": 1780080622779,
+   "ord": "vittja",
+   "facit": "tömma, t.ex fiskenät<br><a href=\"https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.ljusdalsposten.se%2F2019-01-23%2Fstorre-laxar-och-farre-salskador-lindas-forskning-hjalper-yrkesfisket-de-ar-experter-pa-att-vittja-fallor%2F&amp;psig=AOvVaw1JgsmvQkRbe6nLx_Z32eGl&amp;ust=1741338689188000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCMDu2qaO9YsDFQAAAAAdAAAAABAE\"><img alt=\"Större laxar och färre sälskador – Lindas forskning hjälper yrkesfisket:  &quot;De är experter på att vittja fällor&quot; – Ljusdals-Posten\" src=\"98be1634-0e28-441b-94c8-23660696ac6f.webp\"></a>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Tömma en fälla eller ett nät på fångst ; stjäla ur någons fickor",
+    "register": "neutral, neutral, jakt ; neutral, negativ",
+    "synonymer": [
+     "tömma",
+     "stjäla"
+    ],
+    "synonym_groups": [
+     [
+      "tömma"
+     ],
+     [
+      "stjäla"
+     ]
+    ],
+    "exempelmening": "Fiskarna hade <font color=\"#3498db\">vittjat</font> sina ryssjor redan tidigt på morgonen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: tomma (fangstredskap) pa innehall, plus underbetydelsen stjala. SAOL delar likadant (ta hand om fangsten i nat el. snara; stjala ur fickor). Kortet har bada med ratt laddning per betydelse."
+  },
+  {
+   "noteId": 1780080622855,
+   "ord": "ömsevis",
+   "facit": "växelvis",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Om vartannat, först det ena och sedan det andra",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "växelvis"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon var <font color=\"#3498db\">ömsevis</font> glad och sorgsen hela kvällen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO och SAOL: vaxelvis. Kortet forklarar det konkret (forst det ena och sedan det andra) och synonymen ar belagd i bada."
+  }
+ ]
+}
