@@ -1,172 +1,172 @@
 {
-  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
-  "skriven_av": "skrivare-a-2026-09-05",
-  "granskare": null,
-  "poster": [
-    {
-      "noteId": 1780080622901,
-      "ord": "abbedissa",
-      "facit": "klosterförestånderska",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Kvinna som är chef för ett nunnekloster",
-        "register": "neutral, neutral, religion",
-        "synonymer": [
-          "föreståndarinna"
-        ],
-        "synonym_groups": null,
-        "exempelmening": "<font color=\"#3498db\">Abbedissan</font> ledde klostrets systrar i den dagliga bönen.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622889,
-      "ord": "bussarong",
-      "facit": "klädesplagg<div><img src=\"paste-e37574cf72729fe9814425c2e010f203ab0149c1.webp\"><br></div>",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Ett löst skjortliknande plagg med öppning vid halsen -- ursprungligen sjömanskläder, i dag ett bredare ord för sådana plagg",
-        "register": "neutral, neutral",
-        "synonymer": [
-          "≈≈ skjorta"
-        ],
-        "synonym_groups": null,
-        "exempelmening": "Han bar en blå <font color=\"#3498db\">bussarong</font> med öppen krage till jobbet.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622872,
-      "ord": "fibromyalgi",
-      "facit": "kroniskt smärttillstånd",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "En sjukdom som ger ständig smärta i muskler och senor, vanligast hos kvinnor som kan få barn",
-        "register": "fackspråklig, neutral, medicin",
-        "synonymer": [
-          "≈≈ sjukdom"
-        ],
-        "synonym_groups": null,
-        "exempelmening": "Hennes <font color=\"#3498db\">fibromyalgi</font> gjorde att hon vaknade öm i hela kroppen varje morgon.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622880,
-      "ord": "specificera",
-      "facit": "beskriva noggrannare",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Beskriva något i detalj i stället för bara ungefär ; i en räkning: ange exakt vad varje belopp gäller",
-        "register": "neutral, neutral ; neutral, neutral, ekonomi",
-        "synonymer": [
-          "≈≈ beskrivning",
-          "ange"
-        ],
-        "synonym_groups": [
-          [
-            "≈≈ beskrivning"
-          ],
-          [
-            "ange"
-          ]
-        ],
-        "exempelmening": "Han fick <font color=\"#3498db\">specificera</font> exakt vilka ändringar han ville ha i avtalet.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622886,
-      "ord": "utlåta",
-      "facit": "uttala sig",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Säga vad man tycker om något offentligt, ofta med kritik",
-        "register": "formell, neutral",
-        "synonymer": [
-          "yttra sig",
-          "ge sin bedömning"
-        ],
-        "synonym_groups": null,
-        "exempelmening": "Rektorn <font color=\"#3498db\">utlät sig</font> skarpt om lärarnas nya schema.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622891,
-      "ord": "antiklerikal",
-      "facit": "prästfientlig",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Motståndare till kyrkan och dess makt i samhället",
-        "register": "neutral, neutral, religion",
-        "synonymer": [
-          "≈≈ motståndare"
-        ],
-        "synonym_groups": null,
-        "exempelmening": "Han kallade sig <font color=\"#3498db\">antiklerikal</font> och vägrade gå i kyrkan.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622896,
-      "ord": "geschwint",
-      "facit": "snabbt",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Snabbt och utan ansträngning",
-        "register": "vardaglig, neutral",
-        "synonymer": [
-          "snabbt"
-        ],
-        "synonym_groups": null,
-        "exempelmening": "Hon sprang <font color=\"#3498db\">geschwint</font> upp för trapporna innan bussen skulle gå.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    },
-    {
-      "noteId": 1780080622902,
-      "ord": "kompendium",
-      "facit": "sammanfattande bokhäfte, kortfattad handbok<br><img alt=\"webp image\" src=\"paste_1759062989960.webp\">",
-      "facit_signal": null,
-      "kort": {
-        "huvudbetydelse": "Kort sammanfattning av ett ämne, ofta för högskolestudier ; En kortfattad lärobok ; (på en kamera) skydd mot motljus",
-        "register": "neutral, neutral ; neutral, neutral ; fackspråklig, neutral, teknik",
-        "synonymer": [
-          "sammandrag",
-          "≈≈ lärobok",
-          "motljusskydd"
-        ],
-        "synonym_groups": [
-          [
-            "sammandrag"
-          ],
-          [
-            "≈≈ lärobok"
-          ],
-          [
-            "motljusskydd"
-          ]
-        ],
-        "exempelmening": "Han läste igenom hela <font color=\"#3498db\">kompendiet</font> kvällen före tentan.",
-        "etymologi": null
-      },
-      "verdikt": null,
-      "anmarkning": null
-    }
-  ]
+ "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+ "skriven_av": "skrivare-a-2026-09-05",
+ "granskare": "blindgranskare-nya-2026-09-06",
+ "poster": [
+  {
+   "noteId": 1780080622901,
+   "ord": "abbedissa",
+   "facit": "klosterförestånderska",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kvinna som är chef för ett nunnekloster",
+    "register": "neutral, neutral, religion",
+    "synonymer": [
+     "föreståndarinna"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "<font color=\"#3498db\">Abbedissan</font> ledde klostrets systrar i den dagliga bönen.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'kvinnlig föreståndare för nunnekloster' — kortet stämmer. Ingen betydelse saknas (SO 1, SAOL 1). 'föreståndarinna' inleder SAOL:s definition ('föreståndarinna för kloster'), alltså källbelagd och pekar på rätt betydelse; att ordet är något vidare är godtagbart enligt regeln från 2026-08-29 (närmaste ord, inte tvåvägsutbyte). Register och exempelmening OK."
+  },
+  {
+   "noteId": 1780080622889,
+   "ord": "bussarong",
+   "facit": "klädesplagg<div><img src=\"paste-e37574cf72729fe9814425c2e010f203ab0149c1.webp\"><br></div>",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Ett löst skjortliknande plagg med öppning vid halsen -- ursprungligen sjömanskläder, i dag ett bredare ord för sådana plagg",
+    "register": "neutral, neutral",
+    "synonymer": [
+     "≈≈ skjorta"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han bar en blå <font color=\"#3498db\">bussarong</font> med öppen krage till jobbet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: 'ett skjortliknande överdragsplagg <<ursprungligen för sjömän; numera ofta allmännare om löst sittande plagg med sprund i halsen>>' — kortet bär både grundbetydelsen och hela definitionstillägget. En betydelse i SO och SAOL, inget saknas. '≈≈ skjorta' är en rimlig kategori (Wiktionary: 'vid arbetsskjorta eller överdragsblus'). Egen, konkret exempelmening med highlight."
+  },
+  {
+   "noteId": 1780080622872,
+   "ord": "fibromyalgi",
+   "facit": "kroniskt smärttillstånd",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "En sjukdom som ger ständig smärta i muskler och senor, vanligast hos kvinnor som kan få barn",
+    "register": "fackspråklig, neutral, medicin",
+    "synonymer": [
+     "≈≈ sjukdom"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hennes <font color=\"#3498db\">fibromyalgi</font> gjorde att hon vaknade öm i hela kroppen varje morgon.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO: '(tillstånd av) kronisk smärta i muskler och senfästen <<som främst drabbar kvinnor i fertil ålder>>' — kortet återger både betydelsen och definitionstillägget ('vanligast hos kvinnor som kan få barn'). 'senor' för 'senfästen' är en godtagbar Adam-tal-parafras. En betydelse, inget saknas. Registret fackspråklig/neutral/medicin stämmer."
+  },
+  {
+   "noteId": 1780080622880,
+   "ord": "specificera",
+   "facit": "beskriva noggrannare",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Beskriva något i detalj i stället för bara ungefär ; i en räkning: ange exakt vad varje belopp gäller",
+    "register": "neutral, neutral ; neutral, neutral, ekonomi",
+    "synonymer": [
+     "≈≈ beskrivning",
+     "ange"
+    ],
+    "synonym_groups": [
+     [
+      "≈≈ beskrivning"
+     ],
+     [
+      "ange"
+     ]
+    ],
+    "exempelmening": "Han fick <font color=\"#3498db\">specificera</font> exakt vilka ändringar han ville ha i avtalet.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO har huvudbetydelsen 'ge närmare beskrivning av <<något>>' OCH underbetydelsen 'ange vad olika belopp i en uppställning utgör betalning för' — kortet har båda, korrekt åtskilda med ' ; ' och med egen registerdel per betydelse. 'ange' inleder SO:s andra definition (källbelagd, rätt betydelse) och är kopplad till rätt grupp. '≈≈ beskrivning' är kortets egen definition komprimerad — varken sakligt fel eller intetsägande."
+  },
+  {
+   "noteId": 1780080622886,
+   "ord": "utlåta",
+   "facit": "uttala sig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Säga vad man tycker om något offentligt, ofta med kritik",
+    "register": "formell, neutral",
+    "synonymer": [
+     "yttra sig",
+     "ge sin bedömning"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Rektorn <font color=\"#3498db\">utlät sig</font> skarpt om lärarnas nya schema.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO-lemmat är 'utlåta sig': 'yttra sig <<ofta på ett kritiskt sätt>>' — kortet bär både betydelsen och tillägget ('ofta med kritik'). Synonymerna 'yttra sig' och 'ge sin bedömning' står ordagrant i SAOL. Exempelmeningen använder den reflexiva formen korrekt ('utlät sig') och är highlightad. Ingen betydelse saknas (SO 1, SAOL 1). 'formell' är en försvarbar bedömning för ett ord i släkt med 'utlåtande'."
+  },
+  {
+   "noteId": 1780080622891,
+   "ord": "antiklerikal",
+   "facit": "prästfientlig",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Motståndare till kyrkan och dess makt i samhället",
+    "register": "neutral, neutral, religion",
+    "synonymer": [
+     "≈≈ motståndare"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Han kallade sig <font color=\"#3498db\">antiklerikal</font> och vägrade gå i kyrkan.",
+    "etymologi": null
+   },
+   "verdikt": "underkand",
+   "anmarkning": "FEL ORDKLASS I HUVUDBETYDELSEN. Både SO och SAOL har 'antiklerikal' som ADJEKTIV — SO: 'som är motståndare till kyrkan'. Kortet definierar ordet som ett SUBSTANTIV ('Motståndare till kyrkan och dess makt i samhället') och förstärker felet med '≈≈ motståndare', en person-kategori för ett adjektiv. Facit ('prästfientlig') är också ett adjektiv, så kortet tränar fel svarsform inför ORD-delen. Borde vara: 'Som motsätter sig kyrkans och prästerskapets makt i samhället', med t.ex. '≈ prästfientlig' (redaktionellt belagd på synonymer.se: prästfientlig, kyrkofientlig) i stället för substantivkategorin."
+  },
+  {
+   "noteId": 1780080622896,
+   "ord": "geschwint",
+   "facit": "snabbt",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Snabbt och utan ansträngning",
+    "register": "vardaglig, neutral",
+    "synonymer": [
+     "snabbt"
+    ],
+    "synonym_groups": null,
+    "exempelmening": "Hon sprang <font color=\"#3498db\">geschwint</font> upp för trapporna innan bussen skulle gå.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "SO och SAOL: 'snabbt och lätt', märkt 'vardagligt' — kortets 'Snabbt och utan ansträngning' återger båda leden, och registret 'vardaglig' matchar källans märkning exakt. Adverbformen är genomgående rätt i definition, synonym och exempelmening. 'snabbt' inleder källans definition. En betydelse, inget saknas."
+  },
+  {
+   "noteId": 1780080622902,
+   "ord": "kompendium",
+   "facit": "sammanfattande bokhäfte, kortfattad handbok<br><img alt=\"webp image\" src=\"paste_1759062989960.webp\">",
+   "facit_signal": null,
+   "kort": {
+    "huvudbetydelse": "Kort sammanfattning av ett ämne, ofta för högskolestudier ; En kortfattad lärobok ; (på en kamera) skydd mot motljus",
+    "register": "neutral, neutral ; neutral, neutral ; fackspråklig, neutral, teknik",
+    "synonymer": [
+     "sammandrag",
+     "≈≈ lärobok",
+     "motljusskydd"
+    ],
+    "synonym_groups": [
+     [
+      "sammandrag"
+     ],
+     [
+      "≈≈ lärobok"
+     ],
+     [
+      "motljusskydd"
+     ]
+    ],
+    "exempelmening": "Han läste igenom hela <font color=\"#3498db\">kompendiet</font> kvällen före tentan.",
+    "etymologi": null
+   },
+   "verdikt": "godkand",
+   "anmarkning": "Alla tre betydelserna i källorna står på kortet: SO 'sammandrag av utförlig framställning <<särsk. i samband med (högre) undervisning>>' plus underbetydelsen 'kortfattad läro- eller handbok', samt SAOL:s egna andra lemma 'motljusskydd på filmkamera'. Rätt separator ' ; ' mellan skilda betydelser, synonym_groups kopplade till rätt betydelse, och 'sammandrag'/'motljusskydd' inleder sina led i SO respektive SAOL."
+  }
+ ]
 }
