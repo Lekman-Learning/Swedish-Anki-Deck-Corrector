@@ -1,0 +1,366 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "skrivare-b2-2026-09-05",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080624616,
+      "ord": "algoritm",
+      "facit": "lösningsprocedur, -schema",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Steg-för-steg-metod för att lösa ett matematiskt problem, till exempel i ett datorprogram",
+        "register": "fackspråklig, neutral, IT",
+        "synonymer": [
+          "instruktionsföljd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Euklides <font color=\"#3498db\">algoritm</font> hittar den största gemensamma delaren till två tal.",
+        "etymologi": "via engelska av medeltidslatin algorismus med samma betydelse; till namnet på den arabiske matematikern al-Chwarizmi (800-talet)"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626491,
+      "ord": "basse",
+      "facit": "rekryt, tölp",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En vanlig soldat utan grad ; en ohyfsad, grov man eller pojke",
+        "register": "ngt ålderdomlig, nedsättande",
+        "synonymer": [
+          "menig värnpliktig",
+          "≈≈ ohyfsad person"
+        ],
+        "synonym_groups": [
+          [
+            "menig värnpliktig"
+          ],
+          [
+            "≈≈ ohyfsad person"
+          ]
+        ],
+        "exempelmening": "Ivan var en gång en <font color=\"#3498db\">basse</font> i den svenska armén.",
+        "etymologi": "jfr fornsvenska basse 'vildgalt'; svensk dialekt även 'stor oxe; grovt vuxen karl'; jfr ursprung till bjässe"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626597,
+      "ord": "desinficera",
+      "facit": "smittrena",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Rengöra så att smittämnen oskadliggörs",
+        "register": "neutral, neutral, medicin",
+        "synonymer": [
+          "desinfektera",
+          "rena"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sjuksköterskan skyndade sig att <font color=\"#3498db\">desinficera</font> såret innan hon lade om det.",
+        "etymologi": "till desinfektion"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627148,
+      "ord": "homofon",
+      "facit": "likljudande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ord som låter likadant som ett annat men stavas annorlunda och oftast betyder något annat ; om musik: har bara en ton i taget som bär melodin, med resten som stöd",
+        "register": "fackspråklig, neutral, lingvistik ; fackspråklig, neutral, musik",
+        "synonymer": [
+          "≈≈ ord",
+          "≈≈ musikstil"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ ord"
+          ],
+          [
+            "≈≈ musikstil"
+          ]
+        ],
+        "exempelmening": "Orden \"själ\", \"skäl\" och \"stjäl\" är <font color=\"#3498db\">homofoner</font>.",
+        "etymologi": "av grekiska homo- 'lika' och foné 'ljud' -- alltså 'lika ljudande'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624081,
+      "ord": "kiropraktor",
+      "facit": "kotknackare",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Behandlare som arbetar med ryggrad och leder med händerna",
+        "register": "neutral, neutral, medicin",
+        "synonymer": [
+          "≈≈ terapeut"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En <font color=\"#3498db\">kiropraktor</font> behandlade hennes ryggsmärtor.",
+        "etymologi": "av engelska chiropractor med samma betydelse"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624332,
+      "ord": "kvissla",
+      "facit": "hudakne<br><a href=\"https://www.google.com/imgres?q=kvissla&amp;imgurl=https%3A%2F%2Fimages-bonnier.imgix.net%2Ffiles%2Fifo%2Fproduction%2Fbehandling-af-akne.jpg%3Fauto%3Dcompress%2Cformat%26w%3D1024%25201024w&amp;imgrefurl=https%3A%2F%2Fiform.se%2Fhalsa%2Fskonhet%2Fta-bort-akne-och-finnar&amp;docid=el7tBagO1BfqQM&amp;tbnid=pP9yYGm0Vu_oxM&amp;vet=12ahUKEwiZ-O-Fh8uLAxVzFxAIHTvaNksQM3oECGYQAA..i&amp;w=2000&amp;h=1340&amp;hcb=2&amp;ved=2ahUKEwiZ-O-Fh8uLAxVzFxAIHTvaNksQM3oECGYQAA\"><div><div><div><img alt=\"Akne kan dyka upp hela livet – få hjälp ...\" src=\"paste-25f96fe259b439682bb631f88c74cd57ac25ff18.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Liten finne i huden",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "blemma",
+          "finne"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han fick en irriterande <font color=\"#3498db\">kvissla</font> i pannan precis innan skolfotograferingen.",
+        "etymologi": "bildn. till fornsvenska kvisa 'blemma; böld'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628068,
+      "ord": "rasera",
+      "facit": "få ngt att rasa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Riva ned eller låta falla sönder, så att något rasar helt samman ; förstöra något som inte går att ta på, t.ex. någons världsbild",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "riva",
+          "förstöra",
+          "jämna med marken",
+          "≈≈ förstöra"
+        ],
+        "synonym_groups": [
+          [
+            "riva",
+            "förstöra",
+            "jämna med marken"
+          ],
+          [
+            "≈≈ förstöra"
+          ]
+        ],
+        "exempelmening": "Flera byggnader <font color=\"#3498db\">raserades</font> helt vid jordskalvet.",
+        "etymologi": "av tyska rasieren 'rasera; raka'; till latin rådere 'skrapa'; jfr ursprung till radera"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626074,
+      "ord": "totem",
+      "facit": "kultföremål",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ett djur, en växt eller naturföreteelse som en grupp känner sig mystiskt förbunden med och ser som sin beskyddare",
+        "register": "fackspråklig, neutral, religion",
+        "synonymer": [
+          "≈≈ beskyddare"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Örnen var stammens <font color=\"#3498db\">totem</font>, en symbol för styrka.",
+        "etymologi": "av engelska totem med samma betydelse; ur nordamerikanskt indianspråk"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629049,
+      "ord": "vinsch",
+      "facit": "lyftkran<br><a href=\"https://www.google.com/imgres?q=vinsch&amp;imgurl=https%3A%2F%2Fbamseprodukter.se%2Fwp-content%2Fuploads%2F2023%2F10%2FArdenner_1600_Skogsvinsch_Handvinsch.jpg&amp;imgrefurl=https%3A%2F%2Fbamseprodukter.se%2Fprodukt%2Fskogsbruk%2Flunning-vinschning%2Fardenner-1600-handvinsch%2F&amp;docid=NHXiO0PhzC5YgM&amp;tbnid=CYtfoFQmMGEzbM&amp;vet=12ahUKEwi4nqvYwMmLAxWJXfEDHfTCJVIQM3oECHEQAA..i&amp;w=1200&amp;h=800&amp;hcb=2&amp;ved=2ahUKEwi4nqvYwMmLAxWJXfEDHfTCJVIQM3oECHEQAA\"><div><div><div><img alt=\"Ardenner 1600 Handvinsch | Skogsvinsch ...\" src=\"images-be6e80bcee97f5ac22db076c32c033a5b7f8321e.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Maskin som drar eller lyfter last med en lina som rullas upp",
+        "register": "neutral, neutral, teknik",
+        "synonymer": [
+          "vindspel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Vinscharna</font> skramlade när lasten drogs upp.",
+        "etymologi": "av engelska winch med samma betydelse; besläktat med vinka"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625116,
+      "ord": "alstra",
+      "facit": "skapa, generera, vålla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Få något -- t.ex. värme, elektricitet eller en känsla -- att uppstå, sällan en vanlig produkt",
+        "register": "formell, neutral",
+        "synonymer": [
+          "skapa",
+          "frambringa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Genom friktionen mellan de två materialen <font color=\"#3498db\">alstras</font> statisk elektricitet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625152,
+      "ord": "autokton",
+      "facit": "inhemsk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Uppvuxen på samma plats där den nu finns, om människor eller djur ; om jordlager: bildat av material från platsen själv",
+        "register": "formell, neutral ; fackspråklig, neutral, geologi",
+        "synonymer": [
+          "inhemsk",
+          "≈≈ ortsbildad"
+        ],
+        "synonym_groups": [
+          [
+            "inhemsk"
+          ],
+          [
+            "≈≈ ortsbildad"
+          ]
+        ],
+        "exempelmening": "De <font color=\"#3498db\">autoktona</font> befolkningsgrupperna hade bott där i århundraden.",
+        "etymologi": "till auto- och grekiska khthon 'jord'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624195,
+      "ord": "avglans",
+      "facit": "återsken",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Svagt ljus som speglas från något ; en svag antydan om något som en gång funnits",
+        "register": "ngt ålderdomlig, neutral ; högtidlig, neutral",
+        "synonymer": [
+          "återsken",
+          "svag återstod"
+        ],
+        "synonym_groups": [
+          [
+            "återsken"
+          ],
+          [
+            "svag återstod"
+          ]
+        ],
+        "exempelmening": "Spegeln hade förlorat sin <font color=\"#3498db\">avglans</font> efter många års användning.",
+        "etymologi": "av förleden 'av-' och 'glans' -- alltså den svaga glans som är kvar"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625969,
+      "ord": "blickfång",
+      "facit": "synfält",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det som blicken eller uppmärksamheten täcker nu ; det som drar till sig blicken, med eller utan avsikt",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "synfält",
+          "≈≈ dragplåster"
+        ],
+        "synonym_groups": [
+          [
+            "synfält"
+          ],
+          [
+            "≈≈ dragplåster"
+          ]
+        ],
+        "exempelmening": "Den nya fabriken hamnade rakt i grannarnas <font color=\"#3498db\">blickfång</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626006,
+      "ord": "chiffer",
+      "facit": "hemligt språk, meddelande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Meddelande skrivet så att utomstående inte förstår det utan rätt kodnyckel ; sammanflätade bokstäver som bildar ett namntecken",
+        "register": "neutral, neutral ; fackspråklig, neutral, historia",
+        "synonymer": [
+          "hemlig skrift",
+          "≈≈ monogram"
+        ],
+        "synonym_groups": [
+          [
+            "hemlig skrift"
+          ],
+          [
+            "≈≈ monogram"
+          ]
+        ],
+        "exempelmening": "Kryptologen lyckades forcera det tyska <font color=\"#3498db\">chiffret</font> efter månader av arbete.",
+        "etymologi": "av franska chiffre 'siffra; chiffer', äldre 'noll'; av arabiska sifr 'tom; noll'; jfr ursprung till siffra"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080622931,
+      "ord": "desinformation",
+      "facit": "vilseledande information",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vilseledande information som sprids med avsikt",
+        "register": "neutral, negativ",
+        "synonymer": [
+          "≈≈ propaganda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Regeringen anklagades för att sprida <font color=\"#3498db\">desinformation</font> om giftutsläppen.",
+        "etymologi": "av engelska disinformation med samma betydelse; till latin dis- 'isär' och information"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080622569,
+      "ord": "feedback",
+      "facit": "återkoppling",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Signal som går tillbaka till sändaren och styr det som händer sedan ; svar eller synpunkter på en idé eller prestation",
+        "register": "fackspråklig, neutral, teknik ; neutral, neutral",
+        "synonymer": [
+          "återkoppling",
+          "respons"
+        ],
+        "synonym_groups": [
+          [
+            "återkoppling"
+          ],
+          [
+            "respons"
+          ]
+        ],
+        "exempelmening": "Auditiv <font color=\"#3498db\">feedback</font> är nödvändig för att barn ska utveckla sitt tal.",
+        "etymologi": "av engelska feedback med samma betydelse, till feed 'mata, föda' och back 'tillbaka'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

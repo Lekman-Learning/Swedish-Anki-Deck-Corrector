@@ -1,0 +1,115 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "skrivare-b4-2026-09-05",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080620922,
+      "ord": "ansätta",
+      "facit": "plåga, besvära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Plåga eller pressa någon hårt ; (fackspråk) montera fast något, eller börja spela en ton",
+        "register": "litterär, negativ ; fackspråklig, neutral",
+        "synonymer": [
+          "bestorma",
+          "börja"
+        ],
+        "synonym_groups": [
+          [
+            "bestorma"
+          ],
+          [
+            "börja"
+          ]
+        ],
+        "exempelmening": "Hon <font color=\"#3498db\">ansatte</font> honom med sina ständiga frågor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620820,
+      "ord": "ryd",
+      "facit": "röjning i skogen",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Uppodlad mark eller glänta skapad genom skogsröjning",
+        "register": "dialektal, neutral",
+        "synonymer": [
+          "≈≈ röjd mark"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter ett hårt arbete med yxan hade han skapat en prydlig <font color=\"#3498db\">ryd</font> för sin nya stuga.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620447,
+      "ord": "auktor",
+      "facit": "(lit.) upphovsman",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Upphovsman till ett verk ; den som först gav en organism dess vetenskapliga namn",
+        "register": "litterär, neutral ; fackspråklig, neutral, biologi",
+        "synonymer": [
+          "upphovsman",
+          "författare",
+          "≈≈ namngivare"
+        ],
+        "synonym_groups": [
+          [
+            "upphovsman",
+            "författare"
+          ],
+          [
+            "≈≈ namngivare"
+          ]
+        ],
+        "exempelmening": "Verkets <font color=\"#3498db\">auktor</font> är okänd.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620403,
+      "ord": "bigami",
+      "facit": "tvegifte",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att vara gift med två personer samtidigt",
+        "register": "fackspråklig, neutral, juridik",
+        "synonymer": [
+          "tvegifte"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han anklagades för <font color=\"#3498db\">bigami</font> efter att ha gift sig med en kvinna medan han fortfarande var gift med en annan.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080621619,
+      "ord": "föhn",
+      "facit": "läsides vind i bergskedja<br><a href=\"https://www.google.com/imgres?q=f%C3%B6hn&amp;imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fc1%2FFoehn_-_Fonh.png%2F200px-Foehn_-_Fonh.png&amp;imgrefurl=https%3A%2F%2Fsv.wikipedia.org%2Fwiki%2FF%25C3%25B6hn&amp;docid=xP5uXCUdyhtEpM&amp;tbnid=-tGphyJVIshSyM&amp;vet=12ahUKEwib6fjmhvGLAxU0AhAIHdpiIysQM3oECGYQAA..i&amp;w=200&amp;h=143&amp;hcb=2&amp;ved=2ahUKEwib6fjmhvGLAxU0AhAIHdpiIysQM3oECGYQAA\"><div><div><div><img alt=\"Föhn – Wikipedia\" src=\"paste-72c3728b8b322f42add77141d779db9cf384d9bf.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Varm, torr vind på läsidan av en bergskedja, särskilt i Alperna",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "varm fallvind"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vädret hade blivit mycket varmare på grund av <font color=\"#3498db\">föhnvindarna</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

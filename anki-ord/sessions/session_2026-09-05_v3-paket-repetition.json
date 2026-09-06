@@ -1,0 +1,524 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "claude-spar-b-2026-09-05",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080629412,
+      "ord": "gå i clinch",
+      "facit": "gå i närkamp",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Hamna i öppen konflikt eller närkamp med någon",
+        "register": "vardaglig, neutral",
+        "synonymer": [
+          "närkamp",
+          "≈≈ konflikt"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De <font color=\"#3498db\">gick i clinch</font> när båda ville kontrollera matchen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627060,
+      "ord": "tungsinne",
+      "facit": "svårmod",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tung sorgsenhet och nedstämdhet som ofta är ett drag i personligheten",
+        "register": "litterär, negativ",
+        "synonymer": [
+          "svårmod",
+          "dysterhet",
+          "≈ melankoli"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter förlusten föll han ner i ett djupt <font color=\"#3498db\">tungsinne</font> som varade i månader.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624844,
+      "ord": "kamouflage",
+      "facit": "skyddsmaskering",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Maskering som gör att något inte upptäcks ; Något som döljer den verkliga avsikten bakom en handling",
+        "register": "neutral, neutral, militär ; neutral, neutral",
+        "synonymer": [
+          "skyddsförklädnad",
+          "täckmantel"
+        ],
+        "synonym_groups": [
+          [
+            "skyddsförklädnad"
+          ],
+          [
+            "täckmantel"
+          ]
+        ],
+        "exempelmening": "Soldaten använde <font color=\"#3498db\">kamouflage</font> för att smälta in i skogen.",
+        "etymologi": "av franska camouflage med samma betydelse, till kamouflera"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627240,
+      "ord": "kontemplation",
+      "facit": "tankegrubbleri",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att sjunka in i djupa, stilla tankar",
+        "register": "formell, neutral",
+        "synonymer": [
+          "djup begrundan"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Munken tillbringade timmar varje morgon i rofylld <font color=\"#3498db\">kontemplation</font>.",
+        "etymologi": "av latin contempla´tio 'betraktande; övervägande'; jfr ursprung till tempel"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080620580,
+      "ord": "nexus",
+      "facit": "förbindelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Central koppling som binder samman flera saker ; bandet mellan satsens subjekt och predikat",
+        "register": "formell, neutral ; fackspråklig, neutral, lingvistik",
+        "synonymer": [
+          "≈≈ knutpunkt",
+          "≈≈ satsband"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ knutpunkt"
+          ],
+          [
+            "≈≈ satsband"
+          ]
+        ],
+        "exempelmening": "Hamnstaden var ett viktigt <font color=\"#3498db\">nexus</font> mellan de två ländernas handel.",
+        "etymologi": "av latin nex´us 'knytning'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626623,
+      "ord": "prognos",
+      "facit": "gissad framtidsbild",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En förutsägelse om framtiden, byggd på fakta man redan vet",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "förutsägelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Resultatet låg något över fjolårets <font color=\"#3498db\">prognos</font>.",
+        "etymologi": "av grekiska pro´gnosis med samma betydelse, till pro 'i förväg' och gigno´skein '(lära) känna'; jfr ursprung till diagnos"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626788,
+      "ord": "prövning",
+      "facit": "svår händelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "En psykiskt tung situation man tvingas ta sig igenom ; Juridisk behandling och bedömning av ett ärende ; Tentamen",
+        "register": "neutral, negativ ; formell, neutral, juridik ; neutral, neutral",
+        "synonymer": [
+          "psykisk påfrestning",
+          "≈≈ rättsprocess",
+          "tentamen"
+        ],
+        "synonym_groups": [
+          [
+            "psykisk påfrestning"
+          ],
+          [
+            "≈≈ rättsprocess"
+          ],
+          [
+            "tentamen"
+          ]
+        ],
+        "exempelmening": "Att vara nybliven förälder är många gånger en <font color=\"#3498db\">prövning</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627230,
+      "ord": "psykos",
+      "facit": "vanföreställning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Psykisk sjukdom där verklighetsuppfattningen förändras och insikten om att man är sjuk saknas ; tillstånd i en grupp där handlandet helt styrs av känslan",
+        "register": "fackspråklig, neutral, medicin ; neutral, neutral, psykologi",
+        "synonymer": [
+          "≈≈ sjukdomstillstånd",
+          "≈≈ masshysteri"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ sjukdomstillstånd"
+          ],
+          [
+            "≈≈ masshysteri"
+          ]
+        ],
+        "exempelmening": "Han drabbades av en <font color=\"#3498db\">psykos</font> efter flera sömnlösa veckor.",
+        "etymologi": "av grekiska psy´khosis med samma betydelse; till psyke"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080621662,
+      "ord": "rekrytera",
+      "facit": "anställa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Söka upp och välja ut folk till ett jobb, ett uppdrag eller liknande",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "nyanställa"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Företaget behövde <font color=\"#3498db\">rekrytera</font> ny personal inför den stora expansionen.",
+        "etymologi": "av franska recruter med samma betydelse; jfr ursprung till rekryt"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628872,
+      "ord": "statistisk",
+      "facit": "siffermässig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som bygger på insamlade sifferuppgifter och deras analys ; som rör ämnet statistik",
+        "register": "fackspråklig, neutral, matematik ; fackspråklig, neutral, matematik",
+        "synonymer": [
+          "≈≈ sifferbaserad",
+          "≈≈ statistikrelaterad"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ sifferbaserad"
+          ],
+          [
+            "≈≈ statistikrelaterad"
+          ]
+        ],
+        "exempelmening": "Forskarna presenterade sina <font color=\"#3498db\">statistiska</font> beräkningar i rapporten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626163,
+      "ord": "a och o",
+      "facit": "det viktigaste, (alfa o omega)",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Det viktigaste och mest avgörande",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "det viktigaste"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kundnöjdheten är <font color=\"#3498db\">a och o</font> för butikens överlevnad.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627267,
+      "ord": "ackumulera",
+      "facit": "samla ihop",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Samla på hög så att mängden växer över tid",
+        "register": "formell, neutral",
+        "synonymer": [
+          "hopa",
+          "samla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vissa tungmetaller <font color=\"#3498db\">ackumuleras</font> i kroppen över tid.",
+        "etymologi": "av latin accumula´re 'hopa; stapla', till cum´ulus 'stapel; mängd'; jfr ursprung till cumulus"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625267,
+      "ord": "crescendo",
+      "facit": "stigande tonstyrka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Musik som gradvis blir starkare ; avsnittet i stycket som ska spelas så",
+        "register": "fackspråklig, neutral, musik ; fackspråklig, neutral, musik",
+        "synonymer": [
+          "med växande tonstyrka",
+          "≈≈ musikavsnitt"
+        ],
+        "synonym_groups": [
+          [
+            "med växande tonstyrka"
+          ],
+          [
+            "≈≈ musikavsnitt"
+          ]
+        ],
+        "exempelmening": "Dirigenten ropade \"<font color=\"#3498db\">crescendo</font>!\" för att stärka orkesterns ljudstyrka.",
+        "etymologi": "av italienska crescendo med samma betydelse, till crescere 'växa'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624704,
+      "ord": "deja vu",
+      "facit": "känsla av återupplevelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Känsla av att ha upplevt något förut",
+        "register": "vardaglig, neutral, psykologi",
+        "synonymer": [
+          "≈≈ igenkänningskänsla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Hon fick en stark känsla av <font color=\"#3498db\">deja vu</font> när hon återvände till sitt gamla klassrum.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080622788,
+      "ord": "desertera",
+      "facit": "rymma från krigstjänst",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Smita från sin plats i militären mitt under ett krig",
+        "register": "neutral, negativ, militär",
+        "synonymer": [
+          "rymma från krigstjänst"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Sedan fienden intagit huvudstaden började hela bataljoner <font color=\"#3498db\">desertera</font>.",
+        "etymologi": "av franska déserter med samma betydelse, till désert, latin deser´tus 'övergiven'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619949,
+      "ord": "endotermisk",
+      "facit": "reaktion under upptagande av värme",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Om kemisk reaktion: tar upp värme från omgivningen och gör det kallare",
+        "register": "fackspråklig, neutral, kemi",
+        "synonymer": [
+          "≈≈ värmeupptagande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att lösa upp ammoniumklorid i vatten är en <font color=\"#3498db\">endotermisk</font> reaktion som gör lösningen kall.",
+        "etymologi": "till grekiska endo 'inuti' och ther´me 'värme'; jfr ursprung till termometer, termos m.fl."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627145,
+      "ord": "genie",
+      "facit": "skyddsande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skyddsande som tänktes bära en människas innersta väsen och bättre jag",
+        "register": "högtidlig, neutral",
+        "synonymer": [
+          "ande",
+          "genius"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Mozarts skapande <font color=\"#3498db\">genie</font> visade sig redan när han var barn.",
+        "etymologi": "av latin gen´ius 'skyddsande'; jfr ursprung till geni"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626489,
+      "ord": "instruktiv",
+      "facit": "lärorik",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som lär ut något tydligt",
+        "register": "formell, positiv",
+        "synonymer": [
+          "lärorik",
+          "upplysande"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Läraren gav <font color=\"#3498db\">instruktiva</font> och roliga exempel som gjorde grammatiken lätt att förstå.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625390,
+      "ord": "irrelevant",
+      "facit": "ovidkommande",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Som saknar betydelse för det man talar om",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "ovidkommande",
+          "betydelselös"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Anmärkningen var intressant men helt <font color=\"#3498db\">irrelevant</font> för fallet.",
+        "etymologi": "till latin in´- 'o-, ej' och relevant"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624425,
+      "ord": "kollaps",
+      "facit": "sammanbrott",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att något plötsligt faller ihop helt och slutar fungera",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "sammanbrott"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Transportsystemet drabbades av <font color=\"#3498db\">kollaps</font> vid elavbrottet.",
+        "etymologi": "av latin colla´psus med samma betydelse, till colla´bi 'falla ihop'; jfr ursprung till kollabera"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619542,
+      "ord": "morän",
+      "facit": "glaciärbildat grus<br><img src=\"paste-8007bf0b1364a33dbeaae41beb070b23343b4174.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Blandning av lera, grus och stora stenar som isen lämnat efter sig",
+        "register": "fackspråklig, neutral, geologi",
+        "synonymer": [
+          "≈≈ istransporterat material"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det kuperade landskapet bestod av <font color=\"#3498db\">morän</font> som isen lämnat efter sig för tusentals år sedan.",
+        "etymologi": "av franska moraine med samma betydelse; av fransk dialekt morena 'jordvall'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627656,
+      "ord": "narr",
+      "facit": "<img src=\"paste-fd4b2d1ce3f7dfd4bd89a0d8f4284f73090397a9.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Löjlig och självgod person som andra skrattar åt ; anställd skämtare vid ett hov i äldre tid",
+        "register": "neutral, nedsättande ; neutral, neutral, historia",
+        "synonymer": [
+          "≈≈ löjefigur",
+          "gyckelmakare"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ löjefigur"
+          ],
+          [
+            "gyckelmakare"
+          ]
+        ],
+        "exempelmening": "Den gamle <font color=\"#3498db\">narren</font> trodde att flickan verkligen hade fallit för hans charm.",
+        "etymologi": "av tyska Narr, lågtyska narre med samma betydelse; av okänt ursprung"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627418,
+      "ord": "profetia",
+      "facit": "förutsägelse",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Förutsägelse om vad som ska hända, ofta med religiös grund",
+        "register": "ngt ålderdomlig, neutral, religion",
+        "synonymer": [
+          "förutsägelse"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Enligt legenden hade den gamla kvinnan <font color=\"#3498db\">profetians</font> gåva och kunde se in i framtiden.",
+        "etymologi": "av grekiska prophetei´a; till profet"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625570,
+      "ord": "utförlig",
+      "facit": "grundlig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tar med även de minsta detaljerna och blir därför ganska lång",
+        "register": "neutral, neutral",
+        "synonymer": [
+          "≈≈ grundlig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han gav en <font color=\"#3498db\">utförlig</font> beskrivning av olyckan för polisen.",
+        "etymologi": "efter tyska ausführlich med samma betydelse; jfr ursprung till föra"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627537,
+      "ord": "versfot",
+      "facit": "grupp av stavelser som ut­gör minsta rytmiska enhet i vers",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Minsta rytmiska enhet i en vers, en grupp betonade och obetonade stavelser",
+        "register": "fackspråklig, neutral, litteraturvetenskap",
+        "synonymer": [
+          "≈≈ stavelsegrupp"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En anapest är en <font color=\"#3498db\">versfot</font> med två obetonade och en betonad stavelse.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

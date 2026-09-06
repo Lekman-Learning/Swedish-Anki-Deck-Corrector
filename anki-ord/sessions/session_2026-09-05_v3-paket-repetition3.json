@@ -1,0 +1,111 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "skrivare-b3-2026-09-05",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080629226,
+      "ord": "demolera",
+      "facit": "förstöra",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slå sönder eller förstöra ett större föremål helt och hållet",
+        "register": "vardaglig, negativ",
+        "synonymer": [
+          "förstöra",
+          "rasera",
+          "riva"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Bilen blev helt <font color=\"#3498db\">demolerad</font> vid krocken.",
+        "etymologi": "av latin demoli´ri med samma betydelse, till de 'ned' och moli´ri 'bygga; upprätta'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625758,
+      "ord": "korrosion",
+      "facit": "angrepp på metall",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Att metall fräts sönder av kemisk påverkan ; att berggrund nöts ned av yttre krafter",
+        "register": "fackspråklig, neutral, kemi ; fackspråklig, neutral, geologi",
+        "synonymer": [
+          "frätning",
+          "rostning",
+          "≈≈ nednötning"
+        ],
+        "synonym_groups": [
+          [
+            "frätning",
+            "rostning"
+          ],
+          [
+            "≈≈ nednötning"
+          ]
+        ],
+        "exempelmening": "<font color=\"#3498db\">Korrosion</font> på järndelarna gick snabbare i den fuktiga miljön.",
+        "etymologi": "till korrodera"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080621261,
+      "ord": "fibrös",
+      "facit": "trådaktig",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Uppbyggd av sega fibrer eller bindväv",
+        "register": "fackspråklig, neutral, biologi",
+        "synonymer": [
+          "fibrig",
+          "trådig"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Köttbiten var seg och <font color=\"#3498db\">fibrös</font>, full av senor som var svåra att tugga.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080619933,
+      "ord": "attribuera",
+      "facit": "tillskriva",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Peka ut vem som troligen skapat ett verk som saknar signatur",
+        "register": "fackspråklig, neutral",
+        "synonymer": [
+          "hänföra"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Målningen har <font color=\"#3498db\">attribuerats</font> till Rembrandt.",
+        "etymologi": "Latin attribuere 'tilldela' — samma rot som attribut."
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080621359,
+      "ord": "sofism",
+      "facit": "spetsfundighet",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skenbart logiskt men egentligen felaktigt resonemang",
+        "register": "fackspråklig, neutral, filosofi",
+        "synonymer": [
+          "spetsfundighet",
+          "felslut"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Att hävda att alla hundar är djur, därför är alla djur hundar, är en <font color=\"#3498db\">sofism</font>.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}
