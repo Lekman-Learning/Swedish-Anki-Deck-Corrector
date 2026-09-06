@@ -1,0 +1,486 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": null,
+  "poster": [
+    {
+      "noteId": 1780080622753,
+      "ord": "mobilier",
+      "facit": "lösöre",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Lös egendom, det man kan flytta med sig",
+        "register": "formell, neutral, juridik",
+        "synonymer": [
+          "lösöre",
+          "bohag"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid bouppteckningen värderades fastigheten för sig och <font color=\"#3498db\">mobilier</font> för sig.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627707,
+      "ord": "vimla",
+      "facit": "krylla, myllra, överflöda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Röra sig omkring i stor och rörig mängd ; Synas ute bland folk i nöjeslivet ; Vara full av en rörlig mängd, om en plats",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ myllra",
+          "mingla",
+          "≈≈ vara full av"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ myllra"
+          ],
+          [
+            "mingla"
+          ],
+          [
+            "≈≈ vara full av"
+          ]
+        ],
+        "exempelmening": "Människorna <font color=\"#3498db\">vimlade</font> omkring på torget.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624764,
+      "ord": "huttla med något",
+      "facit": "tveka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vela och tveka inför ett beslut ; ta lätt på något och sköta det halvhjärtat",
+        "register": "vardaglig, lätt negativ, allmän",
+        "synonymer": [
+          "≈≈ vela",
+          "≈≈ ta lätt på"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ vela"
+          ],
+          [
+            "≈≈ ta lätt på"
+          ]
+        ],
+        "exempelmening": "Chefen <font color=\"#3498db\">huttlade</font> i veckor innan han bestämde sig, och sedan skötte han hela flytten halvhjärtat.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628857,
+      "ord": "krumbukta",
+      "facit": "slingra sig; göra sig till",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Slingra sig fram i bukter ; Buga och göra sig till ; Göra undanflykter för att slippa svara",
+        "register": "vardaglig, lätt negativ, allmän",
+        "synonymer": [
+          "≈≈ slingra sig",
+          "buga",
+          "≈≈ göra undanflykter"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ slingra sig"
+          ],
+          [
+            "buga"
+          ],
+          [
+            "≈≈ göra undanflykter"
+          ]
+        ],
+        "exempelmening": "Han <font color=\"#3498db\">krumbuktade</font> sig ur frågan i stället för att svara rakt.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628237,
+      "ord": "verst",
+      "facit": "gammalt rysklängdmåt,&nbsp;≈ 1 km",
+      "facit_signal": "facit antyder 2 betydelse(r), kortet har 1 -- avgör om någon saknas",
+      "kort": {
+        "huvudbetydelse": "Gammalt ryskt längdmått, drygt en kilometer",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [
+          "≈≈ längdmått"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Byn låg tre <font color=\"#3498db\">verst</font> från floden.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628575,
+      "ord": "gillra",
+      "facit": "sätta upp djurfälla<br><a href=\"https://www.google.com/imgres?q=gillra&amp;imgurl=https%3A%2F%2Fmedia.sporthalsa.se%2Fuploads%2Fsites%2F29%2F2019%2F01%2Ff%25C3%25A4lla.jpg&amp;imgrefurl=https%3A%2F%2Fmaria.sporthalsa.se%2F2019%2F01%2F06%2Fgillra-fallor%2F&amp;docid=qInNGXCh7Jb4pM&amp;tbnid=s7Q94o6SubC4dM&amp;vet=12ahUKEwi0ptfm-sKPAxVWHBAIHRkUDwUQM3oECCAQAA..i&amp;w=275&amp;h=183&amp;hcb=2&amp;ved=2ahUKEwi0ptfm-sKPAxVWHBAIHRkUDwUQM3oECCAQAA\"><div><div><div><img alt=\"Gillra fällor - Dubbelt Så Stark! - En ...\" src=\"paste-8be824d29f39560c6a184faca14dc12f2bac2b4f.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sätta upp en fälla för djur",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ förbereda en fälla"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De fick <font color=\"#3498db\">gillra</font> en råttfälla i källaren.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628836,
+      "ord": "rött öre",
+      "facit": "försumbar summa",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Minsta tänkbara summa pengar",
+        "register": "vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ struntsumma"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter hyran hade han inte ett <font color=\"#3498db\">rött öre</font> kvar.",
+        "etymologi": "öret var Sveriges minsta mynt -- ett rött öre var det i koppar, alltså det minsta av det minsta"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080623364,
+      "ord": "sätesbjudning",
+      "facit": "födsel fötterna först",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Fosterläge där barnet ligger med rumpan nedåt inför förlossningen",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ fosterläge"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vid <font color=\"#3498db\">sätesbjudning</font> kommer barnet med rumpan först i stället för med huvudet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080623708,
+      "ord": "jamb",
+      "facit": "versfot",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Taktenhet i en dikt där en obetonad stavelse följs av en betonad",
+        "register": "fackspråklig, neutral, litteraturvetenskap",
+        "synonymer": [
+          "≈≈ versfot"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Ordet befäl är en <font color=\"#3498db\">jamb</font>: obetonat be-, betonat -fäl.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626776,
+      "ord": "bonbonjär",
+      "facit": "godisskål<br><a href=\"https://www.google.com/imgres?q=bonbonniere&amp;imgurl=https%3A%2F%2Fcdn.newporthome.eu%2Fthumbnail%2F7f%2F5b%2F6f%2F1708528442%2Fbe8d201c21785b5a82a06ae2037242b8_1280x1600.jpg&amp;imgrefurl=https%3A%2F%2Fwww.newporthome.eu%2Fshop%2Fkitchen%2Ftable-settings%2Fbonbonnieres%2Fvanille-bonbonniere&amp;docid=ssbMTgRtGihhzM&amp;tbnid=HBIFyRw0qK6sQM&amp;vet=12ahUKEwjx9vvVsbWMAxWNUlUIHW1KCI0QM3oECB0QAA..i&amp;w=1280&amp;h=1600&amp;hcb=2&amp;ved=2ahUKEwjx9vvVsbWMAxWNUlUIHW1KCI0QM3oECB0QAA\"><div><div><div><img alt=\"Vanille bonbonnière - Newport\" src=\"paste-3bb7ad3ed8af7ab60b8cf9051f06a1b3820d835b.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skål med lock för choklad och sötsaker",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "konfektskål"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "På bordet stod en <font color=\"#3498db\">bonbonjär</font> i slipat glas.",
+        "etymologi": "av franska bonbon 'godis' -- bonbonjären är burken man har bonbonerna i"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080626830,
+      "ord": "smörja kråset",
+      "facit": "äta god mat",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Äta mycket och gott",
+        "register": "vardaglig, skämtsam, allmän",
+        "synonymer": [
+          "≈≈ äta gott"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Efter jobbet unnade han sig att <font color=\"#3498db\">smörja kråset</font> på restaurangen.",
+        "etymologi": "krås är fågelns ätliga inälvor -- att smörja kråset är att fylla sin egen mage"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625911,
+      "ord": "ansa",
+      "facit": "sköta och vårda",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Klippa och sköta om så att något håller formen",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "sköta",
+          "vårda"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Han <font color=\"#3498db\">ansade</font> mustaschen framför spegeln varje morgon.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080624424,
+      "ord": "formalistisk",
+      "facit": "pedantisk",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Överdrivet noga med att följa regler och mallar",
+        "register": "neutral, lätt negativ, allmän",
+        "synonymer": [
+          "≈≈ överdrivet regelstyrd"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Chefen var så <font color=\"#3498db\">formalistisk</font> att han hellre följde blanketten än löste problemet.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628188,
+      "ord": "inte ett skapande(s) grand",
+      "facit": "inte ett dugg",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ingenting alls",
+        "register": "ngt ålderdomlig, neutral, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Det fanns <font color=\"#3498db\">inte ett skapandes grand</font> av hopp kvar.",
+        "etymologi": "grand betyder dammkorn -- inte ens ett dammkorn fanns kvar"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628616,
+      "ord": "överburen",
+      "facit": "(med.) barn från försenad förlossning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Född efter en ovanligt lång graviditet, om ett barn",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ försenad födsel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Barnet var <font color=\"#3498db\">överburet</font> med nästan två veckor.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628458,
+      "ord": "gudsförgäten",
+      "facit": "fullständigt bortglömd o. beklagansvärd plats<br><br>(eng) godforsaken<br><img src=\"paste-49dbd0c163966ab7e475cc45e1498f9fd4380c4f.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Bortglömd och tom på liv, om en plats man tycker synd om",
+        "register": "litterär, negativ, allmän",
+        "synonymer": [
+          "övergiven"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "De bodde i en <font color=\"#3498db\">gudsförgäten</font> håla långt från allfarvägen.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627440,
+      "ord": "plutokrati",
+      "facit": "penningvälde",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Samhälle styrt av de rikaste",
+        "register": "formell, neutral, historia",
+        "synonymer": [
+          "penningvälde",
+          "rikemansvälde"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Kritikerna menade att landet i praktiken styrdes som en <font color=\"#3498db\">plutokrati</font>.",
+        "etymologi": "av grekiska plutos 'rikedom' och kratos 'makt'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080625052,
+      "ord": "pantomim",
+      "facit": "teater med gester<br><a href=\"https://www.google.com/imgres?q=pantomime&amp;imgurl=https%3A%2F%2Fi.mmo.cm%2Fis%2Fimage%2Fmmoimg%2Fmw-product-max%2Fclassic-pantomime-costume--mw-137930-1.jpg&amp;imgrefurl=https%3A%2F%2Fwww.maskworld.com%2Fenglish%2Fdepartment%2Fcostumes-for-couples-groups%2Fcouples-costumes%2Fclassic-pantomime-costume&amp;docid=8FtrMfNmR_0u8M&amp;tbnid=1WpOLrIImMywgM&amp;vet=12ahUKEwiPjKDOp9GLAxUTcfEDHSrEN5IQM3oECH4QAA..i&amp;w=440&amp;h=597&amp;hcb=2&amp;ved=2ahUKEwiPjKDOp9GLAxUTcfEDHSrEN5IQM3oECH4QAA\"><div><div><div><img alt=\"Classic Pantomime Costume - maskworld.com\" src=\"images-2b72f693f1a42d3d5a509c711e6431c28f2ab3d5.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Skådespel utan ord, där allt visas med gester och miner",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "≈≈ skådespel utan ord"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Clownen berättade hela historien som en <font color=\"#3498db\">pantomim</font>, utan ett enda ord.",
+        "etymologi": "av grekiska pantomimos 'den som härmar allt'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629328,
+      "ord": "kopparstick",
+      "facit": "grafikmetod där kopparplåt graveras<br><img src=\"paste-6efd0e093c5c81b3ba609f5b01e3a8a026dce7b5.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Tryckt bild från en graverad kopparplåt",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "grafiskt blad"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Det gamla <font color=\"#3498db\">kopparsticket</font> på väggen föreställde en segelskuta.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627689,
+      "ord": "allé",
+      "facit": "gata eller väg som kantas av planterade träd<br><img src=\"paste-e5b4c0c328ce19bae2f874408b2f6ca1b8776007.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Trädkantad gata eller väg",
+        "register": "neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ trädkantad väg"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "En lång <font color=\"#3498db\">allé</font> av lindar ledde fram till slottet.",
+        "etymologi": "av franska allée, till aller 'gå' -- en allé är något man går längs"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080628524,
+      "ord": "korsgång",
+      "facit": "täckt pelargång som omger klostergård<br><img src=\"paste-fe54bae8cabf9941514e47f1705285a61615f04e.webp\"><br><img src=\"paste-86bd7d03367775ad5b2bb8171396f70fc902b9d3.webp\">",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Täckt gång runt en klostergård, öppen mot gården",
+        "register": "formell, neutral, allmän",
+        "synonymer": [
+          "≈≈ täckt gång"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Munkarna promenerade tyst genom <font color=\"#3498db\">korsgången</font> varje kväll.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080622684,
+      "ord": "vörda",
+      "facit": "hedra och respektera",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Visa djup respekt för någon eller något",
+        "register": "högtidlig, positiv, allmän",
+        "synonymer": [
+          "≈≈ högakta"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Vi <font color=\"#3498db\">vördar</font> minnet av dem som dog för friheten.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080627337,
+      "ord": "teodicé",
+      "facit": "ondskans gudsförklaring",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Försöket att visa att en god och allsmäktig Gud kan finnas trots ondskan i världen",
+        "register": "formell, neutral, filosofi",
+        "synonymer": [
+          "≈≈ gudsförsvar"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "<font color=\"#3498db\">Teodicén</font> går ut på att lidandet inte motbevisar en god Gud.",
+        "etymologi": "av grekiska theos 'gud' och dike 'rätt' -- ordet betyder 'Guds rättfärdigande'"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629347,
+      "ord": "hålla fanan högt",
+      "facit": "kämpa för ngt, inte ge efter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kämpa för och stå upp för något man tror på",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">höll fanan högt</font> för hantverket långt efter att alla andra gett upp.",
+        "etymologi": "fanan bars högst i striden som samlingstecken -- den som håller den högt ger inte upp"
+      },
+      "verdikt": null,
+      "anmarkning": null
+    },
+    {
+      "noteId": 1780080629424,
+      "ord": "inte ha ... till övers för",
+      "facit": "ogilla",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Inte ha någon som helst uppskattning för någon eller något",
+        "register": "neutral, negativ, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Han hade <font color=\"#3498db\">inget till övers för</font> deras sätt att göra affärer.",
+        "etymologi": null
+      },
+      "verdikt": null,
+      "anmarkning": null
+    }
+  ]
+}

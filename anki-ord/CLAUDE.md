@@ -4627,3 +4627,144 @@ känd, felet är känt, och verktyget som hittar det är byggt.
 🎯 **Lärdomen är samma som `--antal`-buggen samma dag och de fyra reglerna
 2 september: en brist som bara beskrivs i CLAUDE.md fortsätter kosta pengar
 tills den blir en kontroll.** Den här stod dokumenterad i två dagar.
+
+
+## 2026-09-06 (kväll): 25 is:review-kort, och arkiveringsspärren som aldrig kunnat köra
+
+Omgång på spår B, `--ko repetition`. 25 kort byggda tidigare under dagen men
+aldrig skrivna. **25 av 25 släppta** efter tre blindgranskningsrundor.
+
+| Runda | Kort | Godkända | Underkända | Kostnad |
+|---|---|---|---|---|
+| paket4 (omskrivna sedan tidigare) | 11 | 11 | 0 (0 %) | 0,50 USD |
+| paket3 | 18 | 17 | 1 (6 %) | 0,69 USD |
+| paket3_trim | 7 | 5 | 2 (29 %) | 0,24 USD |
+| paket3_trim (omskrivna) | 3 | 3 | 0 | 0,27 USD |
+
+Full v3 i decket: **2 657 → 2 693**. Repetitionsskuld 1 611.
+
+### 🔴 `_las_json` har aldrig fungerat — arkiveringen efter 2 sept-förlusten är död kod
+
+Efter att `paket()` skrivit över 84 betalda godkännanden 2026-09-02 (~4 USD)
+byggdes en obligatorisk arkivering: filen kopieras till
+`<namn>.domar-<tidsstämpel>.json` innan den skrivs över. **Den har aldrig
+producerat en enda fil.**
+
+Mätt i dag: `paket` kördes om på ett paket med 18 domar, skrev över det med 24
+odömda poster, och skrev inte ut `ARKIVERADE`. Katalogen innehöll noll
+`.domar-*`-filer, alltså har spärren aldrig utlöst sedan den skrevs.
+
+**Orsaken:** `_las_json()` (rad 253) anropar `io.open`, men `kortgranskare.py`
+importerade aldrig `io`. Anropet kastar `NameError` varje gång — och
+arkiveringsblocket fångar det med `except Exception: gammalt = None`, varpå
+`domda` blir tom och kopieringen hoppas över **tyst**.
+
+```python
+    if os.path.exists(mal):
+        try:
+            gammalt = _las_json(mal)     # NameError: name 'io' is not defined
+        except Exception:
+            gammalt = None               # ... och spärren är borta
+```
+
+Reproducerat deterministiskt: en injicerad dom, `paket` om, ingen arkivfil.
+Efter `import io` skrevs `ARKIVERADE 1 befintliga domar -> ...` direkt.
+
+🎯 **Felklassen är projektets egen, i renodlad form.** Skyddet skrevs som svar
+på en mätt förlust, testades aldrig i skarpt läge, och dess enda felutgång var
+ett svalt undantag. `except Exception` runt ett anrop som ALLTID kastar gör
+koden till en attrapp som ser ut som en spärr. Samma mönster som
+`sokverifierad` på 177 osökta kort och `oberoende_verifierad` på 3 av 10 034:
+**ett villkor som inte kan utvärderas ser ut som ett uppfyllt villkor.**
+
+Kostnaden i dag blev noll, men bara av tur: `verdikt` hade redan hunnit skriva
+de 17 domarna till Anki, så taggarna fanns kvar även när filen tömdes. Hade
+`paket` körts om före `verdikt` — exakt sekvensen 2 september — hade de varit
+borta igen.
+
+⚠️ **Att göra:** ett `except Exception` som döljer att en spärr inte kan köra
+bör skilja på "filen är trasig" (fortsätt) och "koden är trasig" (avbryt).
+Minst: skriv ut vad som fångades i stället för att svälja det.
+
+### Underkännandena — alla tre var mina egna omskrivningar
+
+- **sätesbjudning**: jag skrev *"Förlossning där barnet kommer med rumpan
+  först"*. Efterledet *-bjudning* avser hur fostret **bjuds fram**, inte
+  förlossningen (jfr hjässbjudning, tvärbjudning) — och kortets egen synonymrad
+  sa `≈≈ fosterläge`, alltså motsade kortet sig självt. 🔴 **Jag noterade
+  glidningen i min egen sökkoll och lämnade kortet ändå** ("strikt är det
+  fosterläget, inte förlossningen"). Samma mönster som kostade fyra
+  underkännanden 18–19 augusti: en iakttagelse som skrivs ner i stället för att
+  åtgärdas. Granskaren ville också byta *rumpan* mot *säte/stjärt*; **ej
+  åtgärdat, medvetet** — det är en standard för medicinsk prosa, inte för det
+  här decket, och Adams regel är att begripligheten vinner så länge kortet inte
+  blir felaktigt.
+- **huttla med något**: legacy lärde ut SO:s betydelse 1 (*visa tveksamhet*)
+  fast uppslagsordet är konstruktionen *huttla MED*, som är betydelse 2
+  (*behandla nonchalant*). Jag upptäckte det och **bytte** — i stället för att
+  lägga till. Halva felet löst, andra halvan skapad. SO har två betydelser,
+  SAOL två led med semikolon; kortet bär nu båda.
+- **hålla fanan högt**: jag skrev *"trots motgång"*. SO ger *"kämpa för
+  något"*, utan villkor — mitt tillägg stängde ute den vanliga användningen
+  (*"hålla gastronomins fana högt"*). OLD-facit sade emot mig och jag läste det
+  som bekräftelse.
+
+### Sex fraser utan eget uppslagsord — frasspärren gjorde sitt jobb
+
+`huttla med något`, `rött öre`, `smörja kråset`, `inte ett skapande(s) grand`,
+`hålla fanan högt`, `inte ha ... till övers för` gav alla
+`FRAS_UTAN_UPPSLAGSORD`. Två av dem — `hålla fanan högt` och `rött öre` — är
+just de exempel CLAUDE.md 2026-09-04 använde för att visa komponentbuggen
+(frasen fick artikeln för **högtalare** respektive **svin**). Spärren kastar dem
+nu i stället för att leverera fel definition.
+
+Lösta genom uppslag på **huvudordet** (`huttla`, `öre`, `krås`, `grand`, `fana`,
+`övers`) med `kalla` pekande dit, och luckan utskriven i `sokkoll` — samma
+hantering som `sticka av mot` 2026-08-19. Inget kort pausades: alla sex ligger
+redan i Adams kö, och att suspendera dem hade varit en säker förlust mot en
+dokumenterad källucka.
+
+### `överburen` — tom definitionssträng är inte samma sak som saknat uppslagsord
+
+Hölls först tillbaka: SO har 0 träffar och SAOL:s **definitionsfält är tomt**.
+Råstrukturen visade att slutsatsen var fel — SAOL har lemmat med exakt
+ortografi, och betydelsen ligger i **exempelfältet**: *"överburet barn"*,
+parafras *"vid försenad förlossning"*. Exakt vad kortet sa.
+
+🎯 **Parafraser i exempelraden är också ordbokstext.** Samma felklass som
+sammandraget kontra råstrukturen (batch 5): läsa fel fält och dra en slutsats om
+ordet.
+
+### Övriga fynd i innehållet
+
+- **teodicé** var vänd åt fel håll: kortet sa *"frågan om hur Gud kan tillåta
+  ondska"*, men det är **problemet**. Teodicén är svaret — SO: *"(hävdande av)
+  tanken att … är förenlig med …"*. Synonymen *"ondskans problem"* var alltså
+  motparten och hade lärt in felet.
+- **krumbukta** saknade en av SAOL:s tre semikolonseparerade betydelser
+  (*göra undanflykter*), som är den vanligaste i modern svenska. SO ger bara det
+  cirkulära *"göra krumbukter"* — kortet är nu mer komplett än SO.
+- **jamb** hade exempelmeningen *"Ordet befäl"*: två ord, ingen highlight, och
+  den visade inte vad en jamb är.
+- **kopparstick** sa *"graverad metallplåt"* — men kopparn är det som skiljer
+  ordet från stålstick och träsnitt.
+- **vimla** hade fyra led där SO har tre, och registret `neutral, neutral` × 4 —
+  den automatiska ifyllningen från 2026-08-11, obedömd, multiplicerad per led.
+- **gudsförgäten** tappade båda delarna av SO:s definitionstillägg: att ordet
+  gäller en *plats*, och den beklagansvärda valören.
+- Åtta synonymer föll som obelagda (`aveny`/`boulevard` för allé, `pedantisk`
+  för formalistisk, `pelargång` för korsgång, `stumspel` för pantomim) — samma
+  syn.se-defekt som sänkte batch 2.
+
+### Två spärrar hade rätt mot mig
+
+`statsvetenskap`, `arkitektur` och `teater` finns inte i `REGISTER_DOMAN`; jag
+hittade på dem. Och på `rött öre` skrev jag en **bruksanmärkning** (*"används
+nästan alltid nekande"*) som ett eget led efter ` ; ` — separatorn betyder två
+betydelser, och `grupper_matchar_ej_betydelser` fångade att det bara fanns en
+synonymgrupp. En bruksanmärkning är inte en betydelse; den hör i
+exempelmeningen, som nu står i nekande form.
+
+De sex `betydelse_kan_saknas` kontrollerades mot råstrukturen och var alla
+falsklarm: utvidgningar utan egen definition, plus fuzzy-lemman (`all`, `alle`
+för allé).
