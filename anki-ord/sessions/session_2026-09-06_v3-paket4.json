@@ -1,7 +1,7 @@
 {
   "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
   "skriven_av": "Claude Opus 5 (skrivare)",
-  "granskare": null,
+  "granskare": "claude-cli-blind",
   "poster": [
     {
       "noteId": 1780080625624,
@@ -18,8 +18,10 @@
         "exempelmening": "Hon <font color=\"#3498db\">avpassade</font> sina steg efter barnets.",
         "etymologi": null
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO redovisar en enda betydelse ('ge lämplig form eller omfattning för avsett ändamål'). Kortets huvudbetydelse och exempelmening (SO:s eget exempel) täcker den korrekt. facit_signal beror på synonymer/exempel i facit, inte på fler betydelser. '≈≈ anpassa' är en godtagbar kategori och prövas inte som synonym. Register och form ok.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080628766,
@@ -46,8 +48,10 @@
         "exempelmening": "Nu gäller det att skilja <font color=\"#3498db\">agnarna</font> från vetet.",
         "etymologi": "fornsvenska aghn; gemensamt germanskt ord, besläktat med grekiska akhne 'agnar' och med ax"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO har två homografer – sädesskal/agnar (skiljs vid tröskning) och ätbart fiskbete – och kortet täcker båda i rätt ordning. 'skärmfjäll'/'blomfjäll' står i SO:s egen definition, 'bete' stöds av facit och SO:s betydelse 2. Etymologin stämmer med SO. Exempelmeningen (skilja agnarna från vetet) illustrerar betydelse 1 och är highlightad.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080625209,
@@ -82,8 +86,10 @@
         "exempelmening": "Han <font color=\"#3498db\">bröstade</font> sig över segern som om han vunnit den ensam.",
         "etymologi": "'brösta av' och seldelen hör till tyska Protz, italienska biroccio 'tvåhjulig vagn' -- förställaren som kanonen kopplas loss från"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Täcker SO:s samtliga enheter: brösta sig (visa stolthet/göra sig stor), seldelen mot bringan, brösta av = koppla loss kanon och göra skjutklar, samt brösta av = hårt skott / framföra med stora gester. Leder med den vanligaste. 'stoltsera' (facit) och 'kråma sig' är utbytbara med brösta sig; övriga är '≈≈' och kräver ingen källa. Etymologin (Protz/biroccio) är riktig och stödjer kanonbetydelsen.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080628058,
@@ -118,8 +124,10 @@
         "exempelmening": "Det var redan full <font color=\"#3498db\">dager</font> när hon vaknade.",
         "etymologi": "fornsvenska dagher; samma ord som dag"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Alla fyra enheter i SO täcks: naturligt ljus utan direkt solstrålning; ljust parti/dagrar i bild; det intryck något ger; samt idiomet 'i öppen dager'. 'dagsljus', 'belysning' och 'ljuseffekt' stöds av facit. Anm: 'belysning' passar sakligt bättre mot huvudbetydelsen än mot måleribetydelsen den grupperats vid, men det är en svag placering snarare än ett sakfel. Exempelmeningen är SO:s eget exempel.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080622228,
@@ -146,8 +154,10 @@
         "exempelmening": "Barnets <font color=\"#3498db\">obetingade</font> tilltro till föräldrarna.",
         "etymologi": "till o- och betinga"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s båda betydelser finns med och i rätt ordning: 'uppstår spontant och av sig själv, särskilt om känsla eller egenskap' samt 'absolut, oinskränkt'. 'oinskränkt'/'förbehållslös' (facit) är utbytbara med betydelse 2; '≈≈ spontan' är godtagbar kategori. Exempelmeningen (barnets obetingade tilltro) är SO:s eget exempel och highlightad. Etymologin kort men sann.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080627648,
@@ -164,8 +174,10 @@
         "exempelmening": "Flemings <font color=\"#3498db\">serendipitet</font> gav världen penicillinet — han letade efter något helt annat.",
         "etymologi": "efter engelska serendipity; till namnet Serendip i sagan De tre prinsarna från Serendip, av persiska Sarandip 'Sri Lanka'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "En betydelse, återgiven i stort sett ordagrant som SO ('förmåga att göra lyckliga upptäckter av en slump'). Exempelmeningen (Fleming/penicillin) är saklig – penicillinet upptäcktes av en slump – och illustrerar begreppet väl; ordet är highlightat. Etymologin (serendipity, sagan om prinsarna från Serendip) är sann och minnesstödjande. '≈≈ upptäckarförmåga' är en rimlig, inte för vid, kategori.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080625180,
@@ -190,8 +202,10 @@
         "exempelmening": "<font color=\"#3498db\">Sponten</font> på plankan passade perfekt in i spåret på nästa.",
         "etymologi": "av lågtyska spunt 'sprund (i tunna); tapp; spont'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Kortet täcker båda betydelserna i SO: den utstående tungan/fjädern som förs in i spåret, samt själva spåret/fogen mellan hopfogade brädor. Synonymen 'kantlist' stöds av SAOL, som definierar spont som 'kantlist och fals på bräda; fog mellan sådana brädor'; '≈≈ fog' motsvarar SAOL:s 'fog mellan sådana brädor'. Etymologin (lågtyska spunt) stämmer med SO. Exempelmeningen illustrerar betydelse 1 och är highlightad.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080628155,
@@ -208,8 +222,10 @@
         "exempelmening": "I skogsbrynet blommade <font color=\"#3498db\">näva</font> med sina purpurröda kronblad.",
         "etymologi": "till svensk dialekt näv 'näsa; näbb' -- växten har näbbliknande frukter"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO har en betydelse – 'växt med oftast handflikiga blad och (purpur)röda blommor' – och kortet återger den nästan ordagrant. facit_signal: 'geranium' är SO:s angivna synonym (växtsläktet), inte en egen betydelse, så ingen betydelse saknas. Anm: SO pekar uttryckligen ut 'geranium' som synonym; den kunde med fördel stått på kortet i stället för enbart '≈≈ ört'. Etymologin (dial. näv 'näbb', näbblika frukter) stödjer minnet. Exemplet highlightat och korrekt.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080624826,
@@ -240,8 +256,10 @@
         "exempelmening": "Kappan hade ett brett <font color=\"#3498db\">bräm</font> av mörk päls runt halsen.",
         "etymologi": "fornsvenska brem; av lågtyska breme med samma betydelse"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "Alla tre betydelser i SO täcks: bred ytterkant på plagg av annat material (ofta päls); kant med avvikande utseende eller kant i allmänhet; ytter-/överkant på fågelfjäder eller blomhylle. 'bård' korshänvisas i SO som sidoordnat ord, 'kant' stöds av betydelse 2:s egen formulering; '≈≈ pälskant'/'≈≈ fjäderkant' kräver ingen källa. Etymologin (fsv. brem, lågtyska breme) stämmer. Exemplet illustrerar betydelse 1 och är highlightat.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080629161,
@@ -266,8 +284,10 @@
         "exempelmening": "Han är knappast <font color=\"#3498db\">vittnesgill</font> eftersom han inte var nykter när olyckan inträffade.",
         "etymologi": "fornsvenska vitnis gilder"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s båda betydelser finns med: 'vars vittnesmål enligt lag är giltigt' (om person) samt den utvidgade 'trovärdig'. Exempelmeningen är SO:s eget exempel och ordet är highlightat. 'trovärdig' (facit + SO) är utbytbar i betydelse 2; '≈≈ behörig att vittna' är en godtagbar omskrivning av juridikbetydelsen. Registret (juridik / positiv valör) stämmer.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
     },
     {
       "noteId": 1780080629313,
@@ -292,8 +312,21 @@
         "exempelmening": "Äpplet <font color=\"#3498db\">damp</font> ner från grenen och landade i gräset.",
         "etymologi": "ljudhärmande; jfr svensk dialekt dumpa 'falla tungt; gå klumpigt'"
       },
-      "verdikt": null,
-      "anmarkning": null
+      "verdikt": "godkand",
+      "anmarkning": "SO:s båda betydelser täcks ordagrant: 'falla tungt och överraskande' samt bildligt 'oväntat uppenbara sig'. Vardaglig-registret stämmer med SAOL:s 'vard.'-markering. 'falla pladask' (SAOL:s definition + facit) och 'dyka upp' är utbytbara med respektive betydelse. Exempelmeningen använder rätt oregelbunden preteritum 'damp', är saklig och highlightad. Etymologin (ljudhärmande, jfr dial. dumpa) stödjer minnet.",
+      "granskning_turer_post": 19,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 19,
+  "granskning_kostnad_usd": 0.49911820000000007,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 11,
+      "turer": 19,
+      "turkrav": 5,
+      "kostnad_usd": 0.49911820000000007
     }
   ]
 }

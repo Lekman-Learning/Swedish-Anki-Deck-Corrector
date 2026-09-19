@@ -1,0 +1,84 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080624764,
+      "ord": "huttla med något",
+      "facit": "tveka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vela och tveka inför ett beslut ; ta lätt på något och sköta det halvhjärtat",
+        "register": "vardaglig, lätt negativ, allmän",
+        "synonymer": [
+          "≈≈ vela",
+          "≈≈ ta lätt på"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ vela"
+          ],
+          [
+            "≈≈ ta lätt på"
+          ]
+        ],
+        "exempelmening": "Chefen <font color=\"#3498db\">huttlade</font> i veckor innan han bestämde sig, och sedan skötte han hela flytten halvhjärtat.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO ger två betydelser: (1) 'visa tveksamhet inför beslut' (vard.), (2) 'behandla på föraktfullt eller nonchalant sätt'; SAOL: 'visa tveksamhet inför beslut; inte erkänna'. Kortet täcker båda: 'vela och tveka inför ett beslut' samt 'ta lätt på något och sköta det halvhjärtat', korrekt separerade med ' ; '. Leder med den vanligaste (tveka), i linje med facit. ≈≈ vela och ≈≈ ta lätt på är kategori-/överbegreppsnivå och prövas inte som utbytbara synonymer; de är sakligt rimliga och knutna till var sin betydelse. Register (vardaglig, lätt negativ) stämmer med SO:s 'vard.'. Exempelmeningen illustrerar tydligast betydelse 1 men är grammatiskt och sakligt riktig, ordet är highlightat, och andra ledet återger betydelse 2. Läsbart utan uppslag. Godkänt.",
+      "granskning_turer_post": 11,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080628616,
+      "ord": "överburen",
+      "facit": "(med.) barn från försenad förlossning",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Född efter en ovanligt lång graviditet, om ett barn",
+        "register": "fackspråklig, neutral, medicin",
+        "synonymer": [
+          "≈≈ försenad födsel"
+        ],
+        "synonym_groups": null,
+        "exempelmening": "Barnet var <font color=\"#3498db\">överburet</font> med nästan två veckor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Ingen träff i SO; SAOL har ordet som medicinsk term: 'vid försenad förlossning', ex. 'överburet barn', med avledningen 'överburenhet' = barn som föds mer än två veckor efter beräknad förlossning. Kortets 'född efter en ovanligt lång graviditet, om ett barn' är korrekt och stämmer med facit. Endast en betydelse finns, så ingen lucka. Register (fackspråklig, neutral, medicin) korrekt. ≈≈ försenad födsel är överbegreppsnivå, kräver ingen källa och är inte sakligt fel. Exempelmeningen ('överburet med nästan två veckor') är korrekt och highlightad. Godkänt.",
+      "granskning_turer_post": 11,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080629347,
+      "ord": "hålla fanan högt",
+      "facit": "kämpa för ngt, inte ge efter",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Kämpa för och stå upp för något man tror på",
+        "register": "neutral, positiv, allmän",
+        "synonymer": [],
+        "synonym_groups": null,
+        "exempelmening": "Hon <font color=\"#3498db\">höll fanan högt</font> för hantverket långt efter att alla andra gett upp.",
+        "etymologi": "fanan bars högst i striden som samlingstecken -- den som håller den högt ger inte upp"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "SO:s uttryck under 'fana': 'hålla någots fana högt' = 'kämpa för något'. Kortets 'kämpa för och stå upp för något man tror på' är en trogen parafras och matchar facit. Endast en betydelse; ingen lucka. Tom synonymrad är rätt för ett idiom där hela uttrycket bär betydelsen. Exempelmeningen ('höll fanan högt för hantverket långt efter att alla andra gett upp') illustrerar betydelsen väl, är grammatiskt och sakligt riktig och highlightad. Etymologin (fanan som samlingstecken i strid, den som håller den högt ger inte upp) är rimlig och stärker minnesbilden. Läsbart direkt. Godkänt.",
+      "granskning_turer_post": 11,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 11,
+  "granskning_kostnad_usd": 0.2651224,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 3,
+      "turer": 11,
+      "turkrav": 5,
+      "kostnad_usd": 0.2651224
+    }
+  ]
+}

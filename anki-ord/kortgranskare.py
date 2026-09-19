@@ -34,6 +34,7 @@ nu är det ett villkor maskinen vägrar släppa igenom utan.
 """
 
 import argparse
+import io
 import json
 import os
 import shutil

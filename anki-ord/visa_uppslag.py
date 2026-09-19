@@ -16,9 +16,14 @@ VAD SOM VISAS, och varfor just det:
 
 * SO:s RASTRUKTUR, inte sammandraget. Sammandraget plattar ut posterna och
   dubbelraknar underbetydelser, vilket gav falska `betydelse_kan_saknas` i batch
-  4-6. Rastrukturen visar exakt en huvudbetydelse med sina underbetydelser, och
-  en underbetydelse vars `definition` ar None ar en anvandningsutvidgning -- inte
-  en betydelse som saknas.
+  4-6. Rastrukturen visar exakt en huvudbetydelse med sina underbetydelser.
+  🔴 RATTAT 2026-09-06: den har raden sa att "en underbetydelse vars
+  `definition` ar None ar en anvandningsutvidgning -- inte en betydelse som
+  saknas". Det ar FALSKT som generell regel, och den regeln kostade fem kort.
+  SO lagger ofta betydelsen i `typ` (med exempel i `syntex`) och lamnar
+  `definition` tomt. Ratt fraga ar "namner `typ` en ANNAN anvandning an
+  huvudbetydelsen?" -- inte "finns det text i `definition`?". Bada falten
+  skrivs darfor ut.
 * Varje lemma for sig. `mor` (adjektiv) och `mo` (substantiv) ar skilda
   uppslagsord som delar grundform. Blandas de ihop ser kortet ut att sakna
   betydelser det inte ska ha.
@@ -143,10 +148,28 @@ def visa(ord_):
                 utl = ub.get("definitionstillägg")
                 tillagg = ("  <<" + _ren(utl) + ">>") if utl else ""
                 if not ud:
-                    # Ingen egen definition = anvandningsutvidgning, INTE en
-                    # betydelse som saknas pa kortet.
-                    print("        under: (ingen egen definition -- utvidgning)"
+                    # 🔴 RATTAT 2026-09-06. Raden sa tidigare bara "(ingen egen
+                    # definition -- utvidgning)" och kastade resten av posten.
+                    # Det ar aktivt vilseledande: SO lagger ofta betydelsen i
+                    # faltet `typ` med exempel i `syntex` och lamnar
+                    # `definition` tomt. `donera` underkandes samma dag for en
+                    # saknad betydelse som stod har hela tiden --
+                    # typ="av. allmannare, sarsk. i medicinska sammanhang",
+                    # syntex=["donera blod", "donera organ"] -- medan visaren
+                    # rapporterade posten som tom.
+                    #
+                    # Ratt fraga ar INTE "har `definition` innehall?" utan
+                    # "namner `typ` en annan anvandning an huvudbetydelsen?".
+                    # Den gar inte att besvara utan att se falten, sa de skrivs
+                    # ut. Omprovningen av 18 undantagna ord samma kvall gav
+                    # fem kort med en verklig saknad betydelse.
+                    typ = _ren(ub.get("typ"))
+                    print("        under: (utan definitionsfalt)"
+                          + (("  typ: " + typ) if typ else "")
                           + tillagg + ("   [brukl: %s]" % ubk if ubk else ""))
+                    for st in (ub.get("syntex") or [])[:3]:
+                        print("             syntex: "
+                              + _ren(st if isinstance(st, str) else st.get("text")))
                 else:
                     print("        under: " + ud + tillagg
                           + ("   [brukl: %s]" % ubk if ubk else ""))

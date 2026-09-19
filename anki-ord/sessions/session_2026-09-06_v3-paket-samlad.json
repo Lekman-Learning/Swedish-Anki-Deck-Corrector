@@ -1,0 +1,168 @@
+{
+  "instruktion": "BLIND ANDRAGRANSKNING. Du ser ordet, ett facit ur ett fristående deck, och det färdiga kortet -- avsiktligt INTE hur kortet skrevs, vilka källor som slogs upp eller vad det stod innan. Döm det på dess egna meriter. SLÅ UPP ORDET SJÄLV i en riktig ordbok innan du dömer; facit är en andra källa, inte den enda. Sätt verdikt='godkand' eller 'underkand' + anmarkning för varje post.\nKONTROLLERA ALLT, i denna ordning:\n(1) SAKNAS EN HEL BETYDELSE? Det är det vanligaste felet i det här decket, dominerande i elva granskningsomgångar i rad. Gå igenom ordbokens betydelser en och en och kryssa av dem mot kortet. Två signaler väger tungt: en synonym som hör till en betydelse kortet inte nämner, och ett facit med fler betydelser än kortet (se falt 'facit_signal' -- det är en FRÅGA att avgöra, inte ett konstaterat fel: facit skiljer ofta synonymer med ';', inte betydelser).\n(2) Är varje angiven betydelse sakligt korrekt, och leder kortet med den vanligaste?\n(3) Är betydelserna rätt separerade? ' ; ' mellan GENUINT SKILDA betydelser, ' / ' mellan omformuleringar av SAMMA betydelse. Ordet 'eller' mellan två skilda betydelser är alltid fel.\n(4) Är synonymerna faktiskt utbytbara, och är någon cirkulär (innehåller uppslagsordet eller en böjning av det)? Hör grupperna ihop med rätt betydelse? KORTEN ANVÄNDER TRE NIVÅER AV SYNONYM, och de ska dömas olika. Utan tecken = utbytbart ord, kräver att ordboken själv pekar ut det. `≈ ord` = närmaste ord som finns, kräver också ordbokskälla, ett enda ord efter tecknet. `≈≈ ord` = KATEGORIN ordet tillhör, alltså medvetet ett ÖVERORDNAT begrepp -- den nivån kräver INGEN källa och ska INTE prövas som synonym, eftersom den bara komprimerar kortets egen, redan granskade definition. Att `≈≈ jordart` på kortet `morän` är överordnat är alltså precis vad nivån betyder, inte ett fel; underkänn en `≈≈` bara om kategorin är SAKLIGT FEL eller så vid att den inte säger något alls. EN TOM SYNONYMRAD är rätt svar BARA för idiom och ordled, där hela uttrycket bär betydelsen. Ett ENSKILT ORD ska ha minst en rad ifylld på någon av de tre nivåerna -- saknas den är det ett fel. De flesta ord har ingen sann synonym -- mätt över 828 uppslag saknar 69 % belägg i SO och SAOL, och det är just därför nivå `≈≈` finns. Decket pluggas dessutom mot HP-provets ORD-del, som ÄR ett synonymtest, och där distraktorerna just är ord som ligger nära utan att vara utbytbara: en nästan-synonym på kortet tränar alltså exakt det fel provet straffar. Kräv att ordboken själv pekar ut synonymen -- att ordet dyker upp i en synonymordbok på nätet räcker inte, eftersom sådana listor blandar synonymer, överordnade begrepp och lösa associationer.\n(5) Illustrerar exempelmeningen rätt betydelse, är den sakligt riktig och grammatiskt korrekt, och är ordet highlightat?\n(6) Stämmer registret på BÅDA axlarna -- formalitet och valör?\n(7) Om kortet har en etymologi: är den sann, OCH gör den betydelsen lättare att förstå? Trivia som inte hjälper minnet ska bort. Etymologin är valfri -- ett kort utan den är aldrig ett fel.\n(8) Går kortet att läsa högt och förstå direkt, utan att slå upp ännu ett ord?\nAtt facit och kortet formulerar sig olika är INTE ett fel -- parafraser är väntade. Underkänn vid en verklig lucka, ett verkligt sakfel eller ett verkligt formfel.",
+  "skriven_av": "Claude Opus 5 (skrivare)",
+  "granskare": "claude-cli-blind",
+  "poster": [
+    {
+      "noteId": 1780080628575,
+      "ord": "gillra",
+      "facit": "sätta upp djurfälla<br><a href=\"https://www.google.com/imgres?q=gillra&amp;imgurl=https%3A%2F%2Fmedia.sporthalsa.se%2Fuploads%2Fsites%2F29%2F2019%2F01%2Ff%25C3%25A4lla.jpg&amp;imgrefurl=https%3A%2F%2Fmaria.sporthalsa.se%2F2019%2F01%2F06%2Fgillra-fallor%2F&amp;docid=qInNGXCh7Jb4pM&amp;tbnid=s7Q94o6SubC4dM&amp;vet=12ahUKEwi0ptfm-sKPAxVWHBAIHRkUDwUQM3oECCAQAA..i&amp;w=275&amp;h=183&amp;hcb=2&amp;ved=2ahUKEwi0ptfm-sKPAxVWHBAIHRkUDwUQM3oECCAQAA\"><div><div><div><img alt=\"Gillra fällor - Dubbelt Så Stark! - En ...\" src=\"paste-8be824d29f39560c6a184faca14dc12f2bac2b4f.webp\"></div></div></div></a>",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Sätta upp en fälla för djur ; rigga upp något ostadigt",
+        "register": "neutral, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ förbereda en fälla",
+          "≈≈ rigga upp"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ förbereda en fälla"
+          ],
+          [
+            "≈≈ rigga upp"
+          ]
+        ],
+        "exempelmening": "De fick <font color=\"#3498db\">gillra</font> en råttfälla i källaren.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Första betydelsen är för snäv. Kortet skriver 'sätta upp en fälla för djur', men SO har även den utvidgade användningen 'man gillrade en fälla för spionen' (fälla för person/fiende), och SAOL ger bara 'gillra en fälla' utan djurbegränsning. Just den bildliga/utvidgade 'gillra en fälla för någon' är den vanligaste moderna användningen och utesluts nu både av definitionen och av exempelmeningen (råttfälla). Bör vara 'sätta upp en fälla (för djur el. person)'. Betydelsen 'rigga upp något ostadigt' är korrekt (SO: 'buren gillrades upp på två plankor').",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080625267,
+      "ord": "crescendo",
+      "facit": "stigande tonstyrka",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Med växande tonstyrka ; Avsnittet i ett stycke som ska spelas så ; Bildligt om något som stiger mot en höjdpunkt",
+        "register": "fackspråklig, neutral, musik ; fackspråklig, neutral, musik ; neutral, neutral, allmän",
+        "synonymer": [
+          "≈≈ stigande tonstyrka",
+          "≈≈ musikavsnitt",
+          "≈≈ stegring"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ stigande tonstyrka"
+          ],
+          [
+            "≈≈ musikavsnitt"
+          ],
+          [
+            "≈≈ stegring"
+          ]
+        ],
+        "exempelmening": "Stråkarna spelade <font color=\"#3498db\">crescendo</font> tills hela salen skalv.",
+        "etymologi": "italienska crescendo 'växande', till crescere 'växa'"
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Täcker SO:s och SAOL:s betydelser: adverbet 'med växande tonstyrka' (mus.), substantivet 'avsnitt som spelas så' samt den bildliga 'stiger mot en höjdpunkt' (SO: 'applåderna steg till ett crescendo'). Leder med den vanligaste. ≈≈-synonymerna är rimliga kategorikompressioner och kräver ingen källa. Etymologin stämmer (it. crescere 'växa') och stödjer minnet. Exempelmeningen ('spela crescendo') är korrekt adverbiell användning och ordet är highlightat. Registret rimligt.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080624361,
+      "ord": "banal",
+      "facit": "alldaglig och ointressant",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Så vanlig och uttjatad att den inte säger något ; om sjukdom: så vanlig att den är ofarlig",
+        "register": "neutral, negativ, allmän ; neutral, neutral, medicin",
+        "synonymer": [
+          "alldaglig",
+          "sliten",
+          "platt",
+          "≈≈ ofarlig"
+        ],
+        "synonym_groups": [
+          [
+            "alldaglig",
+            "sliten",
+            "platt"
+          ],
+          [
+            "≈≈ ofarlig"
+          ]
+        ],
+        "exempelmening": "Han tyckte manuset var <font color=\"#3498db\">banalt</font> och fullt av utslitna klyschor.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Huvudbetydelsen 'så vanlig och uttjatad att den inte säger något' motsvarar SO:s 'alltför ofta använd och därför ointressant' och leder rätt. Den medicinska nyansen 'banal förkylning' finns belagd i SO (triviell/obetydlig) och ≈≈ ofarlig är en godtagbar kategorikompression. De omärkta synonymerna 'alldaglig, sliten, platt' pekas explicit ut av SAOL ('Alldaglig, sliten, platt'), så nivån är korrekt använd. Exempelmeningen illustrerar rätt betydelse, är grammatiskt riktig och highlightad. Register (negativ valör) stämmer.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080625623,
+      "ord": "geografi",
+      "facit": "jordytslära",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Vetenskapen om jordytan och hur människor använder den ; hur något är utbrett och format, om en plats eller vad som helst annat",
+        "register": "neutral, neutral, allmän ; vardaglig, neutral, allmän",
+        "synonymer": [
+          "≈≈ jordytelära",
+          "≈≈ utbredning"
+        ],
+        "synonym_groups": [
+          [
+            "≈≈ jordytelära"
+          ],
+          [
+            "≈≈ utbredning"
+          ]
+        ],
+        "exempelmening": "Han älskade <font color=\"#3498db\">geografi</font> och kunde namnge alla världens huvudstäder utantill.",
+        "etymologi": null
+      },
+      "verdikt": "underkand",
+      "anmarkning": "Huvudbetydelsen är godtagbar (SO: vetenskapen om natur- och kulturlandskapet och samspelet människa–natur). Men den andra betydelsen är fel formulerad: SO:s sense avser 'andra företeelsers utseende och struktur' ('universums geografi', 'blodådrornas geografi'), alltså rumslig struktur/utformning – inte 'hur något är utbrett'. Synonymen '≈≈ utbredning' är därmed en sakligt fel kategori. Formuleringen 'om en plats eller vad som helst annat' är dessutom knagglig och svårläst. Vidare saknas SO:s vardagliga betydelse 'ut i geografin' (= omgivande natur/terräng: 'bilen for rätt ut i geografin'). Rätta sense 2 till 'ngts utseende och rumsliga struktur' och lägg till den vardagliga betydelsen.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    },
+    {
+      "noteId": 1780080625410,
+      "ord": "donera",
+      "facit": "skänka bort",
+      "facit_signal": null,
+      "kort": {
+        "huvudbetydelse": "Ge bort något större till ett gott ändamål ; lämna blod eller organ till någon som behöver det",
+        "register": "neutral, neutral, allmän ; neutral, neutral, medicin",
+        "synonymer": [
+          "skänka",
+          "ge till allmännyttigt ändamål",
+          "≈≈ ge av sin kropp"
+        ],
+        "synonym_groups": [
+          [
+            "skänka",
+            "ge till allmännyttigt ändamål"
+          ],
+          [
+            "≈≈ ge av sin kropp"
+          ]
+        ],
+        "exempelmening": "Hon <font color=\"#3498db\">donerade</font> hela sin porslinssamling till museet.",
+        "etymologi": null
+      },
+      "verdikt": "godkand",
+      "anmarkning": "Båda betydelserna stämmer med SO: 'skänka (större gåva) till (ofta allmännyttigt) ändamål' samt den medicinska 'lämna blod eller organ'. Leder med den vanligaste. Omärkt synonym 'skänka' används av SO självt i definitionen, så nivån är korrekt; '≈≈ ge av sin kropp' är en godtagbar kategorikompression för organ-/blodgivning. Exempelmeningen ('donerade hela sin porslinssamling till museet') motsvarar nära SO:s eget exempel, är korrekt och highlightad. Register (allmän ; medicin) stämmer med SAOL:s ekon./med.",
+      "granskning_turer_post": 16,
+      "granskning_turkrav_post": 5
+    }
+  ],
+  "granskning_turer": 16,
+  "granskning_kostnad_usd": 0.339629,
+  "granskning_turkrav": 5,
+  "granskning_korningar": [
+    {
+      "poster": 5,
+      "turer": 16,
+      "turkrav": 5,
+      "kostnad_usd": 0.339629
+    }
+  ]
+}
