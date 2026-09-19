@@ -81,7 +81,9 @@ def validera(extrakt, kalltext):
                 (behall if isinstance(s, str) and s and s in kalltext else kastat).append(s)
             rent[nyckel] = behall
         elif isinstance(varde, str):
-            if varde and varde in kalltext:
+            # Tomt fält är inte en hallucination -- det är modellen som säger
+            # "hittade inget", precis som systemprompten ber om.
+            if not varde or varde in kalltext:
                 rent[nyckel] = varde
             else:
                 kastat.append(varde)
@@ -102,7 +104,7 @@ def ett_ord(ord_):
     rent, kastat = validera(extrakt, kalltext)
     ut_tok = bruk.get("completion_tokens") or 0
     return {"ord": ord_, "extrakt": rent, "kastat": kastat, "sekunder": round(sek, 1),
-            "tokens_ut": ut_tok, "tok_per_s": round(ut_tok / sek, 1) if sek else None,
+            "tokens_ut": ut_tok, "tok_per_s": round(ut_tok / sek, 1) if sek > 0.01 else None,
             "in_tecken_hel": hel, "in_tecken_sammandrag": len(kalltext)}
 
 
@@ -134,8 +136,8 @@ def main():
         print(f"{o}: {r['sekunder']} s, {r['tokens_ut']} tokens ut "
               f"({r['tok_per_s']} tok/s), kastade {len(r['kastat'])} strängar")
     if rader:
-        print(f"\n{len(rader)} ord, {tot_s/len(rader):.1f} s/ord, "
-              f"{tot_t/tot_s:.1f} tokens/s totalt")
+        takt = f"{tot_t/tot_s:.1f} tokens/s totalt" if tot_s > 0.05 else "för snabbt för att mäta"
+        print(f"\n{len(rader)} ord, {tot_s/len(rader):.2f} s/ord, {takt}")
         print(f"kastat totalt: {sum(len(r['kastat']) for r in rader)} strängar "
               "(ej ordagranna -- hade blivit hallucinationer i ett kort)")
     if a.ut and rader:
