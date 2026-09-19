@@ -32,7 +32,6 @@ Full JSON per ord sparas i `uppslag/<ord>.json` så att en senare granskare kan
 läsa exakt vad källan sa, inte bara min sammanfattning.
 """
 import argparse
-import concurrent.futures as _cf
 import hashlib
 import json
 import os
@@ -644,11 +643,6 @@ def main():
     # ligger kvar i uppslag/<ord>.json.
     p.add_argument("--tyst", action="store_true",
                    help="skriv BARA bevisrader och trekällskontroll")
-    # De tre kallorna ligger pa olika vardar, sa samtidighet har okar
-    # inte takten mot nagon av dem. Flaggan finns for att kunna ga
-    # tillbaka till strikt serie om nagot beter sig konstigt.
-    p.add_argument("--serie", action="store_true",
-                   help="hamta kallorna en i taget (gamla beteendet)")
     a = p.parse_args()
 
     ord_ = list(a.ord)
@@ -678,17 +672,8 @@ def main():
 
     os.makedirs(UTKAT, exist_ok=True)
     sammandrag, ofullstandiga = {}, {}
-    # De tre kallorna ligger pa TRE OLIKA VARDAR. Att hamta dem samtidigt
-    # okar alltsa INTE takten mot nagon enskild vard -- svenska.se far
-    # fortfarande ett anrop i taget, likasa Wikimedia. Det ar skillnaden mot
-    # att kora flera ORD parallellt, som mattes 2026-09-20 och gav 74 % tre
-    # kallor vid sex processer (strypning, HTTP 429). Har vantar vi bara pa
-    # tre vardar samtidigt i stallet for i foljd.
-    pool = None if a.serie else _cf.ThreadPoolExecutor(max_workers=2)
     for o in ord_:
         post, kallor_med_innehall = {}, []
-        f_syn = pool.submit(hamta_synonymer, o) if pool else None
-        f_wik = pool.submit(hamta_wiktionary, o) if pool else None
 
         data, status, byte = hamta(o)
         # Gav den exakta sokningen ingenting alls? Prova fritext en gang.
@@ -727,7 +712,7 @@ def main():
             if any(post["svenska_se"].get(b) for b in ("saol", "so", "saob")):
                 kallor_med_innehall.append("svenska.se")
 
-        syn, s_status, s_byte = f_syn.result() if f_syn else hamta_synonymer(o)
+        syn, s_status, s_byte = hamta_synonymer(o)
         print(f"SYNONYMER_SE_HAMTAD {o} HTTP {s_status} {s_byte}")
         post["synonymer_se"] = syn if syn is not None else {"FEL": f"HTTP {s_status}"}
         # `finns` räcker inte -- se synonymer_se_redaktionell() för varför.
@@ -740,7 +725,7 @@ def main():
         elif syn and syn.get("finns"):
             print(f"SYNONYMER_SE_ENDAST_ANVANDARBIDRAG {o}")
 
-        wik, w_status, w_byte = f_wik.result() if f_wik else hamta_wiktionary(o)
+        wik, w_status, w_byte = hamta_wiktionary(o)
         print(f"WIKTIONARY_HAMTAD {o} HTTP {w_status} {w_byte}")
         post["wiktionary"] = wik if wik is not None else {"FEL": f"HTTP {w_status}"}
         if wik and wik.get("finns"):
