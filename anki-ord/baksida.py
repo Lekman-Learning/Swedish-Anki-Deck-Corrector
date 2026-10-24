@@ -408,9 +408,9 @@ ADAMTAL_HARDA = (
     # det gör kortet verkningslöst, oavsett om ordparet är språkligt riktigt.
     "cirkular_synonym",
     "fler_register_an_betydelser",
-    # Hård sedan 2026-10-24 (Adam: "man märker en del små fel"). `ruggig`
-    # och `rådbråka` hade en tom numrerad rad som betydelser() tyst filtrerade
-    # bort, så ingen kontroll såg den.
+    # Hård sedan 2026-10-24 (Adam: "man märker en del små fel"). betydelser()
+    # filtrerar tomma delar tyst, så en tom betydelse syntes aldrig. (Misstänkt
+    # på ruggig/rådbråka, visade sig vara falsklarm -- 0 träffar i decket.)
     "tom_betydelse",
 )
 ADAMTAL_MJUKA = (

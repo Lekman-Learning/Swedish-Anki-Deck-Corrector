@@ -4985,7 +4985,7 @@ drar ~25 000 tokens bara i uppstart.
 |---|---|---|
 | `validate_format(raw)`: mellanrum_for_stort · br_inuti_tagg · br_i_slutet · br_i_borjan · tom_numrerad_rad · mellanrum_fore_bild | `baksida.py` | ny |
 | **Formspärr** i `invoke()` för `updateNoteFields`/`addNote(s)` med Baksida | `ankiconnect.py` | 🔴 hård, ALLA skrivvägar |
-| `tom_betydelse` (`ruggig`, `rådbråka` hade tomma numrerade rader som `betydelser()` filtrerade bort tyst) | `validate_adamtal` | hård |
+| `tom_betydelse` (spärr mot tomma betydelser; 0 träffar i decket — `ruggig`/`rådbråka` var falsklarm från ett utdrag) | `validate_adamtal` | hård |
 | `overlappande_betydelser` (3+ betydelser, ordöverlapp ≥ 50 %) · `manga_betydelser` (4+) | `validate_adamtal` | mjuk |
 | **Registret grått i alla layouter** (`_gra()`), parse tar av wrappern | `build()`, `_MAIN_RE` | Adam: *"samma färg som hyttans valör"* |
 | Kortmallen: alltid mörkt läge, titel #9cc7f0, fet vit, kursiv #d0d0d0, blå avdelare, img max 30vh, titel 72px på svarssidan | Anki-modellen `Grundläggande-adc63` (CSS) | inte i fälten |
