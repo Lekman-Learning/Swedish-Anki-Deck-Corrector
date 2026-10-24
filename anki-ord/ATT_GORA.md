@@ -663,3 +663,9 @@ Läst från laptopen (read-only, backup `backuper/2026-10-24_fore_mellanrumsfix.
 - 🟡 **Troligt överlapp, slå ihop:** `häftig` 1+2 (plötslig/kraftig ≈ intensiv) · `kollegial` 3+4 (kamratlig ≈ handling som visar kamratlighet), ev. 1+2 · `agrar` 1+2 och 3+4 · `distribution` 1+2 · `krackelera` 1+2 (transitiv/intransitiv) · `nära` 4+5 (verbet) · `intim` 1+2, 4+5 ("Äv."-rader) · `tangera` 2+3.
 - 🟢 **Behåll, verkligen olika ord/betydelser (homonymer):** hytta · märla · docka · ringa · lov · ax · harnesk · dunst · fog · sträva · kuperad · brösta · valla · belägga m.fl.
 - Princip (profil, valvet): *klarhet före exakthet i allt som ska memoreras* — sällsynta fackbetydelser får ligga sist eller strykas om de bara ökar läsbördan.
+
+## 2026-10-24: v3 — Adams uppdrag till nästa omgång på hemma-PC:n
+> *"glöm inte att finslipa v3 granskningen på korten som inte blev bra. det viktiga är att vara nogare med korten med 3+ betydelser"*
+1. **Omgranska de v3-kort som inte blev bra** (släppta-men-svaga, flaggade, de som hölls tillbaka 22/10: `atrofi`, `lurvig`).
+2. **Kort med 3+ betydelser (178 + 47) får skärpt granskning:** varje betydelse ska vara en egen betydelse (inget överlapp, se listan ovan), inga tomma rader, register per betydelse, exempelmeningen visar betydelse 1, synonymgrupper symmetriska. Sällsynta fackbetydelser sist eller struket (*klarhet före exakthet*).
+3. **Utseendet är redan fixat i kortmallen 24/10** (alltid mörkt läge, titel #9cc7f0, fet text vit, kursiv #d0d0d0, blå avdelare, bild max 30vh, titel 72px på svarssidan). v3 ska INTE skriva in färger i fälten utöver de befintliga (#3498db synonymer, #9e9e9e register/etymologi).
