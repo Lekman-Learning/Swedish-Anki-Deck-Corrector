@@ -46,7 +46,7 @@ import config
 
 _MAIN_RE = re.compile(
     r"<b>(?P<huvud>.*?)</b>\s*<br>"
-    r"(?P<register_block>(?:(?:&nbsp;)*\([^)]*\))*\s*<br>\s*)?"
+    r'(?P<register_block>(?:<font color="#[0-9a-fA-F]{3,6}">)?(?:(?:&nbsp;)*\([^)]*\))*(?:</font>)?\s*<br>\s*)?' 
     r"\s*<br>\s*"
     rf'<font color="{re.escape(config.SYNONYM_COLOR)}">(?P<syn>.*?)</font>\s*<br>'
     r"\s*<br>\s*"
@@ -236,6 +236,15 @@ def _ar_riktig(s):
     return bool((s or "").strip()) and (s or "").strip() not in PLATSHALLARE
 
 
+def _gra(register_rad):
+    """Registerraden i grått (Adam 2026-10-24: "samma färg som hyttans valör").
+
+    Tidigare var registret grått bara i den numrerade layouten. parse() tar
+    av wrappern igen via _MAIN_RE, så parse->build förblir idempotent.
+    """
+    return f'<font color="{config.REGISTER_COLOR}">{register_rad}</font><br>'
+
+
 def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_html=None, synonym_groups=None, etymologi=None):
     """register: sträng typ "formell" / "lätt negativ" / "formell, lätt negativ".
     Obligatoriskt i praktiken (style_guide.md, beslutat 2026-08-04) — minst en
@@ -297,7 +306,7 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
                 m = (m[0].upper() + m[1:]) if m else m
                 rader.append(f"<b>{i}. {m}</b><br>")
             huvud_html = "".join(rader)
-            register_html = f"({reg_parts[0]})<br>"
+            register_html = _gra(f"({reg_parts[0]})")
         elif len(reg_parts) > 1:
             # Flera betydelser med olika register (beslutat 2026-08-05, se
             # style_guide.md "Register per bibetydelse"): en rad, varje
@@ -321,9 +330,9 @@ def build(huvudbetydelse, synonymer=None, exempelmening="", register=None, bild_
                 piece = f"{'&nbsp;' * pad}({part})"
                 pieces.append(piece)
                 cursor += pad + len(f"({part})")
-            register_html = "".join(pieces) + "<br>"
+            register_html = _gra("".join(pieces))
         else:
-            register_html = f"({reg_parts[0]})<br>"
+            register_html = _gra(f"({reg_parts[0]})")
     else:
         register_html = ""
 
@@ -399,11 +408,19 @@ ADAMTAL_HARDA = (
     # det gör kortet verkningslöst, oavsett om ordparet är språkligt riktigt.
     "cirkular_synonym",
     "fler_register_an_betydelser",
+    # Hård sedan 2026-10-24 (Adam: "man märker en del små fel"). `ruggig`
+    # och `rådbråka` hade en tom numrerad rad som betydelser() tyst filtrerade
+    # bort, så ingen kontroll såg den.
+    "tom_betydelse",
 )
 ADAMTAL_MJUKA = (
     "flera_meningar", "fragment_exempel", "ordbokslangd_hb",
     "cirkular_definition", "osymmetriska_grupper",
     "etymologi_langd",
+    # 2026-10-24: kort med 3+ betydelser granskas noggrannare (Adam). Mjuka,
+    # eftersom ordöverlapp är en grov proxy: homonymer delar sällan ord, men
+    # ibland gör nära betydelser det också med rätta.
+    "overlappande_betydelser", "manga_betydelser",
 )
 
 # Etymologin är valfri och ska bara finnas när ursprunget gör betydelsen
@@ -416,6 +433,46 @@ ETYMOLOGI_MAX_ORD = 18
 _ABBR = ["t.ex.", "bl.a.", "m.fl.", "d.v.s.", "dvs.", "osv.", "m.m.",
          "fr.o.m.", "t.o.m.", "ca.", "kl.", "s.k.", "e.Kr.", "f.Kr."]
 _HTML_SKRAP = ("<span", "<div", "<ol", "<li", "&amp;nbsp;", "&quot;", "rgb(52,")
+
+
+_OVERLAPP_STOPP = {"något", "någon", "några", "eller", "inte", "från", "till",
+                   "över", "under", "efter", "genom", "också", "särskilt",
+                   "bildligt", "uttrycket", "även", "som", "med", "för"}
+
+# --- Formkontroll på rå HTML (tillagt 2026-10-24) ---
+#
+# Adam 2026-10-24: "bara ha ett space mellan etymologi förklaringen och
+# bilden ... samma gäller med exempelmening och allt annat." 144 av 10 031
+# kort bröt specens `<br><br>` mellan blocken. build() gör aldrig så -- felen
+# kom från engångsscript som skrev förbi build(). Därför ligger kontrollen
+# INTE i build() utan körs av ankiconnect.invoke() på varje skrivning av
+# Baksida, oavsett vilket script som skriver.
+_BR = r"<br\s*/?>"
+FORMAT_REGLER = {
+    "mellanrum_for_stort": re.compile(rf"(?:\s*{_BR}\s*){{3,}}"),
+    # balalajka 24/10: `...sällskapet.<br></i><br><br>` gav två tomma rader.
+    "br_inuti_tagg": re.compile(rf"{_BR}\s*</(?:i|b|u|font|span)>"),
+    "br_i_slutet": re.compile(rf"(?:\s*{_BR})+\s*$"),
+    "br_i_borjan": re.compile(rf"^\s*{_BR}"),
+    "tom_numrerad_rad": re.compile(r"<b>\s*\d+\.\s*</b>"),
+}
+_IMG_FORE_RE = re.compile(rf"((?:\s*{_BR})*)\s*<img")
+
+
+def validate_format(baksida_html):
+    """Returnerar lista med (regel, detalj). Tom lista = formen är rätt."""
+    v = baksida_html or ""
+    fel = [(r, "bryter mot specens <br><br> mellan blocken")
+           for r, rx in FORMAT_REGLER.items() if rx.search(v)]
+    for m in _IMG_FORE_RE.finditer(v):
+        fore = re.sub(r"\s", "", m.group(1))
+        foregaende = v[:m.start()].rstrip()
+        if not foregaende or re.search(r"(<a\b[^>]*>|<img\b[^>]*>|</a>)$", foregaende):
+            continue                      # först i fältet, i en länk, eller bild bredvid bild
+        if fore != "<br><br>":
+            fel.append(("mellanrum_fore_bild", "exakt en tom rad (<br><br>) ska stå före bilden"))
+            break
+    return fel
 
 
 def _strip_html(s):
@@ -482,6 +539,22 @@ def validate_adamtal(huvudbetydelse, synonymer=None, synonym_groups=None,
     for m in ms:
         if len(m.split()) > 12:
             lagg("ordbokslangd_hb", f"{len(m.split())} ord i en betydelse -- korta ner: {m[:50]!r}")
+    if hb and re.search(r"(^|\s);\s*;|(^|\s);\s*$|^\s*;", hb):
+        lagg("tom_betydelse", "en betydelse är tom (två ';' i rad eller ';' sist)")
+    if len(ms) >= 3:
+        stammar = [{_stam(w) for w in re.findall(r"[a-zåäöéü]+", m.lower())
+                    if len(w) >= 4 and w not in _OVERLAPP_STOPP} for m in ms]
+        for i in range(len(ms)):
+            for j in range(i + 1, len(ms)):
+                a, b = stammar[i], stammar[j]
+                if a and b and len(a & b) / min(len(a), len(b)) >= 0.5:
+                    lagg("overlappande_betydelser",
+                         f"betydelse {i + 1} och {j + 1} delar ord ({', '.join(sorted(a & b))}) "
+                         "-- är de verkligen skilda betydelser?")
+    if len(ms) >= 4:
+        lagg("manga_betydelser",
+             f"{len(ms)} betydelser -- behövs alla? Klarhet före exakthet: "
+             "sällsynta fackbetydelser sist eller strukna")
     if ord_ and " " not in ord_.strip():
         st = _stam(ord_)
         if len(st) >= 4 and re.search(rf"\w*{re.escape(st)}\w*", hb.lower()):

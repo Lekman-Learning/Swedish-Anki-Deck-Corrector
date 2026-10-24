@@ -40,7 +40,8 @@ SYNONYM_COLOR = "#3498db"
 ETYMOLOGI_COLOR = "#9e9e9e"
 ETYMOLOGI_PIL = "→"
 # Registerfargen anvands BARA i den numrerade layouten (>=3 betydelser,
-# se baksida.NUMRERAD_FRAN). I ett- och tvabetydelsekort star registret
+# se baksida.NUMRERAD_FRAN). ÄNDRAT 2026-10-24 (Adam): registret är grått i ALLA
+# layouter, även ett- och tvåbetydelsekort (baksida._gra). Tidigare: i ett- och tvabetydelsekort star registret
 # ofargat pa egen rad som forut. Samma gra som etymologin, av samma skal:
 # lasbar mot bade ljust och morkt tema.
 REGISTER_COLOR = "#9e9e9e"

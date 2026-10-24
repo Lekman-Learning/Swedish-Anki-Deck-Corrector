@@ -4976,3 +4976,18 @@ mot den betydelse kortet beskriver.**
 2 060 kvar. Två kort (`aktuell`, `sympati`) är omskrivna och väntar på en färsk
 granskning i nästa sats — de körs inte ensamma, eftersom ett `claude -p`-anrop
 drar ~25 000 tokens bara i uppstart.
+
+## 2026-10-24: formspärr, nya kontroller och grått register (laptopen, Adam: "kan vi göra v3 programmet bättre? man märker en del små fel")
+
+**Varför:** 144 kort bröt `<br><br>`-specen (3+ br, br inuti `</font>`, br i slutet, för lite före bilden) och 21 till hade br inuti `</i>` (t.ex. `balalajka`: två tomma rader mellan exempel och etymologi). `build()` gör aldrig så. Felen kom från engångsscript (`_skriv_*`, `fix_*`, `patch_*`) som skrev förbi `build()`. `patch_bild_mellanrum.py` hade redan rättat samma sak en gång, utan att stoppa återfallet.
+
+| Ändring | Var | Typ |
+|---|---|---|
+| `validate_format(raw)`: mellanrum_for_stort · br_inuti_tagg · br_i_slutet · br_i_borjan · tom_numrerad_rad · mellanrum_fore_bild | `baksida.py` | ny |
+| **Formspärr** i `invoke()` för `updateNoteFields`/`addNote(s)` med Baksida | `ankiconnect.py` | 🔴 hård, ALLA skrivvägar |
+| `tom_betydelse` (`ruggig`, `rådbråka` hade tomma numrerade rader som `betydelser()` filtrerade bort tyst) | `validate_adamtal` | hård |
+| `overlappande_betydelser` (3+ betydelser, ordöverlapp ≥ 50 %) · `manga_betydelser` (4+) | `validate_adamtal` | mjuk |
+| **Registret grått i alla layouter** (`_gra()`), parse tar av wrappern | `build()`, `_MAIN_RE` | Adam: *"samma färg som hyttans valör"* |
+| Kortmallen: alltid mörkt läge, titel #9cc7f0, fet vit, kursiv #d0d0d0, blå avdelare, img max 30vh, titel 72px på svarssidan | Anki-modellen `Grundläggande-adc63` (CSS) | inte i fälten |
+
+Decket normaliserat 24/10 (backup `backuper/2026-10-24*`). v3 framåt: kör `lint_adamtal.py` och läs `overlappande_betydelser`/`manga_betydelser` för varje kort med 3+ betydelser innan det släpps (Adam: *"vara nogare med korten med 3+ betydelser"*). Se `ATT_GORA.md`.

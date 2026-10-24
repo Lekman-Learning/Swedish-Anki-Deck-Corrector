@@ -56,6 +56,7 @@ def lint_card(ord_, raw):
     issues = [tuple(m.split(": ", 1)) for m in fel + varn]
 
     # --- Bara det som kräver rå HTML ---
+    issues += baksida.validate_format(raw)   # mellanrum, 2026-10-24
     if p["register"]:
         issues += [("register_ogiltigt", w) for w in baksida.validate_register(p["register"])]
     for junk in baksida._HTML_SKRAP:

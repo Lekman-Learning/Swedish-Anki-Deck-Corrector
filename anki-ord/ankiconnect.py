@@ -10,7 +10,31 @@ class AnkiConnectError(RuntimeError):
     pass
 
 
+def _formspärr(action, params):
+    """Hård spärr på FORMEN i varje skrivning av Baksida (2026-10-24).
+
+    144 + 21 kort bröt specens <br><br> mellan blocken. Felen kom från
+    engångsscript som skrev förbi baksida.build(), så spärren ligger här,
+    där ALLA skrivningar passerar. Bara mellanrumsregler: de gav 0
+    falsklarm på hela decket efter normaliseringen 24/10.
+    """
+    if action not in ("updateNoteFields", "addNote", "addNotes"):
+        return
+    noter = params.get("notes") or [params.get("note") or {}]
+    import baksida  # sen import: baksida importerar inte ankiconnect
+    for n in noter:
+        v = (n.get("fields") or {}).get("Baksida")
+        if v is None:
+            continue
+        fel = baksida.validate_format(v)
+        if fel:
+            raise AnkiConnectError(
+                f"Formspärr: {action} stoppad, Baksida bryter mot <br><br>-specen: "
+                + ", ".join(r for r, _ in fel))
+
+
 def invoke(action, **params):
+    _formspärr(action, params)
     payload = json.dumps({"action": action, "version": 6, "params": params}).encode("utf-8")
     request = urllib.request.Request(ANKICONNECT_URL, payload)
     try:
