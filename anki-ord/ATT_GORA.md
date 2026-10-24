@@ -656,3 +656,10 @@ mot `best. form|plural|MOTSATS:|el.$|spec.$` skulle ta bort merparten.
 
 **Batch A klar: 18 kort, 0 harda anmarkningar.** Kvar: 113 (135 minus 18 minus
 de fyra pauskandidaterna).
+
+## 2026-10-24: kort med 4+ betydelser — överlapp och tomma rader (Adam: "behöver verkligen vissa kort 4a förklaringar? är de inte lite samma?")
+Läst från laptopen (read-only, backup `backuper/2026-10-24_fore_mellanrumsfix.json`). 47 kort har 4–6 betydelser (39×4, 7×5, 1×6), 178 har 3. **Skrivs om i en v3-omgång på hemma-PC:n**, inte på laptopen.
+- 🔴 **Tomma betydelserader (bugg):** `ruggig` (2. tom) · `rådbråka` (4. tom).
+- 🟡 **Troligt överlapp, slå ihop:** `häftig` 1+2 (plötslig/kraftig ≈ intensiv) · `kollegial` 3+4 (kamratlig ≈ handling som visar kamratlighet), ev. 1+2 · `agrar` 1+2 och 3+4 · `distribution` 1+2 · `krackelera` 1+2 (transitiv/intransitiv) · `nära` 4+5 (verbet) · `intim` 1+2, 4+5 ("Äv."-rader) · `tangera` 2+3.
+- 🟢 **Behåll, verkligen olika ord/betydelser (homonymer):** hytta · märla · docka · ringa · lov · ax · harnesk · dunst · fog · sträva · kuperad · brösta · valla · belägga m.fl.
+- Princip (profil, valvet): *klarhet före exakthet i allt som ska memoreras* — sällsynta fackbetydelser får ligga sist eller strykas om de bara ökar läsbördan.
